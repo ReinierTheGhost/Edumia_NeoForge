@@ -19,6 +19,9 @@ group = mod_group_id
 
 repositories {
     mavenLocal()
+    maven {
+        url "https://cursemaven.com"
+    }
 }
 
 base {
@@ -119,6 +122,9 @@ dependencies {
     // compileOnly "mezz.jei:jei-${mc_version}-neoforge-api:${jei_version}"
     // We add the full version to localRuntime, not runtimeOnly, so that we do not publish a dependency on it
     // localRuntime "mezz.jei:jei-${mc_version}-neoforge:${jei_version}"
+    implementation "curse.maven:resourceful-lib-570073:5973188"
+    implementation "curse.maven:athena-841890:5629395"
+    implementation "curse.maven:chipped-456956:5813117"
 
     // Example mod dependency using a mod jar from ./libs with a flat dir repository
     // This maps to ./libs/coolmod-${mc_version}-${coolmod_version}.jar
