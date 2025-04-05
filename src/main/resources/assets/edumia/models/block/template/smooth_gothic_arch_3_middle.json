@@ -1,0 +1,11 @@
+{
+  "loader": "neoforge:obj",
+  "model": "edumia:models/block/obj/smooth_gothic_arch_3_middle.obj",
+  "ambientToFullbright": true,
+  "flip-v": true,
+  "textures": {
+    "keystones": "#texture",
+    "underside1": "#texture",
+    "underside2": "#texture"
+  }
+}

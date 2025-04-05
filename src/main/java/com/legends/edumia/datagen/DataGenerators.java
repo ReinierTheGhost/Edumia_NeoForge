@@ -1,6 +1,7 @@
 package com.legends.edumia.datagen;
 
 import com.legends.edumia.Edumia;
+import com.legends.edumia.datagen.custom.EdumiaHelpingGenerator;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -20,6 +21,9 @@ import java.util.concurrent.CompletableFuture;
 public class DataGenerators {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
+
+        EdumiaHelpingGenerator.generateFiles();
+
         DataGenerator generator = event.getGenerator();
         PackOutput packOutput = generator.getPackOutput();
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();

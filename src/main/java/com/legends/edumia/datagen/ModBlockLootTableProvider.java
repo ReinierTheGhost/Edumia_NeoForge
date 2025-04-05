@@ -1,6 +1,7 @@
 package com.legends.edumia.datagen;
 
 import com.legends.edumia.core.BlockLoader;
+import com.legends.edumia.datagen.custom.loot_tables.BlockDrops;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
@@ -27,6 +28,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         dropSelf(BlockLoader.WHITE_SAND.get());
+
+        for (Block block : BlockDrops.blocks){
+            dropSelf(block);
+        }
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {

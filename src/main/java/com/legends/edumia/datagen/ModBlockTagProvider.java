@@ -3,8 +3,11 @@ package com.legends.edumia.datagen;
 import com.legends.edumia.Edumia;
 import com.legends.edumia.core.BlockLoader;
 import com.legends.edumia.core.TagLoader;
+import com.legends.edumia.datagen.custom.tags.*;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
@@ -20,5 +23,26 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
         tag(TagLoader.Blocks.REEDS_PLACEABLE_ON)
                 .add(BlockLoader.WHITE_SAND.get());
+
+        tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(MineablePickaxe.blocks.toArray(new Block[0]));
+
+        tag(BlockTags.NEEDS_STONE_TOOL)
+                .add(RequiresStoneTool.blocks.toArray(new Block[0]));
+
+        tag(BlockTags.NEEDS_IRON_TOOL)
+                .add(RequiresIronTool.blocks.toArray(new Block[0]));
+
+        tag(BlockTags.WALLS)
+                .add(Walls.walls.toArray(new Block[0]));
+
+        tag(BlockTags.BUTTONS)
+                .add(Buttons.buttons.toArray(new Block[0]));
+
+        tag(BlockTags.FENCE_GATES)
+                .add(FenceGates.fenceGates.toArray(new Block[0]));
+
+        tag(BlockTags.FENCES)
+                .add(Fences.fences.toArray(new Block[0]));
     }
 }

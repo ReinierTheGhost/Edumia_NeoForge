@@ -1,5 +1,6 @@
 package com.legends.edumia;
 
+import com.legends.edumia.blocks.blocksets.BuildingSets;
 import com.legends.edumia.core.BlockLoader;
 import com.legends.edumia.core.CreativeTabLoader;
 import com.legends.edumia.core.ItemLoader;
@@ -39,6 +40,7 @@ public class Edumia
 
         BlockLoader.register(modEventBus);
         ItemLoader.register(modEventBus);
+        BuildingSets.register(modEventBus);
 
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
