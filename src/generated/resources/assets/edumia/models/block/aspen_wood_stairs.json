@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "edumia:block/aspen_log",
+    "side": "edumia:block/aspen_log",
+    "top": "edumia:block/aspen_log"
+  }
+}

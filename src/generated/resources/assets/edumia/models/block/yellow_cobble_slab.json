@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "edumia:block/yellow_cobble",
+    "side": "edumia:block/yellow_cobble",
+    "top": "edumia:block/yellow_cobble"
+  }
+}

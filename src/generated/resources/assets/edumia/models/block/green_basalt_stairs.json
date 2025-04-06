@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "edumia:block/green_basalt",
+    "side": "edumia:block/green_basalt",
+    "top": "edumia:block/green_basalt"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "edumia:block/pear_log",
+    "side": "edumia:block/pear_log",
+    "top": "edumia:block/pear_log"
+  }
+}

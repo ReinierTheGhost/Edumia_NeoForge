@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "edumia:block/mango_planks",
+    "side": "edumia:block/mango_planks",
+    "top": "edumia:block/mango_planks"
+  }
+}

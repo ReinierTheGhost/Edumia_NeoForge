@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "edumia:block/aspen_planks",
+    "side": "edumia:block/aspen_planks",
+    "top": "edumia:block/aspen_planks"
+  }
+}

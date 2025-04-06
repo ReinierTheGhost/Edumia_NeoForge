@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "edumia:block/dragon_blood_beam_top",
+    "side": "edumia:block/dragon_blood_beam"
+  }
+}

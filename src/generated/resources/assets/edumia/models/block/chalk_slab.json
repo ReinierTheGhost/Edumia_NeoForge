@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "edumia:block/chalk",
+    "side": "edumia:block/chalk",
+    "top": "edumia:block/chalk"
+  }
+}

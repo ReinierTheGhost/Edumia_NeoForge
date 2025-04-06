@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "edumia:block/ghost_gum_planks",
+    "side": "edumia:block/ghost_gum_planks",
+    "top": "edumia:block/ghost_gum_planks"
+  }
+}

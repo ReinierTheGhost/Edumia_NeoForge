@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "edumia:block/cypress_beam_top",
+    "side": "edumia:block/cypress_beam"
+  }
+}

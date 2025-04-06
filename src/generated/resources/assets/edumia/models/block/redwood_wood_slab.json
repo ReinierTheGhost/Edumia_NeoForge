@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "edumia:block/redwood_log",
+    "side": "edumia:block/redwood_log",
+    "top": "edumia:block/redwood_log"
+  }
+}

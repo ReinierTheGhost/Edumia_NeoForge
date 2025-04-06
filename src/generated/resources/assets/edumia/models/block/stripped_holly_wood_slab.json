@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "edumia:block/stripped_holly_log",
+    "side": "edumia:block/stripped_holly_log",
+    "top": "edumia:block/stripped_holly_log"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "edumia:block/cacholong",
+    "side": "edumia:block/cacholong",
+    "top": "edumia:block/cacholong"
+  }
+}

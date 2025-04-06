@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "edumia:block/green_oak_pressure_plate"
+    },
+    "powered=true": {
+      "model": "edumia:block/green_oak_pressure_plate_down"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "edumia:block/pine_planks",
+    "side": "edumia:block/pine_planks",
+    "top": "edumia:block/pine_planks"
+  }
+}

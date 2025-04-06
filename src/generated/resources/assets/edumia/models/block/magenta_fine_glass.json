@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "edumia:block/magenta_fine_glass"
+  }
+}

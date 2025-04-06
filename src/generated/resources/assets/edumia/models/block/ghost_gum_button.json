@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "edumia:block/ghost_gum_planks"
+  }
+}

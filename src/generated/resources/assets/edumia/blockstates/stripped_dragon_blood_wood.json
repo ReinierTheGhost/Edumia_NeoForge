@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "edumia:block/stripped_dragon_blood_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "edumia:block/stripped_dragon_blood_wood"
+    },
+    "axis=z": {
+      "model": "edumia:block/stripped_dragon_blood_wood",
+      "x": 90
+    }
+  }
+}

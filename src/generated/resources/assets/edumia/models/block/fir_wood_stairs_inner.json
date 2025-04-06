@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "edumia:block/fir_log",
+    "side": "edumia:block/fir_log",
+    "top": "edumia:block/fir_log"
+  }
+}

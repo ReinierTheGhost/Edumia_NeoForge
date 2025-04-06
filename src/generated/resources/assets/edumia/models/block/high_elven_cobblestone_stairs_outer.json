@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "edumia:block/high_elven_cobblestone",
+    "side": "edumia:block/high_elven_cobblestone",
+    "top": "edumia:block/high_elven_cobblestone"
+  }
+}

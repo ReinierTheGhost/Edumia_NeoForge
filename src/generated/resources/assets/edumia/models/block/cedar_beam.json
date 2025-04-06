@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "edumia:block/cedar_beam_top",
+    "side": "edumia:block/cedar_beam"
+  }
+}

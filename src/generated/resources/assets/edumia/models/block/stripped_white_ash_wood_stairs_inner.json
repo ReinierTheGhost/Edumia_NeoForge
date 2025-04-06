@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "edumia:block/stripped_white_ash_log",
+    "side": "edumia:block/stripped_white_ash_log",
+    "top": "edumia:block/stripped_white_ash_log"
+  }
+}

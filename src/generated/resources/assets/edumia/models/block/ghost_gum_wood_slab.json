@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "edumia:block/ghost_gum_log",
+    "side": "edumia:block/ghost_gum_log",
+    "top": "edumia:block/ghost_gum_log"
+  }
+}

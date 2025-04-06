@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "edumia:block/black_oak_beam_top",
+    "side": "edumia:block/black_oak_beam"
+  }
+}

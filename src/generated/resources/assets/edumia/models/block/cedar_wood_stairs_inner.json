@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "edumia:block/cedar_log",
+    "side": "edumia:block/cedar_log",
+    "top": "edumia:block/cedar_log"
+  }
+}
