@@ -4,8 +4,12 @@ import com.legends.edumia.Edumia;
 import com.legends.edumia.core.BlockLoader;
 import com.legends.edumia.datagen.custom.ModModelProvider;
 import com.legends.edumia.datagen.custom.models.*;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DoorBlock;
+import net.minecraft.world.level.block.TrapDoorBlock;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -24,6 +28,12 @@ public class ModBlockStateProvider  extends ModModelProvider {
         for (Block block : SimpleBlockModel.blocks){
             blockWithItem(block);
         }
+
+        for (SimplePillarModel.Pillar block : SimplePillarModel.blocks){
+            logBlock(block.base());
+            blockItem(block.base());
+        }
+
         for (SimpleStairModel.Stair block : SimpleStairModel.blocks){
             stairsBlock(block.stairs(), blockTexture(block.block()));
             blockItem(block.stairs());
@@ -88,6 +98,52 @@ public class ModBlockStateProvider  extends ModModelProvider {
             blockItem(block.corner(), "_4");
         }
 
+        for (SimpleGlassModel.Glass block : SimpleGlassModel.blocks){
+            paneBlockWithRenderType(block.pane(), blockTexture(block.block()),
+                    ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "block/fine_glass_pane_top"), "translucent");
+        }
+
+        for (Block block : SimpleLeavesModel.blocks){
+            leavesBlock(block);
+        }
+
+
+
+        for (SimpleFenceModel.Fence block : SimpleFenceModel.blocks){
+            fenceBlock(block.fence(), blockTexture(block.block()));
+        }
+
+        for (SimpleFenceGateModel.FenceGate block : SimpleFenceGateModel.blocks){
+            fenceGateBlock(block.fenceGate(), blockTexture(block.block()));
+            blockItem(block.fenceGate());
+        }
+
+        for (SimpleWoodBlockModel.WoodBlocks blocks : SimpleWoodBlockModel.blocks){
+            woodBlock(blocks.wood(), blockTexture(blocks.texture()));
+            blockItem(blocks.wood());
+        }
+
+        for (SimpleButtonModel.Button button : SimpleButtonModel.blocks){
+            buttonBlock(button.button(), blockTexture(button.block()));
+        }
+
+        for (SimplePressurePlateModel.PressurePlate pressurePlate: SimplePressurePlateModel.blocks){
+            pressurePlateBlock(pressurePlate.pressurePlate(), blockTexture(pressurePlate.block()));
+            blockItem(pressurePlate.pressurePlate());
+        }
+
+        for (DoorBlock block : SimpleDoorModel.blocks){
+            doorBlockWithRenderType(block,
+                    ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "block/" +  name(block) + "_bottom"),
+                    ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "block/" +  name(block) + "_top"),
+                    "cutout");
+        }
+
+        for (TrapDoorBlock block : SimpleTrapDoorModel.blocks){
+            trapdoorBlockWithRenderType(block, blockTexture(block), true, "cutout");
+            blockItem(block, "_bottom");
+        }
+
 
     }
 
@@ -111,6 +167,13 @@ public class ModBlockStateProvider  extends ModModelProvider {
     }
     private void blockItem(Block deferredBlock, String appendix) {
         simpleBlockItem(deferredBlock, new ModelFile.UncheckedModelFile("edumia:block/" + name(deferredBlock) + appendix));
+    }
+
+    private void leavesBlock(Block block) {
+        simpleBlockWithItem(block,
+                models().singleTexture(BuiltInRegistries.BLOCK.getKey(block).getPath(),
+                        ResourceLocation.parse("minecraft:block/leaves"),
+                        "all", blockTexture(block)).renderType("cutout"));
     }
 
 }

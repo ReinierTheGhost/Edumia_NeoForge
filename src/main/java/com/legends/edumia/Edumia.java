@@ -1,10 +1,11 @@
 package com.legends.edumia;
 
-import com.legends.edumia.blocks.blocksets.BuildingSets;
-import com.legends.edumia.blocks.blocksets.ClayTilingSets;
+import com.legends.edumia.blocks.blocksets.*;
 import com.legends.edumia.core.BlockLoader;
 import com.legends.edumia.core.CreativeTabLoader;
 import com.legends.edumia.core.ItemLoader;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import org.slf4j.Logger;
 
@@ -22,6 +23,7 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
+@SuppressWarnings("deprecation")
 @Mod(Edumia.MOD_ID)
 public class Edumia
 {
@@ -43,6 +45,9 @@ public class Edumia
         ItemLoader.register(modEventBus);
         BuildingSets.register(modEventBus);
         ClayTilingSets.register(modEventBus);
+        GlassSets.register(modEventBus);
+        StoneSets.register(modEventBus);
+        WoodBlockSets.register(modEventBus);
 
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
@@ -68,10 +73,13 @@ public class Edumia
     @EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents
     {
+        @SuppressWarnings("deprecated")
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-
+            for (GlassSets.GlassSet set : GlassSets.glassSets) {
+                ItemBlockRenderTypes.setRenderLayer(set.block().get(), RenderType.translucent());
+            }
         }
     }
 }

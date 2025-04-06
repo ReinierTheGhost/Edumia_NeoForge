@@ -9,6 +9,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.properties.Half;
 import net.minecraft.world.level.block.state.properties.SlabType;
 import net.neoforged.neoforge.client.model.generators.BlockModelBuilder;
@@ -343,6 +344,20 @@ public abstract class ModModelProvider extends BlockStateProvider {
                 .partialState().with(VerticalCorner.DIRECTION, Direction.WEST).with(VerticalCorner.LAYERS, 4)
                 .addModels(new ConfiguredModel(four, 0, 270, true));
     }
+
+    public void woodBlock(RotatedPillarBlock block, ResourceLocation texture){
+        wood(block, models().cubeAll(name(block), texture));
+    }
+    private void wood(RotatedPillarBlock block, ModelFile modelFile) {
+        getVariantBuilder(block)
+                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.Y)
+                .modelForState().modelFile(modelFile).addModel()
+                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.Z)
+                .modelForState().modelFile(modelFile).rotationX(90).addModel()
+                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.X)
+                .modelForState().modelFile(modelFile).rotationX(90).rotationY(90).addModel();
+    }
+
     @SuppressWarnings("unchecked")
     protected <T extends BlockModelBuilder> T texBotTopPar(String name, String parent, ResourceLocation texture, ResourceLocation bottom, ResourceLocation top) {
         return (T) withExistingParent(name, parent)

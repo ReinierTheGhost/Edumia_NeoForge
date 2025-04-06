@@ -1,8 +1,10 @@
 package com.legends.edumia.datagen.custom;
 
-import com.legends.edumia.blocks.blocksets.BuildingSets;
-import com.legends.edumia.blocks.blocksets.ClayTilingSets;
+import com.legends.edumia.blocks.blocksets.*;
 import com.legends.edumia.datagen.custom.loot_tables.BlockDrops;
+import com.legends.edumia.datagen.custom.loot_tables.DoorDrops;
+import com.legends.edumia.datagen.custom.loot_tables.LeavesDrops;
+import com.legends.edumia.datagen.custom.loot_tables.SilkTouchDrops;
 import com.legends.edumia.datagen.custom.models.*;
 import com.legends.edumia.datagen.custom.tags.*;
 
@@ -103,5 +105,143 @@ public class EdumiaHelpingGenerator {
             RequiresIronTool.blocks.add(set.corner().get());
 
         }
+
+        for (GlassSets.GlassSet set : GlassSets.glassSets){
+            SimpleGlassModel.blocks.add(new SimpleGlassModel.Glass(set.block().get(), set.pane().get()));
+            SimpleBlockModel.blocks.add(set.block().get());
+
+            SilkTouchDrops.blocks.add(set.pane().get());
+            SilkTouchDrops.blocks.add(set.block().get());
+
+            MineablePickaxe.blocks.add(set.pane().get());
+            MineablePickaxe.blocks.add(set.block().get());
+
+            RequiresIronTool.blocks.add(set.pane().get());
+            RequiresIronTool.blocks.add(set.block().get());
+        }
+
+        for (StoneSets.StoneSet set : StoneSets.naturalSets){
+            SimpleBlockModel.blocks.add(set.block().get());
+            SimpleAxisSlabModel.blocks.add(new SimpleAxisSlabModel.Slab(set.block().get(), set.slab().get()));
+            SimpleStairModel.blocks.add(new SimpleStairModel.Stair(set.block().get(), set.stair().get()));
+            SimpleWallModel.blocks.add(new SimpleWallModel.Wall(set.block().get(), set.wall().get()));
+
+            BlockDrops.blocks.add(set.block().get());
+            BlockDrops.blocks.add(set.slab().get());
+            BlockDrops.blocks.add(set.stair().get());
+            BlockDrops.blocks.add(set.wall().get());
+
+            MineablePickaxe.blocks.add(set.block().get());
+            MineablePickaxe.blocks.add(set.slab().get());
+            MineablePickaxe.blocks.add(set.stair().get());
+            MineablePickaxe.blocks.add(set.wall().get());
+
+            RequiresIronTool.blocks.add(set.block().get());
+            RequiresIronTool.blocks.add(set.slab().get());
+            RequiresIronTool.blocks.add(set.stair().get());
+            RequiresIronTool.blocks.add(set.wall().get());
+
+
+            Walls.walls.add(set.wall().get());
+        }
+
+        for (WoodBlockSets.SimpleBlockSet set : WoodBlockSets.sets){
+            if(set.leaves() != null) {
+                SimpleLeavesModel.blocks.add(set.leaves().get());
+                LeavesDrops.blocks.add(set.leaves().get());
+                Leaves.leaves.add(set.leaves().get());
+            }
+
+
+            SimplePillarModel.blocks.add(new SimplePillarModel.Pillar(set.log().get()));
+            SimpleWoodBlockModel.blocks.add(new SimpleWoodBlockModel.WoodBlocks(set.log().get(), set.wood().get()));
+            SimpleStairModel.blocks.add(new SimpleStairModel.Stair(set.log().get(), set.woodStairs().get()));
+            SimpleAxisSlabModel.blocks.add(new SimpleAxisSlabModel.Slab(set.log().get(), set.woodSlab().get()));
+            SimpleWallModel.blocks.add(new SimpleWallModel.Wall(set.log().get(), set.woodWall().get()));
+            SimpleFenceModel.blocks.add(new SimpleFenceModel.Fence(set.log().get(), set.woodFence().get()));
+            SimplePillarModel.blocks.add(new SimplePillarModel.Pillar(set.strippedLog().get()));
+            SimpleWoodBlockModel.blocks.add(new SimpleWoodBlockModel.WoodBlocks(set.strippedLog().get(), set.strippedWood().get()));
+            SimpleStairModel.blocks.add(new SimpleStairModel.Stair(set.strippedLog().get(), set.strippedWoodStairs().get()));
+            SimpleAxisSlabModel.blocks.add(new SimpleAxisSlabModel.Slab(set.strippedLog().get(), set.strippedWoodSlab().get()));
+            SimpleWallModel.blocks.add(new SimpleWallModel.Wall(set.strippedLog().get(), set.strippedWoodWall().get()));
+            SimpleFenceModel.blocks.add(new SimpleFenceModel.Fence(set.strippedLog().get(), set.strippedWoodFence().get()));
+
+            SimpleBlockModel.blocks.add(set.planks().get());
+            SimpleAxisSlabModel.blocks.add(new SimpleAxisSlabModel.Slab(set.planks().get(), set.planksSlab().get()));
+            SimpleStairModel.blocks.add(new SimpleStairModel.Stair(set.planks().get(), set.planksStairs().get()));
+            SimpleFenceModel.blocks.add(new SimpleFenceModel.Fence(set.planks().get(), set.planksFence().get()));
+            SimpleFenceGateModel.blocks.add(new SimpleFenceGateModel.FenceGate(set.planks().get(), set.planksGate().get()));
+            SimpleButtonModel.blocks.add(new SimpleButtonModel.Button(set.planks().get(), set.button().get()));
+            SimplePressurePlateModel.blocks.add(new SimplePressurePlateModel.PressurePlate(set.planks().get(), set.pressurePlate().get()));
+            SimplePillarModel.blocks.add(new SimplePillarModel.Pillar(set.beam().get()));
+            SimpleDoorModel.blocks.add(set.door().get());
+            SimpleTrapDoorModel.blocks.add(set.trapdoor().get());
+
+
+            BlockDrops.blocks.add(set.log().get());
+            BlockDrops.blocks.add(set.wood().get());
+            BlockDrops.blocks.add(set.strippedLog().get());
+            BlockDrops.blocks.add(set.strippedWood().get());
+            BlockDrops.blocks.add(set.woodStairs().get());
+            BlockDrops.blocks.add(set.woodSlab().get());
+            BlockDrops.blocks.add(set.strippedWoodStairs().get());
+            BlockDrops.blocks.add(set.strippedWoodSlab().get());
+            BlockDrops.blocks.add(set.woodWall().get());
+            BlockDrops.blocks.add(set.strippedWoodWall().get());
+            BlockDrops.blocks.add(set.strippedWoodFence().get());
+            BlockDrops.blocks.add(set.woodFence().get());
+            BlockDrops.blocks.add(set.planks().get());
+            BlockDrops.blocks.add(set.planksSlab().get());
+            BlockDrops.blocks.add(set.planksStairs().get());
+            BlockDrops.blocks.add(set.planksFence().get());
+            BlockDrops.blocks.add(set.planksGate().get());
+            BlockDrops.blocks.add(set.button().get());
+            BlockDrops.blocks.add(set.pressurePlate().get());
+            DoorDrops.blocks.add(set.door().get());
+            BlockDrops.blocks.add(set.trapdoor().get());
+            BlockDrops.blocks.add(set.beam().get());
+
+            MineableAxe.blocks.add(set.log().get());
+            MineableAxe.blocks.add(set.wood().get());
+            MineableAxe.blocks.add(set.strippedLog().get());
+            MineableAxe.blocks.add(set.strippedWood().get());
+            MineableAxe.blocks.add(set.woodStairs().get());
+            MineableAxe.blocks.add(set.woodSlab().get());
+            MineableAxe.blocks.add(set.strippedWoodStairs().get());
+            MineableAxe.blocks.add(set.strippedWoodSlab().get());
+            MineableAxe.blocks.add(set.strippedWoodWall().get());
+            MineableAxe.blocks.add(set.strippedWoodFence().get());
+            MineableAxe.blocks.add(set.woodWall().get());
+            MineableAxe.blocks.add(set.woodFence().get());
+            MineableAxe.blocks.add(set.planks().get());
+            MineableAxe.blocks.add(set.planksSlab().get());
+            MineableAxe.blocks.add(set.planksStairs().get());
+            MineableAxe.blocks.add(set.planksFence().get());
+            MineableAxe.blocks.add(set.planksGate().get());
+            MineableAxe.blocks.add(set.button().get());
+            MineableAxe.blocks.add(set.pressurePlate().get());
+
+            Buttons.buttons.add(set.button().get());
+            Fences.fences.add(set.woodFence().get());
+            Fences.fences.add(set.planksFence().get());
+            FenceGates.fenceGates.add(set.planksGate().get());
+            Logs.logs.add(set.log().get());
+            Logs.logs.add(set.wood().get());
+            Logs.logs.add(set.woodWall().get());
+            Logs.logs.add(set.woodFence().get());
+            Logs.logs.add(set.woodSlab().get());
+            Logs.logs.add(set.woodStairs().get());
+            PressurePlates.pressurePlates.add(set.pressurePlate().get());
+            Walls.walls.add(set.woodWall().get());
+            Planks.planks.add(set.planks().get());
+
+        }
+
+        for (WoodBlockSets.SimpleVanillaBlocks blocks : WoodBlockSets.beams){
+            SimplePillarModel.blocks.add(new SimplePillarModel.Pillar(blocks.beam().get()));
+            BlockDrops.blocks.add(blocks.beam().get());
+            MineableAxe.blocks.add(blocks.beam().get());
+        }
+
     }
 }

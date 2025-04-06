@@ -88,11 +88,11 @@ public class ClayTilingSets {
     }
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
-        registerBuildingBlockItem(name, toReturn);
+        registerBlockItem(name, toReturn);
         return toReturn;
     }
 
-    private static <T extends Block> void registerBuildingBlockItem(String name, DeferredBlock<T> block) {
+    private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
         ItemLoader.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 

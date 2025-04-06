@@ -1,3 +1,31 @@
 {
-  "values": []
+  "values": [
+    "edumia:apple_fence_gate",
+    "edumia:aspen_fence_gate",
+    "edumia:banana_fence_gate",
+    "edumia:beech_fence_gate",
+    "edumia:black_oak_fence_gate",
+    "edumia:blackthorn_fence_gate",
+    "edumia:cedar_fence_gate",
+    "edumia:cherry_fence_gate",
+    "edumia:cypress_fence_gate",
+    "edumia:charred_fence_gate",
+    "edumia:dragon_blood_fence_gate",
+    "edumia:fir_fence_gate",
+    "edumia:ghost_gum_fence_gate",
+    "edumia:green_oak_fence_gate",
+    "edumia:holly_fence_gate",
+    "edumia:larch_fence_gate",
+    "edumia:mahogany_fence_gate",
+    "edumia:mango_fence_gate",
+    "edumia:maple_fence_gate",
+    "edumia:palm_fence_gate",
+    "edumia:pear_fence_gate",
+    "edumia:pine_fence_gate",
+    "edumia:red_oak_fence_gate",
+    "edumia:redwood_fence_gate",
+    "edumia:silver_spruce_fence_gate",
+    "edumia:white_ash_fence_gate",
+    "edumia:willow_fence_gate"
+  ]
 }

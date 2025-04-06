@@ -1,9 +1,11 @@
 package com.legends.edumia.datagen;
 
-import com.legends.edumia.blocks.blocksets.BuildingSets;
-import com.legends.edumia.blocks.blocksets.ClayTilingSets;
+import com.legends.edumia.blocks.blocksets.*;
 import com.legends.edumia.core.BlockLoader;
 import com.legends.edumia.datagen.custom.loot_tables.BlockDrops;
+import com.legends.edumia.datagen.custom.loot_tables.DoorDrops;
+import com.legends.edumia.datagen.custom.loot_tables.LeavesDrops;
+import com.legends.edumia.datagen.custom.loot_tables.SilkTouchDrops;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
@@ -36,6 +38,19 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         for (Block block : BlockDrops.blocks){
             dropSelf(block);
         }
+
+        for (Block block : SilkTouchDrops.blocks){
+            dropWhenSilkTouch(block);
+        }
+
+        for (Block block : LeavesDrops.blocks){
+            dropSelf(block);
+        }
+
+        for (Block block : DoorDrops.blocks){
+            add(block, b -> createDoorTable(block));
+        }
+
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {
@@ -64,6 +79,21 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 .forEach(allBlocks::add);
 
         ClayTilingSets.BLOCKS.getEntries()
+                .stream()
+                .map(Holder::value)
+                .forEach(allBlocks::add);
+
+        GlassSets.BLOCKS.getEntries()
+                .stream()
+                .map(Holder::value)
+                .forEach(allBlocks::add);
+
+        StoneSets.BLOCKS.getEntries()
+                .stream()
+                .map(Holder::value)
+                .forEach(allBlocks::add);
+
+        WoodBlockSets.BLOCKS.getEntries()
                 .stream()
                 .map(Holder::value)
                 .forEach(allBlocks::add);
