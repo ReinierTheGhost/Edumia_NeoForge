@@ -1,0 +1,46 @@
+{
+  "variants": {
+    "facing=east,type=bottom": {
+      "model": "edumia:block/desert_mud_bricks_two_meter_arch",
+      "uvlock": true,
+      "x": 180,
+      "y": 90
+    },
+    "facing=east,type=top": {
+      "model": "edumia:block/desert_mud_bricks_two_meter_arch",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=north,type=bottom": {
+      "model": "edumia:block/desert_mud_bricks_two_meter_arch",
+      "uvlock": true,
+      "x": 180
+    },
+    "facing=north,type=top": {
+      "model": "edumia:block/desert_mud_bricks_two_meter_arch",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=south,type=bottom": {
+      "model": "edumia:block/desert_mud_bricks_two_meter_arch",
+      "uvlock": true,
+      "x": 180,
+      "y": 180
+    },
+    "facing=south,type=top": {
+      "model": "edumia:block/desert_mud_bricks_two_meter_arch",
+      "uvlock": true
+    },
+    "facing=west,type=bottom": {
+      "model": "edumia:block/desert_mud_bricks_two_meter_arch",
+      "uvlock": true,
+      "x": 180,
+      "y": 270
+    },
+    "facing=west,type=top": {
+      "model": "edumia:block/desert_mud_bricks_two_meter_arch",
+      "uvlock": true,
+      "y": 90
+    }
+  }
+}

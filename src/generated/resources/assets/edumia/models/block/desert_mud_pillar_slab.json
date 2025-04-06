@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "edumia:block/desert_mud_pillar",
+    "side": "edumia:block/desert_mud_pillar",
+    "top": "edumia:block/desert_mud_pillar"
+  }
+}

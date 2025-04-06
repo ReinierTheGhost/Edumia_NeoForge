@@ -1,0 +1,7 @@
+{
+  "parent": "edumia:block/template/smooth_gothic_arch_1",
+  "textures": {
+    "particle": "edumia:block/granite_bricks",
+    "texture": "edumia:block/granite_bricks"
+  }
+}

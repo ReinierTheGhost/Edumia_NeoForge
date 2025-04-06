@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "edumia:block/dark_high_elven_pillar_face",
+    "side": "edumia:block/dark_high_elven_pillar_bottom"
+  }
+}

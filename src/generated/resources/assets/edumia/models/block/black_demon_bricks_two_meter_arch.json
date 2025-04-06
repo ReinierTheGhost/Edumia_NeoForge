@@ -1,0 +1,7 @@
+{
+  "parent": "edumia:block/template/arch_twometer_shape",
+  "textures": {
+    "particle": "edumia:block/black_demon_bricks",
+    "side": "edumia:block/black_demon_bricks"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "edumia:block/black_demon_pillar_face",
+    "side": "edumia:block/black_demon_pillar"
+  }
+}

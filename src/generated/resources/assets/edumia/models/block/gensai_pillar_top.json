@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "edumia:block/gensai_pillar_face",
+    "side": "edumia:block/gensai_pillar_top"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "edumia:block/volcanic_demon_pillar_face",
+    "side": "edumia:block/volcanic_demon_pillar_top"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "edumia:block/template/smooth_segmental_arch_1",
+  "textures": {
+    "particle": "edumia:block/andesite_bricks",
+    "texture": "edumia:block/andesite_bricks"
+  }
+}

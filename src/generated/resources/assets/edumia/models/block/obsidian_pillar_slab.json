@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "edumia:block/obsidian_pillar",
+    "side": "edumia:block/obsidian_pillar",
+    "top": "edumia:block/obsidian_pillar"
+  }
+}

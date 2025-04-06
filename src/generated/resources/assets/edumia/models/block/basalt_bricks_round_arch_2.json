@@ -1,0 +1,7 @@
+{
+  "parent": "edumia:block/template/smooth_round_arch_2",
+  "textures": {
+    "particle": "edumia:block/basalt_bricks",
+    "texture": "edumia:block/basalt_bricks"
+  }
+}

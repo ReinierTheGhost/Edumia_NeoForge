@@ -1,0 +1,7 @@
+{
+  "parent": "edumia:block/template/smooth_gothic_arch_1",
+  "textures": {
+    "particle": "edumia:block/desert_mud_bricks",
+    "texture": "edumia:block/desert_mud_bricks"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "edumia:block/template/arch_small_parent",
+  "textures": {
+    "particle": "edumia:block/cracked_cacholong_bricks",
+    "texture": "edumia:block/cracked_cacholong_bricks",
+    "top": "edumia:block/cracked_cacholong_bricks"
+  }
+}

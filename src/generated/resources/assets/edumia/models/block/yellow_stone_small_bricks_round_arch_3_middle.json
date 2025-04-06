@@ -1,0 +1,7 @@
+{
+  "parent": "edumia:block/template/smooth_round_arch_3_middle",
+  "textures": {
+    "particle": "edumia:block/yellow_stone_small_bricks",
+    "texture": "edumia:block/yellow_stone_small_bricks"
+  }
+}

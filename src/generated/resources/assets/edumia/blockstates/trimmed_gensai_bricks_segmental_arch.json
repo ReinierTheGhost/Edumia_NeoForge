@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "facing=east,shape=one": {
+      "model": "edumia:block/trimmed_gensai_bricks_segmental_arch_1"
+    },
+    "facing=east,shape=three": {
+      "model": "edumia:block/trimmed_gensai_bricks_segmental_arch_3",
+      "y": 180
+    },
+    "facing=east,shape=three_middle": {
+      "model": "edumia:block/trimmed_gensai_bricks_segmental_arch_3_middle",
+      "y": 180
+    },
+    "facing=east,shape=two": {
+      "model": "edumia:block/trimmed_gensai_bricks_segmental_arch_2",
+      "y": 180
+    },
+    "facing=north,shape=one": {
+      "model": "edumia:block/trimmed_gensai_bricks_segmental_arch_1",
+      "y": 270
+    },
+    "facing=north,shape=three": {
+      "model": "edumia:block/trimmed_gensai_bricks_segmental_arch_3",
+      "y": 90
+    },
+    "facing=north,shape=three_middle": {
+      "model": "edumia:block/trimmed_gensai_bricks_segmental_arch_3_middle",
+      "y": 90
+    },
+    "facing=north,shape=two": {
+      "model": "edumia:block/trimmed_gensai_bricks_segmental_arch_2",
+      "y": 90
+    },
+    "facing=south,shape=one": {
+      "model": "edumia:block/trimmed_gensai_bricks_segmental_arch_1",
+      "y": 180
+    },
+    "facing=south,shape=three": {
+      "model": "edumia:block/trimmed_gensai_bricks_segmental_arch_3",
+      "y": 270
+    },
+    "facing=south,shape=three_middle": {
+      "model": "edumia:block/trimmed_gensai_bricks_segmental_arch_3_middle",
+      "y": 270
+    },
+    "facing=south,shape=two": {
+      "model": "edumia:block/trimmed_gensai_bricks_segmental_arch_2",
+      "y": 270
+    },
+    "facing=west,shape=one": {
+      "model": "edumia:block/trimmed_gensai_bricks_segmental_arch_1",
+      "y": 90
+    },
+    "facing=west,shape=three": {
+      "model": "edumia:block/trimmed_gensai_bricks_segmental_arch_3"
+    },
+    "facing=west,shape=three_middle": {
+      "model": "edumia:block/trimmed_gensai_bricks_segmental_arch_3_middle"
+    },
+    "facing=west,shape=two": {
+      "model": "edumia:block/trimmed_gensai_bricks_segmental_arch_2"
+    }
+  }
+}

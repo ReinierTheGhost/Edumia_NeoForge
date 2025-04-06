@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "edumia:block/cacholong_pillar_face",
+    "side": "edumia:block/cacholong_pillar_top"
+  }
+}

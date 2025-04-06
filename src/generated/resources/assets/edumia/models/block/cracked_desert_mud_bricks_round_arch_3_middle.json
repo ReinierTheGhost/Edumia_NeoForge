@@ -1,0 +1,7 @@
+{
+  "parent": "edumia:block/template/smooth_round_arch_3_middle",
+  "textures": {
+    "particle": "edumia:block/cracked_desert_mud_bricks",
+    "texture": "edumia:block/cracked_desert_mud_bricks"
+  }
+}

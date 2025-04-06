@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "edumia:block/graystone_pillar",
+    "side": "edumia:block/graystone_pillar",
+    "top": "edumia:block/graystone_pillar"
+  }
+}

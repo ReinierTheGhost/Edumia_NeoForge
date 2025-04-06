@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "edumia:block/desert_mud_pillar_face",
+    "side": "edumia:block/desert_mud_pillar_bottom"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "edumia:block/template/arch_small_parent",
+  "textures": {
+    "particle": "edumia:block/red_gensai_bricks",
+    "texture": "edumia:block/red_gensai_bricks",
+    "top": "edumia:block/red_gensai_bricks"
+  }
+}

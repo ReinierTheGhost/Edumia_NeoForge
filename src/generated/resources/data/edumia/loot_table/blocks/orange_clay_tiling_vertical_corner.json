@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "edumia:orange_clay_tiling_vertical_corner"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "edumia:blocks/orange_clay_tiling_vertical_corner"
+}

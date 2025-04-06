@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "edumia:block/gensai_pillar",
+    "side": "edumia:block/gensai_pillar",
+    "top": "edumia:block/gensai_pillar"
+  }
+}

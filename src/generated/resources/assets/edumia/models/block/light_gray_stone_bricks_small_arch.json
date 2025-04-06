@@ -1,0 +1,8 @@
+{
+  "parent": "edumia:block/template/arch_small_parent",
+  "textures": {
+    "particle": "edumia:block/light_gray_stone_bricks",
+    "texture": "edumia:block/light_gray_stone_bricks",
+    "top": "edumia:block/light_gray_stone_bricks"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "edumia:block/template/arch_small_parent",
+  "textures": {
+    "particle": "edumia:block/volcanic_demon_bricks",
+    "texture": "edumia:block/volcanic_demon_bricks",
+    "top": "edumia:block/volcanic_demon_bricks"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "edumia:block/dark_high_elven_pillar",
+    "side": "edumia:block/dark_high_elven_pillar",
+    "top": "edumia:block/dark_high_elven_pillar"
+  }
+}

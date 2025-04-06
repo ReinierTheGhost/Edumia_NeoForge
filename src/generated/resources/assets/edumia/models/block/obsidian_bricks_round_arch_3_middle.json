@@ -1,0 +1,7 @@
+{
+  "parent": "edumia:block/template/smooth_round_arch_3_middle",
+  "textures": {
+    "particle": "edumia:block/obsidian_bricks",
+    "texture": "edumia:block/obsidian_bricks"
+  }
+}

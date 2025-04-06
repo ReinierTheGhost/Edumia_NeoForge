@@ -1,0 +1,11 @@
+{
+  "variants": {
+    "direction=eastwest": {
+      "model": "edumia:block/mossy_desert_mud_bricks_small_arch",
+      "y": 90
+    },
+    "direction=northsouth": {
+      "model": "edumia:block/mossy_desert_mud_bricks_small_arch"
+    }
+  }
+}

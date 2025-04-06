@@ -1,0 +1,7 @@
+{
+  "parent": "edumia:block/template/smooth_segmental_arch_3",
+  "textures": {
+    "particle": "edumia:block/mossy_graystone_bricks",
+    "texture": "edumia:block/mossy_graystone_bricks"
+  }
+}
