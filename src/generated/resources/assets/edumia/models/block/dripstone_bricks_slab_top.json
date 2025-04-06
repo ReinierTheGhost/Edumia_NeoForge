@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "edumia:block/dripstone_bricks",
+    "side": "edumia:block/dripstone_bricks",
+    "top": "edumia:block/dripstone_bricks"
+  }
+}

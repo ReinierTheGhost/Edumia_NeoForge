@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "edumia:block/diorite_bricks",
+    "side": "edumia:block/diorite_bricks",
+    "top": "edumia:block/diorite_bricks"
+  }
+}

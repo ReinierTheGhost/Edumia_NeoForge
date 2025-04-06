@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "edumia:block/mossy_volcanic_demon_bricks",
+    "side": "edumia:block/mossy_volcanic_demon_bricks",
+    "top": "edumia:block/mossy_volcanic_demon_bricks"
+  }
+}

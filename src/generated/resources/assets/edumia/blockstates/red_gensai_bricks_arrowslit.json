@@ -1,0 +1,23 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "edumia:block/red_gensai_bricks_arrowslit",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "edumia:block/red_gensai_bricks_arrowslit",
+      "uvlock": true
+    },
+    "facing=south": {
+      "model": "edumia:block/red_gensai_bricks_arrowslit",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=west": {
+      "model": "edumia:block/red_gensai_bricks_arrowslit",
+      "uvlock": true,
+      "y": 270
+    }
+  }
+}

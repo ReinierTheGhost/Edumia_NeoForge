@@ -1,0 +1,9 @@
+{
+  "parent": "edumia:block/template/template_arrowslit",
+  "textures": {
+    "bottom": "edumia:block/limestone_bricks",
+    "particle": "edumia:block/limestone_bricks",
+    "texture": "edumia:block/limestone_bricks",
+    "top": "edumia:block/limestone_bricks"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "edumia:block/mossy_desert_mud_bricks",
+    "side": "edumia:block/mossy_desert_mud_bricks",
+    "top": "edumia:block/mossy_desert_mud_bricks"
+  }
+}

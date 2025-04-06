@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "edumia:block/mossy_light_high_elven_bricks"
+  }
+}

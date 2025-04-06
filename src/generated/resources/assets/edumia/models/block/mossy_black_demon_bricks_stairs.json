@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "edumia:block/mossy_black_demon_bricks",
+    "side": "edumia:block/mossy_black_demon_bricks",
+    "top": "edumia:block/mossy_black_demon_bricks"
+  }
+}

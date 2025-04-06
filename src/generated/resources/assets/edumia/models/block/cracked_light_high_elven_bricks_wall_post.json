@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_wall_post",
+  "textures": {
+    "wall": "edumia:block/cracked_light_high_elven_bricks"
+  }
+}

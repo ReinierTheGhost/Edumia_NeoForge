@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "edumia:block/cracked_graystone_bricks",
+    "side": "edumia:block/cracked_graystone_bricks",
+    "top": "edumia:block/cracked_graystone_bricks"
+  }
+}

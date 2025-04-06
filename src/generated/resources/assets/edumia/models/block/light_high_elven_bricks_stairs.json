@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "edumia:block/light_high_elven_bricks",
+    "side": "edumia:block/light_high_elven_bricks",
+    "top": "edumia:block/light_high_elven_bricks"
+  }
+}

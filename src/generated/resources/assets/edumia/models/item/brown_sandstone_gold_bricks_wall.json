@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "edumia:block/brown_sandstone_gold_bricks"
+  }
+}

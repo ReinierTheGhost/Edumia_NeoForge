@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "edumia:block/yellow_stone_bricks_balustrade",
+      "uvlock": true,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "edumia:block/yellow_stone_bricks_balustrade_base",
+      "uvlock": true
+    },
+    "axis=z": {
+      "model": "edumia:block/yellow_stone_bricks_balustrade",
+      "uvlock": true,
+      "y": 180
+    }
+  }
+}

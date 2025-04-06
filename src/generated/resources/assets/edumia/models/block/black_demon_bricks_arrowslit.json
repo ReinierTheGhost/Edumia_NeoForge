@@ -1,0 +1,9 @@
+{
+  "parent": "edumia:block/template/template_arrowslit",
+  "textures": {
+    "bottom": "edumia:block/black_demon_bricks",
+    "particle": "edumia:block/black_demon_bricks",
+    "texture": "edumia:block/black_demon_bricks",
+    "top": "edumia:block/black_demon_bricks"
+  }
+}

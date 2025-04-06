@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "edumia:block/cracked_volcanic_demon_bricks"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "edumia:block/template/parent_balustrade",
+  "textures": {
+    "particle": "edumia:block/cracked_cacholong_bricks",
+    "side": "edumia:block/cracked_cacholong_bricks",
+    "top": "edumia:block/cracked_cacholong_bricks"
+  }
+}

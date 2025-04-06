@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "edumia:block/brown_sandstone_gold_bricks",
+    "side": "edumia:block/brown_sandstone_gold_bricks",
+    "top": "edumia:block/brown_sandstone_gold_bricks"
+  }
+}

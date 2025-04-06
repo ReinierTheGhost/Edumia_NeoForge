@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "edumia:block/demon_basalt_bricks",
+    "side": "edumia:block/demon_basalt_bricks",
+    "top": "edumia:block/demon_basalt_bricks"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "edumia:block/volcanic_demon_bricks_arrowslit",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "edumia:block/volcanic_demon_bricks_arrowslit",
+      "uvlock": true
+    },
+    "facing=south": {
+      "model": "edumia:block/volcanic_demon_bricks_arrowslit",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=west": {
+      "model": "edumia:block/volcanic_demon_bricks_arrowslit",
+      "uvlock": true,
+      "y": 270
+    }
+  }
+}
