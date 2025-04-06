@@ -1,5 +1,7 @@
 package com.legends.edumia.datagen;
 
+import com.legends.edumia.blocks.blocksets.BuildingSets;
+import com.legends.edumia.blocks.blocksets.ClayTilingSets;
 import com.legends.edumia.core.BlockLoader;
 import com.legends.edumia.datagen.custom.loot_tables.BlockDrops;
 import net.minecraft.core.Holder;
@@ -17,6 +19,8 @@ import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 public class ModBlockLootTableProvider extends BlockLootSubProvider {
@@ -44,7 +48,27 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected Iterable<Block> getKnownBlocks() {
-        return BlockLoader.BLOCKS.getEntries().stream().map(Holder::value)::iterator;
+
+        List<Block> allBlocks = new ArrayList<>();
+
+        // Add blocks from BlockLoader
+        BlockLoader.BLOCKS.getEntries()
+                .stream()
+                .map(Holder::value)
+                .forEach(allBlocks::add);
+
+        // Add blocks from BuildingSets
+        BuildingSets.BLOCKS.getEntries()
+                .stream()
+                .map(Holder::value)
+                .forEach(allBlocks::add);
+
+        ClayTilingSets.BLOCKS.getEntries()
+                .stream()
+                .map(Holder::value)
+                .forEach(allBlocks::add);
+
+        return allBlocks;
     }
 
 }

@@ -16,6 +16,7 @@ import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import org.jetbrains.annotations.NotNull;
 
+@SuppressWarnings("unchecked")
 public abstract class WaterloggedBidirectionalShape extends Shape implements ModWaterloggable {
     public static final EnumProperty DIRECTION = EnumProperty.create("direction", BidirectionalShape.class);
 
@@ -23,12 +24,14 @@ public abstract class WaterloggedBidirectionalShape extends Shape implements Mod
         super(builder);
     }
 
-    public BlockState rotate(BlockState state, Rotation rot) {
+    @Override
+    public @NotNull BlockState rotate(BlockState state, Rotation rot) {
         return state.getValue(DIRECTION) == BidirectionalShape.NORTH_SOUTH ? state.setValue(DIRECTION, BidirectionalShape.EAST_WEST) :
                 state.setValue(DIRECTION, BidirectionalShape.NORTH_SOUTH);
     }
 
-    public BlockState mirror(BlockState state, Mirror mirrorIn) {
+    @Override
+    public @NotNull BlockState mirror(BlockState state, Mirror mirrorIn) {
         return state;
     }
 
@@ -45,7 +48,7 @@ public abstract class WaterloggedBidirectionalShape extends Shape implements Mod
                 Fluids.WATER);
     }
 
-    public FluidState getFluidState(BlockState state) {
+    public @NotNull FluidState getFluidState(BlockState state) {
         return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
 

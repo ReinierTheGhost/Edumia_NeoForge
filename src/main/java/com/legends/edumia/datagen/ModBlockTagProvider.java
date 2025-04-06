@@ -44,5 +44,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.FENCES)
                 .add(Fences.fences.toArray(new Block[0]));
+
+        tag(TagLoader.Blocks.PILLARS)
+                .add(Pillar.pillars.toArray(new Block[0]));
     }
 }

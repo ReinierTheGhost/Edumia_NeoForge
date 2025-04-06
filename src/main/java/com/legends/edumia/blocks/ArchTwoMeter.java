@@ -4,10 +4,12 @@ package com.legends.edumia.blocks;
 import com.legends.edumia.blocks.directional.HalfDirectional;
 import com.legends.edumia.blocks.properties.BlockVoxelShapes;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.Half;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import org.jetbrains.annotations.NotNull;
 
 import javax.swing.text.html.BlockView;
 
@@ -44,7 +46,7 @@ public class ArchTwoMeter extends HalfDirectional {
         }
     }
 
-    public VoxelShape getCullingShape(BlockState state, BlockView world, BlockPos pos) {
+    public @NotNull VoxelShape getOcclusionShape(BlockState state, BlockGetter world, BlockPos pos) {
         return Shapes.empty();
     }
 }

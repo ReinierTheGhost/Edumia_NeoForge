@@ -2,6 +2,7 @@ package com.legends.edumia.core;
 
 import com.legends.edumia.Edumia;
 import com.legends.edumia.blocks.blocksets.BuildingSets;
+import com.legends.edumia.blocks.blocksets.ClayTilingSets;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -37,24 +38,24 @@ public class CreativeTabLoader {
                             entries.accept(set.stair().get());
                             entries.accept(set.wall().get());
                             entries.accept(set.arrowSlit().get());
-//                            if (set.pillar() != null){
-//                                entries.accept(set.pillar().get());
-//                                entries.accept(set.pillarSlab().get());
-//                            }
-//                            entries.accept(set.smallArch().get());
-//                            entries.accept(set.twoMeterArch().get());
-//                            entries.accept(set.roundArch().get());
-//                            entries.accept(set.segmentalArch().get());
-//                            entries.accept(set.gothicArch().get());
+                            if (set.pillar() != null){
+                                entries.accept(set.pillar().get());
+                                entries.accept(set.pillarSlab().get());
+                            }
+                            entries.accept(set.smallArch().get());
+                            entries.accept(set.twoMeterArch().get());
+                            entries.accept(set.roundArch().get());
+                            entries.accept(set.segmentalArch().get());
+                            entries.accept(set.gothicArch().get());
                             entries.accept(set.balustrade().get());
                         }
 
-//                        for (ClayTilingSets.ClayTilingSet set : ClayTilingSets.sets) {
-//                            entries.accept(set.block().get());
-//                            entries.accept(set.slab().get());
-//                            entries.accept(set.stairs().get());
-//                            entries.accept(set.corner().get());
-//                        }
+                        for (ClayTilingSets.ClayTilingSet set : ClayTilingSets.sets) {
+                            entries.accept(set.block().get());
+                            entries.accept(set.slab().get());
+                            entries.accept(set.stairs().get());
+                            entries.accept(set.corner().get());
+                        }
 //
 //                        for (NotBrickBuildingSets.BuildSet set : NotBrickBuildingSets.buildSets) {
 //                            entries.accept(set.block().get());

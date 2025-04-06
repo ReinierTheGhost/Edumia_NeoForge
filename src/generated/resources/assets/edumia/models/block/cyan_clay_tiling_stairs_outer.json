@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "edumia:block/cyan_clay_tiling",
+    "side": "edumia:block/cyan_clay_tiling",
+    "top": "edumia:block/cyan_clay_tiling"
+  }
+}

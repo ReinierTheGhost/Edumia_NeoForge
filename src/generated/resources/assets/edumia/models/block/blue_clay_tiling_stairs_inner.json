@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "edumia:block/blue_clay_tiling",
+    "side": "edumia:block/blue_clay_tiling",
+    "top": "edumia:block/blue_clay_tiling"
+  }
+}

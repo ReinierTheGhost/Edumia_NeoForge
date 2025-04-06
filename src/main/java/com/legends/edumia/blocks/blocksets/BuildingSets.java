@@ -2,11 +2,7 @@ package com.legends.edumia.blocks.blocksets;
 
 import com.legends.edumia.Edumia;
 import com.legends.edumia.blocks.*;
-import com.legends.edumia.core.CreativeTabLoader;
 import com.legends.edumia.core.ItemLoader;
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -142,11 +138,11 @@ public class BuildingSets {
             LIMESTONE_BRICKS
     };
 
-    public record BuildSet(DeferredBlock<Block> block, DeferredBlock<AxialSlabBlock> slab, DeferredBlock<StairBlock> stair, DeferredBlock<WallBlock> wall,
+    public record BuildSet(DeferredBlock<Block> block, DeferredBlock<AxialSlabBlock> slab, DeferredBlock<StairBlock> stair,
+                           DeferredBlock<WallBlock> wall, DeferredBlock<Block> pillar, DeferredBlock<AxialSlabBlock> pillarSlab, DeferredBlock<ArchSmall> smallArch, DeferredBlock<ArchTwoMeter> twoMeterArch,
+                           DeferredBlock<ArchBlock> roundArch, DeferredBlock<ArchBlock> segmentalArch, DeferredBlock<ArchBlock> gothicArch,
                            DeferredBlock<Balustrade> balustrade, DeferredBlock<ArrowSlit> arrowSlit
-//                           ,DeferredBlock<Block> pillar, DeferredBlock<Block> pillarSlab, DeferredBlock<Block> smallArch,
-//                           DeferredBlock<Block> twoMeterArch, DeferredBlock<Block> roundArch, DeferredBlock<Block> segmentalArch,
-//                           DeferredBlock<Block> gothicArch,
+
     ){
     }
 
@@ -164,45 +160,50 @@ public class BuildingSets {
         DeferredBlock<WallBlock> wall = registerbuildingBlock(name + "_bricks_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
                 .strength(strength).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
-//        DeferredBlock<Block> pillar;
-//        DeferredBlock<Block> pillarSlab = null;
-//        if (hasPillar){
-//            pillar = registerbuildingBlock(name + "_pillar", () -> new EdumiaPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
-//                    .strength(strength).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+        DeferredBlock<Block> pillar;
+        DeferredBlock<AxialSlabBlock> pillarSlab;
+        if (hasPillar){
+            pillar = registerbuildingBlock(name + "_pillar",
+                    () -> new EdumiaPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
+                    .strength(strength).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+            pillarSlab = registerbuildingBlock(name + "_pillar_slab", () -> new AxialSlabBlock(pillar));
+        } else {
+            pillar = null;
+            pillarSlab = null;
+        }
+
+        DeferredBlock<ArchSmall> smallArch = registerbuildingBlock(name + "_bricks_small_arch",
+                () -> new ArchSmall(BlockBehaviour.Properties.of()
+                    .strength(STONE_STRENGTH).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+        DeferredBlock<ArchTwoMeter> twoMeterArch = registerbuildingBlock(name + "_bricks_two_meter_arch",
+                () -> new ArchTwoMeter(BlockBehaviour.Properties.of()
+                    .strength(STONE_STRENGTH).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 //
-//            pillarSlab = registerbuildingBlock(name + "_pillar_slab", () -> new AxialSlabBlock(pillar));
-//        } else {
-//            pillar = null;
-//        }
+        DeferredBlock<ArchBlock> roundArch = registerbuildingBlock(name + "_bricks_round_arch",
+                () -> new ArchBlock(BlockBehaviour.Properties.of()
+                    .strength(STONE_STRENGTH).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+        DeferredBlock<ArchBlock> segmentalArch = registerbuildingBlock(name + "_bricks_segmental_arch",
+                () -> new ArchBlock(BlockBehaviour.Properties.of()
+                    .strength(STONE_STRENGTH).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 //
-//        DeferredBlock<Block> smallArch = registerbuildingBlock(name + "_bricks_small_arch", () -> new ArchSmall(BlockBehaviour.Properties.of()
-//                    .strength(STONE_STRENGTH).sound(SoundType.STONE).requiresCorrectToolForDrops()));
-//
-//        DeferredBlock<Block> twoMeterArch = registerbuildingBlock(name + "_bricks_two_meter_arch",
-//                () -> new ArchTwoMeter(BlockBehaviour.Properties.of()
-//                    .strength(STONE_STRENGTH).sound(SoundType.STONE).requiresCorrectToolForDrops()));
-//
-//        DeferredBlock<Block> roundArch = registerbuildingBlock(name + "_bricks_round_arch", () -> new Arch(BlockBehaviour.Properties.of()
-//                    .strength(STONE_STRENGTH).sound(SoundType.STONE).requiresCorrectToolForDrops()));
-//
-//        DeferredBlock<Block> segmentalArch = registerbuildingBlock(name + "_bricks_segmental_arch",
-//                () -> new Arch(BlockBehaviour.Properties.of()
-//                    .strength(STONE_STRENGTH).sound(SoundType.STONE).requiresCorrectToolForDrops()));
-//
-//        DeferredBlock<Block> gothicArch = registerbuildingBlock(name + "_bricks_gothic_arch", () -> new Arch(BlockBehaviour.Properties.of()
-//                    .strength(STONE_STRENGTH).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+        DeferredBlock<ArchBlock> gothicArch = registerbuildingBlock(name + "_bricks_gothic_arch",
+                () -> new ArchBlock(BlockBehaviour.Properties.of()
+                    .strength(STONE_STRENGTH).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 //
         DeferredBlock<Balustrade> balustrade = registerbuildingBlock(name + "_bricks_balustrade",
                 () -> new Balustrade(BlockBehaviour.Properties.of()
                 .strength(STONE_STRENGTH).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 //
-        DeferredBlock<ArrowSlit> arrowslit = registerbuildingBlock(name + "_bricks_arrowslit", () -> new ArrowSlit(BlockBehaviour.Properties.of()
+        DeferredBlock<ArrowSlit> arrowslit = registerbuildingBlock(name + "_bricks_arrowslit",
+                () -> new ArrowSlit(BlockBehaviour.Properties.of()
                 .strength(STONE_STRENGTH).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
-//,pillar, pillarSlab, smallArch, twoMeterArch, roundArch,
-//                segmentalArch, gothicArch,
+//
 
-        return new BuildSet(stone, slab, stairs, wall, balustrade, arrowslit);
+        return new BuildSet(stone, slab, stairs, wall, pillar, pillarSlab, smallArch, twoMeterArch, roundArch, segmentalArch, gothicArch, balustrade, arrowslit);
     }
     private static <T extends Block> DeferredBlock<T> registerbuildingBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

@@ -7,7 +7,6 @@ import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -28,14 +27,12 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import javax.swing.text.html.BlockView;
-
-public class Arch extends HorizontalDirectionalBlock {
+public class ArchBlock extends HorizontalDirectionalBlock {
     public static final EnumProperty<ArchShape> FORM = EnumProperty.create("shape", ArchShape.class);
 
     private static final VoxelShape ARCH_MIDDLE_SHAPE =
             Block.box(0.0D, 8.0D, 0.0D, 16.0D, 16.0D, 16.0D);
-    public Arch(BlockBehaviour.Properties properties) {
+    public ArchBlock(BlockBehaviour.Properties properties) {
         super(properties);
         registerDefaultState(((this.stateDefinition.any()).setValue(FORM,
                 ArchShape.ONE)).setValue(FACING, Direction.NORTH));

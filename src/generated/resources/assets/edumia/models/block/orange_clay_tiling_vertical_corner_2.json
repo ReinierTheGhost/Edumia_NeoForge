@@ -1,0 +1,12 @@
+{
+  "parent": "edumia:block/template/template_vertical_corner_2",
+  "textures": {
+    "bottom": "edumia:block/orange_clay_tiling",
+    "east": "edumia:block/orange_clay_tiling",
+    "north": "edumia:block/orange_clay_tiling",
+    "particle": "edumia:block/orange_clay_tiling",
+    "south": "edumia:block/orange_clay_tiling",
+    "top": "edumia:block/orange_clay_tiling",
+    "west": "edumia:block/orange_clay_tiling"
+  }
+}

@@ -4,9 +4,7 @@ import com.legends.edumia.Edumia;
 import com.legends.edumia.core.BlockLoader;
 import com.legends.edumia.datagen.custom.ModModelProvider;
 import com.legends.edumia.datagen.custom.models.*;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -49,6 +47,48 @@ public class ModBlockStateProvider  extends ModModelProvider {
             balustrade(block.balustrade(), blockTexture(block.texture()));
             blockItem(block.balustrade());
         }
+
+        for (SimpleGothicArchModel.Arch block : SimpleGothicArchModel.blocks){
+            gothicArch(block.arch(), blockTexture(block.texture()));
+            blockItem(block.arch(), "_1");
+        }
+
+        for (SimpleRoundArchModel.Arch block : SimpleRoundArchModel.blocks){
+            roundArch(block.arch(), blockTexture(block.texture()));
+            blockItem(block.arch(), "_1");
+        }
+
+        for (SimpleSegmentalArchModel.Arch block : SimpleSegmentalArchModel.blocks){
+            segmentalArch(block.arch(), blockTexture(block.texture()));
+            blockItem(block.arch(), "_1");
+        }
+
+        for (SimpleSmallArchModel.Arch block : SimpleSmallArchModel.blocks){
+            smallArch(block.arch(), blockTexture(block.texture()));
+            blockItem(block.arch());
+        }
+
+        for (SimpleTwoMeterArchModel.Arch block : SimpleTwoMeterArchModel.blocks){
+            twoMeterArch(block.arch(), blockTexture(block.texture()));
+            blockItem(block.arch());
+        }
+
+        for (SimplePillarModels.Pillar block : SimplePillarModels.blocks){
+            pillar(block.pillar());
+            blockItem(block.pillar());
+        }
+
+        for (SimpleAxisPillarSlabModel.Slab block : SimpleAxisPillarSlabModel.blocks){
+            axisSlab(block.slab(), blockTexture(block.block()), blockTexture(block.block()));
+            blockItem(block.slab());
+        }
+
+        for (SimpleCornerBlockModel.Corner block : SimpleCornerBlockModel.blocks){
+            verticalCorner(block.corner(), blockTexture(block.texture()));
+            blockItem(block.corner(), "_4");
+        }
+
+
     }
 
     private void blockWithItem(DeferredBlock<?> deferredBlock) {

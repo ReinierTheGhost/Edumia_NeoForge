@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "edumia:block/clay_tiling",
+    "side": "edumia:block/clay_tiling",
+    "top": "edumia:block/clay_tiling"
+  }
+}

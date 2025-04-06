@@ -32,7 +32,7 @@ public class HalfDirectional extends HorizontalDirectionalShape {
         return this.getShape(state);
     }
 
-    public BlockState getPlacementState(BlockPlaceContext context) {
+    public BlockState getStateForPlacement(BlockPlaceContext context) {
         Direction facingHorizontal = context.getHorizontalDirection().getOpposite();
         BlockState state2 = ((this.defaultBlockState().setValue(DIRECTION, facingHorizontal))
                 .setValue(TYPE_UPDOWN, Half.BOTTOM));
