@@ -9,7 +9,10 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DoublePlantBlock;
 import net.minecraft.world.level.block.RotatedPillarBlock;
+import net.minecraft.world.level.block.TallFlowerBlock;
+import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.block.state.properties.Half;
 import net.minecraft.world.level.block.state.properties.SlabType;
 import net.neoforged.neoforge.client.model.generators.BlockModelBuilder;
@@ -17,16 +20,53 @@ import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.registries.DeferredBlock;
 
 public abstract class ModModelProvider extends BlockStateProvider {
     public ModModelProvider(PackOutput output, String modid, ExistingFileHelper exFileHelper) {
         super(output, modid, exFileHelper);
     }
+    public void tallFlower(Block block){
+        tallFlower(block, models().cross(name(block) + "_bottom", modLoc("block/" + name(block) + "_bottom")),
+                models().cross(name(block) + "_top", modLoc("block/" + name(block) + "_top")));
+    }
+
+    private void tallFlower(Block block, ModelFile lower, ModelFile upper){
+        getVariantBuilder(block).partialState()
+                .with(DoublePlantBlock.HALF, DoubleBlockHalf.LOWER).addModels(new ConfiguredModel(lower))
+                .with(DoublePlantBlock.HALF, DoubleBlockHalf.UPPER).addModels(new ConfiguredModel(upper));
+
+    }
+
+    public void crossBlock(Block blockRegistryObject) {
+        simpleBlock(blockRegistryObject,
+                models().cross(BuiltInRegistries.BLOCK.getKey(blockRegistryObject).getPath(),
+                        blockTexture(blockRegistryObject)).renderType("cutout"));
+    }
+
+    public void pottedFlower(Block block, Block flower){
+        simpleBlock(block, pottedFlower(BuiltInRegistries.BLOCK.getKey(block).getPath(), blockTexture(flower)).renderType("cutout"));
+    }
+    @SuppressWarnings("unchecked")
+    private <T extends BlockModelBuilder> T pottedFlower(String name, ResourceLocation cross) {
+        return (T) models().singleTexture(name, mcLoc("block/flower_pot_cross") , "plant", cross);
+    }
+
+
+
+
+
+    public void cubeBottomTop(Block block){
+        simpleBlock(block, cubeBottomTop(block, blockTexture(block), modLoc("block/" + name(block) + "_bottom"), modLoc("block/" + name(block) + "_top")));
+    }
+    private ModelFile cubeBottomTop(Block block, ResourceLocation texture, ResourceLocation bottom, ResourceLocation top){
+        return models().cubeBottomTop(name(block), texture, bottom, top);
+    }
 
     public void axisSlab(AxialSlabBlock block, ResourceLocation doubleslab, ResourceLocation texture) {
         axisSlab(block, doubleslab, texture, texture, texture);
     }
-    private void axisSlab(AxialSlabBlock block, ResourceLocation doubleslab, ResourceLocation side, ResourceLocation bottom, ResourceLocation top) {
+    public void axisSlab(AxialSlabBlock block, ResourceLocation doubleslab, ResourceLocation side, ResourceLocation bottom, ResourceLocation top) {
         axisSlab(block, models().slab(name(block), side, bottom, top), models().slabTop(name(block) + "_top", side, bottom, top), models().getExistingFile(doubleslab));
     }
     private void axisSlab(AxialSlabBlock block, ModelFile bottom, ModelFile top, ModelFile doubleSlab){
@@ -60,10 +100,10 @@ public abstract class ModModelProvider extends BlockStateProvider {
     }
 
     public void arrowSlit(ArrowSlit block, ResourceLocation arrowslit){
-        arrowSlit(block, arrowSlit(name(block), arrowslit, arrowslit, arrowslit));
+        arrowSlit(block, arrowSlit(name(block), arrowslit));
     }
-    private  <T extends BlockModelBuilder> T arrowSlit(String name, ResourceLocation texture, ResourceLocation bottom, ResourceLocation top) {
-        return texBotTopPar(name, "block/template/template_arrowslit", texture, bottom, top);
+    private  <T extends BlockModelBuilder> T arrowSlit(String name, ResourceLocation texture) {
+        return texBotTopPar(name, "block/template/template_arrowslit", texture, texture, texture);
     }
     private void arrowSlit(ArrowSlit block, ModelFile arrowslit){
         getVariantBuilder(block)
@@ -152,6 +192,7 @@ public abstract class ModModelProvider extends BlockStateProvider {
     private  <T extends BlockModelBuilder> T segmentalArchThreeMiddle(String name, ResourceLocation side) {
         return texPar(name, "block/template/smooth_segmental_arch_3_middle", side);
     }
+
     private void arch(ArchBlock block, ModelFile one, ModelFile two, ModelFile tree, ModelFile treeMiddle){
         getVariantBuilder(block)
                 .partialState().with(ArchBlock.FORM, ArchShape.ONE).with(ArchBlock.FACING, Direction.EAST)
@@ -356,6 +397,60 @@ public abstract class ModModelProvider extends BlockStateProvider {
                 .modelForState().modelFile(modelFile).rotationX(90).addModel()
                 .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.X)
                 .modelForState().modelFile(modelFile).rotationX(90).rotationY(90).addModel();
+    }
+
+    public void layer(Block block, Block full){
+        layers(block,
+                layer1(name(block) +  "_height2", blockTexture(full)),
+                layer2(name(block) + "_height4", blockTexture(full)),
+                layer3(name(block) +  "_height6", blockTexture(full)),
+                layer4(name(block) +  "_height8", blockTexture(full)),
+                layer5(name(block) +  "_height10", blockTexture(full)),
+                layer6(name(block) +  "_height12", blockTexture(full)),
+                layer7(name(block) +  "_height14", blockTexture(full)),
+                cubeAll(full));
+    }
+
+    private  <T extends BlockModelBuilder> T layer1(String name, ResourceLocation texture) {
+        return texPar(name, "block/template/layer_height2", texture);
+    }
+    private  <T extends BlockModelBuilder> T layer2(String name, ResourceLocation texture) {
+        return texPar(name, "block/template/layer_height4", texture);
+    }
+    private  <T extends BlockModelBuilder> T layer3(String name, ResourceLocation texture) {
+        return texPar(name, "block/template/layer_height6", texture);
+    }
+    private  <T extends BlockModelBuilder> T layer4(String name, ResourceLocation texture) {
+        return texPar(name, "block/template/layer_height8", texture);
+    }
+    private  <T extends BlockModelBuilder> T layer5(String name, ResourceLocation texture) {
+        return texPar(name, "block/template/layer_height10", texture);
+    }
+    private  <T extends BlockModelBuilder> T layer6(String name, ResourceLocation texture) {
+        return texPar(name, "block/template/layer_height12", texture);
+    }
+    private  <T extends BlockModelBuilder> T layer7(String name, ResourceLocation texture) {
+        return texPar(name, "block/template/layer_height14", texture);
+    }
+
+    private void layers(Block block, ModelFile one, ModelFile two, ModelFile three, ModelFile four, ModelFile five, ModelFile six, ModelFile seven, ModelFile eight){
+        getVariantBuilder(block)
+                .partialState().with(Layer.LAYERS, 1)
+                .addModels(new ConfiguredModel(one))
+                .partialState().with(Layer.LAYERS, 2)
+                .addModels(new ConfiguredModel(two))
+                .partialState().with(Layer.LAYERS, 3)
+                .addModels(new ConfiguredModel(three))
+                .partialState().with(Layer.LAYERS, 4)
+                .addModels(new ConfiguredModel(four))
+                .partialState().with(Layer.LAYERS, 5)
+                .addModels(new ConfiguredModel(five))
+                .partialState().with(Layer.LAYERS, 6)
+                .addModels(new ConfiguredModel(six))
+                .partialState().with(Layer.LAYERS, 7)
+                .addModels(new ConfiguredModel(seven))
+                .partialState().with(Layer.LAYERS, 8)
+                .addModels(new ConfiguredModel(eight));
     }
 
     @SuppressWarnings("unchecked")

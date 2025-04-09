@@ -1,10 +1,7 @@
 package com.legends.edumia.datagen.custom;
 
 import com.legends.edumia.blocks.blocksets.*;
-import com.legends.edumia.datagen.custom.loot_tables.BlockDrops;
-import com.legends.edumia.datagen.custom.loot_tables.DoorDrops;
-import com.legends.edumia.datagen.custom.loot_tables.LeavesDrops;
-import com.legends.edumia.datagen.custom.loot_tables.SilkTouchDrops;
+import com.legends.edumia.datagen.custom.loot_tables.*;
 import com.legends.edumia.datagen.custom.models.*;
 import com.legends.edumia.datagen.custom.tags.*;
 
@@ -112,12 +109,6 @@ public class EdumiaHelpingGenerator {
 
             SilkTouchDrops.blocks.add(set.pane().get());
             SilkTouchDrops.blocks.add(set.block().get());
-
-            MineablePickaxe.blocks.add(set.pane().get());
-            MineablePickaxe.blocks.add(set.block().get());
-
-            RequiresIronTool.blocks.add(set.pane().get());
-            RequiresIronTool.blocks.add(set.block().get());
         }
 
         for (StoneSets.StoneSet set : StoneSets.naturalSets){
@@ -241,6 +232,88 @@ public class EdumiaHelpingGenerator {
             SimplePillarModel.blocks.add(new SimplePillarModel.Pillar(blocks.beam().get()));
             BlockDrops.blocks.add(blocks.beam().get());
             MineableAxe.blocks.add(blocks.beam().get());
+        }
+
+        for (PaperwallSets.PaperwallSet set : PaperwallSets.paperwallSets){
+            SimplePaperWallModel.blocks.add(set.pane().get());
+            SilkTouchDrops.blocks.add(set.pane().get());
+        }
+
+        for (NotBrickBuildingSets.BuildSet set : NotBrickBuildingSets.buildSets){
+            SimpleBlockModel.blocks.add(set.block().get());
+            SimpleAxisSlabModel.blocks.add(new SimpleAxisSlabModel.Slab(set.block().get(), set.slab().get()));
+            SimpleStairModel.blocks.add(new SimpleStairModel.Stair(set.block().get(), set.stair().get()));
+
+            BlockDrops.blocks.add(set.block().get());
+            BlockDrops.blocks.add(set.slab().get());
+            BlockDrops.blocks.add(set.stair().get());
+
+            MineablePickaxe.blocks.add(set.block().get());
+            MineablePickaxe.blocks.add(set.slab().get());
+            MineablePickaxe.blocks.add(set.stair().get());
+
+            RequiresStoneTool.blocks.add(set.block().get());
+            RequiresStoneTool.blocks.add(set.slab().get());
+            RequiresStoneTool.blocks.add(set.stair().get());
+
+            if (set.wall() != null){
+                SimpleWallModel.blocks.add(new SimpleWallModel.Wall(set.block().get(), set.wall().get()));
+                RequiresStoneTool.blocks.add(set.wall().get());
+                MineablePickaxe.blocks.add(set.wall().get());
+                BlockDrops.blocks.add(set.wall().get());
+                Walls.walls.add(set.wall().get());
+            }
+        }
+
+        for (SandBlockSets.SandSet block : SandBlockSets.sandSets){
+
+            if(block.block() != null && block.sandStone() != null && block.sandstoneSlab() != null && block.sandstoneStairs() != null) {
+                SimpleSlabModel.blocks.add(new SimpleSlabModel.Slab(block.block().get(), block.slab().get()));
+                SimpleLayerModel.blocks.add(new SimpleLayerModel.Layer(block.block().get(), block.layer().get()));
+                SimpleBlockModel.blocks.add(block.block().get());
+                SimpleMultiFaceBlockModel.blocks.add(block.sandStone().get());
+                SimpleMultiFaceSlabModel.blocks.add(new SimpleMultiFaceSlabModel.Slab(block.sandStone().get(), block.sandstoneSlab().get()));
+                SimpleMultiFaceStairModel.blocks.add(new SimpleMultiFaceStairModel.Stair(block.sandStone().get(), block.sandstoneStairs().get()));
+
+                BlockDrops.blocks.add(block.slab().get());
+                BlockDrops.blocks.add(block.layer().get());
+                BlockDrops.blocks.add(block.block().get());
+                BlockDrops.blocks.add(block.sandStone().get());
+                BlockDrops.blocks.add(block.sandstoneSlab().get());
+                BlockDrops.blocks.add(block.sandstoneStairs().get());
+
+                MineablePickaxe.blocks.add(block.sandStone().get());
+                MineablePickaxe.blocks.add(block.sandstoneStairs().get());
+                MineablePickaxe.blocks.add(block.sandstoneSlab().get());
+                MineableShovel.blocks.add(block.layer().get());
+                MineableShovel.blocks.add(block.slab().get());
+
+                RequiresStoneTool.blocks.add(block.sandStone().get());
+                RequiresStoneTool.blocks.add(block.sandstoneSlab().get());
+                RequiresStoneTool.blocks.add(block.sandstoneStairs().get());
+
+
+            }else {
+                SimpleSlabModel.blocks.add(new SimpleSlabModel.Slab(block.texture(), block.slab().get()));
+                SimpleLayerModel.blocks.add(new SimpleLayerModel.Layer(block.texture(), block.layer().get()));
+
+                BlockDrops.blocks.add(block.layer().get());
+                BlockDrops.blocks.add(block.slab().get());
+            }
+        }
+
+        for (FlowerBlockSets.FlowerSet block : FlowerBlockSets.flowerSets){
+            if (block.tallFlower() == null){
+                SimpleFlowerModel.blocks.add(block.flower().get());
+                SimplePottedFlowerModel.blocks.add(new SimplePottedFlowerModel.Potted(block.pottedFlower().get(), block.flower().get()));
+
+                BlockDrops.blocks.add(block.flower().get());
+                PottedFlowerDrops.blocks.add(block.pottedFlower().get());
+            }else {
+                SimpleTallFlowerModel.blocks.add(block.tallFlower().get());
+                BlockDrops.blocks.add(block.tallFlower().get());
+            }
+
         }
 
     }

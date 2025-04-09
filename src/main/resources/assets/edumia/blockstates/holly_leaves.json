@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "": [
+      { "model": "edumia:block/holly_leaves_1" },
+      { "model": "edumia:block/holly_leaves_2" },
+      { "model": "edumia:block/holly_leaves_3" }
+    ]
+  }
+}

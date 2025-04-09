@@ -1,0 +1,7 @@
+{
+  "parent": "edumia:block/template/layer_height14",
+  "textures": {
+    "particle": "minecraft:block/gravel",
+    "texture": "minecraft:block/gravel"
+  }
+}

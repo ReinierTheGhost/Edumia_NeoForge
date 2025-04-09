@@ -1,0 +1,7 @@
+{
+  "parent": "edumia:block/template/template_leaves_sprouts",
+  "textures": {
+    "all": "edumia:block/ghost_gum_leaves_1",
+    "sprouts": "edumia:block/ghost_gum_sprouts_1"
+  }
+}

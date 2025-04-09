@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "edumia:block/polished_dripstone",
+    "side": "edumia:block/polished_dripstone",
+    "top": "edumia:block/polished_dripstone"
+  }
+}

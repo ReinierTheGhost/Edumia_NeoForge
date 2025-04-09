@@ -2,10 +2,7 @@ package com.legends.edumia.datagen;
 
 import com.legends.edumia.blocks.blocksets.*;
 import com.legends.edumia.core.BlockLoader;
-import com.legends.edumia.datagen.custom.loot_tables.BlockDrops;
-import com.legends.edumia.datagen.custom.loot_tables.DoorDrops;
-import com.legends.edumia.datagen.custom.loot_tables.LeavesDrops;
-import com.legends.edumia.datagen.custom.loot_tables.SilkTouchDrops;
+import com.legends.edumia.datagen.custom.loot_tables.*;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
@@ -33,7 +30,6 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        dropSelf(BlockLoader.WHITE_SAND.get());
 
         for (Block block : BlockDrops.blocks){
             dropSelf(block);
@@ -49,6 +45,9 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         for (Block block : DoorDrops.blocks){
             add(block, b -> createDoorTable(block));
+        }
+        for (Block block : PottedFlowerDrops.blocks){
+            dropPottedContents(block);
         }
 
     }
@@ -94,6 +93,31 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 .forEach(allBlocks::add);
 
         WoodBlockSets.BLOCKS.getEntries()
+                .stream()
+                .map(Holder::value)
+                .forEach(allBlocks::add);
+
+        PaperwallSets.BLOCKS.getEntries()
+                .stream()
+                .map(Holder::value)
+                .forEach(allBlocks::add);
+
+        NotBrickBuildingSets.BLOCKS.getEntries()
+                .stream()
+                .map(Holder::value)
+                .forEach(allBlocks::add);
+
+        ModNatureBlocks.BLOCKS.getEntries()
+                .stream()
+                .map(Holder::value)
+                .forEach(allBlocks::add);
+
+        SandBlockSets.BLOCKS.getEntries()
+                .stream()
+                .map(Holder::value)
+                .forEach(allBlocks::add);
+
+        FlowerBlockSets.BLOCKS.getEntries()
                 .stream()
                 .map(Holder::value)
                 .forEach(allBlocks::add);

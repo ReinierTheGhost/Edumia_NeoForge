@@ -9,7 +9,6 @@ import java.util.List;
 public class SimpleBlockModel {
     public static List<Block> blocks = new ArrayList<>() {
         {
-//            add(BlockLoader.RUBY_ORE);
 
         }
     };

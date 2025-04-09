@@ -21,8 +21,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        tag(TagLoader.Blocks.REEDS_PLACEABLE_ON)
-                .add(BlockLoader.WHITE_SAND.get());
+//        tag(TagLoader.Blocks.REEDS_PLACEABLE_ON)
+//                .add(BlockLoader.WHITE_SAND.get());
 
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(MineablePickaxe.blocks.toArray(new Block[0]));
@@ -47,5 +47,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(TagLoader.Blocks.PILLARS)
                 .add(Pillar.pillars.toArray(new Block[0]));
+
+        tag(BlockTags.LOGS)
+                .add(Logs.logs.toArray(new Block[0]));
     }
 }

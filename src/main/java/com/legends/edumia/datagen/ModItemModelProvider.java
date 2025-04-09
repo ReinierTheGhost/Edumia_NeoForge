@@ -1,7 +1,6 @@
 package com.legends.edumia.datagen;
 
 import com.legends.edumia.Edumia;
-import com.legends.edumia.core.BlockLoader;
 import com.legends.edumia.core.ItemLoader;
 import com.legends.edumia.datagen.custom.models.*;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -13,7 +12,6 @@ import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.WallBlock;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
-import net.neoforged.neoforge.registries.DeferredBlock;
 
 public class ModItemModelProvider extends ItemModelProvider {
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
@@ -32,6 +30,14 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         for (SimpleGlassModel.Glass block : SimpleGlassModel.blocks){
             genericBlockItem(block.pane(), block.block());
+        }
+
+        for (Block block : SimplePaperWallModel.blocks){
+            genericBlockItem(block, block);
+        }
+
+        for (Block block : SimpleFlowerModel.blocks){
+            genericBlockItem(block, block);
         }
 
         for (SimpleButtonModel.Button block : SimpleButtonModel.blocks){

@@ -18,7 +18,9 @@ public class BuildingSets {
 
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(Edumia.MOD_ID);
+
     public static final float STONE_STRENGTH = 2.0f;
+
     public static BuildSet REDISH_GENSAI_BRICKS = registerBuildingSet("redish_gensai", STONE_STRENGTH, false);
     public static BuildSet CRACKED_REDISH_GENSAI_BRICKS = registerBuildingSet("cracked_redish_gensai", STONE_STRENGTH, false);
     public static BuildSet MOSSY_REDISH_GENSAI_BRICKS = registerBuildingSet("mossy_redish_gensai", STONE_STRENGTH, false);
@@ -135,29 +137,32 @@ public class BuildingSets {
             CRACKED_GRAYSTONE_BRICKS,
             MOSSY_GRAYSTONE_BRICKS,
             OBSIDIAN,
-            LIMESTONE_BRICKS
+            LIMESTONE_BRICKS,
     };
 
     public record BuildSet(DeferredBlock<Block> block, DeferredBlock<AxialSlabBlock> slab, DeferredBlock<StairBlock> stair,
-                           DeferredBlock<WallBlock> wall, DeferredBlock<Block> pillar, DeferredBlock<AxialSlabBlock> pillarSlab, DeferredBlock<ArchSmall> smallArch, DeferredBlock<ArchTwoMeter> twoMeterArch,
+                           DeferredBlock<WallBlock> wall, DeferredBlock<Block> pillar, DeferredBlock<AxialSlabBlock> pillarSlab,
+                           DeferredBlock<ArchSmall> smallArch, DeferredBlock<ArchTwoMeter> twoMeterArch,
                            DeferredBlock<ArchBlock> roundArch, DeferredBlock<ArchBlock> segmentalArch, DeferredBlock<ArchBlock> gothicArch,
-                           DeferredBlock<Balustrade> balustrade, DeferredBlock<ArrowSlit> arrowSlit
+                           DeferredBlock<Balustrade> balustrade, DeferredBlock<ArrowSlit> arrowSlit) {
 
-    ){
     }
 
     public static BuildSet registerBuildingSet(String name, float strength, boolean hasPillar){
 
-        DeferredBlock<Block> stone = registerbuildingBlock(name + "_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
+        DeferredBlock<Block> block = registerbuildingBlock(name + "_bricks",
+                () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
                 .strength(strength).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
-        DeferredBlock<AxialSlabBlock> slab = registerbuildingBlock(name + "_bricks_slab", () -> new AxialSlabBlock(stone));
+        DeferredBlock<AxialSlabBlock> slab = registerbuildingBlock(name + "_bricks_slab", () -> new AxialSlabBlock(block));
 
-        DeferredBlock<StairBlock> stairs = registerbuildingBlock(name + "_bricks_stairs", () -> new StairBlock(stone.get().defaultBlockState(),
+        DeferredBlock<StairBlock> stairs = registerbuildingBlock(name + "_bricks_stairs",
+                () -> new StairBlock(block.get().defaultBlockState(),
                 BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(strength).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
-        DeferredBlock<WallBlock> wall = registerbuildingBlock(name + "_bricks_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
+        DeferredBlock<WallBlock> wall = registerbuildingBlock(name + "_bricks_wall",
+                () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
                 .strength(strength).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
         DeferredBlock<Block> pillar;
@@ -203,8 +208,9 @@ public class BuildingSets {
 
 //
 
-        return new BuildSet(stone, slab, stairs, wall, pillar, pillarSlab, smallArch, twoMeterArch, roundArch, segmentalArch, gothicArch, balustrade, arrowslit);
+        return new BuildSet(block, slab, stairs, wall, pillar, pillarSlab, smallArch, twoMeterArch, roundArch, segmentalArch, gothicArch, balustrade, arrowslit);
     }
+
     private static <T extends Block> DeferredBlock<T> registerbuildingBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBuildingBlockItem(name, toReturn);

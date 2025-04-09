@@ -1,0 +1,7 @@
+{
+  "parent": "edumia:block/template/template_leaves_sprouts",
+  "textures": {
+    "all": "edumia:block/black_oak_leaves",
+    "sprouts": "edumia:block/black_oak_sprouts_1"
+  }
+}

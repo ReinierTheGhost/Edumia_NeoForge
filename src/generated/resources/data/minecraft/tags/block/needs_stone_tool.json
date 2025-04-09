@@ -656,6 +656,12 @@
     "edumia:limestone_bricks_segmental_arch",
     "edumia:limestone_bricks_gothic_arch",
     "edumia:limestone_bricks_balustrade",
-    "edumia:limestone_bricks_arrowslit"
+    "edumia:limestone_bricks_arrowslit",
+    "edumia:polished_dripstone",
+    "edumia:polished_dripstone_slab",
+    "edumia:polished_dripstone_stairs",
+    "edumia:white_sandstone",
+    "edumia:white_sandstone_slab",
+    "edumia:white_sandstone_stairs"
   ]
 }

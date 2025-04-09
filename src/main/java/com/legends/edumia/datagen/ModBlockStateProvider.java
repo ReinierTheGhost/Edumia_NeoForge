@@ -9,14 +9,13 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DoorBlock;
+import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.TrapDoorBlock;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
 
-import java.util.function.Supplier;
-
-public class ModBlockStateProvider  extends ModModelProvider {
+public class ModBlockStateProvider extends ModModelProvider {
 
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, Edumia.MOD_ID, exFileHelper);
@@ -24,7 +23,7 @@ public class ModBlockStateProvider  extends ModModelProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        blockWithItem(BlockLoader.WHITE_SAND);
+//        blockWithItem(BlockLoader.WHITE_SAND);
         for (Block block : SimpleBlockModel.blocks){
             blockWithItem(block);
         }
@@ -37,8 +36,8 @@ public class ModBlockStateProvider  extends ModModelProvider {
         for (SimpleStairModel.Stair block : SimpleStairModel.blocks){
             stairsBlock(block.stairs(), blockTexture(block.block()));
             blockItem(block.stairs());
-
         }
+
         for(SimpleWallModel.Wall block : SimpleWallModel.blocks){
             wallBlock(block.wall(), blockTexture(block.block()));
         }
@@ -103,11 +102,14 @@ public class ModBlockStateProvider  extends ModModelProvider {
                     ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "block/fine_glass_pane_top"), "translucent");
         }
 
+        for (IronBarsBlock block : SimplePaperWallModel.blocks){
+            paneBlockWithRenderType(block, blockTexture(block),
+                    ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "block/" + name(block) + "_top"), "translucent");
+        }
+
         for (Block block : SimpleLeavesModel.blocks){
             leavesBlock(block);
         }
-
-
 
         for (SimpleFenceModel.Fence block : SimpleFenceModel.blocks){
             fenceBlock(block.fence(), blockTexture(block.block()));
@@ -144,6 +146,40 @@ public class ModBlockStateProvider  extends ModModelProvider {
             blockItem(block, "_bottom");
         }
 
+        for (Block block : SimpleMultiFaceBlockModel.blocks){
+            cubeBottomTop(block);
+            blockItem(block);
+        }
+
+        for (SimpleMultiFaceStairModel.Stair block : SimpleMultiFaceStairModel.blocks){
+            stairsBlock(block.stairs(), blockTexture(block.block()), modLoc("block/" + name(block.block())+ "_bottom"), modLoc("block/" + name(block.block()) + "_top"));
+            blockItem(block.stairs());
+        }
+
+        for (SimpleMultiFaceSlabModel.Slab block : SimpleMultiFaceSlabModel.blocks){
+            axisSlab(block.slab(), blockTexture(block.block()), blockTexture(block.block()), modLoc("block/" + name(block.block())+ "_bottom"), modLoc("block/" + name(block.block()) + "_top"));
+            blockItem(block.slab());
+        }
+
+        for (SimpleLayerModel.Layer block : SimpleLayerModel.blocks){
+            layer(block.layer(), block.texture());
+            blockItem(block.layer(), "_height2");
+        }
+
+        for (SimpleSlabModel.Slab block : SimpleSlabModel.blocks){
+            slabBlock(block.slab(), blockTexture(block.block()), blockTexture(block.block()));
+            blockItem(block.slab());
+        }
+
+        for (Block block : SimpleFlowerModel.blocks){
+            crossBlock(block);
+        }
+        for (SimplePottedFlowerModel.Potted block : SimplePottedFlowerModel.blocks){
+            pottedFlower(block.block(), block.flower());
+        }
+        for (Block block : SimpleTallFlowerModel.blocks){
+            tallFlower(block);
+        }
 
     }
 

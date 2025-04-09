@@ -45,15 +45,16 @@ public class CreativeTabLoader {
                             entries.accept(set.stairs().get());
                             entries.accept(set.corner().get());
                         }
-//
-//                        for (NotBrickBuildingSets.BuildSet set : NotBrickBuildingSets.buildSets) {
-//                            entries.accept(set.block().get());
-//                            entries.accept(set.slab().get());
-//                            entries.accept(set.stair().get());
-//                            if (set.wall() != null){
-//                                entries.accept(set.wall().get());
-//                            }
-//                        }
+
+                        for (NotBrickBuildingSets.BuildSet set : NotBrickBuildingSets.buildSets) {
+                            entries.accept(set.block().get());
+                            entries.accept(set.slab().get());
+                            entries.accept(set.stair().get());
+                            if (set.wall() != null){
+                                entries.accept(set.wall().get());
+                            }
+                        }
+
 //                        entries.accept(BlockLoader.BRICK_PILLAR.get());
 //                        entries.accept(BlockLoader.STONE_PILLAR.get());
 //                        entries.accept(BlockLoader.SANDSTONE_PILLAR.get());
@@ -119,14 +120,14 @@ public class CreativeTabLoader {
                             entries.accept(item.block().get());
                         }
 
-//                        for (PaperwallSets.PaperwallSet set : PaperwallSets.paperwallSets){
-//                            entries.accept(set.pane().get());
-//                        }
+                        for (PaperwallSets.PaperwallSet set : PaperwallSets.paperwallSets){
+                            entries.accept(set.pane().get());
+                        }
                     }).build());
 
     public static final Supplier<CreativeModeTab>  EDUMIA_NATURAL_STONE_BLOCKS =
             CREATIVE_MODE_TAB.register("edumia_natural_stone_blocks",() ->
-                    CreativeModeTab.builder().icon(() -> new ItemStack(BlockLoader.WHITE_SAND.get()))
+                    CreativeModeTab.builder().icon(() -> new ItemStack(SandBlockSets.WHITE_SAND.block().get()))
                             .title(Component.translatable("creativetab.edumia_natural_stone_blocks"))
                             .displayItems((displayParameters, entries) -> {
                                 for (StoneSets.StoneSet item: StoneSets.naturalSets){
@@ -134,6 +135,17 @@ public class CreativeTabLoader {
                                     entries.accept(item.slab().get());
                                     entries.accept(item.stair().get());
                                     entries.accept(item.wall().get());
+                                }
+
+                                for (SandBlockSets.SandSet item : SandBlockSets.sandSets){
+                                    if(item.block() != null && item.sandStone() != null && item.sandstoneSlab() != null && item.sandstoneStairs() != null) {
+                                        entries.accept(item.block().get());
+                                        entries.accept(item.sandStone().get());
+                                        entries.accept(item.sandstoneSlab().get());
+                                        entries.accept(item.sandstoneStairs().get());
+                                    }
+                                    entries.accept(item.layer());
+                                    entries.accept(item.slab());
                                 }
 
 //                                entries.accept(BlockLoader.CRACKED_GREEN_BASALT.get());
@@ -148,7 +160,7 @@ public class CreativeTabLoader {
 ////
 //                                entries.accept(BlockLoader.SAND_LAYER.get());
 //                                entries.accept(BlockLoader.RED_SAND_LAYER.get());
-                                entries.accept(BlockLoader.WHITE_SAND.get());
+//                                entries.accept(BlockLoader.WHITE_SAND.get());
 //                                entries.accept(BlockLoader.WHITE_SAND_LAYER.get());
 //
 //                                entries.accept(BlockLoader.VOLCANIC_DIRT.get());
@@ -205,15 +217,23 @@ public class CreativeTabLoader {
                                         entries.accept(set.leaves().get());
                                     }
                                 }
-//                                entries.accept(ModNatureBlocks.GHOST_GUM_LEAVES.get());
-//                                entries.accept(ModNatureBlocks.HOLLY_LEAVES.get());
-//                                entries.accept(ModNatureBlocks.MAPLE_LEAVES.get());
-//                                entries.accept(ModNatureBlocks.BLACK_OAK_LEAVES.get());
-//
-//                                entries.accept(ModNatureBlocks.APPLE_LEAVES_RED.get());
-//                                entries.accept(ModNatureBlocks.APPLE_LEAVES_GREEN.get());
-//                                entries.accept(ModNatureBlocks.PEAR_LEAVES_FRUIT.get());
-//                                entries.accept(ModNatureBlocks.CHERRY_LEAVES_FRUIT.get());
+                                entries.accept(ModNatureBlocks.GHOST_GUM_LEAVES.get());
+                                entries.accept(ModNatureBlocks.HOLLY_LEAVES.get());
+                                entries.accept(ModNatureBlocks.MAPLE_LEAVES.get());
+                                entries.accept(ModNatureBlocks.BLACK_OAK_LEAVES.get());
+                                entries.accept(ModNatureBlocks.APPLE_LEAVES_RED.get());
+                                entries.accept(ModNatureBlocks.APPLE_LEAVES_GREEN.get());
+                                entries.accept(ModNatureBlocks.PEAR_LEAVES_FRUIT.get());
+                                entries.accept(ModNatureBlocks.CHERRY_LEAVES_FRUIT.get());
+
+                                for (FlowerBlockSets.FlowerSet set : FlowerBlockSets.flowerSets){
+                                    if (set.tallFlower() == null){
+                                        entries.accept(set.flower().get());
+                                    }else {
+                                        entries.accept(set.tallFlower().get());
+                                    }
+                                }
+
 //                                entries.accept(ModNatureBlocks.TEST_SAPLING.get());
 //                                entries.accept(ModNatureBlocks.APPLE_SAPLING.get());
 //                                entries.accept(ModNatureBlocks.BANANA_SAPLING.get());

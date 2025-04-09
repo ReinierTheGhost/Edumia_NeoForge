@@ -48,6 +48,11 @@ public class Edumia
         GlassSets.register(modEventBus);
         StoneSets.register(modEventBus);
         WoodBlockSets.register(modEventBus);
+        PaperwallSets.register(modEventBus);
+        NotBrickBuildingSets.register(modEventBus);
+        ModNatureBlocks.register(modEventBus);
+        SandBlockSets.register(modEventBus);
+        FlowerBlockSets.register(modEventBus);
 
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }

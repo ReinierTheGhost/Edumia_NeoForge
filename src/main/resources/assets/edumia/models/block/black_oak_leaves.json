@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "edumia:block/black_oak_leaves"
+  }
+}

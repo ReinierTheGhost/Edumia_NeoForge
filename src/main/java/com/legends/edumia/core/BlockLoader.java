@@ -15,8 +15,7 @@ public class BlockLoader {
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(Edumia.MOD_ID);
 
-    public static final DeferredBlock<Block> WHITE_SAND = registerBlock("white_sand", () ->
-            new ColoredFallingBlock(new ColorRGBA(14406560), BlockBehaviour.Properties.of().sound(SoundType.SAND)));
+
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

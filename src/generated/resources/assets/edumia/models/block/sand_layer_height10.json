@@ -1,0 +1,7 @@
+{
+  "parent": "edumia:block/template/layer_height10",
+  "textures": {
+    "particle": "minecraft:block/sand",
+    "texture": "minecraft:block/sand"
+  }
+}

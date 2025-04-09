@@ -1,0 +1,16 @@
+package com.legends.edumia.datagen.custom.models;
+
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.StairBlock;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class SimpleMultiFaceStairModel {
+    public record Stair(Block block, StairBlock stairs) {}
+    public static List<Stair> blocks = new ArrayList<>() {
+        {
+
+        }
+    };
+}

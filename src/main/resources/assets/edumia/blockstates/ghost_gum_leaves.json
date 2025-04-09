@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "": [
+      {"model":  "edumia:block/ghost_gum_leaves", "weight": 2},
+      {"model":  "edumia:block/ghost_gum_leaves_sprouts_1", "weight": 1},
+      {"model":  "edumia:block/ghost_gum_leaves_sprouts_2", "weight": 1},
+      {"model":  "edumia:block/ghost_gum_leaves_sprouts_3", "weight": 1}
+    ]
+  }
+}
