@@ -122,6 +122,11 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 .map(Holder::value)
                 .forEach(allBlocks::add);
 
+        GrassBlockSets.BLOCKS.getEntries()
+                .stream()
+                .map(Holder::value)
+                .forEach(allBlocks::add);
+
         return allBlocks;
     }
 

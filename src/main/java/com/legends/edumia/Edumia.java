@@ -53,6 +53,7 @@ public class Edumia
         ModNatureBlocks.register(modEventBus);
         SandBlockSets.register(modEventBus);
         FlowerBlockSets.register(modEventBus);
+        GrassBlockSets.register(modEventBus);
 
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }

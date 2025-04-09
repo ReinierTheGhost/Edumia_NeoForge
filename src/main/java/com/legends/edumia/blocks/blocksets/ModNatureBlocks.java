@@ -3,6 +3,8 @@ package com.legends.edumia.blocks.blocksets;
 import com.legends.edumia.Edumia;
 import com.legends.edumia.blocks.AxialSlabBlock;
 import com.legends.edumia.blocks.EdumiaLeavesBlock;
+import com.legends.edumia.blocks.plants.DriedReedsBlock;
+import com.legends.edumia.blocks.plants.ReedsBlock;
 import com.legends.edumia.blocks.trees.BlackOakLeavesBlock;
 import com.legends.edumia.core.ItemLoader;
 import net.minecraft.world.item.BlockItem;
@@ -43,6 +45,14 @@ public class ModNatureBlocks {
     public static final DeferredBlock<Block> CHERRY_LEAVES_FRUIT = ModNatureBlocks.registerBlock("cherry_leaves_fruit", () ->
             new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)
                     .strength(LEAVES_STRENGTH).sound(SoundType.GRASS)));
+
+    public static final DeferredBlock<Block> REEDS = registerBlock("reeds", () -> new ReedsBlock());
+
+    public static final DeferredBlock<Block> PAPYRUS = registerBlock("papyrus", () -> new ReedsBlock());
+
+    public static final DeferredBlock<Block> DRIED_REEDS = registerBlock("dried_reeds", () -> new DriedReedsBlock());
+
+
 
 //    public static final DeferredBlock<Block> TEST_SAPLING = registerBlock("test_sapling", () ->
 //            new SaplingBlock(new TestTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));

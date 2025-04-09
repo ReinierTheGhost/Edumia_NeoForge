@@ -316,5 +316,20 @@ public class EdumiaHelpingGenerator {
 
         }
 
+        for (GrassBlockSets.GrassSet block : GrassBlockSets.grassSets){
+            if (block.tallGrass() != null){
+                SimpleTallFlowerModel.blocks.add(block.tallGrass().get());
+                BlockDrops.blocks.add(block.tallGrass().get());
+            }else {
+                SimpleFlowerModel.blocks.add(block.grass().get());
+                BlockDrops.blocks.add(block.grass().get());
+                if (block.pottedGrass() != null){
+                    SimplePottedFlowerModel.blocks.add(new SimplePottedFlowerModel.Potted(block.pottedGrass().get(), block.grass().get()));
+                    PottedFlowerDrops.blocks.add(block.pottedGrass().get());
+                }
+
+            }
+        }
+
     }
 }

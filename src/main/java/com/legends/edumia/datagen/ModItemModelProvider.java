@@ -40,6 +40,10 @@ public class ModItemModelProvider extends ItemModelProvider {
             genericBlockItem(block, block);
         }
 
+        for (Block block : SimpleTallFlowerModel.blocks){
+            genericBlockItem(block, block, "_top");
+        }
+
         for (SimpleButtonModel.Button block : SimpleButtonModel.blocks){
             buttonItem(block.button(), block.block());
         }
@@ -75,6 +79,11 @@ public class ModItemModelProvider extends ItemModelProvider {
                         "block/" + name(baseBlock)));
     }
 
+    public void genericBlockItem(Block block, Block baseBlock, String appendix) {
+        this.withExistingParent(name(block), mcLoc("item/generated"))
+                .texture("layer0",  ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID,
+                        "block/" + name(baseBlock) + appendix));
+    }
 
     public ResourceLocation key(Block block) {
         return BuiltInRegistries.BLOCK.getKey(block);

@@ -17,6 +17,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
 
+@SuppressWarnings("deprecation")
 public class FlowerBlockSets {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Edumia.MOD_ID);
 
@@ -52,6 +53,10 @@ public class FlowerBlockSets {
     public static FlowerSet FLAME_OF_THE_SOUTH = registerFlowerSets("flame_of_the_south", MobEffects.SATURATION,true);
     public static FlowerSet HIBISCUS = registerFlowerSets("hibiscus", MobEffects.SATURATION,true);
 
+    public static FlowerSet PARASOL_MUSHROOM_1 = registerFlowerSets("parasol_mushroom_01", MobEffects.SATURATION, false);
+    public static FlowerSet PARASOL_MUSHROOM_2 = registerFlowerSets("parasol_mushroom_02", MobEffects.SATURATION, false);
+    public static FlowerSet parasol_mushroom_tall = registerFlowerSets("parasol_mushroom_tall", MobEffects.SATURATION, true);
+
     public static FlowerSet[] flowerSets = new FlowerSet[]{
             ASPHODEL,
             BLUE_DELPHINIUM,
@@ -82,7 +87,10 @@ public class FlowerBlockSets {
             TUBEROSE,
             YELLOW_IRIS,
             FLAME_OF_THE_SOUTH,
-            HIBISCUS
+            HIBISCUS,
+            PARASOL_MUSHROOM_1,
+            PARASOL_MUSHROOM_2,
+            parasol_mushroom_tall
     };
 
     public record FlowerSet(DeferredBlock<FlowerBlock> flower, DeferredBlock<Block> pottedFlower, DeferredBlock<TallFlowerBlock> tallFlower){}

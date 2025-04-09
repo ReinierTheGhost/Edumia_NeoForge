@@ -27,14 +27,14 @@ public abstract class ModModelProvider extends BlockStateProvider {
         super(output, modid, exFileHelper);
     }
     public void tallFlower(Block block){
-        tallFlower(block, models().cross(name(block) + "_bottom", modLoc("block/" + name(block) + "_bottom")),
-                models().cross(name(block) + "_top", modLoc("block/" + name(block) + "_top")));
+        tallFlower(block, models().cross(name(block) + "_bottom", modLoc("block/" + name(block) + "_bottom")).renderType("cutout"),
+                models().cross(name(block) + "_top", modLoc("block/" + name(block) + "_top")).renderType("cutout"));
     }
 
     private void tallFlower(Block block, ModelFile lower, ModelFile upper){
-        getVariantBuilder(block).partialState()
-                .with(DoublePlantBlock.HALF, DoubleBlockHalf.LOWER).addModels(new ConfiguredModel(lower))
-                .with(DoublePlantBlock.HALF, DoubleBlockHalf.UPPER).addModels(new ConfiguredModel(upper));
+        getVariantBuilder(block)
+                .partialState().with(DoublePlantBlock.HALF, DoubleBlockHalf.LOWER).addModels(new ConfiguredModel(lower))
+                .partialState().with(DoublePlantBlock.HALF, DoubleBlockHalf.UPPER).addModels(new ConfiguredModel(upper));
 
     }
 

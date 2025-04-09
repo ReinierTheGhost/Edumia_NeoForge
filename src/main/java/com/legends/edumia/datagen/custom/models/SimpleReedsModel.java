@@ -1,5 +1,6 @@
 package com.legends.edumia.datagen.custom.models;
 
+import com.legends.edumia.blocks.blocksets.ModNatureBlocks;
 import net.minecraft.world.level.block.Block;
 
 import java.util.ArrayList;
@@ -10,9 +11,9 @@ public class SimpleReedsModel {
 
     public static List<Reed> blocks = new ArrayList<>() {
         {
-//            add(new Reed(BlockLoader.REEDS));
-//            add(new Reed(BlockLoader.PAPYRUS));
-//            add(new Reed(BlockLoader.DRIED_REEDS));
+            add(new Reed(ModNatureBlocks.REEDS.get()));
+            add(new Reed(ModNatureBlocks.PAPYRUS.get()));
+            add(new Reed(ModNatureBlocks.DRIED_REEDS.get()));
         }
     };
 }

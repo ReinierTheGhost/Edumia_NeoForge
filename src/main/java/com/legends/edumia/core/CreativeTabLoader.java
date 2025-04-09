@@ -234,6 +234,13 @@ public class CreativeTabLoader {
                                     }
                                 }
 
+                                for (GrassBlockSets.GrassSet set : GrassBlockSets.grassSets){
+                                    if (set.tallGrass() == null){
+                                        entries.accept(set.grass());
+                                    }else {
+                                        entries.accept(set.tallGrass());
+                                    }
+                                }
 //                                entries.accept(ModNatureBlocks.TEST_SAPLING.get());
 //                                entries.accept(ModNatureBlocks.APPLE_SAPLING.get());
 //                                entries.accept(ModNatureBlocks.BANANA_SAPLING.get());
