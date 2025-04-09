@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "edumia:block/hibiscus_bottom"
+    },
+    "half=upper": {
+      "model": "edumia:block/hibiscus_top"
+    }
+  }
+}

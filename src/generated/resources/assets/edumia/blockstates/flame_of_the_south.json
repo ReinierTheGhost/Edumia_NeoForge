@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "edumia:block/flame_of_the_south_bottom"
+    },
+    "half=upper": {
+      "model": "edumia:block/flame_of_the_south_top"
+    }
+  }
+}

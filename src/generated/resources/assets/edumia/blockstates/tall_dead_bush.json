@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "edumia:block/tall_dead_bush_bottom"
+    },
+    "half=upper": {
+      "model": "edumia:block/tall_dead_bush_top"
+    }
+  }
+}

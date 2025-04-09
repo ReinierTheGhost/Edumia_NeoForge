@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "edumia:block/parasol_mushroom_tall_bottom"
+    },
+    "half=upper": {
+      "model": "edumia:block/parasol_mushroom_tall_top"
+    }
+  }
+}

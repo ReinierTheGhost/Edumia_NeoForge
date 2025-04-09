@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "edumia:block/flame_of_the_south_top"
+  }
+}

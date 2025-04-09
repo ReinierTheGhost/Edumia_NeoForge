@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "edumia:block/tall_frosted_grass_bottom"
+    },
+    "half=upper": {
+      "model": "edumia:block/tall_frosted_grass_top"
+    }
+  }
+}
