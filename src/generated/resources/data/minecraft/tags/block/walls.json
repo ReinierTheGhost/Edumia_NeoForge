@@ -57,6 +57,7 @@
     "edumia:mossy_graystone_bricks_wall",
     "edumia:obsidian_bricks_wall",
     "edumia:limestone_bricks_wall",
+    "edumia:dumortierite_bricks_wall",
     "edumia:red_gensai_stone_wall",
     "edumia:blue_stone_wall",
     "edumia:limestone_wall",
@@ -109,6 +110,7 @@
     "edumia:redwood_wood_wall",
     "edumia:silver_spruce_wood_wall",
     "edumia:white_ash_wood_wall",
-    "edumia:willow_wood_wall"
+    "edumia:willow_wood_wall",
+    "edumia:cracked_green_basalt_wall"
   ]
 }

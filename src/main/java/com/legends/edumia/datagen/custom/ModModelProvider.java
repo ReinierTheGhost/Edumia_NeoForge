@@ -2,6 +2,7 @@ package com.legends.edumia.datagen.custom;
 
 import com.legends.edumia.Edumia;
 import com.legends.edumia.blocks.*;
+import com.legends.edumia.blocks.plants.ReedsBlock;
 import com.legends.edumia.blocks.properties.ArchShape;
 import com.legends.edumia.blocks.properties.BidirectionalShape;
 import net.minecraft.core.Direction;
@@ -20,22 +21,81 @@ import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
-import net.neoforged.neoforge.registries.DeferredBlock;
 
 public abstract class ModModelProvider extends BlockStateProvider {
     public ModModelProvider(PackOutput output, String modid, ExistingFileHelper exFileHelper) {
         super(output, modid, exFileHelper);
     }
+
+    public void blockColum(Block block){
+        simpleBlock(block, models().cubeColumn(name(block), modLoc("block/" + name(block) + "_side"), modLoc("block/" + name(block) + "_top")));
+    }
+
+    public void slateBlock(Block block){
+        slateBlock(block, models().cubeColumn(name(block), modLoc("block/" + name(block)), modLoc("block/" + name(block) + "_top")));
+    }
+    private void slateBlock(Block block, ModelFile model){
+        getVariantBuilder(block)
+                .partialState().addModels(new ConfiguredModel(model),
+                        new ConfiguredModel(model, 0, 90, false),
+                        new ConfiguredModel(model, 0, 180, false),
+                        new ConfiguredModel(model, 0, 270, false));
+    }
+
+    public void reeds(Block block){
+        reeds(block,
+                models().cross(name(block) + "_1",
+                        modLoc("block/" + name(block) + "_1")).renderType("cutout"),
+                models().cross(name(block) + "_2_bottom",
+                        modLoc("block/" + name(block) + "_2_bottom")).renderType("cutout"),
+                models().cross(name(block) + "_2_top",
+                        modLoc("block/" + name(block) + "_2_top")).renderType("cutout"),
+                models().cross(name(block) + "_2_top_waterlogged",
+                        modLoc("block/" + name(block) + "_2_top_waterlogged")).renderType("cutout"),
+                models().cross(name(block) + "_3_bottom",
+                        modLoc("block/" + name(block) + "_3_bottom")).renderType("cutout"),
+                models().cross(name(block) + "_3_middle",
+                        modLoc("block/" + name(block) + "_3_middle")).renderType("cutout"),
+                models().cross(name(block) + "_3_top",
+                        modLoc("block/" + name(block) + "_3_top")).renderType("cutout"));
+    }
+    private void reeds(Block block, ModelFile one, ModelFile twoBottom, ModelFile twoTop, ModelFile twoTopWater, ModelFile threeBottom,
+                       ModelFile threeMiddle, ModelFile threeTop){
+        getVariantBuilder(block)
+                .partialState().with(ReedsBlock.REEDS_TYPE, ReedsBlock.Type.ONE).with(ReedsBlock.WATERLOGGED, false)
+                .addModels(new ConfiguredModel(one))
+                .partialState().with(ReedsBlock.REEDS_TYPE, ReedsBlock.Type.ONE).with(ReedsBlock.WATERLOGGED, true)
+                .addModels(new ConfiguredModel(one))
+                .partialState().with(ReedsBlock.REEDS_TYPE, ReedsBlock.Type.TWO_BOTTOM).with(ReedsBlock.WATERLOGGED, false)
+                .addModels(new ConfiguredModel(twoBottom))
+                .partialState().with(ReedsBlock.REEDS_TYPE, ReedsBlock.Type.TWO_BOTTOM).with(ReedsBlock.WATERLOGGED, true)
+                .addModels(new ConfiguredModel(twoBottom))
+                .partialState().with(ReedsBlock.REEDS_TYPE, ReedsBlock.Type.TWO_TOP).with(ReedsBlock.WATERLOGGED, false)
+                .addModels(new ConfiguredModel(twoTop))
+                .partialState().with(ReedsBlock.REEDS_TYPE, ReedsBlock.Type.TWO_TOP).with(ReedsBlock.WATERLOGGED, true)
+                .addModels(new ConfiguredModel(twoTopWater))
+                .partialState().with(ReedsBlock.REEDS_TYPE, ReedsBlock.Type.THREE_BOTTOM).with(ReedsBlock.WATERLOGGED, false)
+                .addModels(new ConfiguredModel(threeBottom))
+                .partialState().with(ReedsBlock.REEDS_TYPE, ReedsBlock.Type.THREE_BOTTOM).with(ReedsBlock.WATERLOGGED, true)
+                .addModels(new ConfiguredModel(threeBottom))
+                .partialState().with(ReedsBlock.REEDS_TYPE, ReedsBlock.Type.THREE_MIDDLE).with(ReedsBlock.WATERLOGGED, false)
+                .addModels(new ConfiguredModel(threeMiddle))
+                .partialState().with(ReedsBlock.REEDS_TYPE, ReedsBlock.Type.THREE_MIDDLE).with(ReedsBlock.WATERLOGGED, true)
+                .addModels(new ConfiguredModel(threeMiddle))
+                .partialState().with(ReedsBlock.REEDS_TYPE, ReedsBlock.Type.THREE_TOP).with(ReedsBlock.WATERLOGGED, false)
+                .addModels(new ConfiguredModel(threeTop))
+                .partialState().with(ReedsBlock.REEDS_TYPE, ReedsBlock.Type.THREE_TOP).with(ReedsBlock.WATERLOGGED, true)
+                .addModels(new ConfiguredModel(threeTop));
+    }
+
     public void tallFlower(Block block){
         tallFlower(block, models().cross(name(block) + "_bottom", modLoc("block/" + name(block) + "_bottom")).renderType("cutout"),
                 models().cross(name(block) + "_top", modLoc("block/" + name(block) + "_top")).renderType("cutout"));
     }
-
     private void tallFlower(Block block, ModelFile lower, ModelFile upper){
         getVariantBuilder(block)
                 .partialState().with(DoublePlantBlock.HALF, DoubleBlockHalf.LOWER).addModels(new ConfiguredModel(lower))
                 .partialState().with(DoublePlantBlock.HALF, DoubleBlockHalf.UPPER).addModels(new ConfiguredModel(upper));
-
     }
 
     public void crossBlock(Block blockRegistryObject) {
@@ -51,10 +111,6 @@ public abstract class ModModelProvider extends BlockStateProvider {
     private <T extends BlockModelBuilder> T pottedFlower(String name, ResourceLocation cross) {
         return (T) models().singleTexture(name, mcLoc("block/flower_pot_cross") , "plant", cross);
     }
-
-
-
-
 
     public void cubeBottomTop(Block block){
         simpleBlock(block, cubeBottomTop(block, blockTexture(block), modLoc("block/" + name(block) + "_bottom"), modLoc("block/" + name(block) + "_top")));
@@ -452,6 +508,7 @@ public abstract class ModModelProvider extends BlockStateProvider {
                 .partialState().with(Layer.LAYERS, 8)
                 .addModels(new ConfiguredModel(eight));
     }
+
 
     @SuppressWarnings("unchecked")
     protected <T extends BlockModelBuilder> T texBotTopPar(String name, String parent, ResourceLocation texture, ResourceLocation bottom, ResourceLocation top) {

@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "edumia:block/brown_sandstone_slates"
+      },
+      {
+        "model": "edumia:block/brown_sandstone_slates",
+        "y": 90
+      },
+      {
+        "model": "edumia:block/brown_sandstone_slates",
+        "y": 180
+      },
+      {
+        "model": "edumia:block/brown_sandstone_slates",
+        "y": 270
+      }
+    ]
+  }
+}

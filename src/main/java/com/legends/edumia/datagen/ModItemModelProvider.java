@@ -52,6 +52,10 @@ public class ModItemModelProvider extends ItemModelProvider {
             fenceItem(block.fence(), block.block());
         }
 
+        for (SimpleReedsModel.Reed block : SimpleReedsModel.blocks){
+            genericBlockItemTexture(block.reed(), block.reed());
+        }
+
     }
 
     public void wallItem(WallBlock block, Block baseBlock) {
@@ -83,6 +87,18 @@ public class ModItemModelProvider extends ItemModelProvider {
         this.withExistingParent(name(block), mcLoc("item/generated"))
                 .texture("layer0",  ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID,
                         "block/" + name(baseBlock) + appendix));
+    }
+
+    public void genericBlockItemTexture(Block block, Block baseBlock) {
+        this.withExistingParent(name(block), mcLoc("item/generated"))
+                .texture("layer0",  ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID,
+                        "item/" + name(baseBlock)));
+    }
+
+    public void genericBlockItemTexture(Block block, Block baseBlock, String appendix) {
+        this.withExistingParent(name(block), mcLoc("item/generated"))
+                .texture("layer0",  ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID,
+                        "item/" + name(baseBlock) + appendix));
     }
 
     public ResourceLocation key(Block block) {

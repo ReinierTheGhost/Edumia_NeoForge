@@ -1,0 +1,7 @@
+{
+  "parent": "edumia:block/template/layer_height8",
+  "textures": {
+    "particle": "edumia:block/volcanic_gravel",
+    "texture": "edumia:block/volcanic_gravel"
+  }
+}

@@ -1,5 +1,6 @@
 package com.legends.edumia.datagen.custom.models;
 
+import com.legends.edumia.core.BlockLoader;
 import net.minecraft.world.level.block.Block;
 
 import java.util.ArrayList;
@@ -10,9 +11,9 @@ public class SimplePillarModels {
 
     public static List<Pillar> blocks = new ArrayList<>() {
         {
-//            add(new Pillar(BlockLoader.BRICK_PILLAR));
-//            add(new Pillar(BlockLoader.STONE_PILLAR));
-//            add(new Pillar(BlockLoader.SANDSTONE_PILLAR));
+            add(new Pillar(BlockLoader.BRICK_PILLAR.get()));
+            add(new Pillar(BlockLoader.STONE_PILLAR.get()));
+            add(new Pillar(BlockLoader.SANDSTONE_PILLAR.get()));
         }
     };
 }

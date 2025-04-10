@@ -1,0 +1,40 @@
+{
+  "variants": {
+    "type=1,waterlogged=false": {
+      "model": "edumia:block/papyrus_1"
+    },
+    "type=1,waterlogged=true": {
+      "model": "edumia:block/papyrus_1"
+    },
+    "type=2_bottom,waterlogged=false": {
+      "model": "edumia:block/papyrus_2_bottom"
+    },
+    "type=2_bottom,waterlogged=true": {
+      "model": "edumia:block/papyrus_2_bottom"
+    },
+    "type=2_top,waterlogged=false": {
+      "model": "edumia:block/papyrus_2_top"
+    },
+    "type=2_top,waterlogged=true": {
+      "model": "edumia:block/papyrus_2_top_waterlogged"
+    },
+    "type=3_bottom,waterlogged=false": {
+      "model": "edumia:block/papyrus_3_bottom"
+    },
+    "type=3_bottom,waterlogged=true": {
+      "model": "edumia:block/papyrus_3_bottom"
+    },
+    "type=3_middle,waterlogged=false": {
+      "model": "edumia:block/papyrus_3_middle"
+    },
+    "type=3_middle,waterlogged=true": {
+      "model": "edumia:block/papyrus_3_middle"
+    },
+    "type=3_top,waterlogged=false": {
+      "model": "edumia:block/papyrus_3_top"
+    },
+    "type=3_top,waterlogged=true": {
+      "model": "edumia:block/papyrus_3_top"
+    }
+  }
+}

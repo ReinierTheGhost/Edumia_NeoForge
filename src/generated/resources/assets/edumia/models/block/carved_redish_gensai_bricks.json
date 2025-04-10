@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "edumia:block/carved_redish_gensai_bricks"
+  }
+}

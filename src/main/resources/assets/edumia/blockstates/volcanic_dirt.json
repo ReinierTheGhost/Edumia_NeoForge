@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "": [
+      { "model": "edumia:block/volcanic_dirt"},
+      { "model": "edumia:block/volcanic_dirt", "y": 90 },
+      { "model": "edumia:block/volcanic_dirt", "y": 180 },
+      { "model": "edumia:block/volcanic_dirt", "y": 270 }
+    ]
+  }
+}

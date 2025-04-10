@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "edumia:block/dumortierite_bricks",
+    "side": "edumia:block/dumortierite_bricks",
+    "top": "edumia:block/dumortierite_bricks"
+  }
+}

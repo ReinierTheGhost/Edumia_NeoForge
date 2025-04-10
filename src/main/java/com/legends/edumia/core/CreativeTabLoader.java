@@ -55,59 +55,14 @@ public class CreativeTabLoader {
                             }
                         }
 
-//                        entries.accept(BlockLoader.BRICK_PILLAR.get());
-//                        entries.accept(BlockLoader.STONE_PILLAR.get());
-//                        entries.accept(BlockLoader.SANDSTONE_PILLAR.get());
-//
-//                        entries.accept(BlockLoader.BLUE_BRICK.get());
-//                        entries.accept(BlockLoader.BLUE_BRICK_SLAB.get());
-//                        entries.accept(BlockLoader.BLUE_BRICK_STAIRS.get());
-//                        entries.accept(BlockLoader.BLUE_BRICK_WALL.get());
-//
-//                        entries.accept(BlockLoader.CHISELED_HIGH_ELVEN_BRICKS.get());
-//
-//                        entries.accept(BlockLoader.HIGH_ELVEN_BRICK_TILING.get());
-//                        entries.accept(BlockLoader.HIGH_ELVEN_BRICK_TILING_STAIRS.get());
-//                        entries.accept(BlockLoader.HIGH_ELVEN_BRICK_TILING_SLAB.get());
-//
-//                        entries.accept(BlockLoader.CHISELED_LIGHT_HIGH_ELVEN_BRICKS.get());
-//
-//                        entries.accept(BlockLoader.LIGHT_HIGH_ELVEN_BRICK_TILING.get());
-//                        entries.accept(BlockLoader.LIGHT_HIGH_ELVEN_BRICK_TILING_SLAB.get());
-//                        entries.accept(BlockLoader.LIGHT_HIGH_ELVEN_BRICK_TILING_STAIRS.get());
-//
-//                        entries.accept(BlockLoader.CHISELED_DARK_HIGH_ELVEN_BRICKS.get());
-//
-//                        entries.accept(BlockLoader.DARK_HIGH_ELVEN_BRICK_TILING.get());
-//                        entries.accept(BlockLoader.DARK_HIGH_ELVEN_BRICK_TILING_STAIRS.get());
-//                        entries.accept(BlockLoader.DARK_HIGH_ELVEN_BRICK_TILING_SLAB.get());
-//
-//                        entries.accept(BlockLoader.CRACKED_GREEN_BASALT.get());
-//                        entries.accept(BlockLoader.CRACKED_GREEN_BASALT_SLAB.get());
-//                        entries.accept(BlockLoader.CRACKED_GREEN_BASALT_STAIRS.get());
-//                        entries.accept(BlockLoader.CRACKED_GREEN_BASALT_WALL.get());
-//
-//                        entries.accept(BlockLoader.CHISELED_BASALT.get());
-//
-//                        entries.accept(BlockLoader.CARVED_BROWN_SANDSTONE_BRICKS.get());
-//
-//                        entries.accept(BlockLoader.CARVED_CACHOLONG_BRICKS.get());
-//
-//                        entries.accept(BlockLoader.CARVED_BLACK_DEMON_BRICKS.get());
-//
-//                        entries.accept(BlockLoader.CARVED_BLUE_BRICKS.get());
-//
-//                        entries.accept(BlockLoader.CARVED_DEMON_BASALT_BRICKS.get());
-//
-//                        entries.accept(BlockLoader.CARVED_VOLCANIC_DEMON_BRICKS.get());
-//
-//                        entries.accept(BlockLoader.CARVED_RED_GENSAI_BRICKS.get());
-//
-//                        entries.accept(BlockLoader.CHISELED_ANDESITE.get());
-//                        entries.accept(BlockLoader.CHISELED_DRIPSTONE.get());
-//                        entries.accept(BlockLoader.CHISELED_DIORITE.get());
-//                        entries.accept(BlockLoader.CHISELED_GRANITE.get());
-//                        entries.accept(BlockLoader.DIRTY_CHALK.get());
+                        entries.accept(BlockLoader.BRICK_PILLAR.get());
+                        entries.accept(BlockLoader.STONE_PILLAR.get());
+                        entries.accept(BlockLoader.SANDSTONE_PILLAR.get());
+                        entries.accept(BlockLoader.CHISELED_ANDESITE.get());
+                        entries.accept(BlockLoader.CHISELED_DRIPSTONE.get());
+                        entries.accept(BlockLoader.CHISELED_DIORITE.get());
+                        entries.accept(BlockLoader.CHISELED_GRANITE.get());
+                        entries.accept(BlockLoader.DIRTY_CHALK.get());
 
                     }).build());
 
@@ -148,24 +103,11 @@ public class CreativeTabLoader {
                                     entries.accept(item.slab());
                                 }
 
-//                                entries.accept(BlockLoader.CRACKED_GREEN_BASALT.get());
-//                                entries.accept(BlockLoader.CRACKED_GREEN_BASALT_SLAB.get());
-//                                entries.accept(BlockLoader.CRACKED_GREEN_BASALT_STAIRS.get());
-//                                entries.accept(BlockLoader.CRACKED_GREEN_BASALT_WALL.get());
-//
-//                                entries.accept(BlockLoader.CHISELED_BASALT.get());
-//
-//                                entries.accept(BlockLoader.BROWN_SANDSTONE_SLATES.get());
+                                entries.accept(BlockLoader.BROWN_SANDSTONE_SLATES.get());
 
-////
-//                                entries.accept(BlockLoader.SAND_LAYER.get());
-//                                entries.accept(BlockLoader.RED_SAND_LAYER.get());
-//                                entries.accept(BlockLoader.WHITE_SAND.get());
-//                                entries.accept(BlockLoader.WHITE_SAND_LAYER.get());
-//
-//                                entries.accept(BlockLoader.VOLCANIC_DIRT.get());
-//                                entries.accept(BlockLoader.VOLCANIC_DIRT_PATH.get());
-//                                entries.accept(BlockLoader.VOLCANIC_GRAVEL.get());
+                                entries.accept(BlockLoader.VOLCANIC_DIRT.get());
+                                entries.accept(BlockLoader.VOLCANIC_DIRT_PATH.get());
+                                entries.accept(BlockLoader.HIGH_ELVEN_CRYSTAL.get());
                             }).build());
 
     public static final Supplier<CreativeModeTab>  EDUMIA_WOOD_BLOCKS =
@@ -192,19 +134,12 @@ public class CreativeTabLoader {
                                     entries.accept(wood.planksSlab().get());
                                     entries.accept(wood.planksFence().get());
                                     entries.accept(wood.planksGate().get());
-                                    entries.accept(wood.pressurePlate().get());
-                                    entries.accept(wood.button().get());
                                     entries.accept(wood.beam().get());
                                 }
 
                                 for (WoodBlockSets.SimpleVanillaBlocks wood: WoodBlockSets.beams){
                                     entries.accept(wood.beam().get());
                                 }
-
-//                                entries.accept(ModNatureBlocks.JUNGLE_WOOD_FENCE.get());
-//                                entries.accept(ModNatureBlocks.JUNGLE_WOOD_WALL.get());
-//                                entries.accept(ModNatureBlocks.JUNGLE_WOOD_SLAB.get());
-//                                entries.accept(ModNatureBlocks.JUNGLE_WOOD_STAIRS.get());
                             }).build());
 
     public static final Supplier<CreativeModeTab>  EDUMIA_PLANTS =
@@ -241,6 +176,10 @@ public class CreativeTabLoader {
                                         entries.accept(set.tallGrass());
                                     }
                                 }
+
+                                entries.accept(ModNatureBlocks.PAPYRUS.get());
+                                entries.accept(ModNatureBlocks.REEDS.get());
+                                entries.accept(ModNatureBlocks.DRIED_REEDS.get());
 //                                entries.accept(ModNatureBlocks.TEST_SAPLING.get());
 //                                entries.accept(ModNatureBlocks.APPLE_SAPLING.get());
 //                                entries.accept(ModNatureBlocks.BANANA_SAPLING.get());
@@ -272,57 +211,20 @@ public class CreativeTabLoader {
 //                                entries.accept(ModNatureBlocks.SILVER_SPRUCE_SAPLING.get());
 //                                entries.accept(ModNatureBlocks.WHITE_ASH_SAPLING.get());
 //                                entries.accept(ModNatureBlocks.WILLOW_SAPLING.get());
-//                                entries.accept(BlockLoader.PAPYRUS.get());
-//                                entries.accept(BlockLoader.REEDS.get());
-//                                entries.accept(BlockLoader.DRIED_REEDS.get());
-//
-//                                entries.accept(BlockLoader.DRY_BUSH.get());
-//                                entries.accept(BlockLoader.TALL_DRY_BUSH.get());
-//                                entries.accept(BlockLoader.TALL_DEAD_BUSH.get());
-//
-//                                entries.accept(BlockLoader.ARID_GRASS.get());
-//                                entries.accept(BlockLoader.BLACK_GRASS.get());
-//                                entries.accept(BlockLoader.FLAX_GRASS.get());
-//                                entries.accept(BlockLoader.BEACH_GRASS.get());
-//                                entries.accept(BlockLoader.TALL_BEACH_GRASS.get());
-//                                entries.accept(BlockLoader.FROSTED_GRASS.get());
-//                                entries.accept(BlockLoader.TALL_FROSTED_GRASS.get());
-//
-//                                entries.accept(BlockLoader.PARASOL_MUSHROOM_1.get());
-//                                entries.accept(BlockLoader.PARASOL_MUSHROOM_2.get());
-//                                entries.accept(BlockLoader.PARASOL_MUSHROOM_TALL.get());
 
-//                             flowers
-//                                entries.accept(BlockLoader.ASPHODEL.get());
-//                                entries.accept(BlockLoader.BLUE_DELPHINIUM.get());
-//                                entries.accept(BlockLoader.BLUEBELL.get());
-//                                entries.accept(BlockLoader.CALLA_LILY.get());
-//                                entries.accept(BlockLoader.CELSEMIUM.get());
-//                                entries.accept(BlockLoader.CHRYS_BLUE.get());
-//                                entries.accept(BlockLoader.CHRYS_ORANGE.get());
-//                                entries.accept(BlockLoader.CHRYS_PINK.get());
-//                                entries.accept(BlockLoader.CHRYS_WHITE.get());
-//                                entries.accept(BlockLoader.CHRYS_YELLOW.get());
-//                                entries.accept(BlockLoader.CROCUS.get());
-//                                entries.accept(BlockLoader.DAISY.get());
-//                                entries.accept(BlockLoader.DELPHINIUM.get());
-//                                entries.accept(BlockLoader.FLAX_FLOWERS.get());
-//                                entries.accept(BlockLoader.FOXGLOVE_ORANGE.get());
-//                                entries.accept(BlockLoader.FOXGLOVE_PINK.get());
-//                                entries.accept(BlockLoader.FOXGLOVE_RED.get());
-//                                entries.accept(BlockLoader.FOXGLOVE_WHITE.get());
-//                                entries.accept(BlockLoader.GERBERA_RED.get());
-//                                entries.accept(BlockLoader.GENSAI_ORCHID.get());
-//                                entries.accept(BlockLoader.GERBERA_YELLOW.get());
-//                                entries.accept(BlockLoader.HEATHER_BUSH.get());
-//                                entries.accept(BlockLoader.LAVENDER.get());
-//                                entries.accept(BlockLoader.MARIGOLD.get());
-//                                entries.accept(BlockLoader.PINK_ANEMONE.get());
-//                                entries.accept(BlockLoader.SIMBLELMYNE.get());
-//                                entries.accept(BlockLoader.TUBEROSE.get());
-//                                entries.accept(BlockLoader.YELLOW_IRIS.get());
-//                                entries.accept(BlockLoader.FLAME_OF_THE_SOUTH.get());
-//                                entries.accept(BlockLoader.HIBISCUS.get());
+                            }).build());
+
+    public static final Supplier<CreativeModeTab>  UTILITY_GROUP =
+            CREATIVE_MODE_TAB.register("edumia_utilities",() ->
+                    CreativeModeTab.builder().icon(() -> new ItemStack(WoodBlockSets.DRAGON_BLOOD.door().get()))
+                            .title(Component.translatable("creativetab.edumia_utilities"))
+                            .displayItems((displayParameters, entries) -> {
+                                for (WoodBlockSets.SimpleBlockSet wood: WoodBlockSets.sets){
+                                    entries.accept(wood.door().get());
+                                    entries.accept(wood.trapdoor().get());
+                                    entries.accept(wood.pressurePlate().get());
+                                    entries.accept(wood.button().get());
+                                }
                             }).build());
 
     public static void register(IEventBus eventBus) {

@@ -1,0 +1,6 @@
+{
+  "parent": "edumia:block/template/template_crystal_cluster",
+  "textures": {
+    "crystal": "edumia:block/high_elven_crystal"
+  }
+}

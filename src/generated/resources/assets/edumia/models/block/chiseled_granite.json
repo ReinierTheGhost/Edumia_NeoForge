@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "edumia:block/chiseled_granite_top",
+    "side": "edumia:block/chiseled_granite_side"
+  }
+}

@@ -181,6 +181,17 @@ public class ModBlockStateProvider extends ModModelProvider {
             tallFlower(block);
         }
 
+        for (SimpleReedsModel.Reed block : SimpleReedsModel.blocks){
+            reeds(block.reed());
+        }
+        slateBlock(BlockLoader.BROWN_SANDSTONE_SLATES.get());
+        blockItem(BlockLoader.BROWN_SANDSTONE_SLATES.get());
+        blockColum(BlockLoader.CHISELED_ANDESITE.get());
+        blockColum(BlockLoader.CHISELED_GRANITE.get());
+        blockColum(BlockLoader.CHISELED_DRIPSTONE.get());
+        blockColum(BlockLoader.CHISELED_DIORITE.get());
+        blockColum(BlockLoader.DIRTY_CHALK.get());
+
     }
 
     private void blockWithItem(DeferredBlock<?> deferredBlock) {

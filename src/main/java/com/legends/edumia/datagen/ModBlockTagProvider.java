@@ -8,6 +8,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
@@ -21,8 +22,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-//        tag(TagLoader.Blocks.REEDS_PLACEABLE_ON)
-//                .add(BlockLoader.WHITE_SAND.get());
+        tag(TagLoader.Blocks.REEDS_PLACEABLE_ON)
+                .add(Blocks.SAND)
+                .add(Blocks.DIRT)
+                .add(Blocks.GRASS_BLOCK)
+                .add(ReedsPlaceable.blocks.toArray(new Block[0]));
 
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(MineablePickaxe.blocks.toArray(new Block[0]));

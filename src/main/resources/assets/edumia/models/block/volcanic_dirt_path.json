@@ -1,0 +1,9 @@
+{
+  "parent" : "edumia:block/template/template_path",
+  "textures": {
+    "particle": "#bottom",
+    "side": "edumia:block/volcanic_dirt_path_side",
+    "top": "edumia:block/volcanic_dirt_path_top",
+    "bottom": "edumia:block/volcanic_dirt"
+  }
+}

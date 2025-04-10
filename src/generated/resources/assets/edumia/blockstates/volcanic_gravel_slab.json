@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "edumia:block/volcanic_gravel_slab"
+    },
+    "type=double": {
+      "model": "edumia:block/volcanic_gravel"
+    },
+    "type=top": {
+      "model": "edumia:block/volcanic_gravel_slab_top"
+    }
+  }
+}

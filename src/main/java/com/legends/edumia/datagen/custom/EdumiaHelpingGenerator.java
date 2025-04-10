@@ -78,6 +78,13 @@ public class EdumiaHelpingGenerator {
             BlockDrops.blocks.add(set.arrowSlit().get());
             MineablePickaxe.blocks.add(set.arrowSlit().get());
             RequiresStoneTool.blocks.add(set.arrowSlit().get());
+
+            if (set.chiseled() != null){
+                SimpleBlockModel.blocks.add(set.chiseled().get());
+                BlockDrops.blocks.add(set.chiseled().get());
+                MineablePickaxe.blocks.add(set.chiseled().get());
+                RequiresStoneTool.blocks.add(set.chiseled().get());
+            }
         }
 
         for (ClayTilingSets.ClayTilingSet set : ClayTilingSets.sets){
@@ -267,31 +274,37 @@ public class EdumiaHelpingGenerator {
 
         for (SandBlockSets.SandSet block : SandBlockSets.sandSets){
 
-            if(block.block() != null && block.sandStone() != null && block.sandstoneSlab() != null && block.sandstoneStairs() != null) {
+            if(block.block() != null) {
                 SimpleSlabModel.blocks.add(new SimpleSlabModel.Slab(block.block().get(), block.slab().get()));
                 SimpleLayerModel.blocks.add(new SimpleLayerModel.Layer(block.block().get(), block.layer().get()));
                 SimpleBlockModel.blocks.add(block.block().get());
-                SimpleMultiFaceBlockModel.blocks.add(block.sandStone().get());
-                SimpleMultiFaceSlabModel.blocks.add(new SimpleMultiFaceSlabModel.Slab(block.sandStone().get(), block.sandstoneSlab().get()));
-                SimpleMultiFaceStairModel.blocks.add(new SimpleMultiFaceStairModel.Stair(block.sandStone().get(), block.sandstoneStairs().get()));
 
+                if (block.sandStone() != null && block.sandstoneSlab() != null && block.sandstoneStairs() != null){
+                    SimpleMultiFaceBlockModel.blocks.add(block.sandStone().get());
+                    SimpleMultiFaceSlabModel.blocks.add(new SimpleMultiFaceSlabModel.Slab(block.sandStone().get(), block.sandstoneSlab().get()));
+                    SimpleMultiFaceStairModel.blocks.add(new SimpleMultiFaceStairModel.Stair(block.sandStone().get(), block.sandstoneStairs().get()));
+
+                    BlockDrops.blocks.add(block.sandStone().get());
+                    BlockDrops.blocks.add(block.sandstoneSlab().get());
+                    BlockDrops.blocks.add(block.sandstoneStairs().get());
+
+                    MineablePickaxe.blocks.add(block.sandStone().get());
+                    MineablePickaxe.blocks.add(block.sandstoneStairs().get());
+                    MineablePickaxe.blocks.add(block.sandstoneSlab().get());
+
+                    RequiresStoneTool.blocks.add(block.sandStone().get());
+                    RequiresStoneTool.blocks.add(block.sandstoneSlab().get());
+                    RequiresStoneTool.blocks.add(block.sandstoneStairs().get());
+                }
                 BlockDrops.blocks.add(block.slab().get());
                 BlockDrops.blocks.add(block.layer().get());
                 BlockDrops.blocks.add(block.block().get());
-                BlockDrops.blocks.add(block.sandStone().get());
-                BlockDrops.blocks.add(block.sandstoneSlab().get());
-                BlockDrops.blocks.add(block.sandstoneStairs().get());
 
-                MineablePickaxe.blocks.add(block.sandStone().get());
-                MineablePickaxe.blocks.add(block.sandstoneStairs().get());
-                MineablePickaxe.blocks.add(block.sandstoneSlab().get());
+                MineableShovel.blocks.add(block.block().get());
                 MineableShovel.blocks.add(block.layer().get());
                 MineableShovel.blocks.add(block.slab().get());
 
-                RequiresStoneTool.blocks.add(block.sandStone().get());
-                RequiresStoneTool.blocks.add(block.sandstoneSlab().get());
-                RequiresStoneTool.blocks.add(block.sandstoneStairs().get());
-
+                ReedsPlaceable.blocks.add(block.block().get());
 
             }else {
                 SimpleSlabModel.blocks.add(new SimpleSlabModel.Slab(block.texture(), block.slab().get()));

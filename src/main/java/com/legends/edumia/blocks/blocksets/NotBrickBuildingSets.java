@@ -21,9 +21,17 @@ public class NotBrickBuildingSets {
     public static final float STONE_STRENGTH = 2.0f;
 
     public static BuildSet POLISHED_DRIPSTONE = registerBuildingSet("polished_dripstone", STONE_STRENGTH, false);
+    public static BuildSet HIGH_ELVEN_BRICK_TILING = registerBuildingSet("high_elven_brick_tiling", STONE_STRENGTH, false);
+    public static BuildSet DARK_HIGH_ELVEN_BRICK_TILING = registerBuildingSet("dark_high_elven_brick_tiling", STONE_STRENGTH, false);
+    public static BuildSet LIGHT_HIGH_ELVEN_BRICK_TILING = registerBuildingSet("light_high_elven_brick_tiling", STONE_STRENGTH, false);
+    public static BuildSet CRACKED_GREEN_BASALT = registerBuildingSet("cracked_green_basalt", STONE_STRENGTH, true);
 
     public static BuildSet[] buildSets = new BuildSet[]{
             POLISHED_DRIPSTONE,
+            HIGH_ELVEN_BRICK_TILING,
+            DARK_HIGH_ELVEN_BRICK_TILING,
+            LIGHT_HIGH_ELVEN_BRICK_TILING,
+            CRACKED_GREEN_BASALT
     };
 
     public record BuildSet(DeferredBlock<Block> block, DeferredBlock<AxialSlabBlock> slab, DeferredBlock<StairBlock> stair, DeferredBlock<WallBlock> wall){

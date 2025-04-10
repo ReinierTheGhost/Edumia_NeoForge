@@ -50,6 +50,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
             dropPottedContents(block);
         }
 
+        dropOther(BlockLoader.VOLCANIC_DIRT_PATH.get(), BlockLoader.VOLCANIC_DIRT.get());
+
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {
