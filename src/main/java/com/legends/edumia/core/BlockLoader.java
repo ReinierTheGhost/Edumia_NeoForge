@@ -1,10 +1,8 @@
 package com.legends.edumia.core;
 
 import com.legends.edumia.Edumia;
-import com.legends.edumia.blocks.AxialSlabBlock;
 import com.legends.edumia.blocks.CrystalBlock;
 import com.legends.edumia.blocks.EdumiaPillarBlock;
-import net.minecraft.util.ColorRGBA;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;

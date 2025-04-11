@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "edumia:volcanic_demon_bricks_two_meter_arch"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_volcanic_demon_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "edumia:volcanic_demon_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_volcanic_demon_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "edumia:volcanic_demon_bricks_two_meter_arch"
+    ]
+  }
+}

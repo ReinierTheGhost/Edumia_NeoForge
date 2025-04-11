@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "edumia:gensai_bricks"
+    }
+  },
+  "pattern": [
+    "BBB",
+    " B ",
+    "BBB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "edumia:gensai_bricks_balustrade"
+  }
+}

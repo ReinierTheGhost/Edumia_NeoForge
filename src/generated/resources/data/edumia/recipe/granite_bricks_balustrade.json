@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "edumia:granite_bricks"
+    }
+  },
+  "pattern": [
+    "BBB",
+    " B ",
+    "BBB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "edumia:granite_bricks_balustrade"
+  }
+}

@@ -1,7 +1,8 @@
 {
   "variants": {
     "facing=east,shape=one": {
-      "model": "edumia:block/mossy_volcanic_demon_bricks_round_arch_1"
+      "model": "edumia:block/mossy_volcanic_demon_bricks_round_arch_1",
+      "y": 180
     },
     "facing=east,shape=three": {
       "model": "edumia:block/mossy_volcanic_demon_bricks_round_arch_3",
@@ -17,7 +18,7 @@
     },
     "facing=north,shape=one": {
       "model": "edumia:block/mossy_volcanic_demon_bricks_round_arch_1",
-      "y": 270
+      "y": 90
     },
     "facing=north,shape=three": {
       "model": "edumia:block/mossy_volcanic_demon_bricks_round_arch_3",
@@ -33,7 +34,7 @@
     },
     "facing=south,shape=one": {
       "model": "edumia:block/mossy_volcanic_demon_bricks_round_arch_1",
-      "y": 180
+      "y": 270
     },
     "facing=south,shape=three": {
       "model": "edumia:block/mossy_volcanic_demon_bricks_round_arch_3",
@@ -48,8 +49,7 @@
       "y": 270
     },
     "facing=west,shape=one": {
-      "model": "edumia:block/mossy_volcanic_demon_bricks_round_arch_1",
-      "y": 90
+      "model": "edumia:block/mossy_volcanic_demon_bricks_round_arch_1"
     },
     "facing=west,shape=three": {
       "model": "edumia:block/mossy_volcanic_demon_bricks_round_arch_3"

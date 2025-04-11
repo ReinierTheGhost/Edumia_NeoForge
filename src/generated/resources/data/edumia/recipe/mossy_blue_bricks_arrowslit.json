@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "edumia:mossy_blue_bricks"
+    }
+  },
+  "pattern": [
+    "B B",
+    "B B",
+    "B B"
+  ],
+  "result": {
+    "count": 4,
+    "id": "edumia:mossy_blue_bricks_arrowslit"
+  }
+}

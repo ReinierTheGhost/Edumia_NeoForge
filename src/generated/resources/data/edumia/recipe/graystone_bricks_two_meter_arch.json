@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "edumia:graystone_bricks"
+    }
+  },
+  "pattern": [
+    "BBB",
+    " BB",
+    "  B"
+  ],
+  "result": {
+    "count": 4,
+    "id": "edumia:graystone_bricks_two_meter_arch"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "edumia:brown_sandstone_gold_bricks"
+    }
+  },
+  "pattern": [
+    "BBB",
+    " B ",
+    "BBB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "edumia:brown_sandstone_gold_bricks_balustrade"
+  }
+}

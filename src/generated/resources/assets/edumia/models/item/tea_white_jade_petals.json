@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "edumia:item/tea_white_jade_petals"
+  }
+}

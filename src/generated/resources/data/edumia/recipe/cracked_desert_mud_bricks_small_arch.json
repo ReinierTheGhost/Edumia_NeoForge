@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "edumia:cracked_desert_mud_bricks"
+    }
+  },
+  "pattern": [
+    "BBB",
+    "B B"
+  ],
+  "result": {
+    "count": 4,
+    "id": "edumia:cracked_desert_mud_bricks_small_arch"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_limestone_pillar": {
+      "conditions": {
+        "items": [
+          {
+            "items": "edumia:limestone_pillar"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "edumia:limestone_pillar_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_limestone_pillar"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "edumia:limestone_pillar_slab"
+    ]
+  }
+}

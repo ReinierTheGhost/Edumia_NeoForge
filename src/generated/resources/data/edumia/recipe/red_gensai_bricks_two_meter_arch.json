@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "edumia:red_gensai_bricks"
+    }
+  },
+  "pattern": [
+    "BBB",
+    " BB",
+    "  B"
+  ],
+  "result": {
+    "count": 4,
+    "id": "edumia:red_gensai_bricks_two_meter_arch"
+  }
+}

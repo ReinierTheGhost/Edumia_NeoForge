@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "edumia:basalt_bricks"
+    }
+  },
+  "pattern": [
+    "BBB",
+    "B B"
+  ],
+  "result": {
+    "count": 4,
+    "id": "edumia:basalt_bricks_small_arch"
+  }
+}

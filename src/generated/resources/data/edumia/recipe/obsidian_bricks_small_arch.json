@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "edumia:obsidian_bricks"
+    }
+  },
+  "pattern": [
+    "BBB",
+    "B B"
+  ],
+  "result": {
+    "count": 4,
+    "id": "edumia:obsidian_bricks_small_arch"
+  }
+}

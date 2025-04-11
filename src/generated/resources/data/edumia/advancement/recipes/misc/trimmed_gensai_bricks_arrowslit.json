@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "edumia:trimmed_gensai_bricks_arrowslit"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_trimmed_gensai_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "edumia:trimmed_gensai_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_trimmed_gensai_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "edumia:trimmed_gensai_bricks_arrowslit"
+    ]
+  }
+}

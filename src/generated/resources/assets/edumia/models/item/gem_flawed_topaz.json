@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "edumia:item/gem_flawed_topaz"
+  }
+}

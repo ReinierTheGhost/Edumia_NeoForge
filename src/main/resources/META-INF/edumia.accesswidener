@@ -1,3 +1,6 @@
 accessWidener v2 named
 
 accessible method net/minecraft/world/level/block/Blocks never(Lnet.minecraft.world.level.block.state.BlockState;Lnet.minecraft.world.level.BlockGetter;Lnet.minecraft.core.BlockPos;)Z # never
+accessible field net/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate palettes Ljava/util/List;
+accessible method net/minecraft/world/level/block/LeavesBlock updateDistance (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+accessible method net/minecraft/world/level/levelgen/feature/TreeFeature setBlockKnownShape (Lnet/minecraft/world/level/LevelWriter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V

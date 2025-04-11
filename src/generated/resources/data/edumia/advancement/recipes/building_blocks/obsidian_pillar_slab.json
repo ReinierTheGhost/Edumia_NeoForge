@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_obsidian_pillar": {
+      "conditions": {
+        "items": [
+          {
+            "items": "edumia:obsidian_pillar"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "edumia:obsidian_pillar_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_obsidian_pillar"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "edumia:obsidian_pillar_slab"
+    ]
+  }
+}

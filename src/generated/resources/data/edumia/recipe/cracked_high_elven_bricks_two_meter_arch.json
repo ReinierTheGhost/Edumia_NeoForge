@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "edumia:cracked_high_elven_bricks"
+    }
+  },
+  "pattern": [
+    "BBB",
+    " BB",
+    "  B"
+  ],
+  "result": {
+    "count": 4,
+    "id": "edumia:cracked_high_elven_bricks_two_meter_arch"
+  }
+}

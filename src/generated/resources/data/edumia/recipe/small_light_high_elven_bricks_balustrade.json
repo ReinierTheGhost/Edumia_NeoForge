@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "edumia:small_light_high_elven_bricks"
+    }
+  },
+  "pattern": [
+    "BBB",
+    " B ",
+    "BBB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "edumia:small_light_high_elven_bricks_balustrade"
+  }
+}

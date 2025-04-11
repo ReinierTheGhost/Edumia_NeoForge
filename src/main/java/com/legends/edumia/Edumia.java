@@ -30,6 +30,7 @@ public class Edumia
 
     public static final String MOD_ID = "edumia";
     private static final Logger LOGGER = LogUtils.getLogger();
+    public static final boolean IS_DEBUG = true;
 
     public Edumia(IEventBus modEventBus, ModContainer modContainer)
     {

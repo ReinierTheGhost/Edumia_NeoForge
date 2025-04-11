@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_graystone_pillar": {
+      "conditions": {
+        "items": [
+          {
+            "items": "edumia:graystone_pillar"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "edumia:graystone_pillar_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_graystone_pillar"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "edumia:graystone_pillar_slab"
+    ]
+  }
+}

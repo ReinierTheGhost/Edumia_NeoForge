@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "edumia:chalk_bricks"
+    }
+  },
+  "pattern": [
+    "B B",
+    "B B",
+    "B B"
+  ],
+  "result": {
+    "count": 4,
+    "id": "edumia:chalk_bricks_arrowslit"
+  }
+}

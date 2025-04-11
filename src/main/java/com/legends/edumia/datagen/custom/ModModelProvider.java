@@ -252,7 +252,7 @@ public abstract class ModModelProvider extends BlockStateProvider {
     private void arch(ArchBlock block, ModelFile one, ModelFile two, ModelFile tree, ModelFile treeMiddle){
         getVariantBuilder(block)
                 .partialState().with(ArchBlock.FORM, ArchShape.ONE).with(ArchBlock.FACING, Direction.EAST)
-                .addModels(new ConfiguredModel(one, 0, 0, false))
+                .addModels(new ConfiguredModel(one, 0, 180, false))
                 .partialState().with(ArchBlock.FORM, ArchShape.TWO).with(ArchBlock.FACING, Direction.EAST)
                 .addModels(new ConfiguredModel(two, 0, 180, false))
                 .partialState().with(ArchBlock.FORM, ArchShape.THREE).with(ArchBlock.FACING, Direction.EAST)
@@ -261,7 +261,7 @@ public abstract class ModModelProvider extends BlockStateProvider {
                 .addModels(new ConfiguredModel(treeMiddle, 0, 180, false))
 
                 .partialState().with(ArchBlock.FORM, ArchShape.ONE).with(ArchBlock.FACING, Direction.NORTH)
-                .addModels(new ConfiguredModel(one, 0, 270, false))
+                .addModels(new ConfiguredModel(one, 0, 90, false))
                 .partialState().with(ArchBlock.FORM, ArchShape.TWO).with(ArchBlock.FACING, Direction.NORTH)
                 .addModels(new ConfiguredModel(two, 0, 90, false))
                 .partialState().with(ArchBlock.FORM, ArchShape.THREE).with(ArchBlock.FACING, Direction.NORTH)
@@ -270,7 +270,7 @@ public abstract class ModModelProvider extends BlockStateProvider {
                 .addModels(new ConfiguredModel(treeMiddle, 0, 90, false))
 
                 .partialState().with(ArchBlock.FORM, ArchShape.ONE).with(ArchBlock.FACING, Direction.SOUTH)
-                .addModels(new ConfiguredModel(one, 0, 180, false))
+                .addModels(new ConfiguredModel(one, 0, 270, false))
                 .partialState().with(ArchBlock.FORM, ArchShape.TWO).with(ArchBlock.FACING, Direction.SOUTH)
                 .addModels(new ConfiguredModel(two, 0, 270, false))
                 .partialState().with(ArchBlock.FORM, ArchShape.THREE).with(ArchBlock.FACING, Direction.SOUTH)
@@ -279,7 +279,7 @@ public abstract class ModModelProvider extends BlockStateProvider {
                 .addModels(new ConfiguredModel(treeMiddle, 0, 270, false))
 
                 .partialState().with(ArchBlock.FORM, ArchShape.ONE).with(ArchBlock.FACING, Direction.WEST)
-                .addModels(new ConfiguredModel(one, 0, 90, false))
+                .addModels(new ConfiguredModel(one, 0, 0, false))
                 .partialState().with(ArchBlock.FORM, ArchShape.TWO).with(ArchBlock.FACING, Direction.WEST)
                 .addModels(new ConfiguredModel(two, 0, 0, false))
                 .partialState().with(ArchBlock.FORM, ArchShape.THREE).with(ArchBlock.FACING, Direction.WEST)

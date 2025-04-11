@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "edumia:demon_basalt_bricks"
+    }
+  },
+  "pattern": [
+    "BBB",
+    " B ",
+    "BBB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "edumia:demon_basalt_bricks_balustrade"
+  }
+}

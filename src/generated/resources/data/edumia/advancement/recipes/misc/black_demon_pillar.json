@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_black_demon_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "edumia:black_demon_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "edumia:black_demon_pillar"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_black_demon_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "edumia:black_demon_pillar"
+    ]
+  }
+}

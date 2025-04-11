@@ -6,6 +6,7 @@ import com.legends.edumia.datagen.custom.models.*;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.FenceBlock;
@@ -19,7 +20,6 @@ public class ModItemModelProvider extends ItemModelProvider {
     }
     @Override
     protected void registerModels() {
-        basicItem(ItemLoader.GENSAI_STEEL.get());
         for (SimpleWallModel.Wall block : SimpleWallModel.blocks){
             wallItem(block.wall(), block.block());
         }
@@ -54,6 +54,10 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         for (SimpleReedsModel.Reed block : SimpleReedsModel.blocks){
             genericBlockItemTexture(block.reed(), block.reed());
+        }
+
+        for (Item item : SimpleBasicItemModel.items){
+            basicItem(item);
         }
 
     }

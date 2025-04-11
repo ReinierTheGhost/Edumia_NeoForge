@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "edumia:mossy_redish_gensai_bricks"
+    }
+  },
+  "pattern": [
+    "B B",
+    "B B",
+    "B B"
+  ],
+  "result": {
+    "count": 4,
+    "id": "edumia:mossy_redish_gensai_bricks_arrowslit"
+  }
+}
