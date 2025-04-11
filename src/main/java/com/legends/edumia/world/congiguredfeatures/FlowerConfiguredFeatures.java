@@ -1,9 +1,10 @@
 package com.legends.edumia.world.congiguredfeatures;
 
 import com.legends.edumia.Edumia;
+import com.legends.edumia.blocks.blocksets.FlowerBlockSets;
 import com.legends.edumia.core.BlockLoader;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -50,134 +51,134 @@ public class FlowerConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> HIBISCUS_FLOWER_KEY = registerKey("hibiscus");
 
 
-    public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context){
+    public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context){
         register(context, ASPHODEL_FLOWER_KEY, Feature.FLOWER, new RandomPatchConfiguration(8, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(
-                        SimpleWeightedRandomList.<BlockState>builder().add(BlockLoader.ASPHODEL.get().defaultBlockState(), 1))))));
+                        SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.ASPHODEL.flower().get().defaultBlockState(), 1))))));
 
         register(context, BLUE_DELPHINIUM_FLOWER_KEY, Feature.FLOWER, new RandomPatchConfiguration(8, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(
-                        SimpleWeightedRandomList.<BlockState>builder().add(BlockLoader.BLUE_DELPHINIUM.get().defaultBlockState(), 1))))));
+                        SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.BLUE_DELPHINIUM.flower().get().defaultBlockState(), 1))))));
 
         register(context, BLUEBELL_FLOWER_KEY, Feature.FLOWER, new RandomPatchConfiguration(8, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(
-                        SimpleWeightedRandomList.<BlockState>builder().add(BlockLoader.BLUEBELL.get().defaultBlockState(), 1))))));
+                        SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.BLUEBELL.flower().get().defaultBlockState(), 1))))));
 
         register(context, CALLA_LILY_FLOWER_KEY, Feature.FLOWER, new RandomPatchConfiguration(8, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(
-                        SimpleWeightedRandomList.<BlockState>builder().add(BlockLoader.CALLA_LILY.get().defaultBlockState(), 1))))));
+                        SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.CALLA_LILY.flower().get().defaultBlockState(), 1))))));
 
         register(context, CELSEMIUM_FLOWER_KEY, Feature.FLOWER, new RandomPatchConfiguration(8, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(
-                        SimpleWeightedRandomList.<BlockState>builder().add(BlockLoader.CELSEMIUM.get().defaultBlockState(), 1))))));
+                        SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.CELSEMIUM.flower().get().defaultBlockState(), 1))))));
 
         register(context, CHRYS_BLUE_FLOWER_KEY, Feature.FLOWER, new RandomPatchConfiguration(8, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(
-                        SimpleWeightedRandomList.<BlockState>builder().add(BlockLoader.CHRYS_BLUE.get().defaultBlockState(), 1))))));
+                        SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.CHRYS_BLUE.flower().get().defaultBlockState(), 1))))));
 
         register(context, CHRYS_ORANGE_FLOWER_KEY, Feature.FLOWER, new RandomPatchConfiguration(8, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(
-                        SimpleWeightedRandomList.<BlockState>builder().add(BlockLoader.CHRYS_ORANGE.get().defaultBlockState(), 1))))));
+                        SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.CHRYS_ORANGE.flower().get().defaultBlockState(), 1))))));
 
         register(context, CHRYS_PINK_FLOWER_KEY, Feature.FLOWER, new RandomPatchConfiguration(8, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(
-                        SimpleWeightedRandomList.<BlockState>builder().add(BlockLoader.CHRYS_PINK.get().defaultBlockState(), 1))))));
+                        SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.CHRYS_PINK.flower().get().defaultBlockState(), 1))))));
 
         register(context, CHRYS_WHITE_FLOWER_KEY, Feature.FLOWER, new RandomPatchConfiguration(8, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(
-                        SimpleWeightedRandomList.<BlockState>builder().add(BlockLoader.CHRYS_WHITE.get().defaultBlockState(), 1))))));
+                        SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.CHRYS_WHITE.flower().get().defaultBlockState(), 1))))));
 
         register(context, CHRYS_YELLOW_FLOWER_KEY, Feature.FLOWER, new RandomPatchConfiguration(8, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(
-                        SimpleWeightedRandomList.<BlockState>builder().add(BlockLoader.CHRYS_YELLOW.get().defaultBlockState(), 1))))));
+                        SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.CHRYS_YELLOW.flower().get().defaultBlockState(), 1))))));
 
         register(context, CROCUS_FLOWER_KEY, Feature.FLOWER, new RandomPatchConfiguration(8, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(
-                        SimpleWeightedRandomList.<BlockState>builder().add(BlockLoader.CROCUS.get().defaultBlockState(), 1))))));
+                        SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.CROCUS.flower().get().defaultBlockState(), 1))))));
 
         register(context, DAISY_FLOWER_KEY, Feature.FLOWER, new RandomPatchConfiguration(8, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(
-                        SimpleWeightedRandomList.<BlockState>builder().add(BlockLoader.DAISY.get().defaultBlockState(), 1))))));
+                        SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.DAISY.flower().get().defaultBlockState(), 1))))));
 
         register(context, DELPHINIUM_FLOWER_KEY, Feature.FLOWER, new RandomPatchConfiguration(8, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(
-                        SimpleWeightedRandomList.<BlockState>builder().add(BlockLoader.DELPHINIUM.get().defaultBlockState(), 1))))));
+                        SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.DELPHINIUM.flower().get().defaultBlockState(), 1))))));
 
         register(context, FLAX_FLOWER_KEY, Feature.FLOWER, new RandomPatchConfiguration(8, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(
-                        SimpleWeightedRandomList.<BlockState>builder().add(BlockLoader.FLAX_FLOWERS.get().defaultBlockState(), 1))))));
+                        SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.FLAX_FLOWERS.flower().get().defaultBlockState(), 1))))));
 
         register(context, FOXGLOVE_ORANGE_FLOWER_KEY, Feature.FLOWER, new RandomPatchConfiguration(8, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(
-                        SimpleWeightedRandomList.<BlockState>builder().add(BlockLoader.FOXGLOVE_ORANGE.get().defaultBlockState(), 1))))));
+                        SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.FOXGLOVE_ORANGE.flower().get().defaultBlockState(), 1))))));
 
         register(context, FOXGLOVE_PINK_FLOWER_KEY, Feature.FLOWER, new RandomPatchConfiguration(8, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(
-                        SimpleWeightedRandomList.<BlockState>builder().add(BlockLoader.FOXGLOVE_PINK.get().defaultBlockState(), 1))))));
+                        SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.FOXGLOVE_PINK.flower().get().defaultBlockState(), 1))))));
 
         register(context, FOXGLOVE_RED_FLOWER_KEY, Feature.FLOWER, new RandomPatchConfiguration(8, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(
-                        SimpleWeightedRandomList.<BlockState>builder().add(BlockLoader.FOXGLOVE_RED.get().defaultBlockState(), 1))))));
+                        SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.FOXGLOVE_RED.flower().get().defaultBlockState(), 1))))));
 
         register(context, FOXGLOVE_WHITE_FLOWER_KEY, Feature.FLOWER, new RandomPatchConfiguration(8, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(
-                        SimpleWeightedRandomList.<BlockState>builder().add(BlockLoader.FOXGLOVE_WHITE.get().defaultBlockState(), 1))))));
+                        SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.FOXGLOVE_WHITE.flower().get().defaultBlockState(), 1))))));
 
         register(context, GERBERA_RED_FLOWER_KEY, Feature.FLOWER, new RandomPatchConfiguration(8, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(
-                        SimpleWeightedRandomList.<BlockState>builder().add(BlockLoader.GERBERA_RED.get().defaultBlockState(), 1))))));
+                        SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.GERBERA_RED.flower().get().defaultBlockState(), 1))))));
 
         register(context, GERBERA_YELLOW_FLOWER_KEY, Feature.FLOWER, new RandomPatchConfiguration(8, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(
-                        SimpleWeightedRandomList.<BlockState>builder().add(BlockLoader.GERBERA_YELLOW.get().defaultBlockState(), 1))))));
+                        SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.GERBERA_YELLOW.flower().get().defaultBlockState(), 1))))));
 
         register(context, GENSAI_ORCHID_FLOWER_KEY, Feature.FLOWER, new RandomPatchConfiguration(8, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(
-                        SimpleWeightedRandomList.<BlockState>builder().add(BlockLoader.GENSAI_ORCHID.get().defaultBlockState(), 1))))));
+                        SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.GENSAI_ORCHID.flower().get().defaultBlockState(), 1))))));
 
         register(context, HEATHER_BUSH_FLOWER_KEY, Feature.FLOWER, new RandomPatchConfiguration(8, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(
-                        SimpleWeightedRandomList.<BlockState>builder().add(BlockLoader.HEATHER_BUSH.get().defaultBlockState(), 1))))));
+                        SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.HEATHER_BUSH.flower().get().defaultBlockState(), 1))))));
 
         register(context, LAVENDER_FLOWER_KEY, Feature.FLOWER, new RandomPatchConfiguration(8, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(
-                        SimpleWeightedRandomList.<BlockState>builder().add(BlockLoader.LAVENDER.get().defaultBlockState(), 1))))));
+                        SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.LAVENDER.flower().get().defaultBlockState(), 1))))));
 
         register(context, MARIGOLD_FLOWER_KEY, Feature.FLOWER, new RandomPatchConfiguration(8, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(
-                        SimpleWeightedRandomList.<BlockState>builder().add(BlockLoader.MARIGOLD.get().defaultBlockState(), 1))))));
+                        SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.MARIGOLD.flower().get().defaultBlockState(), 1))))));
 
         register(context, PINK_ANEMONE_FLOWER_KEY, Feature.FLOWER, new RandomPatchConfiguration(8, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(
-                        SimpleWeightedRandomList.<BlockState>builder().add(BlockLoader.PINK_ANEMONE.get().defaultBlockState(), 1))))));
+                        SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.PINK_ANEMONE.flower().get().defaultBlockState(), 1))))));
 
         register(context, SIMBELMYNE_FLOWER_KEY, Feature.FLOWER, new RandomPatchConfiguration(8, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(
-                        SimpleWeightedRandomList.<BlockState>builder().add(BlockLoader.SIMBLELMYNE.get().defaultBlockState(), 1))))));
+                        SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.SIMBLELMYNE.flower().get().defaultBlockState(), 1))))));
 
         register(context, TUBEROSE_FLOWER_KEY, Feature.FLOWER, new RandomPatchConfiguration(8, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(
-                        SimpleWeightedRandomList.<BlockState>builder().add(BlockLoader.TUBEROSE.get().defaultBlockState(), 1))))));
+                        SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.TUBEROSE.flower().get().defaultBlockState(), 1))))));
 
         register(context, YELLOW_IRIS_FLOWER_KEY, Feature.FLOWER, new RandomPatchConfiguration(8, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(
-                        SimpleWeightedRandomList.<BlockState>builder().add(BlockLoader.YELLOW_IRIS.get().defaultBlockState(), 1))))));
+                        SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.YELLOW_IRIS.flower().get().defaultBlockState(), 1))))));
 
         register(context, DESERT_FLAME_FLOWER_KEY, Feature.FLOWER, new RandomPatchConfiguration(8, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(
-                        SimpleWeightedRandomList.<BlockState>builder().add(BlockLoader.FLAME_OF_THE_SOUTH.get().defaultBlockState(), 1))))));
+                        SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.FLAME_OF_THE_SOUTH.flower().get().defaultBlockState(), 1))))));
 
         register(context, HIBISCUS_FLOWER_KEY, Feature.FLOWER, new RandomPatchConfiguration(8, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(
-                        SimpleWeightedRandomList.<BlockState>builder().add(BlockLoader.HIBISCUS.get().defaultBlockState(), 1))))));
+                        SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.HIBISCUS.flower().get().defaultBlockState(), 1))))));
     }
 
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name){
-        return ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(Edumia.MOD_ID, "flowers/" + name));
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "flowers/" + name));
     }
 
-    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstapContext< ConfiguredFeature<?, ?>> context,
+    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstrapContext< ConfiguredFeature<?, ?>> context,
                                                                                           ResourceKey<ConfiguredFeature<?, ?>> key, F feature,
                                                                                           FC configuration){
         context.register(key, new ConfiguredFeature<>(feature, configuration));

@@ -5,8 +5,7 @@ import com.legends.edumia.world.placedfeatures.trees.TropicalTreePlacedFeatures;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.BootstapContext;
-
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
@@ -25,7 +24,7 @@ public class SaplingConfiguredFeatures {
 
 
 
-    public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context){
+    public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context){
         HolderGetter<PlacedFeature> placed = context.lookup(Registries.PLACED_FEATURE);
         Holder.Reference<PlacedFeature> palm = placed.getOrThrow(TropicalTreePlacedFeatures.BIG_PARASOL_PALM);
         Holder.Reference<PlacedFeature> palm2 = placed.getOrThrow(TropicalTreePlacedFeatures.SMALL_PARASOL_PALM);
@@ -39,10 +38,10 @@ public class SaplingConfiguredFeatures {
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name){
-        return ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(Edumia.MOD_ID, name));
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, name));
     }
 
-    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstapContext< ConfiguredFeature<?, ?>> context,
+    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstrapContext< ConfiguredFeature<?, ?>> context,
                                                                                           ResourceKey<ConfiguredFeature<?, ?>> key, F feature,
                                                                                           FC configuration){
         context.register(key, new ConfiguredFeature<>(feature, configuration));

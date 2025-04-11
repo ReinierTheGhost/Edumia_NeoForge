@@ -13,7 +13,7 @@ import com.legends.edumia.world.trees.trunkplacers.LargeTrunkPlacer;
 import com.legends.edumia.world.trees.trunkplacers.OakTrunkPlacer;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.valueproviders.ConstantInt;
@@ -57,7 +57,7 @@ public class OakTreeConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> MEGA_BLACK_OAK_TREE_KEY = registerKey("black/mega_black_oak_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> COLOSSAL_BLACK_OAK_TREE_KEY = registerKey("black/colossal_black_oak_tree");
 
-    public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context){
+    public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context){
         HolderGetter<PlacedFeature> registryEntryLookup = context.lookup(Registries.PLACED_FEATURE);
 
         register(context, RED_OAK_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
@@ -239,10 +239,10 @@ public class OakTreeConfiguredFeatures {
 
     }
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name){
-        return ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(Edumia.MOD_ID, "tree/oaks/" + name));
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "tree/oaks/" + name));
     }
 
-    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstapContext< ConfiguredFeature<?, ?>> context,
+    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstrapContext< ConfiguredFeature<?, ?>> context,
                                                                                           ResourceKey<ConfiguredFeature<?, ?>> key, F feature,
                                                                                           FC configuration){
         context.register(key, new ConfiguredFeature<>(feature, configuration));

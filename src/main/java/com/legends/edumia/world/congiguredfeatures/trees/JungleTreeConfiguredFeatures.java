@@ -1,14 +1,13 @@
 package com.legends.edumia.world.congiguredfeatures.trees;
 
 import com.legends.edumia.Edumia;
-import com.legends.edumia.utils.ModTags;
-import com.legends.edumia.world.congiguredfeatures.TreeConfiguredFeatures;
+import com.legends.edumia.core.TagLoader;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.Vec3i;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -66,10 +65,10 @@ public class JungleTreeConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> JUNGLE_TREE_BRANCH_3_NW = registerKey("jungle_tree/branch/3_nw");
     public static final ResourceKey<ConfiguredFeature<?, ?>> JUNGLE_TREE_BRANCH_3_SE = registerKey("jungle_tree/branch/3_se");
     public static final ResourceKey<ConfiguredFeature<?, ?>> JUNGLE_TREE_BRANCH_3_SW = registerKey("jungle_tree/branch/3_sw");
-    public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context){
+    public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context){
         HolderGetter<ConfiguredFeature<?, ?>> holdergetter = context.lookup(Registries.CONFIGURED_FEATURE);
         HolderGetter<PlacedFeature> registryEntryLookup = context.lookup(Registries.PLACED_FEATURE);
-        TagKey<Block> branch = ModTags.Blocks.TREE_BRANCH_REPLACEABLE;
+        TagKey<Block> branch = TagLoader.Blocks.TREE_BRANCH_REPLACEABLE;
 
         register(context, JUNGLE_TREE_1, Feature.SIMPLE_RANDOM_SELECTOR, new SimpleRandomFeatureConfiguration(HolderSet.direct(
                 PlacementUtils.inlinePlaced(Feature.SIMPLE_RANDOM_SELECTOR, new SimpleRandomFeatureConfiguration(HolderSet.direct(
@@ -1030,10 +1029,10 @@ public class JungleTreeConfiguredFeatures {
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name){
-        return ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(Edumia.MOD_ID, "tree/tropical/jungle_trees/" + name));
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "tree/tropical/jungle_trees/" + name));
     }
 
-    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstapContext< ConfiguredFeature<?, ?>> context,
+    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstrapContext< ConfiguredFeature<?, ?>> context,
                                                                                           ResourceKey<ConfiguredFeature<?, ?>> key, F feature,
                                                                                           FC configuration){
         context.register(key, new ConfiguredFeature<>(feature, configuration));

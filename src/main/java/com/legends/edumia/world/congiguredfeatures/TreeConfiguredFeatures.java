@@ -1,24 +1,19 @@
 package com.legends.edumia.world.congiguredfeatures;
 
+import biomesoplenty.init.ModTags;
 import com.google.common.collect.ImmutableList;
 import com.legends.edumia.Edumia;
 import com.legends.edumia.blocks.blocksets.ModNatureBlocks;
 import com.legends.edumia.blocks.blocksets.WoodBlockSets;
-import com.legends.edumia.utils.ModTags;
-import com.legends.edumia.world.congiguredfeatures.trees.RootsConfiguredFeatures;
+import com.legends.edumia.core.TagLoader;
 import com.legends.edumia.world.features.EdumiaFeatures;
 import com.legends.edumia.world.features.treesnbt.TreeFromStructureNBTConfig;
 import com.legends.edumia.world.trees.foliageplacer.*;
 import com.legends.edumia.world.trees.treedecorators.PineBranchDecorator;
 import com.legends.edumia.world.trees.trunkplacers.*;
-import net.minecraft.core.Direction;
 import net.minecraft.core.HolderGetter;
-import net.minecraft.core.HolderSet;
-import net.minecraft.core.Vec3i;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.BootstapContext;
-import net.minecraft.data.worldgen.placement.CavePlacements;
-import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.random.SimpleWeightedRandomList;
@@ -28,11 +23,9 @@ import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.SimpleRandomFeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.featuresize.ThreeLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
@@ -40,16 +33,10 @@ import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlac
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FancyFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
-import net.minecraft.world.level.levelgen.feature.stateproviders.SimpleStateProvider;
 import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider;
 import net.minecraft.world.level.levelgen.feature.treedecorators.*;
-import net.minecraft.world.level.levelgen.feature.trunkplacers.DarkOakTrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.ForkingTrunkPlacer;
-import net.minecraft.world.level.levelgen.feature.trunkplacers.MegaJungleTrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
-import net.minecraft.world.level.levelgen.placement.BlockPredicateFilter;
-import net.minecraft.world.level.levelgen.placement.CountPlacement;
-import net.minecraft.world.level.levelgen.placement.RandomOffsetPlacement;
 
 import java.util.*;
 
@@ -70,25 +57,25 @@ public class TreeConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> DRAGON_BLOOD_SMALL_KEY = registerKey("tree/dragon_blood_small");
 
 
-    public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context){
+    public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context){
         HolderGetter<ConfiguredFeature<?, ?>> holdergetter = context.lookup(Registries.CONFIGURED_FEATURE);
         BeehiveDecorator beehiveTreeDecorator = new BeehiveDecorator(0.03f);
         BlockStateProvider pineBranchProvider = (new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
                 .add(WoodBlockSets.PINE.log().get().defaultBlockState(), 2)
                 .add(WoodBlockSets.PINE.strippedLog().get().defaultBlockState(), 1)));
 
-        register(context, JOHANES_TREE,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
-                Edumia.location("features/trees/johanes/johanes_trunk"),
-                Edumia.location("features/trees/johanes/johanes_top"),
-                BiasedToBottomInt.of(1, 5),
-                BlockStateProvider.simple(WoodBlockSets.CEDAR.wood().get()),
-                BlockStateProvider.simple(WoodBlockSets.CEDAR.leaves().get().defaultBlockState().setValue(LeavesBlock.PERSISTENT, true)),
-                Set.of(WoodBlockSets.CEDAR.wood().get(), WoodBlockSets.CEDAR.woodFence().get()),
-                WoodBlockSets.CEDAR.leaves(),
-                ModTags.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(),
-                Set.of(WoodBlockSets.CEDAR.woodFence().get(), Blocks.BROWN_STAINED_GLASS_PANE, Blocks.DARK_OAK_SLAB,
-                        WoodBlockSets.CEDAR.leaves().get())
-        ));
+//        register(context, JOHANES_TREE,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+//                Edumia.location("features/trees/johanes/johanes_trunk"),
+//                Edumia.location("features/trees/johanes/johanes_top"),
+//                BiasedToBottomInt.of(1, 5),
+//                BlockStateProvider.simple(WoodBlockSets.CEDAR.wood().get()),
+//                BlockStateProvider.simple(WoodBlockSets.CEDAR.leaves().get().defaultBlockState().setValue(LeavesBlock.PERSISTENT, true)),
+//                Set.of(WoodBlockSets.CEDAR.wood().get(), WoodBlockSets.CEDAR.woodFence().get()),
+//                WoodBlockSets.CEDAR.leaves(),
+//                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(),
+//                Set.of(WoodBlockSets.CEDAR.woodFence().get(), Blocks.BROWN_STAINED_GLASS_PANE, Blocks.DARK_OAK_SLAB,
+//                        WoodBlockSets.CEDAR.leaves().get())
+//        ));
 
         register(context, TEST_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(Blocks.DARK_OAK_LOG),
@@ -239,10 +226,10 @@ public class TreeConfiguredFeatures {
         return buildClassicTree(log, leavesPool, baseHeight, heightRandA, true, true);
     }
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name){
-        return ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(Edumia.MOD_ID, name));
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, name));
     }
 
-    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstapContext< ConfiguredFeature<?, ?>> context,
+    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstrapContext< ConfiguredFeature<?, ?>> context,
                                                                                           ResourceKey<ConfiguredFeature<?, ?>> key, F feature,
                                                                                           FC configuration){
         context.register(key, new ConfiguredFeature<>(feature, configuration));

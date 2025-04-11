@@ -7,7 +7,7 @@ import com.legends.edumia.world.trees.foliageplacer.SilverSpruceFoliagePlacer;
 import com.legends.edumia.world.trees.trunkplacers.SpruceTrunkPlacer;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.valueproviders.BiasedToBottomInt;
@@ -46,7 +46,7 @@ public class BorealTreeConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> SILVER_SPRUCE_TREE_KEY = registerKey("silver_spruce/silver_spruce_tree");
 
-    public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context){
+    public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context){
         HolderGetter<PlacedFeature> placed = context.lookup(Registries.PLACED_FEATURE);
         BeehiveDecorator beehive05TreeDecorator = new BeehiveDecorator(0.05f);
 
@@ -131,10 +131,10 @@ public class BorealTreeConfiguredFeatures {
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name){
-        return ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(Edumia.MOD_ID, "tree/boreal/" + name));
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "tree/boreal/" + name));
     }
 
-    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstapContext< ConfiguredFeature<?, ?>> context,
+    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstrapContext< ConfiguredFeature<?, ?>> context,
                                                                                           ResourceKey<ConfiguredFeature<?, ?>> key, F feature,
                                                                                           FC configuration){
         context.register(key, new ConfiguredFeature<>(feature, configuration));

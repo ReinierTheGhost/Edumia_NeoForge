@@ -2,6 +2,7 @@ package com.legends.edumia.world.trees.foliageplacer;
 
 import com.legends.edumia.world.trees.EdumiaFoliagePlacerTypes;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.IntProvider;
@@ -11,7 +12,7 @@ import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacerType;
 
 public class HeveaFoliagePlacer extends FoliagePlacer {
-    public static final Codec<HeveaFoliagePlacer> CODEC = Codec.unit(HeveaFoliagePlacer::new);
+    public static final MapCodec<HeveaFoliagePlacer> CODEC = (MapCodec<HeveaFoliagePlacer>) Codec.unit(HeveaFoliagePlacer::new);
 
 
     /**

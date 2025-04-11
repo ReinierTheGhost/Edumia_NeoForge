@@ -1,13 +1,13 @@
 package com.legends.edumia.world.congiguredfeatures.trees;
 
+import biomesoplenty.init.ModTags;
 import com.legends.edumia.Edumia;
-import com.legends.edumia.utils.ModTags;
-import net.minecraft.core.Holder;
+import com.legends.edumia.core.TagLoader;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.Vec3i;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -34,7 +34,7 @@ public class RootsConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> JUNGLE_TREE_ROOTS_1 = registerKey("jungle_tree/roots/1");
     public static final ResourceKey<ConfiguredFeature<?, ?>> JUNGLE_TREE_ROOTS_2 = registerKey("jungle_tree/roots/2");
 
-    public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context){
+    public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context){
         HolderGetter<ConfiguredFeature<?, ?>> holdergetter = context.lookup(Registries.CONFIGURED_FEATURE);
         HolderGetter<PlacedFeature> registryEntryLookup = context.lookup(Registries.PLACED_FEATURE);
 
@@ -42,17 +42,17 @@ public class RootsConfiguredFeatures {
                 3, 1, 1, PlacementUtils.inlinePlaced(
                         Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(
                                 BlockStateProvider.simple(Blocks.ROOTED_DIRT)), BlockPredicateFilter.forPredicate(
-                        BlockPredicate.allOf(BlockPredicate.matchesTag(ModTags.Blocks.DIRT),
+                        BlockPredicate.allOf(BlockPredicate.matchesTag(TagLoader.Blocks.DIRT),
                                 BlockPredicate.not(
-                                        BlockPredicate.matchesTag(new Vec3i(0,1,0), ModTags.Blocks.DIRT)))))));
+                                        BlockPredicate.matchesTag(new Vec3i(0,1,0), TagLoader.Blocks.DIRT)))))));
 
         register(context, JUNGLE_TREE_ROOTED_DIRT_1, Feature.RANDOM_PATCH, new RandomPatchConfiguration(
                 16, 2, 2, PlacementUtils.inlinePlaced(
                         Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(
                                 BlockStateProvider.simple(Blocks.ROOTED_DIRT)), BlockPredicateFilter.forPredicate(
-                        BlockPredicate.allOf(BlockPredicate.matchesTag(ModTags.Blocks.DIRT),
+                        BlockPredicate.allOf(BlockPredicate.matchesTag(TagLoader.Blocks.DIRT),
                                 BlockPredicate.not(
-                                        BlockPredicate.matchesTag(new Vec3i(0,1,0), ModTags.Blocks.DIRT)))))));
+                                        BlockPredicate.matchesTag(new Vec3i(0,1,0), TagLoader.Blocks.DIRT)))))));
 
         register(context, JUNGLE_TREE_ROOTED_DIRT_2, Feature.SIMPLE_RANDOM_SELECTOR, new SimpleRandomFeatureConfiguration(
                 HolderSet.direct(PlacementUtils.inlinePlaced(
@@ -61,9 +61,9 @@ public class RootsConfiguredFeatures {
                         RandomOffsetPlacement.of(UniformInt.of(-1,2), UniformInt.of(-2,2)),
                         BlockPredicateFilter.forPredicate(
                                 BlockPredicate.allOf(
-                                BlockPredicate.matchesTag(ModTags.Blocks.DIRT),
+                                BlockPredicate.matchesTag(TagLoader.Blocks.DIRT),
                                 BlockPredicate.not(
-                                        BlockPredicate.matchesTag(new Vec3i(0,1,0), ModTags.Blocks.DIRT))))
+                                        BlockPredicate.matchesTag(new Vec3i(0,1,0), TagLoader.Blocks.DIRT))))
                 ))
         ));
 
@@ -88,7 +88,7 @@ public class RootsConfiguredFeatures {
                                                 BlockPredicate.replaceable(),
                                                 BlockPredicate.anyOf(
                                                         BlockPredicate.matchesTag(new Vec3i(0, -1, 0),
-                                                                ModTags.Blocks.DIRT),
+                                                                TagLoader.Blocks.DIRT),
                                                         BlockPredicate.matchesBlocks(new Vec3i(0, -1, 0),
                                                                 Blocks.JUNGLE_WOOD)
                                                 )
@@ -120,7 +120,7 @@ public class RootsConfiguredFeatures {
                                 Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(Blocks.JUNGLE_WOOD)),
                                 BlockPredicateFilter.forPredicate(BlockPredicate.allOf(BlockPredicate.replaceable(),
                                         BlockPredicate.anyOf(BlockPredicate.matchesTag(
-                                                        new Vec3i(0, -1, 0), ModTags.Blocks.DIRT),
+                                                        new Vec3i(0, -1, 0), TagLoader.Blocks.DIRT),
                                                 BlockPredicate.matchesBlocks(
                                                         new Vec3i(0, -1, 0), Blocks.JUNGLE_WOOD))
                                         )))),
@@ -140,10 +140,10 @@ public class RootsConfiguredFeatures {
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name){
-        return ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(Edumia.MOD_ID, "tree/roots/" +  name));
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "tree/roots/" +  name));
     }
 
-    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstapContext< ConfiguredFeature<?, ?>> context,
+    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstrapContext< ConfiguredFeature<?, ?>> context,
                                                                                           ResourceKey<ConfiguredFeature<?, ?>> key, F feature,
                                                                                           FC configuration){
         context.register(key, new ConfiguredFeature<>(feature, configuration));

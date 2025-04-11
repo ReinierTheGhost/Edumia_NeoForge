@@ -8,7 +8,7 @@ import com.legends.edumia.world.trees.trunkplacers.CanopyTrunkPlacer;
 import com.legends.edumia.world.trees.trunkplacers.EdumiaGiantTrunkPlacer;
 import com.legends.edumia.world.trees.trunkplacers.PartyTreeTrunkPlacer;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.valueproviders.ConstantInt;
@@ -24,7 +24,7 @@ public class BeechTreeConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> GIGA_BEECH_KEY = registerKey("giga_beech_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> BEECH_KEY = registerKey("beech_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> BIG_BEECH_KEY = registerKey("big_beech_tree");
-    public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context){
+    public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context){
         register(context, GIGA_BEECH_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(WoodBlockSets.BEECH.log().get()),
                 new EdumiaGiantTrunkPlacer(20, 20, 0, WoodBlockSets.BEECH.wood().get().defaultBlockState(),
@@ -57,10 +57,10 @@ public class BeechTreeConfiguredFeatures {
                 new TwoLayersFeatureSize(1, 0, 2)).ignoreVines().build());
     }
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name){
-        return ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(Edumia.MOD_ID,"tree/beech/" + name));
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID,"tree/beech/" + name));
     }
 
-    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstapContext< ConfiguredFeature<?, ?>> context,
+    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstrapContext< ConfiguredFeature<?, ?>> context,
                                                                                           ResourceKey<ConfiguredFeature<?, ?>> key, F feature,
                                                                                           FC configuration){
         context.register(key, new ConfiguredFeature<>(feature, configuration));

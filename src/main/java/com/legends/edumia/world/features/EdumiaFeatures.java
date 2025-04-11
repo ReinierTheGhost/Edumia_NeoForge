@@ -13,6 +13,7 @@ import com.legends.edumia.world.features.treesnbt.TreeFromStructureNBTFeature;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.*;
@@ -22,6 +23,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.TreeFeature;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 
@@ -29,11 +31,11 @@ import java.util.function.Supplier;
 
 public class EdumiaFeatures {
 
-    public static final DeferredRegister<Feature<?>> FEATURES = DeferredRegister.create(Registries.FEATURE, Edumia.MOD_ID);
-    public static final RegistryObject<BoulderFeature> BOULDER = register("boulder", () -> new BoulderFeature(BouldersFeatureConfig.CODEC));
-    public static final RegistryObject<CrystalFeature> CRYSTAL = register("crystal", () -> new CrystalFeature(CrystalFeatureConfig.CODEC));
-    public static final RegistryObject<ReedsFeature> REEDS = register("reeds", () -> new ReedsFeature(ReedsFeatureConfig.CODEC));
-    public static final RegistryObject<TreeFromStructureNBTFeature> TREE_FROM_NBT = register("tree_from_nbt",
+    public static final DeferredRegister<Feature<?>> FEATURES = DeferredRegister.create(BuiltInRegistries.FEATURE, Edumia.MOD_ID);
+    public static final DeferredHolder<Feature<?>, BoulderFeature> BOULDER = FEATURES.register("boulder", () -> new BoulderFeature(BouldersFeatureConfig.CODEC));
+    public static final DeferredHolder<Feature<?>, CrystalFeature> CRYSTAL = FEATURES.register("crystal", () -> new CrystalFeature(CrystalFeatureConfig.CODEC));
+    public static final DeferredHolder<Feature<?>, ReedsFeature> REEDS = FEATURES.register("reeds", () -> new ReedsFeature(ReedsFeatureConfig.CODEC));
+    public static final DeferredHolder<Feature<?>, TreeFromStructureNBTFeature> TREE_FROM_NBT = FEATURES.register("tree_from_nbt",
             () -> new TreeFromStructureNBTFeature(TreeFromStructureNBTConfig.CODEC));
 
 
@@ -105,9 +107,5 @@ public class EdumiaFeatures {
 
     public static void register(IEventBus eventBus) {
         FEATURES.register(eventBus);
-    }
-
-    private static <T extends Feature<?>> Registry<T> register(final String name, final Supplier<T> sup) {
-        return FEATURES.register(name, sup);
     }
 }

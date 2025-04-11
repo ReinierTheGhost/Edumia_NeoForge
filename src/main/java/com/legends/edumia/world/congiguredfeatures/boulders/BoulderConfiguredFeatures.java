@@ -5,7 +5,6 @@ import com.legends.edumia.blocks.blocksets.StoneSets;
 import com.legends.edumia.world.features.EdumiaFeatures;
 import com.legends.edumia.world.features.bouders.BouldersFeatureConfig;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;

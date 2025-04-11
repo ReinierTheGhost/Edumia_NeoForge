@@ -3,12 +3,14 @@ package com.legends.edumia.world.congiguredfeatures.trees;
 import com.google.common.collect.ImmutableList;
 import com.legends.edumia.Edumia;
 import com.legends.edumia.blocks.blocksets.WoodBlockSets;
+import com.legends.edumia.core.TagLoader;
 import com.legends.edumia.utils.ModTags;
 import com.legends.edumia.world.features.EdumiaFeatures;
 import com.legends.edumia.world.features.treesnbt.TreeFromStructureNBTConfig;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.valueproviders.ConstantInt;
@@ -34,7 +36,7 @@ public class PalmConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> GROUP_PALM_1 = registerKey("group_palm_1");
 
-    public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context){
+    public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context){
         HolderGetter<ConfiguredFeature<?, ?>> holdergetter = context.lookup(Registries.CONFIGURED_FEATURE);
         HolderGetter<PlacedFeature> registryEntryLookup = context.lookup(Registries.PLACED_FEATURE);
 
@@ -46,7 +48,7 @@ public class PalmConfiguredFeatures {
                 BlockStateProvider.simple(WoodBlockSets.PALM.leaves().get().defaultBlockState().setValue(LeavesBlock.PERSISTENT, true)),
                 Set.of(WoodBlockSets.PALM.wood().get()),
                 WoodBlockSets.PALM.leaves().get(),
-                ModTags.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(),
+                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(),
                 Set.of(WoodBlockSets.PALM.leaves().get())
         ));
 
@@ -58,7 +60,7 @@ public class PalmConfiguredFeatures {
                 BlockStateProvider.simple(WoodBlockSets.PALM.leaves().get().defaultBlockState().setValue(LeavesBlock.PERSISTENT, true)),
                 Set.of(WoodBlockSets.PALM.wood().get()),
                 WoodBlockSets.PALM.leaves().get(),
-                ModTags.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(),
+                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(),
                 Set.of(WoodBlockSets.PALM.leaves().get())
         ));
 
@@ -70,7 +72,7 @@ public class PalmConfiguredFeatures {
                 BlockStateProvider.simple(WoodBlockSets.PALM.leaves().get().defaultBlockState().setValue(LeavesBlock.PERSISTENT, true)),
                 Set.of(WoodBlockSets.PALM.wood().get()),
                 WoodBlockSets.PALM.leaves().get(),
-                ModTags.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(),
+                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(),
                 Set.of(WoodBlockSets.PALM.leaves().get())
         ));
 
@@ -82,7 +84,7 @@ public class PalmConfiguredFeatures {
                 BlockStateProvider.simple(WoodBlockSets.PALM.leaves().get().defaultBlockState().setValue(LeavesBlock.PERSISTENT, true)),
                 Set.of(WoodBlockSets.PALM.wood().get()),
                 WoodBlockSets.PALM.leaves().get(),
-                ModTags.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(),
+                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(),
                 Set.of(WoodBlockSets.PALM.leaves().get())
         ));
 
@@ -94,7 +96,7 @@ public class PalmConfiguredFeatures {
                 BlockStateProvider.simple(WoodBlockSets.PALM.leaves().get().defaultBlockState().setValue(LeavesBlock.PERSISTENT, true)),
                 Set.of(WoodBlockSets.PALM.wood().get()),
                 WoodBlockSets.PALM.leaves().get(),
-                ModTags.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(),
+                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(),
                 Set.of(WoodBlockSets.PALM.leaves().get())
         ));
 
@@ -106,7 +108,7 @@ public class PalmConfiguredFeatures {
                 BlockStateProvider.simple(WoodBlockSets.PALM.leaves().get().defaultBlockState().setValue(LeavesBlock.PERSISTENT, true)),
                 Set.of(WoodBlockSets.PALM.wood().get()),
                 WoodBlockSets.PALM.leaves().get(),
-                ModTags.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(),
+                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(),
                 Set.of(WoodBlockSets.PALM.leaves().get())
         ));
 
@@ -118,7 +120,7 @@ public class PalmConfiguredFeatures {
                 BlockStateProvider.simple(WoodBlockSets.PALM.leaves().get().defaultBlockState().setValue(LeavesBlock.PERSISTENT, true)),
                 Set.of(WoodBlockSets.PALM.wood().get()),
                 WoodBlockSets.PALM.leaves().get(),
-                ModTags.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(),
+                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(),
                 Set.of(WoodBlockSets.PALM.leaves().get())
         ));
 
@@ -130,7 +132,7 @@ public class PalmConfiguredFeatures {
                 BlockStateProvider.simple(WoodBlockSets.PALM.leaves().get().defaultBlockState().setValue(LeavesBlock.PERSISTENT, true)),
                 Set.of(WoodBlockSets.PALM.wood().get()),
                 WoodBlockSets.PALM.leaves().get(),
-                ModTags.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(),
+                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(),
                 Set.of(WoodBlockSets.PALM.leaves().get())
         ));
 
@@ -142,16 +144,16 @@ public class PalmConfiguredFeatures {
                 BlockStateProvider.simple(WoodBlockSets.PALM.leaves().get().defaultBlockState().setValue(LeavesBlock.PERSISTENT, true)),
                 Set.of(WoodBlockSets.PALM.wood().get()),
                 WoodBlockSets.PALM.leaves().get(),
-                ModTags.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(),
+                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(),
                 Set.of(WoodBlockSets.PALM.leaves().get())
         ));
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name){
-        return ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(Edumia.MOD_ID, "tree/tropical/palm_tree/" + name));
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "tree/tropical/palm_tree/" + name));
     }
 
-    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstapContext< ConfiguredFeature<?, ?>> context,
+    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstrapContext< ConfiguredFeature<?, ?>> context,
                                                                                           ResourceKey<ConfiguredFeature<?, ?>> key, F feature,
                                                                                           FC configuration){
         context.register(key, new ConfiguredFeature<>(feature, configuration));

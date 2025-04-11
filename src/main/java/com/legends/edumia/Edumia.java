@@ -4,6 +4,7 @@ import com.legends.edumia.blocks.blocksets.*;
 import com.legends.edumia.core.BlockLoader;
 import com.legends.edumia.core.CreativeTabLoader;
 import com.legends.edumia.core.ItemLoader;
+import com.legends.edumia.world.features.EdumiaFeatures;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
@@ -32,6 +33,10 @@ public class Edumia
     private static final Logger LOGGER = LogUtils.getLogger();
     public static final boolean IS_DEBUG = true;
 
+    public static final String MOD_VERSION = "1.1.0-1.21.1-beta";
+
+    public static final boolean ENABLE_INSTANT_BOOTING = false;
+
     public Edumia(IEventBus modEventBus, ModContainer modContainer)
     {
         modEventBus.addListener(this::commonSetup);
@@ -55,8 +60,9 @@ public class Edumia
         SandBlockSets.register(modEventBus);
         FlowerBlockSets.register(modEventBus);
         GrassBlockSets.register(modEventBus);
-
+        EdumiaFeatures.register(modEventBus);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)

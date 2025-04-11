@@ -11,7 +11,7 @@ import com.legends.edumia.world.congiguredfeatures.biomes.OgreBiomeConfiguredFea
 import com.legends.edumia.world.congiguredfeatures.ocean.ReefConfiguredFeatures;
 import com.legends.edumia.world.congiguredfeatures.trees.*;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
@@ -28,7 +28,7 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> RED_SAND = registerKey("red_sand");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SAND = registerKey("sand");
 
-    public static void boostrap(BootstapContext<ConfiguredFeature<?, ?>> context){
+    public static void boostrap(BootstrapContext<ConfiguredFeature<?, ?>> context){
         register(context, NOTING, Feature.NO_OP, new NoneFeatureConfiguration());
         register(context, STONE, Feature.SIMPLE_BLOCK,
                 new SimpleBlockConfiguration(BlockStateProvider.simple(Blocks.STONE)));
@@ -65,10 +65,10 @@ public class ModConfiguredFeatures {
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name){
-        return ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(Edumia.MOD_ID, name));
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, name));
     }
 
-    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstapContext< ConfiguredFeature<?, ?>> context,
+    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstrapContext< ConfiguredFeature<?, ?>> context,
                                                                                           ResourceKey<ConfiguredFeature<?, ?>> key, F feature,
                                                                                           FC configuration){
         context.register(key, new ConfiguredFeature<>(feature, configuration));

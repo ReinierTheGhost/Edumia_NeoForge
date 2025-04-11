@@ -3,8 +3,8 @@ package com.legends.edumia.world.map;
 import com.legends.edumia.utils.resources.FileUtils;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraftforge.event.server.ServerStartedEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.neoforge.event.server.ServerStartedEvent;
 import org.joml.Vector2i;
 
 import java.awt.image.BufferedImage;
