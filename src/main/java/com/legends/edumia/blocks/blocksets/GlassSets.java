@@ -70,8 +70,7 @@ public class GlassSets {
             block = registerBlock(name, () -> new StainedGlassBlock(color,
                     BlockBehaviour.Properties.of()
                             .instrument(NoteBlockInstrument.HAT).strength(0.3F).sound(SoundType.GLASS).noOcclusion()
-                            .isValidSpawn(Blocks::never).isRedstoneConductor(Blocks::never).isSuffocating(Blocks::never)
-                            .isViewBlocking(Blocks::never)));
+                            .isValidSpawn(Blocks::never)));
 
             pane = registerBlock(name + "_pane", () -> new StainedGlassPaneBlock(color,
                     BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.HAT).strength(0.3f).sound(SoundType.GLASS)
@@ -79,8 +78,7 @@ public class GlassSets {
     } else{
             block = registerBlock(name, () -> new TransparentBlock(BlockBehaviour.Properties.of()
                     .instrument(NoteBlockInstrument.HAT).strength(0.3F).sound(SoundType.GLASS)
-                    .noOcclusion().isValidSpawn(Blocks::never).isRedstoneConductor(Blocks::never).isSuffocating(Blocks::never)
-                    .isViewBlocking(Blocks::never)));
+                    .noOcclusion().isValidSpawn(Blocks::never)));
 
             pane = registerBlock(name + "_pane", () -> new IronBarsBlock(
                     BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.HAT).strength(0.3f).sound(SoundType.GLASS)

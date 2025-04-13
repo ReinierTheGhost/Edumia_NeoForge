@@ -1,8 +1,7 @@
 {
   "required": true,
   "package": "com.legends.edumia.mixin",
-  "compatibilityLevel": "JAVA_8",
-  "refmap": "edumia.refmap.json",
+  "compatibilityLevel": "JAVA_21",
   "mixins": [
     "ChunkGeneratorMixin",
     "PigEntityMixin",
@@ -17,5 +16,5 @@
   "injectors": {
     "defaultRequire": 1
   },
-  "minVersion": "0.8"
+  "minVersion": "0.8.5"
 }

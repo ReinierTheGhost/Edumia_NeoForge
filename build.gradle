@@ -116,6 +116,10 @@ configurations {
     runtimeClasspath.extendsFrom localRuntime
 }
 
+jarJar.enabled
+tasks.named('jarJar') {
+    'all'
+}
 dependencies {
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
@@ -124,9 +128,13 @@ dependencies {
     // We add the full version to localRuntime, not runtimeOnly, so that we do not publish a dependency on it
     // localRuntime "mezz.jei:jei-${mc_version}-neoforge:${jei_version}"
 
-//    implementation "curse.maven:resourceful-lib-570073:5973188"
-//    implementation "curse.maven:athena-841890:5629395"
-//    implementation "curse.maven:chipped-456956:5813117"
+    implementation "curse.maven:resourceful-lib-570073:5973188"
+    implementation "curse.maven:athena-841890:5629395"
+    implementation "curse.maven:chipped-456956:5813117"
+
+    jarJar(group: "curse.maven", name: "resourceful-lib-570073", version: "5973188")
+    jarJar(group: "curse.maven", name: "athena-841890", version: "5629395")
+    jarJar(group: "curse.maven", name: "chipped-456956", version: "5813117")
 //    implementation "curse.maven:dynamictrees-252818:6360173"
 
     // Example mod dependency using a mod jar from ./libs with a flat dir repository
@@ -197,3 +205,7 @@ idea {
         downloadJavadoc = true
     }
 }
+
+
+
+
