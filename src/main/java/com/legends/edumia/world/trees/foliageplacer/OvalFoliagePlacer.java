@@ -2,6 +2,7 @@ package com.legends.edumia.world.trees.foliageplacer;
 
 import com.legends.edumia.world.trees.EdumiaFoliagePlacerTypes;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
@@ -27,7 +28,7 @@ public class OvalFoliagePlacer extends FoliagePlacer {
     protected final ArrayList<BlockState> leaves;
     protected final float extraSize;
 
-    public static final Codec<OvalFoliagePlacer> CODEC = RecordCodecBuilder.create((instance) -> instance.group(
+    public static final MapCodec<OvalFoliagePlacer> CODEC = RecordCodecBuilder.mapCodec((instance) -> instance.group(
             Codec.intRange(0,16).fieldOf("baseHeight").forGetter((trunkPlacer) -> {
                 return trunkPlacer.baseHeight;
             }), IntProvider.codec(-16, 16).fieldOf("offset").forGetter((trunkPlacer) -> {

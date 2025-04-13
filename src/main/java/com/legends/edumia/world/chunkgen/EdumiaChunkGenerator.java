@@ -58,7 +58,7 @@ public class EdumiaChunkGenerator extends ChunkGenerator {
     private static final int CAVE_STRETCH_V = 50;
 
     HolderGetter<Biome> biomeRegistry;
-    public static final Codec<EdumiaChunkGenerator> CODEC = RecordCodecBuilder.create((instance) ->
+    public static final MapCodec<EdumiaChunkGenerator> CODEC = RecordCodecBuilder.mapCodec((instance) ->
             instance.group(RegistryOps.retrieveGetter(Registries.BIOME))
                     .apply(instance, instance.stable(EdumiaChunkGenerator::new)));
 

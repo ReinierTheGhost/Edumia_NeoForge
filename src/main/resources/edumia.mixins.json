@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "package": "com.legends.edumia.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "edumia.refmap.json",
+  "mixins": [
+    "ChunkGeneratorMixin",
+    "PigEntityMixin",
+    "ServerLevelMixin",
+    "chunk.LevelChunkMixin",
+    "chunk.ChunkAccessMixin",
+    "chunk.ChunkSerializerMixin"
+  ],
+
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}

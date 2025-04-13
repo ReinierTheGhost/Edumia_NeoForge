@@ -5,7 +5,7 @@ import com.legends.edumia.world.congiguredfeatures.crystals.CrystalConfiguresFea
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -19,7 +19,7 @@ public class CrystalPlacedFeatures {
     public static final ResourceKey<PlacedFeature> ELVEN_CRYSTAL = registerKey("elven_crystal");
 
 
-    public static void bootstrap(BootstapContext<PlacedFeature> featureRegisterable) {
+    public static void bootstrap(BootstrapContext<PlacedFeature> featureRegisterable) {
         HolderGetter<ConfiguredFeature<?, ?>> registryEntryLookup = featureRegisterable.lookup(Registries.CONFIGURED_FEATURE);
 
 
@@ -28,10 +28,10 @@ public class CrystalPlacedFeatures {
                 HeightRangePlacement.uniform(VerticalAnchor.absolute(5), VerticalAnchor.absolute(41)), BiomeFilter.biome());
     }
     public static ResourceKey<PlacedFeature> registerKey(String name) {
-        return ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(Edumia.MOD_ID, "crystals/" + name));
+        return ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "crystals/" + name));
     }
 
-    private static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key,
+    private static void register(BootstrapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key,
                                  Holder<ConfiguredFeature<?, ?>> configuration, List<PlacementModifier> modifiers) {
         context.register(key, new PlacedFeature(configuration, List.copyOf(modifiers)));
     }

@@ -2,6 +2,7 @@ package com.legends.edumia.world.trees.foliageplacer;
 
 import com.legends.edumia.world.trees.EdumiaFoliagePlacerTypes;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -18,7 +19,7 @@ import javax.swing.tree.TreeNode;
 
 public class AspenFoliagePlacer extends FoliagePlacer {
 
-    public static final Codec<AspenFoliagePlacer> CODEC = RecordCodecBuilder.create(instance ->
+    public static final MapCodec<AspenFoliagePlacer> CODEC = RecordCodecBuilder.mapCodec(instance ->
             foliagePlacerParts(instance).and(IntProvider.codec(0, 16).fieldOf("trunk_height")
                     .forGetter((foliage) -> foliage.trunkHeightSpread
                     )).apply(instance, AspenFoliagePlacer::new));

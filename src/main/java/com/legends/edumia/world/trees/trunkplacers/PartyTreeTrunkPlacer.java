@@ -2,6 +2,7 @@ package com.legends.edumia.world.trees.trunkplacers;
 
 import com.legends.edumia.world.trees.EdumiaTrunkPlacerTypes;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -22,7 +23,7 @@ import java.util.Optional;
 import java.util.function.BiConsumer;
 
 public class PartyTreeTrunkPlacer extends ExtendedTrunkPlacer {
-    public static final Codec<PartyTreeTrunkPlacer> CODEC = RecordCodecBuilder.create((instance) ->
+    public static final MapCodec<PartyTreeTrunkPlacer> CODEC = RecordCodecBuilder.mapCodec((instance) ->
             baseCodecWithWood(instance).apply(instance, PartyTreeTrunkPlacer::new));
 
     private PartyTreeTrunkPlacer(int baseHeight, int heightRandA, int heightRandB, Optional<BlockStateProvider> woodProvider,

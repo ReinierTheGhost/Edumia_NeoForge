@@ -3,6 +3,7 @@ package com.legends.edumia.world.trees.trunkplacers;
 import com.google.common.collect.Lists;
 import com.legends.edumia.world.trees.EdumiaTrunkPlacerTypes;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -20,7 +21,7 @@ import java.util.function.BiConsumer;
 
 public class CrossTrunkPlacer extends TrunkPlacer
 {
-    public static final Codec<CrossTrunkPlacer> CODEC = RecordCodecBuilder.create(instance ->
+    public static final MapCodec<CrossTrunkPlacer> CODEC = RecordCodecBuilder.mapCodec(instance ->
             trunkPlacerParts(instance).apply(instance, CrossTrunkPlacer::new));
 
 

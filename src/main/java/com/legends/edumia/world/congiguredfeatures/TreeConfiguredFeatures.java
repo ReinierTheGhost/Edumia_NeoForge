@@ -1,13 +1,10 @@
 package com.legends.edumia.world.congiguredfeatures;
 
-import biomesoplenty.init.ModTags;
+
 import com.google.common.collect.ImmutableList;
 import com.legends.edumia.Edumia;
 import com.legends.edumia.blocks.blocksets.ModNatureBlocks;
 import com.legends.edumia.blocks.blocksets.WoodBlockSets;
-import com.legends.edumia.core.TagLoader;
-import com.legends.edumia.world.features.EdumiaFeatures;
-import com.legends.edumia.world.features.treesnbt.TreeFromStructureNBTConfig;
 import com.legends.edumia.world.trees.foliageplacer.*;
 import com.legends.edumia.world.trees.treedecorators.PineBranchDecorator;
 import com.legends.edumia.world.trees.trunkplacers.*;
@@ -17,7 +14,6 @@ import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.random.SimpleWeightedRandomList;
-import net.minecraft.util.valueproviders.BiasedToBottomInt;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Blocks;

@@ -2,6 +2,7 @@ package com.legends.edumia.world.trees.treedecorators;
 
 import com.legends.edumia.world.trees.EdumiaTreeDecoratorTypes;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.Util;
 import net.minecraft.core.BlockPos;
@@ -12,7 +13,7 @@ import net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecoratorTy
 
 
 public class HangingBranchDecorator extends TreeDecorator {
-    public static final Codec<HangingBranchDecorator> CODEC = RecordCodecBuilder.create(instance ->
+    public static final MapCodec<HangingBranchDecorator> CODEC = RecordCodecBuilder.mapCodec(instance ->
             instance.group(Codec.floatRange(0.0F, 1.0F).fieldOf("probability").forGetter(decorator -> decorator.probability),
                             BlockStateProvider.CODEC.fieldOf("head_provider").forGetter(decorator -> decorator.headProvider),
                             BlockStateProvider.CODEC.fieldOf("body_provider").forGetter(decorator -> decorator.bodyProvider))

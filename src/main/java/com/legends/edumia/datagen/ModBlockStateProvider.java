@@ -171,6 +171,10 @@ public class ModBlockStateProvider extends ModModelProvider {
             blockItem(block.slab());
         }
 
+        for (Block block : SimpleSaplingModel.blocks){
+            crossBlock(block);
+        }
+
         for (Block block : SimpleFlowerModel.blocks){
             crossBlock(block);
         }

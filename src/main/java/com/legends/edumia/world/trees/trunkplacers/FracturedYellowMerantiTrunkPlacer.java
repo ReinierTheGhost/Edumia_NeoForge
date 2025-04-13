@@ -2,6 +2,7 @@ package com.legends.edumia.world.trees.trunkplacers;
 
 import com.legends.edumia.world.trees.EdumiaTrunkPlacerTypes;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -21,7 +22,7 @@ import java.util.function.BiConsumer;
 import java.util.function.Function;
 
 public class FracturedYellowMerantiTrunkPlacer extends TrunkPlacer {
-    public static final Codec<FracturedYellowMerantiTrunkPlacer> CODEC = RecordCodecBuilder.create (objectInstance ->
+    public static final MapCodec<FracturedYellowMerantiTrunkPlacer> CODEC = RecordCodecBuilder.mapCodec (objectInstance ->
         trunkPlacerParts (objectInstance).apply (objectInstance, FracturedYellowMerantiTrunkPlacer::new));
 
     public FracturedYellowMerantiTrunkPlacer(int baseHeight, int firstRandomHeight, int secondRandomHeight) {

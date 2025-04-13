@@ -1,6 +1,5 @@
 package com.legends.edumia.world.congiguredfeatures.trees;
 
-import biomesoplenty.init.ModTags;
 import com.legends.edumia.Edumia;
 import com.legends.edumia.core.TagLoader;
 import net.minecraft.core.HolderGetter;

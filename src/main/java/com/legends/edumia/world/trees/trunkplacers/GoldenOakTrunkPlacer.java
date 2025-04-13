@@ -3,6 +3,7 @@ package com.legends.edumia.world.trees.trunkplacers;
 import com.google.common.collect.ImmutableList;
 import com.legends.edumia.world.trees.EdumiaTrunkPlacerTypes;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
@@ -18,7 +19,7 @@ import java.util.List;
 import java.util.function.BiConsumer;
 
 public class GoldenOakTrunkPlacer extends TrunkPlacer {
-    public static final Codec<GoldenOakTrunkPlacer> CODEC = RecordCodecBuilder.create((instance) ->
+    public static final MapCodec<GoldenOakTrunkPlacer> CODEC = RecordCodecBuilder.mapCodec((instance) ->
             trunkPlacerParts(instance).apply(instance, GoldenOakTrunkPlacer::new));
 
     public GoldenOakTrunkPlacer(int height, int heightRandA, int heightRandB) {

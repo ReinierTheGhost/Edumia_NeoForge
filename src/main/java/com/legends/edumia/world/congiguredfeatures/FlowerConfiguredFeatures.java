@@ -162,15 +162,15 @@ public class FlowerConfiguredFeatures {
 
         register(context, YELLOW_IRIS_FLOWER_KEY, Feature.FLOWER, new RandomPatchConfiguration(8, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(
-                        SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.YELLOW_IRIS.flower().get().defaultBlockState(), 1))))));
+                        SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.YELLOW_IRIS.tallFlower().get().defaultBlockState(), 1))))));
 
         register(context, DESERT_FLAME_FLOWER_KEY, Feature.FLOWER, new RandomPatchConfiguration(8, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(
-                        SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.FLAME_OF_THE_SOUTH.flower().get().defaultBlockState(), 1))))));
+                        SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.FLAME_OF_THE_SOUTH.tallFlower().get().defaultBlockState(), 1))))));
 
         register(context, HIBISCUS_FLOWER_KEY, Feature.FLOWER, new RandomPatchConfiguration(8, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(
-                        SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.HIBISCUS.flower().get().defaultBlockState(), 1))))));
+                        SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.HIBISCUS.tallFlower().get().defaultBlockState(), 1))))));
     }
 
 

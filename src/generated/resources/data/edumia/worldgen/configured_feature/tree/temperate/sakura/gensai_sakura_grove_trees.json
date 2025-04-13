@@ -1,0 +1,44 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "default": "edumia:noting",
+    "features": [
+      {
+        "chance": 0.02,
+        "feature": "edumia:tree/temperate/sakura/sakura_tree_big"
+      },
+      {
+        "chance": 0.08,
+        "feature": "edumia:tree/temperate/sakura/sakura_tree_medium"
+      },
+      {
+        "chance": 0.4,
+        "feature": "edumia:tree/temperate/sakura/sakura_bush"
+      },
+      {
+        "chance": 0.3,
+        "feature": "edumia:tree/temperate/azalea/azalea_bush"
+      },
+      {
+        "chance": 0.06,
+        "feature": "edumia:tree/temperate/ceder/ceder_tree"
+      },
+      {
+        "chance": 0.04,
+        "feature": "edumia:tree/temperate/ceder/large_ceder_tree"
+      },
+      {
+        "chance": 0.07,
+        "feature": "edumia:tree/temperate/cypress/cypress_tree"
+      },
+      {
+        "chance": 0.07,
+        "feature": "edumia:tree/temperate/aspen/aspen_tree"
+      },
+      {
+        "chance": 0.04,
+        "feature": "edumia:tree/temperate/aspen/aspen_2_tree"
+      }
+    ]
+  }
+}

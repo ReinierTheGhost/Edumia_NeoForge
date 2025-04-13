@@ -1,0 +1,59 @@
+{
+  "type": "edumia:tree_from_nbt",
+  "config": {
+    "base_location": "edumia:features/trees/mahogany/mahogany_trunk_2",
+    "can_grow_on_filter": {
+      "type": "minecraft:matching_block_tag",
+      "tag": "edumia:mahogany_sapling"
+    },
+    "can_leaves_place_filter": {
+      "type": "minecraft:replaceable"
+    },
+    "canopy_location": "edumia:features/trees/mahogany/mahogany_canopy_2",
+    "decorators": [
+      {
+        "type": "minecraft:leave_vine",
+        "probability": 0.5
+      },
+      {
+        "type": "minecraft:trunk_vine"
+      }
+    ],
+    "height": 8,
+    "leaves_provider": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "edumia:mahogany_leaves",
+        "Properties": {
+          "distance": "7",
+          "persistent": "true",
+          "waterlogged": "false"
+        }
+      }
+    },
+    "leaves_target": [
+      "edumia:mahogany_leaves"
+    ],
+    "log_provider": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "edumia:mahogany_wood",
+        "Properties": {
+          "axis": "y"
+        }
+      }
+    },
+    "log_target": [
+      "edumia:mahogany_wood",
+      "edumia:mahogany_wood_stairs",
+      "edumia:mahogany_wood_fence",
+      "edumia:mahogany_wood_slab"
+    ],
+    "place_from_nbt": [
+      "edumia:mahogany_wood_stairs",
+      "edumia:mahogany_leaves",
+      "edumia:mahogany_wood_fence",
+      "edumia:mahogany_wood_slab"
+    ]
+  }
+}

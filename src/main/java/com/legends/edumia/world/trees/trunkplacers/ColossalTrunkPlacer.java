@@ -3,6 +3,7 @@ package com.legends.edumia.world.trees.trunkplacers;
 import com.google.common.collect.ImmutableList;
 import com.legends.edumia.world.trees.EdumiaTrunkPlacerTypes;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import java.util.function.BiConsumer;
 
 public class ColossalTrunkPlacer extends ExtendedTrunkPlacer{
-    public static final Codec<ColossalTrunkPlacer> CODEC = RecordCodecBuilder.create(instance ->
+    public static final MapCodec<ColossalTrunkPlacer> CODEC = RecordCodecBuilder.mapCodec(instance ->
             instance.group(Codec.intRange(0, 60).fieldOf("base_height").forGetter(placer -> placer.baseHeight),
                             Codec.intRange(0, 24).fieldOf("height_rand_a").forGetter(placer -> placer.heightRandA),
                             Codec.intRange(0, 24).fieldOf("height_rand_b").forGetter(placer -> placer.heightRandB))

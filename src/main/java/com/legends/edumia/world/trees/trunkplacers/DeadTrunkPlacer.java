@@ -3,6 +3,7 @@ package com.legends.edumia.world.trees.trunkplacers;
 import com.google.common.collect.ImmutableList;
 import com.legends.edumia.world.trees.EdumiaTrunkPlacerTypes;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -21,7 +22,7 @@ import java.util.Optional;
 import java.util.function.BiConsumer;
 
 public class DeadTrunkPlacer extends ExtendedTrunkPlacer {
-    public static final Codec<DeadTrunkPlacer> CODEC = RecordCodecBuilder.create((instance) ->
+    public static final MapCodec<DeadTrunkPlacer> CODEC = RecordCodecBuilder.mapCodec((instance) ->
             baseCodecWithWood(instance).apply(instance, DeadTrunkPlacer::new));
     protected DeadTrunkPlacer(int baseHeight, int heightRandA, int heightRandB, Optional<BlockStateProvider> woodProvider, Optional<BlockStateProvider> strippedLogProvider, Optional<BlockStateProvider> branchProvider) {
         super(baseHeight, heightRandA, heightRandB, woodProvider, strippedLogProvider, branchProvider);

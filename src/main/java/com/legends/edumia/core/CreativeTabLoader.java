@@ -151,6 +151,9 @@ public class CreativeTabLoader {
                                     if (set.leaves() != null){
                                         entries.accept(set.leaves().get());
                                     }
+                                    if (set.sapling() != null){
+                                        entries.accept(set.sapling().get());
+                                    }
                                 }
                                 entries.accept(ModNatureBlocks.GHOST_GUM_LEAVES.get());
                                 entries.accept(ModNatureBlocks.HOLLY_LEAVES.get());

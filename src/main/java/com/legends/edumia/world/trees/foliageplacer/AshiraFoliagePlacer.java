@@ -2,6 +2,7 @@ package com.legends.edumia.world.trees.foliageplacer;
 
 import com.legends.edumia.world.trees.EdumiaFoliagePlacerTypes;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
@@ -15,7 +16,7 @@ import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacerTy
 
 public class AshiraFoliagePlacer extends FoliagePlacer {
 
-    public static final Codec<AshiraFoliagePlacer> CODEC = Codec.unit(AshiraFoliagePlacer::new);
+    public static final MapCodec<AshiraFoliagePlacer> CODEC = MapCodec.unit(AshiraFoliagePlacer::new);
 
 
 

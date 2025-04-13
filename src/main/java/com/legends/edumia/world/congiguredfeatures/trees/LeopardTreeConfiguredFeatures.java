@@ -1,6 +1,6 @@
 package com.legends.edumia.world.congiguredfeatures.trees;
 
-import biomesoplenty.init.ModTags;
+
 import com.google.common.collect.ImmutableList;
 import com.legends.edumia.Edumia;
 import com.legends.edumia.blocks.blocksets.ModNatureBlocks;
@@ -33,61 +33,61 @@ public class LeopardTreeConfiguredFeatures {
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context){
         HolderGetter<ConfiguredFeature<?, ?>> holdergetter = context.lookup(Registries.CONFIGURED_FEATURE);
         HolderGetter<PlacedFeature> registryEntryLookup = context.lookup(Registries.PLACED_FEATURE);
-//        register(context, LEOPARD_1,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
-//                Edumia.location("features/trees/leopard/leopard_trunk_1"),
-//                Edumia.location("features/trees/leopard/leopard_canopy_1"),
-//                ConstantInt.of(8),
-//                BlockStateProvider.simple(WoodBlockSets.GHOST_GUM.wood().get()),
-//                BlockStateProvider.simple(ModNatureBlocks.GHOST_GUM_LEAVES.get().defaultBlockState().setValue(LeavesBlock.PERSISTENT, true)),
-//                Set.of(WoodBlockSets.GHOST_GUM.wood().get(), WoodBlockSets.GHOST_GUM.woodFence().get(), WoodBlockSets.GHOST_GUM.woodStairs().get(),
-//                        WoodBlockSets.GHOST_GUM.woodSlab().get()),
-//                ModNatureBlocks.GHOST_GUM_LEAVES.get(),
-//                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(),
-//                Set.of(WoodBlockSets.GHOST_GUM.log().get(), WoodBlockSets.GHOST_GUM.woodFence().get(), WoodBlockSets.GHOST_GUM.woodStairs().get(),
-//                        WoodBlockSets.GHOST_GUM.woodSlab().get(), ModNatureBlocks.GHOST_GUM_LEAVES.get())
-//        ));
-//
-//        register(context, LEOPARD_2,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
-//                Edumia.location("features/trees/leopard/leopard_trunk_2"),
-//                Edumia.location("features/trees/leopard/leopard_canopy_2"),
-//                ConstantInt.of(4),
-//                BlockStateProvider.simple(WoodBlockSets.GHOST_GUM.wood().get()),
-//                BlockStateProvider.simple(ModNatureBlocks.GHOST_GUM_LEAVES.get().defaultBlockState().setValue(LeavesBlock.PERSISTENT, true)),
-//                Set.of(WoodBlockSets.GHOST_GUM.wood().get(), WoodBlockSets.GHOST_GUM.woodFence().get(), WoodBlockSets.GHOST_GUM.woodStairs().get(),
-//                        WoodBlockSets.GHOST_GUM.woodSlab().get()),
-//                ModNatureBlocks.GHOST_GUM_LEAVES.get(),
-//                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(),
-//                Set.of(WoodBlockSets.GHOST_GUM.log().get(), WoodBlockSets.GHOST_GUM.woodFence().get(), WoodBlockSets.GHOST_GUM.woodStairs().get(),
-//                        WoodBlockSets.GHOST_GUM.woodSlab().get(), ModNatureBlocks.GHOST_GUM_LEAVES.get())
-//        ));
-//
-//        register(context, LEOPARD_3,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
-//                Edumia.location("features/trees/leopard/leopard_trunk_3"),
-//                Edumia.location("features/trees/leopard/leopard_canopy_3"),
-//                ConstantInt.of(5),
-//                BlockStateProvider.simple(WoodBlockSets.GHOST_GUM.wood().get()),
-//                BlockStateProvider.simple(ModNatureBlocks.GHOST_GUM_LEAVES.get().defaultBlockState().setValue(LeavesBlock.PERSISTENT, true)),
-//                Set.of(WoodBlockSets.GHOST_GUM.wood().get(), WoodBlockSets.GHOST_GUM.woodFence().get(), WoodBlockSets.GHOST_GUM.woodStairs().get(),
-//                        WoodBlockSets.GHOST_GUM.woodSlab().get()),
-//                ModNatureBlocks.GHOST_GUM_LEAVES.get(),
-//                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(),
-//                Set.of(WoodBlockSets.GHOST_GUM.log().get(), WoodBlockSets.GHOST_GUM.woodFence().get(), WoodBlockSets.GHOST_GUM.woodStairs().get(),
-//                        WoodBlockSets.GHOST_GUM.woodSlab().get(), ModNatureBlocks.GHOST_GUM_LEAVES.get())
-//        ));
-//
-//        register(context, LEOPARD_4,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
-//                Edumia.location("features/trees/leopard/leopard_trunk_4"),
-//                Edumia.location("features/trees/leopard/leopard_canopy_4"),
-//                ConstantInt.of(4),
-//                BlockStateProvider.simple(WoodBlockSets.GHOST_GUM.wood().get()),
-//                BlockStateProvider.simple(ModNatureBlocks.GHOST_GUM_LEAVES.get().defaultBlockState().setValue(LeavesBlock.PERSISTENT, true)),
-//                Set.of(WoodBlockSets.GHOST_GUM.wood().get(), WoodBlockSets.GHOST_GUM.woodFence().get(), WoodBlockSets.GHOST_GUM.woodStairs().get(),
-//                        WoodBlockSets.GHOST_GUM.woodSlab().get()),
-//                ModNatureBlocks.GHOST_GUM_LEAVES.get(),
-//                ModTags.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(),
-//                Set.of(WoodBlockSets.GHOST_GUM.log().get(), WoodBlockSets.GHOST_GUM.woodFence().get(), WoodBlockSets.GHOST_GUM.woodStairs().get(),
-//                        WoodBlockSets.GHOST_GUM.woodSlab().get(), ModNatureBlocks.GHOST_GUM_LEAVES.get())
-//        ));
+        register(context, LEOPARD_1,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+                Edumia.location("features/trees/leopard/leopard_trunk_1"),
+                Edumia.location("features/trees/leopard/leopard_canopy_1"),
+                ConstantInt.of(8),
+                BlockStateProvider.simple(WoodBlockSets.GHOST_GUM.wood().get()),
+                BlockStateProvider.simple(ModNatureBlocks.GHOST_GUM_LEAVES.get().defaultBlockState().setValue(LeavesBlock.PERSISTENT, true)),
+                Set.of(WoodBlockSets.GHOST_GUM.wood().get(), WoodBlockSets.GHOST_GUM.woodFence().get(), WoodBlockSets.GHOST_GUM.woodStairs().get(),
+                        WoodBlockSets.GHOST_GUM.woodSlab().get()),
+                ModNatureBlocks.GHOST_GUM_LEAVES.get(),
+                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(),
+                Set.of(WoodBlockSets.GHOST_GUM.log().get(), WoodBlockSets.GHOST_GUM.woodFence().get(), WoodBlockSets.GHOST_GUM.woodStairs().get(),
+                        WoodBlockSets.GHOST_GUM.woodSlab().get(), ModNatureBlocks.GHOST_GUM_LEAVES.get())
+        ));
+
+        register(context, LEOPARD_2,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+                Edumia.location("features/trees/leopard/leopard_trunk_2"),
+                Edumia.location("features/trees/leopard/leopard_canopy_2"),
+                ConstantInt.of(4),
+                BlockStateProvider.simple(WoodBlockSets.GHOST_GUM.wood().get()),
+                BlockStateProvider.simple(ModNatureBlocks.GHOST_GUM_LEAVES.get().defaultBlockState().setValue(LeavesBlock.PERSISTENT, true)),
+                Set.of(WoodBlockSets.GHOST_GUM.wood().get(), WoodBlockSets.GHOST_GUM.woodFence().get(), WoodBlockSets.GHOST_GUM.woodStairs().get(),
+                        WoodBlockSets.GHOST_GUM.woodSlab().get()),
+                ModNatureBlocks.GHOST_GUM_LEAVES.get(),
+                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(),
+                Set.of(WoodBlockSets.GHOST_GUM.log().get(), WoodBlockSets.GHOST_GUM.woodFence().get(), WoodBlockSets.GHOST_GUM.woodStairs().get(),
+                        WoodBlockSets.GHOST_GUM.woodSlab().get(), ModNatureBlocks.GHOST_GUM_LEAVES.get())
+        ));
+
+        register(context, LEOPARD_3,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+                Edumia.location("features/trees/leopard/leopard_trunk_3"),
+                Edumia.location("features/trees/leopard/leopard_canopy_3"),
+                ConstantInt.of(5),
+                BlockStateProvider.simple(WoodBlockSets.GHOST_GUM.wood().get()),
+                BlockStateProvider.simple(ModNatureBlocks.GHOST_GUM_LEAVES.get().defaultBlockState().setValue(LeavesBlock.PERSISTENT, true)),
+                Set.of(WoodBlockSets.GHOST_GUM.wood().get(), WoodBlockSets.GHOST_GUM.woodFence().get(), WoodBlockSets.GHOST_GUM.woodStairs().get(),
+                        WoodBlockSets.GHOST_GUM.woodSlab().get()),
+                ModNatureBlocks.GHOST_GUM_LEAVES.get(),
+                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(),
+                Set.of(WoodBlockSets.GHOST_GUM.log().get(), WoodBlockSets.GHOST_GUM.woodFence().get(), WoodBlockSets.GHOST_GUM.woodStairs().get(),
+                        WoodBlockSets.GHOST_GUM.woodSlab().get(), ModNatureBlocks.GHOST_GUM_LEAVES.get())
+        ));
+
+        register(context, LEOPARD_4,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+                Edumia.location("features/trees/leopard/leopard_trunk_4"),
+                Edumia.location("features/trees/leopard/leopard_canopy_4"),
+                ConstantInt.of(4),
+                BlockStateProvider.simple(WoodBlockSets.GHOST_GUM.wood().get()),
+                BlockStateProvider.simple(ModNatureBlocks.GHOST_GUM_LEAVES.get().defaultBlockState().setValue(LeavesBlock.PERSISTENT, true)),
+                Set.of(WoodBlockSets.GHOST_GUM.wood().get(), WoodBlockSets.GHOST_GUM.woodFence().get(), WoodBlockSets.GHOST_GUM.woodStairs().get(),
+                        WoodBlockSets.GHOST_GUM.woodSlab().get()),
+                ModNatureBlocks.GHOST_GUM_LEAVES.get(),
+                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(),
+                Set.of(WoodBlockSets.GHOST_GUM.log().get(), WoodBlockSets.GHOST_GUM.woodFence().get(), WoodBlockSets.GHOST_GUM.woodStairs().get(),
+                        WoodBlockSets.GHOST_GUM.woodSlab().get(), ModNatureBlocks.GHOST_GUM_LEAVES.get())
+        ));
 
     }
 

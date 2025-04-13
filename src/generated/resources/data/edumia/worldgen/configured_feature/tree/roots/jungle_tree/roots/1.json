@@ -1,0 +1,170 @@
+{
+  "type": "minecraft:random_patch",
+  "config": {
+    "feature": {
+      "feature": {
+        "type": "minecraft:random_selector",
+        "config": {
+          "default": {
+            "feature": {
+              "type": "minecraft:simple_block",
+              "config": {
+                "to_place": {
+                  "type": "minecraft:simple_state_provider",
+                  "state": {
+                    "Name": "minecraft:jungle_wood",
+                    "Properties": {
+                      "axis": "y"
+                    }
+                  }
+                }
+              }
+            },
+            "placement": [
+              {
+                "type": "minecraft:block_predicate_filter",
+                "predicate": {
+                  "type": "minecraft:all_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:replaceable"
+                    },
+                    {
+                      "type": "minecraft:any_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:matching_block_tag",
+                          "offset": [
+                            0,
+                            -1,
+                            0
+                          ],
+                          "tag": "edumia:dirt"
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "blocks": "minecraft:jungle_wood",
+                          "offset": [
+                            0,
+                            -1,
+                            0
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "features": [
+            {
+              "chance": 0.2,
+              "feature": {
+                "feature": {
+                  "type": "minecraft:simple_block",
+                  "config": {
+                    "to_place": {
+                      "type": "minecraft:simple_state_provider",
+                      "state": {
+                        "Name": "minecraft:moss_carpet"
+                      }
+                    }
+                  }
+                },
+                "placement": [
+                  {
+                    "type": "minecraft:random_offset",
+                    "xz_spread": 0,
+                    "y_spread": 1
+                  },
+                  {
+                    "type": "minecraft:block_predicate_filter",
+                    "predicate": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:replaceable"
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "blocks": "minecraft:jungle_wood",
+                          "offset": [
+                            0,
+                            -1,
+                            0
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:any_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                  "minecraft:jungle_wood",
+                  "minecraft:jungle_log"
+                ],
+                "offset": [
+                  1,
+                  1,
+                  0
+                ]
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                  "minecraft:jungle_wood",
+                  "minecraft:jungle_log"
+                ],
+                "offset": [
+                  0,
+                  1,
+                  1
+                ]
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                  "minecraft:jungle_wood",
+                  "minecraft:jungle_log"
+                ],
+                "offset": [
+                  -1,
+                  1,
+                  0
+                ]
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                  "minecraft:jungle_wood",
+                  "minecraft:jungle_log"
+                ],
+                "offset": [
+                  0,
+                  1,
+                  -1
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "tries": 5,
+    "xz_spread": 1,
+    "y_spread": 1
+  }
+}

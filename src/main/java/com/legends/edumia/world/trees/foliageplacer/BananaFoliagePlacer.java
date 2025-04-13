@@ -2,6 +2,7 @@ package com.legends.edumia.world.trees.foliageplacer;
 
 import com.legends.edumia.world.trees.EdumiaFoliagePlacerTypes;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -19,7 +20,7 @@ import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacerTy
 import javax.swing.tree.TreeNode;
 
 public class BananaFoliagePlacer extends FoliagePlacer {
-    public static final Codec<BananaFoliagePlacer> CODEC = RecordCodecBuilder.create((instance) ->
+    public static final MapCodec<BananaFoliagePlacer> CODEC = RecordCodecBuilder.mapCodec((instance) ->
             instance.group(Codec.FLOAT.fieldOf("banana_chance").orElse(0.0F).forGetter((fp) ->
                                     fp.bananaChance),
                             Codec.FLOAT.fieldOf("extra_banana_chance").orElse(0.25F).forGetter((fp) ->

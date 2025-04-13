@@ -3,6 +3,7 @@ package com.legends.edumia.world.trees.trunkplacers;
 import com.google.common.collect.ImmutableList;
 import com.legends.edumia.world.trees.EdumiaTrunkPlacerTypes;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -21,7 +22,7 @@ import java.util.function.BiConsumer;
 import java.util.function.Function;
 
 public class BirchTrunkPlacer extends TrunkPlacer {
-    public static final Codec<BirchTrunkPlacer> CODEC = RecordCodecBuilder.create(pineTrunkPlacerInstance ->
+    public static final MapCodec<BirchTrunkPlacer> CODEC = RecordCodecBuilder.mapCodec(pineTrunkPlacerInstance ->
             trunkPlacerParts(pineTrunkPlacerInstance).apply(pineTrunkPlacerInstance, BirchTrunkPlacer::new));
 
     public BirchTrunkPlacer(int baseHeight, int heightRandA, int heightRandB) {

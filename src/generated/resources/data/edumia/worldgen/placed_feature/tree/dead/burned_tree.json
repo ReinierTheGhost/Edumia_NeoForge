@@ -1,0 +1,39 @@
+{
+  "feature": "edumia:tree/dead/burned_tree",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 4
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_factor": 156.0,
+      "noise_offset": 0.3,
+      "noise_to_count_ratio": 1
+    },
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_factor": 30.0,
+      "noise_offset": -0.5,
+      "noise_to_count_ratio": 1
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "blocks": "edumia:volcanic_dirt",
+        "offset": [
+          0,
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

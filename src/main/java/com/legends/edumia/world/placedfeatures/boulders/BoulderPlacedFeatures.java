@@ -5,7 +5,7 @@ import com.legends.edumia.world.congiguredfeatures.boulders.BoulderConfiguredFea
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -35,7 +35,7 @@ public class BoulderPlacedFeatures {
     public static final ResourceKey<PlacedFeature> MOSSY_BOULDER = registerKey("mossy_boulder");
     public static final ResourceKey<PlacedFeature> BIG_MOSSY_BOULDER = registerKey("big_mossy_boulder");
 
-    public static void bootstrap(BootstapContext<PlacedFeature> featureRegisterable) {
+    public static void bootstrap(BootstrapContext<PlacedFeature> featureRegisterable) {
         HolderGetter<ConfiguredFeature<?, ?>> registryEntryLookup = featureRegisterable.lookup(Registries.CONFIGURED_FEATURE);
         Holder.Reference<ConfiguredFeature<?, ?>> andesite = registryEntryLookup.getOrThrow(BoulderConfiguredFeatures.ANDESITE_BOULDER);
         Holder.Reference<ConfiguredFeature<?, ?>> big_andesite = registryEntryLookup.getOrThrow(BoulderConfiguredFeatures.BIG_ANDESITE_BOULDER);
@@ -120,10 +120,10 @@ public class BoulderPlacedFeatures {
     }
 
     public static ResourceKey<PlacedFeature> registerKey(String name) {
-        return ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(Edumia.MOD_ID, "boulders/" + name));
+        return ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "boulders/" + name));
     }
 
-    private static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key,
+    private static void register(BootstrapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key,
                                  Holder<ConfiguredFeature<?, ?>> configuration, List<PlacementModifier> modifiers) {
         context.register(key, new PlacedFeature(configuration, List.copyOf(modifiers)));
     }

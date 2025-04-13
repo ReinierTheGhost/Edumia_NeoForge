@@ -2,6 +2,7 @@ package com.legends.edumia.world.trees.foliageplacer;
 
 import com.legends.edumia.world.trees.EdumiaFoliagePlacerTypes;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.Mth;
@@ -17,7 +18,7 @@ import javax.swing.tree.TreeNode;
 import java.util.function.BiConsumer;
 
 public class GoldenOakFoliagePlacer extends FoliagePlacer {
-    public static final Codec<GoldenOakFoliagePlacer> CODEC = RecordCodecBuilder.create((instance) ->
+    public static final MapCodec<GoldenOakFoliagePlacer> CODEC = RecordCodecBuilder.mapCodec((instance) ->
             foliagePlacerParts(instance).and(IntProvider.codec(0, 24).fieldOf("trunk_height")
                             .forGetter((placer) -> placer.trunkHeight))
             .apply(instance, GoldenOakFoliagePlacer::new));

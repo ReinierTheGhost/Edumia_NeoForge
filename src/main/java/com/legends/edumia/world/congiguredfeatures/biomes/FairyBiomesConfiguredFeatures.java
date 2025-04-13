@@ -1,10 +1,7 @@
 package com.legends.edumia.world.congiguredfeatures.biomes;
 
 import com.legends.edumia.Edumia;
-import com.legends.edumia.world.congiguredfeatures.trees.JungleTreeConfiguredFeatures;
-import com.legends.edumia.world.congiguredfeatures.trees.KapokTreeConfiguredFeatures;
-import com.legends.edumia.world.congiguredfeatures.trees.PalmConfiguredFeatures;
-import com.legends.edumia.world.congiguredfeatures.trees.TropicalTreeConfiguredFeatures;
+import com.legends.edumia.world.congiguredfeatures.trees.*;
 import com.legends.edumia.world.placedfeatures.ModPlacedFeatures;
 import com.legends.edumia.world.placedfeatures.trees.TropicalTreePlacedFeatures;
 import net.minecraft.core.Holder;
@@ -41,11 +38,11 @@ public class FairyBiomesConfiguredFeatures {
 //                        new WeightedPlacedFeature(
 //                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(JungleTreeConfiguredFeatures.JUNGLE_TREE_4)), 0.15f),
                         new WeightedPlacedFeature(
-                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(TropicalTreeConfiguredFeatures.LEOPARD_1)), 0.10f),
+                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(LeopardTreeConfiguredFeatures.LEOPARD_1)), 0.10f),
                         new WeightedPlacedFeature(
                                 PlacementUtils.inlinePlaced(holdergetter.getOrThrow(KapokTreeConfiguredFeatures.KAPOK_1)), 0.02f),
                         new WeightedPlacedFeature(
-                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(TropicalTreeConfiguredFeatures.MAHOGANY_1)), 0.10f),
+                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(MahoganyConfiguredFeatures.MAHOGANY_1)), 0.10f),
                         new WeightedPlacedFeature(
                                 PlacementUtils.inlinePlaced(holdergetter.getOrThrow(PalmConfiguredFeatures.GROUND_PALM_1)), 0.20f),
                         new WeightedPlacedFeature(
@@ -54,31 +51,31 @@ public class FairyBiomesConfiguredFeatures {
 
 
                         new WeightedPlacedFeature(
-                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(TropicalTreeConfiguredFeatures.LEOPARD_2)), 0.10f),
+                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(LeopardTreeConfiguredFeatures.LEOPARD_2)), 0.10f),
                         new WeightedPlacedFeature(
                                 PlacementUtils.inlinePlaced(holdergetter.getOrThrow(KapokTreeConfiguredFeatures.KAPOK_2)), 0.02f),
                         new WeightedPlacedFeature(
-                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(TropicalTreeConfiguredFeatures.MAHOGANY_2)), 0.10f),
+                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(MahoganyConfiguredFeatures.MAHOGANY_2)), 0.10f),
                         new WeightedPlacedFeature(
                                 PlacementUtils.inlinePlaced(holdergetter.getOrThrow(PalmConfiguredFeatures.GROUND_PALM_2)), 0.20f),
 
 
                         new WeightedPlacedFeature(
-                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(TropicalTreeConfiguredFeatures.LEOPARD_3)), 0.10f),
+                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(LeopardTreeConfiguredFeatures.LEOPARD_3)), 0.10f),
                         new WeightedPlacedFeature(
                                 PlacementUtils.inlinePlaced(holdergetter.getOrThrow(KapokTreeConfiguredFeatures.KAPOK_3)), 0.02f),
                         new WeightedPlacedFeature(
-                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(TropicalTreeConfiguredFeatures.MAHOGANY_3)), 0.10f),
+                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(MahoganyConfiguredFeatures.MAHOGANY_3)), 0.10f),
                         new WeightedPlacedFeature(
                                 PlacementUtils.inlinePlaced(holdergetter.getOrThrow(PalmConfiguredFeatures.GROUND_PALM_3)), 0.20f),
 
 
                         new WeightedPlacedFeature(
-                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(TropicalTreeConfiguredFeatures.LEOPARD_4)), 0.10f),
+                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(LeopardTreeConfiguredFeatures.LEOPARD_4)), 0.10f),
                         new WeightedPlacedFeature(
                                 PlacementUtils.inlinePlaced(holdergetter.getOrThrow(KapokTreeConfiguredFeatures.KAPOK_4)), 0.02f),
                         new WeightedPlacedFeature(
-                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(TropicalTreeConfiguredFeatures.MAHOGANY_4)), 0.10f),
+                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(MahoganyConfiguredFeatures.MAHOGANY_4)), 0.10f),
                         new WeightedPlacedFeature(
                                 PlacementUtils.inlinePlaced(holdergetter.getOrThrow(PalmConfiguredFeatures.GROUND_PALM_4)), 0.20f),
 

@@ -2,6 +2,7 @@ package com.legends.edumia.world.trees.foliageplacer;
 
 import com.legends.edumia.world.trees.EdumiaFoliagePlacerTypes;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
@@ -16,7 +17,7 @@ import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacerTy
 import javax.swing.tree.TreeNode;
 
 public class NewPalmFoliagePlacer extends FoliagePlacer {
-    public static final Codec<NewPalmFoliagePlacer> CODEC = RecordCodecBuilder.create((placer) ->
+    public static final MapCodec<NewPalmFoliagePlacer> CODEC = RecordCodecBuilder.mapCodec((placer) ->
             foliagePlacerParts(placer).apply(placer, NewPalmFoliagePlacer::new));
     public NewPalmFoliagePlacer(IntProvider radius, IntProvider offset) {
         super(radius, offset);

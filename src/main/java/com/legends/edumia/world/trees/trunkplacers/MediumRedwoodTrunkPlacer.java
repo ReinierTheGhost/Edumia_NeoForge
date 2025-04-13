@@ -3,6 +3,7 @@ package com.legends.edumia.world.trees.trunkplacers;
 import com.google.common.collect.ImmutableList;
 import com.legends.edumia.world.trees.EdumiaTrunkPlacerTypes;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
@@ -18,7 +19,7 @@ import java.util.Optional;
 import java.util.function.BiConsumer;
 
 public class MediumRedwoodTrunkPlacer extends ExtendedTrunkPlacer{
-    public static final Codec<MediumRedwoodTrunkPlacer> CODEC = RecordCodecBuilder.create((instance) ->
+    public static final MapCodec<MediumRedwoodTrunkPlacer> CODEC = RecordCodecBuilder.mapCodec((instance) ->
             baseCodecWithWood(instance).apply(instance, MediumRedwoodTrunkPlacer::new));
 
     protected MediumRedwoodTrunkPlacer(int baseHeight, int heightRandA, int heightRandB, Optional<BlockStateProvider> woodProvider,

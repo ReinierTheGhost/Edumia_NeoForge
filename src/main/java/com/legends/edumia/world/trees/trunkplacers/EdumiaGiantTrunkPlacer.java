@@ -3,6 +3,7 @@ package com.legends.edumia.world.trees.trunkplacers;
 import com.legends.edumia.world.features.EdumiaFeatures;
 import com.legends.edumia.world.trees.EdumiaTrunkPlacerTypes;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -22,7 +23,7 @@ import java.util.function.BiConsumer;
 import java.util.function.Predicate;
 
 public class EdumiaGiantTrunkPlacer extends ExtendedTrunkPlacer {
-    public static final Codec<EdumiaGiantTrunkPlacer> CODEC = RecordCodecBuilder.create((instance) ->
+    public static final MapCodec<EdumiaGiantTrunkPlacer> CODEC = RecordCodecBuilder.mapCodec((instance) ->
             baseCodecWithWood(instance).apply(instance, EdumiaGiantTrunkPlacer::new));
     private final boolean generateLeaves = true;
     protected EdumiaGiantTrunkPlacer(int baseHeight, int heightRandA, int heightRandB, Optional<BlockStateProvider> woodProvider,

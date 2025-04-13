@@ -2,11 +2,12 @@ package com.legends.edumia.world.placedfeatures.trees;
 
 import com.legends.edumia.Edumia;
 import com.legends.edumia.blocks.blocksets.ModNatureBlocks;
+import com.legends.edumia.blocks.blocksets.WoodBlockSets;
 import com.legends.edumia.world.congiguredfeatures.trees.TemperateTreeConfiguredFeatures;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
@@ -74,7 +75,7 @@ public class TemperateTreePlacedFeatures {
     static PlacementModifier superRareTree = PlacementUtils.countExtra(0, 0.025f, 1);
     static PlacementModifier specialTree = PlacementUtils.countExtra(0, 0.01f, 1);
 
-    public static void boostrap(BootstapContext<PlacedFeature> context) {
+    public static void boostrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.lookup(Registries.CONFIGURED_FEATURE);
         register(context, LIST_BIRCH_TREE, configuredFeatureRegistryEntryLookup.getOrThrow(TemperateTreeConfiguredFeatures.BIRCH_TREE_KEY),
                 List.of());
@@ -99,33 +100,33 @@ public class TemperateTreePlacedFeatures {
 
         register(context, BLACKTHORN_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(TemperateTreeConfiguredFeatures.BLACKTHORN_TREE_KEY),
                 VegetationPlacements.treePlacement(frequentTree,
-                        ModNatureBlocks.BLACKTHORN_SAPLING.get()));
+                        WoodBlockSets.BLACKTHORN.sapling().get()));
         register(context, COMMON_BLACKTHORN_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(TemperateTreeConfiguredFeatures.BLACKTHORN_TREE_KEY),
                 VegetationPlacements.treePlacement(abundantTree,
-                        ModNatureBlocks.BLACKTHORN_SAPLING.get()));
+                        WoodBlockSets.BLACKTHORN.sapling().get()));
         register(context, RARE_BLACKTHORN_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(TemperateTreeConfiguredFeatures.BLACKTHORN_TREE_KEY),
                 VegetationPlacements.treePlacement(rareTree,
-                        ModNatureBlocks.BLACKTHORN_SAPLING.get()));
+                        WoodBlockSets.BLACKTHORN.sapling().get()));
 
         register(context, WHITE_ASH_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(TemperateTreeConfiguredFeatures.WHITE_ASH_TREE_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(13, 0.2f, 2),
-                        ModNatureBlocks.WHITE_ASH_SAPLING.get()));
+                        WoodBlockSets.WHITE_ASH.sapling().get()));
         register(context, SMALL_WHITE_ASH_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(TemperateTreeConfiguredFeatures.SMALL_WHITE_ASH_TREE_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(4, 0.25f, 1),
-                        ModNatureBlocks.WHITE_ASH_SAPLING.get()));
+                        WoodBlockSets.WHITE_ASH.sapling().get()));
         register(context, MEGA_WHITE_ASH_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(TemperateTreeConfiguredFeatures.MEGA_WHITE_ASH_TREE_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(8, 0.2f, 1),
-                        ModNatureBlocks.WHITE_ASH_SAPLING.get()));
+                        WoodBlockSets.WHITE_ASH.sapling().get()));
         register(context, WHITE_ASH_BUSH_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(TemperateTreeConfiguredFeatures.WHITE_ASH_BUSH_KEY),
-                VegetationPlacements.treePlacement(commonTree, ModNatureBlocks.WHITE_ASH_SAPLING.get()));
+                VegetationPlacements.treePlacement(commonTree, WoodBlockSets.WHITE_ASH.sapling().get()));
 
         register(context, MAPLE_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(TemperateTreeConfiguredFeatures.MAPLE_TREE_KEY),
                 VegetationPlacements.treePlacement(superRareTree,
-                        ModNatureBlocks.MAPLE_SAPLING.get()));
+                        WoodBlockSets.MAPLE.sapling().get()));
 
         register(context, WILLOW_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(TemperateTreeConfiguredFeatures.WILLOW_TREE_KEY),
                 VegetationPlacements.treePlacement(uncommonTree,
-                        ModNatureBlocks.WILLOW_SAPLING.get()));
+                        WoodBlockSets.WILLOW.sapling().get()));
 
 
 
@@ -174,10 +175,10 @@ public class TemperateTreePlacedFeatures {
     }
 
     public static ResourceKey<PlacedFeature> registerKey(String name) {
-        return ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(Edumia.MOD_ID, "tree/temperate/" + name));
+        return ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "tree/temperate/" + name));
     }
 
-    private static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key,
+    private static void register(BootstrapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key,
                                  Holder<ConfiguredFeature<?, ?>> configuration, List<PlacementModifier> modifiers) {
         context.register(key, new PlacedFeature(configuration, List.copyOf(modifiers)));
     }

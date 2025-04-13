@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:simple_block",
+  "config": {
+    "to_place": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "data": {
+            "Name": "edumia:white_sand_layer",
+            "Properties": {
+              "layers": "2",
+              "waterlogged": "false"
+            }
+          },
+          "weight": 4
+        },
+        {
+          "data": {
+            "Name": "edumia:white_sand_layer",
+            "Properties": {
+              "layers": "3",
+              "waterlogged": "false"
+            }
+          },
+          "weight": 3
+        }
+      ]
+    }
+  }
+}

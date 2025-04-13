@@ -2,10 +2,11 @@ package com.legends.edumia.world.placedfeatures.trees;
 
 import com.legends.edumia.Edumia;
 import com.legends.edumia.blocks.blocksets.ModNatureBlocks;
+import com.legends.edumia.blocks.blocksets.WoodBlockSets;
 import com.legends.edumia.world.congiguredfeatures.trees.BorealTreeConfiguredFeatures;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
@@ -54,36 +55,36 @@ public class BorealTreePlacedFeatures {
     static PlacementModifier superRareTree = PlacementUtils.countExtra(0, 0.025f, 1);
     static PlacementModifier specialTree = PlacementUtils.countExtra(0, 0.01f, 1);
 
-    public static void boostrap(BootstapContext<PlacedFeature> context) {
+    public static void boostrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, LIST_FIR_TREE, configuredFeatureRegistryEntryLookup.getOrThrow(BorealTreeConfiguredFeatures.FIR_KEY),
                 List.of());
         register(context, COMMON_LARCH_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BorealTreeConfiguredFeatures.LARCH_TREE_KEY),
                 VegetationPlacements.treePlacement(frequentTree,
-                        ModNatureBlocks.LARCH_SAPLING.get()));
+                        WoodBlockSets.PINE.sapling().get()));
         register(context, LARCH_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BorealTreeConfiguredFeatures.LARCH_TREE_KEY),
                 VegetationPlacements.treePlacement(rareTree,
-                        ModNatureBlocks.LARCH_SAPLING.get()));
+                        WoodBlockSets.PINE.sapling().get()));
         register(context, SPARSE_LARCH_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BorealTreeConfiguredFeatures.LARCH_TREE_KEY),
                 VegetationPlacements.treePlacement(veryRareTree,
-                        ModNatureBlocks.LARCH_SAPLING.get()));
+                        WoodBlockSets.PINE.sapling().get()));
 
         register(context, ABUNDANT_PINE_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BorealTreeConfiguredFeatures.PINE_TREE_KEY),
                 VegetationPlacements.treePlacement(foothillsTree,
-                        ModNatureBlocks.PINE_SAPLING.get()));
+                        WoodBlockSets.PINE.sapling().get()));
         register(context, COMMON_PINE_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BorealTreeConfiguredFeatures.PINE_TREE_KEY),
                 VegetationPlacements.treePlacement(frequentTree,
-                        ModNatureBlocks.PINE_SAPLING.get()));
+                        WoodBlockSets.PINE.sapling().get()));
         register(context, PINE_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BorealTreeConfiguredFeatures.PINE_TREE_KEY),
                 VegetationPlacements.treePlacement(uncommonTree,
-                        ModNatureBlocks.PINE_SAPLING.get()));
+                        WoodBlockSets.PINE.sapling().get()));
         register(context, DEAD_PINE_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BorealTreeConfiguredFeatures.DEAD_PINE_TREE_KEY),
                 VegetationPlacements.treePlacement(scarceTree,
-                        ModNatureBlocks.PINE_SAPLING.get()));
+                        WoodBlockSets.PINE.sapling().get()));
         register(context, SPARSE_PINE_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BorealTreeConfiguredFeatures.PINE_TREE_KEY),
                 VegetationPlacements.treePlacement(rareTree,
-                        ModNatureBlocks.PINE_SAPLING.get()));
+                        WoodBlockSets.PINE.sapling().get()));
 
         register(context, FOOTHILLS_SPRUCE_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BorealTreeConfiguredFeatures.SPRUCE_TREE_KEY),
                 VegetationPlacements.treePlacement(foothillsTree,
@@ -118,10 +119,10 @@ public class BorealTreePlacedFeatures {
     }
 
     public static ResourceKey<PlacedFeature> registerKey(String name) {
-        return ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(Edumia.MOD_ID, "tree/boreal/" + name));
+        return ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "tree/boreal/" + name));
     }
 
-    private static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key,
+    private static void register(BootstrapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key,
                                  Holder<ConfiguredFeature<?, ?>> configuration, List<PlacementModifier> modifiers) {
         context.register(key, new PlacedFeature(configuration, List.copyOf(modifiers)));
     }

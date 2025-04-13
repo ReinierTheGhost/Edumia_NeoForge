@@ -2,10 +2,11 @@ package com.legends.edumia.world.placedfeatures.trees;
 
 import com.legends.edumia.Edumia;
 import com.legends.edumia.blocks.blocksets.ModNatureBlocks;
+import com.legends.edumia.blocks.blocksets.WoodBlockSets;
 import com.legends.edumia.world.congiguredfeatures.trees.OakTreeConfiguredFeatures;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
@@ -78,7 +79,7 @@ public class OakTreePlacedFeatures {
     static PlacementModifier superRareTree = PlacementUtils.countExtra(0, 0.025f, 1);
     static PlacementModifier specialTree = PlacementUtils.countExtra(0, 0.01f, 1);
 
-    public static void boostrap(BootstapContext<PlacedFeature> context) {
+    public static void boostrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, MEGA_DARK_OAK_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(OakTreeConfiguredFeatures.MEGA_DARK_OAK_TREE_KEY),
@@ -106,16 +107,16 @@ public class OakTreePlacedFeatures {
 
         register(context, SMALL_RED_OAK_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(OakTreeConfiguredFeatures.SMALL_RED_OAK_TREE_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(15, 0.25f, 2),
-                        ModNatureBlocks.RED_OAK_SAPLING.get()));
+                        WoodBlockSets.RED_OAK.sapling().get()));
         register(context, SPARSE_RED_OAK_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(OakTreeConfiguredFeatures.LARGE_RED_OAK_TREE_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(1, 0.1f, 1),
-                        ModNatureBlocks.RED_OAK_SAPLING.get()));
+                        WoodBlockSets.RED_OAK.sapling().get()));
         register(context, RED_OAK_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(OakTreeConfiguredFeatures.RED_OAK_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(21, 0.2f, 2),
-                        ModNatureBlocks.RED_OAK_SAPLING.get()));
+                        WoodBlockSets.RED_OAK.sapling().get()));
         register(context, MEGA_RED_OAK_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(OakTreeConfiguredFeatures.MEGA_RED_OAK_TREE_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(18, 0.2f, 1),
-                        ModNatureBlocks.RED_OAK_SAPLING.get()));
+                        WoodBlockSets.RED_OAK.sapling().get()));
 
 
         register(context, LIST_SMALL_GREEN_OAK_PLACED_TREE_KEY,
@@ -136,16 +137,16 @@ public class OakTreePlacedFeatures {
 
         register(context, SMALL_GREEN_OAK_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(OakTreeConfiguredFeatures.SMALL_GREEN_OAK_TREE_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(15, 0.25f, 2),
-                        ModNatureBlocks.GREEN_OAK_SAPLING.get()));
+                        WoodBlockSets.GREEN_OAK.sapling().get()));
         register(context, SPARSE_GREEN_OAK_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(OakTreeConfiguredFeatures.LARGE_GREEN_OAK_TREE_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(1, 0.1f, 1),
-                        ModNatureBlocks.GREEN_OAK_SAPLING.get()));
+                        WoodBlockSets.GREEN_OAK.sapling().get()));
         register(context, GREEN_OAK_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(OakTreeConfiguredFeatures.GREEN_OAK_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(21, 0.2f, 2),
-                        ModNatureBlocks.GREEN_OAK_SAPLING.get()));
+                        WoodBlockSets.GREEN_OAK.sapling().get()));
         register(context, MEGA_GREEN_OAK_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(OakTreeConfiguredFeatures.MEGA_GREEN_OAK_TREE_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(18, 0.2f, 1),
-                        ModNatureBlocks.GREEN_OAK_SAPLING.get()));
+                        WoodBlockSets.GREEN_OAK.sapling().get()));
 
         register(context, LIST_SMALL_BLACK_OAK_PLACED_TREE_KEY,
                 configuredFeatureRegistryEntryLookup.getOrThrow(OakTreeConfiguredFeatures.SMALL_BLACK_OAK_TREE_KEY),
@@ -165,16 +166,16 @@ public class OakTreePlacedFeatures {
 
         register(context, SMALL_BLACK_OAK_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(OakTreeConfiguredFeatures.SMALL_BLACK_OAK_TREE_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(15, 0.25f, 2),
-                        ModNatureBlocks.BLACK_OAK_SAPLING.get()));
+                        WoodBlockSets.BLACK_OAK.sapling().get()));
         register(context, SPARSE_BLACK_OAK_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(OakTreeConfiguredFeatures.LARGE_BLACK_OAK_TREE_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(1, 0.1f, 1),
-                        ModNatureBlocks.BLACK_OAK_SAPLING.get()));
+                        WoodBlockSets.BLACK_OAK.sapling().get()));
         register(context, BLACK_OAK_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(OakTreeConfiguredFeatures.BLACK_OAK_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(21, 0.2f, 2),
-                        ModNatureBlocks.BLACK_OAK_SAPLING.get()));
+                        WoodBlockSets.BLACK_OAK.sapling().get()));
         register(context, MEGA_BLACK_OAK_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(OakTreeConfiguredFeatures.MEGA_BLACK_OAK_TREE_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(18, 0.2f, 1),
-                        ModNatureBlocks.BLACK_OAK_SAPLING.get()));
+                        WoodBlockSets.BLACK_OAK.sapling().get()));
 
         register(context, OAK_BUSH_COMMON_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(OakTreeConfiguredFeatures.OAK_BUSH_TREE_KEY),
                 VegetationPlacements.treePlacement(frequentTree,
@@ -212,10 +213,10 @@ public class OakTreePlacedFeatures {
     }
 
     public static ResourceKey<PlacedFeature> registerKey(String name) {
-        return ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(Edumia.MOD_ID, "tree/oaks/" + name));
+        return ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "tree/oaks/" + name));
     }
 
-    private static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key,
+    private static void register(BootstrapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key,
                                  Holder<ConfiguredFeature<?, ?>> configuration, List<PlacementModifier> modifiers) {
         context.register(key, new PlacedFeature(configuration, List.copyOf(modifiers)));
     }

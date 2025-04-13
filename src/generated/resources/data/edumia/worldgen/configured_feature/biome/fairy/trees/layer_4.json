@@ -1,0 +1,197 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "default": "edumia:noting",
+    "features": [
+      {
+        "chance": 0.1,
+        "feature": {
+          "feature": "edumia:tree/tropical/leopard_tree/leopard_1",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.02,
+        "feature": {
+          "feature": "edumia:tree/tropical/kapok_tree/kapok_1",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.1,
+        "feature": {
+          "feature": "edumia:tree/tropical/mahogany_tree/mahogany_1",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.2,
+        "feature": {
+          "feature": "edumia:tree/tropical/palm_tree/ground_palm_1",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.15,
+        "feature": {
+          "feature": "edumia:tree/tropical/palm_tree/group_palm_1",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.1,
+        "feature": {
+          "feature": "edumia:tree/tropical/leopard_tree/leopard_2",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.02,
+        "feature": {
+          "feature": "edumia:tree/tropical/kapok_tree/kapok_2",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.1,
+        "feature": {
+          "feature": "edumia:tree/tropical/mahogany_tree/mahogany_2",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.2,
+        "feature": {
+          "feature": "edumia:tree/tropical/palm_tree/ground_palm_2",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.1,
+        "feature": {
+          "feature": "edumia:tree/tropical/leopard_tree/leopard_3",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.02,
+        "feature": {
+          "feature": "edumia:tree/tropical/kapok_tree/kapok_3",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.1,
+        "feature": {
+          "feature": "edumia:tree/tropical/mahogany_tree/mahogany_3",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.2,
+        "feature": {
+          "feature": "edumia:tree/tropical/palm_tree/ground_palm_3",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.1,
+        "feature": {
+          "feature": "edumia:tree/tropical/leopard_tree/leopard_4",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.02,
+        "feature": {
+          "feature": "edumia:tree/tropical/kapok_tree/kapok_4",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.1,
+        "feature": {
+          "feature": "edumia:tree/tropical/mahogany_tree/mahogany_4",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.2,
+        "feature": {
+          "feature": "edumia:tree/tropical/palm_tree/ground_palm_4",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.02,
+        "feature": {
+          "feature": "edumia:tree/tropical/kapok_tree/kapok_5",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.2,
+        "feature": {
+          "feature": "edumia:tree/tropical/palm_tree/ground_palm_5",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.02,
+        "feature": {
+          "feature": "edumia:tree/tropical/kapok_tree/kapok_6",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.2,
+        "feature": {
+          "feature": "edumia:tree/tropical/palm_tree/ground_palm_6",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.02,
+        "feature": {
+          "feature": "edumia:tree/tropical/kapok_tree/kapok_7",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.2,
+        "feature": {
+          "feature": "edumia:tree/tropical/palm_tree/ground_palm_7",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.02,
+        "feature": {
+          "feature": "edumia:tree/tropical/kapok_tree/kapok_8",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.2,
+        "feature": {
+          "feature": "edumia:tree/tropical/palm_tree/ground_palm_8",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.02,
+        "feature": {
+          "feature": "edumia:tree/tropical/kapok_tree/kapok_9",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.02,
+        "feature": {
+          "feature": "edumia:tree/tropical/kapok_tree/kapok_10",
+          "placement": []
+        }
+      }
+    ]
+  }
+}

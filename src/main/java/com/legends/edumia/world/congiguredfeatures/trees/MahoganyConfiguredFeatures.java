@@ -113,92 +113,92 @@ public class MahoganyConfiguredFeatures {
                                         .setValue(BlockStateProperties.PERSISTENT, true))
                         ))).ignoreVines().build());
 
-//        register(context, MAHOGANY_NBT,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
-//                Edumia.location("features/trees/mahogany/mahogany_tree_trunk1"),
-//                Edumia.location("features/trees/mahogany/mahogany_tree_canopy1"),
-//                BiasedToBottomInt.of(5, 15),
-//                BlockStateProvider.simple(WoodBlockSets.MAHOGANY.log().get()),
-//                BlockStateProvider.simple(WoodBlockSets.MAHOGANY.leaves().get()),
-//                WoodBlockSets.MAHOGANY.log(),
-//                WoodBlockSets.MAHOGANY.leaves(),
-//                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(new LeaveVineDecorator(0.5f))
-//        ));
-//
-//        register(context, MAHOGANY_ROOTS_NBT,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
-//                Edumia.location("features/trees/mahogany/mahogany_tree_trunk1_roots"),
-//                Edumia.location("features/trees/mahogany/mahogany_tree_canopy1"),
-//                BiasedToBottomInt.of(5, 15),
-//                BlockStateProvider.simple(WoodBlockSets.MAHOGANY.log().get()),
-//                BlockStateProvider.simple(WoodBlockSets.MAHOGANY.leaves().get()),
-//                WoodBlockSets.MAHOGANY.log(),
-//                WoodBlockSets.MAHOGANY.leaves(),
-//                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(new LeaveVineDecorator(0.5f)),
-//                Set.of(WoodBlockSets.MAHOGANY.woodSlab().get(), WoodBlockSets.MAHOGANY.woodStairs().get())
-//        ));
-//
-//        register(context, MAHOGANY_1,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
-//                Edumia.location("features/trees/mahogany/mahogany_trunk_1"),
-//                Edumia.location("features/trees/mahogany/mahogany_canopy_1"),
-//                ConstantInt.of(5),
-//                BlockStateProvider.simple(WoodBlockSets.MAHOGANY.wood().get()),
-//                BlockStateProvider.simple(WoodBlockSets.MAHOGANY.leaves().get().defaultBlockState().setValue(LeavesBlock.PERSISTENT, true)),
-//                Set.of(WoodBlockSets.MAHOGANY.wood().get(), WoodBlockSets.MAHOGANY.woodFence().get(), WoodBlockSets.MAHOGANY.woodStairs().get(),
-//                        WoodBlockSets.MAHOGANY.woodSlab().get()),
-//                WoodBlockSets.MAHOGANY.leaves().get(),
-//                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(new LeaveVineDecorator(0.5f),
-//                TrunkVineDecorator.INSTANCE),
-//                Set.of(WoodBlockSets.MAHOGANY.woodFence().get(), WoodBlockSets.MAHOGANY.woodStairs().get(),
-//                        WoodBlockSets.MAHOGANY.woodSlab().get(), WoodBlockSets.MAHOGANY.leaves().get())
-//        ));
-//
-//        register(context, MAHOGANY_2,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
-//                Edumia.location("features/trees/mahogany/mahogany_trunk_2"),
-//                Edumia.location("features/trees/mahogany/mahogany_canopy_2"),
-//                ConstantInt.of(8),
-//                BlockStateProvider.simple(WoodBlockSets.MAHOGANY.wood().get()),
-//                BlockStateProvider.simple(WoodBlockSets.MAHOGANY.leaves().get().defaultBlockState().setValue(LeavesBlock.PERSISTENT, true)),
-//                Set.of(WoodBlockSets.MAHOGANY.wood().get(), WoodBlockSets.MAHOGANY.woodFence().get(), WoodBlockSets.MAHOGANY.woodStairs().get(),
-//                        WoodBlockSets.MAHOGANY.woodSlab().get()),
-//                WoodBlockSets.MAHOGANY.leaves().get(),
-//                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(new LeaveVineDecorator(0.5f),
-//                TrunkVineDecorator.INSTANCE),
-//                Set.of(WoodBlockSets.MAHOGANY.woodFence().get(), WoodBlockSets.MAHOGANY.woodStairs().get(),
-//                        WoodBlockSets.MAHOGANY.woodSlab().get(), WoodBlockSets.MAHOGANY.leaves().get())
-//        ));
-//
-//        register(context, MAHOGANY_3,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
-//                Edumia.location("features/trees/mahogany/mahogany_trunk_3"),
-//                Edumia.location("features/trees/mahogany/mahogany_canopy_3"),
-//                ConstantInt.of(4),
-//                BlockStateProvider.simple(WoodBlockSets.MAHOGANY.wood().get()),
-//                BlockStateProvider.simple(WoodBlockSets.MAHOGANY.leaves().get().defaultBlockState().setValue(LeavesBlock.PERSISTENT, true)),
-//                Set.of(WoodBlockSets.MAHOGANY.wood().get(), WoodBlockSets.MAHOGANY.woodFence().get(), WoodBlockSets.MAHOGANY.woodStairs().get(),
-//                        WoodBlockSets.MAHOGANY.woodSlab().get()),
-//                WoodBlockSets.MAHOGANY.leaves().get(),
-//                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(new LeaveVineDecorator(0.5f),
-//                TrunkVineDecorator.INSTANCE),
-//                Set.of(WoodBlockSets.MAHOGANY.woodFence().get(), WoodBlockSets.MAHOGANY.woodStairs().get(),
-//                        WoodBlockSets.MAHOGANY.woodSlab().get(), WoodBlockSets.MAHOGANY.leaves().get())
-//        ));
-//
-//        register(context, MAHOGANY_4,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
-//                Edumia.location("features/trees/mahogany/mahogany_trunk_4"),
-//                Edumia.location("features/trees/mahogany/mahogany_canopy_4"),
-//                ConstantInt.of(5),
-//                BlockStateProvider.simple(WoodBlockSets.MAHOGANY.wood().get()),
-//                BlockStateProvider.simple(WoodBlockSets.MAHOGANY.leaves().get().defaultBlockState().setValue(LeavesBlock.PERSISTENT, true)),
-//                Set.of(WoodBlockSets.MAHOGANY.wood().get(), WoodBlockSets.MAHOGANY.woodFence().get(), WoodBlockSets.MAHOGANY.woodStairs().get(),
-//                        WoodBlockSets.MAHOGANY.woodSlab().get()),
-//                WoodBlockSets.MAHOGANY.leaves().get(),
-//                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(new LeaveVineDecorator(0.5f),
-//                TrunkVineDecorator.INSTANCE, new HangingBranchDecorator(0.25f,
-//                        BlockStateProvider.simple(WoodBlockSets.MAHOGANY.leaves().get().defaultBlockState()
-//                                .setValue(BlockStateProperties.PERSISTENT, true)),
-//                        BlockStateProvider.simple(WoodBlockSets.MAHOGANY.leaves().get().defaultBlockState()
-//                                .setValue(BlockStateProperties.PERSISTENT, true)))),
-//                Set.of(WoodBlockSets.MAHOGANY.woodFence().get(), WoodBlockSets.MAHOGANY.woodStairs().get(),
-//                        WoodBlockSets.MAHOGANY.woodSlab().get(), WoodBlockSets.MAHOGANY.leaves().get())
-//        ));
+        register(context, MAHOGANY_NBT,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+                Edumia.location("features/trees/mahogany/mahogany_tree_trunk1"),
+                Edumia.location("features/trees/mahogany/mahogany_tree_canopy1"),
+                BiasedToBottomInt.of(5, 15),
+                BlockStateProvider.simple(WoodBlockSets.MAHOGANY.log().get()),
+                BlockStateProvider.simple(WoodBlockSets.MAHOGANY.leaves().get()),
+                WoodBlockSets.MAHOGANY.log(),
+                WoodBlockSets.MAHOGANY.leaves(),
+                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(new LeaveVineDecorator(0.5f))
+        ));
+
+        register(context, MAHOGANY_ROOTS_NBT,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+                Edumia.location("features/trees/mahogany/mahogany_tree_trunk1_roots"),
+                Edumia.location("features/trees/mahogany/mahogany_tree_canopy1"),
+                BiasedToBottomInt.of(5, 15),
+                BlockStateProvider.simple(WoodBlockSets.MAHOGANY.log().get()),
+                BlockStateProvider.simple(WoodBlockSets.MAHOGANY.leaves().get()),
+                WoodBlockSets.MAHOGANY.log(),
+                WoodBlockSets.MAHOGANY.leaves(),
+                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(new LeaveVineDecorator(0.5f)),
+                Set.of(WoodBlockSets.MAHOGANY.woodSlab().get(), WoodBlockSets.MAHOGANY.woodStairs().get())
+        ));
+
+        register(context, MAHOGANY_1,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+                Edumia.location("features/trees/mahogany/mahogany_trunk_1"),
+                Edumia.location("features/trees/mahogany/mahogany_canopy_1"),
+                ConstantInt.of(5),
+                BlockStateProvider.simple(WoodBlockSets.MAHOGANY.wood().get()),
+                BlockStateProvider.simple(WoodBlockSets.MAHOGANY.leaves().get().defaultBlockState().setValue(LeavesBlock.PERSISTENT, true)),
+                Set.of(WoodBlockSets.MAHOGANY.wood().get(), WoodBlockSets.MAHOGANY.woodFence().get(), WoodBlockSets.MAHOGANY.woodStairs().get(),
+                        WoodBlockSets.MAHOGANY.woodSlab().get()),
+                WoodBlockSets.MAHOGANY.leaves().get(),
+                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(new LeaveVineDecorator(0.5f),
+                TrunkVineDecorator.INSTANCE),
+                Set.of(WoodBlockSets.MAHOGANY.woodFence().get(), WoodBlockSets.MAHOGANY.woodStairs().get(),
+                        WoodBlockSets.MAHOGANY.woodSlab().get(), WoodBlockSets.MAHOGANY.leaves().get())
+        ));
+
+        register(context, MAHOGANY_2,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+                Edumia.location("features/trees/mahogany/mahogany_trunk_2"),
+                Edumia.location("features/trees/mahogany/mahogany_canopy_2"),
+                ConstantInt.of(8),
+                BlockStateProvider.simple(WoodBlockSets.MAHOGANY.wood().get()),
+                BlockStateProvider.simple(WoodBlockSets.MAHOGANY.leaves().get().defaultBlockState().setValue(LeavesBlock.PERSISTENT, true)),
+                Set.of(WoodBlockSets.MAHOGANY.wood().get(), WoodBlockSets.MAHOGANY.woodFence().get(), WoodBlockSets.MAHOGANY.woodStairs().get(),
+                        WoodBlockSets.MAHOGANY.woodSlab().get()),
+                WoodBlockSets.MAHOGANY.leaves().get(),
+                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(new LeaveVineDecorator(0.5f),
+                TrunkVineDecorator.INSTANCE),
+                Set.of(WoodBlockSets.MAHOGANY.woodFence().get(), WoodBlockSets.MAHOGANY.woodStairs().get(),
+                        WoodBlockSets.MAHOGANY.woodSlab().get(), WoodBlockSets.MAHOGANY.leaves().get())
+        ));
+
+        register(context, MAHOGANY_3,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+                Edumia.location("features/trees/mahogany/mahogany_trunk_3"),
+                Edumia.location("features/trees/mahogany/mahogany_canopy_3"),
+                ConstantInt.of(4),
+                BlockStateProvider.simple(WoodBlockSets.MAHOGANY.wood().get()),
+                BlockStateProvider.simple(WoodBlockSets.MAHOGANY.leaves().get().defaultBlockState().setValue(LeavesBlock.PERSISTENT, true)),
+                Set.of(WoodBlockSets.MAHOGANY.wood().get(), WoodBlockSets.MAHOGANY.woodFence().get(), WoodBlockSets.MAHOGANY.woodStairs().get(),
+                        WoodBlockSets.MAHOGANY.woodSlab().get()),
+                WoodBlockSets.MAHOGANY.leaves().get(),
+                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(new LeaveVineDecorator(0.5f),
+                TrunkVineDecorator.INSTANCE),
+                Set.of(WoodBlockSets.MAHOGANY.woodFence().get(), WoodBlockSets.MAHOGANY.woodStairs().get(),
+                        WoodBlockSets.MAHOGANY.woodSlab().get(), WoodBlockSets.MAHOGANY.leaves().get())
+        ));
+
+        register(context, MAHOGANY_4,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+                Edumia.location("features/trees/mahogany/mahogany_trunk_4"),
+                Edumia.location("features/trees/mahogany/mahogany_canopy_4"),
+                ConstantInt.of(5),
+                BlockStateProvider.simple(WoodBlockSets.MAHOGANY.wood().get()),
+                BlockStateProvider.simple(WoodBlockSets.MAHOGANY.leaves().get().defaultBlockState().setValue(LeavesBlock.PERSISTENT, true)),
+                Set.of(WoodBlockSets.MAHOGANY.wood().get(), WoodBlockSets.MAHOGANY.woodFence().get(), WoodBlockSets.MAHOGANY.woodStairs().get(),
+                        WoodBlockSets.MAHOGANY.woodSlab().get()),
+                WoodBlockSets.MAHOGANY.leaves().get(),
+                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(new LeaveVineDecorator(0.5f),
+                TrunkVineDecorator.INSTANCE, new HangingBranchDecorator(0.25f,
+                        BlockStateProvider.simple(WoodBlockSets.MAHOGANY.leaves().get().defaultBlockState()
+                                .setValue(BlockStateProperties.PERSISTENT, true)),
+                        BlockStateProvider.simple(WoodBlockSets.MAHOGANY.leaves().get().defaultBlockState()
+                                .setValue(BlockStateProperties.PERSISTENT, true)))),
+                Set.of(WoodBlockSets.MAHOGANY.woodFence().get(), WoodBlockSets.MAHOGANY.woodStairs().get(),
+                        WoodBlockSets.MAHOGANY.woodSlab().get(), WoodBlockSets.MAHOGANY.leaves().get())
+        ));
 
     }
 

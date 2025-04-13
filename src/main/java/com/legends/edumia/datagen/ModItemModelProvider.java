@@ -11,8 +11,10 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.WallBlock;
+import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.registries.DeferredBlock;
 
 public class ModItemModelProvider extends ItemModelProvider {
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
@@ -60,11 +62,16 @@ public class ModItemModelProvider extends ItemModelProvider {
             basicItem(item);
         }
 
+        for (Block item : SimpleSaplingModel.blocks){
+            saplingItem(item);
+        }
+
     }
 
     public void wallItem(WallBlock block, Block baseBlock) {
+        ResourceLocation name = this.key(baseBlock);
         this.withExistingParent(name(block), mcLoc("block/wall_inventory"))
-                .texture("wall",  ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID,
+                .texture("wall",  ResourceLocation.fromNamespaceAndPath(name.getNamespace(),
                         "block/" + name(baseBlock)));
     }
 
@@ -75,8 +82,9 @@ public class ModItemModelProvider extends ItemModelProvider {
     }
 
     public void fenceItem(FenceBlock block, Block baseBlock) {
+        ResourceLocation name = this.key(baseBlock);
         this.withExistingParent(name(block), mcLoc("block/fence_inventory"))
-                .texture("texture",  ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID,
+                .texture("texture",  ResourceLocation.fromNamespaceAndPath(name.getNamespace(),
                         "block/" + name(baseBlock)));
     }
 
@@ -103,6 +111,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         this.withExistingParent(name(block), mcLoc("item/generated"))
                 .texture("layer0",  ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID,
                         "item/" + name(baseBlock) + appendix));
+    }
+
+    private ItemModelBuilder saplingItem(Block item) {
+        return withExistingParent(name(item),
+                ResourceLocation.parse("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID,"block/" + name(item)));
     }
 
     public ResourceLocation key(Block block) {

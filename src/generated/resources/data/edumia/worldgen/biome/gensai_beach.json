@@ -1,0 +1,63 @@
+{
+  "carvers": {},
+  "downfall": 0.5,
+  "effects": {
+    "fog_color": 12638463,
+    "foliage_color": 10860366,
+    "grass_color": 12107900,
+    "sky_color": 7254527,
+    "water_color": 5212644,
+    "water_fog_color": 333363
+  },
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "minecraft:ore_andesite_lower",
+      "minecraft:ore_andesite_upper",
+      "minecraft:ore_coal_upper",
+      "minecraft:ore_diorite_lower",
+      "minecraft:ore_diorite_upper",
+      "minecraft:ore_dirt",
+      "minecraft:ore_granite_lower",
+      "minecraft:ore_granite_upper",
+      "minecraft:ore_gravel",
+      "minecraft:ore_tuff"
+    ],
+    [],
+    [],
+    [
+      "edumia:boulders/big_granite_boulder",
+      "edumia:boulders/big_sandstone_boulder",
+      "edumia:boulders/big_stone_boulder",
+      "edumia:boulders/granite_boulder",
+      "edumia:boulders/sandstone_boulder",
+      "edumia:boulders/stone_boulder",
+      "minecraft:glow_lichen",
+      "minecraft:patch_cactus_desert"
+    ],
+    [
+      "minecraft:freeze_top_layer",
+      "edumia:beach/layers/white/first",
+      "edumia:beach/layers/white/second",
+      "edumia:beach/layers/white/third"
+    ]
+  ],
+  "has_precipitation": true,
+  "spawn_costs": {},
+  "spawners": {
+    "ambient": [],
+    "axolotls": [],
+    "creature": [],
+    "misc": [],
+    "monster": [],
+    "underground_water_creature": [],
+    "water_ambient": [],
+    "water_creature": []
+  },
+  "temperature": 0.5
+}

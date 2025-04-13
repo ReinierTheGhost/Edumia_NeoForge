@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "default": "edumia:noting",
+    "features": [
+      {
+        "chance": 0.02,
+        "feature": "edumia:tree/temperate/sakura/sakura_tree_big"
+      },
+      {
+        "chance": 0.08,
+        "feature": "edumia:tree/temperate/sakura/sakura_tree_medium"
+      },
+      {
+        "chance": 0.04,
+        "feature": "edumia:tree/temperate/sakura/sakura_bush"
+      },
+      {
+        "chance": 0.03,
+        "feature": "edumia:tree/temperate/list/birch/birch_tree"
+      },
+      {
+        "chance": 0.06,
+        "feature": "edumia:tree/boreal/list/fir/fir_tree"
+      },
+      {
+        "chance": 0.04,
+        "feature": "edumia:tree/boreal/list/spruce/mega_spruce_tree"
+      },
+      {
+        "chance": 0.2,
+        "feature": "edumia:noting"
+      }
+    ]
+  }
+}

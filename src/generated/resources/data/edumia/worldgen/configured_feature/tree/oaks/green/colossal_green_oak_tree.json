@@ -1,0 +1,77 @@
+{
+  "type": "minecraft:tree",
+  "config": {
+    "decorators": [
+      {
+        "type": "minecraft:leave_vine",
+        "probability": 0.25
+      }
+    ],
+    "dirt_provider": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "minecraft:grass_block",
+        "Properties": {
+          "snowy": "false"
+        }
+      }
+    },
+    "foliage_placer": {
+      "type": "edumia:cluster_foliage_placer",
+      "offset": 0,
+      "radius": 3
+    },
+    "foliage_provider": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "edumia:green_oak_leaves",
+        "Properties": {
+          "distance": "7",
+          "persistent": "false",
+          "waterlogged": "false"
+        }
+      }
+    },
+    "force_dirt": false,
+    "ignore_vines": false,
+    "minimum_size": {
+      "type": "minecraft:two_layers_feature_size",
+      "limit": 1,
+      "lower_size": 0,
+      "upper_size": 2
+    },
+    "trunk_placer": {
+      "type": "edumia:edumia_giant_trunk_placer",
+      "base_height": 32,
+      "height_rand_a": 24,
+      "height_rand_b": 24,
+      "stripped_log_provider": {
+        "type": "minecraft:simple_state_provider",
+        "state": {
+          "Name": "edumia:stripped_green_oak_wood",
+          "Properties": {
+            "axis": "y"
+          }
+        }
+      },
+      "wood_provider": {
+        "type": "minecraft:simple_state_provider",
+        "state": {
+          "Name": "edumia:green_oak_wood",
+          "Properties": {
+            "axis": "y"
+          }
+        }
+      }
+    },
+    "trunk_provider": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "edumia:green_oak_log",
+        "Properties": {
+          "axis": "y"
+        }
+      }
+    }
+  }
+}

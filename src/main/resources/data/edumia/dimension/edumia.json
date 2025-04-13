@@ -1,0 +1,10 @@
+{
+  "generator": {
+    "type": "edumia:edumia",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "minecraft:plains"
+    }
+  },
+  "type": "edumia:edumia-type"
+}

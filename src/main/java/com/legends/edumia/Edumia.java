@@ -4,9 +4,20 @@ import com.legends.edumia.blocks.blocksets.*;
 import com.legends.edumia.core.BlockLoader;
 import com.legends.edumia.core.CreativeTabLoader;
 import com.legends.edumia.core.ItemLoader;
+import com.legends.edumia.world.biomes.EdumiaBiomeKeys;
+import com.legends.edumia.world.biomes.surface.MapBasedBiomePool;
+import com.legends.edumia.world.biomes.surface.MapBiomeData;
+import com.legends.edumia.world.chunkgen.ModChunkGenerators;
+import com.legends.edumia.world.dimension.ModDimensions;
 import com.legends.edumia.world.features.EdumiaFeatures;
+import com.legends.edumia.world.gen.ModWorldGeneration;
+import com.legends.edumia.world.map.EdumiaMapGeneration;
+import com.legends.edumia.world.trees.EdumiaFoliagePlacerTypes;
+import com.legends.edumia.world.trees.EdumiaTreeDecoratorTypes;
+import com.legends.edumia.world.trees.EdumiaTrunkPlacerTypes;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.resources.ResourceLocation;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import org.slf4j.Logger;
 
@@ -60,14 +71,33 @@ public class Edumia
         SandBlockSets.register(modEventBus);
         FlowerBlockSets.register(modEventBus);
         GrassBlockSets.register(modEventBus);
-        EdumiaFeatures.register(modEventBus);
+
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
+        EdumiaTrunkPlacerTypes.register(modEventBus);
+        EdumiaFoliagePlacerTypes.register(modEventBus);
+        EdumiaTreeDecoratorTypes.register(modEventBus);
+        EdumiaFeatures.register(modEventBus);
+
+        ModChunkGenerators.register(modEventBus);
+
+        ModDimensions.register();
+        EdumiaBiomeKeys.registerModBiomes();
+
+
+        ModWorldGeneration.generateModWorldGen();
 
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-
+        MapBasedBiomePool.loadBiomes();
+        MapBiomeData.loadBiomes();
+        try {
+            new EdumiaMapGeneration();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event)
@@ -94,5 +124,9 @@ public class Edumia
                 ItemBlockRenderTypes.setRenderLayer(set.block().get(), RenderType.translucent());
             }
         }
+    }
+
+    public static ResourceLocation location(String name) {
+        return ResourceLocation.fromNamespaceAndPath(MOD_ID, name);
     }
 }

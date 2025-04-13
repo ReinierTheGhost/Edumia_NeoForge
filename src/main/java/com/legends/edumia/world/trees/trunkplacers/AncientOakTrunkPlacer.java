@@ -4,6 +4,7 @@ import com.google.common.collect.Lists;
 import com.legends.edumia.utils.HorizontalDirection;
 import com.legends.edumia.world.trees.EdumiaTrunkPlacerTypes;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.Mth;
@@ -21,7 +22,7 @@ import java.util.function.BiConsumer;
 
 public class AncientOakTrunkPlacer  extends TrunkPlacer {
 
-    public static final Codec<AncientOakTrunkPlacer> CODEC = RecordCodecBuilder.create((instance)->
+    public static final MapCodec<AncientOakTrunkPlacer> CODEC = RecordCodecBuilder.mapCodec((instance)->
             trunkPlacerParts(instance).apply(instance, AncientOakTrunkPlacer::new));
     public AncientOakTrunkPlacer(int i, int j, int k)
     {

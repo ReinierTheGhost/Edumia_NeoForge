@@ -1,15 +1,10 @@
 package com.legends.edumia.world.congiguredfeatures.trees;
 
-import biomesoplenty.init.ModTags;
+
 import com.google.common.collect.ImmutableList;
 import com.legends.edumia.Edumia;
-import com.legends.edumia.blocks.blocksets.ModNatureBlocks;
 import com.legends.edumia.blocks.blocksets.WoodBlockSets;
-import com.legends.edumia.core.TagLoader;
-import com.legends.edumia.world.features.EdumiaFeatures;
-import com.legends.edumia.world.features.treesnbt.TreeFromStructureNBTConfig;
 import com.legends.edumia.world.trees.foliageplacer.*;
-import com.legends.edumia.world.trees.treedecorators.HangingBranchDecorator;
 import com.legends.edumia.world.trees.trunkplacers.*;
 import com.legends.edumia.world.placedfeatures.trees.TropicalTreePlacedFeatures;
 import net.minecraft.core.*;
@@ -18,12 +13,10 @@ import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.TreePlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.util.valueproviders.BiasedToBottomInt;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.LeavesBlock;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature;
@@ -40,7 +33,6 @@ import net.minecraft.world.level.levelgen.feature.treedecorators.TrunkVineDecora
 import net.minecraft.world.level.levelgen.feature.trunkplacers.*;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import java.util.List;
-import java.util.Set;
 
 public class TropicalTreeConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> BENDING_JUNGLE_TREE = registerKey("bending_jungle_tree");

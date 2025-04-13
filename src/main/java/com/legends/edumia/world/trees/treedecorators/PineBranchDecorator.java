@@ -5,6 +5,7 @@ import com.legends.edumia.blocks.AxialSlabBlock;
 import com.legends.edumia.blocks.EdumiaBlockStates;
 import com.legends.edumia.world.trees.EdumiaTreeDecoratorTypes;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
@@ -23,7 +24,7 @@ import net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecoratorTy
 
 public class PineBranchDecorator extends TreeDecorator {
 
-    public static final Codec<PineBranchDecorator> CODEC = RecordCodecBuilder.create((instance) ->
+    public static final MapCodec<PineBranchDecorator> CODEC = RecordCodecBuilder.mapCodec((instance) ->
             instance.group(BlockStateProvider.CODEC.fieldOf("wood_provider").forGetter((deco) ->
                             deco.woodProvider),
                     Codec.floatRange(0.0f, 1.0f).fieldOf("probability").forGetter((deco) ->

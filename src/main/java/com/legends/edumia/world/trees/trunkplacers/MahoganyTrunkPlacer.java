@@ -2,6 +2,7 @@ package com.legends.edumia.world.trees.trunkplacers;
 
 import com.legends.edumia.world.trees.EdumiaTrunkPlacerTypes;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -20,7 +21,7 @@ import java.util.Optional;
 import java.util.function.BiConsumer;
 
 public class MahoganyTrunkPlacer extends ExtendedTrunkPlacer {
-    public static final Codec<MahoganyTrunkPlacer> CODEC = RecordCodecBuilder.create((instance) ->
+    public static final MapCodec<MahoganyTrunkPlacer> CODEC = RecordCodecBuilder.mapCodec((instance) ->
             baseCodecWithWood(instance).apply(instance, MahoganyTrunkPlacer::new));
     protected MahoganyTrunkPlacer(int baseHeight, int heightRandA, int heightRandB,
                                Optional<BlockStateProvider> woodProvider,

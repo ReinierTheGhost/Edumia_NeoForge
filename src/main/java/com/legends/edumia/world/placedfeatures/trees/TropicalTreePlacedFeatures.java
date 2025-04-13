@@ -1,11 +1,12 @@
 package com.legends.edumia.world.placedfeatures.trees;
 
 import com.legends.edumia.Edumia;
+import com.legends.edumia.world.congiguredfeatures.trees.MahoganyConfiguredFeatures;
 import com.legends.edumia.world.congiguredfeatures.trees.TropicalTreeConfiguredFeatures;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -59,7 +60,7 @@ public class TropicalTreePlacedFeatures {
     static PlacementModifier superRareTree = PlacementUtils.countExtra(0, 0.025f, 1);
     static PlacementModifier specialTree = PlacementUtils.countExtra(0, 0.01f, 1);
 
-    public static void boostrap(BootstapContext<PlacedFeature> context) {
+    public static void boostrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, BENDING_JUNGLE_TREE,
@@ -79,19 +80,19 @@ public class TropicalTreePlacedFeatures {
                 List.of());
 
         register(context, MAHOGANY,
-                configuredFeatureRegistryEntryLookup.getOrThrow(TropicalTreeConfiguredFeatures.MAHOGANY),
+                configuredFeatureRegistryEntryLookup.getOrThrow(MahoganyConfiguredFeatures.MAHOGANY),
                 List.of());
 
         register(context, BIG_MAHOGANY,
-                configuredFeatureRegistryEntryLookup.getOrThrow(TropicalTreeConfiguredFeatures.BIG_MAHOGANY),
+                configuredFeatureRegistryEntryLookup.getOrThrow(MahoganyConfiguredFeatures.BIG_MAHOGANY),
                 List.of());
 
         register(context, CANOPY_MAHOGANY_TREE,
-                configuredFeatureRegistryEntryLookup.getOrThrow(TropicalTreeConfiguredFeatures.CANOPY_MAHOGANY_TREE),
+                configuredFeatureRegistryEntryLookup.getOrThrow(MahoganyConfiguredFeatures.CANOPY_MAHOGANY_TREE),
                 List.of());
 
         register(context, LARGE_MAHOGANY_TREE,
-                configuredFeatureRegistryEntryLookup.getOrThrow(TropicalTreeConfiguredFeatures.LARGE_MAHOGANY_TREE),
+                configuredFeatureRegistryEntryLookup.getOrThrow(MahoganyConfiguredFeatures.LARGE_MAHOGANY_TREE),
                 List.of());
 
         register(context, BIG_PARASOL_PALM,
@@ -136,10 +137,10 @@ public class TropicalTreePlacedFeatures {
     }
 
     public static ResourceKey<PlacedFeature> registerKey(String name) {
-        return ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(Edumia.MOD_ID, "tree/tropical/" + name));
+        return ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "tree/tropical/" + name));
     }
 
-    private static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key,
+    private static void register(BootstrapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key,
                                  Holder<ConfiguredFeature<?, ?>> configuration, List<PlacementModifier> modifiers) {
         context.register(key, new PlacedFeature(configuration, List.copyOf(modifiers)));
     }

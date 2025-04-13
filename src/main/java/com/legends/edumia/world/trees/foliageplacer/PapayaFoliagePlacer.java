@@ -1,7 +1,7 @@
 package com.legends.edumia.world.trees.foliageplacer;
 
 import com.legends.edumia.world.trees.EdumiaFoliagePlacerTypes;
-import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -18,7 +18,7 @@ import javax.swing.tree.TreeNode;
 
 public class PapayaFoliagePlacer extends FoliagePlacer {
     private static final Direction[] DIRECTIONS = new Direction[] { Direction.NORTH, Direction.EAST, Direction.SOUTH, Direction.WEST };
-    public static final Codec<PapayaFoliagePlacer> CODEC = RecordCodecBuilder.create((instance) ->
+    public static final MapCodec<PapayaFoliagePlacer> CODEC = RecordCodecBuilder.mapCodec((instance) ->
         foliagePlacerParts(instance).apply(instance, PapayaFoliagePlacer::new));
     public PapayaFoliagePlacer(IntProvider radius, IntProvider offset) {
         super(radius, offset);

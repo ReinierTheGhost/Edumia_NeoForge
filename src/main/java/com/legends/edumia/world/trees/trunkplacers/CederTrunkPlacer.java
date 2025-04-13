@@ -1,7 +1,7 @@
 package com.legends.edumia.world.trees.trunkplacers;
 
 import com.legends.edumia.world.trees.EdumiaTrunkPlacerTypes;
-import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -20,7 +20,7 @@ import java.util.Optional;
 import java.util.function.BiConsumer;
 
 public class CederTrunkPlacer extends ExtendedTrunkPlacer {
-    public static final Codec<CederTrunkPlacer> CODEC = RecordCodecBuilder.create((instance) ->
+    public static final MapCodec<CederTrunkPlacer> CODEC = RecordCodecBuilder.mapCodec((instance) ->
             baseCodecWithWood(instance).apply(instance, CederTrunkPlacer::new));
 
     public CederTrunkPlacer(int baseHeight, int heightRandA, int heightRandB, Optional<BlockStateProvider> woodProvider,

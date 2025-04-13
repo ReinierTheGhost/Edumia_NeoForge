@@ -2,6 +2,7 @@ package com.legends.edumia.world.trees.trunkplacers;
 
 import com.legends.edumia.world.trees.EdumiaTrunkPlacerTypes;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -26,7 +27,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class FingerTrunkPlacer extends ExtendedTrunkPlacer{
-    public static final Codec<FingerTrunkPlacer> CODEC = RecordCodecBuilder.create(
+    public static final MapCodec<FingerTrunkPlacer> CODEC = RecordCodecBuilder.mapCodec(
             instance -> instance.group(
                     Codec.INT.fieldOf("base_height").forGetter(inst -> inst.baseHeight),
                     Codec.INT.fieldOf("height_rand").forGetter(inst -> inst.heightRandA),

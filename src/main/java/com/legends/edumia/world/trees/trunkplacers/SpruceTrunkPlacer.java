@@ -3,6 +3,7 @@ package com.legends.edumia.world.trees.trunkplacers;
 import com.google.common.collect.ImmutableList;
 import com.legends.edumia.world.trees.EdumiaTrunkPlacerTypes;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 
 import net.minecraft.core.BlockPos;
@@ -27,7 +28,7 @@ public class SpruceTrunkPlacer extends TrunkPlacer {
     protected final int baseHeight;
     protected final int randomHeight;
 
-    public static final Codec<SpruceTrunkPlacer> CODEC = RecordCodecBuilder.create((instance) -> {
+    public static final MapCodec<SpruceTrunkPlacer> CODEC = RecordCodecBuilder.mapCodec((instance) -> {
         return instance.group(
                 Codec.intRange(0,90).fieldOf("base_height").forGetter((trunkPlacer) -> {
                     return trunkPlacer.baseHeight;

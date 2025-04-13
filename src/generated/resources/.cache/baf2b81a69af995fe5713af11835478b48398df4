@@ -1,14 +1,18 @@
-// 1.21.1	2025-04-11T11:27:13.5957654	Item Models: edumia
+// 1.21.1	2025-04-13T17:57:02.4598125	Item Models: edumia
+047baa6b7a95aadfec14d478dfdf8c290cbd8220 assets/edumia/models/item/acacia_wood_fence.json
+4879a2f3030853ef57cc6d67266684061b3752ec assets/edumia/models/item/acacia_wood_wall.json
 e96f63ef1df9a9d2a06772db534502babd48b246 assets/edumia/models/item/andesite_bricks_wall.json
 cb9f0b3b0b814c18d0fee66efa6965d980d71f14 assets/edumia/models/item/apple_button.json
 f6c62996820cc525a3ec8022cfafdc0c0c8a7cde assets/edumia/models/item/apple_door.json
 6dd3ec2355ffcc9c8103f71b4bf1071466353972 assets/edumia/models/item/apple_fence.json
+d64da9ea02365126892655ba2a6c61b45ddd97b0 assets/edumia/models/item/apple_sapling.json
 d21b2018355d42fe3689ea55c77d196402430554 assets/edumia/models/item/apple_wood_fence.json
 0c8687593ab8a039de6aea02dfb218f595a879bf assets/edumia/models/item/apple_wood_wall.json
 68c077c9b8814613e7c6b6bf661c9cac0f9dff33 assets/edumia/models/item/arid_grass.json
 ab33155a67742e9c49270c9f68e0ce68a4ee82cb assets/edumia/models/item/aspen_button.json
 c907408aae75e96a361ecf634f72248bc457ab0e assets/edumia/models/item/aspen_door.json
 bcb9a639c18b8ecdf0576f6d166ce2782a086e93 assets/edumia/models/item/aspen_fence.json
+55e1ff80f90d6101b4ce456307b1932c543ad4c2 assets/edumia/models/item/aspen_sapling.json
 827f5ad4511815afaf8632267107960b20666fcf assets/edumia/models/item/aspen_wood_fence.json
 4b1c698579b51f1d635287e52644d0d7a678db48 assets/edumia/models/item/aspen_wood_wall.json
 a0851698628c1d5fa2b12e0c6d7798ab682f0f8f assets/edumia/models/item/asphodel.json
@@ -17,6 +21,7 @@ a0851698628c1d5fa2b12e0c6d7798ab682f0f8f assets/edumia/models/item/asphodel.json
 8d89509fe9d8ffd319047cbcf6445461fcede979 assets/edumia/models/item/banana_button.json
 4ba853f10ab54c8d50e8b405f85ad8e74b249545 assets/edumia/models/item/banana_door.json
 778b77e0cf2c9493b1aac83491dc379b25a6f772 assets/edumia/models/item/banana_fence.json
+6c7be18dee0353c9c78df27b969974fe24845e67 assets/edumia/models/item/banana_sapling.json
 38afcf4283df293cbe213358f3d2da8407224d17 assets/edumia/models/item/banana_wood_fence.json
 aae520cdcff88af5f23c3b239105c4f3d3c09fec assets/edumia/models/item/banana_wood_wall.json
 eeecc62d3ea41c71e35668432ee8a7c62ea0347f assets/edumia/models/item/basalt_bricks_wall.json
@@ -24,11 +29,15 @@ f15a340748e8244a5aaf8a8e86f73f8a0f429b9a assets/edumia/models/item/beach_grass.j
 f206a1339cbd10d85d2f63db96a0479587229fb5 assets/edumia/models/item/beech_button.json
 1e23d4dced3374768c313d7cc48ba038bd6fe062 assets/edumia/models/item/beech_door.json
 bc141d9a3fec69151b292d6707476e3ed912ce6f assets/edumia/models/item/beech_fence.json
+cf2fe615a6d10cc84a963263b7bd82e1dcd2da3c assets/edumia/models/item/beech_sapling.json
 f8ab19eb26cf8cafeb0557247b3919498f052ba5 assets/edumia/models/item/beech_wood_fence.json
 81c176fdd462c9cefd538c916c7c6b8154f2912c assets/edumia/models/item/beech_wood_wall.json
+9526c0db51996e0d83fcbb395d6be14e331bea3f assets/edumia/models/item/birch_wood_fence.json
+b438565120615dbfa8e5820452a0d1d122a42e86 assets/edumia/models/item/birch_wood_wall.json
 9c312441d8d4dc3fdc077ecc6daac94bc1f51015 assets/edumia/models/item/blackthorn_button.json
 ab6355e0f962f1dbeaec514e88d255a7fb880296 assets/edumia/models/item/blackthorn_door.json
 af17e5e9a67908baa0c7c31f290503ead9088ad8 assets/edumia/models/item/blackthorn_fence.json
+049f56b25b339a894d48c3b4e76c81073fc4febc assets/edumia/models/item/blackthorn_sapling.json
 e42c699076a68d04ae6aec329b17fa83dc36543f assets/edumia/models/item/blackthorn_wood_fence.json
 0cb1c0edad290bf6d7076a48fef310db0792af62 assets/edumia/models/item/blackthorn_wood_wall.json
 84881614827c29c6764a61ee08aaa22a99eec1c2 assets/edumia/models/item/black_demon_bricks_wall.json
@@ -37,6 +46,7 @@ e42c699076a68d04ae6aec329b17fa83dc36543f assets/edumia/models/item/blackthorn_wo
 e6959f05a48228df0e51304205bce0ddf507f21b assets/edumia/models/item/black_oak_button.json
 b8077448c8cfeed819c0327291c6134f6acc7aae assets/edumia/models/item/black_oak_door.json
 3543c3c77f754ee181a499b8e526b54c53746a66 assets/edumia/models/item/black_oak_fence.json
+be5b0ad804468fd2edb2676992ac4a41da7bb3c3 assets/edumia/models/item/black_oak_sapling.json
 c8d0f91baded597b753362657d9871f8b825c036 assets/edumia/models/item/black_oak_wood_fence.json
 c16f89e2d1af378cc0d29996f084ff4236fd5698 assets/edumia/models/item/black_oak_wood_wall.json
 88edcf6cef2b3278f8cf85b6ae2abbf839cb4837 assets/edumia/models/item/black_paperwall.json
@@ -58,6 +68,7 @@ dc457532bdefbfc5600efb21d8917d9bb31e51fd assets/edumia/models/item/calla_lily.js
 755057a78d4ef2748a54fe1a77e88ac82bcf0079 assets/edumia/models/item/cedar_button.json
 b55a052970cb6e7560737f35d1e3dc0fae002c11 assets/edumia/models/item/cedar_door.json
 223dfa63e20ad099226c53ee28e9e36408ed0ea6 assets/edumia/models/item/cedar_fence.json
+f8ea9172330416566bcb405129e10d71ed780e07 assets/edumia/models/item/cedar_sapling.json
 e97149258a90aa72ef5ff6209d237a164d2cd3fc assets/edumia/models/item/cedar_wood_fence.json
 ba48f44561b20977ad980dd4756f619bb24488be assets/edumia/models/item/cedar_wood_wall.json
 7cb8313d045b615016160a6b8a8db00ab0340e77 assets/edumia/models/item/celsemium.json
@@ -72,6 +83,7 @@ aebc1b8ec8313aa7cbba98b1cad6295629ee46af assets/edumia/models/item/charred_wood_
 521bb95d8a4d0b37325f3226ad4a3886dae59e7e assets/edumia/models/item/cherry_button.json
 4fc559e4104b33d17ed7483e0976244b56b723ce assets/edumia/models/item/cherry_door.json
 fc25e77966114048cf937a8a420eeb93e33415f3 assets/edumia/models/item/cherry_fence.json
+3f972929fea2815c81007d613c7a7804bc6875a7 assets/edumia/models/item/cherry_sapling.json
 7464bd706aa61c1af93e50c8a501c5029a6c6248 assets/edumia/models/item/cherry_wood_fence.json
 bc08a4d0a85617b3da4e53c76a3fc579d7ff0692 assets/edumia/models/item/cherry_wood_wall.json
 8bb46579ba71aa11f4787cf521dcd22870d52a64 assets/edumia/models/item/chrys_blue.json
@@ -99,12 +111,15 @@ b3eb459414d0bd3f7156daf5445c9502d43bef9b assets/edumia/models/item/cyan_stone_wa
 6d0c7deb99d770f9ba4c92d1618ed2ca1b05b6ff assets/edumia/models/item/cypress_button.json
 b5e2e76947701f3dcc5bb05cb0595aee8d2e39bf assets/edumia/models/item/cypress_door.json
 8ce9e4afe0a15739ddf73a796474a525485bdec5 assets/edumia/models/item/cypress_fence.json
+4a65fc9f4be4d5a73cd3bb10a5ff9f310589d529 assets/edumia/models/item/cypress_sapling.json
 64d93d52ad6850346e8e8251216dbc1203f4d74b assets/edumia/models/item/cypress_wood_fence.json
 55c28993d513cf93c508a676ee840ce5952563c1 assets/edumia/models/item/cypress_wood_wall.json
 ebe591ac23d8bbfbd806a0ab951b20cdc2b3cd5f assets/edumia/models/item/daisy.json
 bb5f251eaa3992a3a69a74ebb0ae88b732f9df4a assets/edumia/models/item/dark_high_elven_bricks_wall.json
 2117fa76475ead784ce600cfe52ba88fc8e410b2 assets/edumia/models/item/dark_high_elven_cobblestone_wall.json
 00ad21ac13d8f2cef50ef4c0a8b8cd8c36369dd3 assets/edumia/models/item/dark_high_elven_rock_wall.json
+2853858113f9cda38a48dfb87d1212c46197d479 assets/edumia/models/item/dark_oak_wood_fence.json
+4cbdc6c6f5af1a35a933d0c5b68b2c4a89291f4e assets/edumia/models/item/dark_oak_wood_wall.json
 5fcd16120281f89b798801d478670741ef5b58d6 assets/edumia/models/item/date.json
 87b480fc382adfa21292c39d0f177cf5edcdc2f0 assets/edumia/models/item/delphinium.json
 533e74d3959964cc15fa418f70a38d9e5d3988cb assets/edumia/models/item/demon_basalt_bricks_wall.json
@@ -113,6 +128,7 @@ ea84eadde79b967bbc24c5110fae454d6d99a896 assets/edumia/models/item/desert_mud_br
 a114d9b82b07bf1bd31f6903766d56982f82b2ae assets/edumia/models/item/dragon_blood_button.json
 ad05684813a55c7cb397e4d4d3481759153f908c assets/edumia/models/item/dragon_blood_door.json
 2494c28580aa29e2396c4338a09a74308a05d159 assets/edumia/models/item/dragon_blood_fence.json
+c13caf99af461019417659d8e321b9c785be8fa1 assets/edumia/models/item/dragon_blood_sapling.json
 1d49ef88bacd05a6d782e34c2b0f4aea69226f43 assets/edumia/models/item/dragon_blood_wood_fence.json
 fb692b5f896d5ebe429aa52cf5fc044925c793a5 assets/edumia/models/item/dragon_blood_wood_wall.json
 0d15cb3191ed070bea773701748bce899aed77e7 assets/edumia/models/item/dried_reeds.json
@@ -123,6 +139,7 @@ c423194016ceab110371d88e895042e4f72cb983 assets/edumia/models/item/fine_glass_pa
 b39e672bcf70477156ae3246d125feb60d8c4105 assets/edumia/models/item/fir_button.json
 55c49f9a17737078a4cb5890edd27871861580af assets/edumia/models/item/fir_door.json
 ca7ebd9cd35e3f4e46a8754602d73da8c8f996bd assets/edumia/models/item/fir_fence.json
+b06c8a05338d9bd75fddf6ec8b1a6aa2e9882ce2 assets/edumia/models/item/fir_sapling.json
 3974574713a2a2bcab02e7883f5b9fecdb676c31 assets/edumia/models/item/fir_wood_fence.json
 919a56e1415124e1626d36fd7e5b687fcb4e9706 assets/edumia/models/item/fir_wood_wall.json
 754e435e1e1de3b0dad545e627fd84850a8bc5d8 assets/edumia/models/item/flame_of_the_south.json
@@ -180,6 +197,7 @@ bee1298f0096b41d9e8522438f376eeb2b7dff28 assets/edumia/models/item/gensai_pickax
 794b8073571d0f27d780186092c2bf28d4e1255d assets/edumia/models/item/ghost_gum_button.json
 1fcae664b565a85d494cd41c25de07595b8305f7 assets/edumia/models/item/ghost_gum_door.json
 679e2d1986791aa75d022594050b01e92e22be8a assets/edumia/models/item/ghost_gum_fence.json
+4a9c7a4492407f945f08dc6b3d376ed192eeaab4 assets/edumia/models/item/ghost_gum_sapling.json
 e4e77eeba95b7b2b22d8148f57177cc625a835ef assets/edumia/models/item/ghost_gum_wood_fence.json
 93b96d6a36a36a6467c428b292e3d38f4a5dcfc9 assets/edumia/models/item/ghost_gum_wood_wall.json
 341c5895419bce2ec0b89bd7e44076fb8fe52cf2 assets/edumia/models/item/gneiss_wall.json
@@ -194,6 +212,7 @@ cbf156a91152d15c9da32e692153fd79c30e1d75 assets/edumia/models/item/green_basalt_
 e5c5e51f9d9781b0181109f3423219ab0c8adfb4 assets/edumia/models/item/green_oak_button.json
 b2bbfc38de3c55d671ac7e6c3cd1a66e921778b8 assets/edumia/models/item/green_oak_door.json
 b51db579f2255f0df306ca30fa1db244b977d25c assets/edumia/models/item/green_oak_fence.json
+e38b2e6bee310b556924b02b953da4143a59b66c assets/edumia/models/item/green_oak_sapling.json
 496f8f9ded8d5df31c0832f4c3927cf1dcecf333 assets/edumia/models/item/green_oak_wood_fence.json
 90bde9dee4761d2415218391f07c5d1accdd59c3 assets/edumia/models/item/green_oak_wood_wall.json
 199819d6b857ada8a22a50c95d0500b6f63a8544 assets/edumia/models/item/green_paperwall.json
@@ -205,11 +224,15 @@ be029462a178c56178d09481a58bbcfc88c54711 assets/edumia/models/item/high_elven_co
 de6dbe646a63b769d711aeff7901d79da148f519 assets/edumia/models/item/holly_button.json
 35bf6cfa9e6bdd8a690f2c35807a1096a64e4d77 assets/edumia/models/item/holly_door.json
 0666b1d705c3f3d3260877119dedf14bea1f820f assets/edumia/models/item/holly_fence.json
+c13b4f0e2eb54e86ff3ba7a67badc4538680226e assets/edumia/models/item/holly_sapling.json
 e7b4e6ddc1cdf8e27f8407975f1bd91b0c3c07f2 assets/edumia/models/item/holly_wood_fence.json
 06edf599a58f2fdc84f04ae6b579881f2398d60f assets/edumia/models/item/holly_wood_wall.json
+cbabe818c2d89289768e895fed81c7f916671d59 assets/edumia/models/item/jungle_wood_fence.json
+a2a4b63682c178bac27b58bd18f2b83b1fd87c8b assets/edumia/models/item/jungle_wood_wall.json
 d976de6f4dfdf3576967183a8424e9f64d34e87d assets/edumia/models/item/larch_button.json
 d2b092d119c73c931fe83ab9514165604cf10621 assets/edumia/models/item/larch_door.json
 37974e9557e14883b77b4a9157cda5fb0f7ddabe assets/edumia/models/item/larch_fence.json
+f76c06f6befe6b6fb10751e8668789b7b2815d96 assets/edumia/models/item/larch_sapling.json
 244bc106f15267ad22aea62a8190cf71a35971e9 assets/edumia/models/item/larch_wood_fence.json
 8cb4436ce38524aecabff123e38a1d0a42a33090 assets/edumia/models/item/larch_wood_wall.json
 1e14bf508d78c3307424594a277fff7f05e9efcf assets/edumia/models/item/lavender.json
@@ -233,17 +256,20 @@ e177033dca6244d109a132ea6595e6aa8359f432 assets/edumia/models/item/magenta_paper
 7cafd37f9335cec9dbb043dbf4a8183092372a5b assets/edumia/models/item/mahogany_button.json
 97827b69884609f8b7a91a9e3af0d35ff00c2aff assets/edumia/models/item/mahogany_door.json
 306fb966a9b8df151c9ffc57ae2c34e20b25a3e9 assets/edumia/models/item/mahogany_fence.json
+eca5da3bbbdac8f6689994879e7def13cb54f8e3 assets/edumia/models/item/mahogany_sapling.json
 2304ce457845414b294181d7112401cd8818a6a5 assets/edumia/models/item/mahogany_wood_fence.json
 331de5a5a8d0efcebadbb8a43d2844c68d73ab67 assets/edumia/models/item/mahogany_wood_wall.json
 598514dff4e4ee487812f7dc00d521614508751a assets/edumia/models/item/mango.json
 f3d58f913bb64cebaef0012bf32b1a996440aa7c assets/edumia/models/item/mango_button.json
 5e2360801b5bb67c5802438176d9e8f7cbb9efc5 assets/edumia/models/item/mango_door.json
 041ef1d262e7e1c37ac000bb1743f2fd8ec78471 assets/edumia/models/item/mango_fence.json
+583a902addcd807fdf42d5483997cc25eea8b22c assets/edumia/models/item/mango_sapling.json
 0d9facda24ebd7faa36de094c99554b476c2f410 assets/edumia/models/item/mango_wood_fence.json
 5430ee6396646ac897df6dc61a18cb0003ed84b3 assets/edumia/models/item/mango_wood_wall.json
 4229fc0eb6a69c168999cceb6c3d55384b7d6846 assets/edumia/models/item/maple_button.json
 2d0f549c9d2a2a6be11d11bb0fc8c0d6fee65525 assets/edumia/models/item/maple_door.json
 134396be0171c27349aacb037167fc792e0ccfb2 assets/edumia/models/item/maple_fence.json
+0a5c2ac57beea0413a7b952884a5af4285473614 assets/edumia/models/item/maple_sapling.json
 513a24355264a710165f5811dd213fc968c90b3b assets/edumia/models/item/maple_wood_fence.json
 c5c958df48cb3dfd330e2afc0446b6ac84265f0d assets/edumia/models/item/maple_wood_wall.json
 69e066f6a61518f56b7482b2799201b4476b57f0 assets/edumia/models/item/marigold.json
@@ -264,6 +290,8 @@ b31cce9d0136820613cc2f8a5d71ab94731d74f1 assets/edumia/models/item/mossy_light_h
 ad442b7b42404270ec1b0a2b4b8c103b173210c7 assets/edumia/models/item/mossy_redish_gensai_bricks_wall.json
 1039af73c2a676306a8fc90847acc5e1014c1d94 assets/edumia/models/item/mossy_red_gensai_bricks_wall.json
 5d764bb903007cb56c7e73849fcc2ffe6d100481 assets/edumia/models/item/mossy_volcanic_demon_bricks_wall.json
+d615ff9d8b80c358e0b1357197b758f66bcdb789 assets/edumia/models/item/oak_wood_fence.json
+458620ab6b727cdf4bf785b3e864d5ffc6d31fec assets/edumia/models/item/oak_wood_wall.json
 6a630d4f6ae170f9b781226a3f72ab327cd99b82 assets/edumia/models/item/obsidian_bricks_wall.json
 b1c5fe21b32fb7863233f014685f5b83e490870a assets/edumia/models/item/orange_fine_glass_pane.json
 238a64a3f31355acf44e8c458ccfc4f7a7ca2416 assets/edumia/models/item/orange_paperwall.json
@@ -271,6 +299,7 @@ f84796b457342f0cc89cc34467dd3d4dd9478b5d assets/edumia/models/item/orange_rock_w
 2c4bfb9075321eb110efa75803e90fefba06fb33 assets/edumia/models/item/palm_button.json
 6777eef0335be3059fbd89968651175a0c34b39d assets/edumia/models/item/palm_door.json
 7c6621a76a05a17bc67c95e031b1b2c5078ec423 assets/edumia/models/item/palm_fence.json
+3607d015ec3c461c4c96f3d365fb86bcec793612 assets/edumia/models/item/palm_sapling.json
 d2cf33b695c042ff27e349ca39d14a4459773434 assets/edumia/models/item/palm_wood_fence.json
 06a2b515d55dff56929e28f0c2eed708710b145b assets/edumia/models/item/palm_wood_wall.json
 1de09a88b72bb604b8ca5ac6823c126ad7ba639d assets/edumia/models/item/paprika_green.json
@@ -281,11 +310,13 @@ cf76083f69d03e8e695814337d5bf02b46d3263f assets/edumia/models/item/papyrus.json
 6c00cb234ab4a0c8463dfe2dee9d8634f385b640 assets/edumia/models/item/pear_button.json
 8b50e42c352bd942c6a3ad0788bd51885a1728c1 assets/edumia/models/item/pear_door.json
 72070a44842a3e97b3120b37e180eda1cc9960f4 assets/edumia/models/item/pear_fence.json
+a753d84e585352643956f2f160eafa3582148b19 assets/edumia/models/item/pear_sapling.json
 73fb825b3872b71c7951a10febcf727bb0dda425 assets/edumia/models/item/pear_wood_fence.json
 4cca91c0a7e39b332bbc40b514e5b6c545f96f3c assets/edumia/models/item/pear_wood_wall.json
 3fee26672fd1c4f2b52c12140cb2dd3d09bdcedc assets/edumia/models/item/pine_button.json
 79138b80be45d7820ab96edf128456a8b313426d assets/edumia/models/item/pine_door.json
 5b59d339f3b62ca0dfa6f929c3c3877fa5fa249b assets/edumia/models/item/pine_fence.json
+a7524bb510a0fc8e526c013757b7d7b1a91d2af0 assets/edumia/models/item/pine_sapling.json
 c109af631525480973b6830165b9f65c1c572b94 assets/edumia/models/item/pine_wood_fence.json
 3e73deed25e11e9765dcfad28d0ecaa69afe26ff assets/edumia/models/item/pine_wood_wall.json
 e099269f15e14081b8c9e75399708cf58756da37 assets/edumia/models/item/pink_anemone.json
@@ -302,6 +333,7 @@ e43ea4f285ee5f2bcfc19e3a1f1e92e2a694a75f assets/edumia/models/item/redish_gensai
 ed35482f38d587416199d16fb7e1da935ff8c177 assets/edumia/models/item/redwood_button.json
 d53ec548b1cc4a3a34e8efcb2a069723915bb2f5 assets/edumia/models/item/redwood_door.json
 13ca851d2fc24af4ab2d36861031e9b3f0a0ca97 assets/edumia/models/item/redwood_fence.json
+fd509f078de685a2bef2313f825d7729df283dd3 assets/edumia/models/item/redwood_sapling.json
 e0ed09d754f3f91f3aba18be44d2960b71631d9f assets/edumia/models/item/redwood_wood_fence.json
 0b00a4265bd5d65547807570ceaced9ab93044d2 assets/edumia/models/item/redwood_wood_wall.json
 7d8ed89cd45ee3411be507d4ddca2db2d78702fb assets/edumia/models/item/red_fine_glass_pane.json
@@ -311,6 +343,7 @@ fbae5fea92b96ca7aedd507a2d0bcefdcf1f50c9 assets/edumia/models/item/red_grapes.js
 ec10bec12eadd6a615a4329cfb77fd15b069eb9d assets/edumia/models/item/red_oak_button.json
 2d82d246f8350c0163d7a5eabd52c50f82381325 assets/edumia/models/item/red_oak_door.json
 4d5d33fa2419d0c7441af7636a71fdbc75f52a4c assets/edumia/models/item/red_oak_fence.json
+12675674b10134200adbe0e5459c1851057bfd14 assets/edumia/models/item/red_oak_sapling.json
 7d426a2eea77bce08a61bd15983ad288c2b80519 assets/edumia/models/item/red_oak_wood_fence.json
 8c6cc99a23d7f4f741990aac0fedeac941e4cd0d assets/edumia/models/item/red_oak_wood_wall.json
 6600219810c6921fe89bdc048c22c657982ee5be assets/edumia/models/item/red_paperwall.json
@@ -321,6 +354,7 @@ c3e18ae3bbd44852f7d79d3129a8a046ee61abe1 assets/edumia/models/item/reeds.json
 0be4c8bce584f6f373f81c9ecf196d8a92821b68 assets/edumia/models/item/silver_spruce_button.json
 04122f9e9b6476cbeaa8ece88b2274d3c4f2c6c4 assets/edumia/models/item/silver_spruce_door.json
 fca051441f897e693ce11edec6cd4c04be4f5c20 assets/edumia/models/item/silver_spruce_fence.json
+6c5599050a7b5e7d04aa7d3ce84bb9a6be225d3c assets/edumia/models/item/silver_spruce_sapling.json
 220854d4528a55d68407669a5840378338ba26de assets/edumia/models/item/silver_spruce_wood_fence.json
 2bc40d32f67ca5336d832f44e6ffbb7859cec8d1 assets/edumia/models/item/silver_spruce_wood_wall.json
 d2f24b91d300c2cb9f9c6cb95025ce30f688394b assets/edumia/models/item/simbelmyne.json
@@ -328,6 +362,8 @@ d2f24b91d300c2cb9f9c6cb95025ce30f688394b assets/edumia/models/item/simbelmyne.js
 9da434c287a95b6aa6b785264fd5bd4c929ee742 assets/edumia/models/item/small_high_elven_bricks_wall.json
 3289f8be7400200da32eef96186ba6150396d8b3 assets/edumia/models/item/small_light_high_elven_bricks_wall.json
 7f9e4917d2e3a0e5daf8f624db65461402fd24e7 assets/edumia/models/item/spinach.json
+8072cb918bdfa990e023bdbc10ab185c531e45c5 assets/edumia/models/item/spruce_wood_fence.json
+8d63918a1877256cee52ab36f2b22de012750de6 assets/edumia/models/item/spruce_wood_wall.json
 d94653773fd8261983280e64927c1b2ceb650c54 assets/edumia/models/item/stripped_apple_wood_fence.json
 d57c5d9e3e5e120b1ce5ad62f0a635fd171dc3ad assets/edumia/models/item/stripped_apple_wood_wall.json
 bdc8958d8c7bd3c3efa719d63896f9a2e97cbae3 assets/edumia/models/item/stripped_aspen_wood_fence.json
@@ -403,6 +439,7 @@ f1616d0737c79b38d471b75ac26dfa83bded36cc assets/edumia/models/item/tuberose.json
 d68448acff96736570fbfa9b1a0a9a129f1611e1 assets/edumia/models/item/white_ash_button.json
 406fe30ca02047b5d3f0456bbf8f7e7a40218da9 assets/edumia/models/item/white_ash_door.json
 6910ce94e7a80b5a90c72fa472f173c0bcea47bd assets/edumia/models/item/white_ash_fence.json
+c7e3dcf96336679926707c6fb39accdf15dbcda1 assets/edumia/models/item/white_ash_sapling.json
 71e617e6fde131bbfbf3b85e494c68848d0b1012 assets/edumia/models/item/white_ash_wood_fence.json
 b761dd86ea938df98ab283af0519f4af91c2e8a3 assets/edumia/models/item/white_ash_wood_wall.json
 895ae5816c09aeb9b91f429295495f0cbd75b1df assets/edumia/models/item/white_fine_glass_pane.json
@@ -410,6 +447,7 @@ c23ed509f1df99dd1f8310b66223e2a15341b543 assets/edumia/models/item/white_paperwa
 5a3af7c9940f493fe756a15b32d388d62029c868 assets/edumia/models/item/willow_button.json
 ca907d54ec535c4f443e6ed69912ff1f11da1818 assets/edumia/models/item/willow_door.json
 6f216ba1631d56e7ed18688a7dc4713e917c0ce7 assets/edumia/models/item/willow_fence.json
+163919a01e783be4b062ac724b3be3c6a2f899b9 assets/edumia/models/item/willow_sapling.json
 99604103bd415c56ddd690a5196743769973d253 assets/edumia/models/item/willow_wood_fence.json
 31872213f751240a13b8f20586f73c46f7d992d5 assets/edumia/models/item/willow_wood_wall.json
 7fa2f1ed738c938dff6c10e810186493bf125c62 assets/edumia/models/item/yellow_cobble_wall.json

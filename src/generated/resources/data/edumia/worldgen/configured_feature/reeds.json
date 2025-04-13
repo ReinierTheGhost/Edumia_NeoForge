@@ -1,0 +1,37 @@
+{
+  "type": "edumia:reeds",
+  "config": {
+    "fully_grown_change": 0.75,
+    "state_provider": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "data": {
+            "Name": "edumia:reeds",
+            "Properties": {
+              "type": "1",
+              "age": "0",
+              "waterlogged": "false"
+            }
+          },
+          "weight": 900
+        },
+        {
+          "data": {
+            "Name": "edumia:dried_reeds",
+            "Properties": {
+              "type": "1",
+              "age": "0",
+              "waterlogged": "false"
+            }
+          },
+          "weight": 100
+        }
+      ]
+    },
+    "tries": 32,
+    "xspread": 5,
+    "yspread": 2,
+    "zspread": 5
+  }
+}

@@ -3,6 +3,7 @@ package com.legends.edumia.world.trees.foliageplacer;
 
 import com.legends.edumia.world.trees.EdumiaFoliagePlacerTypes;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.valueproviders.ConstantInt;
@@ -15,7 +16,7 @@ import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacerTy
 import javax.swing.tree.TreeNode;
 
 public class AlmondFoliagePlacer extends FoliagePlacer {
-    public static final Codec<AlmondFoliagePlacer> CODEC = RecordCodecBuilder.create(instance ->
+    public static final MapCodec<AlmondFoliagePlacer> CODEC = RecordCodecBuilder.mapCodec(instance ->
             foliagePlacerParts(instance).apply(instance, AlmondFoliagePlacer::new));
     protected AlmondFoliagePlacer(IntProvider radius, IntProvider offset) {
         super(radius, offset);

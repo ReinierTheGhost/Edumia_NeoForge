@@ -3,6 +3,7 @@ package com.legends.edumia.world.trees.trunkplacers;
 import com.google.common.collect.ImmutableList;
 import com.legends.edumia.world.trees.EdumiaTrunkPlacerTypes;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -19,8 +20,8 @@ import java.util.List;
 import java.util.function.BiConsumer;
 
 public class SlantedTrunkPlacer  extends TrunkPlacer {
-    public static final Codec<SlantedTrunkPlacer> CODEC =
-            RecordCodecBuilder.create((placer) -> trunkPlacerParts(placer).apply(placer, SlantedTrunkPlacer::new));
+    public static final MapCodec<SlantedTrunkPlacer> CODEC =
+            RecordCodecBuilder.mapCodec((placer) -> trunkPlacerParts(placer).apply(placer, SlantedTrunkPlacer::new));
 
     public SlantedTrunkPlacer(int pBaseHeight, int pHeightRandA, int pHeightRandB) {
         super(pBaseHeight, pHeightRandA, pHeightRandB);

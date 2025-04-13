@@ -144,6 +144,10 @@ public class EdumiaHelpingGenerator {
         }
 
         for (WoodBlockSets.SimpleBlockSet set : WoodBlockSets.sets){
+            if (set.sapling() != null){
+                SimpleSaplingModel.blocks.add(set.sapling().get());
+                BlockDrops.blocks.add(set.sapling().get());
+            }
             if(set.leaves() != null) {
                 SimpleLeavesModel.blocks.add(set.leaves().get());
                 LeavesDrops.blocks.add(set.leaves().get());
@@ -237,8 +241,22 @@ public class EdumiaHelpingGenerator {
 
         for (WoodBlockSets.SimpleVanillaBlocks blocks : WoodBlockSets.beams){
             SimplePillarModel.blocks.add(new SimplePillarModel.Pillar(blocks.beam().get()));
+            SimpleAxisSlabModel.blocks.add(new SimpleAxisSlabModel.Slab(blocks.texture(), blocks.woodSlab().get()));
+            SimpleStairModel.blocks.add(new SimpleStairModel.Stair(blocks.texture(), blocks.woodStairs().get()));
+            SimpleWallModel.blocks.add(new SimpleWallModel.Wall(blocks.texture(), blocks.woodWall().get()));
+            SimpleFenceModel.blocks.add(new SimpleFenceModel.Fence(blocks.texture(), blocks.woodFence().get()));
+
             BlockDrops.blocks.add(blocks.beam().get());
+            BlockDrops.blocks.add(blocks.woodSlab().get());
+            BlockDrops.blocks.add(blocks.woodStairs().get());
+            BlockDrops.blocks.add(blocks.woodFence().get());
+            BlockDrops.blocks.add(blocks.woodWall().get());
+
             MineableAxe.blocks.add(blocks.beam().get());
+            MineableAxe.blocks.add(blocks.woodSlab().get());
+            MineableAxe.blocks.add(blocks.woodStairs().get());
+            MineableAxe.blocks.add(blocks.woodFence().get());
+            MineableAxe.blocks.add(blocks.woodWall().get());
         }
 
         for (PaperwallSets.PaperwallSet set : PaperwallSets.paperwallSets){

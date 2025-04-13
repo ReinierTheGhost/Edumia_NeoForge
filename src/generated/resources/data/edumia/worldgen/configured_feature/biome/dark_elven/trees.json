@@ -1,0 +1,68 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "default": "edumia:noting",
+    "features": [
+      {
+        "chance": 0.038,
+        "feature": "edumia:tree/oaks/red/list_mega_red_oak_tree"
+      },
+      {
+        "chance": 0.076,
+        "feature": "edumia:tree/oaks/red/list_large_red_oak_tree"
+      },
+      {
+        "chance": 0.133,
+        "feature": "edumia:tree/oaks/red/list_small_red_oak_tree"
+      },
+      {
+        "chance": 0.133,
+        "feature": "edumia:tree/oaks/red/list_red_oak_tree"
+      },
+      {
+        "chance": 0.038,
+        "feature": "edumia:tree/oaks/green/list_mega_green_oak_tree"
+      },
+      {
+        "chance": 0.076,
+        "feature": "edumia:tree/oaks/green/list_large_green_oak_tree"
+      },
+      {
+        "chance": 0.133,
+        "feature": "edumia:tree/oaks/green/list_small_green_oak_tree"
+      },
+      {
+        "chance": 0.133,
+        "feature": "edumia:tree/oaks/green/list_green_oak_tree"
+      },
+      {
+        "chance": 0.019,
+        "feature": "edumia:tree/oaks/black/list_mega_black_oak_tree"
+      },
+      {
+        "chance": 0.038,
+        "feature": "edumia:tree/oaks/black/list_large_black_oak_tree"
+      },
+      {
+        "chance": 0.0665,
+        "feature": "edumia:tree/oaks/black/list_small_black_oak_tree"
+      },
+      {
+        "chance": 0.0665,
+        "feature": "edumia:tree/oaks/black/list_black_oak_tree"
+      },
+      {
+        "chance": 0.025,
+        "feature": "edumia:tree/boreal/silver_spruce/silver_spruce_tree"
+      },
+      {
+        "chance": 0.0125,
+        "feature": "edumia:tree/temperate/holly/holly_tree"
+      },
+      {
+        "chance": 0.0125,
+        "feature": "edumia:tree/temperate/holly/holly_tree_bees"
+      }
+    ]
+  }
+}

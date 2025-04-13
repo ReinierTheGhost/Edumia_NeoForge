@@ -1,0 +1,58 @@
+{
+  "type": "minecraft:tree",
+  "config": {
+    "decorators": [
+      {
+        "type": "minecraft:alter_ground",
+        "provider": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "edumia:volcanic_dirt"
+          }
+        }
+      }
+    ],
+    "dirt_provider": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "minecraft:dirt"
+      }
+    },
+    "foliage_placer": {
+      "type": "edumia:empty_foliage_placer"
+    },
+    "foliage_provider": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "minecraft:air"
+      }
+    },
+    "force_dirt": false,
+    "ignore_vines": false,
+    "minimum_size": {
+      "type": "minecraft:two_layers_feature_size",
+      "limit": 1,
+      "lower_size": 0,
+      "upper_size": 2
+    },
+    "trunk_placer": {
+      "type": "edumia:large_trunk_placer",
+      "base_hadius": 1.2,
+      "base_height": 13,
+      "iteration": 3,
+      "iteration_percentage": 0.32,
+      "random_height": 2,
+      "tip_hadius": 0.67,
+      "velocity": 6.0
+    },
+    "trunk_provider": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "edumia:charred_log",
+        "Properties": {
+          "axis": "y"
+        }
+      }
+    }
+  }
+}

@@ -2,6 +2,7 @@ package com.legends.edumia.world.trees.foliageplacer;
 
 import com.legends.edumia.world.trees.EdumiaFoliagePlacerTypes;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.valueproviders.IntProvider;
@@ -13,7 +14,7 @@ import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacerTy
 import javax.swing.tree.TreeNode;
 
 public class EdumiaPineFoliagePlacer extends FoliagePlacer {
-    public static final Codec<EdumiaPineFoliagePlacer> CODEC = RecordCodecBuilder.create((instance) ->
+    public static final MapCodec<EdumiaPineFoliagePlacer> CODEC = RecordCodecBuilder.mapCodec((instance) ->
             foliagePlacerParts(instance).and(IntProvider.codec(0, 24).fieldOf("foliage_height").forGetter((foliage) ->
                     foliage.heightSpread)
             ).apply(instance, EdumiaPineFoliagePlacer::new));

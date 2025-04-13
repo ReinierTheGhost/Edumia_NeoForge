@@ -4,6 +4,7 @@ package com.legends.edumia.world.trees.trunkplacers;
 import com.legends.edumia.world.features.EdumiaFeatures;
 import com.legends.edumia.world.trees.EdumiaTrunkPlacerTypes;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -21,7 +22,7 @@ import java.util.Optional;
 import java.util.function.BiConsumer;
 
 public class PleodendronTrunkPlacer extends ExtendedTrunkPlacer{
-    public static final Codec<PleodendronTrunkPlacer> CODEC = RecordCodecBuilder.create(instance ->
+    public static final MapCodec<PleodendronTrunkPlacer> CODEC = RecordCodecBuilder.mapCodec(instance ->
         trunkPlacerParts(instance)
                 .apply(instance, PleodendronTrunkPlacer::new));
 

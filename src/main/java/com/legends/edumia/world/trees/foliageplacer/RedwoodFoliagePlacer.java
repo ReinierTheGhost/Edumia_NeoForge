@@ -2,6 +2,7 @@ package com.legends.edumia.world.trees.foliageplacer;
 
 import com.legends.edumia.world.trees.EdumiaFoliagePlacerTypes;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
@@ -14,7 +15,7 @@ import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacerTy
 import javax.swing.tree.TreeNode;
 
 public class RedwoodFoliagePlacer extends FoliagePlacer {
-    public static final Codec<RedwoodFoliagePlacer> CODEC = RecordCodecBuilder.create(instance -> foliagePlacerParts(instance).and(
+    public static final MapCodec<RedwoodFoliagePlacer> CODEC = RecordCodecBuilder.mapCodec(instance -> foliagePlacerParts(instance).and(
                     instance.group(IntProvider.codec(0, 15).fieldOf("mid_segments").forGetter(placer -> placer.midSegments),
                             Codec.intRange(1, 3).fieldOf("trunk_width").forGetter(placer -> placer.trunkWidth)))
             .apply(instance, RedwoodFoliagePlacer::new));

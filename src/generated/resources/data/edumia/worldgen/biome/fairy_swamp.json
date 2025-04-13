@@ -1,0 +1,68 @@
+{
+  "carvers": {},
+  "downfall": 0.5,
+  "effects": {
+    "fog_color": 8821922,
+    "foliage_color": 4284215,
+    "grass_color": 4546876,
+    "sky_color": 6981536,
+    "water_color": 7111535,
+    "water_fog_color": 1458241
+  },
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "minecraft:disk_clay",
+      "minecraft:disk_gravel",
+      "minecraft:disk_sand",
+      "minecraft:ore_andesite_lower",
+      "minecraft:ore_andesite_upper",
+      "minecraft:ore_coal_upper",
+      "minecraft:ore_diorite_lower",
+      "minecraft:ore_diorite_upper",
+      "minecraft:ore_dirt",
+      "minecraft:ore_granite_lower",
+      "minecraft:ore_granite_upper",
+      "minecraft:ore_gravel",
+      "minecraft:ore_tuff"
+    ],
+    [],
+    [],
+    [
+      "edumia:boulders/big_mossy_boulder",
+      "edumia:boulders/mossy_boulder",
+      "edumia:reeds",
+      "edumia:tree/oaks/oak/oak_bush_tree",
+      "edumia:tree/temperate/willow/willow_tree",
+      "minecraft:brown_mushroom_normal",
+      "minecraft:glow_lichen",
+      "minecraft:patch_berry_rare",
+      "minecraft:patch_grass_forest",
+      "minecraft:patch_grass_taiga",
+      "minecraft:patch_large_fern",
+      "minecraft:patch_tall_grass_2",
+      "minecraft:red_mushroom_normal"
+    ],
+    [
+      "minecraft:freeze_top_layer"
+    ]
+  ],
+  "has_precipitation": true,
+  "spawn_costs": {},
+  "spawners": {
+    "ambient": [],
+    "axolotls": [],
+    "creature": [],
+    "misc": [],
+    "monster": [],
+    "underground_water_creature": [],
+    "water_ambient": [],
+    "water_creature": []
+  },
+  "temperature": 0.5
+}

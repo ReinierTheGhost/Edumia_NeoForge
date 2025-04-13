@@ -1,0 +1,19 @@
+{
+  "type": "edumia:crystal",
+  "config": {
+    "state_provider": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "edumia:high_elven_crystal",
+        "Properties": {
+          "facing": "up",
+          "waterlogged": "false"
+        }
+      }
+    },
+    "tries": 64,
+    "xspread": 6,
+    "yspread": 4,
+    "zspread": 6
+  }
+}
