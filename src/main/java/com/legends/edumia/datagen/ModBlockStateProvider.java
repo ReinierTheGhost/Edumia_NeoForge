@@ -191,10 +191,15 @@ public class ModBlockStateProvider extends ModModelProvider {
         slateBlock(BlockLoader.BROWN_SANDSTONE_SLATES.get());
         blockItem(BlockLoader.BROWN_SANDSTONE_SLATES.get());
         blockColum(BlockLoader.CHISELED_ANDESITE.get());
+        blockItem(BlockLoader.CHISELED_ANDESITE.get());
         blockColum(BlockLoader.CHISELED_GRANITE.get());
+        blockItem(BlockLoader.CHISELED_GRANITE.get());
         blockColum(BlockLoader.CHISELED_DRIPSTONE.get());
+        blockItem(BlockLoader.CHISELED_DRIPSTONE.get());
         blockColum(BlockLoader.CHISELED_DIORITE.get());
+        blockItem(BlockLoader.CHISELED_DIORITE.get());
         blockColum(BlockLoader.DIRTY_CHALK.get());
+        blockItem(BlockLoader.DIRTY_CHALK.get());
 
     }
 

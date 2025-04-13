@@ -23,6 +23,7 @@ import java.util.List;
 import java.util.Set;
 
 public class ModBlockLootTableProvider extends BlockLootSubProvider {
+    private final float[] LEAVES_STICK_DROP_CHANCE = new float[]{0.02f, 0.022222223f, 0.025f, 0.033333335f, 0.1f};
 
     protected ModBlockLootTableProvider(HolderLookup.Provider registries) {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags(), registries);
@@ -39,8 +40,9 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
             dropWhenSilkTouch(block);
         }
 
-        for (Block block : LeavesDrops.blocks){
-            dropSelf(block);
+        for (LeavesDrops.LeavesDrop block : LeavesDrops.blocks){
+            this.add(block.block(),
+                    b -> createLeavesDrops(block.block(), block.drop(), NORMAL_LEAVES_SAPLING_CHANCES));
         }
 
         for (Block block : DoorDrops.blocks){

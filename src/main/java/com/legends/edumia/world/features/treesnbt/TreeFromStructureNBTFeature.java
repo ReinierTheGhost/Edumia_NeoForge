@@ -1,7 +1,5 @@
 package com.legends.edumia.world.features.treesnbt;
 
-import com.legends.edumia.world.features.bouders.BoulderFeature;
-import com.legends.edumia.world.features.bouders.BouldersFeatureConfig;
 import com.mojang.serialization.Codec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

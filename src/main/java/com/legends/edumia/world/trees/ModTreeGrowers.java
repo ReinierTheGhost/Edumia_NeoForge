@@ -2,10 +2,7 @@ package com.legends.edumia.world.trees;
 
 import com.legends.edumia.Edumia;
 import com.legends.edumia.world.congiguredfeatures.TreeConfiguredFeatures;
-import com.legends.edumia.world.congiguredfeatures.trees.BeechTreeConfiguredFeatures;
-import com.legends.edumia.world.congiguredfeatures.trees.OakTreeConfiguredFeatures;
-import com.legends.edumia.world.congiguredfeatures.trees.TemperateTreeConfiguredFeatures;
-import com.legends.edumia.world.congiguredfeatures.trees.TropicalTreeConfiguredFeatures;
+import com.legends.edumia.world.congiguredfeatures.trees.*;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -32,6 +29,9 @@ public class ModTreeGrowers {
 
     public static final TreeGrower BLACK_OAK = new TreeGrower(Edumia.MOD_ID + ":black_oak",
             Optional.empty(), Optional.of(OakTreeConfiguredFeatures.BLACK_OAK_KEY), Optional.empty());
+
+    public static final TreeGrower TEST = new TreeGrower(Edumia.MOD_ID + ":test",
+            Optional.empty(), Optional.of(MahoganyConfiguredFeatures.MAHOGANY_NBT), Optional.empty());
 
 
 }

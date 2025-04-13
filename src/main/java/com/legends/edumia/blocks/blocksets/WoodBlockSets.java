@@ -37,7 +37,7 @@ public class WoodBlockSets {
     public static SimpleBlockSet BANANA = registerWoodSet("banana", WOOD_STRENGTH, true, true, false, ModTreeGrowers.BANANA, List.of());
     public static SimpleBlockSet BEECH = registerWoodSet("beech", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
     public static SimpleBlockSet BLACKTHORN = registerWoodSet("blackthorn", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
-    public static SimpleBlockSet BLACK_OAK = registerWoodSet("black_oak", WOOD_STRENGTH, false, true, false, ModTreeGrowers.APPLE, List.of());
+    public static SimpleBlockSet BLACK_OAK = registerWoodSet("black_oak", WOOD_STRENGTH, false, true, false, ModTreeGrowers.BLACK_OAK, List.of());
 
     public static SimpleBlockSet CEDAR = registerWoodSet("cedar", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
     public static SimpleBlockSet CHARRED = registerWoodSet("charred", WOOD_STRENGTH, false, false, false, null, List.of());

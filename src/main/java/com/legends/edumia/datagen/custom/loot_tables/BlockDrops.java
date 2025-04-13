@@ -34,6 +34,7 @@ public class BlockDrops {
             add(BlockLoader.SANDSTONE_PILLAR.get());
             add(BlockLoader.STONE_PILLAR.get());
             add(BlockLoader.VOLCANIC_DIRT.get());
+            add(BlockLoader.TEST_SAPLING.get());
         }
     };
 }

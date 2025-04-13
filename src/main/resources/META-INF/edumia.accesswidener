@@ -4,3 +4,7 @@ accessible method net/minecraft/world/level/block/Blocks never(Lnet.minecraft.wo
 accessible field net/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate palettes Ljava/util/List;
 accessible method net/minecraft/world/level/block/LeavesBlock updateDistance (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
 accessible method net/minecraft/world/level/levelgen/feature/TreeFeature setBlockKnownShape (Lnet/minecraft/world/level/LevelWriter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
+
+accessible field net/minecraft/client/gui/components/AbstractWidget x I
+accessible field net/minecraft/client/gui/components/AbstractWidget y I
+accessible method net/minecraft/client/gui/components/AbstractWidget render (Lnet/minecraft/client/gui/GuiGraphics;IIF)V

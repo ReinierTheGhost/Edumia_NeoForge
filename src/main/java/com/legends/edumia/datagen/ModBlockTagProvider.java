@@ -54,5 +54,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.LOGS)
                 .add(Logs.logs.toArray(new Block[0]));
+
+        tag(TagLoader.Blocks.GROUND_MAHOGANY_SAPLING)
+                .add(Blocks.DIRT);
     }
 }

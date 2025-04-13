@@ -4,6 +4,8 @@ import com.legends.edumia.blocks.blocksets.*;
 import com.legends.edumia.datagen.custom.loot_tables.*;
 import com.legends.edumia.datagen.custom.models.*;
 import com.legends.edumia.datagen.custom.tags.*;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Blocks;
 
 public class EdumiaHelpingGenerator {
     public static void generateFiles() {
@@ -150,7 +152,12 @@ public class EdumiaHelpingGenerator {
             }
             if(set.leaves() != null) {
                 SimpleLeavesModel.blocks.add(set.leaves().get());
-                LeavesDrops.blocks.add(set.leaves().get());
+                if (set.sapling() != null){
+                    LeavesDrops.blocks.add(new LeavesDrops.LeavesDrop(set.leaves().get(), set.sapling().get()));
+                }else {
+                    LeavesDrops.blocks.add(new LeavesDrops.LeavesDrop(set.leaves().get(), Blocks.OAK_SAPLING));
+                }
+
                 Leaves.leaves.add(set.leaves().get());
             }
 

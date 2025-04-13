@@ -3,6 +3,7 @@ package com.legends.edumia.core;
 import com.legends.edumia.Edumia;
 import com.legends.edumia.blocks.CrystalBlock;
 import com.legends.edumia.blocks.EdumiaPillarBlock;
+import com.legends.edumia.world.trees.ModTreeGrowers;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
@@ -59,6 +60,9 @@ public class BlockLoader {
     public static final DeferredBlock<Block> DIRTY_CHALK = registerBlock("dirty_chalk", () ->
             new RotatedPillarBlock(BlockBehaviour.Properties.of().requiresCorrectToolForDrops()
                     .strength(2f, 6f)));
+
+    public static final DeferredBlock<Block> TEST_SAPLING = registerBlock("test_sapling", () ->
+            new SaplingBlock(ModTreeGrowers.TEST, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

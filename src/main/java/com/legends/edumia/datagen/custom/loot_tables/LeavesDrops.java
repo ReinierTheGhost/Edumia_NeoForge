@@ -6,7 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LeavesDrops {
-    public static List<Block> blocks = new ArrayList<>() {
+    public record LeavesDrop(Block block, Block drop) {}
+    public static List<LeavesDrop> blocks = new ArrayList<>() {
         {
         }
     };

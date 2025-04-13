@@ -183,37 +183,7 @@ public class CreativeTabLoader {
                                 entries.accept(ModNatureBlocks.PAPYRUS.get());
                                 entries.accept(ModNatureBlocks.REEDS.get());
                                 entries.accept(ModNatureBlocks.DRIED_REEDS.get());
-//                                entries.accept(ModNatureBlocks.TEST_SAPLING.get());
-//                                entries.accept(ModNatureBlocks.APPLE_SAPLING.get());
-//                                entries.accept(ModNatureBlocks.BANANA_SAPLING.get());
-//                                entries.accept(ModNatureBlocks.ASPEN_SAPLING.get());
-//                                entries.accept(ModNatureBlocks.GHOST_GUM_SAPLING.get());
-//
-//                                entries.accept(ModNatureBlocks.BEECH_SAPLING.get());
-//                                entries.accept(ModNatureBlocks.BLACKTHORN_SAPLING.get());
-//                                entries.accept(ModNatureBlocks.BLACK_OAK_SAPLING.get());
-//                                entries.accept(ModNatureBlocks.CEDAR_SAPLING.get());
-//                                entries.accept(ModNatureBlocks.CHERRY_SAPLING.get());
-//                                entries.accept(ModNatureBlocks.CYPRESS_SAPLING.get());
-//                                entries.accept(ModNatureBlocks.DRAGON_BLOOD_SAPLING.get());
-//                                entries.accept(ModNatureBlocks.FIR_SAPLING.get());
-//                                entries.accept(ModNatureBlocks.GREEN_OAK_SAPLING.get());
-//                                entries.accept(ModNatureBlocks.HOLLY_SAPLING.get());
-//                                entries.accept(ModNatureBlocks.LARCH_SAPLING.get());
-//                                entries.accept(ModNatureBlocks.MAHOGANY_SAPLING.get());
-//                                entries.accept(ModNatureBlocks.MAPLE_SAPLING.get());
-//                                entries.accept(ModNatureBlocks.MANGO_SAPLING.get());
-//
-//
-//                                entries.accept(ModNatureBlocks.PEAR_SAPLING.get());
-//
-//                                entries.accept(ModNatureBlocks.PALM_SAPLING.get());
-//                                entries.accept(ModNatureBlocks.PINE_SAPLING.get());
-//                                entries.accept(ModNatureBlocks.RED_OAK_SAPLING.get());
-//                                entries.accept(ModNatureBlocks.REDWOOD_SAPLING.get());
-//                                entries.accept(ModNatureBlocks.SILVER_SPRUCE_SAPLING.get());
-//                                entries.accept(ModNatureBlocks.WHITE_ASH_SAPLING.get());
-//                                entries.accept(ModNatureBlocks.WILLOW_SAPLING.get());
+
 
                             }).build());
 
@@ -260,7 +230,7 @@ public class CreativeTabLoader {
                             .title(Component.translatable("creativetab.edumia_rewards"))
                             .displayItems((displayParameters, entries) -> {
                                 entries.accept(ItemLoader.LEGENDS_COIN.get());
-                                //entries.accept(ItemLoader.ATLAS.get());
+                                entries.accept(BlockLoader.TEST_SAPLING.get());
                             }).build());
 
     public static final Supplier<CreativeModeTab>  EDUMIA_GEMS = CREATIVE_MODE_TAB.register("edumia_gems",() ->
