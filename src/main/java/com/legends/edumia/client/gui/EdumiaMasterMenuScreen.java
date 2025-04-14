@@ -2,6 +2,7 @@ package com.legends.edumia.client.gui;
 
 import com.legends.edumia.Edumia;
 import com.legends.edumia.client.gui.map.EdumiaMapScreen;
+import com.legends.edumia.client.gui.map.EdumiaNewMapScreen;
 import com.legends.edumia.client.gui.widget.button.EdumiaMenuButton;
 import com.legends.edumia.world.dimension.ModDimensions;
 import net.minecraft.client.gui.GuiGraphics;
@@ -45,7 +46,7 @@ public class EdumiaMasterMenuScreen extends BasicIngameScreen{
         this.addRenderableWidget(new EdumiaMenuButton(this.width / 2 - 16, this.height / 2 - 37, EdumiaMapScreen.class,
                 Component.translatable("gui.edumia.map"),
                 3, 77, this.createNarration));
-        this.addRenderableWidget(new EdumiaMenuButton(this.width / 2 + 26, this.height / 2 - 37, null,
+        this.addRenderableWidget(new EdumiaMenuButton(this.width / 2 + 26, this.height / 2 - 37, EdumiaNewMapScreen.class,
                 Component.translatable("gui.edumia.faction"),
                 4, 70, this.createNarration));
 
@@ -135,7 +136,7 @@ public class EdumiaMasterMenuScreen extends BasicIngameScreen{
     public static Screen openMenu(Player player){
         if (lastMenuScreen != null){
             try {
-                return (Screen) lastMenuScreen.newInstance();
+                return lastMenuScreen.newInstance();
             }catch (Exception var2){
                 var2.printStackTrace();
             }

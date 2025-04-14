@@ -22,7 +22,7 @@ public class WorldTeleporterItem extends Item {
                 //user.getInventory().removeStack(user.getActiveHand().ordinal());
                 user.getItemInHand(hand).shrink(1);
             }
-            ModDimensions.teleportPlayerToME(user);
+            ModDimensions.teleportPlayerToEdumia(user);
         }
         return super.use(world, user, hand);
     }

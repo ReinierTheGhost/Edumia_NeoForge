@@ -2,7 +2,6 @@ package com.legends.edumia.client.gui.widget.button;
 
 import com.legends.edumia.client.gui.EdumiaMasterMenuScreen;
 import com.legends.edumia.client.gui.EdumiaMenuScreen;
-import com.legends.edumia.client.gui.map.EdumiaMapScreen;
 import com.legends.edumia.utils.EdumiaLog;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.Minecraft;
@@ -36,7 +35,7 @@ public class EdumiaMenuButton extends Button {
     public void openMenuScreen(){
         if (this.menuScreenClass != null){
             try {
-                EdumiaMenuScreen screen = (EdumiaMenuScreen) this.menuScreenClass.newInstance();
+                EdumiaMenuScreen screen = this.menuScreenClass.newInstance();
                 Minecraft.getInstance().setScreen(screen);
                 EdumiaMasterMenuScreen.lastMenuScreen = screen.getClass();
             }catch (Exception var2){

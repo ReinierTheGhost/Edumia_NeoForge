@@ -2137,8 +2137,32 @@
   "block.edumia.willow_door": "Willow door",
   "block.edumia.willow_trapdoor": "Willow trapdoor",
 
-  "gui.edumia.map.coords": "x : %d, z: %d",
+
 
   "#Comment:": "biomes",
-  "biome.edumia.ocean_coast": "Ocean coast"
+  "biome.edumia.ocean_coast": "Ocean coast",
+  "biome.edumia.demon_wastelands": "Demon wastelands",
+  "biome.edumia.edumia_vales": "Edumia vales",
+  "biome.edumia.gensai_beach": "Gensai beach",
+  "biome.edumia.dark_elf_forest": "Dark elven forest",
+
+  "#Comment": "Keybinds",
+  "key.category.edumia.edumia": "Edumia",
+  "key.edumia.map_teleport": "Map Teleport",
+  "key.edumia.map_fullscreen_toggle": "Toggle Map Fullscreen",
+
+  "#Comment:": "UI Edumia Map Screen",
+  "ui.edumia.map_screen.button.fullscreen_toggle": "Toggle Fullscreen Button",
+  "ui.edumia.map_screen.button.map_overlay_toggle": "Map Overlay Toggle Button",
+  "ui.edumia.map_screen.button.recenter_on_player": "Recenter on Player Button",
+  "ui.edumia.map_screen.button.zoom_in": "Zoom In Button",
+  "ui.edumia.map_screen.button.zoom_out": "Zoom Out Button",
+  "ui.edumia.map_screen.tooltip.coordinates_title": "Coordinates",
+  "ui.edumia.map_screen.tooltip.coordinates_label": "[x,z] ",
+  "ui.edumia.map_screen.tooltip.coordinates_content": "%s, %s",
+  "ui.edumia.map_screen.tooltip.biome_label": "[Biome] ",
+  "ui.edumia.map_screen.tooltip.biome_content": "%s",
+  "ui.edumia.map_screen.tooltip.teleport_keybind": "[%s] to teleport",
+  "gui.edumia.map.coords": "x : %d, z: %d",
+  "ui.edumia.map_screen.map_title_text": "Edumia Map"
 }

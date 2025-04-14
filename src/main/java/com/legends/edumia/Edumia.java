@@ -129,4 +129,5 @@ public class Edumia
     public static ResourceLocation location(String name) {
         return ResourceLocation.fromNamespaceAndPath(MOD_ID, name);
     }
+
 }

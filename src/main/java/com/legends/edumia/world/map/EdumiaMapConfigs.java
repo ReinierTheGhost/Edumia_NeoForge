@@ -35,6 +35,7 @@ public class EdumiaMapConfigs {
     public static final String BASE_EDGE_IMAGE_NAME = "/base_edge.png";
     public static final String IMAGE_NAME = "/%s_%s.png";
     public static final String INITIAL_IMAGE = "assets/%s/textures/map.png".formatted(Edumia.MOD_ID);
+    public static final String INITIAL_PLAYER_IMAGE = "assets/%s/textures/edumia_map_3000.png".formatted(Edumia.MOD_ID);
     public static final String INITIAL_MAP_FOLDER = "assets/%s/textures/map_data/%s".formatted(Edumia.MOD_ID, Edumia.MOD_VERSION);
 
 
