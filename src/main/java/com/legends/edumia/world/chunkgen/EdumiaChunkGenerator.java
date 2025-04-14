@@ -219,8 +219,8 @@ public class EdumiaChunkGenerator extends ChunkGenerator {
                         trySetBlock(chunk, chunk.getPos().getBlockAt(x, currentHeight++, z), layerData.block.defaultBlockState());
                     }
                 }
-                chunk.setBlockState(chunk.getPos().getBlockAt(x, (int) (HEIGHT + height - 2), z), customHeightBiomeHeightData.getBiome().getBlocksLayering().layers.get(0).block.defaultBlockState(), false);
-                BlockState surfaceBlock = customHeightBiomeHeightData.getBiome().getSlopeMap().slopeDatas.get(0).block.defaultBlockState();
+                chunk.setBlockState(chunk.getPos().getBlockAt(x, (int) (HEIGHT + height - 2), z), customHeightBiomeHeightData.getBiome().getBlocksLayering().layers.getFirst().block.defaultBlockState(), false);
+                BlockState surfaceBlock = customHeightBiomeHeightData.getBiome().getSlopeMap().slopeDatas.getFirst().block.defaultBlockState();
                 BlockState underSurfaceBlock;
 
 

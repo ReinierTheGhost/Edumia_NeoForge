@@ -1,12 +1,12 @@
-// 1.21.1	2025-04-13T19:59:50.6350725	Tags for minecraft:block mod id edumia
+// 1.21.1	2025-04-14T22:33:31.9251548	Tags for minecraft:block mod id edumia
 d28d6e4f7a681ca019e0f4ec5a7bd7f77b0910ef data/edumia/tags/block/mahogany_sapling.json
 5bc26f32df9c5443206420b788f005eed02475af data/edumia/tags/block/pillars.json
 e0a07978460f4749036464e8f84b21780b52bcb5 data/edumia/tags/block/reeds_placeable_on.json
-a2db0eca884883f7d122434b326bfa0237729bf3 data/minecraft/tags/block/buttons.json
-84f1433c9dcd8be9555430a41b16ad6215d3b58f data/minecraft/tags/block/fences.json
-62dbb79fc002ee5c7b4dbd7937b42e2eba4a3d57 data/minecraft/tags/block/fence_gates.json
-4fa4d1ed3673a82113385834fc20c16bd99f8607 data/minecraft/tags/block/logs.json
+5a03798f9b072068e0c33da534145cc0fe36fa44 data/minecraft/tags/block/buttons.json
+0b81516bdd7b0f0d4e0e94b328817eb5c28bebcd data/minecraft/tags/block/fences.json
+cfb90336de1a04700e244f70c23d971d700365d4 data/minecraft/tags/block/fence_gates.json
+2fb289a730c55c27461270ce78cfd9c475997cf5 data/minecraft/tags/block/logs.json
 1cd7e9e5a08633520ae91c27bfeeeb3ad3ec46e7 data/minecraft/tags/block/mineable/pickaxe.json
 6842bd09f89aeb282bf9ab7ddc3e2ade90f606f6 data/minecraft/tags/block/needs_iron_tool.json
 c11b43ff2c663b051d35e9a2ed13ffed1a36da02 data/minecraft/tags/block/needs_stone_tool.json
-146b27cb3394ae7ec21af9a1998e6863e034bf04 data/minecraft/tags/block/walls.json
+55963315baf767f003c426a7dd0c7599387747e4 data/minecraft/tags/block/walls.json

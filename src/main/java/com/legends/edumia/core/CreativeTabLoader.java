@@ -139,6 +139,10 @@ public class CreativeTabLoader {
 
                                 for (WoodBlockSets.SimpleVanillaBlocks wood: WoodBlockSets.beams){
                                     entries.accept(wood.beam().get());
+                                    entries.accept(wood.woodStairs().get());
+                                    entries.accept(wood.woodSlab().get());
+                                    entries.accept(wood.woodFence().get());
+                                    entries.accept(wood.woodWall().get());
                                 }
                             }).build());
 

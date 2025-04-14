@@ -32,6 +32,7 @@ public class WoodBlockSets {
     public static final float PLATE_BUTTON_STRENGTH = 0.5f;
     public static final float LEAVES_STRENGTH = 0.1f;
 
+    public static SimpleBlockSet ALMOND = registerWoodSet("almond", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
     public static SimpleBlockSet APPLE = registerWoodSet("apple", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
     public static SimpleBlockSet ASPEN = registerWoodSet("aspen", WOOD_STRENGTH, true, true, false, ModTreeGrowers.ASPEN, List.of());
     public static SimpleBlockSet BANANA = registerWoodSet("banana", WOOD_STRENGTH, true, true, false, ModTreeGrowers.BANANA, List.of());
@@ -53,6 +54,7 @@ public class WoodBlockSets {
     public static SimpleBlockSet MAHOGANY = registerWoodSet("mahogany", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
     public static SimpleBlockSet MANGO = registerWoodSet("mango", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
     public static SimpleBlockSet MAPLE = registerWoodSet("maple", WOOD_STRENGTH, false, true, false, ModTreeGrowers.APPLE, List.of());
+//    public static SimpleBlockSet OLIVE = registerWoodSet("olive", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
     public static SimpleBlockSet PALM = registerWoodSet("palm", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
     public static SimpleBlockSet PEAR = registerWoodSet("pear", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
     public static SimpleBlockSet PINE = registerWoodSet("pine", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
@@ -73,6 +75,7 @@ public class WoodBlockSets {
 
 
     public static SimpleBlockSet[] sets = new SimpleBlockSet[] {
+            ALMOND,
             APPLE,
             ASPEN,
             BANANA,
@@ -92,6 +95,7 @@ public class WoodBlockSets {
             MAHOGANY,
             MANGO,
             MAPLE,
+//            OLIVE,
             PALM,
             PEAR,
             PINE,

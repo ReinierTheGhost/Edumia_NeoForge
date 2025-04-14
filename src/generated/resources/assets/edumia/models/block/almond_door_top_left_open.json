@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_top_left_open",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "edumia:block/almond_door_bottom",
+    "top": "edumia:block/almond_door_top"
+  }
+}

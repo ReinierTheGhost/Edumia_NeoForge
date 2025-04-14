@@ -1,6 +1,12 @@
-// 1.21.1	2025-04-13T20:05:28.3608302	Item Models: edumia
+// 1.21.1	2025-04-14T22:33:31.9140552	Item Models: edumia
 047baa6b7a95aadfec14d478dfdf8c290cbd8220 assets/edumia/models/item/acacia_wood_fence.json
 4879a2f3030853ef57cc6d67266684061b3752ec assets/edumia/models/item/acacia_wood_wall.json
+386253d46a85a3515508b2f2812157712b0633d8 assets/edumia/models/item/almond_button.json
+8831fa0ee4d38a992b31690624d59fa13f2f7b03 assets/edumia/models/item/almond_door.json
+f460ef7e6f5466d06f1e5baf38c3a2b8210ab59b assets/edumia/models/item/almond_fence.json
+af104af1ebe2ae828fdd5de3190c45ae7534462b assets/edumia/models/item/almond_sapling.json
+94ce71968e9198129434c68d92714bb22e794d73 assets/edumia/models/item/almond_wood_fence.json
+13c5a9aa148309e102656df51f901c5631b7f75b assets/edumia/models/item/almond_wood_wall.json
 e96f63ef1df9a9d2a06772db534502babd48b246 assets/edumia/models/item/andesite_bricks_wall.json
 cb9f0b3b0b814c18d0fee66efa6965d980d71f14 assets/edumia/models/item/apple_button.json
 f6c62996820cc525a3ec8022cfafdc0c0c8a7cde assets/edumia/models/item/apple_door.json
@@ -364,6 +370,8 @@ d2f24b91d300c2cb9f9c6cb95025ce30f688394b assets/edumia/models/item/simbelmyne.js
 7f9e4917d2e3a0e5daf8f624db65461402fd24e7 assets/edumia/models/item/spinach.json
 8072cb918bdfa990e023bdbc10ab185c531e45c5 assets/edumia/models/item/spruce_wood_fence.json
 8d63918a1877256cee52ab36f2b22de012750de6 assets/edumia/models/item/spruce_wood_wall.json
+01883888e448600fae9c913e7060568649aa549e assets/edumia/models/item/stripped_almond_wood_fence.json
+9274ecde81b5d1965a6944d6665f3d7d91192b16 assets/edumia/models/item/stripped_almond_wood_wall.json
 d94653773fd8261983280e64927c1b2ceb650c54 assets/edumia/models/item/stripped_apple_wood_fence.json
 d57c5d9e3e5e120b1ce5ad62f0a635fd171dc3ad assets/edumia/models/item/stripped_apple_wood_wall.json
 bdc8958d8c7bd3c3efa719d63896f9a2e97cbae3 assets/edumia/models/item/stripped_aspen_wood_fence.json
