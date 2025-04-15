@@ -43,13 +43,12 @@ public class EdumiaMasterMenuScreen extends BasicIngameScreen{
                 Component.translatable("gui.edumia.achievements"),
                 2, 76, this.createNarration));
 
-        this.addRenderableWidget(new EdumiaMenuButton(this.width / 2 - 16, this.height / 2 - 37, EdumiaMapScreen.class,
+        this.addRenderableWidget(new EdumiaMenuButton(this.width / 2 - 16, this.height / 2 - 37, EdumiaNewMapScreen.class,
                 Component.translatable("gui.edumia.map"),
                 3, 77, this.createNarration));
-        this.addRenderableWidget(new EdumiaMenuButton(this.width / 2 + 26, this.height / 2 - 37, EdumiaNewMapScreen.class,
+        this.addRenderableWidget(new EdumiaMenuButton(this.width / 2 + 26, this.height / 2 - 37, null,
                 Component.translatable("gui.edumia.faction"),
                 4, 70, this.createNarration));
-
         this.addRenderableWidget(new EdumiaMenuButton(this.width / 2 - 79, this.height / 2 + 5, null,
                 Component.translatable("gui.edumia.parties"),
                 6, 75, this.createNarration));

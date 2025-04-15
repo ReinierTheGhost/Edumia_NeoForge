@@ -26,8 +26,7 @@ public class EdumiaBiomeKeys extends Biomes {
 
     public static final ResourceKey<Biome> DARK_ELF_FOREST = EdumiaBiomeKeys.register("dark_elf_forest");
     public static final ResourceKey<Biome> EDUMIA_TUNDRA = EdumiaBiomeKeys.register("edumia_tundra");
-    public static final ResourceKey<Biome> FROZEN_OCEAN = EdumiaBiomeKeys.register("frozen_ocean");
-    public static final ResourceKey<Biome> FROZEN_POND = EdumiaBiomeKeys.register("frozen_pond");
+
 
     public static final ResourceKey<Biome> ORC_DESERT = EdumiaBiomeKeys.register("orc_desert");
     public static final ResourceKey<Biome> RED_ORC_DESERT = EdumiaBiomeKeys.register("red_orc_desert");
@@ -73,7 +72,8 @@ public class EdumiaBiomeKeys extends Biomes {
     public static final ResourceKey<Biome> FAIRY_SWAMP = EdumiaBiomeKeys.register("fairy_swamp");
     public static final ResourceKey<Biome> GREAT_RIVER = EdumiaBiomeKeys.register("great_river");
     public static final ResourceKey<Biome> WASTE_POND = EdumiaBiomeKeys.register("waste_pond");
-
+    public static final ResourceKey<Biome> FROZEN_OCEAN = EdumiaBiomeKeys.register("frozen_ocean");
+    public static final ResourceKey<Biome> FROZEN_POND = EdumiaBiomeKeys.register("frozen_pond");
     // endregion
 
     // region CAVES

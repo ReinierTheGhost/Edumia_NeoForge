@@ -79,7 +79,7 @@ public class MapWidget  extends ModWidget {
         return ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID,"textures/edumia_map_3000.png");
     }
     protected ResourceLocation getOverlayMapTexture(){
-        return ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID,"textures/map_overlay.png");
+        return ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID,"textures/map.png");
     }
     public void setOverlayState(boolean state){
         isOverlayEnabled = state;

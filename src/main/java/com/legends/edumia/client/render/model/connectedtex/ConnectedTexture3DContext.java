@@ -1,6 +1,5 @@
 package com.legends.edumia.client.render.model.connectedtex;
 
-import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import com.mojang.math.Transformation;
 import net.minecraft.Util;
@@ -119,6 +118,10 @@ public class ConnectedTexture3DContext {
                 isIrrelevantCompoundOffsetPosition(poi, this::has));
     }
 
+    public ConnectedTexture2DContext getFace2DContext(Direction face){
+        return (ConnectedTexture2DContext) ((Map)CONTEXT_TO_FACE_2D_CONTEXT_MAP.get(this.combinedPositionBitFlags)).get(face);
+    }
+
     @Override
     public boolean equals(Object other) {
         if (other == this){
@@ -185,9 +188,9 @@ public class ConnectedTexture3DContext {
 
         private final String name;
         private final BlockConnectionTest connectionTest;
-        private static final Map<String, BlockConnectionType> TYPES_BY_NAME = Stream.of(values()).collect(Collectors.toMap((type) ->
-            type.name
-        , UnaryOperator.identity()));
+        private static final Map<String, BlockConnectionType> TYPES_BY_NAME = Stream.of(values())
+                .collect(Collectors.toMap((type) ->
+            type.name, UnaryOperator.identity()));
 
         private BlockConnectionType(String name, BlockConnectionTest connectionTest) {
             this.name = name;
@@ -208,8 +211,6 @@ public class ConnectedTexture3DContext {
         }
     }
     public static enum PositionOfInterest{
-
-
         DOWN("down", new Direction[]{Direction.DOWN}),
         UP("up", new Direction[]{Direction.UP}),
         NORTH("north", new Direction[]{Direction.NORTH}),
@@ -233,14 +234,18 @@ public class ConnectedTexture3DContext {
         public final String nameInJson;
         public final List<Direction> offsets;
 
-        private static final Map<String, PositionOfInterest> POSITIONS_BY_NAME = Stream.of(values()).collect(Collectors.toMap((poi) ->
-             poi.nameInJson
-        , UnaryOperator.identity()));
-        public static final Map<Direction, PositionOfInterest> SIMPLE_OFFSET_POSITIONS = Stream.of(values()).filter(PositionOfInterest::isSimpleOffset).collect(Collectors.toMap((poi) ->
-           poi.offsets.get(0)
-        , UnaryOperator.identity()));
-        public static final List<PositionOfInterest> COMPOUND_OFFSET_POSITIONS = Stream.of(values()).filter(PositionOfInterest::isCompoundOffset).collect(Collectors.toList());
-        PositionOfInterest(String s, Direction... offs) {
+        private static final Map<String, PositionOfInterest> POSITIONS_BY_NAME = Stream.of(values())
+                .collect(Collectors.toMap((poi) ->
+             poi.nameInJson, UnaryOperator.identity()));
+
+        public static final Map<Direction, PositionOfInterest> SIMPLE_OFFSET_POSITIONS = Stream.of(values())
+                .filter(PositionOfInterest::isSimpleOffset).collect(Collectors.toMap((poi) ->
+           poi.offsets.get(0), UnaryOperator.identity()));
+
+        public static final List<PositionOfInterest> COMPOUND_OFFSET_POSITIONS = Stream.of(values())
+                .filter(PositionOfInterest::isCompoundOffset).collect(Collectors.toList());
+
+        private PositionOfInterest(String s, Direction... offs) {
             this.nameInJson = s;
             this.offsets = Arrays.asList(offs);
             if (this.offsets.isEmpty()) {
