@@ -153,7 +153,10 @@ public class EdumiaHelpingGenerator {
             if(set.leaves() != null) {
                 SimpleLeavesModel.blocks.add(set.leaves().get());
                 if (set.sapling() != null){
-                    LeavesDrops.blocks.add(new LeavesDrops.LeavesDrop(set.leaves().get(), set.sapling().get()));
+                    if (set.leaves() != WoodBlockSets.MANGO.leaves()){
+                        LeavesDrops.blocks.add(new LeavesDrops.LeavesDrop(set.leaves().get(), set.sapling().get()));
+                    }
+
                 }else {
                     LeavesDrops.blocks.add(new LeavesDrops.LeavesDrop(set.leaves().get(), Blocks.OAK_SAPLING));
                 }

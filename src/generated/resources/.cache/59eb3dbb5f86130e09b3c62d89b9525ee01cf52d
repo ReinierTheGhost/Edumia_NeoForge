@@ -1,4 +1,4 @@
-// 1.21.1	2025-04-14T22:33:31.9771352	Loot Tables
+// 1.21.1	2025-04-16T13:38:07.6386445	Loot Tables
 e2e084dc074419dc92cea6e8c8e4b55544abe8a9 data/edumia/loot_table/blocks/acacia_beam.json
 48dea1c4c657ef265adaa4964922687a58720e07 data/edumia/loot_table/blocks/acacia_wood_fence.json
 2a4bb888c13048fc2acad9f55a5245f6ad35fc92 data/edumia/loot_table/blocks/acacia_wood_slab.json
@@ -951,7 +951,7 @@ de63d3e10399a94047cb585cb4419077ffe8b992 data/edumia/loot_table/blocks/mango_but
 f015eacae94d378673ae0793d1a1de9bbad905ba data/edumia/loot_table/blocks/mango_door.json
 24189aed14b511b1bb62945e61cd7d7282c80e5d data/edumia/loot_table/blocks/mango_fence.json
 fbf9b7152c143ada278ddf5fd696a1364eab9035 data/edumia/loot_table/blocks/mango_fence_gate.json
-d3222c9d4752e3b6bfc28e222e41eacf1dd61f62 data/edumia/loot_table/blocks/mango_leaves.json
+6d521f2639a7314f7cb4d8a07e187e4c4cef7dc0 data/edumia/loot_table/blocks/mango_leaves.json
 2e1af14b19c6a4b2222aed7528c0bf0ba0bb2d0b data/edumia/loot_table/blocks/mango_log.json
 32c10f76084c9502eb589fcf5c16311603c1d512 data/edumia/loot_table/blocks/mango_planks.json
 4c3a28c82b53b0e44e2a29a2dd537e120aec5b8e data/edumia/loot_table/blocks/mango_pressure_plate.json

@@ -32,37 +32,37 @@ public class WoodBlockSets {
     public static final float PLATE_BUTTON_STRENGTH = 0.5f;
     public static final float LEAVES_STRENGTH = 0.1f;
 
-    public static SimpleBlockSet ALMOND = registerWoodSet("almond", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
+    public static SimpleBlockSet ALMOND = registerWoodSet("almond", WOOD_STRENGTH, true, true, false, ModTreeGrowers.ALMOND, List.of());
     public static SimpleBlockSet APPLE = registerWoodSet("apple", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
     public static SimpleBlockSet ASPEN = registerWoodSet("aspen", WOOD_STRENGTH, true, true, false, ModTreeGrowers.ASPEN, List.of());
     public static SimpleBlockSet BANANA = registerWoodSet("banana", WOOD_STRENGTH, true, true, false, ModTreeGrowers.BANANA, List.of());
     public static SimpleBlockSet BEECH = registerWoodSet("beech", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
-    public static SimpleBlockSet BLACKTHORN = registerWoodSet("blackthorn", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
+    public static SimpleBlockSet BLACKTHORN = registerWoodSet("blackthorn", WOOD_STRENGTH, true, true, false, ModTreeGrowers.BLACKTHORN, List.of());
     public static SimpleBlockSet BLACK_OAK = registerWoodSet("black_oak", WOOD_STRENGTH, false, true, false, ModTreeGrowers.BLACK_OAK, List.of());
 
     public static SimpleBlockSet CEDAR = registerWoodSet("cedar", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
     public static SimpleBlockSet CHARRED = registerWoodSet("charred", WOOD_STRENGTH, false, false, false, null, List.of());
     public static SimpleBlockSet CHERRY = registerWoodSet("cherry", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
-    public static SimpleBlockSet CYPRESS = registerWoodSet("cypress", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
-    public static SimpleBlockSet DRAGON_BLOOD = registerWoodSet("dragon_blood", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
+    public static SimpleBlockSet CYPRESS = registerWoodSet("cypress", WOOD_STRENGTH, true, true, false, ModTreeGrowers.CYPRESS, List.of());
+    public static SimpleBlockSet DRAGON_BLOOD = registerWoodSet("dragon_blood", WOOD_STRENGTH, true, true, false, ModTreeGrowers.DRAGON_BLOOD, List.of());
 
-    public static SimpleBlockSet FIR = registerWoodSet("fir", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
-    public static SimpleBlockSet GHOST_GUM = registerWoodSet("ghost_gum", WOOD_STRENGTH, false, true, false, ModTreeGrowers.APPLE, List.of());
-    public static SimpleBlockSet GREEN_OAK = registerWoodSet("green_oak", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
-    public static SimpleBlockSet HOLLY = registerWoodSet("holly", WOOD_STRENGTH, false, true, false, ModTreeGrowers.APPLE, List.of());
+    public static SimpleBlockSet FIR = registerWoodSet("fir", WOOD_STRENGTH, true, true, false, ModTreeGrowers.FIR, List.of());
+    public static SimpleBlockSet GHOST_GUM = registerWoodSet("ghost_gum", WOOD_STRENGTH, false, true, false, ModTreeGrowers.GHOST_GUM, List.of());
+    public static SimpleBlockSet GREEN_OAK = registerWoodSet("green_oak", WOOD_STRENGTH, true, true, false, ModTreeGrowers.GREEN_OAK, List.of());
+    public static SimpleBlockSet HOLLY = registerWoodSet("holly", WOOD_STRENGTH, false, true, false, ModTreeGrowers.HOLLY, List.of());
     public static SimpleBlockSet LARCH = registerWoodSet("larch", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
-    public static SimpleBlockSet MAHOGANY = registerWoodSet("mahogany", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
-    public static SimpleBlockSet MANGO = registerWoodSet("mango", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
+    public static SimpleBlockSet MAHOGANY = registerWoodSet("mahogany", WOOD_STRENGTH, true, true, false, ModTreeGrowers.MAHOGANY, List.of());
+    public static SimpleBlockSet MANGO = registerWoodSet("mango", WOOD_STRENGTH, true, true, false, ModTreeGrowers.MANGO, List.of());
     public static SimpleBlockSet MAPLE = registerWoodSet("maple", WOOD_STRENGTH, false, true, false, ModTreeGrowers.APPLE, List.of());
 //    public static SimpleBlockSet OLIVE = registerWoodSet("olive", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
-    public static SimpleBlockSet PALM = registerWoodSet("palm", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
+    public static SimpleBlockSet PALM = registerWoodSet("palm", WOOD_STRENGTH, true, true, false, ModTreeGrowers.PALM, List.of());
     public static SimpleBlockSet PEAR = registerWoodSet("pear", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
-    public static SimpleBlockSet PINE = registerWoodSet("pine", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
-    public static SimpleBlockSet RED_OAK = registerWoodSet("red_oak", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
-    public static SimpleBlockSet REDWOOD = registerWoodSet("redwood", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
-    public static SimpleBlockSet SILVER_SPRUCE = registerWoodSet("silver_spruce", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
-    public static SimpleBlockSet WHITE_ASH = registerWoodSet("white_ash", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
-    public static SimpleBlockSet WILLOW = registerWoodSet("willow", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
+    public static SimpleBlockSet PINE = registerWoodSet("pine", WOOD_STRENGTH, true, true, false, ModTreeGrowers.PINE, List.of());
+    public static SimpleBlockSet RED_OAK = registerWoodSet("red_oak", WOOD_STRENGTH, true, true, false, ModTreeGrowers.RED_OAK, List.of());
+    public static SimpleBlockSet REDWOOD = registerWoodSet("redwood", WOOD_STRENGTH, true, true, false, ModTreeGrowers.REDWOOD, List.of());
+    public static SimpleBlockSet SILVER_SPRUCE = registerWoodSet("silver_spruce", WOOD_STRENGTH, true, true, false, ModTreeGrowers.SILVER_SPRUCE, List.of());
+    public static SimpleBlockSet WHITE_ASH = registerWoodSet("white_ash", WOOD_STRENGTH, true, true, false, ModTreeGrowers.WHITE_ASH, List.of());
+    public static SimpleBlockSet WILLOW = registerWoodSet("willow", WOOD_STRENGTH, true, true, false, ModTreeGrowers.WILLOW, List.of());
 
 
     public static SimpleVanillaBlocks OAK = registerBeams("oak", WOOD_STRENGTH, Blocks.OAK_WOOD, Blocks.OAK_LOG);
