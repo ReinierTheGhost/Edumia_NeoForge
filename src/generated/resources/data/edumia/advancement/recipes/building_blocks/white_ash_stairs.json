@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "edumia:white_ash_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_white_ash_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "edumia:white_ash_planks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_white_ash_planks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "edumia:white_ash_stairs"
+    ]
+  }
+}

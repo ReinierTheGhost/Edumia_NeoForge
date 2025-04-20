@@ -1,9 +1,9 @@
 package com.legends.edumia.datagen;
 
 import com.legends.edumia.Edumia;
-import com.legends.edumia.core.BlockLoader;
+import com.legends.edumia.blocks.blocksets.WoodBlockSets;
 import com.legends.edumia.core.TagLoader;
-import com.legends.edumia.datagen.custom.tags.*;
+import com.legends.edumia.datagen.helpers.tags.*;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
@@ -57,5 +57,13 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(TagLoader.Blocks.GROUND_MAHOGANY_SAPLING)
                 .add(Blocks.DIRT);
+
+        for (WoodBlockSets.SimpleBlockSet set : WoodBlockSets.sets){
+            tag(set.logBlockTag())
+                    .add(set.log().get())
+                    .add(set.wood().get())
+                    .add(set.strippedLog().get())
+                    .add(set.strippedWood().get());
+        }
     }
 }

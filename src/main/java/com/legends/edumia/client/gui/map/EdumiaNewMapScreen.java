@@ -9,7 +9,7 @@ import com.legends.edumia.client.gui.widget.backgrounds.BackgroundContainerWidge
 import com.legends.edumia.client.gui.widget.backgrounds.types.BackgroundContainerTypes;
 import com.legends.edumia.client.gui.widget.map.FullscreenToggeableMapWidget;
 import com.legends.edumia.network.packets.C2S.PacketTeleportToDynamicWorldCoordinate;
-import com.legends.edumia.utils.LoggerUtil;
+import com.legends.edumia.utils.EdumiaLog;
 import com.legends.edumia.utils.ModColors;
 import com.legends.edumia.world.biomes.surface.MapBasedCustomBiome;
 import com.legends.edumia.world.dimension.ModDimensions;
@@ -70,7 +70,7 @@ public class EdumiaNewMapScreen extends EdumiaMenuScreen {
         if (cameraEntity instanceof AbstractClientPlayer abstractClientPlayer){
             this.player = abstractClientPlayer;
         }else {
-            LoggerUtil.logError("EdumiaMapScreen::Init:Couldn't find player");
+            EdumiaLog.logError("EdumiaMapScreen::Init:Couldn't find player");
         }
 
         mapWidget = new FullscreenToggeableMapWidget(WIDTH - (MARGIN * 2), HEIGHT - (MARGIN * 2));

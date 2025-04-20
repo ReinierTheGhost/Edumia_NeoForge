@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "edumia:willow_wood_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_willow_wood": {
+      "conditions": {
+        "items": [
+          {
+            "items": "edumia:willow_wood"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_willow_wood"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "edumia:willow_wood_stairs"
+    ]
+  }
+}

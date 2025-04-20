@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "edumia:ghost_gum_planks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "edumia:ghost_gum_button"
+  }
+}

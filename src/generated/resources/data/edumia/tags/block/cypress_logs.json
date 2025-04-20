@@ -1,0 +1,8 @@
+{
+  "values": [
+    "edumia:cypress_log",
+    "edumia:cypress_wood",
+    "edumia:stripped_cypress_log",
+    "edumia:stripped_cypress_wood"
+  ]
+}

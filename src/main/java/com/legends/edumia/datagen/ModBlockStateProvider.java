@@ -2,8 +2,8 @@ package com.legends.edumia.datagen;
 
 import com.legends.edumia.Edumia;
 import com.legends.edumia.core.BlockLoader;
-import com.legends.edumia.datagen.custom.ModModelProvider;
-import com.legends.edumia.datagen.custom.models.*;
+import com.legends.edumia.datagen.helpers.ModModelProvider;
+import com.legends.edumia.datagen.helpers.models.*;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_green_oak_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "edumia:green_oak_planks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "edumia:green_oak_fence"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_green_oak_planks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "edumia:green_oak_fence"
+    ]
+  }
+}

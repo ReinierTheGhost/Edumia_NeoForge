@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_silver_spruce_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "edumia:silver_spruce_planks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "edumia:silver_spruce_fence"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_silver_spruce_planks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "edumia:silver_spruce_fence"
+    ]
+  }
+}

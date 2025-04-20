@@ -1,7 +1,7 @@
 package com.legends.edumia.datagen;
 
 import com.legends.edumia.Edumia;
-import com.legends.edumia.datagen.custom.EdumiaHelpingGenerator;
+import com.legends.edumia.datagen.helpers.EdumiaHelpingGenerator;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;

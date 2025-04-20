@@ -2484,7 +2484,8 @@
   "ui.edumia.map_screen.tooltip.teleport_keybind": "[%s] to teleport",
   "gui.edumia.map.coords": "x : %d, z: %d",
   "ui.edumia.map_screen.map_title_text": "Edumia Map",
-"screen.edumia.race_selection_screen": "Race Selection",
-"ui.edumia.search.toggle_button": "Search",
-"ui.edumia.search.screen_click_button": "Click"
+
+  "screen.edumia.faction_selection_screen": "Faction Selection",
+  "ui.edumia.search.toggle_button": "Search",
+  "ui.edumia.search.screen_click_button": "Click"
 }

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_redwood_wood": {
+      "conditions": {
+        "items": [
+          {
+            "items": "edumia:redwood_wood"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "edumia:redwood_wood_fence"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_redwood_wood"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "edumia:redwood_wood_fence"
+    ]
+  }
+}

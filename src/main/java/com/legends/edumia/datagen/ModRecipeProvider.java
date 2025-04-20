@@ -2,17 +2,23 @@ package com.legends.edumia.datagen;
 
 import com.legends.edumia.Edumia;
 import com.legends.edumia.blocks.blocksets.BuildingSets;
+import com.legends.edumia.blocks.blocksets.WoodBlockSets;
+import com.legends.edumia.datagen.helpers.resipes.BrickShape;
+import com.legends.edumia.datagen.helpers.resipes.Cooking;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
 import java.util.List;
@@ -34,12 +40,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, set.wall(), set.block());
 
             if (set.pillar() != null && set.pillarSlab() != null){
-                ShapedRecipeBuilder.shaped(RecipeCategory.MISC, set.pillar(), 3)
-                        .pattern("B")
-                        .pattern("B")
-                        .pattern("B")
-                        .define('B', set.block())
-                        .unlockedBy("has_" + name(set.block().get()), has(set.block())).save(recipeOutput);
+                pillar(recipeOutput, set.pillar(), set.block());
                 slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, set.pillarSlab(), set.pillar());
             }
 
@@ -77,9 +78,87 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .define('B', set.block())
                         .unlockedBy("has_" + name(set.block().get()), has(set.block())).save(recipeOutput);
             }
-
-
         }
+
+        for (WoodBlockSets.SimpleBlockSet set : WoodBlockSets.sets){
+            slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, set.planksSlab(), set.planks());
+            slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, set.woodSlab(), set.wood());
+            slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, set.strippedWoodSlab(), set.strippedWood());
+
+            stairBuilder(set.planksStairs(), Ingredient.of(set.planks()))
+                    .unlockedBy("has_" + name(set.planks().get()), has(set.planks())).save(recipeOutput);
+            stairBuilder(set.woodStairs(), Ingredient.of(set.wood()))
+                    .unlockedBy("has_" + name(set.wood().get()), has(set.wood())).save(recipeOutput);
+            stairBuilder(set.strippedWoodStairs(), Ingredient.of(set.strippedWood()))
+                    .unlockedBy("has_" + name(set.strippedWood().get()), has(set.strippedWood())).save(recipeOutput);
+
+            wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, set.woodWall(), set.wood());
+            wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, set.strippedWoodWall(), set.strippedWood());
+
+            fence(recipeOutput, set.planksFence(), set.planks());
+            fence(recipeOutput, set.woodFence(), set.wood());
+            fence(recipeOutput, set.strippedWoodFence(), set.strippedWood());
+
+            pillar(recipeOutput, set.beam(), set.log());
+            planksFromLogs(recipeOutput, set.planks(), set.logTag(), 4);
+            woodFromLogs(recipeOutput, set.wood(), set.log());
+            woodFromLogs(recipeOutput, set.strippedWood(), set.strippedLog());
+
+            buttonBuilder(set.button(), Ingredient.of(set.planks()))
+                    .unlockedBy("has_" + name(set.planks().get()), has(set.planks())).save(recipeOutput);
+            pressurePlate(recipeOutput, set.pressurePlate(), set.planks());
+            doorBuilder(set.door(), Ingredient.of(set.planks()))
+                    .unlockedBy("has_" + name(set.planks().get()), has(set.planks())).save(recipeOutput);
+            trapdoorBuilder(set.trapdoor(), Ingredient.of(set.planks()))
+                    .unlockedBy("has_" + name(set.planks().get()), has(set.planks())).save(recipeOutput);
+        }
+
+        for (WoodBlockSets.SimpleVanillaBlocks set : WoodBlockSets.beams){
+            pillar(recipeOutput, set.beam(), set.texture());
+        }
+        for (BrickShape.BrickRecipe set : BrickShape.blocks){
+            brickShape(recipeOutput, RecipeCategory.BUILDING_BLOCKS, set.output(), set.input());
+        }
+
+        for (Cooking.CookingRecipe set : Cooking.blocks){
+            smeltingSmooth(recipeOutput, set.output(), set.input());
+        }
+
+    }
+
+    protected static void smeltingSmooth(RecipeOutput recipeOutput, ItemLike result, ItemLike ingredient) {
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ingredient), RecipeCategory.BUILDING_BLOCKS, result, 0f, 200)
+                .unlockedBy(getHasName(ingredient), has(ingredient))
+                .save(recipeOutput);
+    }
+    protected static void fence(RecipeOutput recipeOutput, ItemLike fence, ItemLike material) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, fence, 3)
+                .define('W', material)
+                .define('#', Items.STICK)
+                .pattern("W#W")
+                .pattern("W#W")
+                .unlockedBy(getHasName(material), has(material))
+                .save(recipeOutput);
+    }
+
+    protected static void fenceNoStick(RecipeOutput recipeOutput, ItemLike fence, ItemLike material, ItemLike stick) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, fence, 3)
+                .define('W', material)
+                .define('#', stick)
+                .pattern("W#W")
+                .pattern("W#W")
+                .unlockedBy(getHasName(material), has(material))
+                .save(recipeOutput);
+    }
+
+    protected static void pillar(RecipeOutput recipeOutput, ItemLike output, ItemLike input) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, output, 3)
+                .pattern("B")
+                .pattern("B")
+                .pattern("B")
+                .define('B', input)
+                .unlockedBy(getHasName(input), has(input))
+                .save(recipeOutput);
     }
 
     protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
@@ -104,6 +183,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                             factory).group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
                     .save(recipeOutput, Edumia.MOD_ID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
         }
+    }
+
+    protected static void brickShape(RecipeOutput recipeOutput, RecipeCategory category, ItemLike packed, ItemLike unpacked) {
+        ShapedRecipeBuilder.shaped(category, packed, 4)
+                .define('#', unpacked)
+                .pattern("##")
+                .pattern("##")
+                .unlockedBy(getHasName(unpacked), has(unpacked))
+                .save(recipeOutput);
     }
 
     public ResourceLocation key(Block block) {

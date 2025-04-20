@@ -15,6 +15,8 @@ import com.legends.edumia.world.map.EdumiaMapGeneration;
 import com.legends.edumia.world.trees.EdumiaFoliagePlacerTypes;
 import com.legends.edumia.world.trees.EdumiaTreeDecoratorTypes;
 import com.legends.edumia.world.trees.EdumiaTrunkPlacerTypes;
+import earth.terrarium.chipped.common.registry.ModBlocks;
+import glitchcore.util.BlockHelper;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
@@ -98,6 +100,16 @@ public class Edumia
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+
+        BlockHelper.registerFlattenable(BlockLoader.VOLCANIC_DIRT.get(), BlockLoader.VOLCANIC_DIRT_PATH.get().defaultBlockState());
+
+        for (WoodBlockSets.SimpleBlockSet set : WoodBlockSets.sets){
+            event.enqueueWork(() -> {
+                BlockHelper.registerStrippable(set.log().get(), set.strippedLog().get());
+                BlockHelper.registerStrippable(set.wood().get(), set.strippedWood().get());
+            });
+        }
+
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event)

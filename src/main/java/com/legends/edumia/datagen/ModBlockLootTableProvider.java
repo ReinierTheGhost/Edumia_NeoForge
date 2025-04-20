@@ -2,14 +2,13 @@ package com.legends.edumia.datagen;
 
 import com.legends.edumia.blocks.blocksets.*;
 import com.legends.edumia.core.BlockLoader;
-import com.legends.edumia.datagen.custom.loot_tables.*;
+import com.legends.edumia.datagen.helpers.loot_tables.*;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
@@ -64,6 +63,11 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         dropOther(BlockLoader.VOLCANIC_DIRT_PATH.get(), BlockLoader.VOLCANIC_DIRT.get());
 
+        for (CobbleDrops.CobbleDrop block : CobbleDrops.blocks){
+            add(block.block(), b ->
+                    createCobbleDrop(block.block(), block.drop()));
+        }
+
     }
 
     protected LootTable.Builder createExtraLeaveDrops(Block block, Block sapling, Item extraDrop, float... chances){
@@ -85,6 +89,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                         .apply(ApplyBonusCount.addOreBonusCount(registrylookup.getOrThrow(Enchantments.FORTUNE)))));
     }
 
+    protected LootTable.Builder createCobbleDrop(Block block, Block cobble) {
+        return this.createSilkTouchDispatchTable(block, this.applyExplosionDecay(block,
+                LootItem.lootTableItem(cobble.asItem())));
+    }
     @Override
     protected Iterable<Block> getKnownBlocks() {
 

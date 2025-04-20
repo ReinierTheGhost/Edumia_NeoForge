@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_banana_wood": {
+      "conditions": {
+        "items": [
+          {
+            "items": "edumia:banana_wood"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "edumia:banana_wood_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_banana_wood"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "edumia:banana_wood_stairs"
+    ]
+  }
+}

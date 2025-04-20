@@ -1,6 +1,8 @@
 package com.legends.edumia.datagen;
 
 import com.legends.edumia.Edumia;
+import com.legends.edumia.blocks.blocksets.WoodBlockSets;
+import com.legends.edumia.core.TagLoader;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
@@ -18,6 +20,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
     }
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-
+        for (WoodBlockSets.SimpleBlockSet set : WoodBlockSets.sets){
+            this.copy(set.logBlockTag(), set.logTag());
+        }
     }
 }

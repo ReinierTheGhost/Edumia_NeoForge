@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "edumia:apple_planks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "edumia:apple_button"
+  }
+}

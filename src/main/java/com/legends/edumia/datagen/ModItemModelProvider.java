@@ -1,8 +1,7 @@
 package com.legends.edumia.datagen;
 
 import com.legends.edumia.Edumia;
-import com.legends.edumia.core.ItemLoader;
-import com.legends.edumia.datagen.custom.models.*;
+import com.legends.edumia.datagen.helpers.models.*;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -14,7 +13,6 @@ import net.minecraft.world.level.block.WallBlock;
 import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
-import net.neoforged.neoforge.registries.DeferredBlock;
 
 public class ModItemModelProvider extends ItemModelProvider {
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {

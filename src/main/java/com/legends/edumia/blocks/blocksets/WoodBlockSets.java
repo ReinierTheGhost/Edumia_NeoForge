@@ -2,11 +2,12 @@ package com.legends.edumia.blocks.blocksets;
 
 import com.legends.edumia.Edumia;
 import com.legends.edumia.blocks.AxialSlabBlock;
-import com.legends.edumia.blocks.trees.ModSaplingBlock;
 import com.legends.edumia.blocks.trees.VariantSaplingBlock;
 import com.legends.edumia.core.ItemLoader;
+import com.legends.edumia.core.TagLoader;
 import com.legends.edumia.world.trees.ModTreeGrowers;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -32,37 +33,66 @@ public class WoodBlockSets {
     public static final float PLATE_BUTTON_STRENGTH = 0.5f;
     public static final float LEAVES_STRENGTH = 0.1f;
 
-    public static SimpleBlockSet ALMOND = registerWoodSet("almond", WOOD_STRENGTH, true, true, false, ModTreeGrowers.ALMOND, List.of());
-    public static SimpleBlockSet APPLE = registerWoodSet("apple", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
-    public static SimpleBlockSet ASPEN = registerWoodSet("aspen", WOOD_STRENGTH, true, true, false, ModTreeGrowers.ASPEN, List.of());
-    public static SimpleBlockSet BANANA = registerWoodSet("banana", WOOD_STRENGTH, true, true, false, ModTreeGrowers.BANANA, List.of());
-    public static SimpleBlockSet BEECH = registerWoodSet("beech", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
-    public static SimpleBlockSet BLACKTHORN = registerWoodSet("blackthorn", WOOD_STRENGTH, true, true, false, ModTreeGrowers.BLACKTHORN, List.of());
-    public static SimpleBlockSet BLACK_OAK = registerWoodSet("black_oak", WOOD_STRENGTH, false, true, false, ModTreeGrowers.BLACK_OAK, List.of());
+    public static SimpleBlockSet ALMOND = registerWoodSet("almond", WOOD_STRENGTH, true, true,
+            false, ModTreeGrowers.ALMOND, List.of(), TagLoader.Items.ALMOND_LOGS, TagLoader.Blocks.ALMOND_LOGS);
+    public static SimpleBlockSet APPLE = registerWoodSet("apple", WOOD_STRENGTH, true, true,
+            false, ModTreeGrowers.APPLE, List.of(), TagLoader.Items.APPLE_LOGS, TagLoader.Blocks.APPLE_LOGS);
+    public static SimpleBlockSet ASPEN = registerWoodSet("aspen", WOOD_STRENGTH, true, true,
+            false, ModTreeGrowers.ASPEN, List.of(), TagLoader.Items.ASPEN_LOGS, TagLoader.Blocks.ASPEN_LOGS);
+    public static SimpleBlockSet BANANA = registerWoodSet("banana", WOOD_STRENGTH, true, true,
+            false, ModTreeGrowers.BANANA, List.of(), TagLoader.Items.BANANA_LOGS, TagLoader.Blocks.BANANA_LOGS);
+    public static SimpleBlockSet BEECH = registerWoodSet("beech", WOOD_STRENGTH, true, true,
+            false, ModTreeGrowers.APPLE, List.of(), TagLoader.Items.BEECH_LOGS, TagLoader.Blocks.BEECH_LOGS);
+    public static SimpleBlockSet BLACKTHORN = registerWoodSet("blackthorn", WOOD_STRENGTH, true, true,
+            false, ModTreeGrowers.BLACKTHORN, List.of(), TagLoader.Items.BLACKTHORN_LOGS, TagLoader.Blocks.BLACKTHORN_LOGS);
+    public static SimpleBlockSet BLACK_OAK = registerWoodSet("black_oak", WOOD_STRENGTH, false, true,
+            false, ModTreeGrowers.BLACK_OAK, List.of(), TagLoader.Items.BLACK_OAK_LOGS, TagLoader.Blocks.BLACK_OAK_LOGS);
 
-    public static SimpleBlockSet CEDAR = registerWoodSet("cedar", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
-    public static SimpleBlockSet CHARRED = registerWoodSet("charred", WOOD_STRENGTH, false, false, false, null, List.of());
-    public static SimpleBlockSet CHERRY = registerWoodSet("cherry", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
-    public static SimpleBlockSet CYPRESS = registerWoodSet("cypress", WOOD_STRENGTH, true, true, false, ModTreeGrowers.CYPRESS, List.of());
-    public static SimpleBlockSet DRAGON_BLOOD = registerWoodSet("dragon_blood", WOOD_STRENGTH, true, true, false, ModTreeGrowers.DRAGON_BLOOD, List.of());
+    public static SimpleBlockSet CEDAR = registerWoodSet("cedar", WOOD_STRENGTH, true, true,
+            false, ModTreeGrowers.APPLE, List.of(), TagLoader.Items.CEDAR_LOGS, TagLoader.Blocks.CEDAR_LOGS);
+    public static SimpleBlockSet CHARRED = registerWoodSet("charred", WOOD_STRENGTH, false, false,
+            false, null, List.of(), TagLoader.Items.CHARRED_LOGS, TagLoader.Blocks.CHARRED_LOGS);
+    public static SimpleBlockSet CHERRY = registerWoodSet("cherry", WOOD_STRENGTH, true, true,
+            false, ModTreeGrowers.APPLE, List.of(), TagLoader.Items.CHERRY_LOGS, TagLoader.Blocks.CHERRY_LOGS);
+    public static SimpleBlockSet CYPRESS = registerWoodSet("cypress", WOOD_STRENGTH, true, true,
+            false, ModTreeGrowers.CYPRESS, List.of(), TagLoader.Items.CYPRESS_LOGS, TagLoader.Blocks.CYPRESS_LOGS);
+    public static SimpleBlockSet DRAGON_BLOOD = registerWoodSet("dragon_blood", WOOD_STRENGTH, true, true,
+            false, ModTreeGrowers.DRAGON_BLOOD, List.of(), TagLoader.Items.DRAGON_BLOOD_LOGS, TagLoader.Blocks.DRAGON_BLOOD_LOGS);
 
-    public static SimpleBlockSet FIR = registerWoodSet("fir", WOOD_STRENGTH, true, true, false, ModTreeGrowers.FIR, List.of());
-    public static SimpleBlockSet GHOST_GUM = registerWoodSet("ghost_gum", WOOD_STRENGTH, false, true, false, ModTreeGrowers.GHOST_GUM, List.of());
-    public static SimpleBlockSet GREEN_OAK = registerWoodSet("green_oak", WOOD_STRENGTH, true, true, false, ModTreeGrowers.GREEN_OAK, List.of());
-    public static SimpleBlockSet HOLLY = registerWoodSet("holly", WOOD_STRENGTH, false, true, false, ModTreeGrowers.HOLLY, List.of());
-    public static SimpleBlockSet LARCH = registerWoodSet("larch", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
-    public static SimpleBlockSet MAHOGANY = registerWoodSet("mahogany", WOOD_STRENGTH, true, true, false, ModTreeGrowers.MAHOGANY, List.of());
-    public static SimpleBlockSet MANGO = registerWoodSet("mango", WOOD_STRENGTH, true, true, false, ModTreeGrowers.MANGO, List.of());
-    public static SimpleBlockSet MAPLE = registerWoodSet("maple", WOOD_STRENGTH, false, true, false, ModTreeGrowers.APPLE, List.of());
-//    public static SimpleBlockSet OLIVE = registerWoodSet("olive", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
-    public static SimpleBlockSet PALM = registerWoodSet("palm", WOOD_STRENGTH, true, true, false, ModTreeGrowers.PALM, List.of());
-    public static SimpleBlockSet PEAR = registerWoodSet("pear", WOOD_STRENGTH, true, true, false, ModTreeGrowers.APPLE, List.of());
-    public static SimpleBlockSet PINE = registerWoodSet("pine", WOOD_STRENGTH, true, true, false, ModTreeGrowers.PINE, List.of());
-    public static SimpleBlockSet RED_OAK = registerWoodSet("red_oak", WOOD_STRENGTH, true, true, false, ModTreeGrowers.RED_OAK, List.of());
-    public static SimpleBlockSet REDWOOD = registerWoodSet("redwood", WOOD_STRENGTH, true, true, false, ModTreeGrowers.REDWOOD, List.of());
-    public static SimpleBlockSet SILVER_SPRUCE = registerWoodSet("silver_spruce", WOOD_STRENGTH, true, true, false, ModTreeGrowers.SILVER_SPRUCE, List.of());
-    public static SimpleBlockSet WHITE_ASH = registerWoodSet("white_ash", WOOD_STRENGTH, true, true, false, ModTreeGrowers.WHITE_ASH, List.of());
-    public static SimpleBlockSet WILLOW = registerWoodSet("willow", WOOD_STRENGTH, true, true, false, ModTreeGrowers.WILLOW, List.of());
+    public static SimpleBlockSet FIR = registerWoodSet("fir", WOOD_STRENGTH, true, true,
+            false, ModTreeGrowers.FIR, List.of(), TagLoader.Items.FIR_LOGS, TagLoader.Blocks.FIR_LOGS);
+    public static SimpleBlockSet GHOST_GUM = registerWoodSet("ghost_gum", WOOD_STRENGTH, false, true,
+            false, ModTreeGrowers.GHOST_GUM, List.of(), TagLoader.Items.GHOST_GUM_LOGS, TagLoader.Blocks.GHOST_GUM_LOGS);
+    public static SimpleBlockSet GREEN_OAK = registerWoodSet("green_oak", WOOD_STRENGTH, true, true,
+            false, ModTreeGrowers.GREEN_OAK, List.of(), TagLoader.Items.GREEN_OAK_LOGS, TagLoader.Blocks.GREEN_OAK_LOGS);
+    public static SimpleBlockSet HOLLY = registerWoodSet("holly", WOOD_STRENGTH, false, true,
+            false, ModTreeGrowers.HOLLY, List.of(), TagLoader.Items.HOLLY_LOGS, TagLoader.Blocks.HOLLY_LOGS);
+    public static SimpleBlockSet LARCH = registerWoodSet("larch", WOOD_STRENGTH, true, true,
+            false, ModTreeGrowers.APPLE, List.of(), TagLoader.Items.LARCH_LOGS, TagLoader.Blocks.LARCH_LOGS);
+    public static SimpleBlockSet MAHOGANY = registerWoodSet("mahogany", WOOD_STRENGTH, true, true,
+            false, ModTreeGrowers.MAHOGANY, List.of(), TagLoader.Items.MAHOGANY_LOGS, TagLoader.Blocks.MAHOGANY_LOGS);
+    public static SimpleBlockSet MANGO = registerWoodSet("mango", WOOD_STRENGTH, true, true,
+            false, ModTreeGrowers.MANGO, List.of(), TagLoader.Items.MANGO_LOGS, TagLoader.Blocks.MANGO_LOGS);
+    public static SimpleBlockSet MAPLE = registerWoodSet("maple", WOOD_STRENGTH, false, true,
+            false, ModTreeGrowers.APPLE, List.of(), TagLoader.Items.MAPLE_LOGS, TagLoader.Blocks.MAPLE_LOGS);
+    // public static SimpleBlockSet OLIVE = registerWoodSet("olive", WOOD_STRENGTH, true, true,
+//         false, ModTreeGrowers.APPLE, List.of(), TagLoader.Items.OLIVE_LOGS, TagLoader.Blocks.OLIVE_LOGS);
+    public static SimpleBlockSet PALM = registerWoodSet("palm", WOOD_STRENGTH, true, true,
+            false, ModTreeGrowers.PALM, List.of(), TagLoader.Items.PALM_LOGS, TagLoader.Blocks.PALM_LOGS);
+    public static SimpleBlockSet PEAR = registerWoodSet("pear", WOOD_STRENGTH, true, true,
+            false, ModTreeGrowers.APPLE, List.of(), TagLoader.Items.PEAR_LOGS, TagLoader.Blocks.PEAR_LOGS);
+    public static SimpleBlockSet PINE = registerWoodSet("pine", WOOD_STRENGTH, true, true,
+            false, ModTreeGrowers.PINE, List.of(), TagLoader.Items.PINE_LOGS, TagLoader.Blocks.PINE_LOGS);
+    public static SimpleBlockSet RED_OAK = registerWoodSet("red_oak", WOOD_STRENGTH, true, true,
+            false, ModTreeGrowers.RED_OAK, List.of(), TagLoader.Items.RED_OAK_LOGS, TagLoader.Blocks.RED_OAK_LOGS);
+    public static SimpleBlockSet REDWOOD = registerWoodSet("redwood", WOOD_STRENGTH, true, true,
+            false, ModTreeGrowers.REDWOOD, List.of(), TagLoader.Items.REDWOOD_LOGS, TagLoader.Blocks.REDWOOD_LOGS);
+    public static SimpleBlockSet SILVER_SPRUCE = registerWoodSet("silver_spruce", WOOD_STRENGTH, true, true,
+            false, ModTreeGrowers.SILVER_SPRUCE, List.of(), TagLoader.Items.SILVER_SPRUCE_LOGS, TagLoader.Blocks.SILVER_SPRUCE_LOGS);
+    public static SimpleBlockSet WHITE_ASH = registerWoodSet("white_ash", WOOD_STRENGTH, true, true,
+            false, ModTreeGrowers.WHITE_ASH, List.of(), TagLoader.Items.WHITE_ASH_LOGS, TagLoader.Blocks.WHITE_ASH_LOGS);
+    public static SimpleBlockSet WILLOW = registerWoodSet("willow", WOOD_STRENGTH, true, true,
+            false, ModTreeGrowers.WILLOW, List.of(), TagLoader.Items.WILLOW_LOGS, TagLoader.Blocks.WILLOW_LOGS);
 
 
     public static SimpleVanillaBlocks OAK = registerBeams("oak", WOOD_STRENGTH, Blocks.OAK_WOOD, Blocks.OAK_LOG);
@@ -124,7 +154,7 @@ public class WoodBlockSets {
                                  DeferredBlock<Block> planks, DeferredBlock<AxialSlabBlock> planksSlab, DeferredBlock<StairBlock> planksStairs,
                                  DeferredBlock<FenceBlock> planksFence, DeferredBlock<FenceGateBlock> planksGate,
                                  DeferredBlock<PressurePlateBlock> pressurePlate, DeferredBlock<ButtonBlock> button, DeferredBlock<RotatedPillarBlock> beam,
-                                 DeferredBlock<DoorBlock> door, DeferredBlock<TrapDoorBlock> trapdoor) {
+                                 DeferredBlock<DoorBlock> door, DeferredBlock<TrapDoorBlock> trapdoor, TagKey<Item> logTag, TagKey<Block> logBlockTag) {
     }
 
     public record SimpleVanillaBlocks(DeferredBlock<RotatedPillarBlock> beam, DeferredBlock<StairBlock> woodStairs, DeferredBlock<AxialSlabBlock> woodSlab, DeferredBlock<WallBlock> woodWall,
@@ -148,11 +178,15 @@ public class WoodBlockSets {
                 () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(copyOf)
                         .strength(strength).sound(SoundType.WOOD)));
 
+
+
          return new SimpleVanillaBlocks(beam, woodStairs, woodSlab, woodWall, woodFence, texture);
     }
 
 
-    private static SimpleBlockSet registerWoodSet(String name, float strength, boolean hasLeaves, boolean hasSapling, boolean hasVariantSapling, TreeGrower treeGrower, List<ResourceKey<ConfiguredFeature<?, ?>>> treeFeatures) {
+    private static SimpleBlockSet registerWoodSet(String name, float strength, boolean hasLeaves, boolean hasSapling,
+                                                  boolean hasVariantSapling, TreeGrower treeGrower,
+                                                  List<ResourceKey<ConfiguredFeature<?, ?>>> treeFeatures, TagKey<Item> logTag, TagKey<Block> logBlockTag) {
         DeferredBlock<SaplingBlock> sapling = null;
         if (hasSapling){
             sapling = registerBlock(name + "_sapling", () -> new SaplingBlock(treeGrower, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
@@ -239,7 +273,7 @@ public class WoodBlockSets {
 
         return new SimpleBlockSet(sapling, leaves, log, wood, woodStairs, woodSlab, woodWall,woodFence,
                 strippedLog, strippedWood, strippedWoodStairs, strippedWoodSlab, strippedWoodWall, strippedWoodFence, planks,
-                slab, stairs, fence, gate, pressurePlate, button, beam, door, trapdoor);
+                slab, stairs, fence, gate, pressurePlate, button, beam, door, trapdoor, logTag, logBlockTag);
     }
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {

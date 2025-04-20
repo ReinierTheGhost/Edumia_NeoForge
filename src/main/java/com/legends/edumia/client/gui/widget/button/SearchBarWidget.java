@@ -1,7 +1,7 @@
 package com.legends.edumia.client.gui.widget.button;
 
 import com.legends.edumia.Edumia;
-import com.legends.edumia.client.gui.races.selection.RaceSelectionController;
+import com.legends.edumia.client.gui.races.selection.FactionSelectionController;
 import com.legends.edumia.client.gui.widget.ModWidget;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
@@ -29,7 +29,7 @@ public class SearchBarWidget extends ModWidget{
     public Button screenClick;
     HashMap<ResourceLocation, Component> pool;
     List<Button> buttons;
-    RaceSelectionController controller;
+    FactionSelectionController controller;
     private final int maximumShownLength;
     private int currentAmount;
     private int currentlyShownEntries;
@@ -40,7 +40,7 @@ public class SearchBarWidget extends ModWidget{
 
     int endY = 0;
 
-    public SearchBarWidget(HashMap<ResourceLocation, Component> newPool, RaceSelectionController controller) {
+    public SearchBarWidget(HashMap<ResourceLocation, Component> newPool, FactionSelectionController controller) {
         this.controller = controller;
         this.maximumShownLength = SEARCH_BAR_PANEL_X - 14 - MARGIN;
         searchBarToggle = false;
