@@ -3,6 +3,7 @@ package com.legends.edumia.client.gui.map;
 import com.legends.edumia.Edumia;
 import com.legends.edumia.EdumiaClientConfig;
 import com.legends.edumia.client.EdumiaKeyHandler;
+import com.legends.edumia.client.gui.EdumiaMasterMenuScreen;
 import com.legends.edumia.client.gui.EdumiaMenuScreen;
 import com.legends.edumia.client.gui.widget.ModWidget;
 import com.legends.edumia.client.gui.widget.backgrounds.BackgroundContainerWidget;
@@ -17,6 +18,7 @@ import com.legends.edumia.world.map.EdumiaMapConfigs;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.gui.components.StringWidget;
 import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -42,7 +44,7 @@ public class EdumiaNewMapScreen extends EdumiaMenuScreen {
     private static final int WIDTH = 208;
     private static final int HEIGHT = 208;
     public static final int MARGIN = 5;
-    private static boolean isFullscreen = false;
+    private static boolean isFullscreen = true;
 
     private static int startX = 0;
     private static int endX = 0;
@@ -54,6 +56,7 @@ public class EdumiaNewMapScreen extends EdumiaMenuScreen {
     private Button zoomInButton;
     private Button zoomOutButton;
     private Button recenterButton;
+    private Button backToMenuButton;
 
     private int mouseX, mouseY;
     AbstractClientPlayer player;
@@ -74,6 +77,15 @@ public class EdumiaNewMapScreen extends EdumiaMenuScreen {
         }
 
         mapWidget = new FullscreenToggeableMapWidget(WIDTH - (MARGIN * 2), HEIGHT - (MARGIN * 2));
+
+        this.addRenderableWidget(new StringWidget(0, 0,
+                this.width, 9, MAP_TITLE_TEXT, this.font));
+
+        backToMenuButton = Button.builder(Component.translatable("ui." + Edumia.MOD_ID + ".map_screen.button.back_to_menu"),
+                x ->
+                    this.minecraft.setScreen(new EdumiaMasterMenuScreen())).build();
+        backToMenuButton.setSize(NORMAL_BUTTON_SIZE.x,NORMAL_BUTTON_SIZE.y);
+        addRenderableWidget(backToMenuButton);
 
         fullscreenButton = Button.builder(Component.translatable("ui." + Edumia.MOD_ID + ".map_screen.button.fullscreen_toggle"),
                 x -> {
@@ -117,6 +129,7 @@ public class EdumiaNewMapScreen extends EdumiaMenuScreen {
     public void render(GuiGraphics context, int mouseX, int mouseY, float partialTick) {
         if (isFullscreen){
             renderFullScreen(context);
+
         }else {
             renderNormal(context);
         }
@@ -124,6 +137,7 @@ public class EdumiaNewMapScreen extends EdumiaMenuScreen {
         this.mouseX = mouseX;
         this.mouseY = mouseY;
         showCursorInformationTooltip(context, mouseX, mouseY);
+
     }
 
     private void showCursorInformationTooltip(GuiGraphics context, int mouseX, int mouseY){
@@ -179,10 +193,11 @@ public class EdumiaNewMapScreen extends EdumiaMenuScreen {
         // TODO : Draw dynamic background : context.drawTexture(BACKGROUND_TEXTURE, startX, startY, 0, 0,  WIDTH, HEIGHT);
         backgroundContainerWidget.draw(context, 0, 0, context.guiWidth(), context.guiHeight());
 
-        mapWidget.drawFullscreen(context, MARGIN);
+        mapWidget.drawFullscreen(context, 17);
         drawFullscreenToggleButton(context);
         drawMapOverlayToggleButton(context);
         drawRecenterButton(context);
+        drawBackToButton(context);
         drawZoomButtons(context);
         drawPlayer(context, player);
     }
@@ -200,6 +215,7 @@ public class EdumiaNewMapScreen extends EdumiaMenuScreen {
         drawFullscreenToggleButton(context);
         drawMapOverlayToggleButton(context);
         drawRecenterButton(context);
+        drawBackToButton(context);
         drawZoomButtons(context);
         drawPlayer(context, player);
     }
@@ -217,17 +233,38 @@ public class EdumiaNewMapScreen extends EdumiaMenuScreen {
         //PlayerSkinDrawer.draw(context, player.getSkinTextures(), (int)x, (int)y, 4);
         //PlayerSkinDrawer.draw(context, minecraft.getSkinProvider().getSkinTexturesSupplier(new GameProfile(UUID.fromString(this.uuid),this.name)).get(),x,y);
 
-        context.blit(MAP_UI_TEXTURE, (int)x- 4, (int) y- 4, 154, 1, 8, 8);
+//        context.blit(MAP_UI_TEXTURE, (int)x- 4, (int) y- 4, 154, 1, 8, 8);
+        context.blit(this.player.getSkin().texture(),
+                (int) (x - 4),
+                (int) (y - 4),
+                8, 8, 8, 8, 64, 64);
     }
+    private void drawBackToButton(GuiGraphics context){
 
+        int overlayToggleButtonUvY = 1;
+        if(!backToMenuButton.active)
+            overlayToggleButtonUvY = 86;
+        int x;
+        int y;
+        if (isFullscreen){
+            x = 1;
+            y = 1;
+        } else {
+            x = startX - NORMAL_BUTTON_SIZE.x;
+            y = startY;
+        }
+
+        backToMenuButton.setPosition(x, y);
+        context.blit(MAP_UI_TEXTURE, x, y, 103, overlayToggleButtonUvY, NORMAL_BUTTON_SIZE.x, NORMAL_BUTTON_SIZE.y);
+    }
 
     private void drawFullscreenToggleButton(GuiGraphics context){
         int fullscreenToggleButtonUvY = ((ModWidget.isMouseOver(fullscreenButton) || fullscreenButton.isFocused()) ? 18 : 1);
         if(!fullscreenButton.active)
             fullscreenToggleButtonUvY = 35;
         if(isFullscreen){
-            int x = context.guiWidth() - MARGIN - NORMAL_BUTTON_SIZE.x;
-            int y = MARGIN;
+            int x = backToMenuButton.x + NORMAL_BUTTON_SIZE.x;
+            int y = backToMenuButton.getY();
             fullscreenButton.setPosition(x, y);
             context.blit(MAP_UI_TEXTURE, x, y, 35, fullscreenToggleButtonUvY, NORMAL_BUTTON_SIZE.x, NORMAL_BUTTON_SIZE.y);
         } else {
@@ -241,8 +278,8 @@ public class EdumiaNewMapScreen extends EdumiaMenuScreen {
         if(!overlayToggleButton.active)
             overlayToggleButtonUvY = 86;
 
-        int x = fullscreenButton.getX();
-        int y = fullscreenButton.getY() + NORMAL_BUTTON_SIZE.y;
+        int x = fullscreenButton.getX() + NORMAL_BUTTON_SIZE.x;
+        int y = fullscreenButton.getY();
         overlayToggleButton.setPosition(x, y);
         context.blit(MAP_UI_TEXTURE, x, y, 1, overlayToggleButtonUvY, NORMAL_BUTTON_SIZE.x, NORMAL_BUTTON_SIZE.y);
     }
@@ -254,28 +291,41 @@ public class EdumiaNewMapScreen extends EdumiaMenuScreen {
         if(!recenterButton.active)
             recenterButtonUvY = 35;
 
-        int x = fullscreenButton.getX();
+        int x = zoomInButton.getX();
         int y = zoomInButton.getY() - NORMAL_BUTTON_SIZE.y;
         recenterButton.setPosition(x, y);
         context.blit(MAP_UI_TEXTURE, x, y, 52, recenterButtonUvY, NORMAL_BUTTON_SIZE.x, NORMAL_BUTTON_SIZE.y);
     }
 
+
+
     private void drawZoomButtons(GuiGraphics context){
         int zoomInButtonUvX = 86;
-        int zoomInButtonUvY = (ModWidget.isMouseOver(zoomInButton) || zoomInButton.isFocused()) ? 18 : 1;
+        int zoomInButtonUvY;
+        if (ModWidget.isMouseOver(zoomInButton)){
+            zoomInButtonUvY = 18;
+        }else {
+            zoomInButtonUvY = 1;
+        }
         zoomInButton.active = mapWidget.canZoomIn();
         if(!zoomInButton.active)
             zoomInButtonUvY = 35;
+
         int zoomOutButtonUvX = 69;
-        int zoomOutButtonUvY = (ModWidget.isMouseOver(zoomOutButton)|| zoomOutButton.isFocused()) ? 18 : 1;
+        int zoomOutButtonUvY;
+        if (ModWidget.isMouseOver(zoomOutButton)){
+            zoomOutButtonUvY = 18;
+        } else {
+            zoomOutButtonUvY = 1;
+        }
         zoomOutButton.active = mapWidget.canZoomOut();
         if(!zoomOutButton.active)
             zoomOutButtonUvY = 35;
 
         if(isFullscreen){
             // Zoom out
-            int x = context.guiWidth() - MARGIN - NORMAL_BUTTON_SIZE.x;
-            int y = context.guiHeight() - MARGIN - NORMAL_BUTTON_SIZE.y;
+            int x = context.guiWidth() - 1 - NORMAL_BUTTON_SIZE.x;
+            int y = context.guiHeight() - 16 - NORMAL_BUTTON_SIZE.y;
             zoomOutButton.setPosition(x, y);
             context.blit(MAP_UI_TEXTURE, x, y, zoomOutButtonUvX, zoomOutButtonUvY, NORMAL_BUTTON_SIZE.x, NORMAL_BUTTON_SIZE.y);
             // Zoom in

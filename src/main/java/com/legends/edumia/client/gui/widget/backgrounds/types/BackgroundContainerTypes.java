@@ -6,7 +6,7 @@ import net.minecraft.resources.ResourceLocation;
 import org.joml.Vector2i;
 
 public enum BackgroundContainerTypes {
-    FULLSCREEN_MAP(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID,"textures/gui/map_background.png"), 5, 1, 209);
+    FULLSCREEN_MAP(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID,"textures/gui/fullmap_background.png"), 5, 1, 209);
     public final ResourceLocation textureId;
 
     public final int size;

@@ -2483,9 +2483,19 @@
   "ui.edumia.map_screen.tooltip.biome_content": "%s",
   "ui.edumia.map_screen.tooltip.teleport_keybind": "[%s] to teleport",
   "gui.edumia.map.coords": "x : %d, z: %d",
-  "ui.edumia.map_screen.map_title_text": "Edumia Map",
 
   "screen.edumia.faction_selection_screen": "Faction Selection",
   "ui.edumia.search.toggle_button": "Search",
-  "ui.edumia.search.screen_click_button": "Click"
+  "ui.edumia.search.screen_click_button": "Click",
+  "ui.edumia.map_screen.map_title_text": "Edumia Map",
+  "ui.edumia.map_screen.menu_title_text": "Edumia Menu",
+  "gui.edumia.magic": "Magic",
+  "gui.edumia.achievements": "Achivements",
+  "gui.edumia.map": "Edumia map",
+  "gui.edumia.faction": "Faction",
+  "gui.edumia.parties": "party",
+  "gui.edumia.titles": "Titles",
+  "gui.edumia.banners": "Banners",
+  "gui.edumia.options": "Options",
+  "gui.edumia.menu": "Menu"
 }

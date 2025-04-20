@@ -8,6 +8,7 @@ import com.legends.edumia.world.dimension.ModDimensions;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.AbstractWidget;
 import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.gui.components.StringWidget;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -26,9 +27,9 @@ public class EdumiaMasterMenuScreen extends BasicIngameScreen{
     private Button.CreateNarration createNarration = EdumiaMenuButton.DEFAULT_NARRATION;
     public static final ResourceLocation MENU_ICONS = ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "textures/gui/buttons/menu_icons.png");
     public static Class<? extends EdumiaMenuScreen> lastMenuScreen = null;
-
+    private static final Component MENU_TITLE_TEXT = Component.translatable("ui." + Edumia.MOD_ID + ".map_screen.menu_title_text");
     public EdumiaMasterMenuScreen() {
-        super(Component.literal("MENU"));
+        super(MENU_TITLE_TEXT);
     }
 
     @Override
@@ -93,6 +94,8 @@ public class EdumiaMasterMenuScreen extends BasicIngameScreen{
                 button.y = midY + buttonGap / 2;
             }
         }
+
+
     }
 
     public static void resetLastMenuScreen() {
@@ -102,9 +105,9 @@ public class EdumiaMasterMenuScreen extends BasicIngameScreen{
     @Override
     public void render(@NotNull GuiGraphics guiGraphics, int mouseX, int mouseY, float tick) {
         this.renderBackground(guiGraphics, mouseX, mouseY, tick);
-        Component dimensionName = ModDimensions.getDisplayName(ModDimensions.getCurrentEdumiaDimensionOfFallback(this.minecraft.level));
-        Component title =  Component.translatable("gui.edumia.menu", new Object[]{dimensionName});
-        guiGraphics.drawString(this.font, title, (this.width / 2 - this.font.width(title) / 2), (this.height / 2 - 80), 16777215);
+        this.setFocused(null);
+        this.addRenderableWidget(new StringWidget(0, (this.height / 2 - 80),
+                this.width, 9, MENU_TITLE_TEXT, this.font));
         super.render(guiGraphics, mouseX, mouseY, tick);
         Iterator var7 = this.buttons.iterator();
 

@@ -37,27 +37,27 @@ public class BackgroundContainerWidget  extends ModWidget {
         uv = type.getUvForDirection(UiDirections.SOUTH);
         for(int x = startX + size; x < startX + sizeX - (size * 2); x += size) {
             // NORTH
-            context.blit(type.textureId, x, startY, newUv.x, newUv.y, size, size);
+            context.blit(type.textureId, x, startY, newUv.x, newUv.y, size, size + 12);
             // SOUTH
-            context.blit(type.textureId, x, startY + sizeY - size, uv.x, uv.y, size, size);
+            context.blit(type.textureId, x, startY + sizeY - size - 12, uv.x, uv.y, size, size + 12);
         }
         // NORTH
-        context.blit(type.textureId, startX + sizeX - (size * 2), startY, newUv.x, newUv.y, size, size);
+        context.blit(type.textureId, startX + sizeX - (size * 2), startY, newUv.x, newUv.y, size, size + 12);
         // SOUTH
-        context.blit(type.textureId, startX + sizeX - (size * 2), startY + sizeY - size, uv.x, uv.y, size, size);
+        context.blit(type.textureId, startX + sizeX - (size * 2), startY + sizeY - size - 12, uv.x, uv.y, size, size + 12);
 
         // WEST/EAST
         uv = type.getUvForDirection(UiDirections.WEST);
         newUv = type.getUvForDirection(UiDirections.EAST);
         for(int y = startY + size; y < startY + sizeY - (size * 2); y += size) {
             // WEST
-            context.blit(type.textureId, startX, y, uv.x, uv.y, size, size);
+            context.blit(type.textureId, startX, y, uv.x, uv.y, size + 12, size);
             // EAST
-            context.blit(type.textureId, startX + sizeX - size, y, newUv.x, newUv.y, size, size);
+            context.blit(type.textureId, startX + sizeX - size - 12, y, newUv.x, newUv.y, size + 12, size);
         }
         // WEST
-        context.blit(type.textureId, startX, startY + sizeY - (size * 2), uv.x, uv.y, size, size);
+        context.blit(type.textureId, startX, startY + sizeY - (size * 2), uv.x, uv.y, size + 12, size);
         // EAST
-        context.blit(type.textureId, startX + sizeX - size, startY + sizeY - (size * 2), newUv.x, newUv.y, size, size);
+        context.blit(type.textureId, startX + sizeX - size - 12, startY + sizeY - (size * 2), newUv.x, newUv.y, size + 12, size);
     }
 }

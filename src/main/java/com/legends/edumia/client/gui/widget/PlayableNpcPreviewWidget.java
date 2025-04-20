@@ -1,6 +1,7 @@
 package com.legends.edumia.client.gui.widget;
 
 import com.legends.edumia.Edumia;
+import com.legends.edumia.entity.races.human.BanditHumanEntity;
 import com.legends.edumia.resources.datas.npcs.NpcUtil;
 import com.legends.edumia.resources.datas.npcs.data.NpcGearData;
 import com.legends.edumia.resources.datas.races.Race;
