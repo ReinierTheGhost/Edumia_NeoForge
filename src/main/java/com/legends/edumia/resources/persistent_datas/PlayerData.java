@@ -1,5 +1,13 @@
 package com.legends.edumia.resources.persistent_datas;
 
+import com.legends.edumia.exceptions.FactionResourceLocationException;
+import com.legends.edumia.resources.EdumiaRaces;
+import com.legends.edumia.resources.datas.Disposition;
+import com.legends.edumia.resources.datas.FactionType;
+import com.legends.edumia.resources.datas.RaceType;
+import com.legends.edumia.resources.datas.factions.Faction;
+import com.legends.edumia.resources.datas.factions.FactionLookup;
+import com.legends.edumia.resources.datas.races.Race;
 import com.legends.edumia.utils.LoggerUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
@@ -31,66 +39,66 @@ public class PlayerData {
         return affiliationData != null;
     }
 
-//    public Race getRace(Level world){
-//        return world.getRegistryManager().get(MiddleEarthRaces.RACE_KEY).get(this.race);
-//    }
-//    public Faction getFaction(World world) throws FactionIdentifierException{
-//        if(!hasAffilition())
-//            return null;
-//        Faction faction = FactionLookup.getFactionById(world, affiliationData.faction);
-//        if(faction.getFactionType() == FactionType.SUBFACTION){
-//            Identifier parentFactionIdentifier = faction.getParentFactionId();
-//            if(parentFactionIdentifier == null){
-//                LoggerUtil.logError(faction.getName() + " is said to be a subfaction, but does not have a parent faction, returning the obtained faction by default.");
-//                return faction;
-//            }
-//            faction = FactionLookup.getFactionById(world, parentFactionIdentifier);
-//        }
-//        return faction;
-//    }
-//    public Faction getSubfaction(Level world) throws FactionIdentifierException{
-//        if(!hasAffilition())
-//            return null;
-//        Faction faction = FactionLookup.getFactionById(world, affiliationData.faction);
-//        if(faction.getFactionType() == FactionType.FACTION)
-//            return null;
-//        return faction;
-//    }
+    public Race getRace(Level world){
+        return world.registryAccess().registryOrThrow(EdumiaRaces.RACE_KEY).get(this.race);
+    }
+    public Faction getFaction(Level world) throws FactionResourceLocationException{
+        if(!hasAffilition())
+            return null;
+        Faction faction = FactionLookup.getFactionById(world, affiliationData.faction);
+        if(faction.getFactionType() == FactionType.SUBFACTION){
+            ResourceLocation parentFactionIdentifier = faction.getParentFactionId();
+            if(parentFactionIdentifier == null){
+                LoggerUtil.logError(faction.getName() + " is said to be a subfaction, but does not have a parent faction, returning the obtained faction by default.");
+                return faction;
+            }
+            faction = FactionLookup.getFactionById(world, parentFactionIdentifier);
+        }
+        return faction;
+    }
+    public Faction getSubfaction(Level world) throws FactionResourceLocationException{
+        if(!hasAffilition())
+            return null;
+        Faction faction = FactionLookup.getFactionById(world, affiliationData.faction);
+        if(faction.getFactionType() == FactionType.FACTION)
+            return null;
+        return faction;
+    }
 
-//    public Faction getCurrentFaction(Level world) throws FactionIdentifierException {
-//        if(!hasAffilition())
-//            return null;
-//        return FactionLookup.getFactionById(world, affiliationData.faction);
-//    }
-//    public Disposition getCurrentDisposition() {
-//        if(!hasAffilition())
-//            return null;
-//        return affiliationData.disposition;
-//    }
-//    public ResourceLocation getCurrentFactionId() {
-//        if(!hasAffilition())
-//            return null;
-//        return affiliationData.faction;
-//    }
+    public Faction getCurrentFaction(Level world) throws FactionResourceLocationException {
+        if(!hasAffilition())
+            return null;
+        return FactionLookup.getFactionById(world, affiliationData.faction);
+    }
+    public Disposition getCurrentDisposition() {
+        if(!hasAffilition())
+            return null;
+        return affiliationData.disposition;
+    }
+    public ResourceLocation getCurrentFactionId() {
+        if(!hasAffilition())
+            return null;
+        return affiliationData.faction;
+    }
 
-//    public ResourceLocation getCurrentSpawnId(){
-//        if(!hasAffilition())
-//            return null;
-//        return affiliationData.spawnId;
-//    }
+    public ResourceLocation getCurrentSpawnId(){
+        if(!hasAffilition())
+            return null;
+        return affiliationData.spawnId;
+    }
 
-//    public RaceType getRaceType(Level world){
-//        Race foundRace = getRace(world);
-//        if(race == null || foundRace == null)
-//            return RaceType.NONE;
-//        return foundRace.getRaceType();
-//    }
+    public RaceType getRaceType(Level world){
+        Race foundRace = getRace(world);
+        if(race == null || foundRace == null)
+            return RaceType.NONE;
+        return foundRace.getRaceType();
+    }
 
-//    public Vec3 getSpawnMiddleEarthCoordinate(Level world){
-//        if(!hasAffilition())
-//            return null;
-//        return affiliationData.getSpawnMiddleEarthCoordinate(world);
-//    }
+    public Vec3 getSpawnMiddleEarthCoordinate(Level world){
+        if(!hasAffilition())
+            return null;
+        return affiliationData.getSpawnMiddleEarthCoordinate(world);
+    }
 
     @Override
     public String toString() {
@@ -121,13 +129,13 @@ public class PlayerData {
         this.race = null;
     }
 
-//    public boolean setSpawnMiddleEarthId(Level world, ResourceLocation foundId) throws FactionIdentifierException {
-//        if(hasAffilition()){
-//            if(FactionLookup.getFactionById(world,affiliationData.faction).getSpawnData().getAllSpawnIdentifiers().contains(foundId)){
-//                affiliationData.spawnId = foundId;
-//                return true;
-//            }
-//        }
-//        return false;
-//    }
+    public boolean setSpawnEdumiaId(Level world, ResourceLocation foundId) throws FactionResourceLocationException {
+        if(hasAffilition()){
+            if(FactionLookup.getFactionById(world,affiliationData.faction).getSpawnData().getAllSpawnIdentifiers().contains(foundId)){
+                affiliationData.spawnId = foundId;
+                return true;
+            }
+        }
+        return false;
+    }
 }

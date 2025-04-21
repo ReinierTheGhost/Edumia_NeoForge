@@ -1,10 +1,8 @@
 package com.legends.edumia.client.gui;
 
 import com.legends.edumia.Edumia;
-import com.legends.edumia.client.gui.map.EdumiaMapScreen;
 import com.legends.edumia.client.gui.map.EdumiaNewMapScreen;
 import com.legends.edumia.client.gui.widget.button.EdumiaMenuButton;
-import com.legends.edumia.world.dimension.ModDimensions;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.AbstractWidget;
 import net.minecraft.client.gui.components.Button;
@@ -66,7 +64,7 @@ public class EdumiaMasterMenuScreen extends BasicIngameScreen{
         this.addRenderableWidget(new EdumiaMenuButton(this.width / 2 + 47, this.height / 2 + 5, null,
                 Component.translatable("gui.edumia.options"),
                 1, 72, this.createNarration));
-        List<EdumiaMenuButton> menuButtonsToArrange = new ArrayList();
+        List<EdumiaMenuButton> menuButtonsToArrange = new ArrayList<>();
         Iterator var6 = this.buttons.iterator();
 
         while (var6.hasNext()){
@@ -85,7 +83,7 @@ public class EdumiaMasterMenuScreen extends BasicIngameScreen{
         int btmRowLeft = midX - (numBtmRowButtons * buttonSize + (numBtmRowButtons - 1) * buttonGap) / 2;
 
         for (int l = 0; l < numButtons; ++l){
-            EdumiaMenuButton button = (EdumiaMenuButton) menuButtonsToArrange.get(l);
+            EdumiaMenuButton button = menuButtonsToArrange.get(l);
             if (l < numTopRowButtons){
                 button.x = topRowLeft + l * (buttonSize + buttonGap);
                 button.y = midY - buttonGap / 2 - buttonSize;
