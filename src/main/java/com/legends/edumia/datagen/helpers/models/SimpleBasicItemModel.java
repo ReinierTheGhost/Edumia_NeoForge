@@ -80,6 +80,9 @@ public class SimpleBasicItemModel {
             add(ItemLoader.BANANA_BREAD.get());
             add(ItemLoader.MANGO.get());
             add(ItemLoader.DATE.get());
+            add(ItemLoader.CHERRY.get());
+            add(ItemLoader.PEAR.get());
+            add(ItemLoader.GREEN_APPLE.get());
         }
     };
 }

@@ -3,6 +3,7 @@ package com.legends.edumia.datagen;
 import com.legends.edumia.Edumia;
 import com.legends.edumia.core.blocksets.BuildingSets;
 import com.legends.edumia.core.blocksets.ClayTilingSets;
+import com.legends.edumia.core.blocksets.GlassSets;
 import com.legends.edumia.core.blocksets.WoodBlockSets;
 import com.legends.edumia.datagen.helpers.resipes.BrickShape;
 import com.legends.edumia.datagen.helpers.resipes.Cooking;
@@ -18,7 +19,6 @@ import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
 import java.util.List;
@@ -148,6 +148,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         }
 
+        for (GlassSets.GlassSet set : GlassSets.glassSets){
+            brickShape(recipeOutput, RecipeCategory.MISC, set.block(), set.glass());
+            fineGlassPane(recipeOutput, set.pane().get(), set.block().get());
+        }
+
+
+    }
+
+    protected static void fineGlassPane(RecipeOutput recipeOutput, ItemLike result, ItemLike ingredient) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, result, 16)
+                .define('#', ingredient)
+                .pattern("###")
+                .pattern("###")
+                .unlockedBy("has_glass", has(ingredient))
+                .save(recipeOutput);
     }
 
     protected static void smeltingSmooth(RecipeOutput recipeOutput, ItemLike result, ItemLike ingredient) {
@@ -247,7 +262,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput);
     }
 
-    protected static void clayTilingFromDye(RecipeOutput recipeOutput, RecipeCategory category, Block result, ItemLike dye){
+    protected void clayTilingFromDye(RecipeOutput recipeOutput, RecipeCategory category, Block result, ItemLike dye){
         ShapedRecipeBuilder.shaped(category, result, 8)
                 .define('#', ClayTilingSets.CLAY_TILING.block().get())
                 .define('D', dye)
@@ -268,11 +283,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput);
     }
 
-    public static ResourceLocation key(Block block) {
+    public  ResourceLocation key(Block block) {
         return BuiltInRegistries.BLOCK.getKey(block);
     }
 
-    public static String name(Block block) {
+    public  String name(Block block) {
         return key(block).getPath();
     }
 }

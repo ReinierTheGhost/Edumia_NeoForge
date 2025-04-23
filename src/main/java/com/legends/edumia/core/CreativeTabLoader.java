@@ -310,6 +310,9 @@ public class CreativeTabLoader {
                         entries.accept(ItemLoader.BANANA_BREAD.get());
                         entries.accept(ItemLoader.MANGO.get());
                         entries.accept(ItemLoader.DATE.get());
+                        entries.accept(ItemLoader.CHERRY.get());
+                        entries.accept(ItemLoader.PEAR.get());
+                        entries.accept(ItemLoader.GREEN_APPLE.get());
                     }).build());
 
     public static void register(IEventBus eventBus) {

@@ -20,4 +20,6 @@ public class EdumiaFoodComponent {
     public static final FoodProperties BANANA_BREAD = new FoodProperties.Builder().nutrition(5).saturationModifier(6f).build();
     public static final FoodProperties MANGO = new FoodProperties.Builder().nutrition(4).saturationModifier(2.4F).build();
     public static final FoodProperties DATE = new FoodProperties.Builder().nutrition(2).saturationModifier(1.2f).build();
+    public static final FoodProperties CHERRY = new FoodProperties.Builder().nutrition(2).saturationModifier(0.8f).build();
+    public static final FoodProperties PEAR = new FoodProperties.Builder().nutrition(4).saturationModifier(2.4f).build();
 }

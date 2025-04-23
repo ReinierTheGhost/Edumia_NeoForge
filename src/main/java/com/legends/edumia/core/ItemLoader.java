@@ -3,6 +3,7 @@ package com.legends.edumia.core;
 import com.legends.edumia.Edumia;
 import com.legends.edumia.items.EdumiaFoodComponent;
 import com.legends.edumia.items.WorldTeleporterItem;
+import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -162,6 +163,12 @@ public class ItemLoader {
             () -> new Item(new Item.Properties().food(EdumiaFoodComponent.MANGO)));
     public static final DeferredItem<Item> DATE = ITEMS.register("date",
             () -> new Item(new Item.Properties().food(EdumiaFoodComponent.DATE)));
+    public static final DeferredItem<Item> CHERRY = ITEMS.register("cherry",
+            () -> new Item(new Item.Properties().food(EdumiaFoodComponent.CHERRY)));
+    public static final DeferredItem<Item> PEAR = ITEMS.register("pear",
+            () -> new Item(new Item.Properties().food(EdumiaFoodComponent.PEAR)));
+    public static final DeferredItem<Item> GREEN_APPLE = ITEMS.register("green_apple",
+            () -> new Item(new Item.Properties().food(Foods.APPLE)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

@@ -19,6 +19,7 @@ import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSi
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
+import org.checkerframework.checker.units.qual.C;
 
 public class FruitTreeConfiguredFeatures {
 
@@ -31,6 +32,15 @@ public class FruitTreeConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> RED_APPLE_BEES_KEY = registerKey("apple/red_apple_tree_bees");
     public static final ResourceKey<ConfiguredFeature<?, ?>> GREEN_APPLE_BEES_KEY = registerKey("apple/green_apple_tree_bees");
     public static final ResourceKey<ConfiguredFeature<?, ?>> MIXED_APPLE_BEES_KEY = registerKey("apple/mixed_apple_tree_bees");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> PEAR_KEY = registerKey("pear/pear_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> PEAR_FRUIT_KEY = registerKey("pear/pear_fruit_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> PEAR_BEES_KEY = registerKey("pear/pear_tree_bees");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> PEAR_FRUIT_BEES_KEY = registerKey("pear/pear_fruit_tree_bees");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> CHERRY_KEY = registerKey("cherry/cherry_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> CHERRY_FRUIT_KEY = registerKey("cherry/cherry_fruit_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> CHERRY_BEES_KEY = registerKey("cherry/cherry_tree_bees");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> CHERRY_FRUIT_BEES_KEY = registerKey("cherry/cherry_fruit_tree_bees");
+
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context){
         register(context, APPLE_KEY, Feature.TREE, TreeConfiguredFeatures.buildClassicTree(
                 WoodBlockSets.APPLE.log().get().defaultBlockState(),
@@ -79,6 +89,38 @@ public class FruitTreeConfiguredFeatures {
                 new AlmondFoliagePlacer(),
 
                 new TwoLayersFeatureSize(1, 0, 2)).build());
+
+        register(context, PEAR_KEY, Feature.TREE, TreeConfiguredFeatures.buildClassicTree(
+                WoodBlockSets.PEAR.log().get().defaultBlockState(),
+                WoodBlockSets.PEAR.leaves().get().defaultBlockState(), 4, 3));
+
+        register(context, PEAR_FRUIT_KEY, Feature.TREE, TreeConfiguredFeatures.buildClassicTree(
+                WoodBlockSets.PEAR.log().get().defaultBlockState(),
+                ModNatureBlocks.PEAR_LEAVES_FRUIT.get().defaultBlockState(), 4, 3));
+
+        register(context, PEAR_BEES_KEY, Feature.TREE, TreeConfiguredFeatures.buildClassicTreeWithBees(
+                WoodBlockSets.PEAR.log().get().defaultBlockState(),
+                WoodBlockSets.PEAR.leaves().get().defaultBlockState(), 4, 3));
+
+        register(context, PEAR_FRUIT_BEES_KEY, Feature.TREE, TreeConfiguredFeatures.buildClassicTreeWithBees(
+                WoodBlockSets.PEAR.log().get().defaultBlockState(),
+                ModNatureBlocks.PEAR_LEAVES_FRUIT.get().defaultBlockState(), 4, 3));
+
+        register(context, CHERRY_KEY, Feature.TREE, TreeConfiguredFeatures.buildClassicTree(
+                WoodBlockSets.CHERRY.log().get().defaultBlockState(),
+                WoodBlockSets.CHERRY.leaves().get().defaultBlockState(), 4, 3));
+
+        register(context, CHERRY_FRUIT_KEY, Feature.TREE, TreeConfiguredFeatures.buildClassicTree(
+                WoodBlockSets.CHERRY.log().get().defaultBlockState(),
+                ModNatureBlocks.CHERRY_LEAVES_FRUIT.get().defaultBlockState(), 4, 3));
+
+        register(context, CHERRY_BEES_KEY, Feature.TREE, TreeConfiguredFeatures.buildClassicTreeWithBees(
+                WoodBlockSets.CHERRY.log().get().defaultBlockState(),
+                WoodBlockSets.CHERRY.leaves().get().defaultBlockState(), 4, 3));
+
+        register(context, CHERRY_FRUIT_BEES_KEY, Feature.TREE, TreeConfiguredFeatures.buildClassicTreeWithBees(
+                WoodBlockSets.CHERRY.log().get().defaultBlockState(),
+                ModNatureBlocks.CHERRY_LEAVES_FRUIT.get().defaultBlockState(), 4, 3));
     }
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name){
         return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID,"tree/fruit_trees/" + name));
