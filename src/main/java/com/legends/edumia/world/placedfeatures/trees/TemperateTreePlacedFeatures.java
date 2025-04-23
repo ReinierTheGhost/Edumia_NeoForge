@@ -1,8 +1,7 @@
 package com.legends.edumia.world.placedfeatures.trees;
 
 import com.legends.edumia.Edumia;
-import com.legends.edumia.blocks.blocksets.ModNatureBlocks;
-import com.legends.edumia.blocks.blocksets.WoodBlockSets;
+import com.legends.edumia.core.blocksets.WoodBlockSets;
 import com.legends.edumia.world.congiguredfeatures.trees.TemperateTreeConfiguredFeatures;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;

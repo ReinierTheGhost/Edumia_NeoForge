@@ -1,6 +1,6 @@
 package com.legends.edumia.datagen.helpers.models;
 
-import com.legends.edumia.blocks.blocksets.ModNatureBlocks;
+import com.legends.edumia.core.blocksets.ModNatureBlocks;
 import net.minecraft.world.level.block.Block;
 
 import java.util.ArrayList;

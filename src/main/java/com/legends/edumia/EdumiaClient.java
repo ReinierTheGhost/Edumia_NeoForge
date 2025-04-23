@@ -1,17 +1,9 @@
 package com.legends.edumia;
 
-import com.legends.edumia.blocks.blocksets.GlassSets;
-import com.legends.edumia.blocks.blocksets.ModNatureBlocks;
-import com.legends.edumia.blocks.blocksets.PaperwallSets;
-import com.legends.edumia.blocks.blocksets.WoodBlockSets;
 import com.legends.edumia.client.EdumiaKeyHandler;
 import com.legends.edumia.client.gui.EdumiaMasterMenuScreen;
-import com.legends.edumia.core.BlockLoader;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.network.chat.Component;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;

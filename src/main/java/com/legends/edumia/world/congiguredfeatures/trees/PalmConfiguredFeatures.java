@@ -2,7 +2,7 @@ package com.legends.edumia.world.congiguredfeatures.trees;
 
 import com.google.common.collect.ImmutableList;
 import com.legends.edumia.Edumia;
-import com.legends.edumia.blocks.blocksets.WoodBlockSets;
+import com.legends.edumia.core.blocksets.WoodBlockSets;
 import com.legends.edumia.core.TagLoader;
 import com.legends.edumia.world.features.EdumiaFeatures;
 import com.legends.edumia.world.features.treesnbt.TreeFromStructureNBTConfig;

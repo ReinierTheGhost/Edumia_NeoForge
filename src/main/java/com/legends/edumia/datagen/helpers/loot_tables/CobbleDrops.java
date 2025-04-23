@@ -1,6 +1,6 @@
 package com.legends.edumia.datagen.helpers.loot_tables;
 
-import com.legends.edumia.blocks.blocksets.StoneSets;
+import com.legends.edumia.core.blocksets.StoneSets;
 import net.minecraft.world.level.block.Block;
 
 import java.util.ArrayList;

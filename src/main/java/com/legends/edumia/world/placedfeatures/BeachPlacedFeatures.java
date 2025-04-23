@@ -1,8 +1,7 @@
 package com.legends.edumia.world.placedfeatures;
 
 import com.legends.edumia.Edumia;
-import com.legends.edumia.blocks.blocksets.SandBlockSets;
-import com.legends.edumia.core.BlockLoader;
+import com.legends.edumia.core.blocksets.SandBlockSets;
 import com.legends.edumia.world.congiguredfeatures.beach.BeachConfiguredFeatures;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;

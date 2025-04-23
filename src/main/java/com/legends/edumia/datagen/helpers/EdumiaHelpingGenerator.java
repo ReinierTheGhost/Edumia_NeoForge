@@ -1,6 +1,6 @@
 package com.legends.edumia.datagen.helpers;
 
-import com.legends.edumia.blocks.blocksets.*;
+import com.legends.edumia.core.blocksets.*;
 import com.legends.edumia.datagen.helpers.loot_tables.*;
 import com.legends.edumia.datagen.helpers.models.*;
 import com.legends.edumia.datagen.helpers.tags.*;

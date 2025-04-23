@@ -1,6 +1,6 @@
 package com.legends.edumia;
 
-import com.legends.edumia.blocks.blocksets.*;
+import com.legends.edumia.core.blocksets.*;
 import com.legends.edumia.core.BlockLoader;
 import com.legends.edumia.core.CreativeTabLoader;
 import com.legends.edumia.core.ItemLoader;
@@ -15,7 +15,6 @@ import com.legends.edumia.world.map.EdumiaMapGeneration;
 import com.legends.edumia.world.trees.EdumiaFoliagePlacerTypes;
 import com.legends.edumia.world.trees.EdumiaTreeDecoratorTypes;
 import com.legends.edumia.world.trees.EdumiaTrunkPlacerTypes;
-import earth.terrarium.chipped.common.registry.ModBlocks;
 import glitchcore.util.BlockHelper;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -107,6 +106,9 @@ public class Edumia
             event.enqueueWork(() -> {
                 BlockHelper.registerStrippable(set.log().get(), set.strippedLog().get());
                 BlockHelper.registerStrippable(set.wood().get(), set.strippedWood().get());
+                BlockHelper.registerStrippable(set.woodFence().get(), set.strippedWoodFence().get());
+                BlockHelper.registerStrippable(set.woodSlab().get(), set.strippedWoodSlab().get());
+                BlockHelper.registerStrippable(set.woodStairs().get(), set.strippedWoodStairs().get());
             });
         }
 

@@ -1,7 +1,7 @@
 package com.legends.edumia.world.congiguredfeatures.boulders;
 
 import com.legends.edumia.Edumia;
-import com.legends.edumia.blocks.blocksets.StoneSets;
+import com.legends.edumia.core.blocksets.StoneSets;
 import com.legends.edumia.world.features.EdumiaFeatures;
 import com.legends.edumia.world.features.bouders.BouldersFeatureConfig;
 import net.minecraft.core.registries.Registries;

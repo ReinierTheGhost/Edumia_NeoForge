@@ -2,7 +2,7 @@ package com.legends.edumia.world.congiguredfeatures.beach;
 
 import com.legends.edumia.Edumia;
 import com.legends.edumia.blocks.Layer;
-import com.legends.edumia.blocks.blocksets.SandBlockSets;
+import com.legends.edumia.core.blocksets.SandBlockSets;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;

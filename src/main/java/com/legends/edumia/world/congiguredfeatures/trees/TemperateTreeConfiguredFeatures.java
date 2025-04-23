@@ -3,8 +3,8 @@ package com.legends.edumia.world.congiguredfeatures.trees;
 import com.google.common.collect.ImmutableList;
 import com.legends.edumia.Edumia;
 
-import com.legends.edumia.blocks.blocksets.ModNatureBlocks;
-import com.legends.edumia.blocks.blocksets.WoodBlockSets;
+import com.legends.edumia.core.blocksets.ModNatureBlocks;
+import com.legends.edumia.core.blocksets.WoodBlockSets;
 import com.legends.edumia.world.trees.foliageplacer.*;
 import com.legends.edumia.world.trees.trunkplacers.CanopyTrunkPlacer;
 import com.legends.edumia.world.trees.trunkplacers.CederTrunkPlacer;

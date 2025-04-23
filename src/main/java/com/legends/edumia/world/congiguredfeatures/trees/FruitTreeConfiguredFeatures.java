@@ -1,8 +1,8 @@
 package com.legends.edumia.world.congiguredfeatures.trees;
 
 import com.legends.edumia.Edumia;
-import com.legends.edumia.blocks.blocksets.ModNatureBlocks;
-import com.legends.edumia.blocks.blocksets.WoodBlockSets;
+import com.legends.edumia.core.blocksets.ModNatureBlocks;
+import com.legends.edumia.core.blocksets.WoodBlockSets;
 import com.legends.edumia.world.congiguredfeatures.TreeConfiguredFeatures;
 import com.legends.edumia.world.trees.foliageplacer.AlmondFoliagePlacer;
 import net.minecraft.core.registries.Registries;
@@ -10,14 +10,12 @@ import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.random.SimpleWeightedRandomList;
-import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
-import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;

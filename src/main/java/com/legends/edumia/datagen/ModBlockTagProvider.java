@@ -1,7 +1,7 @@
 package com.legends.edumia.datagen;
 
 import com.legends.edumia.Edumia;
-import com.legends.edumia.blocks.blocksets.WoodBlockSets;
+import com.legends.edumia.core.blocksets.WoodBlockSets;
 import com.legends.edumia.core.TagLoader;
 import com.legends.edumia.datagen.helpers.tags.*;
 import net.minecraft.core.HolderLookup;

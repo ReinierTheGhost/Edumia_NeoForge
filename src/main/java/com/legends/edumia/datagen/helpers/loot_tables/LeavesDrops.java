@@ -1,7 +1,7 @@
 package com.legends.edumia.datagen.helpers.loot_tables;
 
-import com.legends.edumia.blocks.blocksets.ModNatureBlocks;
-import com.legends.edumia.blocks.blocksets.WoodBlockSets;
+import com.legends.edumia.core.blocksets.ModNatureBlocks;
+import com.legends.edumia.core.blocksets.WoodBlockSets;
 import net.minecraft.world.level.block.Block;
 
 import java.util.ArrayList;

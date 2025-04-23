@@ -1,6 +1,6 @@
 package com.legends.edumia.datagen;
 
-import com.legends.edumia.blocks.blocksets.*;
+import com.legends.edumia.core.blocksets.*;
 import com.legends.edumia.core.BlockLoader;
 import com.legends.edumia.datagen.helpers.loot_tables.*;
 import net.minecraft.core.Holder;

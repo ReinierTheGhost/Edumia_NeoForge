@@ -1,7 +1,7 @@
 package com.legends.edumia.world.congiguredfeatures.trees;
 
 import com.legends.edumia.Edumia;
-import com.legends.edumia.blocks.blocksets.WoodBlockSets;
+import com.legends.edumia.core.blocksets.WoodBlockSets;
 import com.legends.edumia.world.trees.foliageplacer.FirFoliagePlacer;
 import com.legends.edumia.world.trees.foliageplacer.SilverSpruceFoliagePlacer;
 import com.legends.edumia.world.trees.trunkplacers.SpruceTrunkPlacer;

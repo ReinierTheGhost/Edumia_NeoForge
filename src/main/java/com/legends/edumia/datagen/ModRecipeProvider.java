@@ -1,8 +1,9 @@
 package com.legends.edumia.datagen;
 
 import com.legends.edumia.Edumia;
-import com.legends.edumia.blocks.blocksets.BuildingSets;
-import com.legends.edumia.blocks.blocksets.WoodBlockSets;
+import com.legends.edumia.core.blocksets.BuildingSets;
+import com.legends.edumia.core.blocksets.ClayTilingSets;
+import com.legends.edumia.core.blocksets.WoodBlockSets;
 import com.legends.edumia.datagen.helpers.resipes.BrickShape;
 import com.legends.edumia.datagen.helpers.resipes.Cooking;
 import net.minecraft.core.HolderLookup;
@@ -10,7 +11,6 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -29,6 +29,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     public ModRecipeProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries);
     }
+
+
 
     @Override
     protected void buildRecipes(RecipeOutput recipeOutput) {
@@ -99,6 +101,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             fence(recipeOutput, set.woodFence(), set.wood());
             fence(recipeOutput, set.strippedWoodFence(), set.strippedWood());
 
+            fenceGate(recipeOutput, set.planksGate(), set.planks());
+
+
             pillar(recipeOutput, set.beam(), set.log());
             planksFromLogs(recipeOutput, set.planks(), set.logTag(), 4);
             woodFromLogs(recipeOutput, set.wood(), set.log());
@@ -115,13 +120,32 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         for (WoodBlockSets.SimpleVanillaBlocks set : WoodBlockSets.beams){
             pillar(recipeOutput, set.beam(), set.texture());
+            stairBuilder(set.woodStairs(), Ingredient.of(set.wood()))
+                    .unlockedBy("has_" + name(set.wood()), has(set.wood()))
+                    .save(recipeOutput);
+            wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, set.woodWall(), set.wood());
+            fence(recipeOutput, set.woodFence(), set.wood());
+            slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, set.woodSlab(), set.wood());
         }
+
         for (BrickShape.BrickRecipe set : BrickShape.blocks){
             brickShape(recipeOutput, RecipeCategory.BUILDING_BLOCKS, set.output(), set.input());
         }
 
         for (Cooking.CookingRecipe set : Cooking.blocks){
             smeltingSmooth(recipeOutput, set.output(), set.input());
+        }
+
+        for (ClayTilingSets.ClayTilingSet set : ClayTilingSets.sets){
+
+            clayTilingFromDye(recipeOutput, RecipeCategory.BUILDING_BLOCKS, set.block().get(), set.dye());
+
+            clayTiling(recipeOutput, RecipeCategory.BUILDING_BLOCKS, set.block().get(), set.terracotta());
+            stairBuilder(set.stairs(), Ingredient.of(set.block()))
+                    .unlockedBy("has_" + name(set.block().get()), has(set.block())).save(recipeOutput);
+            slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, set.slab().get(), set.block().get());
+            corner(recipeOutput, RecipeCategory.BUILDING_BLOCKS, set.corner().get(), set.block().get());
+
         }
 
     }
@@ -137,6 +161,26 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('#', Items.STICK)
                 .pattern("W#W")
                 .pattern("W#W")
+                .unlockedBy(getHasName(material), has(material))
+                .save(recipeOutput);
+    }
+
+    protected static void fenceGate(RecipeOutput recipeOutput, ItemLike fence, ItemLike material) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, fence, 3)
+                .define('W', material)
+                .define('#', Items.STICK)
+                .pattern("#W#")
+                .pattern("#W#")
+                .unlockedBy(getHasName(material), has(material))
+                .save(recipeOutput);
+    }
+
+    protected static void fenceGateNoStick(RecipeOutput recipeOutput, ItemLike fence, ItemLike material, ItemLike stick) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, fence, 3)
+                .define('W', material)
+                .define('#', stick)
+                .pattern("#W#")
+                .pattern("#W#")
                 .unlockedBy(getHasName(material), has(material))
                 .save(recipeOutput);
     }
@@ -194,11 +238,41 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput);
     }
 
-    public ResourceLocation key(Block block) {
+    protected static void clayTiling(RecipeOutput recipeOutput, RecipeCategory category, ItemLike result, ItemLike ingredient){
+        ShapedRecipeBuilder.shaped(category, result, 4)
+                .define('#', ingredient)
+                .pattern("##")
+                .pattern("##")
+                .unlockedBy(getHasName(ingredient), has(ingredient))
+                .save(recipeOutput);
+    }
+
+    protected static void clayTilingFromDye(RecipeOutput recipeOutput, RecipeCategory category, Block result, ItemLike dye){
+        ShapedRecipeBuilder.shaped(category, result, 8)
+                .define('#', ClayTilingSets.CLAY_TILING.block().get())
+                .define('D', dye)
+                .pattern("###")
+                .pattern("#D#")
+                .pattern("###")
+                .unlockedBy(getHasName(dye), has(dye))
+                .save(recipeOutput, name(result) + "_from_dye");
+    }
+
+    protected static void corner(RecipeOutput recipeOutput, RecipeCategory category, ItemLike result, ItemLike ingredient){
+        ShapedRecipeBuilder.shaped(category, result, 5)
+                .define('#', ingredient)
+                .pattern("###")
+                .pattern("  #")
+                .pattern("  #")
+                .unlockedBy(getHasName(ingredient), has(ingredient))
+                .save(recipeOutput);
+    }
+
+    public static ResourceLocation key(Block block) {
         return BuiltInRegistries.BLOCK.getKey(block);
     }
 
-    public String name(Block block) {
+    public static String name(Block block) {
         return key(block).getPath();
     }
 }

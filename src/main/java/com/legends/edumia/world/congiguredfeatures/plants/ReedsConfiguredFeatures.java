@@ -1,8 +1,7 @@
 package com.legends.edumia.world.congiguredfeatures.plants;
 
 import com.legends.edumia.Edumia;
-import com.legends.edumia.blocks.blocksets.ModNatureBlocks;
-import com.legends.edumia.core.BlockLoader;
+import com.legends.edumia.core.blocksets.ModNatureBlocks;
 import com.legends.edumia.world.features.EdumiaFeatures;
 import com.legends.edumia.world.features.reeds.ReedsFeatureConfig;
 import net.minecraft.core.registries.Registries;

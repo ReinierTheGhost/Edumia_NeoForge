@@ -1,8 +1,7 @@
 package com.legends.edumia.world.congiguredfeatures;
 
 import com.legends.edumia.Edumia;
-import com.legends.edumia.blocks.blocksets.FlowerBlockSets;
-import com.legends.edumia.core.BlockLoader;
+import com.legends.edumia.core.blocksets.FlowerBlockSets;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
