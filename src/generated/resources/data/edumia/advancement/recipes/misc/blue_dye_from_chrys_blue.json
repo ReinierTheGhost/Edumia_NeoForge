@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_chrys_blue": {
+      "conditions": {
+        "items": [
+          {
+            "items": "edumia:chrys_blue"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "edumia:blue_dye_from_chrys_blue"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_chrys_blue"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "edumia:blue_dye_from_chrys_blue"
+    ]
+  }
+}

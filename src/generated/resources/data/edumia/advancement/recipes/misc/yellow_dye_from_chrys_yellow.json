@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_chrys_yellow": {
+      "conditions": {
+        "items": [
+          {
+            "items": "edumia:chrys_yellow"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "edumia:yellow_dye_from_chrys_yellow"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_chrys_yellow"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "edumia:yellow_dye_from_chrys_yellow"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_foxglove_pink": {
+      "conditions": {
+        "items": [
+          {
+            "items": "edumia:foxglove_pink"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "edumia:pink_dye_from_foxglove_pink"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_foxglove_pink"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "edumia:pink_dye_from_foxglove_pink"
+    ]
+  }
+}

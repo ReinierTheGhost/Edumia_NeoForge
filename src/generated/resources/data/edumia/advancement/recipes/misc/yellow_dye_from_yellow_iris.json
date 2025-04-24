@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "edumia:yellow_dye_from_yellow_iris"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_yellow_iris": {
+      "conditions": {
+        "items": [
+          {
+            "items": "edumia:yellow_iris"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_yellow_iris"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "edumia:yellow_dye_from_yellow_iris"
+    ]
+  }
+}

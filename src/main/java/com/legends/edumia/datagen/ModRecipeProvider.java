@@ -1,10 +1,7 @@
 package com.legends.edumia.datagen;
 
 import com.legends.edumia.Edumia;
-import com.legends.edumia.core.blocksets.BuildingSets;
-import com.legends.edumia.core.blocksets.ClayTilingSets;
-import com.legends.edumia.core.blocksets.GlassSets;
-import com.legends.edumia.core.blocksets.WoodBlockSets;
+import com.legends.edumia.core.blocksets.*;
 import com.legends.edumia.datagen.helpers.resipes.BrickShape;
 import com.legends.edumia.datagen.helpers.resipes.Cooking;
 import net.minecraft.core.HolderLookup;
@@ -12,6 +9,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -26,8 +24,11 @@ import java.util.concurrent.CompletableFuture;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
 
-    public ModRecipeProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
+    private final String modid;
+
+    public ModRecipeProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries, String modid) {
         super(output, registries);
+        this.modid = modid;
     }
 
 
@@ -138,7 +139,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         for (ClayTilingSets.ClayTilingSet set : ClayTilingSets.sets){
 
-            clayTilingFromDye(recipeOutput, RecipeCategory.BUILDING_BLOCKS, set.block().get(), set.dye());
+            if (set != ClayTilingSets.CLAY_TILING){
+                coloredBlockFromDye(recipeOutput, RecipeCategory.BUILDING_BLOCKS, set.block().get(),
+                        ClayTilingSets.CLAY_TILING.block().get(), set.dye());
+            }
+
 
             clayTiling(recipeOutput, RecipeCategory.BUILDING_BLOCKS, set.block().get(), set.terracotta());
             stairBuilder(set.stairs(), Ingredient.of(set.block()))
@@ -149,8 +154,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         }
 
         for (GlassSets.GlassSet set : GlassSets.glassSets){
+            if (set != GlassSets.FINE_GLASS){
+                coloredBlockFromDye(recipeOutput, RecipeCategory.BUILDING_BLOCKS, set.block().get(),
+                        GlassSets.FINE_GLASS.block().get(), set.dye());
+            }
             brickShape(recipeOutput, RecipeCategory.MISC, set.block(), set.glass());
             fineGlassPane(recipeOutput, set.pane().get(), set.block().get());
+        }
+
+        for (FlowerBlockSets.FlowerSet set : FlowerBlockSets.flowerSets){
+            if (set != FlowerBlockSets.YELLOW_IRIS && set != FlowerBlockSets.HIBISCUS &&
+                    set != FlowerBlockSets.FLAME_OF_THE_SOUTH && set != FlowerBlockSets.PARASOL_MUSHROOM_TALL){
+                dyeFromFlower(recipeOutput, set.dye(), set.flower().get(), 1);
+            }else {
+                dyeFromFlower(recipeOutput, set.dye(), set.tallFlower().get(), 2);
+            }
+
         }
 
 
@@ -262,15 +281,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput);
     }
 
-    protected void clayTilingFromDye(RecipeOutput recipeOutput, RecipeCategory category, Block result, ItemLike dye){
+    protected void coloredBlockFromDye(RecipeOutput recipeOutput, RecipeCategory category, Block result, ItemLike ingredient, ItemLike dye){
         ShapedRecipeBuilder.shaped(category, result, 8)
-                .define('#', ClayTilingSets.CLAY_TILING.block().get())
+                .define('#', ingredient)
                 .define('D', dye)
                 .pattern("###")
                 .pattern("#D#")
                 .pattern("###")
                 .unlockedBy(getHasName(dye), has(dye))
-                .save(recipeOutput, name(result) + "_from_dye");
+                .save(recipeOutput, modLoc(name(result)) + "_from_dye");
     }
 
     protected static void corner(RecipeOutput recipeOutput, RecipeCategory category, ItemLike result, ItemLike ingredient){
@@ -283,11 +302,30 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput);
     }
 
+    protected void dyeFromFlower(RecipeOutput recipeOutput, Item result, Block flower, int amount){
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, result, amount)
+                .requires(flower)
+                .unlockedBy(getHasName(flower), has(flower))
+                .save(recipeOutput, modLoc(name(result)) + "_from_" + name(flower));
+    }
+
+    public ResourceLocation modLoc(String name) {
+        return ResourceLocation.fromNamespaceAndPath(modid, name);
+    }
+
     public  ResourceLocation key(Block block) {
         return BuiltInRegistries.BLOCK.getKey(block);
     }
 
+    public  ResourceLocation key(Item item) {
+        return BuiltInRegistries.ITEM.getKey(item);
+    }
+
     public  String name(Block block) {
         return key(block).getPath();
+    }
+
+    public  String name(Item item) {
+        return key(item).getPath();
     }
 }

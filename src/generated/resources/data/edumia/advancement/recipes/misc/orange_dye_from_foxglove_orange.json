@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_foxglove_orange": {
+      "conditions": {
+        "items": [
+          {
+            "items": "edumia:foxglove_orange"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "edumia:orange_dye_from_foxglove_orange"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_foxglove_orange"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "edumia:orange_dye_from_foxglove_orange"
+    ]
+  }
+}

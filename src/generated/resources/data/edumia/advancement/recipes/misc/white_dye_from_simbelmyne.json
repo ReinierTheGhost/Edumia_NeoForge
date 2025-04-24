@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_simbelmyne": {
+      "conditions": {
+        "items": [
+          {
+            "items": "edumia:simbelmyne"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "edumia:white_dye_from_simbelmyne"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_simbelmyne"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "edumia:white_dye_from_simbelmyne"
+    ]
+  }
+}

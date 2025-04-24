@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "edumia:magenta_dye_from_tuberose"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tuberose": {
+      "conditions": {
+        "items": [
+          {
+            "items": "edumia:tuberose"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_tuberose"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "edumia:magenta_dye_from_tuberose"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_parasol_mushroom_tall": {
+      "conditions": {
+        "items": [
+          {
+            "items": "edumia:parasol_mushroom_tall"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "edumia:brown_dye_from_parasol_mushroom_tall"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_parasol_mushroom_tall"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "edumia:brown_dye_from_parasol_mushroom_tall"
+    ]
+  }
+}
