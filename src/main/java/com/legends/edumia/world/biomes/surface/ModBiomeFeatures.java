@@ -14,6 +14,7 @@ import com.legends.edumia.world.placedfeatures.trees.DeadTreePlacedFeatures;
 import com.legends.edumia.world.placedfeatures.trees.OakTreePlacedFeatures;
 import com.legends.edumia.world.placedfeatures.trees.TemperateTreePlacedFeatures;
 import net.minecraft.data.worldgen.placement.MiscOverworldPlacements;
+import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.biome.BiomeGenerationSettings;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
@@ -330,6 +331,11 @@ public class ModBiomeFeatures {
     public static void addReedsFoliage(List<ResourceKey<PlacedFeature>> vegetation) {
         vegetation.add(ReedsPlacedFeatures.REEDS);
     }
+
+    public static void addGrass(List<ResourceKey<PlacedFeature>> vegetation){
+        vegetation.add(VegetationPlacements.GRASS_BONEMEAL);
+        vegetation.add(VegetationPlacements.PATCH_GRASS_PLAIN);
+    }
     public static void addWheatGrass(List<ResourceKey<PlacedFeature>> vegetation) {
     }
     public static void addWildGrass(List<ResourceKey<PlacedFeature>> vegetation) {
@@ -362,6 +368,7 @@ public class ModBiomeFeatures {
     public static void addWildCucumber(List<ResourceKey<PlacedFeature>> vegetation) {
     }
     public static void addWildFlax(List<ResourceKey<PlacedFeature>> vegetation) {
+        //vegetation.add(FlowerPlacedFeatures.PATCH_FLAX_FLOWER_KEY);
     }
     public static void addWildGarlic(List<ResourceKey<PlacedFeature>> vegetation) {
     }

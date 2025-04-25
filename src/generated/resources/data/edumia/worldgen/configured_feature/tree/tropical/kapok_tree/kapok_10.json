@@ -50,13 +50,13 @@
       "edumia:jungle_wood_slab"
     ],
     "place_from_nbt": [
-      "edumia:jungle_wood_slab",
       "minecraft:jungle_log",
+      "edumia:jungle_wood_slab",
       "minecraft:mangrove_roots",
-      "edumia:banana_leaves",
       "minecraft:jungle_leaves",
-      "edumia:jungle_wood_fence",
-      "edumia:jungle_wood_stairs"
+      "edumia:banana_leaves",
+      "edumia:jungle_wood_stairs",
+      "edumia:jungle_wood_fence"
     ]
   }
 }

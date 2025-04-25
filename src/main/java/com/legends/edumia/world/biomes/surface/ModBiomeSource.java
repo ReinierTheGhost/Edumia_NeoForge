@@ -21,10 +21,11 @@ import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.BiomeSource;
 import net.minecraft.world.level.biome.Climate;
 import net.minecraft.world.phys.Vec2;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 import java.util.stream.Stream;
-
+@SuppressWarnings("unchecked")
 public class ModBiomeSource extends BiomeSource {
 
     public static final Codec<ModBiomeSource> CODEC = RecordCodecBuilder.create((instance) -> instance.group(
@@ -44,12 +45,12 @@ public class ModBiomeSource extends BiomeSource {
 
 
     @Override
-    protected MapCodec<? extends BiomeSource> codec() {
+    protected @NotNull MapCodec<? extends BiomeSource> codec() {
         return (MapCodec<? extends BiomeSource>) CODEC;
     }
 
     @Override
-    protected Stream<Holder<Biome>> collectPossibleBiomes() {
+    protected @NotNull Stream<Holder<Biome>> collectPossibleBiomes() {
         return biomes.stream();
     }
 

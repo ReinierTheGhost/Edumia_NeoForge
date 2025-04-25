@@ -1,5 +1,6 @@
 package com.legends.edumia.world.biomes.surface;
 
+import com.legends.edumia.world.biomes.EdumiaBiomeKeys;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.biome.Biome;
 
@@ -12,6 +13,8 @@ public class SubBiomes {
 
     public static void loadSubBiomes(){
         subBiomesMap = new HashMap<>();
+        subBiomesMap.put(EdumiaBiomeKeys.AVELION_PLAINS, new SubBiome(56, 1.25f)
+                .addSubBiomeData(0.22f, 0.44f, EdumiaBiomeKeys.AVELION_FOREST));
     }
 
     public static boolean isSubBiome(ResourceKey<Biome> biomeResourceKey) {

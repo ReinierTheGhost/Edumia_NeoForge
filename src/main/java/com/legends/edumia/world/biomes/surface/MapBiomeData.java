@@ -71,9 +71,12 @@ public class MapBiomeData {
         addBiome(new BiomeData(EdumiaBiomeKeys.RED_ORC_DESERT, EdumiaBiomeDataConfigs.redDesert, EdumiaBiomeDataConfigs.sandstoneLayers,
                 new BiomeColorsDTO(desertSky, desertSkyFog, 5407446, 1120828, 13419633, 9615182)));
 
-        addBiome(new BiomeData(EdumiaBiomeKeys.AVELION_PLAINS, EdumiaBiomeDataConfigs.grassPlains, EdumiaBiomeDataConfigs.limestoneLayers,
+        // Avelion
+        addBiome(new BiomeData(EdumiaBiomeKeys.AVELION_PLAINS, EdumiaBiomeDataConfigs.grassPlains, EdumiaBiomeDataConfigs.avelionLayers,
                 new BiomeColorsDTO(8827134, 12771327, defaultWater, defaultWaterFog, 6523989, 5667402)));
-        addBiome(new BiomeData(EdumiaBiomeKeys.AVELION_SANDY_SHORES, EdumiaBiomeDataConfigs.beach, EdumiaBiomeDataConfigs.limestoneLayers,
+        addBiome(new BiomeData(EdumiaBiomeKeys.AVELION_FOREST, EdumiaBiomeDataConfigs.grassPlains, EdumiaBiomeDataConfigs.avelionLayers,
+                new BiomeColorsDTO(8827134, 12771327, defaultWater, defaultWaterFog, 6523989, 5667402 )));
+        addBiome(new BiomeData(EdumiaBiomeKeys.AVELION_SANDY_SHORES, EdumiaBiomeDataConfigs.beach, EdumiaBiomeDataConfigs.avelionLayers,
                 new BiomeColorsDTO(8827134, 12771327, defaultWater, defaultWaterFog, 6523989, 5667402)));
         addBiome(new BiomeData(EdumiaBiomeKeys.AVELION_ROCKY_SHORES, EdumiaBiomeDataConfigs.avelionRockShore, EdumiaBiomeDataConfigs.avelionLayers,
                 new BiomeColorsDTO(8827134, 12771327, defaultWater, defaultWaterFog, 6523989, 5667402)));

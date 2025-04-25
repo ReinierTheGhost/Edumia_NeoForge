@@ -32,6 +32,9 @@ public class EdumiaBiomeKeys extends Biomes {
     public static final ResourceKey<Biome> RED_ORC_DESERT = EdumiaBiomeKeys.register("red_orc_desert");
 
     public static final ResourceKey<Biome> AVELION_PLAINS = EdumiaBiomeKeys.register("avelion_plains");
+    public static final ResourceKey<Biome> AVELION_FOREST = EdumiaBiomeKeys.register("avelion_forest");
+    public static final ResourceKey<Biome> AVELION_HIDDEN_BLOSSOM = EdumiaBiomeKeys.register("avelion_hidden_blossom");
+    public static final ResourceKey<Biome> AVELION_MEADOW = EdumiaBiomeKeys.register("avelion_meadow");
     public static final ResourceKey<Biome> AVELION_SANDY_SHORES = EdumiaBiomeKeys.register("avelion_sandy_shores");
     public static final ResourceKey<Biome> AVELION_ROCKY_SHORES = EdumiaBiomeKeys.register("avelion_rocky_shores");
     public static final ResourceKey<Biome> AVELION_FOOTHILLS = EdumiaBiomeKeys.register("avelion_foothills");

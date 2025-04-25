@@ -4,6 +4,7 @@ import com.legends.edumia.Edumia;
 import com.legends.edumia.core.blocksets.FlowerBlockSets;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -14,6 +15,7 @@ import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.RandomPatchConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
+import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider;
 
 public class FlowerConfiguredFeatures {
@@ -32,6 +34,7 @@ public class FlowerConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> DAISY_FLOWER_KEY = registerKey("daisy");
     public static final ResourceKey<ConfiguredFeature<?, ?>> DELPHINIUM_FLOWER_KEY = registerKey("delphinium");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FLAX_FLOWER_KEY = registerKey("flax");
+    public static final ResourceKey<ConfiguredFeature<?,?>> PATCH_FLAX_FLOWER_KEY = registerKey("flax_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FOXGLOVE_ORANGE_FLOWER_KEY = registerKey("foxglove_orange");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FOXGLOVE_PINK_FLOWER_KEY = registerKey("foxglove_pink");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FOXGLOVE_RED_FLOWER_KEY = registerKey("foxglove_red");
@@ -48,6 +51,7 @@ public class FlowerConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> YELLOW_IRIS_FLOWER_KEY = registerKey("yellow_iris");
     public static final ResourceKey<ConfiguredFeature<?, ?>> DESERT_FLAME_FLOWER_KEY = registerKey("desert_flame");
     public static final ResourceKey<ConfiguredFeature<?, ?>> HIBISCUS_FLOWER_KEY = registerKey("hibiscus");
+
 
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context){
@@ -106,6 +110,9 @@ public class FlowerConfiguredFeatures {
         register(context, FLAX_FLOWER_KEY, Feature.FLOWER, new RandomPatchConfiguration(8, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(
                         SimpleWeightedRandomList.<BlockState>builder().add(FlowerBlockSets.FLAX_FLOWERS.flower().get().defaultBlockState(), 1))))));
+
+        register(context, PATCH_FLAX_FLOWER_KEY, Feature.RANDOM_PATCH, FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK,
+                new SimpleBlockConfiguration(BlockStateProvider.simple(FlowerBlockSets.FLAX_FLOWERS.flower().get()))));
 
         register(context, FOXGLOVE_ORANGE_FLOWER_KEY, Feature.FLOWER, new RandomPatchConfiguration(8, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(

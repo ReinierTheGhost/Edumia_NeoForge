@@ -82,6 +82,7 @@ public class EdumiaChunkGenerator extends ChunkGenerator {
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.ORC_DESERT),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.RED_ORC_DESERT),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.AVELION_PLAINS),
+                        biomeRegistry.getOrThrow(EdumiaBiomeKeys.AVELION_FOREST),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.AVELION_SANDY_SHORES),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.AVELION_ROCKY_SHORES),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.AVELION_FOOTHILLS),

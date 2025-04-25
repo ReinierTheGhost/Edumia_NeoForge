@@ -36,18 +36,15 @@
     [],
     [
       "edumia:boulders/big_limestone_boulder",
-      "edumia:boulders/big_stone_boulder",
       "edumia:boulders/limestone_boulder",
-      "edumia:boulders/stone_boulder",
       "edumia:flowers/heather_bush",
       "edumia:tree/oaks/oak/oak_bush_tree",
-      "edumia:tree/oaks/oak/rare_mega_oak_tree",
-      "edumia:tree/temperate/birch/mega_birch_tree",
-      "edumia:tree/temperate/birch/rare_birch_tree",
+      "edumia:tree/temperate/birch/super_rare_birch_tree",
       "minecraft:brown_mushroom_normal",
       "minecraft:flower_default",
       "minecraft:glow_lichen",
-      "minecraft:patch_grass_forest",
+      "minecraft:grass_bonemeal",
+      "minecraft:patch_grass_plain",
       "minecraft:patch_pumpkin",
       "minecraft:patch_sugar_cane",
       "minecraft:red_mushroom_normal"
@@ -61,7 +58,68 @@
   "spawners": {
     "ambient": [],
     "axolotls": [],
-    "creature": [],
+    "creature": [
+      {
+        "type": "minecraft:sheep",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 12
+      },
+      {
+        "type": "minecraft:pig",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 10
+      },
+      {
+        "type": "minecraft:chicken",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 10
+      },
+      {
+        "type": "minecraft:cow",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 8
+      },
+      {
+        "type": "minecraft:sheep",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 12
+      },
+      {
+        "type": "minecraft:pig",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 10
+      },
+      {
+        "type": "minecraft:chicken",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 10
+      },
+      {
+        "type": "minecraft:cow",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 8
+      },
+      {
+        "type": "minecraft:donkey",
+        "maxCount": 3,
+        "minCount": 1,
+        "weight": 1
+      },
+      {
+        "type": "minecraft:horse",
+        "maxCount": 6,
+        "minCount": 2,
+        "weight": 5
+      }
+    ],
     "misc": [],
     "monster": [],
     "underground_water_creature": [],

@@ -35,11 +35,14 @@
     [],
     [],
     [
-      "edumia:boulders/big_diorite_boulder",
       "edumia:boulders/big_limestone_boulder",
-      "edumia:boulders/diorite_boulder",
       "edumia:boulders/limestone_boulder",
+      "edumia:tree/beech/common_beech_tree",
+      "edumia:tree/oaks/oak/common_oak_tree",
       "edumia:tree/oaks/oak/oak_bush_tree",
+      "edumia:tree/oaks/oak/rare_mega_oak_tree",
+      "edumia:tree/temperate/birch/mega_birch_tree",
+      "edumia:tree/temperate/birch/rare_birch_tree",
       "minecraft:brown_mushroom_normal",
       "minecraft:flower_default",
       "minecraft:glow_lichen",
@@ -47,7 +50,8 @@
       "minecraft:patch_grass_plain",
       "minecraft:patch_pumpkin",
       "minecraft:patch_sugar_cane",
-      "minecraft:red_mushroom_normal"
+      "minecraft:red_mushroom_normal",
+      "minecraft:trees_plains"
     ],
     [
       "minecraft:freeze_top_layer"

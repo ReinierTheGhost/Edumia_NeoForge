@@ -108,7 +108,6 @@ public class MapBasedBiomePool {
         add(new Color(236, 236, 236), new MapBasedCustomBiome(EdumiaBiomeKeys.EDUMIA_TUNDRA, 14, EdumiaBiomeDataConfigs.landModifier));
         add(new Color(237, 229, 145), new MapBasedCustomBiome(EdumiaBiomeKeys.ORC_DESERT, 9, EdumiaBiomeDataConfigs.landModifier));
         add(new Color(255, 0, 0), new MapBasedCustomBiome(EdumiaBiomeKeys.RED_ORC_DESERT, 10, EdumiaBiomeDataConfigs.landModifier));
-        add(new Color(67, 193, 125), new MapBasedCustomBiome(EdumiaBiomeKeys.AVELION_PLAINS, 4, EdumiaBiomeDataConfigs.landModifier));
         add(new Color(92, 42, 235), new MapBasedCustomBiome(EdumiaBiomeKeys.OGRE_FOREST, 4, EdumiaBiomeDataConfigs.landModifier));
         add(new Color(92, 42, 109), new MapBasedCustomBiome(EdumiaBiomeKeys.GENSAI_SAKURA_GROVE, 6, EdumiaBiomeDataConfigs.landModifier));
         add(new Color(132, 137, 124), new MapBasedCustomBiome(EdumiaBiomeKeys.EDUMIA_FOOTHILLS, 37, EdumiaBiomeDataConfigs.emModifier.heightModifier(0.23f)));
@@ -129,6 +128,11 @@ public class MapBasedBiomePool {
 
         add(new Color(121, 186, 111), new MapBasedCustomBiome(EdumiaBiomeKeys.TAIGA_FOREST, 4, EdumiaBiomeDataConfigs.landModifier));
         add(new Color(48, 109, 42), new MapBasedCustomBiome(EdumiaBiomeKeys.GENSAI_JUNGLE, 7, EdumiaBiomeDataConfigs.landModifier));
+
+        add(new Color(67, 193, 125), new MapBasedCustomBiome(EdumiaBiomeKeys.AVELION_PLAINS, 4,
+                EdumiaBiomeDataConfigs.landModifier));
+        add(new Color(60, 176, 114), new MapBasedCustomBiome(EdumiaBiomeKeys.AVELION_FOREST, 6,
+                EdumiaBiomeDataConfigs.landModifier));
         add(new Color(222, 227, 191), new MapBasedCustomBiome(EdumiaBiomeKeys.AVELION_SANDY_SHORES, 0,
                 EdumiaBiomeDataConfigs.landModifier.heightModifier(0.97f).heightModifier(0.1f).noiseModifier(0.05)));
         add(new Color(74, 213, 138), new MapBasedCustomBiome(EdumiaBiomeKeys.AVELION_ROCKY_SHORES,30,

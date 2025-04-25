@@ -8,6 +8,7 @@ import com.legends.edumia.world.placedfeatures.biomes.OgreBiomePlacedFeatures;
 import com.legends.edumia.world.placedfeatures.ocean.ReefPlacedFeatures;
 import com.legends.edumia.world.placedfeatures.trees.TemperateTreePlacedFeatures;
 import com.legends.edumia.world.placedfeatures.trees.TropicalTreePlacedFeatures;
+import com.legends.edumia.world.spawners.ModSpawnSettingsBuilder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BiomeDefaultFeatures;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -50,9 +51,10 @@ public class ModBiomes {
         createOrcDesertBiome(context, EdumiaBiomeKeys.ORC_DESERT);
         createRedOrcDesertBiome(context, EdumiaBiomeKeys.RED_ORC_DESERT);
 
-        createAvelionPlainsBiome(context, EdumiaBiomeKeys.AVELION_PLAINS);
-        createAvelionPlainsBiome(context, EdumiaBiomeKeys.AVELION_SANDY_SHORES);
-        createAvelionPlainsBiome(context, EdumiaBiomeKeys.AVELION_ROCKY_SHORES);
+        createAvelionBiome(context, EdumiaBiomeKeys.AVELION_PLAINS, 0);
+        createAvelionBiome(context, EdumiaBiomeKeys.AVELION_FOREST, 3);
+        createAvelionBiome(context, EdumiaBiomeKeys.AVELION_SANDY_SHORES, 2);
+        createAvelionBiome(context, EdumiaBiomeKeys.AVELION_ROCKY_SHORES, 1);
         createEdumiaMountainBiome(context, EdumiaBiomeKeys.AVELION_FOOTHILLS, false);
         createEdumiaMountainBiome(context, EdumiaBiomeKeys.AVELION_MOUNTAIN_BASE, false);
         createEdumiaMountainBiome(context, EdumiaBiomeKeys.AVELION_MOUNTAIN, false);
@@ -257,6 +259,56 @@ public class ModBiomes {
 
         registerBiome(context, biomeResourceKey, spawnSettings, generationSettings, 0.8f, false);
     }
+
+    public static void createAvelionBiome(BootstrapContext<Biome> context, ResourceKey<Biome> biomeResourceKey, int step) {
+        MobSpawnSettings.Builder spawnSettings = new MobSpawnSettings.Builder();
+        ModSpawnSettingsBuilder.addFarmAnimals(spawnSettings);
+        ModSpawnSettingsBuilder.addPlainAnimals(spawnSettings);
+        BiomeGenerationSettings.Builder generationSettings = new BiomeGenerationSettings.Builder(
+                context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
+
+        ModBiomeFeatures.addDisks(undergroundOres);
+        ModBiomeFeatures.addGrass(vegetation);
+        vegetation.add(VegetationPlacements.FLOWER_DEFAULT);
+        vegetation.add(VegetationPlacements.BROWN_MUSHROOM_NORMAL);
+        vegetation.add(VegetationPlacements.RED_MUSHROOM_NORMAL);
+        vegetation.add(VegetationPlacements.PATCH_SUGAR_CANE);
+        vegetation.add(VegetationPlacements.PATCH_PUMPKIN);
+        ModBiomeFeatures.addGravelOre(vegetation);
+        ModBiomeFeatures.addOakBushes(vegetation);
+        ModBiomeFeatures.addLimestoneBoulder(vegetation);
+        ModBiomeFeatures.addWildFlax(vegetation);
+
+        if (step == 0){
+            ModBiomeFeatures.addVeryRareBirchTrees(vegetation);
+            ModBiomeFeatures.addHeather(vegetation);
+
+        }else if (step == 1){
+            ModBiomeFeatures.addCalciteBoulder(vegetation);
+            ModBiomeFeatures.addDioriteBoulder(vegetation);
+        } else if (step == 2){
+            ModBiomeFeatures.addDioriteBoulder(vegetation);
+        }else if (step == 3){
+            vegetation.add(VegetationPlacements.TREES_PLAINS);
+            ModBiomeFeatures.addMegaBirchTrees(vegetation);
+            ModBiomeFeatures.addRareBirchTrees(vegetation);
+            ModBiomeFeatures.addRareMegaOakTrees(vegetation);
+            ModBiomeFeatures.addCommonBeechTrees(vegetation);
+            ModBiomeFeatures.addCommonOakTrees(vegetation);
+        }else if (step == 4){
+            ModBiomeFeatures.addOakTrees(vegetation);
+        }else if (step == 5){
+            vegetation.add(VegetationPlacements.TREES_PLAINS);
+        }
+
+        ModBiomeFeatures.addWhiteSand(vegetation);
+
+
+        ModBiomeFeatures.addElvenCrystal(undergroundOres);
+
+        registerBiome(context, biomeResourceKey, spawnSettings, generationSettings);
+    }
+
     public static void createAvelionPlainsBiome(BootstrapContext<Biome> context, ResourceKey<Biome> biomeResourceKey) {
         MobSpawnSettings.Builder spawnSettings = new MobSpawnSettings.Builder();
         BiomeGenerationSettings.Builder generationSettings = new BiomeGenerationSettings.Builder(

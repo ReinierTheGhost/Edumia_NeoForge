@@ -227,7 +227,7 @@ public class ImageUtils {
         Kernel kernel = new Kernel(EDGE_BRUSH_SIZE, EDGE_BRUSH_SIZE, edgeKernel);
         ConvolveOp op = new ConvolveOp(kernel, ConvolveOp.EDGE_NO_OP, null);
 
-        BufferedImage edgeImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
+        BufferedImage edgeImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
         edgeImage = op.filter(image, edgeImage);
 
         return edgeImage;
