@@ -6,6 +6,7 @@ import com.legends.edumia.world.features.bouders.BoulderFeature;
 import com.legends.edumia.world.features.bouders.BouldersFeatureConfig;
 import com.legends.edumia.world.features.crystal.CrystalFeature;
 import com.legends.edumia.world.features.crystal.CrystalFeatureConfig;
+import com.legends.edumia.world.features.delta.ModDeltaFeatures;
 import com.legends.edumia.world.features.reeds.ReedsFeature;
 import com.legends.edumia.world.features.reeds.ReedsFeatureConfig;
 import com.legends.edumia.world.features.treesnbt.TreeFromStructureNBTConfig;
@@ -22,6 +23,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.TreeFeature;
+import net.minecraft.world.level.levelgen.feature.configurations.DeltaFeatureConfiguration;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -37,6 +39,8 @@ public class EdumiaFeatures {
     public static final DeferredHolder<Feature<?>, ReedsFeature> REEDS = FEATURES.register("reeds", () -> new ReedsFeature(ReedsFeatureConfig.CODEC));
     public static final DeferredHolder<Feature<?>, TreeFromStructureNBTFeature> TREE_FROM_NBT = FEATURES.register("tree_from_nbt",
             () -> new TreeFromStructureNBTFeature(TreeFromStructureNBTConfig.CODEC));
+    public static final DeferredHolder<Feature<?>, ModDeltaFeatures> DELTA_FEATURES = FEATURES.register("delta_feature",
+            () -> new ModDeltaFeatures(DeltaFeatureConfiguration.CODEC));
 
 
 

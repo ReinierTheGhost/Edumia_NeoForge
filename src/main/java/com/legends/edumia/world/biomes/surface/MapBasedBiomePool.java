@@ -133,6 +133,10 @@ public class MapBasedBiomePool {
                 EdumiaBiomeDataConfigs.landModifier));
         add(new Color(60, 176, 114), new MapBasedCustomBiome(EdumiaBiomeKeys.AVELION_FOREST, 6,
                 EdumiaBiomeDataConfigs.landModifier));
+        add(new Color(27, 199, 97), new MapBasedCustomBiome(EdumiaBiomeKeys.AVELION_HIDDEN_BLOSSOM, 8,
+                EdumiaBiomeDataConfigs.landModifier));
+        add(new Color(74, 211, 117), new MapBasedCustomBiome(EdumiaBiomeKeys.AVELION_MEADOW, 4,
+                EdumiaBiomeDataConfigs.landModifier));
         add(new Color(222, 227, 191), new MapBasedCustomBiome(EdumiaBiomeKeys.AVELION_SANDY_SHORES, 0,
                 EdumiaBiomeDataConfigs.landModifier.heightModifier(0.97f).heightModifier(0.1f).noiseModifier(0.05)));
         add(new Color(74, 213, 138), new MapBasedCustomBiome(EdumiaBiomeKeys.AVELION_ROCKY_SHORES,30,

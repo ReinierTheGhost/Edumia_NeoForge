@@ -15,6 +15,11 @@ public class ItemLoader {
     public static final DeferredItem<Item> ABOMINABLE_BLADE = ITEMS.register("abominable_blade",
             () -> new SwordItem(Tiers.IRON, new Item.Properties().attributes(SwordItem.createAttributes(Tiers.IRON, 3, -2.4F))));
 
+    public static final DeferredItem<Item> BAMBOO_STAFF = ITEMS.register("bamboo_staff",
+            () -> new SwordItem(Tiers.IRON, new Item.Properties().attributes(SwordItem.createAttributes(Tiers.IRON, 5, -5F))));
+    public static final DeferredItem<Item> AIR_SCEPTRE = ITEMS.register("air_sceptre",
+            () -> new SwordItem(Tiers.IRON, new Item.Properties().attributes(SwordItem.createAttributes(Tiers.IRON, 5, -5F))));
+
     public static final DeferredItem<Item> GENSAI_AXE = ITEMS.register("gensai_axe",
             () -> new AxeItem(Tiers.IRON,  new Item.Properties().attributes(AxeItem.createAttributes(Tiers.IRON, 3, -2.4f))));
     public static final DeferredItem<Item> GENSAI_HOE = ITEMS.register("gensai_hoe",

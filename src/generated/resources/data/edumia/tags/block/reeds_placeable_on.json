@@ -1,6 +1,9 @@
 {
   "values": [
+    "minecraft:mud",
     "minecraft:sand",
+    "minecraft:red_sand",
+    "minecraft:clay",
     "minecraft:dirt",
     "minecraft:grass_block",
     "edumia:white_sand",

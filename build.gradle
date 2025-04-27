@@ -128,9 +128,10 @@ dependencies {
     // We add the full version to localRuntime, not runtimeOnly, so that we do not publish a dependency on it
     // localRuntime "mezz.jei:jei-${mc_version}-neoforge:${jei_version}"
 
-    implementation "curse.maven:resourceful-lib-570073:5973188"
-    implementation "curse.maven:athena-841890:5629395"
-    implementation "curse.maven:chipped-456956:5813117"
+
+    runtimeOnly "curse.maven:resourceful-lib-570073:5973188"
+    runtimeOnly "curse.maven:athena-841890:5629395"
+    runtimeOnly "curse.maven:chipped-456956:5813117"
     implementation "curse.maven:glitchcore-955399:5660740"
 
     jarJar(group: "curse.maven", name: "resourceful-lib-570073", version: "5973188")

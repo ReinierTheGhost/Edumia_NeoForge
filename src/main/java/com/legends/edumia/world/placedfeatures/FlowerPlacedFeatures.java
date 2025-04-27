@@ -47,17 +47,6 @@ public class FlowerPlacedFeatures {
     public static final ResourceKey<PlacedFeature> DESERT_FLAME_FLOWER_KEY = registerKey("desert_flame");
     public static final ResourceKey<PlacedFeature> HIBISCUS_FLOWER_KEY = registerKey("hibiscus");
 
-    static PlacementModifier overflowing = PlacementUtils.countExtra(5, 0.5f, 1);
-    static PlacementModifier abundant = PlacementUtils.countExtra(4, 0.5f, 1);
-    static PlacementModifier common = PlacementUtils.countExtra(2, 0.5f, 1);
-    static PlacementModifier uncommon = PlacementUtils.countExtra(1, 0.2f, 1);
-    static PlacementModifier sparse = PlacementUtils.countExtra(0, 0.5f, 1);
-    static PlacementModifier occasional = PlacementUtils.countExtra(0, 0.25f, 1);
-    static PlacementModifier scarce = PlacementUtils.countExtra(0, 0.2f, 1);
-    static PlacementModifier rare = PlacementUtils.countExtra(0, 0.1f, 1);
-    static PlacementModifier veryRare = PlacementUtils.countExtra(0, 0.05f, 1);
-    static PlacementModifier wildBushRarity = PlacementUtils.countExtra(0, 0.01f, 1);
-
     public static void boostrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.lookup(Registries.CONFIGURED_FEATURE);
         register(context, ASPHODEL_FLOWER_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(FlowerConfiguredFeatures.ASPHODEL_FLOWER_KEY),
@@ -131,7 +120,7 @@ public class FlowerPlacedFeatures {
                         BiomeFilter.biome()));
 
         register(context, PATCH_FLAX_FLOWER_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(FlowerConfiguredFeatures.PATCH_FLAX_FLOWER_KEY),
-                List.of(wildBushRarity,
+                List.of(ModPlacedFeatures.wildBushRarity,
                         InSquarePlacement.spread(), HeightmapPlacement.onHeightmap(Heightmap.Types.MOTION_BLOCKING),
                         BiomeFilter.biome()));
 

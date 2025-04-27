@@ -34,6 +34,7 @@
     [],
     [],
     [
+      "edumia:abundant_water_delta",
       "edumia:reeds",
       "edumia:tree/temperate/willow/willow_tree",
       "minecraft:flower_default",

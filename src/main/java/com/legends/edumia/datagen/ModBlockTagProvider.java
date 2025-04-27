@@ -23,9 +23,6 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         tag(TagLoader.Blocks.REEDS_PLACEABLE_ON)
-                .add(Blocks.SAND)
-                .add(Blocks.DIRT)
-                .add(Blocks.GRASS_BLOCK)
                 .add(ReedsPlaceable.blocks.toArray(new Block[0]));
 
         tag(BlockTags.MINEABLE_WITH_PICKAXE)

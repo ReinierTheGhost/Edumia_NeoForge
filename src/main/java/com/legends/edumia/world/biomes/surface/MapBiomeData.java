@@ -3,6 +3,7 @@ package com.legends.edumia.world.biomes.surface;
 import com.legends.edumia.world.biomes.BiomeColorsDTO;
 import com.legends.edumia.world.biomes.EdumiaBiomeDataConfigs;
 import com.legends.edumia.world.biomes.EdumiaBiomeKeys;
+import com.legends.edumia.world.biomes.caves.CaveType;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.biome.Biome;
 
@@ -73,13 +74,21 @@ public class MapBiomeData {
 
         // Avelion
         addBiome(new BiomeData(EdumiaBiomeKeys.AVELION_PLAINS, EdumiaBiomeDataConfigs.grassPlains, EdumiaBiomeDataConfigs.avelionLayers,
-                new BiomeColorsDTO(8827134, 12771327, defaultWater, defaultWaterFog, 6523989, 5667402)));
+                new BiomeColorsDTO(8827134, 12771327, defaultWater, defaultWaterFog, 7385448, 6593880),
+                CaveType.AVELION));
         addBiome(new BiomeData(EdumiaBiomeKeys.AVELION_FOREST, EdumiaBiomeDataConfigs.grassPlains, EdumiaBiomeDataConfigs.avelionLayers,
-                new BiomeColorsDTO(8827134, 12771327, defaultWater, defaultWaterFog, 6523989, 5667402 )));
+                new BiomeColorsDTO(8827134, 12771327, defaultWater, defaultWaterFog, 6331736, 6067536),
+                CaveType.AVELION));
+        addBiome(new BiomeData(EdumiaBiomeKeys.AVELION_HIDDEN_BLOSSOM, EdumiaBiomeDataConfigs.grassPlains, EdumiaBiomeDataConfigs.avelionLayers,
+                new BiomeColorsDTO(8827134, 12771327, defaultWater, defaultWaterFog, 7584106, 6593880),
+                CaveType.AVELION));
+        addBiome(new BiomeData(EdumiaBiomeKeys.AVELION_MEADOW, EdumiaBiomeDataConfigs.grassPlains, EdumiaBiomeDataConfigs.avelionLayers,
+                new BiomeColorsDTO(8827134, 12771327, defaultWater, defaultWaterFog, 7584106, 6725722),
+                CaveType.AVELION));
         addBiome(new BiomeData(EdumiaBiomeKeys.AVELION_SANDY_SHORES, EdumiaBiomeDataConfigs.beach, EdumiaBiomeDataConfigs.avelionLayers,
-                new BiomeColorsDTO(8827134, 12771327, defaultWater, defaultWaterFog, 6523989, 5667402)));
+                new BiomeColorsDTO(8827134, 12771327, defaultWater, defaultWaterFog, 9090684, 8168815)));
         addBiome(new BiomeData(EdumiaBiomeKeys.AVELION_ROCKY_SHORES, EdumiaBiomeDataConfigs.avelionRockShore, EdumiaBiomeDataConfigs.avelionLayers,
-                new BiomeColorsDTO(8827134, 12771327, defaultWater, defaultWaterFog, 6523989, 5667402)));
+                new BiomeColorsDTO(8827134, 12771327, defaultWater, defaultWaterFog, 9090684, 8168815)));
 
         addBiome(new BiomeData(EdumiaBiomeKeys.OGRE_FOREST, EdumiaBiomeDataConfigs.grassPlains, EdumiaBiomeDataConfigs.limestoneLayers,
                 new BiomeColorsDTO(defaultSky, defaultFog, defaultWater, defaultWaterFog, 8240485, 7909996)));

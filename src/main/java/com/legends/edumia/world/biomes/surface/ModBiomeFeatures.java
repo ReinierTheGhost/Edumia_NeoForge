@@ -2,6 +2,7 @@ package com.legends.edumia.world.biomes.surface;
 
 import com.legends.edumia.world.placedfeatures.BeachPlacedFeatures;
 import com.legends.edumia.world.placedfeatures.FlowerPlacedFeatures;
+import com.legends.edumia.world.placedfeatures.ModPlacedFeatures;
 import com.legends.edumia.world.placedfeatures.TreePlacedFeatures;
 import com.legends.edumia.world.placedfeatures.biomes.BiomePlacedFeatures;
 import com.legends.edumia.world.placedfeatures.biomes.FairyBiomePlacedFeatures;
@@ -286,6 +287,11 @@ public class ModBiomeFeatures {
 
     // region FOLIAGE
     public static void addWaterDelta(List<ResourceKey<PlacedFeature>> vegetation) {
+        vegetation.add(ModPlacedFeatures.WATER_DELTA);
+    }
+
+    public static void addAbundantWaterDelta(List<ResourceKey<PlacedFeature>> vegetation) {
+        vegetation.add(ModPlacedFeatures.ABUNDANT_WATER_DELTA);
     }
 
     public static void addCornflower(List<ResourceKey<PlacedFeature>> vegetation) {

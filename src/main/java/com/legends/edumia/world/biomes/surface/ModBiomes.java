@@ -53,6 +53,8 @@ public class ModBiomes {
 
         createAvelionBiome(context, EdumiaBiomeKeys.AVELION_PLAINS, 0);
         createAvelionBiome(context, EdumiaBiomeKeys.AVELION_FOREST, 3);
+        createAvelionBiome(context, EdumiaBiomeKeys.AVELION_HIDDEN_BLOSSOM, 4);
+        createAvelionBiome(context, EdumiaBiomeKeys.AVELION_MEADOW, 5);
         createAvelionBiome(context, EdumiaBiomeKeys.AVELION_SANDY_SHORES, 2);
         createAvelionBiome(context, EdumiaBiomeKeys.AVELION_ROCKY_SHORES, 1);
         createEdumiaMountainBiome(context, EdumiaBiomeKeys.AVELION_FOOTHILLS, false);
@@ -446,6 +448,7 @@ public class ModBiomes {
                 context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
         addOceanVegetation(generationSettings);
+        ModBiomeFeatures.addAbundantWaterDelta(vegetation);
         ModBiomeFeatures.addRiverSand(undergroundOres);
         ModBiomeFeatures.addWillowTrees(vegetation);
         ModBiomeFeatures.addReeds(vegetation);
@@ -584,6 +587,7 @@ public class ModBiomes {
         ModBiomeFeatures.addDisks(undergroundOres);
         ModBiomeFeatures.addToughBerriesRare(vegetation);
     }
+
     public static void addOceanVegetation(BiomeGenerationSettings.Builder generationSettings) {
         ModBiomeFeatures.addDisks(undergroundOres);
         vegetation.add(AquaticPlacements.KELP_COLD);

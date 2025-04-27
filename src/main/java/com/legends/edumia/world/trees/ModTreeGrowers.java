@@ -3,16 +3,7 @@ package com.legends.edumia.world.trees;
 import com.legends.edumia.Edumia;
 import com.legends.edumia.world.congiguredfeatures.TreeConfiguredFeatures;
 import com.legends.edumia.world.congiguredfeatures.trees.*;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SaplingBlock;
 import net.minecraft.world.level.block.grower.TreeGrower;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
 public class ModTreeGrowers {
@@ -49,7 +40,8 @@ public class ModTreeGrowers {
             Optional.empty(), Optional.of(OakTreeConfiguredFeatures.GREEN_OAK_KEY), Optional.empty());
 
     public static final TreeGrower HOLLY = new TreeGrower(Edumia.MOD_ID + ":holly",
-            Optional.empty(), Optional.of(TemperateTreeConfiguredFeatures.HOLLY_TREE_KEY), Optional.of(TemperateTreeConfiguredFeatures.HOLLY_BEES_TREE_KEY));
+            Optional.empty(), Optional.of(TemperateTreeConfiguredFeatures.HOLLY_TREE_KEY),
+            Optional.of(TemperateTreeConfiguredFeatures.HOLLY_BEES_TREE_KEY));
 
     public static final TreeGrower MAHOGANY = new TreeGrower(Edumia.MOD_ID + ":mahogany",
             Optional.empty(), Optional.of(MahoganyConfiguredFeatures.MAHOGANY), Optional.empty());

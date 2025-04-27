@@ -208,6 +208,8 @@ public class CreativeTabLoader {
                     .title(Component.translatable("creativetab.edumia_weapons"))
                     .displayItems((displayParameters, entries) -> {
                         entries.accept(ItemLoader.ABOMINABLE_BLADE.get());
+                        entries.accept(ItemLoader.BAMBOO_STAFF.get());
+                        entries.accept(ItemLoader.AIR_SCEPTRE);
                     }).build());
 
     public static final Supplier<CreativeModeTab>  MATERIAL_GROUP = CREATIVE_MODE_TAB.register("edumia_materials",() ->

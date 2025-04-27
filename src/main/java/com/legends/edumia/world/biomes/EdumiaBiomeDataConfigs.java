@@ -120,22 +120,23 @@ public class EdumiaBiomeDataConfigs {
             .addSlopeData(MAX_ANGLE, Blocks.STONE);
 
     public static SlopeMap pond = new SlopeMap()
-            .addSlopeData(30, Blocks.DIRT)
-            .addSlopeData(36, Blocks.SAND)
+            .addSlopeData(20, Blocks.MUD)
+            .addSlopeData(23,Blocks.GRASS_BLOCK)
+            .addSlopeData(27, Blocks.SAND)
+            .addSlopeData(33, Blocks.GRAVEL)
             .addSlopeData(MAX_ANGLE, Blocks.STONE);
+
     public static SlopeMap beach = new SlopeMap()
-            .addSlopeData(30, Blocks.SAND)
-            .addSlopeData(36, Blocks.SAND)
-            .addSlopeData(MAX_ANGLE, Blocks.STONE);
+            .addSlopeData(MAX_ANGLE, Blocks.SAND);
 
     public static SlopeMap gensaiShores = new SlopeMap()
             .addSlopeData(26, () -> SandBlockSets.WHITE_SAND.block().get())
             .addSlopeData(28, Blocks.SAND)
             .addSlopeData(33, Blocks.COARSE_DIRT)
             .addSlopeData(MAX_ANGLE, Blocks.CLAY);
+
     public static SlopeMap whiteShores = new SlopeMap()
             .addSlopeData(26, () -> SandBlockSets.WHITE_SAND.block().get())
-            .addSlopeData(33, () -> StoneSets.CACHOLONG.block().get())
             .addSlopeData(MAX_ANGLE, () -> SandBlockSets.WHITE_SAND.block().get());
     // endregion
 

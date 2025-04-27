@@ -35,6 +35,7 @@ public class ModCaveBiomes {
     public static CaveBiomesMap ashCaves = new CaveBiomesMap();
     public static CaveBiomesMap forodCaves = new CaveBiomesMap();
     public static CaveBiomesMap haradCaves = new CaveBiomesMap();
+    public static CaveBiomesMap avelionCaves = new CaveBiomesMap();
 
     public static void init() {
         defaultCaves.addCave(new CaveBiomeDTO(EdumiaBiomeKeys.LUSH_CAVE, new Vec2(-1.0f,0f)));
@@ -53,6 +54,8 @@ public class ModCaveBiomes {
 
         forodCaves.addCave(new CaveBiomeDTO(EdumiaBiomeKeys.ICE_CAVE, new Vec2(-0.5f,0f)));
         forodCaves.addCave(new CaveBiomeDTO(EdumiaBiomeKeys.DRIPSTONE_CAVE, new Vec2(1.0f,0f)));
+
+        avelionCaves.addCave(new CaveBiomeDTO(EdumiaBiomeKeys.BASIC_CAVE, new Vec2(0.0f, 1.0f)));
     }
 
     public static ResourceKey<Biome> getBiome(Vec2 coordinates, BiomeData surfaceBiome) {
@@ -61,6 +64,7 @@ public class ModCaveBiomes {
                 case ASHEN -> ashCaves.getClosestBiome(coordinates);
                 case HARAD -> haradCaves.getClosestBiome(coordinates);
                 case FOROD -> forodCaves.getClosestBiome(coordinates);
+                case AVELION -> avelionCaves.getClosestBiome(coordinates);
                 default -> defaultCaves.getClosestBiome(coordinates);
             };
             return defaultCaves.getClosestBiome(coordinates);
