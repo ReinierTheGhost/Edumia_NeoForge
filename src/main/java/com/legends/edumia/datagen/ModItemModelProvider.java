@@ -1,6 +1,7 @@
 package com.legends.edumia.datagen;
 
 import com.legends.edumia.Edumia;
+import com.legends.edumia.core.ItemLoader;
 import com.legends.edumia.datagen.helpers.models.*;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
@@ -63,6 +64,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         for (Block item : SimpleSaplingModel.blocks){
             saplingItem(item);
         }
+
+        withExistingParent(ItemLoader.FAIRY_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 
     }
 

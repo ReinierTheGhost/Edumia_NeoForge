@@ -83,7 +83,7 @@ public class BannerData {
 
         for(Tag element: patterns){
             JsonObject json = (JsonObject) jsonParser.parse(element.getAsString());
-            ResourceLocation id = ResourceLocation.withDefaultNamespace(json.get("id").getAsString());
+            ResourceLocation id = ResourceLocation.parse(json.get("id").getAsString());
             DyeColor color = DyeColor.byName(json.get("dye_color").getAsString(), DEFAULT_DYE);
 
             BannerPatternWithColor bannerPatternWithColor = new BannerPatternWithColor(id, color);

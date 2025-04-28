@@ -236,6 +236,7 @@ public class CreativeTabLoader {
                             .displayItems((displayParameters, entries) -> {
                                 entries.accept(ItemLoader.LEGENDS_COIN.get());
                                 entries.accept(BlockLoader.TEST_SAPLING.get());
+                                entries.accept(ItemLoader.FAIRY_SPAWN_EGG.get());
                             }).build());
 
     public static final Supplier<CreativeModeTab>  EDUMIA_GEMS = CREATIVE_MODE_TAB.register("edumia_gems",() ->

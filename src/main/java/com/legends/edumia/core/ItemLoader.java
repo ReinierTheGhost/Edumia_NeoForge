@@ -1,11 +1,13 @@
 package com.legends.edumia.core;
 
 import com.legends.edumia.Edumia;
+import com.legends.edumia.entity.EdumiaEntities;
 import com.legends.edumia.items.EdumiaFoodComponent;
 import com.legends.edumia.items.WorldTeleporterItem;
 import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -174,6 +176,10 @@ public class ItemLoader {
             () -> new Item(new Item.Properties().food(EdumiaFoodComponent.PEAR)));
     public static final DeferredItem<Item> GREEN_APPLE = ITEMS.register("green_apple",
             () -> new Item(new Item.Properties().food(Foods.APPLE)));
+
+    public static final DeferredItem<Item> FAIRY_SPAWN_EGG = ITEMS.register("fairy_spawn_egg",
+            () -> new DeferredSpawnEggItem(EdumiaEntities.FAIRY_CIVILIAN, 0x31afaf, 0xffac00,
+                    new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

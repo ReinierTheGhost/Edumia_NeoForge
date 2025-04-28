@@ -8,12 +8,12 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.PathfinderMob;
-import net.minecraft.world.entity.SpawnGroupData;
+import net.minecraft.world.entity.*;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
+import org.checkerframework.checker.units.qual.A;
 import org.jetbrains.annotations.Nullable;
 
 public class FairyEntity extends NpcEntity {
@@ -34,6 +34,7 @@ public class FairyEntity extends NpcEntity {
     protected ResourceLocation getRaceId() {
         return EdumiaRaces.FAIRY.getId();
     }
+
 
     @Override
     public @Nullable SpawnGroupData finalizeSpawn(ServerLevelAccessor level, DifficultyInstance difficulty, MobSpawnType spawnType,
@@ -61,5 +62,16 @@ public class FairyEntity extends NpcEntity {
 
     public FairyVariant getVariant(){
         return FairyVariant.byId(this.getId());
+    }
+
+    public static AttributeSupplier.Builder setSoldierAttribute() {
+        return Mob.createMobAttributes()
+                .add(Attributes.MAX_HEALTH, 22.0)
+                .add(Attributes.ATTACK_DAMAGE, 1.0)
+                .add(Attributes.ATTACK_SPEED, 1.0)
+                .add(Attributes.ENTITY_INTERACTION_RANGE, 2.75)
+                .add(Attributes.MOVEMENT_SPEED, 0.3)
+                .add(Attributes.FOLLOW_RANGE, 48.0)
+                .add(Attributes.FALL_DAMAGE_MULTIPLIER, 0.75);
     }
 }

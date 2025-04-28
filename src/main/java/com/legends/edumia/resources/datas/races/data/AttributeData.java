@@ -123,6 +123,7 @@ public class AttributeData {
         put(ResourceLocation.parse("minecraft:generic.scale"), 1.0);
         put(ResourceLocation.parse("minecraft:generic.step_height"), 0.6);
         put(ResourceLocation.parse("minecraft:generic.water_movement_efficiency"), 0.0);
+        put(ResourceLocation.parse("minecraft:generic.follow_range"), 0.0);
 
         put(ResourceLocation.parse("minecraft:player.block_break_speed"), 1.0);
         put(ResourceLocation.parse("minecraft:player.block_interaction_range"), 	4.5);

@@ -1,4 +1,4 @@
-// 1.21.1	2025-04-23T16:02:23.5852861	Item Models: edumia
+// 1.21.1	2025-04-28T17:24:22.6817797	Item Models: edumia
 047baa6b7a95aadfec14d478dfdf8c290cbd8220 assets/edumia/models/item/acacia_wood_fence.json
 4879a2f3030853ef57cc6d67266684061b3752ec assets/edumia/models/item/acacia_wood_wall.json
 386253d46a85a3515508b2f2812157712b0633d8 assets/edumia/models/item/almond_button.json
@@ -142,6 +142,7 @@ fb692b5f896d5ebe429aa52cf5fc044925c793a5 assets/edumia/models/item/dragon_blood_
 83f1de8059a2737972df83d39d1a292437888889 assets/edumia/models/item/dripstone_bricks_wall.json
 21b479858fe7f58f2988dfe72aa36caa113546a3 assets/edumia/models/item/dry_bush.json
 fbc7e8f02bb4f37787169b6d30ac10589ce2029c assets/edumia/models/item/dumortierite_bricks_wall.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/edumia/models/item/fairy_spawn_egg.json
 c423194016ceab110371d88e895042e4f72cb983 assets/edumia/models/item/fine_glass_pane.json
 b39e672bcf70477156ae3246d125feb60d8c4105 assets/edumia/models/item/fir_button.json
 55c49f9a17737078a4cb5890edd27871861580af assets/edumia/models/item/fir_door.json

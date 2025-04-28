@@ -13,16 +13,19 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.HumanoidMobRenderer;
 import net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer;
 import net.minecraft.resources.ResourceLocation;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
 
 import java.util.Map;
 
-public class FairyRenderer extends HumanoidMobRenderer<FairyEntity, FairyModel<FairyEntity>> {
+@OnlyIn(Dist.CLIENT)
+public class FairyRenderer extends HumanoidMobRenderer<FairyEntity, MainFairyModel<FairyEntity>> {
 
     private static final String PATH = "textures/entities/fairies/";
-    public FairyRenderer(EntityRendererProvider.Context context, FairyModel<FairyEntity> model, float shadowRadius) {
-        super(context, new FairyModel<>(context.bakeLayer(EdumiaEntityModelLayers.FAIRY)), 0.5f);
-        this.addLayer(new HumanoidArmorLayer<>(this, new FairyModel<>(context.bakeLayer(ModelLayers.PLAYER_INNER_ARMOR)),
-                new FairyModel<>(context.bakeLayer(ModelLayers.PLAYER_OUTER_ARMOR)), context.getModelManager()));
+    public FairyRenderer(EntityRendererProvider.Context context) {
+        super(context, new MainFairyModel<>(context.bakeLayer(EdumiaEntityModelLayers.FAIRY)), 0.5f);
+        this.addLayer(new HumanoidArmorLayer<>(this, new MainFairyModel<>(context.bakeLayer(ModelLayers.PLAYER_INNER_ARMOR)),
+                new MainFairyModel<>(context.bakeLayer(ModelLayers.PLAYER_OUTER_ARMOR)), context.getModelManager()));
     }
 
     public static final Map<FairyVariant, String> LOCATION_BY_VARIANT =
