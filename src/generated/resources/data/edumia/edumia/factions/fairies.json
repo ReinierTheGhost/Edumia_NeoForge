@@ -1,0 +1,71 @@
+{
+  "banner": {
+    "base_color": "white",
+    "patterns": [
+      {
+        "dye_color": "black",
+        "id": "minecraft:gradient"
+      }
+    ]
+  },
+  "command_join": [],
+  "command_leave": [],
+  "disposition": "NEUTRAL",
+  "faction_selection_order_index": 0,
+  "faction_type": "FACTION",
+  "id": "edumia:fairies",
+  "joinable": true,
+  "npcs": {
+    "ranks": [
+      {
+        "pool": [
+          "edumia:fairy.civilian"
+        ],
+        "rank": "SOLDIER"
+      },
+      {
+        "pool": [
+          "edumia:fairy.civilian"
+        ],
+        "rank": "VETERAN"
+      },
+      {
+        "pool": [
+          "edumia:fairy.civilian"
+        ],
+        "rank": "MILITIA"
+      },
+      {
+        "pool": [
+          "edumia:fairy.civilian"
+        ],
+        "rank": "KNIGHT"
+      },
+      {
+        "pool": [
+          "edumia:fairy.civilian"
+        ],
+        "rank": "CIVILIAN"
+      },
+      {
+        "pool": [
+          "edumia:fairy.civilian"
+        ],
+        "rank": "LEADER"
+      }
+    ]
+  },
+  "spawns": {
+    "data": [
+      {
+        "coordinates": {
+          "x": 1945.0,
+          "y": 0.0,
+          "z": 1785.0
+        },
+        "dynamic": 1,
+        "id": "edumia:fairy.glyndoril"
+      }
+    ]
+  }
+}

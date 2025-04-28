@@ -4,6 +4,11 @@ import com.legends.edumia.core.blocksets.*;
 import com.legends.edumia.core.BlockLoader;
 import com.legends.edumia.core.CreativeTabLoader;
 import com.legends.edumia.core.ItemLoader;
+import com.legends.edumia.entity.EdumiaEntities;
+import com.legends.edumia.entity.races.fairy.FairyRenderer;
+import com.legends.edumia.resources.EdumiaFactions;
+import com.legends.edumia.resources.EdumiaNpcs;
+import com.legends.edumia.resources.EdumiaRaces;
 import com.legends.edumia.world.biomes.EdumiaBiomeKeys;
 import com.legends.edumia.world.biomes.surface.MapBasedBiomePool;
 import com.legends.edumia.world.biomes.surface.MapBiomeData;
@@ -18,6 +23,7 @@ import com.legends.edumia.world.trees.EdumiaTrunkPlacerTypes;
 import glitchcore.util.BlockHelper;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import org.slf4j.Logger;
@@ -73,6 +79,8 @@ public class Edumia
         FlowerBlockSets.register(modEventBus);
         GrassBlockSets.register(modEventBus);
 
+        EdumiaEntities.register(modEventBus);
+
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
         EdumiaTrunkPlacerTypes.register(modEventBus);
@@ -87,6 +95,8 @@ public class Edumia
 
 
         ModWorldGeneration.generateModWorldGen();
+
+
 
     }
 
@@ -134,6 +144,8 @@ public class Edumia
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+//            EntityRenderers.register(EdumiaEntities.FAIRY_CIVILIAN.get(), FairyRenderer::new);
+
             for (GlassSets.GlassSet set : GlassSets.glassSets) {
                 ItemBlockRenderTypes.setRenderLayer(set.block().get(), RenderType.translucent());
             }
