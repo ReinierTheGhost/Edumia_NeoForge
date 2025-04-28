@@ -2497,5 +2497,7 @@
   "gui.edumia.titles": "Titles",
   "gui.edumia.banners": "Banners",
   "gui.edumia.options": "Options",
-  "gui.edumia.menu": "Menu"
+  "gui.edumia.menu": "Menu",
+"ui.edumia.return_confirmation.title": "Onboarding Screen",
+"ui.edumia.onboarding_selection.title": "Onboarding Screen"
 }

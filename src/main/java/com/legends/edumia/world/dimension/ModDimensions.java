@@ -103,6 +103,10 @@ public class ModDimensions {
         return world.dimension().location().equals(WORLD_KEY.location());
     }
 
+    public static boolean isInOverworld(Level world){
+        return world.dimension().location().equals(Level.OVERWORLD.location());
+    }
+
     public static Component getDisplayName(ResourceKey<Level> dimensionWorldKey) {
         ResourceLocation dimensionName = dimensionWorldKey.location();
         String key = String.format("dimension.%s.%s", dimensionName.getNamespace(), dimensionName.getPath());
