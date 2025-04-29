@@ -17,7 +17,7 @@ import com.legends.edumia.resources.datas.npcs.data.NpcRank;
 import com.legends.edumia.resources.datas.races.Race;
 import com.legends.edumia.resources.datas.races.RaceLookup;
 import com.legends.edumia.resources.persistent_datas.PlayerData;
-import com.legends.edumia.utils.LoggerUtil;
+import com.legends.edumia.utils.EdumiaLog;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
@@ -310,7 +310,7 @@ public class NpcEntity extends PathfinderMob implements RangedAttackMob {
             NpcGearData gearData = data.getGear();
             NpcUtil.equipAll(this, gearData);
         } catch (FactionResourceLocationException e) {
-            LoggerUtil.logError("NpcEntity::Couldn't find faction registry with [%s] for rank [%s]".formatted(factionId, npcRank.toString()));
+            EdumiaLog.logError("NpcEntity::Couldn't find faction registry with [%s] for rank [%s]".formatted(factionId, npcRank.toString()));
             throw new RuntimeException(e);
         }
     }

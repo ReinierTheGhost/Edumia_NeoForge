@@ -1,7 +1,7 @@
 package com.legends.edumia.world.chunkgen.map;
 
 import com.google.common.base.Stopwatch;
-import com.legends.edumia.utils.LoggerUtil;
+import com.legends.edumia.utils.EdumiaLog;
 import com.legends.edumia.world.biomes.surface.MapBasedBiomePool;
 import com.legends.edumia.world.map.EdumiaMapGeneration;
 import org.joml.sampling.Convolution;
@@ -100,7 +100,7 @@ public class ImageUtils {
                     result.setRGB(x, y, (color != null ) ? color : colorOccurences.get(0));
                     colorOccurences.clear();
                 } catch (Exception exception) {
-                    //LoggerUtil.getInstance().logError("ImageUtils::Can't find color at [%s,%s]".formatted(x,y));
+                    //EdumiaLog.getInstance().logError("ImageUtils::Can't find color at [%s,%s]".formatted(x,y));
                 }
                 colorOccurences.clear();
 
@@ -131,7 +131,7 @@ public class ImageUtils {
                     Integer color = getMostOccuringColorFromBiomeList(colorOccurences);
                     result.setRGB(x, y, (color != null ) ? color : colorOccurences.get(0));
                 } catch (Exception exception) {
-                    //LoggerUtil.getInstance().logError("ImageUtils::Can't find color at [%s,%s]".formatted(x,y));
+                    //EdumiaLog.getInstance().logError("ImageUtils::Can't find color at [%s,%s]".formatted(x,y));
                 }
                 colorOccurences.clear();
             }
@@ -141,7 +141,7 @@ public class ImageUtils {
 
     private static Integer getMostOccuringColorFromBiomeList(ArrayList<Integer> list) throws Exception {
         if(list.isEmpty()){
-            LoggerUtil.logError("ImageUtils::getMostCommonColor - List was empty!");
+            EdumiaLog.logError("ImageUtils::getMostCommonColor - List was empty!");
             return null;
         }
         Map<Integer, Integer> counts = new HashMap<>();

@@ -4,11 +4,10 @@ import com.legends.edumia.Edumia;
 import com.legends.edumia.resources.datas.RaceType;
 import com.legends.edumia.resources.datas.races.Race;
 import com.legends.edumia.resources.datas.races.data.AttributeData;
-import com.legends.edumia.utils.LoggerUtil;
+import com.legends.edumia.utils.EdumiaLog;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.Registry;
-import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -16,7 +15,6 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.registries.DataPackRegistryEvent;
-import net.neoforged.neoforge.registries.NewRegistryEvent;
 
 import java.util.HashMap;
 import java.util.List;
@@ -33,7 +31,7 @@ public class EdumiaRaces {
 
     @SubscribeEvent
     public static void onNewRegistry(DataPackRegistryEvent.NewRegistry event) {
-        LoggerUtil.logDebugMsg("Registering Dynamic Races for " + Edumia.MOD_ID);
+        EdumiaLog.logDebugMsg("Registering Dynamic Races for " + Edumia.MOD_ID);
         event.dataPackRegistry(RACE_KEY, Race.CODEC);
     }
 

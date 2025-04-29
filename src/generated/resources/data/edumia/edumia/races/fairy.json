@@ -19,10 +19,6 @@
         "value": 0.81
       },
       {
-        "id": "minecraft:generic.follow_range",
-        "value": 0.5
-      },
-      {
         "id": "minecraft:player.entity_interaction_range",
         "value": 2.75
       },

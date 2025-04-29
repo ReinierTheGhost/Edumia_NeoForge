@@ -4,7 +4,7 @@ package com.legends.edumia.world.map;
 
 
 import com.legends.edumia.Edumia;
-import com.legends.edumia.utils.LoggerUtil;
+import com.legends.edumia.utils.EdumiaLog;
 import com.legends.edumia.utils.resources.FileType;
 import com.legends.edumia.utils.resources.FileUtils;
 import com.legends.edumia.world.biomes.surface.MapBasedBiomePool;
@@ -40,8 +40,8 @@ public class EdumiaMapGeneration {
     }
 
     public void generate() throws Exception {
-        LoggerUtil.logInfoMsg("");
-        LoggerUtil.logInfoMsg("================ EdumiaMapGeneration ================");
+        EdumiaLog.logInfoMsg("");
+        EdumiaLog.logInfoMsg("================ EdumiaMapGeneration ================");
 
         try{
             initialMap = getInitialImage();
@@ -49,14 +49,14 @@ public class EdumiaMapGeneration {
                 throw new Exception(this + " : The image of the map in resource has created an error and operation cannot continue.");
             }
         } catch (Exception e){
-            LoggerUtil.logError("MiddleEarthMapGeneration::generate() - Fetch Initial Map", e);
+            EdumiaLog.logError("MiddleEarthMapGeneration::generate() - Fetch Initial Map", e);
         }
 
         if(!Edumia.ENABLE_INSTANT_BOOTING){
-            LoggerUtil.logInfoMsg("Instant Booting - Disabled");
+            EdumiaLog.logInfoMsg("Instant Booting - Disabled");
         }
         else {
-            LoggerUtil.logInfoMsg("Instant Booting - Enabled");
+            EdumiaLog.logInfoMsg("Instant Booting - Enabled");
             boolean pasteSuccess = true;
             // check if copy&paste is necessary
             File rootFolder = new File(EdumiaMapConfigs.MOD_DATA_ROOT);
@@ -94,47 +94,47 @@ public class EdumiaMapGeneration {
                     inputStream.close();
                     zipInputStream.close();
                 } catch (IOException e){
-                    LoggerUtil.logError("MiddleEarthMapGeneration::Couldn't copy paste folders", e);
+                    EdumiaLog.logError("MiddleEarthMapGeneration::Couldn't copy paste folders", e);
                     pasteSuccess = false;
                 }
 
                 if(pasteSuccess) {
-                LoggerUtil.logInfoMsg("Instant Booting - Completed");
+                EdumiaLog.logInfoMsg("Instant Booting - Completed");
                 return;
                 } else {
-                    LoggerUtil.logError("Instant Booting - Failure");
+                    EdumiaLog.logError("Instant Booting - Failure");
                 }
             } else {
-            LoggerUtil.logInfoMsg("Instant Booting - Skipped, Files already present");
-            LoggerUtil.logInfoMsg("Validating data content...");
+            EdumiaLog.logInfoMsg("Instant Booting - Skipped, Files already present");
+            EdumiaLog.logInfoMsg("Validating data content...");
             }
 
         }
 
-        LoggerUtil.logInfoMsg("Validating initial map BIOME colors;");
+        EdumiaLog.logInfoMsg("Validating initial map BIOME colors;");
         if(!validateBaseColors(initialMap)) return;
 
 
-        LoggerUtil.logInfoMsg("Validating BIOME generation availability;");
+        EdumiaLog.logInfoMsg("Validating BIOME generation availability;");
         int iterationToGenerate = (EdumiaMapConfigs.FORCE_GENERATION)
                 ? EdumiaMapConfigs.MAP_ITERATION + 1
                 : findAmountOfIterationToGenerate(initialMap);
 
         if(iterationToGenerate > 0){
-            LoggerUtil.logInfoMsg("Begin BIOME generation;");
+            EdumiaLog.logInfoMsg("Begin BIOME generation;");
             generateBiomes(initialMap, iterationToGenerate);
         }
 
-        LoggerUtil.logInfoMsg("Validating initial map HEIGHT MODIFIER generation availability;");
+        EdumiaLog.logInfoMsg("Validating initial map HEIGHT MODIFIER generation availability;");
         if(!validateBaseHeightDatas()){
-            LoggerUtil.logInfoMsg("Begin initial map HEIGHT MODIFIER generation;");
+            EdumiaLog.logInfoMsg("Begin initial map HEIGHT MODIFIER generation;");
             generateBaseHeightImage(initialMap);
             generateEdgeHeightImage(initialMap);
         }
 
-        LoggerUtil.logInfoMsg("Validating HEIGHT generation availability;");
+        EdumiaLog.logInfoMsg("Validating HEIGHT generation availability;");
         if(!validateHeightDatas(initialMap)){
-            LoggerUtil.logInfoMsg("Begin HEIGHT generation;");
+            EdumiaLog.logInfoMsg("Begin HEIGHT generation;");
             generateHeight(initialMap);
         }
     }
@@ -149,7 +149,7 @@ public class EdumiaMapGeneration {
                 try{
                     MapBasedBiomePool.getBiomeByColor(initialMap.getRGB(x,y));
                 } catch (Exception e) {
-                    LoggerUtil.logError("EdumiaMapGeneration::Cannot find color at [%s,%s] in the inital map".formatted(x,y));
+                    EdumiaLog.logError("EdumiaMapGeneration::Cannot find color at [%s,%s] in the inital map".formatted(x,y));
                     return false;
                 }
             }
@@ -158,15 +158,15 @@ public class EdumiaMapGeneration {
     }
 
     private BufferedImage getInitialImage(){
-        LoggerUtil.logInfoMsg("Validating ORIGINAL image existence;");
+        EdumiaLog.logInfoMsg("Validating ORIGINAL image existence;");
         BufferedImage initialImage = fileUtils.getResourceImage(EdumiaMapConfigs.INITIAL_IMAGE);
         if(initialImage == null){
-            LoggerUtil.logError("Initial map image couldn't be found!");
+            EdumiaLog.logError("Initial map image couldn't be found!");
             return null;
         }
-        LoggerUtil.logInfoMsg("Validating ORIGINAL image size;");
+        EdumiaLog.logInfoMsg("Validating ORIGINAL image size;");
         if(initialImage.getWidth() % EdumiaMapConfigs.REGION_SIZE != 0 || initialImage.getHeight() % EdumiaMapConfigs.REGION_SIZE != 0){
-            LoggerUtil.logError("Initial map image has the wrong size!");
+            EdumiaLog.logError("Initial map image has the wrong size!");
             return null;
         }
 
@@ -188,7 +188,7 @@ public class EdumiaMapGeneration {
                 for(int y = 0; y < currentRegionAmountY; y ++) {
                     String path = EdumiaMapConfigs.BIOME_PATH.formatted(i) + EdumiaMapConfigs.IMAGE_NAME.formatted(x,y);
                     if(fileUtils.getRunImage(path) == null){
-                        LoggerUtil.logError("Need to regenerate biome files: Lacking biome file at : [%s]".formatted(path));
+                        EdumiaLog.logError("Need to regenerate biome files: Lacking biome file at : [%s]".formatted(path));
                         return absoluteMapIteration - i;
                     }
                 }
@@ -237,7 +237,7 @@ public class EdumiaMapGeneration {
             try {
                 executorService.awaitTermination(Long.MAX_VALUE, TimeUnit.NANOSECONDS);
             } catch (Exception e) {
-                LoggerUtil.logError("Error while generating biomes");
+                EdumiaLog.logError("Error while generating biomes");
             }
         }
         return new BufferedImage[0][][];
@@ -245,7 +245,7 @@ public class EdumiaMapGeneration {
 
     private void generateInitialBiomes(BufferedImage initialImage){
         if(initialImage.getWidth() != EdumiaMapConfigs.REGION_SIZE || initialImage.getWidth() !=  EdumiaMapConfigs.REGION_SIZE){
-            LoggerUtil.logError("Need to regenerate height files: Need splitting for the initial image!");
+            EdumiaLog.logError("Need to regenerate height files: Need splitting for the initial image!");
             for(int i = 0; i < initialImage.getWidth() / EdumiaMapConfigs.REGION_SIZE; i++){
                 for(int j = 0; j < initialImage.getHeight() / EdumiaMapConfigs.REGION_SIZE; j++){
                     BufferedImage newImage = initialImage.getSubimage(EdumiaMapConfigs.REGION_SIZE * i, EdumiaMapConfigs.REGION_SIZE * j, EdumiaMapConfigs.REGION_SIZE, EdumiaMapConfigs.REGION_SIZE);
@@ -300,12 +300,12 @@ public class EdumiaMapGeneration {
         try {
             executorService.awaitTermination(Long.MAX_VALUE, TimeUnit.NANOSECONDS);
         } catch (Exception e) {
-            LoggerUtil.logError("Error while generating heights");
+            EdumiaLog.logError("Error while generating heights");
         }
 
         long finish = System.currentTimeMillis();
         long timeElapsed = finish - start;
-        LoggerUtil.logInfoMsg("TIME BLUR FOR HEIGHT: " + timeElapsed);
+        EdumiaLog.logInfoMsg("TIME BLUR FOR HEIGHT: " + timeElapsed);
     }
 
     private boolean validateBaseHeightDatas() {
@@ -421,7 +421,7 @@ public class EdumiaMapGeneration {
         try{
             return new Color(red, green, blue);
         } catch (Exception e){
-            LoggerUtil.logError(e.getMessage());
+            EdumiaLog.logError(e.getMessage());
             return color1;
         }
     }

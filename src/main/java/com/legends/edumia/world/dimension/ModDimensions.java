@@ -2,8 +2,11 @@ package com.legends.edumia.world.dimension;
 
 
 import com.legends.edumia.Edumia;
+import com.legends.edumia.EdumiaServerConfigs;
+import com.legends.edumia.resources.StateSaverAndLoader;
+import com.legends.edumia.resources.datas.races.data.AttributeData;
 import com.legends.edumia.resources.persistent_datas.PlayerData;
-import com.legends.edumia.utils.LoggerUtil;
+import com.legends.edumia.utils.EdumiaLog;
 import com.legends.edumia.world.chunkgen.EdumiaChunkGenerator;
 import com.legends.edumia.world.chunkgen.map.EdumiaHeightMap;
 import com.legends.edumia.world.map.EdumiaMapConfigs;
@@ -37,7 +40,7 @@ public class ModDimensions {
 //        Registry.register(Registries.CHUNK_GENERATOR, Identifier.of(Edumia.MOD_ID, PATH), EdumiaChunkGenerator.CODEC);
         WORLD_KEY = ResourceKey.create(Registries.DIMENSION, ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, PATH));
 
-        LoggerUtil.logDebugMsg("Registering ModDimensions for " + Edumia.MOD_ID);
+        EdumiaLog.logDebugMsg("Registering ModDimensions for " + Edumia.MOD_ID);
     }
 
     public static Vector3i getDimensionHeight(int x, int z){
@@ -116,5 +119,33 @@ public class ModDimensions {
     public static ResourceKey<Level> getCurrentEdumiaDimensionOfFallback(Level level) {
         Level dimension = level;
         return dimension instanceof EdumiaDimensionType ? level.dimension() : WORLD_KEY;
+    }
+
+    public static boolean teleportPlayerToOverworld(Player player) {
+        if(!player.level().isClientSide()) {
+            ResourceKey<Level> registryKey = Level.OVERWORLD;
+            ServerLevel serverWorld = (ServerLevel) player.level();
+            PlayerData data = StateSaverAndLoader.getPlayerState(player);
+            BlockPos coordinate = data.getOverworldSpawnCoordinates();
+            if(coordinate == null) {
+                coordinate = player.getServer().overworld().getSharedSpawnPos();
+            }
+
+            if (serverWorld != null) {
+                serverWorld = serverWorld.getServer().getLevel(registryKey);
+
+                player.stopSleeping();
+                ((ServerPlayer) player).setRespawnPosition(Level.OVERWORLD, player.getServer().overworld().getSharedSpawnPos(),
+                        player.getServer().overworld().getSharedSpawnAngle(), true, true);
+                ((ServerPlayer) player).teleportTo(serverWorld, coordinate.getX() , coordinate.getY(), coordinate.getZ(), 0, 0);
+                player.moveTo(coordinate.getX() , coordinate.getY(), coordinate.getZ());
+
+                if(!EdumiaServerConfigs.ENABLE_KEEP_RACE_ON_DIMENSION_SWAP.getAsBoolean()){
+                    AttributeData.reset(player);
+                }
+                return true;
+            }
+        }
+        return false;
     }
 }

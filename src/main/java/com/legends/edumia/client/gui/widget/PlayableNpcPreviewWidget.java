@@ -5,7 +5,7 @@ import com.legends.edumia.entity.races.human.BanditHumanEntity;
 import com.legends.edumia.resources.datas.npcs.NpcUtil;
 import com.legends.edumia.resources.datas.npcs.data.NpcGearData;
 import com.legends.edumia.resources.datas.races.Race;
-import com.legends.edumia.utils.LoggerUtil;
+import com.legends.edumia.utils.EdumiaLog;
 import com.mojang.blaze3d.platform.Lighting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
@@ -160,7 +160,7 @@ public class PlayableNpcPreviewWidget extends ModWidget {
             }
             else{
                 resetCurrentButton();
-                LoggerUtil.logDebugMsg("Was out of button reach");
+                EdumiaLog.logDebugMsg("Was out of button reach");
             }
         }
 

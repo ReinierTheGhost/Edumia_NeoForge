@@ -4,7 +4,7 @@ import com.legends.edumia.Edumia;
 import com.legends.edumia.resources.datas.Disposition;
 import com.legends.edumia.resources.persistent_datas.AffiliationData;
 import com.legends.edumia.resources.persistent_datas.PlayerData;
-import com.legends.edumia.utils.LoggerUtil;
+import com.legends.edumia.utils.EdumiaLog;
 import com.legends.edumia.utils.ResourceLocationUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
@@ -85,7 +85,7 @@ public class StateSaverAndLoader  extends SavedData {
                     playerData.setOverworldSpawn(overworldSpawn);
                 }
             } catch (Exception e) {
-                LoggerUtil.logError("StateSaverAndLoader", e);
+                EdumiaLog.logError("StateSaverAndLoader", e);
             }
 
             UUID uuid = UUID.fromString(key);
@@ -129,7 +129,7 @@ public class StateSaverAndLoader  extends SavedData {
                 throw new Exception("Cannot be used client side");
             }
         } catch (Exception e) {
-            LoggerUtil.logError("StateSaverAndLoader::getPlayerState", e);
+            EdumiaLog.logError("StateSaverAndLoader::getPlayerState", e);
             return null;
         }
 

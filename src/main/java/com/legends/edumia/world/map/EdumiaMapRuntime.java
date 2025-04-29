@@ -1,6 +1,6 @@
 package com.legends.edumia.world.map;
 
-import com.legends.edumia.utils.LoggerUtil;
+import com.legends.edumia.utils.EdumiaLog;
 import com.legends.edumia.utils.resources.FileUtils;
 import com.legends.edumia.world.biomes.surface.MapBasedBiomePool;
 import com.legends.edumia.world.biomes.surface.MapBasedCustomBiome;
@@ -19,7 +19,7 @@ public class EdumiaMapRuntime {
     HashMap<Vector2i, EdumiaMapRegion> regions;
     HashMap<UUID, Vector2i> regionByUuids;
     private BufferedImage edgeImage;
-    private LoggerUtil loggerUtil;
+    private EdumiaLog loggerUtil;
     private EdumiaMapUtils edumiaMapUtils;
 
     private int latestValidationTick = 0;

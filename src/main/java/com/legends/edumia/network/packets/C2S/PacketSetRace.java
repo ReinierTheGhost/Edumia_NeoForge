@@ -5,12 +5,11 @@ import com.legends.edumia.network.contexts.ServerPacketContext;
 import com.legends.edumia.network.packets.ClientToServerPacket;
 import com.legends.edumia.resources.datas.races.RaceLookup;
 import com.legends.edumia.resources.datas.races.RaceUtil;
-import com.legends.edumia.utils.LoggerUtil;
+import com.legends.edumia.utils.EdumiaLog;
 import com.legends.edumia.utils.ResourceLocationUtil;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
-import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.MinecraftServer;
 
@@ -49,7 +48,7 @@ public class PacketSetRace extends ClientToServerPacket<PacketSetRace>
                 RaceUtil.updateRace(context.player(), RaceLookup.getRace(context.player().level(),
                         ResourceLocationUtil.getResourceLocationFromString(race)), true);
             } catch (Exception e){
-                LoggerUtil.logError("PacketSetRace::Tried setting race for player.", e);
+                EdumiaLog.logError("PacketSetRace::Tried setting race for player.", e);
             }
         });
     }

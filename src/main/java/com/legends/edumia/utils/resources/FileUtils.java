@@ -2,7 +2,7 @@ package com.legends.edumia.utils.resources;
 
 
 import com.legends.edumia.Edumia;
-import com.legends.edumia.utils.LoggerUtil;
+import com.legends.edumia.utils.EdumiaLog;
 import com.legends.edumia.world.biomes.surface.MapBasedBiomePool;
 import com.legends.edumia.world.chunkgen.map.ImageUtils;
 import com.legends.edumia.world.map.EdumiaMapConfigs;
@@ -95,7 +95,7 @@ public class FileUtils {
             File f = new File(path + fileName);
             ImageIO.write(bufferedImage, fileType.extension, f);
         } catch(Exception e){
-            LoggerUtil.logError("Image Utils couldn't save image for {0}.".formatted(path + fileName));
+            EdumiaLog.logError("Image Utils couldn't save image for {0}.".formatted(path + fileName));
         }
     }
 

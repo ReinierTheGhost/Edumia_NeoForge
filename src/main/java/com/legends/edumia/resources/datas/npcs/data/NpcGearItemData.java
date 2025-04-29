@@ -1,17 +1,8 @@
 package com.legends.edumia.resources.datas.npcs.data;
 
-import com.legends.edumia.utils.LoggerUtil;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 
-import java.awt.*;
-import java.util.ArrayList;
 import java.util.List;
 
 public class NpcGearItemData {

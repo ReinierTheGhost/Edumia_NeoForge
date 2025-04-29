@@ -4,9 +4,8 @@ import com.legends.edumia.EdumiaServerConfigs;
 import com.legends.edumia.client.gui.OnboardingSelectionScreen;
 import com.legends.edumia.client.gui.races.selection.FactionSelectionScreen;
 import com.legends.edumia.network.contexts.ClientPacketContext;
-import com.legends.edumia.utils.LoggerUtil;
+import com.legends.edumia.utils.EdumiaLog;
 import com.legends.edumia.world.dimension.ModDimensions;
-import com.mojang.authlib.minecraft.client.MinecraftClient;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.level.Level;
 
@@ -23,7 +22,7 @@ public class OnboardingScreenHandler {
                 }
             }
         } catch (Exception e){
-            LoggerUtil.logError("OnboardingDetailParsedPacket::Apply - trying to fetch the client data and show appropriate context.",e);
+            EdumiaLog.logError("OnboardingDetailParsedPacket::Apply - trying to fetch the client data and show appropriate context.",e);
         }
     }
 }

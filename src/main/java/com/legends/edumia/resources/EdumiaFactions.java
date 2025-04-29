@@ -63,7 +63,7 @@ public class EdumiaFactions {
 
     static {
         // region [FAIRIES]
-        FAIRIES = new Faction("fairies", true, Disposition.NEUTRAL, FactionType.FACTION, null, null,
+        FAIRIES = new Faction("fairies", true, Disposition.GOOD, FactionType.FACTION, null, null,
                 new HashMap<>(){{
                     put(NpcRank.CIVILIAN, List.of(
                             EdumiaNpcs.FAIRY_CIVILIAN

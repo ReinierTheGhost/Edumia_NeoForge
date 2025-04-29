@@ -2,7 +2,7 @@ package com.legends.edumia.world.biomes;
 
 
 import com.legends.edumia.Edumia;
-import com.legends.edumia.utils.LoggerUtil;
+import com.legends.edumia.utils.EdumiaLog;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -98,6 +98,6 @@ public class EdumiaBiomeKeys extends Biomes {
     }
 
     public static void registerModBiomes() {
-        LoggerUtil.logDebugMsg("Registering ModBiomes for " + Edumia.MOD_ID);
+        EdumiaLog.logDebugMsg("Registering ModBiomes for " + Edumia.MOD_ID);
     }
 }

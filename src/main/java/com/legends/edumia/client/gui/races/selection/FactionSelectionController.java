@@ -28,7 +28,7 @@ public class FactionSelectionController {
      * ResourceLocation and if the spawn data is from the dynamic pool. True(Dynamic) : False(Custom)
      */
     private List<SpawnData> spawns;
-    private List<Race> races = new ArrayList();
+    private List<Race> races = new ArrayList<>();
 
     private int currentDispositionIndex;
     private int currentFactionIndex;

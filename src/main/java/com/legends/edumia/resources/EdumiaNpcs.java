@@ -3,8 +3,7 @@ package com.legends.edumia.resources;
 import com.legends.edumia.Edumia;
 import com.legends.edumia.resources.datas.npcs.NpcData;
 import com.legends.edumia.resources.datas.npcs.data.NpcGearData;
-import com.legends.edumia.resources.datas.npcs.data.NpcRank;
-import com.legends.edumia.utils.LoggerUtil;
+import com.legends.edumia.utils.EdumiaLog;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.Registry;
@@ -28,7 +27,7 @@ public class EdumiaNpcs {
 
     @SubscribeEvent
     public static void onNewRegistry(DataPackRegistryEvent.NewRegistry event){
-        LoggerUtil.logDebugMsg("Registering Dynamic Npcs for " + Edumia.MOD_ID);
+        EdumiaLog.logDebugMsg("Registering Dynamic Npcs for " + Edumia.MOD_ID);
         event.dataPackRegistry(NPC_KEY, NpcData.CODEC);
     }
 

@@ -98,7 +98,7 @@ public class EdumiaNewMapScreen extends EdumiaMenuScreen {
                 x -> {
             mapWidget.setOverlayState(!mapWidget.isOverlayEnabled());
         }).build();
-        overlayToggleButton.active = EdumiaClientConfig.ENABLE_MAP_OVERLAY;
+        overlayToggleButton.active = EdumiaClientConfig.ENABLE_MAP_OVERLAY.get();
         overlayToggleButton.setSize(NORMAL_BUTTON_SIZE.x,NORMAL_BUTTON_SIZE.y);
         addRenderableWidget(overlayToggleButton);
 

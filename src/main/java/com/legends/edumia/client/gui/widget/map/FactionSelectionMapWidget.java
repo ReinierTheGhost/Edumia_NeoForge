@@ -40,7 +40,7 @@ public class FactionSelectionMapWidget extends MapWidget {
             spawnMapMarkers[i].setType(MapMarkerType.DYNAMIC_SPAWN);
         }
         updateSelectedSpawn(controller.getCurrentSpawnIndex());
-        MapMarkerWidget.setTitle(Component.translatable("widget.me.spawn_tooltip_title").withStyle(ChatFormatting.UNDERLINE));
+        MapMarkerWidget.setTitle(Component.translatable("widget.edumia.spawn_tooltip_title").withStyle(ChatFormatting.UNDERLINE));
     }
     public Button[] getButtons() {
         Button[] spawnButtonArray = new Button[spawnMapMarkers.length];
@@ -97,10 +97,10 @@ public class FactionSelectionMapWidget extends MapWidget {
                         List.of(
                                 Component.translatable("spawn." + spawnData.getIdentifier().toLanguageKey())
                                         .withStyle(ChatFormatting.GOLD),
-                                Component.translatable("widget.me.marker.margin_front")
-                                        .append(Component.translatable("spawn.me.coordinates_base.custom")
+                                Component.translatable("widget.edumia.marker.margin_front")
+                                        .append(Component.translatable("spawn.edumia.coordinates_base.custom")
                                                 .withStyle(ChatFormatting.GRAY)
-                                        .append(Component.translatable("spawn.me.coordinates_base_values.custom",
+                                        .append(Component.translatable("spawn.edumia.coordinates_base_values.custom",
                                                 spawnData.getWorldCoordinates().x, spawnData.getWorldCoordinates().y,
                                                 spawnData.getWorldCoordinates().z).withStyle(ChatFormatting.WHITE)))
                         ));

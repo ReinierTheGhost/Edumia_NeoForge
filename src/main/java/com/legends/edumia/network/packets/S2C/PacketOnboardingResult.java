@@ -6,7 +6,6 @@ import com.legends.edumia.handlers.OnboardingScreenHandler;
 import com.legends.edumia.network.contexts.ClientPacketContext;
 import com.legends.edumia.network.packets.ServerToClientPacket;
 import com.legends.edumia.world.dimension.ModDimensions;
-import com.mojang.authlib.minecraft.client.MinecraftClient;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.ByteBufCodecs;

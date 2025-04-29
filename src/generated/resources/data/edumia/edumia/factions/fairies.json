@@ -10,7 +10,7 @@
   },
   "command_join": [],
   "command_leave": [],
-  "disposition": "NEUTRAL",
+  "disposition": "GOOD",
   "faction_selection_order_index": 0,
   "faction_type": "FACTION",
   "id": "edumia:fairies",
@@ -21,13 +21,7 @@
         "pool": [
           "edumia:fairy.civilian"
         ],
-        "rank": "LEADER"
-      },
-      {
-        "pool": [
-          "edumia:fairy.civilian"
-        ],
-        "rank": "KNIGHT"
+        "rank": "CIVILIAN"
       },
       {
         "pool": [
@@ -39,19 +33,25 @@
         "pool": [
           "edumia:fairy.civilian"
         ],
-        "rank": "CIVILIAN"
-      },
-      {
-        "pool": [
-          "edumia:fairy.civilian"
-        ],
         "rank": "SOLDIER"
       },
       {
         "pool": [
           "edumia:fairy.civilian"
         ],
+        "rank": "LEADER"
+      },
+      {
+        "pool": [
+          "edumia:fairy.civilian"
+        ],
         "rank": "VETERAN"
+      },
+      {
+        "pool": [
+          "edumia:fairy.civilian"
+        ],
+        "rank": "KNIGHT"
       }
     ]
   },

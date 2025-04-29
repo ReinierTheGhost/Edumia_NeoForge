@@ -5,7 +5,7 @@ import com.legends.edumia.resources.datas.Disposition;
 import com.legends.edumia.resources.datas.factions.Faction;
 import com.legends.edumia.resources.datas.factions.FactionLookup;
 import com.legends.edumia.resources.datas.factions.data.SpawnData;
-import com.legends.edumia.utils.LoggerUtil;
+import com.legends.edumia.utils.EdumiaLog;
 import com.legends.edumia.world.dimension.ModDimensions;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
@@ -40,7 +40,7 @@ public class AffiliationData {
             blockpos = new BlockPos(blockpos.getX(), height, blockpos.getZ());
             return blockpos.getCenter();
         } catch (FactionResourceLocationException e){
-            LoggerUtil.logError("AffiliationData::getSpawnMiddleEarthCoordinate - Faction couldn't be found <%s>".formatted(faction));
+            EdumiaLog.logError("AffiliationData::getSpawnMiddleEarthCoordinate - Faction couldn't be found <%s>".formatted(faction));
             return null;
         }
     }

@@ -9,7 +9,7 @@ import com.legends.edumia.resources.StateSaverAndLoader;
 import com.legends.edumia.resources.datas.factions.data.SpawnDataHandler;
 import com.legends.edumia.resources.persistent_datas.AffiliationData;
 import com.legends.edumia.resources.persistent_datas.PlayerData;
-import com.legends.edumia.utils.LoggerUtil;
+import com.legends.edumia.utils.EdumiaLog;
 import com.legends.edumia.utils.ModColors;
 import com.legends.edumia.world.dimension.ModDimensions;
 import net.minecraft.core.BlockPos;
@@ -142,7 +142,7 @@ public class FactionUtil {
                 faction = data.getFaction(player.level());
                 if(faction == null) return;
             } catch (FactionResourceLocationException e) {
-                LoggerUtil.logError("Couldn't find faction by id <%s>".formatted(factionId));
+                EdumiaLog.logError("Couldn't find faction by id <%s>".formatted(factionId));
                 return;
             }
 

@@ -5,7 +5,7 @@ import com.legends.edumia.network.contexts.ServerPacketContext;
 import com.legends.edumia.network.packets.ClientToServerPacket;
 import com.legends.edumia.resources.StateSaverAndLoader;
 import com.legends.edumia.resources.persistent_datas.PlayerData;
-import com.legends.edumia.utils.LoggerUtil;
+import com.legends.edumia.utils.EdumiaLog;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.ByteBufCodecs;
@@ -59,7 +59,7 @@ public class PacketSetSpawnData  extends ClientToServerPacket<PacketSetSpawnData
                 playerState.setOverworldSpawn(overworldSpawnBlockpos);
             });
         } catch (Exception e){
-            LoggerUtil.logError("SpawnDataPacket::Apply - Tried applying the spawn data packet",e);
+            EdumiaLog.logError("SpawnDataPacket::Apply - Tried applying the spawn data packet",e);
         }
     }
 

@@ -6,7 +6,7 @@ import com.legends.edumia.network.contexts.ServerPacketContext;
 import com.legends.edumia.network.packets.ClientToServerPacket;
 import com.legends.edumia.network.packets.S2C.PacketOnboardingResult;
 import com.legends.edumia.resources.StateSaverAndLoader;
-import com.legends.edumia.utils.LoggerUtil;
+import com.legends.edumia.utils.EdumiaLog;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.resources.ResourceLocation;
@@ -18,16 +18,26 @@ public class PacketOnboardingRequest extends ClientToServerPacket<PacketOnboardi
     public static final Type<PacketOnboardingRequest> ID = new Type<>(ResourceLocation
             .fromNamespaceAndPath(Edumia.MOD_ID, "packet_onboarding_request"));
     public static final PacketOnboardingRequest INSTANCE = new PacketOnboardingRequest();
-    public static final StreamCodec<RegistryFriendlyByteBuf, PacketOnboardingRequest> CODEC = StreamCodec.unit(INSTANCE);
+    public static final StreamCodec<RegistryFriendlyByteBuf, PacketOnboardingRequest> CODEC = new StreamCodec<>() {
+        @Override
+        public PacketOnboardingRequest decode(RegistryFriendlyByteBuf buf) {
+            return INSTANCE;
+        }
+
+        @Override
+        public void encode(RegistryFriendlyByteBuf buf, PacketOnboardingRequest value) {
+            // nothing to write
+        }
+    };
 
     @Override
     public Type<PacketOnboardingRequest> type() {
-        return null;
+        return ID;
     }
 
     @Override
     public StreamCodec<RegistryFriendlyByteBuf, PacketOnboardingRequest> streamCodec() {
-        return null;
+        return CODEC;
     }
 
     @Override
@@ -45,7 +55,7 @@ public class PacketOnboardingRequest extends ClientToServerPacket<PacketOnboardi
                 PacketDistributor.sendToPlayer(player, newPacket);
             });
         } catch(Exception e){
-            LoggerUtil.logError("OnboardingDetailFetchingPacket::Apply - Tried sending packet with data", e);
+            EdumiaLog.logError("OnboardingDetailFetchingPacket::Apply - Tried sending packet with data", e);
         }
     }
 }

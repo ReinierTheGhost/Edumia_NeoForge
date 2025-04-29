@@ -6,9 +6,6 @@ import com.legends.edumia.core.CreativeTabLoader;
 import com.legends.edumia.core.ItemLoader;
 import com.legends.edumia.entity.EdumiaEntities;
 import com.legends.edumia.entity.races.fairy.FairyRenderer;
-import com.legends.edumia.resources.EdumiaFactions;
-import com.legends.edumia.resources.EdumiaNpcs;
-import com.legends.edumia.resources.EdumiaRaces;
 import com.legends.edumia.world.biomes.EdumiaBiomeKeys;
 import com.legends.edumia.world.biomes.surface.MapBasedBiomePool;
 import com.legends.edumia.world.biomes.surface.MapBiomeData;
@@ -81,7 +78,8 @@ public class Edumia
 
         EdumiaEntities.register(modEventBus);
 
-        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        modContainer.registerConfig(ModConfig.Type.SERVER, EdumiaServerConfigs.SPEC);
+        modContainer.registerConfig(ModConfig.Type.CLIENT, EdumiaClientConfig.SPEC);
 
         EdumiaTrunkPlacerTypes.register(modEventBus);
         EdumiaFoliagePlacerTypes.register(modEventBus);

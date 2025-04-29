@@ -3,7 +3,7 @@ package com.legends.edumia.client.gui.widget.map;
 import com.legends.edumia.Edumia;
 import com.legends.edumia.client.gui.widget.ModWidget;
 import com.legends.edumia.client.gui.widget.UiDirections;
-import com.legends.edumia.utils.LoggerUtil;
+import com.legends.edumia.utils.EdumiaLog;
 import com.legends.edumia.world.biomes.surface.MapBasedBiomePool;
 import com.legends.edumia.world.biomes.surface.MapBasedCustomBiome;
 import com.legends.edumia.world.chunkgen.map.ImageUtils;
@@ -53,7 +53,7 @@ public class MapWidget  extends ModWidget {
         try{
             mapImage = ImageUtils.fetchResourceImage(EdumiaMapConfigs.INITIAL_IMAGE);
         } catch (IOException e) {
-            LoggerUtil.logDebugMsg("MapWidget::Couldn't find %s".formatted(EdumiaMapConfigs.INITIAL_PLAYER_IMAGE));
+            EdumiaLog.logDebugMsg("MapWidget::Couldn't find %s".formatted(EdumiaMapConfigs.INITIAL_PLAYER_IMAGE));
         }
 
         if(uvX == null || uvY == null){

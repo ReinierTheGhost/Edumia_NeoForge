@@ -1,10 +1,8 @@
 package com.legends.edumia.resources.datas.npcs.data;
 
-import com.legends.edumia.utils.LoggerUtil;
+import com.legends.edumia.utils.EdumiaLog;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 
 import java.util.HashMap;
 
@@ -36,7 +34,7 @@ public class NpcGearData {
 
     public NpcGearData add(EquipmentSlot slot, NpcGearSlotData slotData){
         if(gears.containsKey(slot)) {
-            LoggerUtil.logError("NpcGearData::Overwriting slotData - %s".formatted(slot.getName()));
+            EdumiaLog.logError("NpcGearData::Overwriting slotData - %s".formatted(slot.getName()));
         }
         gears.put(slot, slotData);
         return this;

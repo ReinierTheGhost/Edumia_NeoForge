@@ -7,7 +7,7 @@ import com.legends.edumia.network.packets.ClientToServerPacket;
 import com.legends.edumia.resources.datas.factions.Faction;
 import com.legends.edumia.resources.datas.factions.FactionLookup;
 import com.legends.edumia.resources.datas.factions.FactionUtil;
-import com.legends.edumia.utils.LoggerUtil;
+import com.legends.edumia.utils.EdumiaLog;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
@@ -61,7 +61,7 @@ public class PacketSetAffiliation  extends ClientToServerPacket<PacketSetAffilia
                 if(!context.player().isCreative() && context.player().getMainHandItem().getItem() instanceof WorldTeleporterItem)
                     context.player().getItemInHand(InteractionHand.MAIN_HAND).shrink(1);
             } catch (Exception e){
-                LoggerUtil.logError("AffiliationPacket::Tried getting affiliation packet and couldn't fetch any.", e);
+                EdumiaLog.logError("AffiliationPacket::Tried getting affiliation packet and couldn't fetch any.", e);
             }
         });
     }

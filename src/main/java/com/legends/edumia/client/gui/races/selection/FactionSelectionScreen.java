@@ -14,7 +14,7 @@ import com.legends.edumia.resources.datas.Disposition;
 import com.legends.edumia.resources.datas.factions.Faction;
 import com.legends.edumia.resources.datas.factions.data.BannerData;
 import com.legends.edumia.resources.datas.races.Race;
-import com.legends.edumia.utils.LoggerUtil;
+import com.legends.edumia.utils.EdumiaLog;
 import com.mojang.blaze3d.platform.Lighting;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.ChatFormatting;
@@ -83,7 +83,7 @@ public class FactionSelectionScreen extends EdumiaMenuScreen {
             this.player = abstractClientPlayerEntity;
             controller = new FactionSelectionController(this, player, initialDelay);
         } else {
-            LoggerUtil.logError("FactionSelectionScreen::Init:Couldn't find player");
+            EdumiaLog.logError("FactionSelectionScreen::Init:Couldn't find player");
         }
 
         // Initialize Buttons
@@ -319,6 +319,7 @@ public class FactionSelectionScreen extends EdumiaMenuScreen {
     }
 
     private void drawInformationPanel(GuiGraphics context, int mainPanelWidth, int mainPanelHeight) {
+//        if (controller == null) return; // Prevent null pointer crash
         int startX = (int) ((context.guiWidth() / 2f) - (mainPanelWidth / 2f));
         int startY = (int) ((context.guiHeight() / 2f) - (mainPanelHeight / 2f));
 
@@ -410,9 +411,11 @@ public class FactionSelectionScreen extends EdumiaMenuScreen {
     }
 
     private void drawFactionSelectionPanel(GuiGraphics context, int mainPanelWidth, int mainPanelHeight) {
+//        if (controller == null) return; // Prevent null pointer crash
         int endX = (int) ((context.guiHeight() / 2f) - (mainPanelWidth / 2f) - MINIMAL_MARGIN);
         int startX = Math.max(MINIMAL_MARGIN, endX  - mainPanelWidth);
         int startY = (int) ((context.guiHeight() / 2f) - (mainPanelHeight / 2f));
+
 
         // Draw disposition option
         Disposition disposition = controller.getCurrentDisposition();
@@ -501,6 +504,7 @@ public class FactionSelectionScreen extends EdumiaMenuScreen {
 
 
     private void drawMapPanel(GuiGraphics context, int mainPanelWidth, int mainPanelHeight) {
+//        if (mapWidget == null) return; // Prevent null pointer crash
         int startX = (int) ((context.guiWidth() / 2f) + (mainPanelWidth / 2f)) + MINIMAL_MARGIN;
         int startY = (int) ((context.guiHeight() / 2f) - (mainPanelHeight / 2f));
 
@@ -685,7 +689,7 @@ public class FactionSelectionScreen extends EdumiaMenuScreen {
         DyeColor color = faction.getBaseBannerColor();
         List<BannerData.BannerPatternWithColor> patterns = faction.getBannerPatternsWithColors(this.minecraft.level);
         if(patterns == null || patterns.isEmpty()) {
-            LoggerUtil.logError("FactionSelectionScreen::drawFactionBanner - Cannot create banner because values are empty or null");
+            EdumiaLog.logError("FactionSelectionScreen::drawFactionBanner - Cannot create banner because values are empty or null");
             return;
         }
 

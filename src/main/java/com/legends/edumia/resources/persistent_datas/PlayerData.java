@@ -8,7 +8,7 @@ import com.legends.edumia.resources.datas.RaceType;
 import com.legends.edumia.resources.datas.factions.Faction;
 import com.legends.edumia.resources.datas.factions.FactionLookup;
 import com.legends.edumia.resources.datas.races.Race;
-import com.legends.edumia.utils.LoggerUtil;
+import com.legends.edumia.utils.EdumiaLog;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.Level;
@@ -49,7 +49,7 @@ public class PlayerData {
         if(faction.getFactionType() == FactionType.SUBFACTION){
             ResourceLocation parentFactionIdentifier = faction.getParentFactionId();
             if(parentFactionIdentifier == null){
-                LoggerUtil.logError(faction.getName() + " is said to be a subfaction, but does not have a parent faction, returning the obtained faction by default.");
+                EdumiaLog.logError(faction.getName() + " is said to be a subfaction, but does not have a parent faction, returning the obtained faction by default.");
                 return faction;
             }
             faction = FactionLookup.getFactionById(world, parentFactionIdentifier);
