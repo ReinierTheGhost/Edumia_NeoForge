@@ -7,4 +7,3 @@ accessible method net/minecraft/world/level/levelgen/feature/TreeFeature setBloc
 
 accessible field net/minecraft/client/gui/components/AbstractWidget x I
 accessible field net/minecraft/client/gui/components/AbstractWidget y I
-accessible method net/minecraft/client/gui/components/AbstractWidget render (Lnet/minecraft/client/gui/GuiGraphics;IIF)V

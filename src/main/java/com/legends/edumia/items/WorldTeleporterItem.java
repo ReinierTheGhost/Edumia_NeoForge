@@ -1,7 +1,10 @@
 package com.legends.edumia.items;
 
+import com.legends.edumia.EdumiaServerConfigs;
+import com.legends.edumia.client.gui.ReturnConfirmationScreen;
 import com.legends.edumia.network.packets.C2S.PacketOnboardingRequest;
 import com.legends.edumia.world.dimension.ModDimensions;
+import net.minecraft.client.Minecraft;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
@@ -17,17 +20,25 @@ public class WorldTeleporterItem extends Item {
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level world, Player user, InteractionHand hand) {
-        if (world.isClientSide){
-            PacketDistributor.sendToServer(new PacketOnboardingRequest());
-        }
-//        if (!ModDimensions.isInEdumia(world)) {
-//            if (!user.isCreative()) {
-//                //user.getInventory().removeStack(user.getActiveHand().ordinal());
-//                user.getItemInHand(hand).shrink(1);
-//            }
-//            ModDimensions.teleportPlayerToEdumia(user);
+//        if (world.isClientSide){
+//            PacketDistributor.sendToServer(new PacketOnboardingRequest());
 //        }
-//        return super.use(world, user, hand);
-        return InteractionResultHolder.success(user.getItemInHand(hand));
+//        return InteractionResultHolder.success(user.getItemInHand(hand));
+
+        float delay = EdumiaServerConfigs.DELAY_ON_TELEPORT_CONFIRMATION.get();
+        if(ModDimensions.isInEdumia(world)) {
+            if (!EdumiaServerConfigs.ENABLE_RETURN_TO_OVERWORLD.get()) {
+                return super.use(world, user, hand);
+            }
+            Minecraft client = Minecraft.getInstance();
+            client.setScreen(new ReturnConfirmationScreen(delay));
+        }else if (!ModDimensions.isInEdumia(world)) {
+            if (!user.isCreative()) {
+                //user.getInventory().removeStack(user.getActiveHand().ordinal());
+                user.getItemInHand(hand).shrink(1);
+            }
+            ModDimensions.teleportPlayerToEdumia(user);
+        }
+        return super.use(world, user, hand);
     }
 }

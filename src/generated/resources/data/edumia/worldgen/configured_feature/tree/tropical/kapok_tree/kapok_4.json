@@ -44,18 +44,18 @@
       }
     },
     "log_target": [
-      "minecraft:jungle_wood",
-      "edumia:jungle_wood_stairs",
-      "edumia:jungle_wood_fence",
-      "edumia:jungle_wood_slab"
-    ],
-    "place_from_nbt": [
-      "minecraft:mangrove_roots",
-      "minecraft:jungle_leaves",
       "edumia:jungle_wood_slab",
       "edumia:jungle_wood_stairs",
+      "edumia:jungle_wood_fence",
+      "minecraft:jungle_wood"
+    ],
+    "place_from_nbt": [
+      "edumia:jungle_wood_fence",
+      "minecraft:jungle_leaves",
+      "edumia:jungle_wood_slab",
+      "minecraft:mangrove_roots",
       "edumia:banana_leaves",
-      "edumia:jungle_wood_fence"
+      "edumia:jungle_wood_stairs"
     ]
   }
 }
