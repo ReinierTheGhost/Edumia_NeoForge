@@ -95,7 +95,6 @@ public class Edumia
         ModWorldGeneration.generateModWorldGen();
 
 
-
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
@@ -107,6 +106,8 @@ public class Edumia
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+
+
 
         BlockHelper.registerFlattenable(BlockLoader.VOLCANIC_DIRT.get(), BlockLoader.VOLCANIC_DIRT_PATH.get().defaultBlockState());
 
