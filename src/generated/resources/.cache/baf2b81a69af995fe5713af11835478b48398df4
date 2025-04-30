@@ -1,4 +1,4 @@
-// 1.21.1	2025-04-28T17:24:22.6817797	Item Models: edumia
+// 1.21.1	2025-04-30T19:36:58.4529259	Item Models: edumia
 047baa6b7a95aadfec14d478dfdf8c290cbd8220 assets/edumia/models/item/acacia_wood_fence.json
 4879a2f3030853ef57cc6d67266684061b3752ec assets/edumia/models/item/acacia_wood_wall.json
 386253d46a85a3515508b2f2812157712b0633d8 assets/edumia/models/item/almond_button.json
@@ -236,6 +236,7 @@ de6dbe646a63b769d711aeff7901d79da148f519 assets/edumia/models/item/holly_button.
 c13b4f0e2eb54e86ff3ba7a67badc4538680226e assets/edumia/models/item/holly_sapling.json
 e7b4e6ddc1cdf8e27f8407975f1bd91b0c3c07f2 assets/edumia/models/item/holly_wood_fence.json
 06edf599a58f2fdc84f04ae6b579881f2398d60f assets/edumia/models/item/holly_wood_wall.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/edumia/models/item/human_spawn_egg.json
 cbabe818c2d89289768e895fed81c7f916671d59 assets/edumia/models/item/jungle_wood_fence.json
 a2a4b63682c178bac27b58bd18f2b83b1fd87c8b assets/edumia/models/item/jungle_wood_wall.json
 d976de6f4dfdf3576967183a8424e9f64d34e87d assets/edumia/models/item/larch_button.json

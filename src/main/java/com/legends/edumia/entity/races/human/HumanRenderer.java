@@ -3,9 +3,6 @@ package com.legends.edumia.entity.races.human;
 import com.google.common.collect.Maps;
 import com.legends.edumia.Edumia;
 import com.legends.edumia.entity.model.EdumiaEntityModelLayers;
-import com.legends.edumia.entity.races.fairy.FairyEntity;
-import com.legends.edumia.entity.races.fairy.FairyVariant;
-import com.legends.edumia.entity.races.fairy.MainFairyModel;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.Util;
 import net.minecraft.client.model.geom.ModelLayers;
@@ -24,7 +21,7 @@ public class HumanRenderer  extends HumanoidMobRenderer<HumanEntity, MainHumanMo
 
     private static final String PATH = "textures/entities/human/";
     public HumanRenderer(EntityRendererProvider.Context context) {
-        super(context, new MainHumanModel<>(context.bakeLayer(EdumiaEntityModelLayers.FAIRY)), 0.5f);
+        super(context, new MainHumanModel<>(context.bakeLayer(EdumiaEntityModelLayers.HUMAN)), 0.5f);
         this.addLayer(new HumanoidArmorLayer<>(this, new MainHumanModel<>(context.bakeLayer(ModelLayers.PLAYER_INNER_ARMOR)),
                 new MainHumanModel<>(context.bakeLayer(ModelLayers.PLAYER_OUTER_ARMOR)), context.getModelManager()));
     }

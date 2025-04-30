@@ -27,6 +27,18 @@
         "pool": [
           "edumia:fairy.civilian"
         ],
+        "rank": "CIVILIAN"
+      },
+      {
+        "pool": [
+          "edumia:fairy.civilian"
+        ],
+        "rank": "SOLDIER"
+      },
+      {
+        "pool": [
+          "edumia:fairy.civilian"
+        ],
         "rank": "LEADER"
       },
       {
@@ -40,18 +52,6 @@
           "edumia:fairy.civilian"
         ],
         "rank": "VETERAN"
-      },
-      {
-        "pool": [
-          "edumia:fairy.civilian"
-        ],
-        "rank": "CIVILIAN"
-      },
-      {
-        "pool": [
-          "edumia:fairy.civilian"
-        ],
-        "rank": "SOLDIER"
       }
     ]
   },
@@ -59,9 +59,9 @@
     "data": [
       {
         "coordinates": {
-          "x": 1945.0,
+          "x": 440.0,
           "y": 0.0,
-          "z": 1785.0
+          "z": 540.0
         },
         "dynamic": 1,
         "id": "edumia:fairy.glyndoril"

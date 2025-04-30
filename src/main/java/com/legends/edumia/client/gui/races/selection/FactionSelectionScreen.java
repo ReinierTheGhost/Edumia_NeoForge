@@ -412,7 +412,7 @@ public class FactionSelectionScreen extends EdumiaMenuScreen {
 
     private void drawFactionSelectionPanel(GuiGraphics context, int mainPanelWidth, int mainPanelHeight) {
 //        if (controller == null) return; // Prevent null pointer crash
-        int endX = (int) ((context.guiHeight() / 2f) - (mainPanelWidth / 2f) - MINIMAL_MARGIN);
+        int endX = (int) ((context.guiWidth() / 2f) - (mainPanelWidth / 2f) - MINIMAL_MARGIN);
         int startX = Math.max(MINIMAL_MARGIN, endX  - mainPanelWidth);
         int startY = (int) ((context.guiHeight() / 2f) - (mainPanelHeight / 2f));
 
@@ -677,7 +677,7 @@ public class FactionSelectionScreen extends EdumiaMenuScreen {
         // Positioning
         PoseStack matrixStack = new PoseStack();
         matrixStack.translate(x + borderMarginX + (size / 2f) + 4, y + borderMarginY, 1f);
-        matrixStack.popPose();
+        matrixStack.pushPose();
         matrixStack.scale(-size, size, 0.1f);
         this.bannerField.xRot = 0.0F;
 

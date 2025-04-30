@@ -2501,5 +2501,54 @@
 "ui.edumia.return_confirmation.title": "Onboarding Screen",
 "ui.edumia.onboarding_selection.title": "Onboarding Screen",
 "ui.edumia.return_confirmation.continue_character.title": "Return to Overworld",
-"ui.edumia.return_confirmation.continue_character.content": "Go to Overworld"
+"ui.edumia.return_confirmation.continue_character.content": "Go to Overworld",
+"ui.edumia.continue_character": "Continue",
+"ui.edumia.reset_character": "Reset Affiliation",
+"screen.edumia.button.faction_randomizer": "Randomize Faction",
+"screen.edumia.button.focus_current": "Focus Toggle",
+"screen.edumia.button.zoom_out": "Zoom Out",
+"screen.edumia.button.zoom_in": "Zoom In",
+"screen.edumia.button.spawn_randomizer": "Randomize Spawn",
+"screen.edumia.button.confirm": "Confirm",
+"screen.edumia.information.subfaction": "Subfaction : ",
+  "screen.edumia.information.races" : "Race",
+  "screen.edumia.information.races.many" : "Races",
+"screen.edumia.information.description": "Description",
+
+  "race.edumia.fairy" : "Fairy",
+  "race.edumia.human" : "Human",
+
+  "faction.edumia.fairies" : "Fairies",
+  "faction.edumia.human" : "Humans",
+
+  "disposition.edumia.good" : "Good",
+  "disposition.edumia.neutral" : "Neutral",
+  "disposition.edumia.evil" : "Evil",
+
+  "spawn.edumia.fairy.glyndoril" : "Glyndoril",
+  "spawn.edumia.human.stormgard" : "Stormgard",
+"edumia.ui.selection.none": "None",
+
+  "widget.edumia.spawn_tooltip_title": "Spawns",
+  "widget.edumia.marker.selected_title_container.before": "[",
+  "widget.edumia.marker.selected_title_container.after": "]",
+  "widget.edumia.marker.margin_front": "   ",
+  "widget.edumia.marker.more": "More ...",
+
+  "#Comment": "UI Search",
+  "ui.edumia.search.label" : "Search...",
+
+  "spawn.edumia.coordinates_base.dynamic": "[x,z] ",
+  "spawn.edumia.coordinates_base_values.dynamic": "%s, %s",
+  "spawn.edumia.coordinates_base.custom": "[x,y,z] ",
+  "spawn.edumia.coordinates_base_values.custom": "%s, %s, %s",
+
+  "race_tooltip.edumia.attribute_header" : "Attributes : ",
+
+  "event.edumia.join.faction.success": "You have joined %s",
+  "event.edumia.leave.faction.success": "You have left %s",
+
+  "description.edumia.fairies.description_0" : "We are the keepers of nature, the guardians of the wild. Our magic flows through the earth, the trees, and the rivers. We call upon the plants to grow, the flowers to bloom, and the animals to aid us in our times of need. To join us is to become one with the forest, to protect it, and to live in balance with all creatures. If you wish to become one with the Fairies, you must embrace the wildness within you. You will find your home in Glyndoril, a hidden sanctuary deep within the jungles of the North. There, you will learn the ways of nature, and the magic that binds us to this world. Will you join us in the dance of life?",
+  "description.edumia.human.description_0" : "We are a people forged in the fires of adversity, hardened by the winds of the southern lands, and strengthened by the bonds of kinship. In our world, magic is scarce, but our strength lies in our courage, our honor, and our relentless pursuit of glory. We live as warriors, explorers, and builders, carving out our destiny in a world that offers no mercy. Our lives may be short, but they are filled with purpose and meaning. If you choose to walk this path, you will be one of us, a warrior of the South, bound by honor and duty to your kin. You will find your home in the halls of Stormgard, nestled in the harsh yet bountiful lands of Bjornheim. Will you take up the axe and shield, and join us in the endless battle for honor and survival?"
+
 }

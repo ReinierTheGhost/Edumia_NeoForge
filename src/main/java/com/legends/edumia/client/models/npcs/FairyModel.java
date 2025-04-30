@@ -1,4 +1,4 @@
-package com.legends.edumia.client.models.fairy;
+package com.legends.edumia.client.models.npcs;
 
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.PartNames;

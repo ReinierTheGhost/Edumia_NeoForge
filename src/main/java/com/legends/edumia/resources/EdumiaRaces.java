@@ -33,19 +33,20 @@ public class EdumiaRaces {
 
     public final static Race FAIRY;
     public final static Race HUMAN;
+//    public final static Race HIGHELVES;
 
 
     @SubscribeEvent
     public static void onNewRegistry(DataPackRegistryEvent.NewRegistry event) {
         EdumiaLog.logDebugMsg("Registering Dynamic Races for " + Edumia.MOD_ID);
-        EdumiaLog.logDebugMsg("Found Race Key: " + RACE_KEY.registryKey().registry() + " for " + Edumia.MOD_ID);
-        event.dataPackRegistry(RACE_KEY, Race.CODEC);
+        event.dataPackRegistry(RACE_KEY, Race.CODEC, Race.CODEC);
     }
 
 
     public static void bootstrap(BootstrapContext<Race> context) {
         HolderGetter<Race> raceRegistryEntryLookup = context.lookup(RACE_KEY);
         // Registering all races
+//        register(context, raceRegistryEntryLookup, HIGHELVES);
         register(context, raceRegistryEntryLookup, FAIRY);
         register(context, raceRegistryEntryLookup, HUMAN);
     }
@@ -66,6 +67,17 @@ public class EdumiaRaces {
 
 
     static {
+
+//        HIGHELVES = new Race(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "highelves"), RaceType.HIGH_ELF,
+//                new AttributeData(new HashMap<>(){{
+//                    put(Attributes.SCALE, 1.2);
+//                    put(Attributes.MAX_HEALTH, 22.0);
+//                    put(Attributes.ATTACK_DAMAGE, 1.0);
+//                    put(Attributes.ENTITY_INTERACTION_RANGE, 2.75);
+//                    put(Attributes.MOVEMENT_SPEED, 0.1);
+//                    put(Attributes.FALL_DAMAGE_MULTIPLIER, 0.75);
+//                }}), List.of(), List.of());
+
         FAIRY = new Race(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "fairy"), RaceType.FAIRY,
                 new AttributeData(new HashMap<>(){{
                     put(Attributes.SCALE, 0.81);

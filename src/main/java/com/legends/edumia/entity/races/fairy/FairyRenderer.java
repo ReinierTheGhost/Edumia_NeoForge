@@ -2,11 +2,9 @@ package com.legends.edumia.entity.races.fairy;
 
 import com.google.common.collect.Maps;
 import com.legends.edumia.Edumia;
-import com.legends.edumia.client.models.fairy.FairyModel;
 import com.legends.edumia.entity.model.EdumiaEntityModelLayers;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.Util;
-import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelLayers;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;

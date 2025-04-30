@@ -134,7 +134,7 @@ public class SearchBarWidget extends ModWidget{
             );
         }
 
-        MutableComponent text = Component.translatable((!searchBarToggle && searchBarInput.isEmpty()) ? "ui.me.search.label" : searchBarInput);
+        MutableComponent text = Component.translatable((!searchBarToggle && searchBarInput.isEmpty()) ? "ui.edumia.search.label" : searchBarInput);
         text.getString(16);
         context.drawString(textRenderer, text,
                 startX + magnifyingGlassSizeX + MINIMAL_MARGIN - 1,

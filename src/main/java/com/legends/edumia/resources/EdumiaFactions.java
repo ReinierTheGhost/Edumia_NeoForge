@@ -31,18 +31,26 @@ public class EdumiaFactions {
     public static final String PATH = "factions";
     public static final ResourceKey<Registry<Faction>> FACTION_KEY = key(PATH);
 
-    public static final Faction FAIRIES;
+//    public static final Faction HIGH_ELVES;
     public static final Faction HUMAN;
+    public static final Faction FAIRIES;
+//    public static final Faction GENSAI;
+//    public static final Faction DARK_ELVES;
+//    public static final Faction ORCS;
+//    public static final Faction DEMONS;
+//    public static final Faction OGRES;
+
 
     @SubscribeEvent
     public static void onNewRegistry(DataPackRegistryEvent.NewRegistry event){
         EdumiaLog.logDebugMsg("Registering Dynamic Factions for " + Edumia.MOD_ID);
-        event.dataPackRegistry(FACTION_KEY, Faction.CODEC);
+        event.dataPackRegistry(FACTION_KEY, Faction.CODEC, Faction.CODEC);
     }
 
     public static void bootstrap(BootstrapContext<Faction> context){
         HolderGetter<Faction> factionHolderGetter = context.lookup(FACTION_KEY);
 
+//        register(context, factionHolderGetter, HIGH_ELVES);
         register(context, factionHolderGetter, FAIRIES);
         register(context, factionHolderGetter, HUMAN);
     }
@@ -94,12 +102,12 @@ public class EdumiaFactions {
                 )),
                 new SpawnDataHandler(List.of(
                         new SpawnData(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "fairy.glyndoril"),
-                                new Vector2d(1945, 1785))
+                                new Vector2d(440, 540))
                 )), List.of(), List.of()
         );
         // endregion
 
-        HUMAN = new Faction("human", true, Disposition.GOOD, FactionType.FACTION, null, null,
+        HUMAN = new Faction("human", true, Disposition.EVIL, FactionType.FACTION, null, null,
                 new HashMap<>(){{
                     put(NpcRank.CIVILIAN, List.of(
                             EdumiaNpcs.HUMAN_CIVILIAN
@@ -125,8 +133,38 @@ public class EdumiaFactions {
                 )),
                 new SpawnDataHandler(List.of(
                         new SpawnData(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "human.stormgard"),
-                                new Vector2d(1000, 1000))
+                                new Vector2d(1662, 1940))
                 )), List.of(), List.of()
         );
+
+//        HIGH_ELVES = new Faction("high_elves", true, Disposition.NEUTRAL, FactionType.FACTION, null, null,
+//                new HashMap<>(){{
+//                    put(NpcRank.CIVILIAN, List.of(
+//                            EdumiaNpcs.HIGHELVEN_CIVILIAN
+//                    ));
+//                    put(NpcRank.MILITIA, List.of(
+//                            EdumiaNpcs.HIGHELVEN_CIVILIAN
+//                    ));
+//                    put(NpcRank.SOLDIER, List.of(
+//                            EdumiaNpcs.HIGHELVEN_CIVILIAN
+//                    ));
+//                    put(NpcRank.KNIGHT, List.of(
+//                            EdumiaNpcs.HIGHELVEN_CIVILIAN
+//                    ));
+//                    put(NpcRank.VETERAN, List.of(
+//                            EdumiaNpcs.HIGHELVEN_CIVILIAN
+//                    ));
+//                    put(NpcRank.LEADER, List.of(
+//                            EdumiaNpcs.HIGHELVEN_CIVILIAN
+//                    ));
+//                }},
+//                new BannerData(DyeColor.LIGHT_BLUE, List.of(
+//                        new BannerData.BannerPatternWithColor(BannerPatterns.GLOBE, DyeColor.YELLOW)
+//                )),
+//                new SpawnDataHandler(List.of(
+//                        new SpawnData(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "highelves.elensar"),
+//                                new Vector2d(570, 1840))
+//                )), List.of(), List.of()
+//        );
     }
 }

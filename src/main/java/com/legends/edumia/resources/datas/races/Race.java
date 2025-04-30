@@ -111,27 +111,27 @@ public class Race {
             case RaceType.HUMAN:
                 entity = new HumanEntity(EdumiaEntities.HUMAN_CIVILIAN.get(), world);
                 break;
-            case RaceType.HIGH_ELF:
-                entity = new HighElfEntity(EntityType.VILLAGER, world);
-                break;
-            case RaceType.DARK_ELF:
-                entity = new DarkElfEntity(EntityType.VILLAGER, world);
-                break;
-            case RaceType.DEMON:
-                entity = new DemonEntity(EntityType.VILLAGER, world);
-                break;
-            case RaceType.ORC:
-                entity = new OrcEntity(EntityType.VILLAGER, world);
-                break;
-            case RaceType.OGRE:
-                entity = new OgreEntity(EntityType.VILLAGER, world);
-                break;
+//            case RaceType.HIGH_ELF:
+//                entity = new HighElfEntity(EntityType.VILLAGER, world);
+//                break;
+//            case RaceType.DARK_ELF:
+//                entity = new DarkElfEntity(EntityType.VILLAGER, world);
+//                break;
+//            case RaceType.DEMON:
+//                entity = new DemonEntity(EntityType.VILLAGER, world);
+//                break;
+//            case RaceType.ORC:
+//                entity = new OrcEntity(EntityType.VILLAGER, world);
+//                break;
+//            case RaceType.OGRE:
+//                entity = new OgreEntity(EntityType.VILLAGER, world);
+//                break;
             case RaceType.FAIRY:
                 entity = new FairyEntity(EdumiaEntities.FAIRY_CIVILIAN.get(), world);
                 break;
-            case RaceType.GENSAI:
-                entity = new GensaiEntity(EntityType.VILLAGER, world);
-                break;
+//            case RaceType.GENSAI:
+//                entity = new GensaiEntity(EntityType.VILLAGER, world);
+//                break;
             default:
                 entity = new BanditHumanEntity(EntityType.VILLAGER, world);
                 break;

@@ -96,6 +96,8 @@ public class ModBiomes {
     }
     public static void createFairyForestBiome(BootstrapContext<Biome> context, ResourceKey<Biome> biomeResourceKey) {
         MobSpawnSettings.Builder spawnSettings = new MobSpawnSettings.Builder();
+        ModSpawnSettingsBuilder.addFairies(spawnSettings);
+        ModSpawnSettingsBuilder.addTropicalAnimals(spawnSettings);
         BiomeGenerationSettings.Builder generationSettings = new BiomeGenerationSettings.Builder(
                 context.lookup(Registries.PLACED_FEATURE),
                 context.lookup(Registries.CONFIGURED_CARVER));
@@ -508,6 +510,7 @@ public class ModBiomes {
     }
     public static void createGensaiJungleBiome(BootstrapContext<Biome> context, ResourceKey<Biome> biomeResourceKey) {
         MobSpawnSettings.Builder spawnSettings = new MobSpawnSettings.Builder();
+        ModSpawnSettingsBuilder.addTropicalAnimals(spawnSettings);
         BiomeGenerationSettings.Builder generationSettings = new BiomeGenerationSettings.Builder(
                 context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 

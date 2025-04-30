@@ -10,8 +10,8 @@
   },
   "command_join": [],
   "command_leave": [],
-  "disposition": "GOOD",
-  "faction_selection_order_index": 1,
+  "disposition": "EVIL",
+  "faction_selection_order_index": 0,
   "faction_type": "FACTION",
   "id": "edumia:human",
   "joinable": true,
@@ -22,6 +22,18 @@
           "edumia:human.civilian"
         ],
         "rank": "KNIGHT"
+      },
+      {
+        "pool": [
+          "edumia:human.civilian"
+        ],
+        "rank": "CIVILIAN"
+      },
+      {
+        "pool": [
+          "edumia:human.civilian"
+        ],
+        "rank": "SOLDIER"
       },
       {
         "pool": [
@@ -40,18 +52,6 @@
           "edumia:human.civilian"
         ],
         "rank": "VETERAN"
-      },
-      {
-        "pool": [
-          "edumia:human.civilian"
-        ],
-        "rank": "CIVILIAN"
-      },
-      {
-        "pool": [
-          "edumia:human.civilian"
-        ],
-        "rank": "SOLDIER"
       }
     ]
   },
@@ -59,9 +59,9 @@
     "data": [
       {
         "coordinates": {
-          "x": 1000.0,
+          "x": 1662.0,
           "y": 0.0,
-          "z": 1000.0
+          "z": 1940.0
         },
         "dynamic": 1,
         "id": "edumia:human.stormgard"

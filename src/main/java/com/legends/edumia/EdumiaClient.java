@@ -2,16 +2,12 @@ package com.legends.edumia;
 
 import com.legends.edumia.client.EdumiaKeyHandler;
 import com.legends.edumia.client.gui.EdumiaMasterMenuScreen;
-import com.legends.edumia.entity.EdumiaEntities;
-import com.legends.edumia.entity.races.fairy.FairyRenderer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
-import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.InputEvent;
 import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
 

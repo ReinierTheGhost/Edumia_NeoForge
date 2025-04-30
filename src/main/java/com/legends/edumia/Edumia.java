@@ -6,6 +6,7 @@ import com.legends.edumia.core.CreativeTabLoader;
 import com.legends.edumia.core.ItemLoader;
 import com.legends.edumia.entity.EdumiaEntities;
 import com.legends.edumia.entity.races.fairy.FairyRenderer;
+import com.legends.edumia.entity.races.human.HumanRenderer;
 import com.legends.edumia.world.biomes.EdumiaBiomeKeys;
 import com.legends.edumia.world.biomes.surface.MapBasedBiomePool;
 import com.legends.edumia.world.biomes.surface.MapBiomeData;
@@ -144,6 +145,7 @@ public class Edumia
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             EntityRenderers.register(EdumiaEntities.FAIRY_CIVILIAN.get(), FairyRenderer::new);
+            EntityRenderers.register(EdumiaEntities.HUMAN_CIVILIAN.get(), HumanRenderer::new);
 
             for (GlassSets.GlassSet set : GlassSets.glassSets) {
                 ItemBlockRenderTypes.setRenderLayer(set.block().get(), RenderType.translucent());

@@ -1,8 +1,6 @@
 package com.legends.edumia.entity.races.human;
 
 import com.legends.edumia.entity.NpcEntity;
-import com.legends.edumia.entity.races.fairy.FairyEntity;
-import com.legends.edumia.entity.races.fairy.FairyVariant;
 import com.legends.edumia.resources.EdumiaFactions;
 import com.legends.edumia.resources.EdumiaRaces;
 import com.legends.edumia.resources.datas.npcs.data.NpcRank;

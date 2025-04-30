@@ -386,7 +386,7 @@ public class Faction {
         if(descriptions == null){
             descriptions = new ArrayList<>();
             boolean hasDescription = true;
-            String base = "description.me.%s.description_%s".formatted(id.getPath(), "%s");
+            String base = "description.edumia.%s.description_%s".formatted(id.getPath(), "%s");
             while(hasDescription){
                 String langPath = base.formatted(descriptions.size());
                 Component text = Component.translatable(langPath);
