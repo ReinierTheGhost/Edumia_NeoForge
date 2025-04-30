@@ -31,6 +31,7 @@ public class FairyRenderer extends HumanoidMobRenderer<FairyEntity, MainFairyMod
     public static final Map<FairyVariant, String> LOCATION_BY_VARIANT =
             Util.make(Maps.newEnumMap(FairyVariant.class), (resourceLocation) -> {
                 resourceLocation.put(FairyVariant.PURPLE_HEAR_FEMALE, PATH + "female1.png");
+                resourceLocation.put(FairyVariant.ORANGE_WING_FEMALE, PATH + "female2.png");
             });
 
     @Override
@@ -41,7 +42,7 @@ public class FairyRenderer extends HumanoidMobRenderer<FairyEntity, MainFairyMod
     @Override
     public void render(FairyEntity entity, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource buffer,
                        int packedLight) {
-        poseStack.scale(0.95f, 1.0f, 0.95f);
+        poseStack.scale(0.95f, 0.9f, 0.95f);
         super.render(entity, entityYaw, partialTicks, poseStack, buffer, packedLight);
     }
 }

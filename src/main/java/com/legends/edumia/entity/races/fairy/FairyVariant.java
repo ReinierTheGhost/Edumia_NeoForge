@@ -4,7 +4,8 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 public enum FairyVariant {
-    PURPLE_HEAR_FEMALE(0);
+    PURPLE_HEAR_FEMALE(0),
+    ORANGE_WING_FEMALE(1);
 //    PURPLE_HEAR_MAN(1)
 
     private static final FairyVariant[] BY_ID = Arrays.stream(values()).sorted(

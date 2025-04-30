@@ -29,8 +29,7 @@ import java.util.Optional;
 @EventBusSubscriber(modid = Edumia.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
 public class EdumiaFactions {
     public static final String PATH = "factions";
-    public static final ResourceKey<Registry<Faction>> FACTION_KEY =
-            ResourceKey.createRegistryKey(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, PATH));
+    public static final ResourceKey<Registry<Faction>> FACTION_KEY = key(PATH);
 
     public static final Faction FAIRIES;
 
@@ -59,6 +58,10 @@ public class EdumiaFactions {
 
     private static ResourceKey<Faction> of(String name) {
         return ResourceKey.create(FACTION_KEY, ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, name));
+    }
+
+    private static <T> ResourceKey<Registry<T>> key(String name) {
+        return ResourceKey.createRegistryKey(Edumia.location(name));
     }
 
     static {

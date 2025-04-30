@@ -16,6 +16,7 @@ public class FactionLookup {
     public static List<Faction> getAllFactions(Level world) {
         return world.registryAccess().registryOrThrow(EdumiaFactions.FACTION_KEY).stream().toList();
     }
+
     public static Faction getFactionById(Level world, ResourceLocation id) throws FactionResourceLocationException {
         Faction faction = world.registryAccess().registryOrThrow(EdumiaFactions.FACTION_KEY).get(id);
         if(faction == null)
