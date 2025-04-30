@@ -24,6 +24,7 @@ public class EdumiaNpcs {
             ResourceKey.createRegistryKey(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, PATH));
 
     public static final NpcData FAIRY_CIVILIAN;
+    public static final NpcData HUMAN_CIVILIAN;
 
     @SubscribeEvent
     public static void onNewRegistry(DataPackRegistryEvent.NewRegistry event){
@@ -35,6 +36,7 @@ public class EdumiaNpcs {
         HolderGetter<NpcData> npcRegistryEntryLookup = context.lookup(NPC_KEY);
         // [RACE / GENERIC]
         register(context, npcRegistryEntryLookup, FAIRY_CIVILIAN);
+        register(context, npcRegistryEntryLookup, HUMAN_CIVILIAN);
 
         // [GONDOR]
 //        registerAll(context, npcRegistryEntryLookup, GondorianNpcDataPool.fetchAll());
@@ -64,6 +66,11 @@ public class EdumiaNpcs {
     static {
         FAIRY_CIVILIAN = new NpcData(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "fairy.civilian"),
                 EdumiaRaces.FAIRY, List.of(
+                NpcGearData.create()
+        ));
+
+        HUMAN_CIVILIAN = new NpcData(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "human.civilian"),
+                EdumiaRaces.HUMAN, List.of(
                 NpcGearData.create()
         ));
     }

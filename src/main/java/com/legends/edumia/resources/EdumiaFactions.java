@@ -32,6 +32,7 @@ public class EdumiaFactions {
     public static final ResourceKey<Registry<Faction>> FACTION_KEY = key(PATH);
 
     public static final Faction FAIRIES;
+    public static final Faction HUMAN;
 
     @SubscribeEvent
     public static void onNewRegistry(DataPackRegistryEvent.NewRegistry event){
@@ -43,6 +44,7 @@ public class EdumiaFactions {
         HolderGetter<Faction> factionHolderGetter = context.lookup(FACTION_KEY);
 
         register(context, factionHolderGetter, FAIRIES);
+        register(context, factionHolderGetter, HUMAN);
     }
 
     private static Faction register(BootstrapContext<Faction> context, HolderGetter<Faction> factionHolderGetter, Faction faction) {
@@ -88,7 +90,7 @@ public class EdumiaFactions {
                     ));
                 }},
                 new BannerData(DyeColor.WHITE, List.of(
-                        new BannerData.BannerPatternWithColor(BannerPatterns.GRADIENT, DyeColor.BLACK)
+                        new BannerData.BannerPatternWithColor(BannerPatterns.FLOWER, DyeColor.GREEN)
                 )),
                 new SpawnDataHandler(List.of(
                         new SpawnData(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "fairy.glyndoril"),
@@ -96,5 +98,35 @@ public class EdumiaFactions {
                 )), List.of(), List.of()
         );
         // endregion
+
+        HUMAN = new Faction("human", true, Disposition.GOOD, FactionType.FACTION, null, null,
+                new HashMap<>(){{
+                    put(NpcRank.CIVILIAN, List.of(
+                            EdumiaNpcs.HUMAN_CIVILIAN
+                    ));
+                    put(NpcRank.MILITIA, List.of(
+                            EdumiaNpcs.HUMAN_CIVILIAN
+                    ));
+                    put(NpcRank.SOLDIER, List.of(
+                            EdumiaNpcs.HUMAN_CIVILIAN
+                    ));
+                    put(NpcRank.KNIGHT, List.of(
+                            EdumiaNpcs.HUMAN_CIVILIAN
+                    ));
+                    put(NpcRank.VETERAN, List.of(
+                            EdumiaNpcs.HUMAN_CIVILIAN
+                    ));
+                    put(NpcRank.LEADER, List.of(
+                            EdumiaNpcs.HUMAN_CIVILIAN
+                    ));
+                }},
+                new BannerData(DyeColor.BROWN, List.of(
+                        new BannerData.BannerPatternWithColor(BannerPatterns.CROSS, DyeColor.RED)
+                )),
+                new SpawnDataHandler(List.of(
+                        new SpawnData(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "human.stormgard"),
+                                new Vector2d(1000, 1000))
+                )), List.of(), List.of()
+        );
     }
 }

@@ -21,5 +21,6 @@ public class ModEventBusEvents {
     @SubscribeEvent
     public static void registerAttributes(EntityAttributeCreationEvent event) {
         event.put(EdumiaEntities.FAIRY_CIVILIAN.get(), FairyEntity.setSoldierAttribute().build());
+        event.put(EdumiaEntities.HUMAN_CIVILIAN.get(), FairyEntity.setSoldierAttribute().build());
     }
 }

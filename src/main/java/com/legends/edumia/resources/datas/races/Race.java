@@ -1,5 +1,6 @@
 package com.legends.edumia.resources.datas.races;
 
+import com.legends.edumia.entity.EdumiaEntities;
 import com.legends.edumia.entity.NpcEntity;
 import com.legends.edumia.entity.races.darkelves.DarkElfEntity;
 import com.legends.edumia.entity.races.demon.DemonEntity;
@@ -108,7 +109,7 @@ public class Race {
         NpcEntity entity;
         switch (raceType){
             case RaceType.HUMAN:
-                entity = new HumanEntity(EntityType.VILLAGER, world);
+                entity = new HumanEntity(EdumiaEntities.HUMAN_CIVILIAN.get(), world);
                 break;
             case RaceType.HIGH_ELF:
                 entity = new HighElfEntity(EntityType.VILLAGER, world);
@@ -126,7 +127,7 @@ public class Race {
                 entity = new OgreEntity(EntityType.VILLAGER, world);
                 break;
             case RaceType.FAIRY:
-                entity = new FairyEntity(EntityType.VILLAGER, world);
+                entity = new FairyEntity(EdumiaEntities.FAIRY_CIVILIAN.get(), world);
                 break;
             case RaceType.GENSAI:
                 entity = new GensaiEntity(EntityType.VILLAGER, world);
