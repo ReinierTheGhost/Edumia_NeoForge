@@ -238,6 +238,7 @@ public class CreativeTabLoader {
                                 entries.accept(BlockLoader.TEST_SAPLING.get());
                                 entries.accept(ItemLoader.FAIRY_SPAWN_EGG.get());
                                 entries.accept(ItemLoader.HUMAN_SPAWN_EGG.get());
+                                entries.accept(ItemLoader.HIGH_ELVEN_SPAWN_EGG.get());
                             }).build());
 
     public static final Supplier<CreativeModeTab>  EDUMIA_GEMS = CREATIVE_MODE_TAB.register("edumia_gems",() ->

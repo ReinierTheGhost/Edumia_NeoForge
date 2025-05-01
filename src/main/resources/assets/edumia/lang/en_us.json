@@ -2517,9 +2517,11 @@
 
   "race.edumia.fairy" : "Fairy",
   "race.edumia.human" : "Human",
+  "race.edumia.highelves" : "High elves",
 
   "faction.edumia.fairies" : "Fairies",
   "faction.edumia.human" : "Humans",
+  "faction.edumia.high_elves" : "High elves",
 
   "disposition.edumia.good" : "Good",
   "disposition.edumia.neutral" : "Neutral",
@@ -2527,7 +2529,8 @@
 
   "spawn.edumia.fairy.glyndoril" : "Glyndoril",
   "spawn.edumia.human.stormgard" : "Stormgard",
-"edumia.ui.selection.none": "None",
+  "spawn.edumia.highelves.elensar" : "Elensar",
+  "edumia.ui.selection.none": "None",
 
   "widget.edumia.spawn_tooltip_title": "Spawns",
   "widget.edumia.marker.selected_title_container.before": "[",
@@ -2548,7 +2551,9 @@
   "event.edumia.join.faction.success": "You have joined %s",
   "event.edumia.leave.faction.success": "You have left %s",
 
-  "description.edumia.fairies.description_0" : "We are the keepers of nature, the guardians of the wild. Our magic flows through the earth, the trees, and the rivers. We call upon the plants to grow, the flowers to bloom, and the animals to aid us in our times of need. To join us is to become one with the forest, to protect it, and to live in balance with all creatures. If you wish to become one with the Fairies, you must embrace the wildness within you. You will find your home in Glyndoril, a hidden sanctuary deep within the jungles of the North. There, you will learn the ways of nature, and the magic that binds us to this world. Will you join us in the dance of life?",
-  "description.edumia.human.description_0" : "We are a people forged in the fires of adversity, hardened by the winds of the southern lands, and strengthened by the bonds of kinship. In our world, magic is scarce, but our strength lies in our courage, our honor, and our relentless pursuit of glory. We live as warriors, explorers, and builders, carving out our destiny in a world that offers no mercy. Our lives may be short, but they are filled with purpose and meaning. If you choose to walk this path, you will be one of us, a warrior of the South, bound by honor and duty to your kin. You will find your home in the halls of Stormgard, nestled in the harsh yet bountiful lands of Bjornheim. Will you take up the axe and shield, and join us in the endless battle for honor and survival?"
+  "description.edumia.fairies.description_0" : "We are the keepers of nature, the guardians of the wild. Our magic flows through the earth, the trees, and the rivers. We call upon the plants to grow, the flowers to bloom, and the animals to aid us in our times of need. To join us is to become one with the forest, to protect it, and to live in balance with all creatures.",
 
+  "description.edumia.human.description_0" : "We are a people forged in the fires of adversity, hardened by the winds of the southern lands, and strengthened by the bonds of kinship. In our world, magic is scarce, but our strength lies in our courage, our honor, and our relentless pursuit of glory. We live as warriors, explorers, and builders, carving out our destiny in a world that offers no mercy.",
+
+  "description.edumia.high_elves.description_0" : "The High Elves are a people of great knowledge, ever seeking the truths of this world and the secrets of the sun that grants us power. We are the keepers of the flame, the wielders of fire, and the bearers of light. Our path is one of enlightenment, discovery, and protection of our hidden sanctuaries."
 }

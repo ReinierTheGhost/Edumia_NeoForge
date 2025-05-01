@@ -11,6 +11,7 @@ public final class EdumiaEntityModelLayers {
     public static final String MAIN = "main";
     public static final ModelLayerLocation FAIRY = create("fairy");
     public static final ModelLayerLocation HUMAN = create("human");
+    public static final ModelLayerLocation HIGHELVEN = create("highelven");
 
     // Helper to create layer locations
     private static ModelLayerLocation create(String name) {

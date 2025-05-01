@@ -111,9 +111,9 @@ public class Race {
             case RaceType.HUMAN:
                 entity = new HumanEntity(EdumiaEntities.HUMAN_CIVILIAN.get(), world);
                 break;
-//            case RaceType.HIGH_ELF:
-//                entity = new HighElfEntity(EntityType.VILLAGER, world);
-//                break;
+            case RaceType.HIGH_ELF:
+                entity = new HighElfEntity(EdumiaEntities.HIGH_ELVEN_CIVILIAN.get(), world);
+                break;
 //            case RaceType.DARK_ELF:
 //                entity = new DarkElfEntity(EntityType.VILLAGER, world);
 //                break;
