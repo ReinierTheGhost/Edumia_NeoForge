@@ -38,37 +38,12 @@ public class ParasolPalmFoliagePlacer extends FoliagePlacer {
     protected void createFoliage(LevelSimulatedReader world, FoliageSetter leaves, RandomSource random, TreeConfiguration config, int trunkHeight,
                                  FoliageAttachment foliage, int foliageHeight, int radius, int offset) {
         BlockPos pos = foliage.pos();
-        
-        generateLeaf(world, leaves, pos.offset(0, 0, 0), random, config);
-        generateLeaf(world, leaves, pos.offset(0, -1,  1), random, config);
-        generateLeaf(world, leaves, pos.offset(0, -1,  2), random, config);
-        generateLeaf(world, leaves, pos.offset(0, -1,  3), random, config);
-        generateLeaf(world, leaves, pos.offset(0, -2,  4), random, config);
-        generateLeaf(world, leaves, pos.offset(1, -1, 0), random, config);
-        generateLeaf(world, leaves, pos.offset(2, -1, 0), random, config);
-        generateLeaf(world, leaves, pos.offset(3, -1, 0), random, config);
-        generateLeaf(world, leaves, pos.offset( 4, -2, 0), random, config);
-        generateLeaf(world, leaves, pos.offset(0, -1, -1), random, config);
-        generateLeaf(world, leaves, pos.offset(0, -1, -2), random, config);
-        generateLeaf(world, leaves, pos.offset(0, -1, -3), random, config);
-        generateLeaf(world, leaves, pos.offset(0, -2, -4), random, config);
-        generateLeaf(world, leaves, pos.offset(-1, -1, 0), random, config);
-        generateLeaf(world, leaves, pos.offset(-1, -1, -1), random, config);
-        generateLeaf(world, leaves, pos.offset(-1, -1,  1), random, config);
-        generateLeaf(world, leaves, pos.offset(1, -1, -1), random, config);
-        generateLeaf(world, leaves, pos.offset(1, -1,  1), random, config);
-        generateLeaf(world, leaves, pos.offset(-2, -1, 0), random, config);
-        generateLeaf(world, leaves, pos.offset(-3, -1, 0), random, config);
-        generateLeaf(world, leaves, pos.offset(-4, -2, 0), random, config);
-        generateLeaf(world, leaves, pos.offset(2, -1,  2), random, config);
-        generateLeaf(world, leaves, pos.offset(2, -1, -2), random, config);
-        generateLeaf(world, leaves, pos.offset(-2, -1,  2), random, config);
-        generateLeaf(world, leaves, pos.offset(-2, -1, -2), random, config);
-        generateLeaf(world, leaves, pos.offset(3, -2,  3), random, config);
-        generateLeaf(world, leaves, pos.offset(3, -2, -3), random, config);
-        generateLeaf(world, leaves, pos.offset(-3, -2,  3), random, config);
-        generateLeaf(world, leaves, pos.offset(-3, -2, -3), random, config);
-        
+
+        // Place leaves for all layers
+        this.placeLeavesRow(world, leaves, random, config, pos, 4, 0, foliage.doubleTrunk());
+        this.placeLeavesRow(world, leaves, random, config, pos, 4, -1, foliage.doubleTrunk());
+        this.placeLeavesRow(world, leaves, random, config, pos, 4, -2, foliage.doubleTrunk());
+
     }
 
     @Override
@@ -78,7 +53,34 @@ public class ParasolPalmFoliagePlacer extends FoliagePlacer {
 
     @Override
     protected boolean shouldSkipLocation(RandomSource random, int dx, int y, int dz, int radius, boolean giantTrunk) {
-        return false;
+        if (y == 0) {
+            // Only place leaf at center (0,0)
+            return !(dx == 0 && dz == 0);
+        }
+        else if (y == -1) {
+            // Cross pattern with diagonal leaves
+            return !(
+                    // Cross pattern
+                    (dx == 0 && Math.abs(dz) <= 3) ||
+                            (dz == 0 && Math.abs(dx) <= 3) ||
+                            // Diagonal leaves
+                            (Math.abs(dx) == 1 && Math.abs(dz) == 1) ||
+                            (Math.abs(dx) == 2 && Math.abs(dz) == 2)
+            );
+        }
+        else if (y == -2) {
+            // Outer edges and corners
+            return !(
+                    // Edges
+                    (dx == 0 && Math.abs(dz) == 4) ||
+                            (dz == 0 && Math.abs(dx) == 4) ||
+                            // Corners
+                            (Math.abs(dx) == 3 && Math.abs(dz) == 3)
+            );
+        }
+
+        return true;
+
     }
 
     private void generateLeaf(LevelSimulatedReader seedReader, FoliageSetter leaves, BlockPos pos, RandomSource random,

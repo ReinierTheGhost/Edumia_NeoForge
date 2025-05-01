@@ -39,132 +39,139 @@ public class LargeParasolPalmFoliagePlacer extends FoliagePlacer {
                                  FoliageAttachment foliage, int foliageHeight, int radius, int offset) {
         BlockPos pos = foliage.pos();
 
-        generateLeaf(world, leaves, pos.offset( 0, -1,  -7), random, config);
-        generateLeaf(world, leaves, pos.offset( -1, -1,  -6), random, config);
-        generateLeaf(world, leaves, pos.offset( 1, -1,  -6), random, config);
-        generateLeaf(world, leaves, pos.offset( -5, -1,  -5), random, config);
-        generateLeaf(world, leaves, pos.offset( 5, -1,  -5), random, config);
-        generateLeaf(world, leaves, pos.offset( -6, -1,  -1), random, config);
-        //placeLog(world, leaves, pos.add( 0, 1,  -1), random, config);
-        generateLeaf(world, leaves, pos.offset( 6, -1,  -1), random, config);
-        generateLeaf(world, leaves, pos.offset( -7, -1,  0), random, config);
-        //placeLog(world, leaves, pos.add( -1, 1,  0), random, config);
-        //placeLog(world, leaves, pos.add( 0, 1,  0), random, config);
-        //placeLog(world, leaves, pos.add( 1, 1,  0), random, config);
-        generateLeaf(world, leaves, pos.offset(  7, -1,  0), random, config);
-        generateLeaf(world, leaves, pos.offset(  -6, -1,  1), random, config);
-        //placeLog(world, leaves, pos.add( i + 0, 1,  1), random, config);
-        generateLeaf(world, leaves, pos.offset( 6, -1,  1), random, config);
-        generateLeaf(world, leaves, pos.offset( -5, -1,  5), random, config);
-        generateLeaf(world, leaves, pos.offset( 5, -1,  5), random, config);
-        generateLeaf(world, leaves, pos.offset( -1, -1,  6), random, config);
-        generateLeaf(world, leaves, pos.offset( 1, -1,  6), random, config);
-        generateLeaf(world, leaves, pos.offset( 0, -1,  7), random, config);
-        generateLeaf(world, leaves, pos.offset( 0, 0,  -6), random, config);
-        generateLeaf(world, leaves, pos.offset( -4, 0,  -5), random, config);
-        generateLeaf(world, leaves, pos.offset( -1, 0,  -5), random, config);
-        generateLeaf(world, leaves, pos.offset( 1, 0,  -5), random, config);
-        generateLeaf(world, leaves, pos.offset( 4, 0,  -5), random, config);
-        generateLeaf(world, leaves, pos.offset( -5, 0,  -4), random, config);
-        generateLeaf(world, leaves, pos.offset( -3, 0,  -4), random, config);
-        generateLeaf(world, leaves, pos.offset( -1, 0,  -4), random, config);
-        generateLeaf(world, leaves, pos.offset( 1, 0,  -4), random, config);
-        generateLeaf(world, leaves, pos.offset( 3, 0,  -4), random, config);
-        generateLeaf(world, leaves, pos.offset( 5, 0,  -4), random, config);
-        generateLeaf(world, leaves, pos.offset( -4, 0,  -3), random, config);
-        generateLeaf(world, leaves, pos.offset( -2, 0,  -3), random, config);
-        generateLeaf(world, leaves, pos.offset( -1, 0,  -3), random, config);
-        generateLeaf(world, leaves, pos.offset( 1, 0,  -3), random, config);
-        generateLeaf(world, leaves, pos.offset( 2, 0,  -3), random, config);
-        generateLeaf(world, leaves, pos.offset( 4, 0,  -3), random, config);
-        generateLeaf(world, leaves, pos.offset( -3, 0,  -2), random, config);
-        generateLeaf(world, leaves, pos.offset( -1, 0,  -2), random, config);
-        generateLeaf(world, leaves, pos.offset( 1, 0,  -2), random, config);
-        generateLeaf(world, leaves, pos.offset( 3, 0,  -2), random, config);
-        generateLeaf(world, leaves, pos.offset( -5, 0,  -1), random, config);
-        generateLeaf(world, leaves, pos.offset( -4, 0,  -1), random, config);
-        generateLeaf(world, leaves, pos.offset( -3, 0,  -1), random, config);
-        generateLeaf(world, leaves, pos.offset( -2, 0,  -1), random, config);
-        generateLeaf(world, leaves, pos.offset( -1, 0,  -1), random, config);
-        generateLeaf(world, leaves, pos.offset( 0, 0,  -1), random, config);
-        generateLeaf(world, leaves, pos.offset( 1, 0,  -1), random, config);
-        generateLeaf(world, leaves, pos.offset( 2, 0,  -1), random, config);
-        generateLeaf(world, leaves, pos.offset( 3, 0,  -1), random, config);
-        generateLeaf(world, leaves, pos.offset( 4, 0,  -1), random, config);
-        generateLeaf(world, leaves, pos.offset( 5, 0,  -1), random, config);
-        generateLeaf(world, leaves, pos.offset( -6, 0,  0), random, config);
-        generateLeaf(world, leaves, pos.offset( -1, 0,  0), random, config);
-        generateLeaf(world, leaves, pos.offset( 0, 0,  0), random, config);
-        generateLeaf(world, leaves, pos.offset( 1, 0,  0), random, config);
-        generateLeaf(world, leaves, pos.offset( 6, 0,  0), random, config);
-        generateLeaf(world, leaves, pos.offset( -5, 0,  1), random, config);
-        generateLeaf(world, leaves, pos.offset( -4, 0,  1), random, config);
-        generateLeaf(world, leaves, pos.offset( -3, 0,  1), random, config);
-        generateLeaf(world, leaves, pos.offset( -2, 0,  1), random, config);
-        generateLeaf(world, leaves, pos.offset( -1, 0,  1), random, config);
-        generateLeaf(world, leaves, pos.offset( 0, 0,  1), random, config);
-        generateLeaf(world, leaves, pos.offset( 1, 0,  1), random, config);
-        generateLeaf(world, leaves, pos.offset( 2, 0,  1), random, config);
-        generateLeaf(world, leaves, pos.offset( 3, 0,  1), random, config);
-        generateLeaf(world, leaves, pos.offset( 4, 0,  1), random, config);
-        generateLeaf(world, leaves, pos.offset( 5, 0,  1), random, config);
-        generateLeaf(world, leaves, pos.offset( -3, 0,  2), random, config);
-        generateLeaf(world, leaves, pos.offset( -1, 0,  2), random, config);
-        generateLeaf(world, leaves, pos.offset( 1, 0,  2), random, config);
-        generateLeaf(world, leaves, pos.offset( 3, 0,  2), random, config);
-        generateLeaf(world, leaves, pos.offset( -4, 0,  3), random, config);
-        generateLeaf(world, leaves, pos.offset( -2, 0,  3), random, config);
-        generateLeaf(world, leaves, pos.offset( -1, 0,  3), random, config);
-        generateLeaf(world, leaves, pos.offset( 1, 0,  3), random, config);
-        generateLeaf(world, leaves, pos.offset( 2, 0,  3), random, config);
-        generateLeaf(world, leaves, pos.offset( 4, 0,  3), random, config);
-        generateLeaf(world, leaves, pos.offset( -5, 0,  4), random, config);
-        generateLeaf(world, leaves, pos.offset( -3, 0,  4), random, config);
-        generateLeaf(world, leaves, pos.offset( -1, 0,  4), random, config);
-        generateLeaf(world, leaves, pos.offset( 1, 0,  4), random, config);
-        generateLeaf(world, leaves, pos.offset( 3, 0,  4), random, config);
-        generateLeaf(world, leaves, pos.offset( 5, 0,  4), random, config);
-        generateLeaf(world, leaves, pos.offset( -4, 0,  5), random, config);
-        generateLeaf(world, leaves, pos.offset( -1, 0,  5), random, config);
-        generateLeaf(world, leaves, pos.offset( 1, 0,  5), random, config);
-        generateLeaf(world, leaves, pos.offset( 4, 0,  5), random, config);
-        generateLeaf(world, leaves, pos.offset( 0, 0,  6), random, config);
-        generateLeaf(world, leaves, pos.offset( 0, 1,  -5), random, config);
-        generateLeaf(world, leaves, pos.offset( -4, 1,  -4), random, config);
-        generateLeaf(world, leaves, pos.offset( 0, 1,  -4), random, config);
-        generateLeaf(world, leaves, pos.offset( 4, 1,  -4), random, config);
-        generateLeaf(world, leaves, pos.offset( -3, 1,  -3), random, config);
-        generateLeaf(world, leaves, pos.offset( 0, 1,  -3), random, config);
-        generateLeaf(world, leaves, pos.offset( 3, 1,  -3), random, config);
-        generateLeaf(world, leaves, pos.offset( -2, 1,  -2), random, config);
-        generateLeaf(world, leaves, pos.offset( 0, 1,  -2), random, config);
-        generateLeaf(world, leaves, pos.offset( 2, 1,  -2), random, config);
-        generateLeaf(world, leaves, pos.offset( -1, 1,  -1), random, config);
-        generateLeaf(world, leaves, pos.offset( 0, 1,  -1), random, config);
-        generateLeaf(world, leaves, pos.offset( 1, 1,  -1), random, config);
-        generateLeaf(world, leaves, pos.offset( -5, 1,  0), random, config);
-        generateLeaf(world, leaves, pos.offset( -4, 1,  0), random, config);
-        generateLeaf(world, leaves, pos.offset( -3, 1,  0), random, config);
-        generateLeaf(world, leaves, pos.offset( -2, 1,  0), random, config);
-        generateLeaf(world, leaves, pos.offset( -1, 1,  0), random, config);
-        generateLeaf(world, leaves, pos.offset( 1, 1,  0), random, config);
-        generateLeaf(world, leaves, pos.offset( 2, 1,  0), random, config);
-        generateLeaf(world, leaves, pos.offset( 3, 1,  0), random, config);
-        generateLeaf(world, leaves, pos.offset( 4, 1,  0), random, config);
-        generateLeaf(world, leaves, pos.offset( 5, 1,  0), random, config);
-        generateLeaf(world, leaves, pos.offset( -1, 1,  1), random, config);
-        generateLeaf(world, leaves, pos.offset( 0, 1,  1), random, config);
-        generateLeaf(world, leaves, pos.offset( 1, 1,  1), random, config);
-        generateLeaf(world, leaves, pos.offset( -2, 1,  2), random, config);
-        generateLeaf(world, leaves, pos.offset( 0, 1,  2), random, config);
-        generateLeaf(world, leaves, pos.offset( 2, 1,  2), random, config);
-        generateLeaf(world, leaves, pos.offset( -3, 1,  3), random, config);
-        generateLeaf(world, leaves, pos.offset( 0, 1,  3), random, config);
-        generateLeaf(world, leaves, pos.offset( 3, 1,  3), random, config);
-        generateLeaf(world, leaves, pos.offset( -4, 1,  4), random, config);
-        generateLeaf(world, leaves, pos.offset( 0, 1,  4), random, config);
-        generateLeaf(world, leaves, pos.offset( 4, 1,  4), random, config);
-        generateLeaf(world, leaves, pos.offset( 0, 1,  5), random, config);
+        // Place leaves at all three levels
+        for (int y = -1; y <= 1; y++) {
+            // Use a large enough radius to cover all leaf positions
+            this.placeLeavesRow(world, leaves, random, config, pos, 7, y, foliage.doubleTrunk());
+        }
+
+
+//        generateLeaf(world, leaves, pos.offset( 0, -1,  -7), random, config);
+//        generateLeaf(world, leaves, pos.offset( -1, -1,  -6), random, config);
+//        generateLeaf(world, leaves, pos.offset( 1, -1,  -6), random, config);
+//        generateLeaf(world, leaves, pos.offset( -5, -1,  -5), random, config);
+//        generateLeaf(world, leaves, pos.offset( 5, -1,  -5), random, config);
+//        generateLeaf(world, leaves, pos.offset( -6, -1,  -1), random, config);
+//        //placeLog(world, leaves, pos.add( 0, 1,  -1), random, config);
+//        generateLeaf(world, leaves, pos.offset( 6, -1,  -1), random, config);
+//        generateLeaf(world, leaves, pos.offset( -7, -1,  0), random, config);
+//        //placeLog(world, leaves, pos.add( -1, 1,  0), random, config);
+//        //placeLog(world, leaves, pos.add( 0, 1,  0), random, config);
+//        //placeLog(world, leaves, pos.add( 1, 1,  0), random, config);
+//        generateLeaf(world, leaves, pos.offset(  7, -1,  0), random, config);
+//        generateLeaf(world, leaves, pos.offset(  -6, -1,  1), random, config);
+//        //placeLog(world, leaves, pos.add( i + 0, 1,  1), random, config);
+//        generateLeaf(world, leaves, pos.offset( 6, -1,  1), random, config);
+//        generateLeaf(world, leaves, pos.offset( -5, -1,  5), random, config);
+//        generateLeaf(world, leaves, pos.offset( 5, -1,  5), random, config);
+//        generateLeaf(world, leaves, pos.offset( -1, -1,  6), random, config);
+//        generateLeaf(world, leaves, pos.offset( 1, -1,  6), random, config);
+//        generateLeaf(world, leaves, pos.offset( 0, -1,  7), random, config);
+//        generateLeaf(world, leaves, pos.offset( 0, 0,  -6), random, config);
+//        generateLeaf(world, leaves, pos.offset( -4, 0,  -5), random, config);
+//        generateLeaf(world, leaves, pos.offset( -1, 0,  -5), random, config);
+//        generateLeaf(world, leaves, pos.offset( 1, 0,  -5), random, config);
+//        generateLeaf(world, leaves, pos.offset( 4, 0,  -5), random, config);
+//        generateLeaf(world, leaves, pos.offset( -5, 0,  -4), random, config);
+//        generateLeaf(world, leaves, pos.offset( -3, 0,  -4), random, config);
+//        generateLeaf(world, leaves, pos.offset( -1, 0,  -4), random, config);
+//        generateLeaf(world, leaves, pos.offset( 1, 0,  -4), random, config);
+//        generateLeaf(world, leaves, pos.offset( 3, 0,  -4), random, config);
+//        generateLeaf(world, leaves, pos.offset( 5, 0,  -4), random, config);
+//        generateLeaf(world, leaves, pos.offset( -4, 0,  -3), random, config);
+//        generateLeaf(world, leaves, pos.offset( -2, 0,  -3), random, config);
+//        generateLeaf(world, leaves, pos.offset( -1, 0,  -3), random, config);
+//        generateLeaf(world, leaves, pos.offset( 1, 0,  -3), random, config);
+//        generateLeaf(world, leaves, pos.offset( 2, 0,  -3), random, config);
+//        generateLeaf(world, leaves, pos.offset( 4, 0,  -3), random, config);
+//        generateLeaf(world, leaves, pos.offset( -3, 0,  -2), random, config);
+//        generateLeaf(world, leaves, pos.offset( -1, 0,  -2), random, config);
+//        generateLeaf(world, leaves, pos.offset( 1, 0,  -2), random, config);
+//        generateLeaf(world, leaves, pos.offset( 3, 0,  -2), random, config);
+//        generateLeaf(world, leaves, pos.offset( -5, 0,  -1), random, config);
+//        generateLeaf(world, leaves, pos.offset( -4, 0,  -1), random, config);
+//        generateLeaf(world, leaves, pos.offset( -3, 0,  -1), random, config);
+//        generateLeaf(world, leaves, pos.offset( -2, 0,  -1), random, config);
+//        generateLeaf(world, leaves, pos.offset( -1, 0,  -1), random, config);
+//        generateLeaf(world, leaves, pos.offset( 0, 0,  -1), random, config);
+//        generateLeaf(world, leaves, pos.offset( 1, 0,  -1), random, config);
+//        generateLeaf(world, leaves, pos.offset( 2, 0,  -1), random, config);
+//        generateLeaf(world, leaves, pos.offset( 3, 0,  -1), random, config);
+//        generateLeaf(world, leaves, pos.offset( 4, 0,  -1), random, config);
+//        generateLeaf(world, leaves, pos.offset( 5, 0,  -1), random, config);
+//        generateLeaf(world, leaves, pos.offset( -6, 0,  0), random, config);
+//        generateLeaf(world, leaves, pos.offset( -1, 0,  0), random, config);
+//        generateLeaf(world, leaves, pos.offset( 0, 0,  0), random, config);
+//        generateLeaf(world, leaves, pos.offset( 1, 0,  0), random, config);
+//        generateLeaf(world, leaves, pos.offset( 6, 0,  0), random, config);
+//        generateLeaf(world, leaves, pos.offset( -5, 0,  1), random, config);
+//        generateLeaf(world, leaves, pos.offset( -4, 0,  1), random, config);
+//        generateLeaf(world, leaves, pos.offset( -3, 0,  1), random, config);
+//        generateLeaf(world, leaves, pos.offset( -2, 0,  1), random, config);
+//        generateLeaf(world, leaves, pos.offset( -1, 0,  1), random, config);
+//        generateLeaf(world, leaves, pos.offset( 0, 0,  1), random, config);
+//        generateLeaf(world, leaves, pos.offset( 1, 0,  1), random, config);
+//        generateLeaf(world, leaves, pos.offset( 2, 0,  1), random, config);
+//        generateLeaf(world, leaves, pos.offset( 3, 0,  1), random, config);
+//        generateLeaf(world, leaves, pos.offset( 4, 0,  1), random, config);
+//        generateLeaf(world, leaves, pos.offset( 5, 0,  1), random, config);
+//        generateLeaf(world, leaves, pos.offset( -3, 0,  2), random, config);
+//        generateLeaf(world, leaves, pos.offset( -1, 0,  2), random, config);
+//        generateLeaf(world, leaves, pos.offset( 1, 0,  2), random, config);
+//        generateLeaf(world, leaves, pos.offset( 3, 0,  2), random, config);
+//        generateLeaf(world, leaves, pos.offset( -4, 0,  3), random, config);
+//        generateLeaf(world, leaves, pos.offset( -2, 0,  3), random, config);
+//        generateLeaf(world, leaves, pos.offset( -1, 0,  3), random, config);
+//        generateLeaf(world, leaves, pos.offset( 1, 0,  3), random, config);
+//        generateLeaf(world, leaves, pos.offset( 2, 0,  3), random, config);
+//        generateLeaf(world, leaves, pos.offset( 4, 0,  3), random, config);
+//        generateLeaf(world, leaves, pos.offset( -5, 0,  4), random, config);
+//        generateLeaf(world, leaves, pos.offset( -3, 0,  4), random, config);
+//        generateLeaf(world, leaves, pos.offset( -1, 0,  4), random, config);
+//        generateLeaf(world, leaves, pos.offset( 1, 0,  4), random, config);
+//        generateLeaf(world, leaves, pos.offset( 3, 0,  4), random, config);
+//        generateLeaf(world, leaves, pos.offset( 5, 0,  4), random, config);
+//        generateLeaf(world, leaves, pos.offset( -4, 0,  5), random, config);
+//        generateLeaf(world, leaves, pos.offset( -1, 0,  5), random, config);
+//        generateLeaf(world, leaves, pos.offset( 1, 0,  5), random, config);
+//        generateLeaf(world, leaves, pos.offset( 4, 0,  5), random, config);
+//        generateLeaf(world, leaves, pos.offset( 0, 0,  6), random, config);
+//        generateLeaf(world, leaves, pos.offset( 0, 1,  -5), random, config);
+//        generateLeaf(world, leaves, pos.offset( -4, 1,  -4), random, config);
+//        generateLeaf(world, leaves, pos.offset( 0, 1,  -4), random, config);
+//        generateLeaf(world, leaves, pos.offset( 4, 1,  -4), random, config);
+//        generateLeaf(world, leaves, pos.offset( -3, 1,  -3), random, config);
+//        generateLeaf(world, leaves, pos.offset( 0, 1,  -3), random, config);
+//        generateLeaf(world, leaves, pos.offset( 3, 1,  -3), random, config);
+//        generateLeaf(world, leaves, pos.offset( -2, 1,  -2), random, config);
+//        generateLeaf(world, leaves, pos.offset( 0, 1,  -2), random, config);
+//        generateLeaf(world, leaves, pos.offset( 2, 1,  -2), random, config);
+//        generateLeaf(world, leaves, pos.offset( -1, 1,  -1), random, config);
+//        generateLeaf(world, leaves, pos.offset( 0, 1,  -1), random, config);
+//        generateLeaf(world, leaves, pos.offset( 1, 1,  -1), random, config);
+//        generateLeaf(world, leaves, pos.offset( -5, 1,  0), random, config);
+//        generateLeaf(world, leaves, pos.offset( -4, 1,  0), random, config);
+//        generateLeaf(world, leaves, pos.offset( -3, 1,  0), random, config);
+//        generateLeaf(world, leaves, pos.offset( -2, 1,  0), random, config);
+//        generateLeaf(world, leaves, pos.offset( -1, 1,  0), random, config);
+//        generateLeaf(world, leaves, pos.offset( 1, 1,  0), random, config);
+//        generateLeaf(world, leaves, pos.offset( 2, 1,  0), random, config);
+//        generateLeaf(world, leaves, pos.offset( 3, 1,  0), random, config);
+//        generateLeaf(world, leaves, pos.offset( 4, 1,  0), random, config);
+//        generateLeaf(world, leaves, pos.offset( 5, 1,  0), random, config);
+//        generateLeaf(world, leaves, pos.offset( -1, 1,  1), random, config);
+//        generateLeaf(world, leaves, pos.offset( 0, 1,  1), random, config);
+//        generateLeaf(world, leaves, pos.offset( 1, 1,  1), random, config);
+//        generateLeaf(world, leaves, pos.offset( -2, 1,  2), random, config);
+//        generateLeaf(world, leaves, pos.offset( 0, 1,  2), random, config);
+//        generateLeaf(world, leaves, pos.offset( 2, 1,  2), random, config);
+//        generateLeaf(world, leaves, pos.offset( -3, 1,  3), random, config);
+//        generateLeaf(world, leaves, pos.offset( 0, 1,  3), random, config);
+//        generateLeaf(world, leaves, pos.offset( 3, 1,  3), random, config);
+//        generateLeaf(world, leaves, pos.offset( -4, 1,  4), random, config);
+//        generateLeaf(world, leaves, pos.offset( 0, 1,  4), random, config);
+//        generateLeaf(world, leaves, pos.offset( 4, 1,  4), random, config);
+//        generateLeaf(world, leaves, pos.offset( 0, 1,  5), random, config);
 
     }
 
@@ -175,7 +182,45 @@ public class LargeParasolPalmFoliagePlacer extends FoliagePlacer {
 
     @Override
     protected boolean shouldSkipLocation(RandomSource random, int dx, int y, int dz, int radius, boolean giantTrunk) {
-        return false;
+        // Create sets of valid coordinates for each y level
+        // Skip center block at y=1
+        if (y == 1 && dx == 0 && dz == 0) {
+            return true;
+        }
+
+        if (y == -1) {
+            // Check if the coordinate pair matches any of the y=-1 positions
+            return !((dx == 0 && dz == -7) ||
+                    (Math.abs(dx) == 1 && dz == -6) ||
+                    (Math.abs(dx) == 5 && dz == -5) ||
+                    (Math.abs(dx) == 6 && dz == -1) ||
+                    (Math.abs(dx) == 7 && dz == 0) ||
+                    (Math.abs(dx) == 6 && dz == 1) ||
+                    (Math.abs(dx) == 5 && dz == 5) ||
+                    (Math.abs(dx) == 1 && dz == 6) ||
+                    (dx == 0 && dz == 7));
+        }
+        else if (y == 0) {
+            // Similar pattern for y=0 level
+            return !((dx == 0 && Math.abs(dz) == 6) ||
+                    ((Math.abs(dx) == 1 || Math.abs(dx) == 4) && Math.abs(dz) == 5) ||
+                    ((Math.abs(dx) == 1 || Math.abs(dx) == 3 || Math.abs(dx) == 5) && Math.abs(dz) == 4) ||
+                    ((Math.abs(dx) == 1 || Math.abs(dx) == 2 || Math.abs(dx) == 4) && Math.abs(dz) == 3) ||
+                    ((Math.abs(dx) == 1 || Math.abs(dx) == 3) && Math.abs(dz) == 2) ||
+                    (Math.abs(dx) <= 5 && Math.abs(dz) == 1) ||
+                    (Math.abs(dx) <= 6 && dz == 0));
+        }
+        else if (y == 1) {
+            // Pattern for y=1 level
+            return !((dx == 0 && Math.abs(dz) == 5) ||
+                    ((Math.abs(dx) == 4 || dx == 0) && Math.abs(dz) == 4) ||
+                    ((Math.abs(dx) == 3 || dx == 0) && Math.abs(dz) == 3) ||
+                    ((Math.abs(dx) == 2 || dx == 0) && Math.abs(dz) == 2) ||
+                    (Math.abs(dx) <= 1 && Math.abs(dz) == 1) ||
+                    (Math.abs(dx) <= 5 && dz == 0));
+        }
+        return true;
+
     }
 
     private void generateLeaf(LevelSimulatedReader seedReader, FoliageSetter leaves, BlockPos pos, RandomSource random, TreeConfiguration config) {

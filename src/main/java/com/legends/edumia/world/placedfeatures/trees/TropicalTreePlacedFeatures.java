@@ -48,18 +48,6 @@ public class TropicalTreePlacedFeatures {
     public static final ResourceKey<PlacedFeature> COCONUT_PALM = registerKey("coconut_palm");
     public static final ResourceKey<PlacedFeature> PAPAYA_PALM = registerKey("papaya_palm");
 
-    static PlacementModifier foothillsTree = PlacementUtils.countExtra(5, 0.5f, 1);
-    static PlacementModifier abundantTree = PlacementUtils.countExtra(3, 0.5f, 1);
-    static PlacementModifier frequentTree = PlacementUtils.countExtra(1, 0.5f, 1);
-    static PlacementModifier commonTree = PlacementUtils.countExtra(1, 0.1f, 1);
-    static PlacementModifier uncommonTree = PlacementUtils.countExtra(0, 0.5f, 1);
-    static PlacementModifier scarceTree = PlacementUtils.countExtra(0, 0.25f, 1);
-    static PlacementModifier rareTree = PlacementUtils.countExtra(0, 0.125f, 1);
-    static PlacementModifier megaTree = PlacementUtils.countExtra(0, 0.1f, 1);
-    static PlacementModifier veryRareTree = PlacementUtils.countExtra(0, 0.05f, 1);
-    static PlacementModifier superRareTree = PlacementUtils.countExtra(0, 0.025f, 1);
-    static PlacementModifier specialTree = PlacementUtils.countExtra(0, 0.01f, 1);
-
     public static void boostrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.lookup(Registries.CONFIGURED_FEATURE);
 

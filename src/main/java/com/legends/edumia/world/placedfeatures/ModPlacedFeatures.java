@@ -31,16 +31,27 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> WATER_DELTA = registerKey("water_delta");
     public static final ResourceKey<PlacedFeature> ABUNDANT_WATER_DELTA = registerKey("abundant_water_delta");
 
-    static PlacementModifier overflowing = PlacementUtils.countExtra(5, 0.5f, 1);
-    static PlacementModifier abundant = PlacementUtils.countExtra(4, 0.5f, 1);
-    static PlacementModifier common = PlacementUtils.countExtra(2, 0.5f, 1);
-    static PlacementModifier uncommon = PlacementUtils.countExtra(1, 0.2f, 1);
-    static PlacementModifier sparse = PlacementUtils.countExtra(0, 0.5f, 1);
-    static PlacementModifier occasional = PlacementUtils.countExtra(0, 0.25f, 1);
-    static PlacementModifier scarce = PlacementUtils.countExtra(0, 0.2f, 1);
-    static PlacementModifier rare = PlacementUtils.countExtra(0, 0.1f, 1);
-    static PlacementModifier veryRare = PlacementUtils.countExtra(0, 0.05f, 1);
-    static PlacementModifier wildBushRarity = PlacementUtils.countExtra(0, 0.01f, 1);
+    public  static PlacementModifier overflowing = PlacementUtils.countExtra(5, 0.5f, 1);
+    public static PlacementModifier abundant = PlacementUtils.countExtra(4, 0.5f, 1);
+    public static PlacementModifier common = PlacementUtils.countExtra(2, 0.5f, 1);
+    public static PlacementModifier uncommon = PlacementUtils.countExtra(1, 0.2f, 1);
+    public static PlacementModifier sparse = PlacementUtils.countExtra(0, 0.5f, 1);
+    public static PlacementModifier occasional = PlacementUtils.countExtra(0, 0.25f, 1);
+    public static PlacementModifier scarce = PlacementUtils.countExtra(0, 0.2f, 1);
+    public static PlacementModifier rare = PlacementUtils.countExtra(0, 0.1f, 1);
+    public static PlacementModifier veryRare = PlacementUtils.countExtra(0, 0.05f, 1);
+    public static PlacementModifier wildBushRarity = PlacementUtils.countExtra(0, 0.01f, 1);
+
+    public static PlacementModifier abundantTree = PlacementUtils.countExtra(3, 0.5f, 1);
+    public static PlacementModifier frequentTree = PlacementUtils.countExtra(1, 0.5f, 1);
+    public static PlacementModifier commonTree = PlacementUtils.countExtra(1, 0.1f, 1);
+    public static PlacementModifier uncommonTree = PlacementUtils.countExtra(0, 0.5f, 1);
+    public static PlacementModifier scarceTree = PlacementUtils.countExtra(0, 0.25f, 1);
+    public static PlacementModifier rareTree = PlacementUtils.countExtra(0, 0.125f, 1);
+    public static PlacementModifier megaTree = PlacementUtils.countExtra(0, 0.1f, 1);
+    public static PlacementModifier veryRareTree = PlacementUtils.countExtra(0, 0.05f, 1);
+    public static PlacementModifier superRareTree = PlacementUtils.countExtra(0, 0.025f, 1);
+    public static PlacementModifier specialTree = PlacementUtils.countExtra(0, 0.01f, 1);
 
     public static void boostrap(BootstrapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatureRegistryEntryLookup = context.lookup(Registries.CONFIGURED_FEATURE);

@@ -46,99 +46,104 @@ public class ColossalPalmFoliagePlacer extends FoliagePlacer {
                                  FoliageAttachment foliage, int foliageHeight, int radius, int offset) {
         BlockPos pos = foliage.pos();
 
-        int leave = random.nextInt(10);
-        //north
-        generateNerf(world, leaves, pos.offset( 0, -1,  -1), random, config);
-        generateNerf(world, leaves, pos.offset( 0, 0,  -1), random, config);
+        // Place leaves at all three levels
+        for (int y = -1; y <= 1; y++) {
+            // Use a large enough radius to cover all leaf positions
+            this.placeLeavesRow(world, leaves, random, config, pos, 7, y, foliage.doubleTrunk());
+        }
 
-        generateNerf(world, leaves, pos.offset( 0, 1,  -2), random, config);
-        generateNerf(world, leaves, pos.offset( 0, 2,  -2), random, config);
-
-        generateNerf(world, leaves, pos.offset( 0, 2,  -3), random, config);
-        generateNerf(world, leaves, pos.offset( 0, 3,  -3), random, config);
-        generateNerf(world, leaves, pos.offset( 0, 4,  -3), random, config);
-
-        generateNerf(world, leaves, pos.offset( 0, 5,  -4), random, config);
-
-        generateNerf(world, leaves, pos.offset( 0, 6,  -5), random, config);
-        generateNerf(world, leaves, pos.offset( 0, 6,  -6), random, config);
-        generateNerf(world, leaves, pos.offset( 0, 6,  -7), random, config);
-
-        generateNerf(world, leaves, pos.offset( 0, 7,  -8), random, config);
-        generateNerf(world, leaves, pos.offset( 0, 7,  -9), random, config);
-        generateNerf(world, leaves, pos.offset( 0, 7,  -10), random, config);
-        generateNerf(world, leaves, pos.offset( 0, 7,  -11), random, config);
-
-        generateNerf(world, leaves, pos.offset( 0, 8,  -12), random, config);
-        generateNerf(world, leaves, pos.offset( 0, 8,  -13), random, config);
-        generateNerf(world, leaves, pos.offset( 0, 8,  -14), random, config);
-        generateNerf(world, leaves, pos.offset( 0, 8,  -15), random, config);
-
-        generateNerf(world, leaves, pos.offset( 0, 9,  -16), random, config);
-        generateNerf(world, leaves, pos.offset( 0, 9,  -17), random, config);
-        generateNerf(world, leaves, pos.offset( 0, 9,  -18), random, config);
-        generateNerf(world, leaves, pos.offset( 0, 9,  -19), random, config);
-        generateNerf(world, leaves, pos.offset( 0, 9,  -20), random, config);
-        generateNerf(world, leaves, pos.offset( 0, 9,  -21), random, config);
-        generateNerf(world, leaves, pos.offset( 0, 9,  -22), random, config);
-
-        generateNerf(world, leaves, pos.offset( 0, -2,  -2), random, config);
-        generateNerf(world, leaves, pos.offset( 0, -2,  -3), random, config);
-        generateNerf(world, leaves, pos.offset( 2, -2,  -3), random, config);
-        generateNerf(world, leaves, pos.offset( 0, -2,  -4), random, config);
-        generateNerf(world, leaves, pos.offset( 1, -2,  -4), random, config);
-        generateNerf(world, leaves, pos.offset( 0, -2,  -5), random, config);
-        generateNerf(world, leaves, pos.offset( 0, -2,  -6), random, config);
-        generateNerf(world, leaves, pos.offset( 0, -2,  -7), random, config);
-
-        generateNerf(world, leaves, pos.offset( 0, -1,  -8), random, config);
-        generateNerf(world, leaves, pos.offset( 0, -1,  -9), random, config);
-        generateNerf(world, leaves, pos.offset( 0, -1,  -10), random, config);
-        generateNerf(world, leaves, pos.offset( 0, -1,  -11), random, config);
-        generateNerf(world, leaves, pos.offset( 0, -1,  -12), random, config);
-        generateNerf(world, leaves, pos.offset( 0, -1,  -13), random, config);
-        generateNerf(world, leaves, pos.offset( 0, -1,  -14), random, config);
-        generateNerf(world, leaves, pos.offset( 0, -1,  -15), random, config);
-
-        generateNerf(world, leaves, pos.offset( 0, -2,  -16), random, config);
-        generateNerf(world, leaves, pos.offset( 0, -2,  -17), random, config);
-        generateNerf(world, leaves, pos.offset( 0, -2,  -18), random, config);
-
-        generateNerf(world, leaves, pos.offset( 0, -3,  -18), random, config);
-        generateNerf(world, leaves, pos.offset( 0, -3,  -19), random, config);
-        generateNerf(world, leaves, pos.offset( 0, -3,  -20), random, config);
-        generateNerf(world, leaves, pos.offset( 0, -3,  -21), random, config);
-        generateNerf(world, leaves, pos.offset( 0, -3,  -22), random, config);
-        generateNerf(world, leaves, pos.offset( 0, -3,  -23), random, config);
-
-        generateNerf(world, leaves, pos.offset( 0, -4,  -22), random, config);
-        generateNerf(world, leaves, pos.offset( 0, -4,  -23), random, config);
-        generateNerf(world, leaves, pos.offset( 0, -4,  -24), random, config);
-        generateNerf(world, leaves, pos.offset( 0, -4,  -25), random, config);
-        generateNerf(world, leaves, pos.offset( 0, -4,  -26), random, config);
-
-        generateNerf(world, leaves, pos.offset( 0, -5,  -26), random, config);
-        generateNerf(world, leaves, pos.offset( 0, -5,  -27), random, config);
-        generateNerf(world, leaves, pos.offset( 0, -5,  -28), random, config);
-
-        generateNerf(world, leaves, pos.offset( 0, -6,  -29), random, config);
-        generateNerf(world, leaves, pos.offset( 0, -6,  -30), random, config);
-
-        //east
-        generateLeaf(world, leaves, pos.offset( 1, 0,  0), random, config);
-        generateLeaf(world, leaves, pos.offset( 2, 1,  0), random, config);
-        generateLeaf(world, leaves, pos.offset( 2, 2,  0), random, config);
-
-        //south
-        generateLeaf(world, leaves, pos.offset( 0, -3,  2), random, config);
-        generateLeaf(world, leaves, pos.offset( 0, -4,  2), random, config);
-        generateLeaf(world, leaves, pos.offset( 0, -5,  2), random, config);
-        generateLeaf(world, leaves, pos.offset( 0, -3,  3), random, config);
-
-
-        //west
-        generateLeaf(world, leaves, pos.offset( -2, -2,  0), random, config);
-        generateLeaf(world, leaves, pos.offset( -2, -3,  0), random, config);
+//        //north
+//        generateNerf(world, leaves, pos.offset( 0, -1,  -1), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, 0,  -1), random, config);
+//
+//        generateNerf(world, leaves, pos.offset( 0, 1,  -2), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, 2,  -2), random, config);
+//
+//        generateNerf(world, leaves, pos.offset( 0, 2,  -3), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, 3,  -3), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, 4,  -3), random, config);
+//
+//        generateNerf(world, leaves, pos.offset( 0, 5,  -4), random, config);
+//
+//        generateNerf(world, leaves, pos.offset( 0, 6,  -5), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, 6,  -6), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, 6,  -7), random, config);
+//
+//        generateNerf(world, leaves, pos.offset( 0, 7,  -8), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, 7,  -9), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, 7,  -10), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, 7,  -11), random, config);
+//
+//        generateNerf(world, leaves, pos.offset( 0, 8,  -12), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, 8,  -13), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, 8,  -14), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, 8,  -15), random, config);
+//
+//        generateNerf(world, leaves, pos.offset( 0, 9,  -16), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, 9,  -17), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, 9,  -18), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, 9,  -19), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, 9,  -20), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, 9,  -21), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, 9,  -22), random, config);
+//
+//        generateNerf(world, leaves, pos.offset( 0, -2,  -2), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, -2,  -3), random, config);
+//        generateNerf(world, leaves, pos.offset( 2, -2,  -3), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, -2,  -4), random, config);
+//        generateNerf(world, leaves, pos.offset( 1, -2,  -4), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, -2,  -5), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, -2,  -6), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, -2,  -7), random, config);
+//
+//        generateNerf(world, leaves, pos.offset( 0, -1,  -8), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, -1,  -9), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, -1,  -10), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, -1,  -11), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, -1,  -12), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, -1,  -13), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, -1,  -14), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, -1,  -15), random, config);
+//
+//        generateNerf(world, leaves, pos.offset( 0, -2,  -16), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, -2,  -17), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, -2,  -18), random, config);
+//
+//        generateNerf(world, leaves, pos.offset( 0, -3,  -18), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, -3,  -19), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, -3,  -20), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, -3,  -21), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, -3,  -22), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, -3,  -23), random, config);
+//
+//        generateNerf(world, leaves, pos.offset( 0, -4,  -22), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, -4,  -23), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, -4,  -24), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, -4,  -25), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, -4,  -26), random, config);
+//
+//        generateNerf(world, leaves, pos.offset( 0, -5,  -26), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, -5,  -27), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, -5,  -28), random, config);
+//
+//        generateNerf(world, leaves, pos.offset( 0, -6,  -29), random, config);
+//        generateNerf(world, leaves, pos.offset( 0, -6,  -30), random, config);
+//
+//        //east
+//        generateLeaf(world, leaves, pos.offset( 1, 0,  0), random, config);
+//        generateLeaf(world, leaves, pos.offset( 2, 1,  0), random, config);
+//        generateLeaf(world, leaves, pos.offset( 2, 2,  0), random, config);
+//
+//        //south
+//        generateLeaf(world, leaves, pos.offset( 0, -3,  2), random, config);
+//        generateLeaf(world, leaves, pos.offset( 0, -4,  2), random, config);
+//        generateLeaf(world, leaves, pos.offset( 0, -5,  2), random, config);
+//        generateLeaf(world, leaves, pos.offset( 0, -3,  3), random, config);
+//
+//
+//        //west
+//        generateLeaf(world, leaves, pos.offset( -2, -2,  0), random, config);
+//        generateLeaf(world, leaves, pos.offset( -2, -3,  0), random, config);
 
 
 

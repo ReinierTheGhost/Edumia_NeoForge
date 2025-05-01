@@ -3,6 +3,7 @@ package com.legends.edumia.world.placedfeatures.trees;
 import com.legends.edumia.Edumia;
 import com.legends.edumia.core.blocksets.WoodBlockSets;
 import com.legends.edumia.world.congiguredfeatures.trees.BorealTreeConfiguredFeatures;
+import com.legends.edumia.world.placedfeatures.ModPlacedFeatures;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -42,17 +43,6 @@ public class BorealTreePlacedFeatures {
 
     public static final ResourceKey<PlacedFeature> LIST_FIR_TREE = registerKey("list/fir/fir_tree");
 
-    static PlacementModifier foothillsTree = PlacementUtils.countExtra(5, 0.5f, 1);
-    static PlacementModifier abundantTree = PlacementUtils.countExtra(3, 0.5f, 1);
-    static PlacementModifier frequentTree = PlacementUtils.countExtra(1, 0.5f, 1);
-    static PlacementModifier commonTree = PlacementUtils.countExtra(1, 0.1f, 1);
-    static PlacementModifier uncommonTree = PlacementUtils.countExtra(0, 0.5f, 1);
-    static PlacementModifier scarceTree = PlacementUtils.countExtra(0, 0.25f, 1);
-    static PlacementModifier rareTree = PlacementUtils.countExtra(0, 0.125f, 1);
-    static PlacementModifier megaTree = PlacementUtils.countExtra(0, 0.1f, 1);
-    static PlacementModifier veryRareTree = PlacementUtils.countExtra(0, 0.05f, 1);
-    static PlacementModifier superRareTree = PlacementUtils.countExtra(0, 0.025f, 1);
-    static PlacementModifier specialTree = PlacementUtils.countExtra(0, 0.01f, 1);
 
     public static void boostrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -60,57 +50,57 @@ public class BorealTreePlacedFeatures {
         register(context, LIST_FIR_TREE, configuredFeatureRegistryEntryLookup.getOrThrow(BorealTreeConfiguredFeatures.FIR_KEY),
                 List.of());
         register(context, COMMON_LARCH_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BorealTreeConfiguredFeatures.LARCH_TREE_KEY),
-                VegetationPlacements.treePlacement(frequentTree,
+                VegetationPlacements.treePlacement(ModPlacedFeatures.frequentTree,
                         WoodBlockSets.PINE.sapling().get()));
         register(context, LARCH_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BorealTreeConfiguredFeatures.LARCH_TREE_KEY),
-                VegetationPlacements.treePlacement(rareTree,
+                VegetationPlacements.treePlacement(ModPlacedFeatures.rareTree,
                         WoodBlockSets.PINE.sapling().get()));
         register(context, SPARSE_LARCH_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BorealTreeConfiguredFeatures.LARCH_TREE_KEY),
-                VegetationPlacements.treePlacement(veryRareTree,
+                VegetationPlacements.treePlacement(ModPlacedFeatures.veryRareTree,
                         WoodBlockSets.PINE.sapling().get()));
 
         register(context, ABUNDANT_PINE_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BorealTreeConfiguredFeatures.PINE_TREE_KEY),
-                VegetationPlacements.treePlacement(foothillsTree,
+                VegetationPlacements.treePlacement(ModPlacedFeatures.overflowing,
                         WoodBlockSets.PINE.sapling().get()));
         register(context, COMMON_PINE_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BorealTreeConfiguredFeatures.PINE_TREE_KEY),
-                VegetationPlacements.treePlacement(frequentTree,
+                VegetationPlacements.treePlacement(ModPlacedFeatures.frequentTree,
                         WoodBlockSets.PINE.sapling().get()));
         register(context, PINE_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BorealTreeConfiguredFeatures.PINE_TREE_KEY),
-                VegetationPlacements.treePlacement(uncommonTree,
+                VegetationPlacements.treePlacement(ModPlacedFeatures.uncommonTree,
                         WoodBlockSets.PINE.sapling().get()));
         register(context, DEAD_PINE_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BorealTreeConfiguredFeatures.DEAD_PINE_TREE_KEY),
-                VegetationPlacements.treePlacement(scarceTree,
+                VegetationPlacements.treePlacement(ModPlacedFeatures.scarceTree,
                         WoodBlockSets.PINE.sapling().get()));
         register(context, SPARSE_PINE_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BorealTreeConfiguredFeatures.PINE_TREE_KEY),
-                VegetationPlacements.treePlacement(rareTree,
+                VegetationPlacements.treePlacement(ModPlacedFeatures.rareTree,
                         WoodBlockSets.PINE.sapling().get()));
 
         register(context, FOOTHILLS_SPRUCE_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BorealTreeConfiguredFeatures.SPRUCE_TREE_KEY),
-                VegetationPlacements.treePlacement(foothillsTree,
+                VegetationPlacements.treePlacement(ModPlacedFeatures.overflowing,
                         Blocks.SPRUCE_SAPLING));
         register(context, COMMON_SPRUCE_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BorealTreeConfiguredFeatures.SPRUCE_TREE_KEY),
-                VegetationPlacements.treePlacement(frequentTree,
+                VegetationPlacements.treePlacement(ModPlacedFeatures.frequentTree,
                         Blocks.SPRUCE_SAPLING));
         register(context, SPRUCE_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BorealTreeConfiguredFeatures.SPRUCE_TREE_KEY),
-                VegetationPlacements.treePlacement(uncommonTree,
+                VegetationPlacements.treePlacement(ModPlacedFeatures.uncommonTree,
                         Blocks.SPRUCE_SAPLING));
         register(context, MEGA_SPRUCE_TREE_LIST, configuredFeatureRegistryEntryLookup.getOrThrow(BorealTreeConfiguredFeatures.MEGA_SPRUCE_TREE_KEY),
                 List.of());
         register(context, SCARCE_SPRUCE_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BorealTreeConfiguredFeatures.SPRUCE_TREE_KEY),
-                VegetationPlacements.treePlacement(scarceTree,
+                VegetationPlacements.treePlacement(ModPlacedFeatures.scarceTree,
                         Blocks.SPRUCE_SAPLING));
         register(context, RARE_SPRUCE_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BorealTreeConfiguredFeatures.SPRUCE_TREE_KEY),
-                VegetationPlacements.treePlacement(rareTree,
+                VegetationPlacements.treePlacement(ModPlacedFeatures.rareTree,
                         Blocks.SPRUCE_SAPLING));
         register(context, VERY_RARE_SPRUCE_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BorealTreeConfiguredFeatures.SPRUCE_TREE_KEY),
-                VegetationPlacements.treePlacement(veryRareTree,
+                VegetationPlacements.treePlacement(ModPlacedFeatures.veryRareTree,
                         Blocks.SPRUCE_SAPLING));
 
         register(context, COMMON_SPRUCE_BUSH_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BorealTreeConfiguredFeatures.SPRUCE_BUSH_TREE_KEY),
-                VegetationPlacements.treePlacement(frequentTree,
+                VegetationPlacements.treePlacement(ModPlacedFeatures.frequentTree,
                         Blocks.SPRUCE_SAPLING));
         register(context, SPRUCE_BUSH_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(BorealTreeConfiguredFeatures.SPRUCE_BUSH_TREE_KEY),
-                VegetationPlacements.treePlacement(uncommonTree,
+                VegetationPlacements.treePlacement(ModPlacedFeatures.uncommonTree,
                         Blocks.SPRUCE_SAPLING));
 
         register(context, SILVER_SPRUCE_TREE_LIST, configuredFeatureRegistryEntryLookup.getOrThrow(BorealTreeConfiguredFeatures.SILVER_SPRUCE_TREE_KEY),

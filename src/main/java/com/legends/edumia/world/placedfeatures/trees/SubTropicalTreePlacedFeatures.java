@@ -1,13 +1,17 @@
 package com.legends.edumia.world.placedfeatures.trees;
 
 import com.legends.edumia.Edumia;
+import com.legends.edumia.core.blocksets.WoodBlockSets;
 import com.legends.edumia.world.congiguredfeatures.trees.SubTropicalTreeConfiguredFeatures;
+import com.legends.edumia.world.placedfeatures.ModPlacedFeatures;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.placement.CountPlacement;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
@@ -22,7 +26,8 @@ public class SubTropicalTreePlacedFeatures {
         var configuredFeatureRegistryEntryLookup = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, ACACIA, configuredFeatureRegistryEntryLookup.getOrThrow(SubTropicalTreeConfiguredFeatures.ACACIA),
-                List.of(CountPlacement.of(UniformInt.of(3, 5))));
+                VegetationPlacements.treePlacement(ModPlacedFeatures.rareTree,
+                        Blocks.ACACIA_SAPLING));
     }
 
     public static ResourceKey<PlacedFeature> registerKey(String name) {

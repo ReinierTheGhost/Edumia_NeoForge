@@ -164,7 +164,7 @@ public class TropicalTreeConfiguredFeatures {
         register(context, BIG_PARASOL_PALM, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(WoodBlockSets.PALM.log().get()),
                 new SlantedTrunkPlacer(9, 6, 7),
-                BlockStateProvider.simple(WoodBlockSets.PALM.leaves().get()),
+                BlockStateProvider.simple(WoodBlockSets.PALM.leaves().get().defaultBlockState().setValue(LeavesBlock.PERSISTENT, true)),
                 new LargeParasolPalmFoliagePlacer(),
                 new TwoLayersFeatureSize(1, 0, 1))
                 .dirt(BlockStateProvider.simple(Blocks.ROOTED_DIRT)).ignoreVines().build());
@@ -172,7 +172,7 @@ public class TropicalTreeConfiguredFeatures {
         register(context, SMALL_PARASOL_PALM, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(WoodBlockSets.PALM.log().get()),
                 new SlantedTrunkPlacer(6, 4, 5),
-                BlockStateProvider.simple(WoodBlockSets.PALM.leaves().get()),
+                BlockStateProvider.simple(WoodBlockSets.PALM.leaves().get().defaultBlockState().setValue(LeavesBlock.PERSISTENT, true)),
                 new ParasolPalmFoliagePlacer(),
                 new TwoLayersFeatureSize(1, 0, 1)).ignoreVines().build());
 
