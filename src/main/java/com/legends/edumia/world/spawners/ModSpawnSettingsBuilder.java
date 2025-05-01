@@ -33,6 +33,10 @@ public class ModSpawnSettingsBuilder {
     public static void addFairies(MobSpawnSettings.Builder builder){
         builder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EdumiaEntities.FAIRY_CIVILIAN.get(), 10, 4, 4));
     }
+
+    public static void addHighElves(MobSpawnSettings.Builder builder){
+        builder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EdumiaEntities.HIGH_ELVEN_CIVILIAN.get(), 10, 4, 4));
+    }
 }
 
 

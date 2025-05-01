@@ -72,6 +72,7 @@ public class ModPlacedFeatures {
         FairyBiomePlacedFeatures.boostrap(context);
         OrcDesertPlacedFeatures.boostrap(context);
         DeadTreePlacedFeatures.boostrap(context);
+        SubTropicalTreePlacedFeatures.boostrap(context);
     }
 
     public static ResourceKey<PlacedFeature> registerKey(String name) {

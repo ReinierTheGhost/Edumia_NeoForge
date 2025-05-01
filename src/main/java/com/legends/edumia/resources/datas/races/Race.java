@@ -13,6 +13,7 @@ import com.legends.edumia.entity.races.ogre.OgreEntity;
 import com.legends.edumia.entity.races.orc.OrcEntity;
 import com.legends.edumia.resources.datas.RaceType;
 import com.legends.edumia.resources.datas.races.data.AttributeData;
+import com.legends.edumia.resources.datas.races.data.RaceFeature;
 import com.legends.edumia.utils.ResourceLocationUtil;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
@@ -40,7 +41,8 @@ public class Race {
             Codec.STRING.fieldOf("type").forGetter(Race::getRaceTypeValue),
             CompoundTag.CODEC.fieldOf("attributes").forGetter(Race::getAttributeDatas),
             Codec.list(Codec.STRING, 0, 5).optionalFieldOf("command_join").forGetter(Race::getJoinCommands),
-            Codec.list(Codec.STRING, 0, 5).optionalFieldOf("command_leave").forGetter(Race::getLeaveCommands)
+            Codec.list(Codec.STRING, 0, 5).optionalFieldOf("command_leave").forGetter(Race::getLeaveCommands),
+            RaceFeature.CODEC.listOf().optionalFieldOf("features").forGetter(Race::getFeaturesValue)
     ).apply(instance, Race::new));
 
     private final ResourceLocation id;
@@ -49,9 +51,11 @@ public class Race {
     private final AttributeData attributeData;
     private List<String> joinCommands;
     private List<String> leaveCommands;
+    private final List<RaceFeature> features;
+
 
     public Race(String id, String raceTypeValue, CompoundTag attributes, Optional<List<String>> joinCommands,
-                Optional<List<String>> leaveCommands){
+                Optional<List<String>> leaveCommands, Optional<List<RaceFeature>> features){
         // Create id
         this.id = ResourceLocationUtil.getResourceLocationFromString(id);
         this.translatableKey = "race.".concat(this.id.toLanguageKey());
@@ -65,15 +69,19 @@ public class Race {
         // Leave commands
         this.leaveCommands = new ArrayList<>();
         leaveCommands.ifPresent(nbtCompound -> this.leaveCommands.addAll(nbtCompound));
+        // Features
+        this.features = features.orElse(List.of());
     }
 
-    public Race(ResourceLocation id, RaceType raceType, AttributeData attributeData, List<String> joinCommands, List<String> leaveCommands) {
+    public Race(ResourceLocation id, RaceType raceType, AttributeData attributeData, List<String> joinCommands,
+                List<String> leaveCommands, List<RaceFeature> features) {
         this.id = id;
         this.raceType = raceType;
         this.translatableKey = "race.".concat(this.id.toLanguageKey());
         this.attributeData = attributeData;
         this.joinCommands = joinCommands;
         this.leaveCommands = leaveCommands;
+        this.features = features;
     }
 
     public ResourceLocation getId() {
@@ -111,9 +119,9 @@ public class Race {
             case RaceType.HUMAN:
                 entity = new HumanEntity(EdumiaEntities.HUMAN_CIVILIAN.get(), world);
                 break;
-//            case RaceType.HIGH_ELF:
-//                entity = new HighElfEntity(EntityType.VILLAGER, world);
-//                break;
+            case RaceType.HIGH_ELF:
+                entity = new HighElfEntity(EdumiaEntities.HIGH_ELVEN_CIVILIAN.get(), world);
+                break;
 //            case RaceType.DARK_ELF:
 //                entity = new DarkElfEntity(EntityType.VILLAGER, world);
 //                break;
@@ -156,6 +164,16 @@ public class Race {
         return raceType;
     }
 
+    public List<RaceFeature> getFeatures() {
+        return features;
+    }
+    private Optional<List<RaceFeature>> getFeaturesValue() {
+        if(this.features == null)
+            return Optional.empty();
+        return Optional.of(this.features);
+    }
+
+
     public void drawTooltip(LivingEntity entity, GuiGraphics context, Font renderer, int x, int y){
         List<Component> texts = new ArrayList<>();
         texts.add(getFullName());
@@ -183,4 +201,6 @@ public class Race {
         }
         context.renderComponentTooltip(renderer, texts, x, y);
     }
+
+
 }

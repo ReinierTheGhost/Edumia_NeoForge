@@ -15,8 +15,14 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import org.checkerframework.checker.units.qual.A;
 import org.jetbrains.annotations.Nullable;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class FairyEntity extends NpcEntity {
+
+    private static final Logger log = LoggerFactory.getLogger(FairyEntity.class);
+    public final AnimationState idleAnimationState = new AnimationState();
+
     public FairyEntity(EntityType<? extends PathfinderMob> entityType, Level level) {
         super(entityType, level);
         String name = this.getTypeName().getString();
@@ -64,6 +70,12 @@ public class FairyEntity extends NpcEntity {
         return FairyVariant.byId(this.getId());
     }
 
+    @Override
+    public void tick() {
+        super.tick();
+        this.idleAnimationState.start(this.tickCount);
+    }
+
     public static AttributeSupplier.Builder setSoldierAttribute() {
         return Mob.createMobAttributes()
                 .add(Attributes.MAX_HEALTH, 22.0)
@@ -72,6 +84,7 @@ public class FairyEntity extends NpcEntity {
                 .add(Attributes.ENTITY_INTERACTION_RANGE, 2.75)
                 .add(Attributes.MOVEMENT_SPEED, 0.3)
                 .add(Attributes.FOLLOW_RANGE, 48.0)
+                .add(Attributes.SCALE, 0.81)
                 .add(Attributes.FALL_DAMAGE_MULTIPLIER, 0.75);
     }
 }

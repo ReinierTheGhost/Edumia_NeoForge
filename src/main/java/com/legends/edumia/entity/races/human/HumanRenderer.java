@@ -40,7 +40,7 @@ public class HumanRenderer  extends HumanoidMobRenderer<HumanEntity, MainHumanMo
     @Override
     public void render(HumanEntity entity, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource buffer,
                        int packedLight) {
-        poseStack.scale(0.95f, 0.9f, 0.95f);
+        poseStack.scale(0.95f, 0.95f, 0.95f);
         super.render(entity, entityYaw, partialTicks, poseStack, buffer, packedLight);
     }
 }

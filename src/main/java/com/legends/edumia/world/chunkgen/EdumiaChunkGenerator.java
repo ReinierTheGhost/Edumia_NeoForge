@@ -76,6 +76,7 @@ public class EdumiaChunkGenerator extends ChunkGenerator {
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.OCEAN),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.MOUNTAIN_STREAM),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.EDUMIA_VALES),
+                        biomeRegistry.getOrThrow(EdumiaBiomeKeys.EDUMIA_SAVANNAH),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.GENSAI_BEACH),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.DEAD_MARSHES),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.DEAD_MARSHES_WATER),

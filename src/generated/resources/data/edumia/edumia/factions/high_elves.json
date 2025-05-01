@@ -1,0 +1,71 @@
+{
+  "banner": {
+    "base_color": "light_blue",
+    "patterns": [
+      {
+        "dye_color": "yellow",
+        "id": "minecraft:globe"
+      }
+    ]
+  },
+  "command_join": [],
+  "command_leave": [],
+  "disposition": "NEUTRAL",
+  "faction_selection_order_index": 0,
+  "faction_type": "FACTION",
+  "id": "edumia:high_elves",
+  "joinable": true,
+  "npcs": {
+    "ranks": [
+      {
+        "pool": [
+          "edumia:highelven.civilian"
+        ],
+        "rank": "KNIGHT"
+      },
+      {
+        "pool": [
+          "edumia:highelven.civilian"
+        ],
+        "rank": "VETERAN"
+      },
+      {
+        "pool": [
+          "edumia:highelven.civilian"
+        ],
+        "rank": "LEADER"
+      },
+      {
+        "pool": [
+          "edumia:highelven.civilian"
+        ],
+        "rank": "SOLDIER"
+      },
+      {
+        "pool": [
+          "edumia:highelven.civilian"
+        ],
+        "rank": "CIVILIAN"
+      },
+      {
+        "pool": [
+          "edumia:highelven.civilian"
+        ],
+        "rank": "MILITIA"
+      }
+    ]
+  },
+  "spawns": {
+    "data": [
+      {
+        "coordinates": {
+          "x": 570.0,
+          "y": 0.0,
+          "z": 1840.0
+        },
+        "dynamic": 1,
+        "id": "edumia:highelves.elensar"
+      }
+    ]
+  }
+}

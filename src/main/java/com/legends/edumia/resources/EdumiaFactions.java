@@ -31,7 +31,7 @@ public class EdumiaFactions {
     public static final String PATH = "factions";
     public static final ResourceKey<Registry<Faction>> FACTION_KEY = key(PATH);
 
-//    public static final Faction HIGH_ELVES;
+    public static final Faction HIGH_ELVES;
     public static final Faction HUMAN;
     public static final Faction FAIRIES;
 //    public static final Faction GENSAI;
@@ -50,7 +50,7 @@ public class EdumiaFactions {
     public static void bootstrap(BootstrapContext<Faction> context){
         HolderGetter<Faction> factionHolderGetter = context.lookup(FACTION_KEY);
 
-//        register(context, factionHolderGetter, HIGH_ELVES);
+        register(context, factionHolderGetter, HIGH_ELVES);
         register(context, factionHolderGetter, FAIRIES);
         register(context, factionHolderGetter, HUMAN);
     }
@@ -137,34 +137,34 @@ public class EdumiaFactions {
                 )), List.of(), List.of()
         );
 
-//        HIGH_ELVES = new Faction("high_elves", true, Disposition.NEUTRAL, FactionType.FACTION, null, null,
-//                new HashMap<>(){{
-//                    put(NpcRank.CIVILIAN, List.of(
-//                            EdumiaNpcs.HIGHELVEN_CIVILIAN
-//                    ));
-//                    put(NpcRank.MILITIA, List.of(
-//                            EdumiaNpcs.HIGHELVEN_CIVILIAN
-//                    ));
-//                    put(NpcRank.SOLDIER, List.of(
-//                            EdumiaNpcs.HIGHELVEN_CIVILIAN
-//                    ));
-//                    put(NpcRank.KNIGHT, List.of(
-//                            EdumiaNpcs.HIGHELVEN_CIVILIAN
-//                    ));
-//                    put(NpcRank.VETERAN, List.of(
-//                            EdumiaNpcs.HIGHELVEN_CIVILIAN
-//                    ));
-//                    put(NpcRank.LEADER, List.of(
-//                            EdumiaNpcs.HIGHELVEN_CIVILIAN
-//                    ));
-//                }},
-//                new BannerData(DyeColor.LIGHT_BLUE, List.of(
-//                        new BannerData.BannerPatternWithColor(BannerPatterns.GLOBE, DyeColor.YELLOW)
-//                )),
-//                new SpawnDataHandler(List.of(
-//                        new SpawnData(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "highelves.elensar"),
-//                                new Vector2d(570, 1840))
-//                )), List.of(), List.of()
-//        );
+        HIGH_ELVES = new Faction("high_elves", true, Disposition.NEUTRAL, FactionType.FACTION, null, null,
+                new HashMap<>(){{
+                    put(NpcRank.CIVILIAN, List.of(
+                            EdumiaNpcs.HIGHELVEN_CIVILIAN
+                    ));
+                    put(NpcRank.MILITIA, List.of(
+                            EdumiaNpcs.HIGHELVEN_CIVILIAN
+                    ));
+                    put(NpcRank.SOLDIER, List.of(
+                            EdumiaNpcs.HIGHELVEN_CIVILIAN
+                    ));
+                    put(NpcRank.KNIGHT, List.of(
+                            EdumiaNpcs.HIGHELVEN_CIVILIAN
+                    ));
+                    put(NpcRank.VETERAN, List.of(
+                            EdumiaNpcs.HIGHELVEN_CIVILIAN
+                    ));
+                    put(NpcRank.LEADER, List.of(
+                            EdumiaNpcs.HIGHELVEN_CIVILIAN
+                    ));
+                }},
+                new BannerData(DyeColor.LIGHT_BLUE, List.of(
+                        new BannerData.BannerPatternWithColor(BannerPatterns.GLOBE, DyeColor.YELLOW)
+                )),
+                new SpawnDataHandler(List.of(
+                        new SpawnData(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "highelves.elensar"),
+                                new Vector2d(570, 1840))
+                )), List.of(), List.of()
+        );
     }
 }

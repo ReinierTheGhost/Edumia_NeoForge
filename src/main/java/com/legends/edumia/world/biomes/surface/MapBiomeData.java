@@ -50,6 +50,8 @@ public class MapBiomeData {
 
         addBiome(new BiomeData(EdumiaBiomeKeys.EDUMIA_VALES, EdumiaBiomeDataConfigs.grassPlains, EdumiaBiomeDataConfigs.stoneLayers,
                 new BiomeColorsDTO(defaultSky, defaultFog, defaultWater, defaultWaterFog, 8703593, 8703593)));
+        addBiome(new BiomeData(EdumiaBiomeKeys.EDUMIA_SAVANNAH, EdumiaBiomeDataConfigs.grassPlains, EdumiaBiomeDataConfigs.stoneLayers,
+                new BiomeColorsDTO(desertSky, desertSkyFog, 5406139, 1120828, 12305028, 10860366)));
 
         addBiome(new BiomeData(EdumiaBiomeKeys.GENSAI_BEACH, EdumiaBiomeDataConfigs.gensaiShores, EdumiaBiomeDataConfigs.limestoneLayers,
                 new BiomeColorsDTO(desertSky, defaultFog, 5212644, 333363, 12107900, 10860366)));

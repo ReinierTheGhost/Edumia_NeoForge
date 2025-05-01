@@ -311,7 +311,7 @@ public class FactionSelectionScreen extends EdumiaMenuScreen {
 
     protected void drawPanels(GuiGraphics context){
         int mainPanelWidth = 169;
-        int mainPanelHeight = 207;
+        int mainPanelHeight = 237;
 
         drawFactionSelectionPanel(context, mainPanelWidth, mainPanelHeight);
         drawInformationPanel(context, mainPanelWidth, mainPanelHeight);
@@ -319,7 +319,6 @@ public class FactionSelectionScreen extends EdumiaMenuScreen {
     }
 
     private void drawInformationPanel(GuiGraphics context, int mainPanelWidth, int mainPanelHeight) {
-//        if (controller == null) return; // Prevent null pointer crash
         int startX = (int) ((context.guiWidth() / 2f) - (mainPanelWidth / 2f));
         int startY = (int) ((context.guiHeight() / 2f) - (mainPanelHeight / 2f));
 
@@ -383,7 +382,7 @@ public class FactionSelectionScreen extends EdumiaMenuScreen {
 
         if(factionDescriptionTextBlockWidget == null){
             factionDescriptionTextBlockWidget = new TextBlockWidget(
-                    startX + MINIMAL_MARGIN, startY + 95, mainPanelWidth - (MINIMAL_MARGIN * 2) - 1, font.lineHeight * 10
+                    startX + MINIMAL_MARGIN, startY + 95, mainPanelWidth - (MINIMAL_MARGIN * 2) - 1, (font.lineHeight * 10) + 30
             ).setAlignment(TextAlignment.LEFT);
             factionDescriptionTextBlockWidget.setText(controller.getCurrentFactionDescriptions());
         }

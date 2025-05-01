@@ -1,0 +1,13 @@
+{
+  "feature": "edumia:acacia/acacia_tree",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:uniform",
+        "max_inclusive": 5,
+        "min_inclusive": 3
+      }
+    }
+  ]
+}

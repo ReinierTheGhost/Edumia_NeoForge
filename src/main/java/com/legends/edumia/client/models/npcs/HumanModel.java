@@ -1,5 +1,6 @@
 package com.legends.edumia.client.models.npcs;
 
+import com.legends.edumia.client.models.EdumiaPartNames;
 import net.minecraft.client.model.geom.PartNames;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
@@ -19,7 +20,7 @@ public class HumanModel {
 				.addBox(-4.0F, 0.0F, -2.0F, 8.0F, 12.0F, 4.0F, deformation),
 				PartPose.offset(0.0F, 0.0F, 0.0F));
 
-		PartDefinition breast = body.addOrReplaceChild("breast", CubeListBuilder.create().texOffs(24, 0)
+		PartDefinition breast = body.addOrReplaceChild(EdumiaPartNames.BREAST, CubeListBuilder.create().texOffs(24, 0)
 				.addBox(-3.0F, 2.0F, -4.0F, 6.0F, 3.0F, 2.0F, deformation),
 				PartPose.offset(0.0F, 0.0F, 0.0F));
 

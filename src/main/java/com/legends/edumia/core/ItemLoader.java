@@ -182,7 +182,11 @@ public class ItemLoader {
                     new Item.Properties()));
 
     public static final DeferredItem<Item> HUMAN_SPAWN_EGG = ITEMS.register("human_spawn_egg",
-            () -> new DeferredSpawnEggItem(EdumiaEntities.HUMAN_CIVILIAN, 0x40afaf, 0xffac10,
+            () -> new DeferredSpawnEggItem(EdumiaEntities.HUMAN_CIVILIAN, 0x7A5D4A, 0x7C3D12,
+                    new Item.Properties()));
+
+    public static final DeferredItem<Item> HIGH_ELVEN_SPAWN_EGG = ITEMS.register("high_elven_spawn_egg",
+            () -> new DeferredSpawnEggItem(EdumiaEntities.HIGH_ELVEN_CIVILIAN, 0x40AFE8, 0x11FFCF,
                     new Item.Properties()));
 
     public static void register(IEventBus eventBus) {

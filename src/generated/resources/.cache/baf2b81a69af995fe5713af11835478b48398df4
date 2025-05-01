@@ -1,4 +1,4 @@
-// 1.21.1	2025-04-30T19:36:58.4529259	Item Models: edumia
+// 1.21.1	2025-05-01T14:36:55.5918407	Item Models: edumia
 047baa6b7a95aadfec14d478dfdf8c290cbd8220 assets/edumia/models/item/acacia_wood_fence.json
 4879a2f3030853ef57cc6d67266684061b3752ec assets/edumia/models/item/acacia_wood_wall.json
 386253d46a85a3515508b2f2812157712b0633d8 assets/edumia/models/item/almond_button.json
@@ -230,6 +230,7 @@ f0c02079665a15382662484ce527693ff8ace538 assets/edumia/models/item/hibiscus.json
 aca34764619665f162e3db87724751a351dfde8a assets/edumia/models/item/high_elven_bricks_wall.json
 be029462a178c56178d09481a58bbcfc88c54711 assets/edumia/models/item/high_elven_cobblestone_wall.json
 4ca45ef8d88e107b37c4504ab88743c82c42b8b5 assets/edumia/models/item/high_elven_rock_wall.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/edumia/models/item/high_elven_spawn_egg.json
 de6dbe646a63b769d711aeff7901d79da148f519 assets/edumia/models/item/holly_button.json
 35bf6cfa9e6bdd8a690f2c35807a1096a64e4d77 assets/edumia/models/item/holly_door.json
 0666b1d705c3f3d3260877119dedf14bea1f820f assets/edumia/models/item/holly_fence.json

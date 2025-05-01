@@ -71,6 +71,7 @@ public class ModConfiguredFeatures {
         PalmConfiguredFeatures.bootstrap(context);
         DeadTreeConfiguredFeatures.bootstrap(context);
         DiskConfiguredFeatures.boostrap(context);
+        SubTropicalTreeConfiguredFeatures.bootstrap(context);
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name){

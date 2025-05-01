@@ -25,7 +25,7 @@ public class EdumiaNpcs {
 
     public static final NpcData FAIRY_CIVILIAN;
     public static final NpcData HUMAN_CIVILIAN;
-//    public static final NpcData HIGHELVEN_CIVILIAN;
+    public static final NpcData HIGHELVEN_CIVILIAN;
 
     @SubscribeEvent
     public static void onNewRegistry(DataPackRegistryEvent.NewRegistry event){
@@ -36,7 +36,7 @@ public class EdumiaNpcs {
     public static void bootstrap(BootstrapContext<NpcData> context) {
         HolderGetter<NpcData> npcRegistryEntryLookup = context.lookup(NPC_KEY);
         // [RACE / GENERIC]
-//        register(context, npcRegistryEntryLookup, HIGHELVEN_CIVILIAN);
+        register(context, npcRegistryEntryLookup, HIGHELVEN_CIVILIAN);
         register(context, npcRegistryEntryLookup, FAIRY_CIVILIAN);
         register(context, npcRegistryEntryLookup, HUMAN_CIVILIAN);
 
@@ -67,10 +67,10 @@ public class EdumiaNpcs {
 
     static {
 
-//        HIGHELVEN_CIVILIAN = new NpcData(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "highelven.civilian"),
-//                EdumiaRaces.HIGHELVES, List.of(
-//                NpcGearData.create()
-//        ));
+        HIGHELVEN_CIVILIAN = new NpcData(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "highelven.civilian"),
+                EdumiaRaces.HIGHELVES, List.of(
+                NpcGearData.create()
+        ));
 
         FAIRY_CIVILIAN = new NpcData(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "fairy.civilian"),
                 EdumiaRaces.FAIRY, List.of(

@@ -99,6 +99,7 @@ public class MapBasedBiomePool {
 
         // Land Biomes :
         add(new Color(156, 207, 113), new MapBasedCustomBiome(EdumiaBiomeKeys.EDUMIA_VALES, 4, EdumiaBiomeDataConfigs.landModifier));
+        add(new Color(180, 214, 121), new MapBasedCustomBiome(EdumiaBiomeKeys.EDUMIA_SAVANNAH, 6, EdumiaBiomeDataConfigs.landModifier));
         add(new Color(234, 222, 117), new MapBasedCustomBiome(EdumiaBiomeKeys.GENSAI_BEACH, 0,
                 EdumiaBiomeDataConfigs.landModifier.heightModifier(0.97f).heightModifier(0.1f).noiseModifier(0.05f)));
 

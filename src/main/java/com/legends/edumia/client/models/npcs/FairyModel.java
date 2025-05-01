@@ -1,14 +1,12 @@
 package com.legends.edumia.client.models.npcs;
 
+import com.legends.edumia.client.models.EdumiaPartNames;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.PartNames;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 
 public class FairyModel {
-
-	private static final String BREAST = "breast";
-
 
 	public static LayerDefinition createBodyLayer(CubeDeformation deformation) {
 		MeshDefinition meshdefinition = HumanoidModel.createMesh(deformation, 0.0f);
@@ -35,7 +33,7 @@ public class FairyModel {
 				.addBox(-4.0F, 0.0F, -2.0F, 8.0F, 12.0F, 4.0F,
 						deformation), PartPose.offset(0.0F, 0.0F, 0.0F));
 
-		PartDefinition breast = body.addOrReplaceChild(BREAST, CubeListBuilder.create().texOffs(0, 0)
+		PartDefinition breast = body.addOrReplaceChild(EdumiaPartNames.BREAST, CubeListBuilder.create().texOffs(0, 0)
 				.addBox(-7.0F, -1.0F, -0.8F, 8.0F, 2.0F, 2.0F, deformation),
 				PartPose.offsetAndRotation(3.0F, 3.0F, -2.0F, -0.8727F, 0.0F, 0.0F));
 

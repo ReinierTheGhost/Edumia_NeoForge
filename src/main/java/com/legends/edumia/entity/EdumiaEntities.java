@@ -2,6 +2,7 @@ package com.legends.edumia.entity;
 
 import com.legends.edumia.Edumia;
 import com.legends.edumia.entity.races.fairy.FairyEntity;
+import com.legends.edumia.entity.races.highelves.HighElfEntity;
 import com.legends.edumia.entity.races.human.HumanEntity;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.entity.EntityType;
@@ -22,6 +23,9 @@ public class EdumiaEntities {
     public static final Supplier<EntityType<HumanEntity>> HUMAN_CIVILIAN =
             ENTITY_TYPES.register("human", () -> EntityType.Builder.of(HumanEntity::new, MobCategory.CREATURE)
                     .sized(0.6F, 2F).build("human"));
+    public static final Supplier<EntityType<HighElfEntity>> HIGH_ELVEN_CIVILIAN =
+            ENTITY_TYPES.register("high_elven", () -> EntityType.Builder.of(HighElfEntity::new, MobCategory.CREATURE)
+                    .sized(0.6F, 2F).build("high_elven"));
 
 
     public static void register(IEventBus eventBus) {

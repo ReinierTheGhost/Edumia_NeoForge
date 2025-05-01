@@ -6,6 +6,7 @@ import com.legends.edumia.core.CreativeTabLoader;
 import com.legends.edumia.core.ItemLoader;
 import com.legends.edumia.entity.EdumiaEntities;
 import com.legends.edumia.entity.races.fairy.FairyRenderer;
+import com.legends.edumia.entity.races.highelves.HighElvenRenderer;
 import com.legends.edumia.entity.races.human.HumanRenderer;
 import com.legends.edumia.world.biomes.EdumiaBiomeKeys;
 import com.legends.edumia.world.biomes.surface.MapBasedBiomePool;
@@ -146,6 +147,7 @@ public class Edumia
         {
             EntityRenderers.register(EdumiaEntities.FAIRY_CIVILIAN.get(), FairyRenderer::new);
             EntityRenderers.register(EdumiaEntities.HUMAN_CIVILIAN.get(), HumanRenderer::new);
+            EntityRenderers.register(EdumiaEntities.HIGH_ELVEN_CIVILIAN.get(), HighElvenRenderer::new);
 
             for (GlassSets.GlassSet set : GlassSets.glassSets) {
                 ItemBlockRenderTypes.setRenderLayer(set.block().get(), RenderType.translucent());

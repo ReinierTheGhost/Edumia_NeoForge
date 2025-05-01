@@ -4,12 +4,13 @@ import com.legends.edumia.items.weapons.ranged.CustomBowWeaponItem;
 import com.legends.edumia.items.weapons.ranged.CustomLongbowWeaponItem;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.ModelPart;
+import net.minecraft.client.model.geom.PartNames;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.HumanoidArm;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import org.checkerframework.checker.units.qual.A;
+import org.joml.Vector3f;
 
 public class MainFairyModel<T extends Mob>
         extends HumanoidModel<T> {
@@ -35,7 +36,10 @@ public class MainFairyModel<T extends Mob>
 
     @Override
     public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-
+        
         super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
+
     }
+
+
 }

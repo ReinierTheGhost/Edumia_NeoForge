@@ -10,10 +10,7 @@ import com.legends.edumia.world.placedfeatures.biomes.OrcDesertPlacedFeatures;
 import com.legends.edumia.world.placedfeatures.boulders.BoulderPlacedFeatures;
 import com.legends.edumia.world.placedfeatures.crystrals.CrystalPlacedFeatures;
 import com.legends.edumia.world.placedfeatures.plants.ReedsPlacedFeatures;
-import com.legends.edumia.world.placedfeatures.trees.BorealTreePlacedFeatures;
-import com.legends.edumia.world.placedfeatures.trees.DeadTreePlacedFeatures;
-import com.legends.edumia.world.placedfeatures.trees.OakTreePlacedFeatures;
-import com.legends.edumia.world.placedfeatures.trees.TemperateTreePlacedFeatures;
+import com.legends.edumia.world.placedfeatures.trees.*;
 import net.minecraft.data.worldgen.placement.MiscOverworldPlacements;
 import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
@@ -39,6 +36,9 @@ public class ModBiomeFeatures {
 
     // region TREES
 
+    public static void addAcaciaTrees(List<ResourceKey<PlacedFeature>> vegetation){
+        vegetation.add(SubTropicalTreePlacedFeatures.ACACIA);
+    }
     public static void addBurnedTrees(List<ResourceKey<PlacedFeature>> vegetation){
         vegetation.add(DeadTreePlacedFeatures.BURNED_TREE);
     }

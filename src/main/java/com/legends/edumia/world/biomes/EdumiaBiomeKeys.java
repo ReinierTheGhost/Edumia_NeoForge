@@ -16,7 +16,7 @@ public class EdumiaBiomeKeys extends Biomes {
 
     public static final ResourceKey<Biome> DEMON_WASTELANDS = EdumiaBiomeKeys.register("demon_wastelands");
     public static final ResourceKey<Biome> EDUMIA_VALES = EdumiaBiomeKeys.register("edumia_vales");
-
+    public static final ResourceKey<Biome> EDUMIA_SAVANNAH = EdumiaBiomeKeys.register("edumia_savannah");
 
     public static final ResourceKey<Biome> GENSAI_BEACH = EdumiaBiomeKeys.register("gensai_beach");
 

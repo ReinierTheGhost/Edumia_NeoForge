@@ -27,13 +27,7 @@
         "pool": [
           "edumia:human.civilian"
         ],
-        "rank": "CIVILIAN"
-      },
-      {
-        "pool": [
-          "edumia:human.civilian"
-        ],
-        "rank": "SOLDIER"
+        "rank": "VETERAN"
       },
       {
         "pool": [
@@ -45,13 +39,19 @@
         "pool": [
           "edumia:human.civilian"
         ],
-        "rank": "MILITIA"
+        "rank": "SOLDIER"
       },
       {
         "pool": [
           "edumia:human.civilian"
         ],
-        "rank": "VETERAN"
+        "rank": "CIVILIAN"
+      },
+      {
+        "pool": [
+          "edumia:human.civilian"
+        ],
+        "rank": "MILITIA"
       }
     ]
   },

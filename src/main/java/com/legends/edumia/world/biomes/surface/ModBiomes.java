@@ -40,6 +40,7 @@ public class ModBiomes {
     public static void bootstrap(BootstrapContext<Biome> context) {
         ModCaveBiomes.bootstrap(context);
         createEdumiaValesBiome(context, EdumiaBiomeKeys.EDUMIA_VALES);
+        createEdumiaSavannahBiome(context, EdumiaBiomeKeys.EDUMIA_SAVANNAH);
         createGensaiBeachBiome(context, EdumiaBiomeKeys.GENSAI_BEACH);
         createTestBiome(context, EdumiaBiomeKeys.DEAD_MARSHES);
         createTestBiome(context, EdumiaBiomeKeys.DEAD_MARSHES_WATER);
@@ -136,6 +137,21 @@ public class ModBiomes {
         ModBiomeFeatures.addVeryRareBirchTrees(vegetation);
         ModBiomeFeatures.addSparseLarchTrees(vegetation);
         ModBiomeFeatures.addMapleTrees(vegetation);
+
+        registerBiome(context, biomeResourceKey, spawnSettings, generationSettings);
+    }
+
+    public static void createEdumiaSavannahBiome(BootstrapContext<Biome> context, ResourceKey<Biome> biomeResourceKey) {
+        MobSpawnSettings.Builder spawnSettings = new MobSpawnSettings.Builder();
+        //ModSpawnSettingsBuilder.addFarmAnimals(spawnSettings);
+        BiomeGenerationSettings.Builder generationSettings = new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE),
+                context.lookup(Registries.CONFIGURED_CARVER));
+
+        ModBiomeFeatures.addAcaciaTrees(vegetation);
+        addDefaultVegetation(generationSettings);
+        ModBiomeFeatures.addCoarseDirtOre(vegetation);
+        ModBiomeFeatures.addGravelOre(vegetation);
+        ModBiomeFeatures.addOakBushes(vegetation);
 
         registerBiome(context, biomeResourceKey, spawnSettings, generationSettings);
     }
@@ -284,6 +300,7 @@ public class ModBiomes {
         ModBiomeFeatures.addWildFlax(vegetation);
 
         if (step == 0){
+            ModSpawnSettingsBuilder.addHighElves(spawnSettings);
             ModBiomeFeatures.addVeryRareBirchTrees(vegetation);
             ModBiomeFeatures.addHeather(vegetation);
 
@@ -293,6 +310,7 @@ public class ModBiomes {
         } else if (step == 2){
             ModBiomeFeatures.addDioriteBoulder(vegetation);
         }else if (step == 3){
+            ModSpawnSettingsBuilder.addHighElves(spawnSettings);
             vegetation.add(VegetationPlacements.TREES_PLAINS);
             ModBiomeFeatures.addMegaBirchTrees(vegetation);
             ModBiomeFeatures.addRareBirchTrees(vegetation);
@@ -300,8 +318,10 @@ public class ModBiomes {
             ModBiomeFeatures.addCommonBeechTrees(vegetation);
             ModBiomeFeatures.addCommonOakTrees(vegetation);
         }else if (step == 4){
+            ModSpawnSettingsBuilder.addHighElves(spawnSettings);
             ModBiomeFeatures.addOakTrees(vegetation);
         }else if (step == 5){
+            ModSpawnSettingsBuilder.addHighElves(spawnSettings);
             vegetation.add(VegetationPlacements.TREES_PLAINS);
         }
 
