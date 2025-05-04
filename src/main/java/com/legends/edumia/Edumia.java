@@ -145,13 +145,7 @@ public class Edumia
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-            EntityRenderers.register(EdumiaEntities.FAIRY_CIVILIAN.get(), FairyRenderer::new);
-            EntityRenderers.register(EdumiaEntities.HUMAN_CIVILIAN.get(), HumanRenderer::new);
-            EntityRenderers.register(EdumiaEntities.HIGH_ELVEN_CIVILIAN.get(), HighElvenRenderer::new);
 
-            for (GlassSets.GlassSet set : GlassSets.glassSets) {
-                ItemBlockRenderTypes.setRenderLayer(set.block().get(), RenderType.translucent());
-            }
         }
     }
 

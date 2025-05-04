@@ -1,6 +1,4 @@
-package com.legends.edumia.client.models.npcs;// Made with Blockbench 4.12.4
-// Exported for Minecraft version 1.17 or later with Mojang mappings
-// Paste this class into your mod and generate all required imports
+package com.legends.edumia.client.models.npcs;
 
 
 import com.legends.edumia.client.models.EdumiaPartNames;

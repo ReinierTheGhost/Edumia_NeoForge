@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "edumia:block/mirwoodnut_planks"
+  }
+}

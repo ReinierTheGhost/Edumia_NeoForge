@@ -6,19 +6,26 @@ import com.legends.edumia.core.blocksets.WoodBlockSets;
 import com.legends.edumia.core.TagLoader;
 import com.legends.edumia.world.features.EdumiaFeatures;
 import com.legends.edumia.world.features.treesnbt.TreeFromStructureNBTConfig;
+import com.legends.edumia.world.trees.foliageplacer.ClusterPalmFoliagePlacer;
+import com.legends.edumia.world.trees.trunkplacers.ClusteredPalmTrunkPlacer;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
+import net.minecraft.world.level.levelgen.feature.featuresize.ThreeLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
+import java.util.OptionalInt;
 import java.util.Set;
 
 public class PalmConfiguredFeatures {
@@ -134,7 +141,7 @@ public class PalmConfiguredFeatures {
                 Set.of(WoodBlockSets.PALM.leaves().get())
         ));
 
-        register(context, GROUP_PALM_1,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+        register(context, GROUP_PALM_1, EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
                 Edumia.location("features/trees/ground_trunk"),
                 Edumia.location("features/trees/group_palm/group_palm_1"),
                 ConstantInt.of(1),

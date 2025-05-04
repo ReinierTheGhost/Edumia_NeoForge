@@ -39,11 +39,13 @@ public class TagLoader {
         public static final TagKey<Block> GHOST_GUM_LOGS = createTag("ghost_gum_logs");
         public static final TagKey<Block> GREEN_OAK_LOGS = createTag("green_oak_logs");
         public static final TagKey<Block> HOLLY_LOGS = createTag("holly_logs");
+        public static final TagKey<Block> JACARANDA_LOGS = createTag("jacaranda_logs");
         public static final TagKey<Block> KAPOK_LOGS = createTag("kapok_logs");
         public static final TagKey<Block> LARCH_LOGS = createTag("larch_logs");
         public static final TagKey<Block> MAHOGANY_LOGS = createTag("mahogany_logs");
         public static final TagKey<Block> MANGO_LOGS = createTag("mango_logs");
         public static final TagKey<Block> MAPLE_LOGS = createTag("maple_logs");
+        public static final TagKey<Block> MIRWOODNUT_LOGS = createTag("mirwoodnut_logs");
         public static final TagKey<Block> OLIVE_LOGS = createTag("olive_logs");
         public static final TagKey<Block> PALM_LOGS = createTag("palm_logs");
         public static final TagKey<Block> PEAR_LOGS = createTag("pear_logs");
@@ -76,11 +78,13 @@ public class TagLoader {
         public static final TagKey<Item> GHOST_GUM_LOGS = createTag("ghost_gum_logs");
         public static final TagKey<Item> GREEN_OAK_LOGS = createTag("green_oak_logs");
         public static final TagKey<Item> HOLLY_LOGS = createTag("holly_logs");
+        public static final TagKey<Item> JACARANDA_LOGS = createTag("jacaranda_logs");
         public static final TagKey<Item> KAPOK_LOGS = createTag("kapok_logs");
         public static final TagKey<Item> LARCH_LOGS = createTag("larch_logs");
         public static final TagKey<Item> MAHOGANY_LOGS = createTag("mahogany_logs");
         public static final TagKey<Item> MANGO_LOGS = createTag("mango_logs");
         public static final TagKey<Item> MAPLE_LOGS = createTag("maple_logs");
+        public static final TagKey<Item> MIRWOODNUT_LOGS = createTag("mirwoodnut_logs");
         public static final TagKey<Item> OLIVE_LOGS = createTag("olive_logs");
         public static final TagKey<Item> PALM_LOGS = createTag("palm_logs");
         public static final TagKey<Item> PEAR_LOGS = createTag("pear_logs");

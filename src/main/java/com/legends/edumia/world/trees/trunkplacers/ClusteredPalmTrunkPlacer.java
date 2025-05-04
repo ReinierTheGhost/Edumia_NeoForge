@@ -86,6 +86,8 @@ public class ClusteredPalmTrunkPlacer  extends TrunkPlacer {
         BlockPos.MutableBlockPos currentPos = startPos.mutable();
         BlockPos.MutableBlockPos lastPos = startPos.mutable();
 
+        setDirtAt(level, blockSetter, random, currentPos.below(), config);
+
         // Calculate bend direction outward from center
         double length = Math.sqrt(dirX * dirX + dirZ * dirZ);
         if (length < 0.1) {

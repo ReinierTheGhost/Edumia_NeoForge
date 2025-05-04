@@ -42,9 +42,14 @@ public class ModTreeGrowers {
     public static final TreeGrower HOLLY = new TreeGrower(Edumia.MOD_ID + ":holly",
             Optional.empty(), Optional.of(TemperateTreeConfiguredFeatures.HOLLY_TREE_KEY),
             Optional.of(TemperateTreeConfiguredFeatures.HOLLY_BEES_TREE_KEY));
+
+    public static final TreeGrower JACARANDA = new TreeGrower(Edumia.MOD_ID + ":jacaranda",
+            Optional.empty(), Optional.of(TemperateTreeConfiguredFeatures.HOLLY_TREE_KEY),
+            Optional.empty());
+
     public static final TreeGrower KAPOK = new TreeGrower(Edumia.MOD_ID + ":kapok",
             Optional.empty(), Optional.of(KapokTreeConfiguredFeatures.KAPOK_1),
-            Optional.of(TemperateTreeConfiguredFeatures.HOLLY_BEES_TREE_KEY));
+            Optional.empty());
 
     public static final TreeGrower MAHOGANY = new TreeGrower(Edumia.MOD_ID + ":mahogany",
             Optional.empty(), Optional.of(MahoganyConfiguredFeatures.MAHOGANY), Optional.empty());
@@ -52,6 +57,9 @@ public class ModTreeGrowers {
     public static final TreeGrower MANGO = new TreeGrower(Edumia.MOD_ID + ":mango", 50f,
             Optional.empty(), Optional.empty(), Optional.of(TropicalTreeConfiguredFeatures.MANGO),
             Optional.of(TropicalTreeConfiguredFeatures.MANGO_TWO), Optional.empty(), Optional.empty());
+
+    public static final TreeGrower MIRWOODNUT = new TreeGrower(Edumia.MOD_ID + ":mirwoodnut",
+            Optional.empty(), Optional.of(MahoganyConfiguredFeatures.MAHOGANY), Optional.empty());
 
     public static final TreeGrower PALM = new TreeGrower(Edumia.MOD_ID + ":palm",
             Optional.empty(), Optional.of(SaplingConfiguredFeatures.PALM_TREES), Optional.empty());

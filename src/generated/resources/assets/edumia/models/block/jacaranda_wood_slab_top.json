@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "edumia:block/jacaranda_log",
+    "side": "edumia:block/jacaranda_log",
+    "top": "edumia:block/jacaranda_log"
+  }
+}

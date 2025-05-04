@@ -21,19 +21,13 @@
         "pool": [
           "edumia:fairy.civilian"
         ],
-        "rank": "MILITIA"
-      },
-      {
-        "pool": [
-          "edumia:fairy.civilian"
-        ],
         "rank": "CIVILIAN"
       },
       {
         "pool": [
           "edumia:fairy.civilian"
         ],
-        "rank": "SOLDIER"
+        "rank": "MILITIA"
       },
       {
         "pool": [
@@ -46,6 +40,12 @@
           "edumia:fairy.civilian"
         ],
         "rank": "VETERAN"
+      },
+      {
+        "pool": [
+          "edumia:fairy.civilian"
+        ],
+        "rank": "SOLDIER"
       },
       {
         "pool": [

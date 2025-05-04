@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mirwoodnut_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "edumia:mirwoodnut_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "edumia:mirwoodnut_beam"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_mirwoodnut_log"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "edumia:mirwoodnut_beam"
+    ]
+  }
+}

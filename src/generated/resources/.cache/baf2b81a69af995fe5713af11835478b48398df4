@@ -1,4 +1,4 @@
-// 1.21.1	2025-05-04T13:57:15.1715604	Item Models: edumia
+// 1.21.1	2025-05-04T20:46:07.5629737	Item Models: edumia
 047baa6b7a95aadfec14d478dfdf8c290cbd8220 assets/edumia/models/item/acacia_wood_fence.json
 4879a2f3030853ef57cc6d67266684061b3752ec assets/edumia/models/item/acacia_wood_wall.json
 386253d46a85a3515508b2f2812157712b0633d8 assets/edumia/models/item/almond_button.json
@@ -244,6 +244,12 @@ e7b4e6ddc1cdf8e27f8407975f1bd91b0c3c07f2 assets/edumia/models/item/holly_wood_fe
 06edf599a58f2fdc84f04ae6b579881f2398d60f assets/edumia/models/item/holly_wood_wall.json
 635d2a086fa955a1635a40031984e4d4a1e1afad assets/edumia/models/item/human_banner_pattern.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/edumia/models/item/human_spawn_egg.json
+2fab05e5f530c828bb6f85cc0dea8aef14b177b1 assets/edumia/models/item/jacaranda_button.json
+cc45c2ffbc2b7fb2e441659a481354381e1de800 assets/edumia/models/item/jacaranda_door.json
+26f01999f73019510ca8830dc702ac569bc190c7 assets/edumia/models/item/jacaranda_fence.json
+572a34a61b4e14c95a25bbcb2502cd1b163bad7d assets/edumia/models/item/jacaranda_sapling.json
+14e2fdf8f8d4db3f38e3496b51801323b7b14c71 assets/edumia/models/item/jacaranda_wood_fence.json
+bcfb4a757cbfc9d07036170ffbf9810b366304b8 assets/edumia/models/item/jacaranda_wood_wall.json
 cbabe818c2d89289768e895fed81c7f916671d59 assets/edumia/models/item/jungle_wood_fence.json
 a2a4b63682c178bac27b58bd18f2b83b1fd87c8b assets/edumia/models/item/jungle_wood_wall.json
 bf1cbcea9606f2fa40be4770f3532a4a169bad23 assets/edumia/models/item/kapok_button.json
@@ -296,6 +302,12 @@ f3d58f913bb64cebaef0012bf32b1a996440aa7c assets/edumia/models/item/mango_button.
 513a24355264a710165f5811dd213fc968c90b3b assets/edumia/models/item/maple_wood_fence.json
 c5c958df48cb3dfd330e2afc0446b6ac84265f0d assets/edumia/models/item/maple_wood_wall.json
 69e066f6a61518f56b7482b2799201b4476b57f0 assets/edumia/models/item/marigold.json
+905454046833b4c461d616132b652e7e5dc026b3 assets/edumia/models/item/mirwoodnut_button.json
+41c70d070383c30c80f37e6403d0cd535cdc0533 assets/edumia/models/item/mirwoodnut_door.json
+debdc8b152218b42699534cb912a1589f15f1bdd assets/edumia/models/item/mirwoodnut_fence.json
+12f4ea5ec00e28532496c88bafb38a16f10853a6 assets/edumia/models/item/mirwoodnut_sapling.json
+30c352f5c4be92842779b7c5ba19a35beb3b60a4 assets/edumia/models/item/mirwoodnut_wood_fence.json
+d812e99df85b9fd65d8a80d287508fe35b882475 assets/edumia/models/item/mirwoodnut_wood_wall.json
 f5e253209f9afcd5cfdbad77abd1e4cf7f2c518a assets/edumia/models/item/mossy_basalt_bricks_wall.json
 8997c7ba658d4c04f1340ada4b890bb7b87bde28 assets/edumia/models/item/mossy_black_demon_bricks_wall.json
 3d9602102399fd6adab17fd5f05795a26527d4f1 assets/edumia/models/item/mossy_blue_bricks_wall.json
@@ -422,6 +434,8 @@ db4d45e5bf2747a3d064f3b686c75dfc34ba4698 assets/edumia/models/item/stripped_gree
 5f6c63264b83e2b4e0f82547c8913c89b06bdc91 assets/edumia/models/item/stripped_green_oak_wood_wall.json
 ff455bad765b599ed8cfcaca10bda2d43e65cc34 assets/edumia/models/item/stripped_holly_wood_fence.json
 f99ae5e6473f5cb9b62e6e143d80d04e769a2e47 assets/edumia/models/item/stripped_holly_wood_wall.json
+55c629d2dc9d9b2db4d7763c1047061afdb176ec assets/edumia/models/item/stripped_jacaranda_wood_fence.json
+1286b877018741acefd101cf877836823baa71f2 assets/edumia/models/item/stripped_jacaranda_wood_wall.json
 478115c5369288791e5a616f17beda73625f5451 assets/edumia/models/item/stripped_kapok_wood_fence.json
 5055f22468df2b6f3654de59a8d29e47076e2330 assets/edumia/models/item/stripped_kapok_wood_wall.json
 c34f3bf9848cfddb5abfee81133435e9c0c750cd assets/edumia/models/item/stripped_larch_wood_fence.json
@@ -432,6 +446,8 @@ b2a6316715cd4b6ee159382913fb63bbc487b891 assets/edumia/models/item/stripped_maho
 3e7ff4779faf13ff1acfb94e544daf5bf71cf97b assets/edumia/models/item/stripped_mango_wood_wall.json
 a84e66a672859c19996a8c9b44eec8bac0f2728f assets/edumia/models/item/stripped_maple_wood_fence.json
 9a67801096f6f966b24430c150aa7bd16ee4de20 assets/edumia/models/item/stripped_maple_wood_wall.json
+272aaa83a3332b2ad57be43997a39bcfb2cc3aa5 assets/edumia/models/item/stripped_mirwoodnut_wood_fence.json
+2122bcac76e956da6eddfb2732f79463dbf1b3e0 assets/edumia/models/item/stripped_mirwoodnut_wood_wall.json
 1ea5999f1d24b27a7d7973c10e97cdc3b989504f assets/edumia/models/item/stripped_palm_wood_fence.json
 11062663ae8d94ef6f310106d260de721abe2c67 assets/edumia/models/item/stripped_palm_wood_wall.json
 af3f1e36cde8856b12a2b7276ac4c6536c7af4b3 assets/edumia/models/item/stripped_pear_wood_fence.json

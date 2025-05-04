@@ -68,6 +68,8 @@ public class WoodBlockSets {
             false, ModTreeGrowers.GREEN_OAK, List.of(), TagLoader.Items.GREEN_OAK_LOGS, TagLoader.Blocks.GREEN_OAK_LOGS);
     public static SimpleBlockSet HOLLY = registerWoodSet("holly", WOOD_STRENGTH, false, true,
             false, ModTreeGrowers.HOLLY, List.of(), TagLoader.Items.HOLLY_LOGS, TagLoader.Blocks.HOLLY_LOGS);
+    public static SimpleBlockSet JACARANDA = registerWoodSet("jacaranda", WOOD_STRENGTH, false, true,
+            false, ModTreeGrowers.JACARANDA, List.of(), TagLoader.Items.JACARANDA_LOGS, TagLoader.Blocks.JACARANDA_LOGS);
     public static SimpleBlockSet KAPOK = registerWoodSet("kapok", WOOD_STRENGTH, true, true,
             false, ModTreeGrowers.KAPOK, List.of(), TagLoader.Items.KAPOK_LOGS, TagLoader.Blocks.KAPOK_LOGS);
     public static SimpleBlockSet LARCH = registerWoodSet("larch", WOOD_STRENGTH, true, true,
@@ -78,6 +80,8 @@ public class WoodBlockSets {
             false, ModTreeGrowers.MANGO, List.of(), TagLoader.Items.MANGO_LOGS, TagLoader.Blocks.MANGO_LOGS);
     public static SimpleBlockSet MAPLE = registerWoodSet("maple", WOOD_STRENGTH, false, true,
             false, ModTreeGrowers.APPLE, List.of(), TagLoader.Items.MAPLE_LOGS, TagLoader.Blocks.MAPLE_LOGS);
+    public static SimpleBlockSet MIRWOODNUT = registerWoodSet("mirwoodnut", WOOD_STRENGTH, false, true,
+            false, ModTreeGrowers.MIRWOODNUT, List.of(), TagLoader.Items.MIRWOODNUT_LOGS, TagLoader.Blocks.MIRWOODNUT_LOGS);
     // public static SimpleBlockSet OLIVE = registerWoodSet("olive", WOOD_STRENGTH, true, true,
 //         false, ModTreeGrowers.APPLE, List.of(), TagLoader.Items.OLIVE_LOGS, TagLoader.Blocks.OLIVE_LOGS);
     public static SimpleBlockSet PALM = registerWoodSet("palm", WOOD_STRENGTH, true, true,
@@ -124,11 +128,13 @@ public class WoodBlockSets {
             GHOST_GUM,
             GREEN_OAK,
             HOLLY,
+            JACARANDA,
             KAPOK,
             LARCH,
             MAHOGANY,
             MANGO,
             MAPLE,
+            MIRWOODNUT,
 //            OLIVE,
             PALM,
             PEAR,

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "edumia:block/mirwoodnut_planks",
+    "side": "edumia:block/mirwoodnut_planks",
+    "top": "edumia:block/mirwoodnut_planks"
+  }
+}

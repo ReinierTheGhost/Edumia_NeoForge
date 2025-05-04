@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mirwoodnut_wood": {
+      "conditions": {
+        "items": [
+          {
+            "items": "edumia:mirwoodnut_wood"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "edumia:mirwoodnut_wood_fence"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_mirwoodnut_wood"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "edumia:mirwoodnut_wood_fence"
+    ]
+  }
+}
