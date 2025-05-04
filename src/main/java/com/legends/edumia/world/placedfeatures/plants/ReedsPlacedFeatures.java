@@ -15,10 +15,15 @@ import java.util.List;
 
 public class ReedsPlacedFeatures {
     public static final ResourceKey<PlacedFeature> REEDS = registerKey("reeds");
+
+    public static final ResourceKey<PlacedFeature> PAPYRUS = registerKey("papyrus");
     public static void boostrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.lookup(Registries.CONFIGURED_FEATURE);
 
         PlacementUtils.register(context, REEDS, configuredFeatureRegistryEntryLookup.getOrThrow(ReedsConfiguredFeatures.REEDS),
+                CountPlacement.of(4), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE,
+                BiomeFilter.biome());
+        PlacementUtils.register(context, PAPYRUS, configuredFeatureRegistryEntryLookup.getOrThrow(ReedsConfiguredFeatures.PAPYRUS),
                 CountPlacement.of(4), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE,
                 BiomeFilter.biome());
     }

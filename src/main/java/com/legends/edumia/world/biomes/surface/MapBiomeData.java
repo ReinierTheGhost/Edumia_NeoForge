@@ -131,10 +131,12 @@ public class MapBiomeData {
         addBiome(new BiomeData(EdumiaBiomeKeys.MOUNT_TITLEIST_CRATER, EdumiaBiomeDataConfigs.gensaiVolcano, EdumiaBiomeDataConfigs.volcanicRockLayers,
                 new BiomeColorsDTO(5460048, 4999240, 5860962, 731161, 6252369, 4735297)));
 
-        addBiome(new BiomeData(EdumiaBiomeKeys.FAIRY_FOREST, EdumiaBiomeDataConfigs.grassPlains, EdumiaBiomeDataConfigs.stoneLayers,
+        addBiome(new BiomeData(EdumiaBiomeKeys.MYRWOOD_JUNGLE, EdumiaBiomeDataConfigs.grassPlains, EdumiaBiomeDataConfigs.stoneLayers,
                 new BiomeColorsDTO(10599654, 10664914, 7856375, 329011, 7514630, 7451654)));
-
-
+        addBiome(new BiomeData(EdumiaBiomeKeys.MYRWOOD_MANGROVE, EdumiaBiomeDataConfigs.pond, EdumiaBiomeDataConfigs.stoneLayers,
+                new BiomeColorsDTO(10599654, 10664914, 7856375, 329011, 7514630, 7451654)));
+        addBiome(new BiomeData(EdumiaBiomeKeys.MYRWOOD_COAST, EdumiaBiomeDataConfigs.pond, EdumiaBiomeDataConfigs.stoneLayers,
+                new BiomeColorsDTO(10599654, 10664914, 7856375, 329011, 7514630, 7451654)));
 
         addBiome(new BiomeData(EdumiaBiomeKeys.TAIGA_FOREST, EdumiaBiomeDataConfigs.grassPlains, EdumiaBiomeDataConfigs.stoneLayers,
                 new BiomeColorsDTO(7508201, 10863086, defaultWater, defaultWaterFog, 8302697, 7252827)));

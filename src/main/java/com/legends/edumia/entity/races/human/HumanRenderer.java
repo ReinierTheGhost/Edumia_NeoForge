@@ -11,12 +11,9 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.HumanoidMobRenderer;
 import net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
 import java.util.Map;
 
-@OnlyIn(Dist.CLIENT)
 public class HumanRenderer  extends HumanoidMobRenderer<HumanEntity, MainHumanModel<HumanEntity>> {
 
     private static final String PATH = "textures/entities/human/";

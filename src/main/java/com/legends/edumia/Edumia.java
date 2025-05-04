@@ -52,7 +52,7 @@ public class Edumia
 
     public static final String MOD_VERSION = "1.1.0-1.21.1-beta";
 
-    public static final boolean ENABLE_INSTANT_BOOTING = false;
+    public static final boolean ENABLE_INSTANT_BOOTING = true;
 
     public Edumia(IEventBus modEventBus, ModContainer modContainer)
     {

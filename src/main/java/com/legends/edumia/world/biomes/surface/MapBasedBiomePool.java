@@ -3,10 +3,8 @@ package com.legends.edumia.world.biomes.surface;
 
 import com.legends.edumia.world.biomes.EdumiaBiomeDataConfigs;
 import com.legends.edumia.world.biomes.EdumiaBiomeKeys;
-import com.legends.edumia.world.biomes.caves.CaveType;
 import com.legends.edumia.world.chunkgen.map.EdumiaHeightMap;
 import net.minecraft.core.Holder;
-import net.minecraft.data.worldgen.biome.BiomeData;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.biome.Biome;
@@ -115,8 +113,10 @@ public class MapBasedBiomePool {
         add(new Color(143, 142, 142), new MapBasedCustomBiome(EdumiaBiomeKeys.EDUMIA_MOUNTAINS_BASE, 53, EdumiaBiomeDataConfigs.emModifier));
         add(new Color(129, 129, 129), new MapBasedCustomBiome(EdumiaBiomeKeys.EDUMIA_MOUNTAINS, 82, EdumiaBiomeDataConfigs.emModifier));
         add(new Color(185, 183, 183), new MapBasedCustomBiome(EdumiaBiomeKeys.EDUMIA_MOUNTAINS_PEAKS, 100, EdumiaBiomeDataConfigs.emPeaksModifier));
-        add(new Color(54, 114, 12), new MapBasedCustomBiome(EdumiaBiomeKeys.FAIRY_FOREST, 7, EdumiaBiomeDataConfigs.landModifier));
 
+        add(new Color(54, 114, 12), new MapBasedCustomBiome(EdumiaBiomeKeys.MYRWOOD_JUNGLE, 7, EdumiaBiomeDataConfigs.landModifier));
+        add(new Color(40, 85, 22), new MapBasedCustomBiome(EdumiaBiomeKeys.MYRWOOD_MANGROVE, 0, EdumiaBiomeDataConfigs.riverModifier));
+        add(new Color(34, 69, 25), new MapBasedCustomBiome(EdumiaBiomeKeys.MYRWOOD_COAST, -3, EdumiaBiomeDataConfigs.oceanModifier));
 
         add(new Color(56, 36, 36), new MapBasedCustomBiome(EdumiaBiomeKeys.GENSAI_VOLCANO_PLAINS, 6, EdumiaBiomeDataConfigs.landModifier));
         add(new Color(45, 42, 42), new MapBasedCustomBiome(EdumiaBiomeKeys.MOUNT_TITLEIST_FOOT, 36, EdumiaBiomeDataConfigs.mountTitleistModifier));
@@ -164,6 +164,9 @@ public class MapBasedBiomePool {
         waterBiomes.add(EdumiaBiomeKeys.GENSAI_REEF);
         waterBiomes.add(EdumiaBiomeKeys.AVELION_ROCKY_SHORES);
         waterBiomes.add(EdumiaBiomeKeys.AVELION_SANDY_SHORES);
+        waterBiomes.add(EdumiaBiomeKeys.MYRWOOD_MANGROVE);
+        waterBiomes.add(EdumiaBiomeKeys.MYRWOOD_JUNGLE);
+        waterBiomes.add(EdumiaBiomeKeys.MYRWOOD_COAST);
 
         anduinWaterBiomes.add(EdumiaBiomeKeys.GREAT_RIVER);
 

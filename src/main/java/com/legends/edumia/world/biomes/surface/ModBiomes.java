@@ -78,7 +78,10 @@ public class ModBiomes {
         createMountTitleistBiome(context, EdumiaBiomeKeys.MOUNT_TITLEIST);
         createMountTitleistBiome(context, EdumiaBiomeKeys.MOUNT_TITLEIST_PEAK);
         createMountTitleistBiome(context, EdumiaBiomeKeys.MOUNT_TITLEIST_CRATER);
-        createFairyForestBiome(context, EdumiaBiomeKeys.FAIRY_FOREST);
+
+        createMirwoodForestBiome(context, EdumiaBiomeKeys.MYRWOOD_JUNGLE);
+        createMirwoodMangroveBiome(context, EdumiaBiomeKeys.MYRWOOD_MANGROVE);
+        createMirwoodMangroveBiome(context, EdumiaBiomeKeys.MYRWOOD_COAST);
 
         createDemonWastelandsBiome(context, EdumiaBiomeKeys.DEMON_WASTELANDS);
 
@@ -95,7 +98,7 @@ public class ModBiomes {
 
 
     }
-    public static void createFairyForestBiome(BootstrapContext<Biome> context, ResourceKey<Biome> biomeResourceKey) {
+    public static void createMirwoodForestBiome(BootstrapContext<Biome> context, ResourceKey<Biome> biomeResourceKey) {
         MobSpawnSettings.Builder spawnSettings = new MobSpawnSettings.Builder();
         ModSpawnSettingsBuilder.addFairies(spawnSettings);
         ModSpawnSettingsBuilder.addTropicalAnimals(spawnSettings);
@@ -104,6 +107,23 @@ public class ModBiomes {
                 context.lookup(Registries.CONFIGURED_CARVER));
 
        ModBiomeFeatures.addJungleTrees(vegetation);
+
+        registerBiome(context, biomeResourceKey, spawnSettings, generationSettings);
+    }
+    public static void createMirwoodMangroveBiome(BootstrapContext<Biome> context, ResourceKey<Biome> biomeResourceKey) {
+        MobSpawnSettings.Builder spawnSettings = new MobSpawnSettings.Builder();
+        ModSpawnSettingsBuilder.addFairies(spawnSettings);
+        ModSpawnSettingsBuilder.addTropicalAnimals(spawnSettings);
+        BiomeGenerationSettings.Builder generationSettings = new BiomeGenerationSettings.Builder(
+                context.lookup(Registries.PLACED_FEATURE),
+                context.lookup(Registries.CONFIGURED_CARVER));
+
+        vegetation.add(VegetationPlacements.TREES_MANGROVE);
+        vegetation.add(VegetationPlacements.PATCH_SUGAR_CANE_SWAMP);
+        ModBiomeFeatures.addReeds(vegetation);
+        ModBiomeFeatures.addPapyrus(vegetation);
+        ModBiomeFeatures.addDisks(undergroundOres);
+
 
         registerBiome(context, biomeResourceKey, spawnSettings, generationSettings);
     }
@@ -585,10 +605,7 @@ public class ModBiomes {
         vegetation.add(VegetationPlacements.PATCH_SUGAR_CANE);
         vegetation.add(VegetationPlacements.PATCH_PUMPKIN);
         ModBiomeFeatures.addStoneBoulder(vegetation);
-        ModBiomeFeatures.addWildBeetroot(vegetation);
-        ModBiomeFeatures.addWildCucumber(vegetation);
         ModBiomeFeatures.addWildFlax(vegetation);
-        ModBiomeFeatures.addWildGarlic(vegetation);
     }
     public static void addNordicVegetation(BiomeGenerationSettings.Builder generationSettings) {
         ModBiomeFeatures.addDisks(undergroundOres);
@@ -603,8 +620,6 @@ public class ModBiomes {
         ModBiomeFeatures.addBrownBolete(vegetation);
         ModBiomeFeatures.addMorsel(vegetation);
         ModBiomeFeatures.addWhiteMushroom(vegetation);
-        ModBiomeFeatures.addWildBeetroot(vegetation);
-        ModBiomeFeatures.addWildPotato(vegetation);
     }
     public static void addTundraVegetation(BiomeGenerationSettings.Builder generationSettings) {
         ModBiomeFeatures.addDisks(undergroundOres);
@@ -644,10 +659,7 @@ public class ModBiomes {
         ModBiomeFeatures.addWhiteAshBushes(vegetation);
         ModBiomeFeatures.addOakBushes(vegetation);
         ModBiomeFeatures.addMallos(vegetation);
-        ModBiomeFeatures.addWildCarrot(vegetation);
         ModBiomeFeatures.addWildFlax(vegetation);
-        ModBiomeFeatures.addWildLettuce(vegetation);
-        ModBiomeFeatures.addWildOnion(vegetation);
     }
     public static void addDarkElvenVegetation(BiomeGenerationSettings.Builder generationSettings) {
         ModBiomeFeatures.addDisks(undergroundOres);
@@ -663,8 +675,6 @@ public class ModBiomes {
         ModBiomeFeatures.addWildGrass(vegetation);
         ModBiomeFeatures.addOakBushes(vegetation);
         ModBiomeFeatures.addWildFlax(vegetation);
-        ModBiomeFeatures.addWildGarlic(vegetation);
-        ModBiomeFeatures.addWildOnion(vegetation);
         ModBiomeFeatures.addMossyBoulder(vegetation);
     }
     public static void addVolcanoVegetation(BiomeGenerationSettings.Builder generationSettings) {

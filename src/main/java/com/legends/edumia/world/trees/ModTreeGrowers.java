@@ -42,6 +42,9 @@ public class ModTreeGrowers {
     public static final TreeGrower HOLLY = new TreeGrower(Edumia.MOD_ID + ":holly",
             Optional.empty(), Optional.of(TemperateTreeConfiguredFeatures.HOLLY_TREE_KEY),
             Optional.of(TemperateTreeConfiguredFeatures.HOLLY_BEES_TREE_KEY));
+    public static final TreeGrower KAPOK = new TreeGrower(Edumia.MOD_ID + ":kapok",
+            Optional.empty(), Optional.of(KapokTreeConfiguredFeatures.KAPOK_1),
+            Optional.of(TemperateTreeConfiguredFeatures.HOLLY_BEES_TREE_KEY));
 
     public static final TreeGrower MAHOGANY = new TreeGrower(Edumia.MOD_ID + ":mahogany",
             Optional.empty(), Optional.of(MahoganyConfiguredFeatures.MAHOGANY), Optional.empty());
@@ -75,7 +78,7 @@ public class ModTreeGrowers {
             Optional.empty(), Optional.of(FruitTreeConfiguredFeatures.ALMOND_KEY), Optional.empty());
 
     public static final TreeGrower TEST = new TreeGrower(Edumia.MOD_ID + ":test",
-            Optional.empty(), Optional.of(MahoganyConfiguredFeatures.MAHOGANY_NBT), Optional.empty());
+            Optional.empty(), Optional.of(TreeConfiguredFeatures.TEST_KEY), Optional.empty());
 
 
 }

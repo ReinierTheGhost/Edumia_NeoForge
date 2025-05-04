@@ -75,9 +75,9 @@ public class TreeConfiguredFeatures {
 
         register(context, TEST_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(Blocks.DARK_OAK_LOG),
-                new AncientOakTrunkPlacer(10, 2, 14),
-                BlockStateProvider.simple(Blocks.DARK_OAK_LEAVES),
-                new FancyFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
+                new ClusteredPalmTrunkPlacer(16, 8, 8),
+                BlockStateProvider.simple(Blocks.DARK_OAK_LEAVES.defaultBlockState().setValue(LeavesBlock.PERSISTENT, true)),
+                new ClusterPalmFoliagePlacer(UniformInt.of(7, 14), ConstantInt.of(1)),
                 new ThreeLayersFeatureSize(2, 3, 0, 1, 2, OptionalInt.empty())
         ).build());
 

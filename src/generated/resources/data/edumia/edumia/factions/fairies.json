@@ -1,10 +1,10 @@
 {
   "banner": {
-    "base_color": "white",
+    "base_color": "green",
     "patterns": [
       {
-        "dye_color": "green",
-        "id": "minecraft:flower"
+        "dye_color": "cyan",
+        "id": "edumia:fairies"
       }
     ]
   },
@@ -21,13 +21,7 @@
         "pool": [
           "edumia:fairy.civilian"
         ],
-        "rank": "KNIGHT"
-      },
-      {
-        "pool": [
-          "edumia:fairy.civilian"
-        ],
-        "rank": "SOLDIER"
+        "rank": "MILITIA"
       },
       {
         "pool": [
@@ -39,19 +33,25 @@
         "pool": [
           "edumia:fairy.civilian"
         ],
-        "rank": "VETERAN"
-      },
-      {
-        "pool": [
-          "edumia:fairy.civilian"
-        ],
-        "rank": "MILITIA"
+        "rank": "SOLDIER"
       },
       {
         "pool": [
           "edumia:fairy.civilian"
         ],
         "rank": "LEADER"
+      },
+      {
+        "pool": [
+          "edumia:fairy.civilian"
+        ],
+        "rank": "VETERAN"
+      },
+      {
+        "pool": [
+          "edumia:fairy.civilian"
+        ],
+        "rank": "KNIGHT"
       }
     ]
   },

@@ -1,12 +1,16 @@
 package com.legends.edumia.core;
 
 import com.legends.edumia.Edumia;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BannerPatternTags;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.entity.BannerPattern;
 
 public class TagLoader {
     public static class Blocks {
@@ -35,6 +39,7 @@ public class TagLoader {
         public static final TagKey<Block> GHOST_GUM_LOGS = createTag("ghost_gum_logs");
         public static final TagKey<Block> GREEN_OAK_LOGS = createTag("green_oak_logs");
         public static final TagKey<Block> HOLLY_LOGS = createTag("holly_logs");
+        public static final TagKey<Block> KAPOK_LOGS = createTag("kapok_logs");
         public static final TagKey<Block> LARCH_LOGS = createTag("larch_logs");
         public static final TagKey<Block> MAHOGANY_LOGS = createTag("mahogany_logs");
         public static final TagKey<Block> MANGO_LOGS = createTag("mango_logs");
@@ -71,6 +76,7 @@ public class TagLoader {
         public static final TagKey<Item> GHOST_GUM_LOGS = createTag("ghost_gum_logs");
         public static final TagKey<Item> GREEN_OAK_LOGS = createTag("green_oak_logs");
         public static final TagKey<Item> HOLLY_LOGS = createTag("holly_logs");
+        public static final TagKey<Item> KAPOK_LOGS = createTag("kapok_logs");
         public static final TagKey<Item> LARCH_LOGS = createTag("larch_logs");
         public static final TagKey<Item> MAHOGANY_LOGS = createTag("mahogany_logs");
         public static final TagKey<Item> MANGO_LOGS = createTag("mango_logs");
@@ -87,6 +93,21 @@ public class TagLoader {
 
         private static TagKey<Item> createTag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, name));
+        }
+    }
+
+    public static class BannerPatterns {
+        public static final TagKey<BannerPattern> HIGH_ELVEN_PATTERN = createTag("high_elven_pattern");
+        public static final TagKey<BannerPattern> DARK_ELVEN_PATTERN  = createTag("dark_elven_pattern");
+        public static final TagKey<BannerPattern> DEMONS_PATTERN  = createTag("demons_pattern");
+        public static final TagKey<BannerPattern> HUMANS_PATTERN  = createTag("humans_pattern");
+        public static final TagKey<BannerPattern> FAIRIES_PATTERN  = createTag("fairies_pattern");
+        public static final TagKey<BannerPattern> GENSAI_PATTERN  = createTag("gensai_pattern");
+        public static final TagKey<BannerPattern> ORCS_PATTERN  = createTag("orcs_pattern");
+        public static final TagKey<BannerPattern> OGRES_PATTERN  = createTag("ogres_pattern");
+
+        private static TagKey<BannerPattern> createTag(String name) {
+            return TagKey.create(Registries.BANNER_PATTERN, ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID,"pattern_item/" + name));
         }
     }
 }

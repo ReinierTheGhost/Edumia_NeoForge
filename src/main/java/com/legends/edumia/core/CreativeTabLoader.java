@@ -239,6 +239,14 @@ public class CreativeTabLoader {
                                 entries.accept(ItemLoader.FAIRY_SPAWN_EGG.get());
                                 entries.accept(ItemLoader.HUMAN_SPAWN_EGG.get());
                                 entries.accept(ItemLoader.HIGH_ELVEN_SPAWN_EGG.get());
+                                entries.accept(ItemLoader.HIGH_ELVEN_BANNER_PATTERN.get());
+                                entries.accept(ItemLoader.DARK_ELVEN_BANNER_PATTERN.get());
+                                entries.accept(ItemLoader.DEMON_BANNER_PATTERN.get());
+                                entries.accept(ItemLoader.ORC_BANNER_PATTERN.get());
+                                entries.accept(ItemLoader.OGRE_BANNER_PATTERN.get());
+                                entries.accept(ItemLoader.GENSAI_BANNER_PATTERN.get());
+                                entries.accept(ItemLoader.FAIRY_BANNER_PATTERN.get());
+                                entries.accept(ItemLoader.HUMAN_BANNER_PATTERN.get());
                             }).build());
 
     public static final Supplier<CreativeModeTab>  EDUMIA_GEMS = CREATIVE_MODE_TAB.register("edumia_gems",() ->

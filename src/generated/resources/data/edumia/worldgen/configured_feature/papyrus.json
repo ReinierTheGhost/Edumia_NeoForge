@@ -1,0 +1,26 @@
+{
+  "type": "edumia:reeds",
+  "config": {
+    "fully_grown_change": 0.75,
+    "state_provider": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "data": {
+            "Name": "edumia:papyrus",
+            "Properties": {
+              "type": "1",
+              "age": "0",
+              "waterlogged": "false"
+            }
+          },
+          "weight": 900
+        }
+      ]
+    },
+    "tries": 32,
+    "xspread": 5,
+    "yspread": 2,
+    "zspread": 5
+  }
+}

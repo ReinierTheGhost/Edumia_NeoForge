@@ -189,6 +189,32 @@ public class ItemLoader {
             () -> new DeferredSpawnEggItem(EdumiaEntities.HIGH_ELVEN_CIVILIAN, 0x40AFE8, 0x11FFCF,
                     new Item.Properties()));
 
+    public static final DeferredItem<Item> HIGH_ELVEN_BANNER_PATTERN = ITEMS.register("high_elven_banner_pattern",
+            () -> new BannerPatternItem(TagLoader.BannerPatterns.HIGH_ELVEN_PATTERN, new Item.Properties()
+                    .stacksTo(1).rarity(Rarity.RARE)));
+    public static final DeferredItem<Item> DARK_ELVEN_BANNER_PATTERN = ITEMS.register("dark_elven_banner_pattern",
+            () -> new BannerPatternItem(TagLoader.BannerPatterns.DARK_ELVEN_PATTERN, new Item.Properties()
+                    .stacksTo(1).rarity(Rarity.RARE)));
+    public static final DeferredItem<Item> DEMON_BANNER_PATTERN = ITEMS.register("demon_banner_pattern",
+            () -> new BannerPatternItem(TagLoader.BannerPatterns.DEMONS_PATTERN, new Item.Properties()
+                    .stacksTo(1).rarity(Rarity.RARE)));
+    public static final DeferredItem<Item> HUMAN_BANNER_PATTERN = ITEMS.register("human_banner_pattern",
+            () -> new BannerPatternItem(TagLoader.BannerPatterns.HUMANS_PATTERN, new Item.Properties()
+                    .stacksTo(1).rarity(Rarity.RARE)));
+    public static final DeferredItem<Item> FAIRY_BANNER_PATTERN = ITEMS.register("fairy_banner_pattern",
+            () -> new BannerPatternItem(TagLoader.BannerPatterns.FAIRIES_PATTERN, new Item.Properties()
+                    .stacksTo(1).rarity(Rarity.RARE)));
+    public static final DeferredItem<Item> GENSAI_BANNER_PATTERN = ITEMS.register("gensai_banner_pattern",
+            () -> new BannerPatternItem(TagLoader.BannerPatterns.GENSAI_PATTERN, new Item.Properties()
+                    .stacksTo(1).rarity(Rarity.RARE)));
+    public static final DeferredItem<Item> ORC_BANNER_PATTERN = ITEMS.register("orc_banner_pattern",
+            () -> new BannerPatternItem(TagLoader.BannerPatterns.ORCS_PATTERN, new Item.Properties()
+                    .stacksTo(1).rarity(Rarity.RARE)));
+    public static final DeferredItem<Item> OGRE_BANNER_PATTERN = ITEMS.register("ogre_banner_pattern",
+            () -> new BannerPatternItem(TagLoader.BannerPatterns.OGRES_PATTERN, new Item.Properties()
+                    .stacksTo(1).rarity(Rarity.RARE)));
+
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

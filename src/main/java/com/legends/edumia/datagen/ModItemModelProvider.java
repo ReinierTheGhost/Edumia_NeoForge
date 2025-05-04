@@ -68,7 +68,14 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent(ItemLoader.FAIRY_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(ItemLoader.HUMAN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(ItemLoader.HIGH_ELVEN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
-
+        genericBannerPattern(ItemLoader.HIGH_ELVEN_BANNER_PATTERN.get());
+        genericBannerPattern(ItemLoader.DARK_ELVEN_BANNER_PATTERN.get());
+        genericBannerPattern(ItemLoader.HUMAN_BANNER_PATTERN.get());
+        genericBannerPattern(ItemLoader.DEMON_BANNER_PATTERN.get());
+        genericBannerPattern(ItemLoader.FAIRY_BANNER_PATTERN.get());
+        genericBannerPattern(ItemLoader.GENSAI_BANNER_PATTERN.get());
+        genericBannerPattern(ItemLoader.OGRE_BANNER_PATTERN.get());
+        genericBannerPattern(ItemLoader.ORC_BANNER_PATTERN.get());
     }
 
     public void wallItem(WallBlock block, Block baseBlock) {
@@ -109,7 +116,11 @@ public class ModItemModelProvider extends ItemModelProvider {
                 .texture("layer0",  ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID,
                         "item/" + name(baseBlock)));
     }
-
+    public void genericBannerPattern(Item item) {
+        this.withExistingParent(name(item), mcLoc("item/generated"))
+                .texture("layer0",  ResourceLocation.withDefaultNamespace(
+                        "item/creeper_banner_pattern"));
+    }
     public void genericBlockItemTexture(Block block, Block baseBlock, String appendix) {
         this.withExistingParent(name(block), mcLoc("item/generated"))
                 .texture("layer0",  ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID,
@@ -124,6 +135,14 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     public ResourceLocation key(Block block) {
         return BuiltInRegistries.BLOCK.getKey(block);
+    }
+
+    public ResourceLocation key(Item item) {
+        return BuiltInRegistries.ITEM.getKey(item);
+    }
+
+    public String name(Item item) {
+        return key(item).getPath();
     }
 
     public String name(Block block) {

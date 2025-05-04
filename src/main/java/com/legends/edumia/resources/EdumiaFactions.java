@@ -1,6 +1,7 @@
 package com.legends.edumia.resources;
 
 import com.legends.edumia.Edumia;
+import com.legends.edumia.core.TagLoader;
 import com.legends.edumia.resources.datas.Disposition;
 import com.legends.edumia.resources.datas.FactionType;
 import com.legends.edumia.resources.datas.factions.Faction;
@@ -8,6 +9,7 @@ import com.legends.edumia.resources.datas.factions.data.BannerData;
 import com.legends.edumia.resources.datas.factions.data.SpawnData;
 import com.legends.edumia.resources.datas.factions.data.SpawnDataHandler;
 import com.legends.edumia.resources.datas.npcs.data.NpcRank;
+import com.legends.edumia.utils.EdumiaBannerPatterns;
 import com.legends.edumia.utils.EdumiaLog;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
@@ -97,8 +99,8 @@ public class EdumiaFactions {
                             EdumiaNpcs.FAIRY_CIVILIAN
                     ));
                 }},
-                new BannerData(DyeColor.WHITE, List.of(
-                        new BannerData.BannerPatternWithColor(BannerPatterns.FLOWER, DyeColor.GREEN)
+                new BannerData(DyeColor.GREEN, List.of(
+                        new BannerData.BannerPatternWithColor(EdumiaBannerPatterns.FAIRIES, DyeColor.CYAN)
                 )),
                 new SpawnDataHandler(List.of(
                         new SpawnData(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "fairy.glyndoril"),
@@ -128,8 +130,8 @@ public class EdumiaFactions {
                             EdumiaNpcs.HUMAN_CIVILIAN
                     ));
                 }},
-                new BannerData(DyeColor.BROWN, List.of(
-                        new BannerData.BannerPatternWithColor(BannerPatterns.CROSS, DyeColor.RED)
+                new BannerData(DyeColor.BLUE, List.of(
+                        new BannerData.BannerPatternWithColor(EdumiaBannerPatterns.HUMANS, DyeColor.GRAY)
                 )),
                 new SpawnDataHandler(List.of(
                         new SpawnData(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "human.stormgard"),
@@ -158,8 +160,8 @@ public class EdumiaFactions {
                             EdumiaNpcs.HIGHELVEN_CIVILIAN
                     ));
                 }},
-                new BannerData(DyeColor.LIGHT_BLUE, List.of(
-                        new BannerData.BannerPatternWithColor(BannerPatterns.GLOBE, DyeColor.YELLOW)
+                new BannerData(DyeColor.ORANGE, List.of(
+                        new BannerData.BannerPatternWithColor(EdumiaBannerPatterns.HIGH_ELVEN, DyeColor.YELLOW)
                 )),
                 new SpawnDataHandler(List.of(
                         new SpawnData(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "highelves.elensar"),

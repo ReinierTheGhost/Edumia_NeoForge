@@ -3,16 +3,12 @@ package com.legends.edumia.entity.model;
 import com.legends.edumia.Edumia;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public final class EdumiaEntityModelLayers {
     public static final String MAIN = "main";
     public static final ModelLayerLocation FAIRY = create("fairy");
     public static final ModelLayerLocation HUMAN = create("human");
     public static final ModelLayerLocation HIGHELVEN = create("highelven");
-    public static final ModelLayerLocation FAIRY_WINGS = create("fairy_wings");
 
     // Helper to create layer locations
     private static ModelLayerLocation create(String name) {

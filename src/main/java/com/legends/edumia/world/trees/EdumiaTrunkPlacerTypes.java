@@ -85,6 +85,10 @@ public class EdumiaTrunkPlacerTypes {
     public static final Supplier<TrunkPlacerType<AncientOakTrunkPlacer>> ANCIENT_OAK_TRUNK_PLACER =
             TRUNK_PLACERS.register("ancient_oak_trunk_placer", () -> new TrunkPlacerType<>(AncientOakTrunkPlacer.CODEC));
 
+    public static final Supplier<TrunkPlacerType<ClusteredPalmTrunkPlacer>> CLUSTERED_PALM_TRUNK_PLACER =
+            TRUNK_PLACERS.register("clustered_palm_trunk_placer",
+                    () -> new TrunkPlacerType<>(ClusteredPalmTrunkPlacer.CODEC));
+
 
     public static void register(IEventBus eventBus) {
         TRUNK_PLACERS.register(eventBus);

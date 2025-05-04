@@ -115,6 +115,8 @@ public class EdumiaFoliagePlacerTypes {
 
     public static final Supplier<FoliagePlacerType<HeveaFoliagePlacer>> HEVEA_FOLIAGE_PLACER = FOLIAGE_PLACERS.register("hevea_foliage_placer",
             () -> new FoliagePlacerType<>(HeveaFoliagePlacer.CODEC));
+    public static final Supplier<FoliagePlacerType<ClusterPalmFoliagePlacer>> CLUSTER_PALM_FOLIAGE_PLACER = FOLIAGE_PLACERS.register("cluster_palm_foliage_placer",
+            () -> new FoliagePlacerType<>(ClusterPalmFoliagePlacer.CODEC));
 
     public static void register(IEventBus eventBus) {
         FOLIAGE_PLACERS.register(eventBus);

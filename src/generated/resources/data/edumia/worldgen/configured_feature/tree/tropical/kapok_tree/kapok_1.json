@@ -23,7 +23,7 @@
     "leaves_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "minecraft:jungle_leaves",
+        "Name": "edumia:kapok_leaves",
         "Properties": {
           "distance": "7",
           "persistent": "true",
@@ -32,30 +32,30 @@
       }
     },
     "leaves_target": [
-      "minecraft:jungle_leaves"
+      "edumia:kapok_leaves"
     ],
     "log_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "minecraft:jungle_wood",
+        "Name": "edumia:kapok_wood",
         "Properties": {
           "axis": "y"
         }
       }
     },
     "log_target": [
-      "edumia:jungle_wood_stairs",
-      "edumia:jungle_wood_slab",
-      "edumia:black_oak_wood_fence",
-      "minecraft:jungle_wood"
+      "edumia:kapok_wood_fence",
+      "edumia:kapok_wood",
+      "edumia:kapok_wood_slab",
+      "edumia:kapok_wood_stairs"
     ],
     "place_from_nbt": [
-      "edumia:jungle_wood_fence",
-      "minecraft:mangrove_roots",
-      "edumia:jungle_wood_slab",
-      "edumia:jungle_wood_stairs",
+      "edumia:kapok_wood_stairs",
+      "edumia:kapok_wood_fence",
+      "edumia:kapok_leaves",
+      "edumia:kapok_wood_slab",
       "edumia:banana_leaves",
-      "minecraft:jungle_leaves"
+      "minecraft:mangrove_roots"
     ]
   }
 }

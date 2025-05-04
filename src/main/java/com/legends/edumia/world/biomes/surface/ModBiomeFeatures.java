@@ -244,6 +244,9 @@ public class ModBiomeFeatures {
     public static void addReeds(List<ResourceKey<PlacedFeature>> vegetation) {
         vegetation.add(ReedsPlacedFeatures.REEDS);
     }
+    public static void addPapyrus(List<ResourceKey<PlacedFeature>> vegetation) {
+        vegetation.add(ReedsPlacedFeatures.PAPYRUS);
+    }
     public static void addElvenCrystal(List<ResourceKey<PlacedFeature>> vegetation) {
         vegetation.add(CrystalPlacedFeatures.ELVEN_CRYSTAL);
     }
@@ -365,30 +368,8 @@ public class ModBiomeFeatures {
     // endregion
 
     // region WILD CROPS
-    public static void addWildBeetroot(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addWildBellPepper(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addWildCarrot(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addWildCucumber(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
     public static void addWildFlax(List<ResourceKey<PlacedFeature>> vegetation) {
         //vegetation.add(FlowerPlacedFeatures.PATCH_FLAX_FLOWER_KEY);
-    }
-    public static void addWildGarlic(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addWildLeek(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addWildLettuce(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addWildOnion(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addWildPipeweed(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addWildPotato(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addWildTomato(List<ResourceKey<PlacedFeature>> vegetation) {
     }
     // endregion
 

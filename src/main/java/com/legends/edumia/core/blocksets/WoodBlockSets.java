@@ -19,6 +19,7 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import org.checkerframework.checker.units.qual.K;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,6 +68,8 @@ public class WoodBlockSets {
             false, ModTreeGrowers.GREEN_OAK, List.of(), TagLoader.Items.GREEN_OAK_LOGS, TagLoader.Blocks.GREEN_OAK_LOGS);
     public static SimpleBlockSet HOLLY = registerWoodSet("holly", WOOD_STRENGTH, false, true,
             false, ModTreeGrowers.HOLLY, List.of(), TagLoader.Items.HOLLY_LOGS, TagLoader.Blocks.HOLLY_LOGS);
+    public static SimpleBlockSet KAPOK = registerWoodSet("kapok", WOOD_STRENGTH, true, true,
+            false, ModTreeGrowers.KAPOK, List.of(), TagLoader.Items.KAPOK_LOGS, TagLoader.Blocks.KAPOK_LOGS);
     public static SimpleBlockSet LARCH = registerWoodSet("larch", WOOD_STRENGTH, true, true,
             false, ModTreeGrowers.APPLE, List.of(), TagLoader.Items.LARCH_LOGS, TagLoader.Blocks.LARCH_LOGS);
     public static SimpleBlockSet MAHOGANY = registerWoodSet("mahogany", WOOD_STRENGTH, true, true,
@@ -121,6 +124,7 @@ public class WoodBlockSets {
             GHOST_GUM,
             GREEN_OAK,
             HOLLY,
+            KAPOK,
             LARCH,
             MAHOGANY,
             MANGO,

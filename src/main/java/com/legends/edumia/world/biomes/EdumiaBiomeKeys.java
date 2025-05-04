@@ -45,7 +45,9 @@ public class EdumiaBiomeKeys extends Biomes {
 
     public static final ResourceKey<Biome> OGRE_FOREST = EdumiaBiomeKeys.register("ogre_forest");
 
-    public static final ResourceKey<Biome> FAIRY_FOREST = EdumiaBiomeKeys.register("fairy_forest");
+    public static final ResourceKey<Biome> MYRWOOD_JUNGLE = EdumiaBiomeKeys.register("myrwood_forest");
+    public static final ResourceKey<Biome> MYRWOOD_MANGROVE = EdumiaBiomeKeys.register("myrwood_mangrove");
+    public static final ResourceKey<Biome> MYRWOOD_COAST = EdumiaBiomeKeys.register("myrwood_coast");
 
     public static final ResourceKey<Biome> EDUMIA_FOOTHILLS = EdumiaBiomeKeys.register("edumia_foothills");
     public static final ResourceKey<Biome> EDUMIA_MOUNTAINS_BASE = EdumiaBiomeKeys.register("edumia_mountains_base");

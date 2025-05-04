@@ -1,10 +1,10 @@
 {
   "banner": {
-    "base_color": "light_blue",
+    "base_color": "orange",
     "patterns": [
       {
         "dye_color": "yellow",
-        "id": "minecraft:globe"
+        "id": "edumia:high_elven"
       }
     ]
   },
@@ -21,13 +21,7 @@
         "pool": [
           "edumia:highelven.civilian"
         ],
-        "rank": "KNIGHT"
-      },
-      {
-        "pool": [
-          "edumia:highelven.civilian"
-        ],
-        "rank": "SOLDIER"
+        "rank": "MILITIA"
       },
       {
         "pool": [
@@ -39,19 +33,25 @@
         "pool": [
           "edumia:highelven.civilian"
         ],
-        "rank": "VETERAN"
-      },
-      {
-        "pool": [
-          "edumia:highelven.civilian"
-        ],
-        "rank": "MILITIA"
+        "rank": "SOLDIER"
       },
       {
         "pool": [
           "edumia:highelven.civilian"
         ],
         "rank": "LEADER"
+      },
+      {
+        "pool": [
+          "edumia:highelven.civilian"
+        ],
+        "rank": "VETERAN"
+      },
+      {
+        "pool": [
+          "edumia:highelven.civilian"
+        ],
+        "rank": "KNIGHT"
       }
     ]
   },

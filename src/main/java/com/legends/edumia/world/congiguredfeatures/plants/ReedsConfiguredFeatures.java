@@ -18,10 +18,16 @@ import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStatePr
 public class ReedsConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> REEDS = registerKey("reeds");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> PAPYRUS = registerKey("papyrus");
+
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context){
         register(context, REEDS, EdumiaFeatures.REEDS.get(), new ReedsFeatureConfig(new WeightedStateProvider(
                 SimpleWeightedRandomList.<BlockState>builder().add(ModNatureBlocks.REEDS.get().defaultBlockState(),900)
                         .add(ModNatureBlocks.DRIED_REEDS.get().defaultBlockState(), 100)),
+                32, 5, 2, 5, 0.75f));
+
+        register(context, PAPYRUS, EdumiaFeatures.REEDS.get(), new ReedsFeatureConfig(new WeightedStateProvider(
+                SimpleWeightedRandomList.<BlockState>builder().add(ModNatureBlocks.PAPYRUS.get().defaultBlockState(),900)),
                 32, 5, 2, 5, 0.75f));
     }
 
