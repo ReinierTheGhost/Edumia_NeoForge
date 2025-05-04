@@ -1,4 +1,4 @@
-// 1.21.1	2025-05-04T20:46:07.5629737	Block States: edumia
+// 1.21.1	2025-05-04T20:52:29.2033768	Block States: edumia
 90ce80f4b71e9a8b4392945f5ee19c4d0492671c assets/edumia/blockstates/acacia_beam.json
 a147bf37720d80d33284a13e3e1dd4bcc2f453b2 assets/edumia/blockstates/acacia_wood_fence.json
 e3c1cdd452f0c7d3bcddf4005302d83aa76a0341 assets/edumia/blockstates/acacia_wood_slab.json
@@ -821,6 +821,7 @@ f79dbb5cb8777f9c8883d749d616ab30f154c823 assets/edumia/blockstates/holly_wood_fe
 86dd0c642b3bdbe48f4265ba230e5eff9a898206 assets/edumia/blockstates/jacaranda_door.json
 070938d3c022a7b7c126281e3648d3ab624c9b5d assets/edumia/blockstates/jacaranda_fence.json
 a39cf2a337e338aed492e3624273a8a07a2fdcdb assets/edumia/blockstates/jacaranda_fence_gate.json
+138928285a8cb9188ae09b7c6d5642f81c5ad804 assets/edumia/blockstates/jacaranda_leaves.json
 fc2d6b31cb96b24bc4908a0a938dbedda89a1d47 assets/edumia/blockstates/jacaranda_log.json
 afbe57c17faadec45957c6d8660bf66d43f4b872 assets/edumia/blockstates/jacaranda_planks.json
 9b7bae46afacbfac438e6fdd446f169049a256c7 assets/edumia/blockstates/jacaranda_pressure_plate.json
@@ -1018,6 +1019,7 @@ d4fe43c8a1e103386c614f476791e899cdbca4f1 assets/edumia/blockstates/marigold.json
 d251785df9fe91bcb3ff81751e5e4beb2e4addd4 assets/edumia/blockstates/mirwoodnut_door.json
 f29b3d7b40f2e5e9f8f2af65480b7987992ddddd assets/edumia/blockstates/mirwoodnut_fence.json
 3148b0c29ac4430ddf3c1ddbbe78070429117d3e assets/edumia/blockstates/mirwoodnut_fence_gate.json
+99c1a1c309f9c91c87ffdd9ef1ab42b8b508e7b2 assets/edumia/blockstates/mirwoodnut_leaves.json
 d36007412845d388e7744e4cee640fd81e9e4853 assets/edumia/blockstates/mirwoodnut_log.json
 f620c007361e3ee1b7ba29d16b83412140257cd2 assets/edumia/blockstates/mirwoodnut_planks.json
 68553b77affa13187f8acaf256b67245ed02c087 assets/edumia/blockstates/mirwoodnut_pressure_plate.json
@@ -3746,6 +3748,7 @@ f37c0db904aa3ed513f4fae744a35659755d2df6 assets/edumia/models/block/jacaranda_do
 e4ead4095669e79f44b85273ecb5980c6eed0901 assets/edumia/models/block/jacaranda_fence_gate_wall_open.json
 7f193fbdff814c0937c1fb62f8560025efc1a886 assets/edumia/models/block/jacaranda_fence_post.json
 e3a9b7cb7b025a406d106a06672b04370c6dbece assets/edumia/models/block/jacaranda_fence_side.json
+869870676c817c15005a31a0231613e8df0fce86 assets/edumia/models/block/jacaranda_leaves.json
 062e3ab5613c90eee98715de11371e244eec1c4a assets/edumia/models/block/jacaranda_log.json
 97c69c28cdc0017b4b6afeacf4002d651f54c9f9 assets/edumia/models/block/jacaranda_log_horizontal.json
 f9d094e416dff06eeb0828a38aa84511a8afe941 assets/edumia/models/block/jacaranda_planks.json
@@ -4238,6 +4241,7 @@ b6acc1b56a3fa36793f9632ce48a120393442507 assets/edumia/models/block/mirwoodnut_f
 105d6a4251a7b695a656e91a27d6526333aed946 assets/edumia/models/block/mirwoodnut_fence_gate_wall_open.json
 048a0a2674fe715f785c1f809f7871467a798fd8 assets/edumia/models/block/mirwoodnut_fence_post.json
 17f2a4363a22d03a378f200bd7a5c9a206cef02b assets/edumia/models/block/mirwoodnut_fence_side.json
+e4f55f1e55a950c51ef2832a49303fca40197efe assets/edumia/models/block/mirwoodnut_leaves.json
 cfa354329f45c1ba2c1e3d34a0c08768bbd7e41a assets/edumia/models/block/mirwoodnut_log.json
 0f2ea7a6655e8266244a6db7b12cb665b44981ac assets/edumia/models/block/mirwoodnut_log_horizontal.json
 17b6d38355ba79610745822e70f8cb4b0dcc6d3d assets/edumia/models/block/mirwoodnut_planks.json
@@ -6652,6 +6656,7 @@ a9c991f63a6e1fc56eb72e09a5ae07e27723b5b7 assets/edumia/models/item/holly_wood_sl
 f185bace331a3a2854c46d1c82e9858843ceec69 assets/edumia/models/item/holly_wood_stairs.json
 2de3fb11250c244470752f73d33d5d0779a2a1e2 assets/edumia/models/item/jacaranda_beam.json
 324c6473fc5c6be2f429ffc66814335abbb53736 assets/edumia/models/item/jacaranda_fence_gate.json
+4e312531763e88300c251a86ac58b937c230cc22 assets/edumia/models/item/jacaranda_leaves.json
 eacad9a06324d63c7d5880f387becc5e65885009 assets/edumia/models/item/jacaranda_log.json
 59efd4823f678e380bee6e9c631d98cef8e234e4 assets/edumia/models/item/jacaranda_planks.json
 c3f86ed5d276164b372178009df690ad11f2f7f9 assets/edumia/models/item/jacaranda_pressure_plate.json
@@ -6794,6 +6799,7 @@ dc6ca54bafdcc57b28d122ef868f0a54a73f384b assets/edumia/models/item/maple_wood_sl
 559ee08873492ee05200ccbcbedc2b92b3df1165 assets/edumia/models/item/maple_wood_stairs.json
 5ec0b24e61c85aadca5ff7bebb3ebb548a0ed4f7 assets/edumia/models/item/mirwoodnut_beam.json
 84710632279c0a185d3d151962c8fe2ddba24f81 assets/edumia/models/item/mirwoodnut_fence_gate.json
+e00607ea0872aae6414a26569cff842ca83b18c2 assets/edumia/models/item/mirwoodnut_leaves.json
 8b1c13a8dff374664dbaba4c76b49aa05e454554 assets/edumia/models/item/mirwoodnut_log.json
 53ee3ffb7188d4383f302658bec7f1fec66fd5f7 assets/edumia/models/item/mirwoodnut_planks.json
 9b256bfb92684d7549086e6f0ccf5d8536e0e01c assets/edumia/models/item/mirwoodnut_pressure_plate.json

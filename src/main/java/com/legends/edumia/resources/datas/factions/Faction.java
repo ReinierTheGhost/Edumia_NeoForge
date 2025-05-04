@@ -22,6 +22,8 @@ import net.minecraft.nbt.StringTag;
 import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.network.chat.Style;
+import net.minecraft.network.chat.TextColor;
 import net.minecraft.network.chat.contents.TranslatableContents;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
@@ -389,7 +391,7 @@ public class Faction {
             String base = "description.edumia.%s.description_%s".formatted(id.getPath(), "%s");
             while(hasDescription){
                 String langPath = base.formatted(descriptions.size());
-                Component text = Component.translatable(langPath);
+                Component text = Component.translatable(langPath).withStyle(Style.EMPTY.withColor(ChatFormatting.WHITE));
                 if(!Objects.equals(text.getString(), langPath)){
                     descriptions.add(text);
                 } else {

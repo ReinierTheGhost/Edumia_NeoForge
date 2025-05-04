@@ -1,7 +1,7 @@
 {
   "type": "edumia:tree_from_nbt",
   "config": {
-    "base_location": "edumia:features/trees/kapok/kapok_trunk_6",
+    "base_location": "edumia:features/trees/mirwoodnut/mirwoodnut_trunk_1",
     "can_grow_on_filter": {
       "type": "minecraft:matching_block_tag",
       "tag": "edumia:mahogany_sapling"
@@ -9,7 +9,7 @@
     "can_leaves_place_filter": {
       "type": "minecraft:replaceable"
     },
-    "canopy_location": "edumia:features/trees/kapok/kapok_canopy_6",
+    "canopy_location": "edumia:features/trees/mirwoodnut/mirwoodnut_canopy_1",
     "decorators": [
       {
         "type": "minecraft:leave_vine",
@@ -17,13 +17,17 @@
       },
       {
         "type": "minecraft:trunk_vine"
+      },
+      {
+        "type": "minecraft:cocoa",
+        "probability": 0.5
       }
     ],
-    "height": 21,
+    "height": 13,
     "leaves_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "edumia:kapok_leaves",
+        "Name": "edumia:mirwoodnut_leaves",
         "Properties": {
           "distance": "7",
           "persistent": "true",
@@ -37,25 +41,25 @@
     "log_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "edumia:kapok_wood",
+        "Name": "edumia:mirwoodnut_wood",
         "Properties": {
           "axis": "y"
         }
       }
     },
     "log_target": [
-      "edumia:kapok_wood_stairs",
-      "edumia:kapok_wood_slab",
-      "edumia:kapok_wood",
-      "edumia:kapok_wood_fence"
+      "edumia:mirwoodnut_wood_stairs",
+      "edumia:mirwoodnut_wood_slab",
+      "edumia:mirwoodnut_wood_fence",
+      "edumia:mirwoodnut_wood"
     ],
     "place_from_nbt": [
-      "edumia:kapok_wood_stairs",
+      "edumia:mirwoodnut_leaves",
       "edumia:banana_leaves",
-      "edumia:kapok_leaves",
+      "edumia:mirwoodnut_wood_stairs",
+      "edumia:mirwoodnut_wood_fence",
       "minecraft:mangrove_roots",
-      "edumia:kapok_wood_slab",
-      "edumia:kapok_wood_fence"
+      "edumia:mirwoodnut_wood_slab"
     ]
   }
 }

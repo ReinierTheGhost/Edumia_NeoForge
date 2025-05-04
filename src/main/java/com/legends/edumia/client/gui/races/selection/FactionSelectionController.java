@@ -10,6 +10,7 @@ import com.legends.edumia.resources.datas.factions.data.SpawnDataHandler;
 import com.legends.edumia.resources.datas.npcs.data.NpcGearData;
 import com.legends.edumia.resources.datas.races.Race;
 import com.legends.edumia.utils.EdumiaLog;
+import net.minecraft.ChatFormatting;
 import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -21,6 +22,7 @@ import org.joml.Vector2d;
 import org.joml.Vector2i;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class FactionSelectionController {
     private Map<Disposition, List<Faction>> factions = null;
@@ -415,7 +417,10 @@ public class FactionSelectionController {
     public List<Component> getCurrentFactionDescriptions() {
         Faction faction = getCurrentlySelectedFaction();
         if(faction != null){
-            return faction.getDescription();
+            return faction.getDescription().stream()
+                    .map(text -> text.copy().withStyle(ChatFormatting.WHITE))
+                    .collect(Collectors.toList())
+                    ;
         }
         return null;
     }

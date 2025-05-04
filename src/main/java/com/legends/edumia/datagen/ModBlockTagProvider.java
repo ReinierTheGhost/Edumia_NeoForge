@@ -51,9 +51,14 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.LOGS)
                 .add(Logs.logs.toArray(new Block[0]));
+        tag(BlockTags.LEAVES)
+                .add(Leaves.leaves.toArray(new Block[0]));
 
         tag(TagLoader.Blocks.GROUND_MAHOGANY_SAPLING)
                 .add(Blocks.DIRT);
+        tag(BlockTags.JUNGLE_LOGS)
+                .add(WoodBlockSets.MIRWOODNUT.log().get())
+                .add(WoodBlockSets.MIRWOODNUT.wood().get());
 
         for (WoodBlockSets.SimpleBlockSet set : WoodBlockSets.sets){
             tag(set.logBlockTag())

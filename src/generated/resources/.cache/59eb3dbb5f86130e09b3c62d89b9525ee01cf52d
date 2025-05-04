@@ -1,4 +1,4 @@
-// 1.21.1	2025-05-04T20:46:07.6260024	Loot Tables
+// 1.21.1	2025-05-04T20:52:29.2348	Loot Tables
 e2e084dc074419dc92cea6e8c8e4b55544abe8a9 data/edumia/loot_table/blocks/acacia_beam.json
 48dea1c4c657ef265adaa4964922687a58720e07 data/edumia/loot_table/blocks/acacia_wood_fence.json
 2a4bb888c13048fc2acad9f55a5245f6ad35fc92 data/edumia/loot_table/blocks/acacia_wood_slab.json
@@ -825,6 +825,7 @@ fb83734558a07fb7431fc2a306cb779e0124334b data/edumia/loot_table/blocks/jacaranda
 a20f60aa78ead298e69610abe25b557a75486af7 data/edumia/loot_table/blocks/jacaranda_door.json
 7fad53a19abbb98d6cf4b8d851e5b58f3e663617 data/edumia/loot_table/blocks/jacaranda_fence.json
 6db12ecc810682f0d5595fd4a19041fa90614b7a data/edumia/loot_table/blocks/jacaranda_fence_gate.json
+e72e3afe91161d5cada115c6774eeef98e79d79b data/edumia/loot_table/blocks/jacaranda_leaves.json
 7a979070c20a0e1e3caf74f2dcfbc9eafbb2e793 data/edumia/loot_table/blocks/jacaranda_log.json
 c50b948f2807a3ae8b45831c9964a0666e64de75 data/edumia/loot_table/blocks/jacaranda_planks.json
 44b93fe7c5138d675c17db3451048b363ba30d2f data/edumia/loot_table/blocks/jacaranda_pressure_plate.json
@@ -1023,6 +1024,7 @@ fa04be17a364996904fd191da2ee49948b3ef038 data/edumia/loot_table/blocks/maple_woo
 910c2e169908e1814c5c04e4cf7716c813a0d7ee data/edumia/loot_table/blocks/mirwoodnut_door.json
 52df5e06b3782b6f9fe9d612d9b066a4ef8244a5 data/edumia/loot_table/blocks/mirwoodnut_fence.json
 3b2a9841708422ac42f37567c19682e816bb8b80 data/edumia/loot_table/blocks/mirwoodnut_fence_gate.json
+c6044fe13f6b6fbc6515ae7d8f8d431ba33796f5 data/edumia/loot_table/blocks/mirwoodnut_leaves.json
 44eadefaf78fdfeea96891a8036affab56f6f608 data/edumia/loot_table/blocks/mirwoodnut_log.json
 f03c95c3394fa14f5ee329e5f0c33deb23717c32 data/edumia/loot_table/blocks/mirwoodnut_planks.json
 274eb921289de46c2d6771734cecf6ec0a06a8d2 data/edumia/loot_table/blocks/mirwoodnut_pressure_plate.json

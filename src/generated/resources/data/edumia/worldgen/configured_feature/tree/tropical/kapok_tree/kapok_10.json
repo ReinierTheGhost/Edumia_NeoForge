@@ -32,7 +32,7 @@
       }
     },
     "leaves_target": [
-      "edumia:kapok_leaves"
+      "minecraft:green_wool"
     ],
     "log_provider": {
       "type": "minecraft:simple_state_provider",
@@ -44,18 +44,18 @@
       }
     },
     "log_target": [
+      "edumia:kapok_wood_stairs",
       "edumia:kapok_wood_slab",
       "edumia:kapok_wood",
-      "edumia:kapok_wood_stairs",
       "edumia:kapok_wood_fence"
     ],
     "place_from_nbt": [
       "edumia:kapok_wood_stairs",
-      "edumia:kapok_wood_fence",
+      "edumia:banana_leaves",
       "edumia:kapok_leaves",
       "minecraft:mangrove_roots",
-      "edumia:banana_leaves",
-      "edumia:kapok_wood_slab"
+      "edumia:kapok_wood_slab",
+      "edumia:kapok_wood_fence"
     ]
   }
 }

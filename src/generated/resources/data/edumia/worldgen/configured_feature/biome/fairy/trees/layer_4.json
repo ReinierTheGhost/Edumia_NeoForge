@@ -18,6 +18,13 @@
         }
       },
       {
+        "chance": 0.05,
+        "feature": {
+          "feature": "edumia:tree/tropical/mirwoodnut_tree/mirwoodnut_1",
+          "placement": []
+        }
+      },
+      {
         "chance": 0.1,
         "feature": {
           "feature": "edumia:tree/tropical/mahogany_tree/mahogany_1",

@@ -59,7 +59,7 @@ public class ModTreeGrowers {
             Optional.of(TropicalTreeConfiguredFeatures.MANGO_TWO), Optional.empty(), Optional.empty());
 
     public static final TreeGrower MIRWOODNUT = new TreeGrower(Edumia.MOD_ID + ":mirwoodnut",
-            Optional.empty(), Optional.of(MahoganyConfiguredFeatures.MAHOGANY), Optional.empty());
+            Optional.empty(), Optional.of(MirwoodNutTreeConfiguredFeatures.MIRWOODNUT_1), Optional.empty());
 
     public static final TreeGrower PALM = new TreeGrower(Edumia.MOD_ID + ":palm",
             Optional.empty(), Optional.of(SaplingConfiguredFeatures.PALM_TREES), Optional.empty());

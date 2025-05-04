@@ -72,6 +72,7 @@ public class ModConfiguredFeatures {
         DeadTreeConfiguredFeatures.bootstrap(context);
         DiskConfiguredFeatures.boostrap(context);
         SubTropicalTreeConfiguredFeatures.bootstrap(context);
+        MirwoodNutTreeConfiguredFeatures.bootstrap(context);
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name){

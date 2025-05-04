@@ -2,6 +2,7 @@ package com.legends.edumia.client.gui.widget.text;
 
 import com.legends.edumia.client.gui.widget.ModWidget;
 import com.legends.edumia.utils.resources.FileUtils;
+import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.resources.language.LanguageManager;
@@ -135,7 +136,7 @@ public class TextBlockWidget  extends ModWidget {
             if(word != words.getLast())
                 textContentBuilder.append(" ");
         }
-        return Component.literal(textContentBuilder.toString());
+        return Component.literal(textContentBuilder.toString()).withStyle(ChatFormatting.WHITE);
     }
 
     private void drawTextLimitLine(GuiGraphics context, int currentStart) {
@@ -149,7 +150,7 @@ public class TextBlockWidget  extends ModWidget {
             Component text = getJustifiedTextFromList(currentLine);
             Component lastWordText = Component.literal(currentLine.getLast().content);
             context.drawString(textRenderer, text,
-                    startX, startY + currentStart, 0, false);
+                    startX, startY + currentStart, CommonColors.WHITE, false);
             context.drawString(textRenderer, lastWordText,
                     startX + width - textRenderer.width(lastWordText), startY + currentStart, 0, false);
         } else {
@@ -162,7 +163,7 @@ public class TextBlockWidget  extends ModWidget {
             };
 
             context.drawString(textRenderer, text,
-                    x, startY + currentStart, 0, false);
+                    x, startY + currentStart, CommonColors.WHITE, false);
         }
     }
 
@@ -201,7 +202,7 @@ public class TextBlockWidget  extends ModWidget {
                     stringBuilder.append(" ".repeat(1 + extraSpaceAmount));
             }
         }
-        return Component.literal(stringBuilder.toString());
+        return Component.literal(stringBuilder.toString()).withStyle(ChatFormatting.WHITE);
     }
 
     private Component getTextFromList(List<Word> currentLine) {
@@ -212,7 +213,7 @@ public class TextBlockWidget  extends ModWidget {
                 if (!hasNoSpace)
                     stringBuilder.append(" ");
         }
-        return Component.literal(stringBuilder.toString());
+        return Component.literal(stringBuilder.toString()).withStyle(ChatFormatting.WHITE);
     }
 
     private List<Word> getWordListFromText(Component textToSplit, boolean hasNoSpace){

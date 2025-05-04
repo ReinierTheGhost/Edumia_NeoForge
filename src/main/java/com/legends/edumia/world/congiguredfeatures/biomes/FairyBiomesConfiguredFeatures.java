@@ -42,6 +42,8 @@ public class FairyBiomesConfiguredFeatures {
                         new WeightedPlacedFeature(
                                 PlacementUtils.inlinePlaced(holdergetter.getOrThrow(KapokTreeConfiguredFeatures.KAPOK_1)), 0.02f),
                         new WeightedPlacedFeature(
+                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(MirwoodNutTreeConfiguredFeatures.MIRWOODNUT_1)), 0.05f),
+                        new WeightedPlacedFeature(
                                 PlacementUtils.inlinePlaced(holdergetter.getOrThrow(MahoganyConfiguredFeatures.MAHOGANY_1)), 0.10f),
                         new WeightedPlacedFeature(
                                 PlacementUtils.inlinePlaced(holdergetter.getOrThrow(PalmConfiguredFeatures.GROUND_PALM_1)), 0.20f),
