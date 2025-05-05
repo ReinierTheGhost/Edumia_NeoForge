@@ -4,6 +4,8 @@ import com.legends.edumia.client.EdumiaKeyHandler;
 import com.legends.edumia.client.gui.EdumiaMasterMenuScreen;
 import com.legends.edumia.core.blocksets.GlassSets;
 import com.legends.edumia.entity.EdumiaEntities;
+import com.legends.edumia.entity.races.darkelves.DarkElvenRenderer;
+import com.legends.edumia.entity.races.darkelves.DarkElvenVariant;
 import com.legends.edumia.entity.races.fairy.FairyRenderer;
 import com.legends.edumia.entity.races.highelves.HighElvenRenderer;
 import com.legends.edumia.entity.races.human.HumanRenderer;
@@ -27,6 +29,7 @@ public class EdumiaClient {
         EntityRenderers.register(EdumiaEntities.FAIRY_CIVILIAN.get(), FairyRenderer::new);
         EntityRenderers.register(EdumiaEntities.HUMAN_CIVILIAN.get(), HumanRenderer::new);
         EntityRenderers.register(EdumiaEntities.HIGH_ELVEN_CIVILIAN.get(), HighElvenRenderer::new);
+        EntityRenderers.register(EdumiaEntities.DARK_ELVEN_CIVILIAN.get(), DarkElvenRenderer::new);
 
         for (GlassSets.GlassSet set : GlassSets.glassSets) {
             ItemBlockRenderTypes.setRenderLayer(set.block().get(), RenderType.translucent());

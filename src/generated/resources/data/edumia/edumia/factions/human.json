@@ -10,8 +10,8 @@
   },
   "command_join": [],
   "command_leave": [],
-  "disposition": "EVIL",
-  "faction_selection_order_index": 0,
+  "disposition": "NEUTRAL",
+  "faction_selection_order_index": 1,
   "faction_type": "FACTION",
   "id": "edumia:human",
   "joinable": true,
@@ -21,7 +21,7 @@
         "pool": [
           "edumia:human.civilian"
         ],
-        "rank": "CIVILIAN"
+        "rank": "SOLDIER"
       },
       {
         "pool": [
@@ -33,25 +33,25 @@
         "pool": [
           "edumia:human.civilian"
         ],
+        "rank": "CIVILIAN"
+      },
+      {
+        "pool": [
+          "edumia:human.civilian"
+        ],
         "rank": "VETERAN"
       },
       {
         "pool": [
           "edumia:human.civilian"
         ],
-        "rank": "MILITIA"
-      },
-      {
-        "pool": [
-          "edumia:human.civilian"
-        ],
-        "rank": "SOLDIER"
-      },
-      {
-        "pool": [
-          "edumia:human.civilian"
-        ],
         "rank": "KNIGHT"
+      },
+      {
+        "pool": [
+          "edumia:human.civilian"
+        ],
+        "rank": "MILITIA"
       }
     ]
   },

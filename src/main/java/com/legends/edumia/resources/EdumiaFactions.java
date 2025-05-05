@@ -37,7 +37,7 @@ public class EdumiaFactions {
     public static final Faction HUMAN;
     public static final Faction FAIRIES;
 //    public static final Faction GENSAI;
-//    public static final Faction DARK_ELVES;
+    public static final Faction DARK_ELVES;
 //    public static final Faction ORCS;
 //    public static final Faction DEMONS;
 //    public static final Faction OGRES;
@@ -55,6 +55,7 @@ public class EdumiaFactions {
         register(context, factionHolderGetter, HIGH_ELVES);
         register(context, factionHolderGetter, FAIRIES);
         register(context, factionHolderGetter, HUMAN);
+        register(context, factionHolderGetter, DARK_ELVES);
     }
 
     private static Faction register(BootstrapContext<Faction> context, HolderGetter<Faction> factionHolderGetter, Faction faction) {
@@ -78,7 +79,7 @@ public class EdumiaFactions {
 
     static {
         // region [FAIRIES]
-        FAIRIES = new Faction("fairies", true, Disposition.GOOD, FactionType.FACTION, null, null,
+        FAIRIES = new Faction("fairies", true, Disposition.NEUTRAL, FactionType.FACTION, null, null,
                 new HashMap<>(){{
                     put(NpcRank.CIVILIAN, List.of(
                             EdumiaNpcs.FAIRY_CIVILIAN
@@ -109,7 +110,7 @@ public class EdumiaFactions {
         );
         // endregion
 
-        HUMAN = new Faction("human", true, Disposition.EVIL, FactionType.FACTION, null, null,
+        HUMAN = new Faction("human", true, Disposition.NEUTRAL, FactionType.FACTION, null, null,
                 new HashMap<>(){{
                     put(NpcRank.CIVILIAN, List.of(
                             EdumiaNpcs.HUMAN_CIVILIAN
@@ -166,6 +167,36 @@ public class EdumiaFactions {
                 new SpawnDataHandler(List.of(
                         new SpawnData(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "highelves.elensar"),
                                 new Vector2d(570, 1840))
+                )), List.of(), List.of()
+        );
+
+        DARK_ELVES = new Faction("dark_elves", true, Disposition.NEUTRAL, FactionType.FACTION, null, null,
+                new HashMap<>(){{
+                    put(NpcRank.CIVILIAN, List.of(
+                            EdumiaNpcs.DARKELVEN_CIVILIAN
+                    ));
+                    put(NpcRank.MILITIA, List.of(
+                            EdumiaNpcs.DARKELVEN_CIVILIAN
+                    ));
+                    put(NpcRank.SOLDIER, List.of(
+                            EdumiaNpcs.DARKELVEN_CIVILIAN
+                    ));
+                    put(NpcRank.KNIGHT, List.of(
+                            EdumiaNpcs.DARKELVEN_CIVILIAN
+                    ));
+                    put(NpcRank.VETERAN, List.of(
+                            EdumiaNpcs.DARKELVEN_CIVILIAN
+                    ));
+                    put(NpcRank.LEADER, List.of(
+                            EdumiaNpcs.DARKELVEN_CIVILIAN
+                    ));
+                }},
+                new BannerData(DyeColor.BLUE, List.of(
+                        new BannerData.BannerPatternWithColor(EdumiaBannerPatterns.DARK_ELVEN, DyeColor.PURPLE)
+                )),
+                new SpawnDataHandler(List.of(
+                        new SpawnData(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "darkelven.nyxarith"),
+                                new Vector2d(1980, 525))
                 )), List.of(), List.of()
         );
     }

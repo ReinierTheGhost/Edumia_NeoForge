@@ -34,6 +34,7 @@ public class EdumiaRaces {
     public final static Race FAIRY;
     public final static Race HUMAN;
     public final static Race HIGHELVES;
+    public final static Race DARKELVES;
 
 
     @SubscribeEvent
@@ -46,6 +47,7 @@ public class EdumiaRaces {
     public static void bootstrap(BootstrapContext<Race> context) {
         HolderGetter<Race> raceRegistryEntryLookup = context.lookup(RACE_KEY);
         // Registering all races
+        register(context, raceRegistryEntryLookup, DARKELVES);
         register(context, raceRegistryEntryLookup, HIGHELVES);
         register(context, raceRegistryEntryLookup, FAIRY);
         register(context, raceRegistryEntryLookup, HUMAN);
@@ -67,6 +69,16 @@ public class EdumiaRaces {
 
 
     static {
+
+        DARKELVES = new Race(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "darkelves"), RaceType.DARK_ELF,
+                new AttributeData(new HashMap<>(){{
+                    put(Attributes.SCALE, 1.05);
+                    put(Attributes.MAX_HEALTH, 22.0);
+                    put(Attributes.ATTACK_DAMAGE, 1.0);
+                    put(Attributes.ENTITY_INTERACTION_RANGE, 2.75);
+                    put(Attributes.MOVEMENT_SPEED, 0.1);
+                    put(Attributes.FALL_DAMAGE_MULTIPLIER, 0.75);
+                }}), List.of(), List.of(), List.of());
 
         HIGHELVES = new Race(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "highelves"), RaceType.HIGH_ELF,
                 new AttributeData(new HashMap<>(){{

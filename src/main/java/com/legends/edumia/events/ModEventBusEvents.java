@@ -6,6 +6,7 @@ import com.legends.edumia.client.models.npcs.HumanModel;
 import com.legends.edumia.client.models.npcs.FairyModel;
 import com.legends.edumia.entity.EdumiaEntities;
 import com.legends.edumia.entity.model.EdumiaEntityModelLayers;
+import com.legends.edumia.entity.races.darkelves.DarkElfEntity;
 import com.legends.edumia.entity.races.fairy.FairyEntity;
 import com.legends.edumia.entity.races.highelves.HighElfEntity;
 import com.legends.edumia.entity.races.human.HumanEntity;
@@ -29,6 +30,7 @@ public class ModEventBusEvents {
         event.registerLayerDefinition(EdumiaEntityModelLayers.FAIRY, () -> FairyModel.createBodyLayer(CubeDeformation.NONE));
         event.registerLayerDefinition(EdumiaEntityModelLayers.HUMAN, () -> HumanModel.createBodyLayer(CubeDeformation.NONE));
         event.registerLayerDefinition(EdumiaEntityModelLayers.HIGHELVEN, () -> ElvenModel.createBodyLayer(CubeDeformation.NONE));
+        event.registerLayerDefinition(EdumiaEntityModelLayers.DARKELVEN, () -> ElvenModel.createBodyLayer(CubeDeformation.NONE));
     }
 
 
@@ -38,6 +40,7 @@ public class ModEventBusEvents {
         event.put(EdumiaEntities.FAIRY_CIVILIAN.get(), FairyEntity.setSoldierAttribute().build());
         event.put(EdumiaEntities.HUMAN_CIVILIAN.get(), HumanEntity.setSoldierAttribute().build());
         event.put(EdumiaEntities.HIGH_ELVEN_CIVILIAN.get(), HighElfEntity.setSoldierAttribute().build());
+        event.put(EdumiaEntities.DARK_ELVEN_CIVILIAN.get(), DarkElfEntity.setSoldierAttribute().build());
     }
 
     @SubscribeEvent
@@ -47,6 +50,8 @@ public class ModEventBusEvents {
         event.register(EdumiaEntities.HUMAN_CIVILIAN.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                 Mob::checkMobSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
         event.register(EdumiaEntities.HIGH_ELVEN_CIVILIAN.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                Mob::checkMobSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
+        event.register(EdumiaEntities.DARK_ELVEN_CIVILIAN.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                 Mob::checkMobSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
     }
 }

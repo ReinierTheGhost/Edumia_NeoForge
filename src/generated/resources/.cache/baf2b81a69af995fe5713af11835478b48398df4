@@ -1,4 +1,4 @@
-// 1.21.1	2025-05-04T20:46:07.5629737	Item Models: edumia
+// 1.21.1	2025-05-05T23:54:33.3499244	Item Models: edumia
 047baa6b7a95aadfec14d478dfdf8c290cbd8220 assets/edumia/models/item/acacia_wood_fence.json
 4879a2f3030853ef57cc6d67266684061b3752ec assets/edumia/models/item/acacia_wood_wall.json
 386253d46a85a3515508b2f2812157712b0633d8 assets/edumia/models/item/almond_button.json
@@ -123,6 +123,7 @@ b5e2e76947701f3dcc5bb05cb0595aee8d2e39bf assets/edumia/models/item/cypress_door.
 55c28993d513cf93c508a676ee840ce5952563c1 assets/edumia/models/item/cypress_wood_wall.json
 ebe591ac23d8bbfbd806a0ab951b20cdc2b3cd5f assets/edumia/models/item/daisy.json
 635d2a086fa955a1635a40031984e4d4a1e1afad assets/edumia/models/item/dark_elven_banner_pattern.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/edumia/models/item/dark_elven_spawn_egg.json
 bb5f251eaa3992a3a69a74ebb0ae88b732f9df4a assets/edumia/models/item/dark_high_elven_bricks_wall.json
 2117fa76475ead784ce600cfe52ba88fc8e410b2 assets/edumia/models/item/dark_high_elven_cobblestone_wall.json
 00ad21ac13d8f2cef50ef4c0a8b8cd8c36369dd3 assets/edumia/models/item/dark_high_elven_rock_wall.json

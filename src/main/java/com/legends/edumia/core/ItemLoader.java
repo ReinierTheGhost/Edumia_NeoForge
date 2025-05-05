@@ -189,6 +189,10 @@ public class ItemLoader {
             () -> new DeferredSpawnEggItem(EdumiaEntities.HIGH_ELVEN_CIVILIAN, 0x40AFE8, 0x11FFCF,
                     new Item.Properties()));
 
+    public static final DeferredItem<Item> DARK_ELVEN_SPAWN_EGG = ITEMS.register("dark_elven_spawn_egg",
+            () -> new DeferredSpawnEggItem(EdumiaEntities.DARK_ELVEN_CIVILIAN, 0x321232, 0x070514,
+                    new Item.Properties()));
+
     public static final DeferredItem<Item> HIGH_ELVEN_BANNER_PATTERN = ITEMS.register("high_elven_banner_pattern",
             () -> new BannerPatternItem(TagLoader.BannerPatterns.HIGH_ELVEN_PATTERN, new Item.Properties()
                     .stacksTo(1).rarity(Rarity.RARE)));

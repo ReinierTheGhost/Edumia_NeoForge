@@ -68,6 +68,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent(ItemLoader.FAIRY_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(ItemLoader.HUMAN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(ItemLoader.HIGH_ELVEN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ItemLoader.DARK_ELVEN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         genericBannerPattern(ItemLoader.HIGH_ELVEN_BANNER_PATTERN.get());
         genericBannerPattern(ItemLoader.DARK_ELVEN_BANNER_PATTERN.get());
         genericBannerPattern(ItemLoader.HUMAN_BANNER_PATTERN.get());
