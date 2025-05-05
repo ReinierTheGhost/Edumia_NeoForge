@@ -7,15 +7,14 @@ import it.unimi.dsi.fastutil.objects.ObjectOpenHashSet;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
-import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.IntProvider;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
-import net.minecraft.world.level.levelgen.feature.stateproviders.SimpleStateProvider;
 import net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator;
 
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Supplier;
 
@@ -76,6 +75,7 @@ public record TreeFromStructureNBTConfig(ResourceLocation baseLocation, Resource
                                       Set<Block> placeFromNBT) {
         this(baseLocation, canopyLocation, height, logProvider, leavesProvider, logTarget, Collections.singleton(leavesTarget), BlockPredicate.matchesTag(growableOn), BlockPredicate.replaceable(), maxLogDepth, treeDecorators, placeFromNBT);
     }
+
     public TreeFromStructureNBTConfig(ResourceLocation baseLocation, ResourceLocation canopyLocation,
                                       IntProvider height, BlockStateProvider logProvider,
                                       BlockStateProvider leavesProvider, Block logTarget,
@@ -105,5 +105,4 @@ public record TreeFromStructureNBTConfig(ResourceLocation baseLocation, Resource
                                       Supplier<? extends Block> leavesTarget, TagKey<Block> growableOn, int maxLogDepth, List<TreeDecorator> treeDecorators, Set<Block> placeFromNBT) {
         this(baseLocation, canopyLocation, height, logProvider, leavesProvider, logTarget, leavesTarget.get(), growableOn, maxLogDepth, treeDecorators, placeFromNBT);
     }
-
 }

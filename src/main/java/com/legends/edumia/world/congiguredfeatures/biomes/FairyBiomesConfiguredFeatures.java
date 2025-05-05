@@ -57,6 +57,8 @@ public class FairyBiomesConfiguredFeatures {
                         new WeightedPlacedFeature(
                                 PlacementUtils.inlinePlaced(holdergetter.getOrThrow(KapokTreeConfiguredFeatures.KAPOK_2)), 0.02f),
                         new WeightedPlacedFeature(
+                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(MirwoodNutTreeConfiguredFeatures.MIRWOODNUT_2)), 0.05f),
+                        new WeightedPlacedFeature(
                                 PlacementUtils.inlinePlaced(holdergetter.getOrThrow(MahoganyConfiguredFeatures.MAHOGANY_2)), 0.10f),
                         new WeightedPlacedFeature(
                                 PlacementUtils.inlinePlaced(holdergetter.getOrThrow(PalmConfiguredFeatures.GROUND_PALM_2)), 0.20f),
@@ -66,6 +68,8 @@ public class FairyBiomesConfiguredFeatures {
                                 PlacementUtils.inlinePlaced(holdergetter.getOrThrow(LeopardTreeConfiguredFeatures.LEOPARD_3)), 0.10f),
                         new WeightedPlacedFeature(
                                 PlacementUtils.inlinePlaced(holdergetter.getOrThrow(KapokTreeConfiguredFeatures.KAPOK_3)), 0.02f),
+                        new WeightedPlacedFeature(
+                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(MirwoodNutTreeConfiguredFeatures.MIRWOODNUT_3)), 0.05f),
                         new WeightedPlacedFeature(
                                 PlacementUtils.inlinePlaced(holdergetter.getOrThrow(MahoganyConfiguredFeatures.MAHOGANY_3)), 0.10f),
                         new WeightedPlacedFeature(
@@ -77,6 +81,8 @@ public class FairyBiomesConfiguredFeatures {
                         new WeightedPlacedFeature(
                                 PlacementUtils.inlinePlaced(holdergetter.getOrThrow(KapokTreeConfiguredFeatures.KAPOK_4)), 0.02f),
                         new WeightedPlacedFeature(
+                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(MirwoodNutTreeConfiguredFeatures.MIRWOODNUT_4)), 0.05f),
+                        new WeightedPlacedFeature(
                                 PlacementUtils.inlinePlaced(holdergetter.getOrThrow(MahoganyConfiguredFeatures.MAHOGANY_4)), 0.10f),
                         new WeightedPlacedFeature(
                                 PlacementUtils.inlinePlaced(holdergetter.getOrThrow(PalmConfiguredFeatures.GROUND_PALM_4)), 0.20f),
@@ -86,27 +92,40 @@ public class FairyBiomesConfiguredFeatures {
                                 PlacementUtils.inlinePlaced(holdergetter.getOrThrow(KapokTreeConfiguredFeatures.KAPOK_5)), 0.02f),
                         new WeightedPlacedFeature(
                                 PlacementUtils.inlinePlaced(holdergetter.getOrThrow(PalmConfiguredFeatures.GROUND_PALM_5)), 0.20f),
+                        new WeightedPlacedFeature(
+                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(MirwoodNutTreeConfiguredFeatures.MIRWOODNUT_5)), 0.05f),
 
                         new WeightedPlacedFeature(
                                 PlacementUtils.inlinePlaced(holdergetter.getOrThrow(KapokTreeConfiguredFeatures.KAPOK_6)), 0.02f),
                         new WeightedPlacedFeature(
                                 PlacementUtils.inlinePlaced(holdergetter.getOrThrow(PalmConfiguredFeatures.GROUND_PALM_6)), 0.20f),
+                        new WeightedPlacedFeature(
+                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(MirwoodNutTreeConfiguredFeatures.MIRWOODNUT_6)), 0.05f),
 
                         new WeightedPlacedFeature(
                                 PlacementUtils.inlinePlaced(holdergetter.getOrThrow(KapokTreeConfiguredFeatures.KAPOK_7)), 0.02f),
                         new WeightedPlacedFeature(
                                 PlacementUtils.inlinePlaced(holdergetter.getOrThrow(PalmConfiguredFeatures.GROUND_PALM_7)), 0.20f),
+                        new WeightedPlacedFeature(
+                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(MirwoodNutTreeConfiguredFeatures.MIRWOODNUT_7)), 0.05f),
 
                         new WeightedPlacedFeature(
                                 PlacementUtils.inlinePlaced(holdergetter.getOrThrow(KapokTreeConfiguredFeatures.KAPOK_8)), 0.02f),
                         new WeightedPlacedFeature(
                                 PlacementUtils.inlinePlaced(holdergetter.getOrThrow(PalmConfiguredFeatures.GROUND_PALM_8)), 0.20f),
+                        new WeightedPlacedFeature(
+                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(MirwoodNutTreeConfiguredFeatures.MIRWOODNUT_8)), 0.05f),
 
                         new WeightedPlacedFeature(
                                 PlacementUtils.inlinePlaced(holdergetter.getOrThrow(KapokTreeConfiguredFeatures.KAPOK_9)), 0.02f),
+                        new WeightedPlacedFeature(
+                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(MirwoodNutTreeConfiguredFeatures.MIRWOODNUT_9)), 0.05f),
+
 
                         new WeightedPlacedFeature(
-                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(KapokTreeConfiguredFeatures.KAPOK_10)), 0.02f)
+                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(KapokTreeConfiguredFeatures.KAPOK_10)), 0.02f),
+                        new WeightedPlacedFeature(
+                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(MirwoodNutTreeConfiguredFeatures.MIRWOODNUT_10)), 0.05f)
 
 
 

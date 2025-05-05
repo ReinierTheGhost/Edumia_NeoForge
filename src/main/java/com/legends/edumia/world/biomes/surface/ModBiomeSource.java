@@ -128,13 +128,15 @@ public class ModBiomeSource extends BiomeSource {
                 } else if (MapBasedBiomePool.wastePondBiomes.contains(biome.getBiomeResourceKey())) {
                     processedBiome = MapBasedBiomePool.wastePond.getBiomeKey();
                 } else if (MapBasedBiomePool.mirkwoodSwampBiomes.contains(biome.getBiomeResourceKey())) {
-                    processedBiome = MapBasedBiomePool.mirkwoodSwamp.getBiomeKey();
+                    processedBiome = MapBasedBiomePool.myrwoodSwamp.getBiomeKey();
                 } else if (MapBasedBiomePool.oasisBiomes.contains(biome.getBiomeResourceKey())) {
                     processedBiome = MapBasedBiomePool.oasis.getBiomeKey();
                 } else if (MapBasedBiomePool.frozenBiomes.contains(biome.getBiomeResourceKey())) {
                     processedBiome = MapBasedBiomePool.frozenPond.getBiomeKey();
                 } else if (MapBasedBiomePool.anduinWaterBiomes.contains(biome.getBiomeResourceKey())) {
                     processedBiome = MapBasedBiomePool.greatRiver.getBiomeKey();
+                }else if (MapBasedBiomePool.floodedMangroveBiomes.contains(biome.getBiomeResourceKey())) {
+                    processedBiome = MapBasedBiomePool.floodedMangrove.getBiomeKey();
                 } else {
                     processedBiome = MapBasedBiomePool.pond.getBiomeKey();
                 }

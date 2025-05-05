@@ -2,10 +2,7 @@ package com.legends.edumia.world.placedfeatures.trees;
 
 import com.legends.edumia.Edumia;
 import com.legends.edumia.core.blocksets.WoodBlockSets;
-import com.legends.edumia.world.congiguredfeatures.trees.MahoganyConfiguredFeatures;
-import com.legends.edumia.world.congiguredfeatures.trees.PalmConfiguredFeatures;
-import com.legends.edumia.world.congiguredfeatures.trees.SubTropicalTreeConfiguredFeatures;
-import com.legends.edumia.world.congiguredfeatures.trees.TropicalTreeConfiguredFeatures;
+import com.legends.edumia.world.congiguredfeatures.trees.*;
 import com.legends.edumia.world.placedfeatures.ModPlacedFeatures;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
@@ -48,11 +45,11 @@ public class TropicalTreePlacedFeatures {
 
 
     public static final ResourceKey<PlacedFeature> BANANA = registerKey("banana");
+    public static final ResourceKey<PlacedFeature> BANANA_COMMON = registerKey("banana_common");
     public static final ResourceKey<PlacedFeature> MANGO = registerKey("mango");
     public static final ResourceKey<PlacedFeature> MANGO_TWO = registerKey("mango_two");
     public static final ResourceKey<PlacedFeature> COCONUT_PALM = registerKey("coconut_palm");
     public static final ResourceKey<PlacedFeature> PAPAYA_PALM = registerKey("papaya_palm");
-    public static final ResourceKey<PlacedFeature> GROUP_PALMS = registerKey("group_palms");
 
     public static void boostrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -109,6 +106,11 @@ public class TropicalTreePlacedFeatures {
                 configuredFeatureRegistryEntryLookup.getOrThrow(TropicalTreeConfiguredFeatures.BANANA),
                 List.of());
 
+        register(context, BANANA_COMMON, configuredFeatureRegistryEntryLookup.getOrThrow(TropicalTreeConfiguredFeatures.BANANA),
+                VegetationPlacements.treePlacement(ModPlacedFeatures.common,
+                        WoodBlockSets.BANANA.sapling().get()));
+
+
         register(context, MANGO,
                 configuredFeatureRegistryEntryLookup.getOrThrow(TropicalTreeConfiguredFeatures.MANGO),
                 List.of());
@@ -117,10 +119,7 @@ public class TropicalTreePlacedFeatures {
                 configuredFeatureRegistryEntryLookup.getOrThrow(TropicalTreeConfiguredFeatures.MANGO_TWO),
                 List.of());
 
-//        register(context, GROUP_PALMS,
-//                configuredFeatureRegistryEntryLookup.getOrThrow(PalmConfiguredFeatures.GROUND_PALM_1),
-//                VegetationPlacements.treePlacement(ModPlacedFeatures.uncommonTree,
-//                        WoodBlockSets.KAPOK.sapling().get()));
+
 
 
         register(context, GENSAI_JUNGLE_TREES,

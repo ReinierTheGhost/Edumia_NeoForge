@@ -60,6 +60,13 @@
         }
       },
       {
+        "chance": 0.05,
+        "feature": {
+          "feature": "edumia:tree/tropical/mirwoodnut_tree/mirwoodnut_2",
+          "placement": []
+        }
+      },
+      {
         "chance": 0.1,
         "feature": {
           "feature": "edumia:tree/tropical/mahogany_tree/mahogany_2",
@@ -84,6 +91,13 @@
         "chance": 0.02,
         "feature": {
           "feature": "edumia:tree/tropical/kapok_tree/kapok_3",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.05,
+        "feature": {
+          "feature": "edumia:tree/tropical/mirwoodnut_tree/mirwoodnut_3",
           "placement": []
         }
       },
@@ -116,6 +130,13 @@
         }
       },
       {
+        "chance": 0.05,
+        "feature": {
+          "feature": "edumia:tree/tropical/mirwoodnut_tree/mirwoodnut_4",
+          "placement": []
+        }
+      },
+      {
         "chance": 0.1,
         "feature": {
           "feature": "edumia:tree/tropical/mahogany_tree/mahogany_4",
@@ -144,6 +165,13 @@
         }
       },
       {
+        "chance": 0.05,
+        "feature": {
+          "feature": "edumia:tree/tropical/mirwoodnut_tree/mirwoodnut_5",
+          "placement": []
+        }
+      },
+      {
         "chance": 0.02,
         "feature": {
           "feature": "edumia:tree/tropical/kapok_tree/kapok_6",
@@ -154,6 +182,13 @@
         "chance": 0.2,
         "feature": {
           "feature": "edumia:tree/tropical/palm_tree/ground_palm_6",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.05,
+        "feature": {
+          "feature": "edumia:tree/tropical/mirwoodnut_tree/mirwoodnut_6",
           "placement": []
         }
       },
@@ -172,6 +207,13 @@
         }
       },
       {
+        "chance": 0.05,
+        "feature": {
+          "feature": "edumia:tree/tropical/mirwoodnut_tree/mirwoodnut_7",
+          "placement": []
+        }
+      },
+      {
         "chance": 0.02,
         "feature": {
           "feature": "edumia:tree/tropical/kapok_tree/kapok_8",
@@ -186,6 +228,13 @@
         }
       },
       {
+        "chance": 0.05,
+        "feature": {
+          "feature": "edumia:tree/tropical/mirwoodnut_tree/mirwoodnut_8",
+          "placement": []
+        }
+      },
+      {
         "chance": 0.02,
         "feature": {
           "feature": "edumia:tree/tropical/kapok_tree/kapok_9",
@@ -193,9 +242,23 @@
         }
       },
       {
+        "chance": 0.05,
+        "feature": {
+          "feature": "edumia:tree/tropical/mirwoodnut_tree/mirwoodnut_9",
+          "placement": []
+        }
+      },
+      {
         "chance": 0.02,
         "feature": {
           "feature": "edumia:tree/tropical/kapok_tree/kapok_10",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.05,
+        "feature": {
+          "feature": "edumia:tree/tropical/mirwoodnut_tree/mirwoodnut_10",
           "placement": []
         }
       }

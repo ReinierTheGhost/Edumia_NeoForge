@@ -27,13 +27,13 @@
         "pool": [
           "edumia:fairy.civilian"
         ],
-        "rank": "VETERAN"
+        "rank": "LEADER"
       },
       {
         "pool": [
           "edumia:fairy.civilian"
         ],
-        "rank": "KNIGHT"
+        "rank": "VETERAN"
       },
       {
         "pool": [
@@ -45,13 +45,13 @@
         "pool": [
           "edumia:fairy.civilian"
         ],
-        "rank": "LEADER"
+        "rank": "SOLDIER"
       },
       {
         "pool": [
           "edumia:fairy.civilian"
         ],
-        "rank": "SOLDIER"
+        "rank": "KNIGHT"
       }
     ]
   },

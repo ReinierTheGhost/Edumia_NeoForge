@@ -121,7 +121,9 @@ public class MahoganyConfiguredFeatures {
                 BlockStateProvider.simple(WoodBlockSets.MAHOGANY.leaves().get()),
                 WoodBlockSets.MAHOGANY.log(),
                 WoodBlockSets.MAHOGANY.leaves(),
-                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(new LeaveVineDecorator(0.5f))
+                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING,
+                5,
+                ImmutableList.of(new LeaveVineDecorator(0.5f))
         ));
 
         register(context, MAHOGANY_ROOTS_NBT,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(

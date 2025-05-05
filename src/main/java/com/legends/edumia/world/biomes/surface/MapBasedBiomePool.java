@@ -29,6 +29,7 @@ public class MapBasedBiomePool {
     public static List<ResourceKey<Biome>> oasisBiomes = new ArrayList<>();
     public static List<ResourceKey<Biome>> anduinWaterBiomes = new ArrayList<>();
     public static List<ResourceKey<Biome>> deadMarshesBiomes = new ArrayList<>();
+    public static List<ResourceKey<Biome>> floodedMangroveBiomes = new ArrayList<>();
 
     public static Color DEFAULT_COLOR = new Color(0x375ac3);
 
@@ -39,7 +40,8 @@ public class MapBasedBiomePool {
     public static MapBasedCustomBiome pond;
     public static MapBasedCustomBiome greatRiver;
     public static MapBasedCustomBiome wastePond;
-    public static MapBasedCustomBiome mirkwoodSwamp;
+    public static MapBasedCustomBiome myrwoodSwamp;
+    public static MapBasedCustomBiome floodedMangrove;
     public static MapBasedCustomBiome deadMarshes;
     public static MapBasedCustomBiome deadMarshesWater;
 
@@ -71,8 +73,8 @@ public class MapBasedBiomePool {
         add(new Color(104, 168, 222), oasis);
         pond = new MapBasedCustomBiome(EdumiaBiomeKeys.POND, -10, EdumiaBiomeDataConfigs.riverModifier);
         add(new Color(110, 154, 218), pond);
-        mirkwoodSwamp = new MapBasedCustomBiome(EdumiaBiomeKeys.FAIRY_SWAMP, -10, EdumiaBiomeDataConfigs.riverModifier);
-        add(new Color(28, 107, 86), mirkwoodSwamp);
+        myrwoodSwamp = new MapBasedCustomBiome(EdumiaBiomeKeys.FAIRY_SWAMP, -10, EdumiaBiomeDataConfigs.riverModifier);
+        add(new Color(28, 107, 86), myrwoodSwamp);
         greatRiver = new MapBasedCustomBiome(EdumiaBiomeKeys.GREAT_RIVER, -10, EdumiaBiomeDataConfigs.riverModifier);
         add(new Color(99, 138, 186), greatRiver);
         wastePond = new MapBasedCustomBiome(EdumiaBiomeKeys.WASTE_POND, -10, EdumiaBiomeDataConfigs.riverModifier);
@@ -81,6 +83,10 @@ public class MapBasedBiomePool {
         add(new Color(48, 94, 66), deadMarshes);
         deadMarshesWater = new MapBasedCustomBiome(EdumiaBiomeKeys.DEAD_MARSHES_WATER, -10, EdumiaBiomeDataConfigs.riverModifier);
         add(new Color(90, 124, 161), deadMarshesWater);
+        floodedMangrove = new MapBasedCustomBiome(EdumiaBiomeKeys.MYRWOOD_FLOODED_MANGROVE, -1, EdumiaBiomeDataConfigs.riverModifier);
+        add(new Color(41, 86, 23), floodedMangrove);
+
+
         // Water Biomes :e
 
         add(new Color(90, 120, 240), new MapBasedCustomBiome(EdumiaBiomeKeys.MOUNTAIN_STREAM, 37, EdumiaBiomeDataConfigs.emModifier.heightModifier(0.23f)));
@@ -92,14 +98,18 @@ public class MapBasedBiomePool {
         add(new Color(75, 106, 199), new MapBasedCustomBiome(EdumiaBiomeKeys.OCEAN_COAST, -11, EdumiaBiomeDataConfigs.oceanModifier));
         add(new Color(83, 129, 186), new MapBasedCustomBiome(EdumiaBiomeKeys.RIVER, -6, EdumiaBiomeDataConfigs.smallRiverModifier));
 
-        add(new Color(255, 0, 110), new MapBasedCustomBiome(EdumiaBiomeKeys.GENSAI_REEF, -8, EdumiaBiomeDataConfigs.oceanModifier));
 
 
         // Land Biomes :
         add(new Color(156, 207, 113), new MapBasedCustomBiome(EdumiaBiomeKeys.EDUMIA_VALES, 4, EdumiaBiomeDataConfigs.landModifier));
         add(new Color(180, 214, 121), new MapBasedCustomBiome(EdumiaBiomeKeys.EDUMIA_SAVANNAH, 6, EdumiaBiomeDataConfigs.landModifier));
+
         add(new Color(234, 222, 117), new MapBasedCustomBiome(EdumiaBiomeKeys.GENSAI_BEACH, 0,
                 EdumiaBiomeDataConfigs.landModifier.heightModifier(0.97f).heightModifier(0.1f).noiseModifier(0.05f)));
+        add(new Color(252, 229, 73), new MapBasedCustomBiome(EdumiaBiomeKeys.GENSAI_ROCKY_COAST,30,
+                EdumiaBiomeDataConfigs.landModifier.heightModifier(0.76f)));
+        add(new Color(255, 0, 110), new MapBasedCustomBiome(EdumiaBiomeKeys.GENSAI_REEF,
+                -1, EdumiaBiomeDataConfigs.oceanModifier));
 
         add(new Color(35, 36, 36), new MapBasedCustomBiome(EdumiaBiomeKeys.DEMON_WASTELANDS, 10, EdumiaBiomeDataConfigs.landModifier));
 
@@ -114,9 +124,10 @@ public class MapBasedBiomePool {
         add(new Color(129, 129, 129), new MapBasedCustomBiome(EdumiaBiomeKeys.EDUMIA_MOUNTAINS, 82, EdumiaBiomeDataConfigs.emModifier));
         add(new Color(185, 183, 183), new MapBasedCustomBiome(EdumiaBiomeKeys.EDUMIA_MOUNTAINS_PEAKS, 100, EdumiaBiomeDataConfigs.emPeaksModifier));
 
-        add(new Color(54, 114, 12), new MapBasedCustomBiome(EdumiaBiomeKeys.MYRWOOD_JUNGLE, 7, EdumiaBiomeDataConfigs.landModifier));
+        add(new Color(54, 114, 12), new MapBasedCustomBiome(EdumiaBiomeKeys.MYRWOOD_JUNGLE, 5, EdumiaBiomeDataConfigs.landModifier));
         add(new Color(40, 85, 22), new MapBasedCustomBiome(EdumiaBiomeKeys.MYRWOOD_MANGROVE, 0, EdumiaBiomeDataConfigs.riverModifier));
-        add(new Color(34, 69, 25), new MapBasedCustomBiome(EdumiaBiomeKeys.MYRWOOD_COAST, -3, EdumiaBiomeDataConfigs.oceanModifier));
+
+        add(new Color(34, 69, 25), new MapBasedCustomBiome(EdumiaBiomeKeys.MYRWOOD_COAST, -2, EdumiaBiomeDataConfigs.riverModifier));
 
         add(new Color(56, 36, 36), new MapBasedCustomBiome(EdumiaBiomeKeys.GENSAI_VOLCANO_PLAINS, 6, EdumiaBiomeDataConfigs.landModifier));
         add(new Color(45, 42, 42), new MapBasedCustomBiome(EdumiaBiomeKeys.MOUNT_TITLEIST_FOOT, 36, EdumiaBiomeDataConfigs.mountTitleistModifier));
@@ -164,12 +175,16 @@ public class MapBasedBiomePool {
         waterBiomes.add(EdumiaBiomeKeys.GENSAI_REEF);
         waterBiomes.add(EdumiaBiomeKeys.AVELION_ROCKY_SHORES);
         waterBiomes.add(EdumiaBiomeKeys.AVELION_SANDY_SHORES);
-        waterBiomes.add(EdumiaBiomeKeys.MYRWOOD_MANGROVE);
-        waterBiomes.add(EdumiaBiomeKeys.MYRWOOD_JUNGLE);
-        waterBiomes.add(EdumiaBiomeKeys.MYRWOOD_COAST);
+        waterBiomes.add(EdumiaBiomeKeys.GENSAI_BEACH);
+        waterBiomes.add(EdumiaBiomeKeys.GENSAI_ROCKY_COAST);
 
         anduinWaterBiomes.add(EdumiaBiomeKeys.GREAT_RIVER);
 
+
+        floodedMangroveBiomes.add(EdumiaBiomeKeys.MYRWOOD_FLOODED_MANGROVE);
+        floodedMangroveBiomes.add(EdumiaBiomeKeys.MYRWOOD_MANGROVE);
+
+        mirkwoodSwampBiomes.add(EdumiaBiomeKeys.MYRWOOD_JUNGLE);
 
         frozenBiomes.add(EdumiaBiomeKeys.EDUMIA_TUNDRA);
 

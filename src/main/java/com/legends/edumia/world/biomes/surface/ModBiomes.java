@@ -42,6 +42,7 @@ public class ModBiomes {
         createEdumiaValesBiome(context, EdumiaBiomeKeys.EDUMIA_VALES);
         createEdumiaSavannahBiome(context, EdumiaBiomeKeys.EDUMIA_SAVANNAH);
         createGensaiBeachBiome(context, EdumiaBiomeKeys.GENSAI_BEACH);
+        createGensaiBeachBiome(context, EdumiaBiomeKeys.GENSAI_ROCKY_COAST);
         createTestBiome(context, EdumiaBiomeKeys.DEAD_MARSHES);
         createTestBiome(context, EdumiaBiomeKeys.DEAD_MARSHES_WATER);
         createDarkElvenWoodBiome(context, EdumiaBiomeKeys.DARK_ELF_FOREST);
@@ -81,6 +82,7 @@ public class ModBiomes {
 
         createMirwoodForestBiome(context, EdumiaBiomeKeys.MYRWOOD_JUNGLE);
         createMirwoodMangroveBiome(context, EdumiaBiomeKeys.MYRWOOD_MANGROVE);
+        createMirwoodMangroveBiome(context, EdumiaBiomeKeys.MYRWOOD_FLOODED_MANGROVE);
         createMirwoodMangroveBiome(context, EdumiaBiomeKeys.MYRWOOD_COAST);
 
         createDemonWastelandsBiome(context, EdumiaBiomeKeys.DEMON_WASTELANDS);
@@ -106,7 +108,7 @@ public class ModBiomes {
                 context.lookup(Registries.PLACED_FEATURE),
                 context.lookup(Registries.CONFIGURED_CARVER));
 
-       ModBiomeFeatures.addJungleTrees(vegetation);
+       ModBiomeFeatures.addMyrwoodTrees(vegetation);
 
         registerBiome(context, biomeResourceKey, spawnSettings, generationSettings);
     }

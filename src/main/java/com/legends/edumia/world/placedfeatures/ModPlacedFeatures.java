@@ -84,6 +84,11 @@ public class ModPlacedFeatures {
         OrcDesertPlacedFeatures.boostrap(context);
         DeadTreePlacedFeatures.boostrap(context);
         SubTropicalTreePlacedFeatures.boostrap(context);
+        KapokTreePlacedFeatures.boostrap(context);
+        MyrwoodnutTreePlacedFeatures.boostrap(context);
+        PalmTreePlacedFeatures.boostrap(context);
+        MahoganyTreePlacedFeatures.boostrap(context);
+        LeopardTreePlacedFeatures.boostrap(context);
     }
 
     public static ResourceKey<PlacedFeature> registerKey(String name) {

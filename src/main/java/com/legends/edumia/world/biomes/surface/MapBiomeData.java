@@ -53,8 +53,11 @@ public class MapBiomeData {
         addBiome(new BiomeData(EdumiaBiomeKeys.EDUMIA_SAVANNAH, EdumiaBiomeDataConfigs.grassPlains, EdumiaBiomeDataConfigs.stoneLayers,
                 new BiomeColorsDTO(desertSky, desertSkyFog, 5406139, 1120828, 12305028, 10860366)));
 
-        addBiome(new BiomeData(EdumiaBiomeKeys.GENSAI_BEACH, EdumiaBiomeDataConfigs.gensaiShores, EdumiaBiomeDataConfigs.limestoneLayers,
+        addBiome(new BiomeData(EdumiaBiomeKeys.GENSAI_BEACH, EdumiaBiomeDataConfigs.gensaiShores, EdumiaBiomeDataConfigs.redSandLayers,
                 new BiomeColorsDTO(desertSky, defaultFog, 5212644, 333363, 12107900, 10860366)));
+        addBiome(new BiomeData(EdumiaBiomeKeys.GENSAI_ROCKY_COAST, EdumiaBiomeDataConfigs.gensaiShores, EdumiaBiomeDataConfigs.redSandLayers,
+                new BiomeColorsDTO(desertSky, defaultFog, 5212644, 333363, 12107900, 10860366)));
+
         addBiome(new BiomeData(EdumiaBiomeKeys.DEAD_MARSHES, EdumiaBiomeDataConfigs.pond, EdumiaBiomeDataConfigs.stoneLayers,
                 new BiomeColorsDTO(11908531, 7108218, 3289373, 198924, 6115374, 5794902)));
         addBiome(new BiomeData(EdumiaBiomeKeys.DEAD_MARSHES_WATER, EdumiaBiomeDataConfigs.pond, EdumiaBiomeDataConfigs.stoneLayers,
@@ -134,6 +137,8 @@ public class MapBiomeData {
         addBiome(new BiomeData(EdumiaBiomeKeys.MYRWOOD_JUNGLE, EdumiaBiomeDataConfigs.grassPlains, EdumiaBiomeDataConfigs.stoneLayers,
                 new BiomeColorsDTO(10599654, 10664914, 7856375, 329011, 7514630, 7451654)));
         addBiome(new BiomeData(EdumiaBiomeKeys.MYRWOOD_MANGROVE, EdumiaBiomeDataConfigs.pond, EdumiaBiomeDataConfigs.stoneLayers,
+                new BiomeColorsDTO(10599654, 10664914, 7856375, 329011, 7514630, 7451654)));
+        addBiome(new BiomeData(EdumiaBiomeKeys.MYRWOOD_FLOODED_MANGROVE, EdumiaBiomeDataConfigs.pond, EdumiaBiomeDataConfigs.stoneLayers,
                 new BiomeColorsDTO(10599654, 10664914, 7856375, 329011, 7514630, 7451654)));
         addBiome(new BiomeData(EdumiaBiomeKeys.MYRWOOD_COAST, EdumiaBiomeDataConfigs.pond, EdumiaBiomeDataConfigs.stoneLayers,
                 new BiomeColorsDTO(10599654, 10664914, 7856375, 329011, 7514630, 7451654)));

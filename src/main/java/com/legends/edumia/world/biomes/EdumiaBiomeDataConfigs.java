@@ -130,10 +130,8 @@ public class EdumiaBiomeDataConfigs {
             .addSlopeData(MAX_ANGLE, Blocks.SAND);
 
     public static SlopeMap gensaiShores = new SlopeMap()
-            .addSlopeData(26, () -> SandBlockSets.WHITE_SAND.block().get())
-            .addSlopeData(28, Blocks.SAND)
-            .addSlopeData(33, Blocks.COARSE_DIRT)
-            .addSlopeData(MAX_ANGLE, Blocks.CLAY);
+            .addSlopeData(26, Blocks.RED_SAND)
+            .addSlopeData(MAX_ANGLE, Blocks.RED_SANDSTONE);
 
     public static SlopeMap whiteShores = new SlopeMap()
             .addSlopeData(26, () -> SandBlockSets.WHITE_SAND.block().get())
@@ -166,14 +164,14 @@ public class EdumiaBiomeDataConfigs {
             .addLayerData(0.3f, () -> StoneSets.DARK_HIGH_ELVEN_ROCK.block().get())
             .addLayerData(0.3f, () -> StoneSets.HIGH_ELVEN_ROCK.block().get())
             .addLayerData(0.1f, () -> StoneSets.CACHOLONG.block().get());
+
     public static BlocksLayeringData limestoneLayers = new BlocksLayeringData()
             .addLayerData(0.5f, Blocks.STONE)
             .addLayerData(0.5f, StoneSets.LIMESTONE.block().get());
 
-    public static BlocksLayeringData gondorLayers = new BlocksLayeringData()
-            .addLayerData(0.5f, Blocks.STONE)
-            .addLayerData(0.4f, Blocks.CALCITE)
-            .addLayerData(0.1f, Blocks.DIORITE);
+    public static BlocksLayeringData redSandLayers = new BlocksLayeringData()
+            .addLayerData(0.5f, Blocks.RED_SANDSTONE)
+            .addLayerData(0.5f, Blocks.STONE);
 
 
     public static BlocksLayeringData mistyMountainsLayers = new BlocksLayeringData()

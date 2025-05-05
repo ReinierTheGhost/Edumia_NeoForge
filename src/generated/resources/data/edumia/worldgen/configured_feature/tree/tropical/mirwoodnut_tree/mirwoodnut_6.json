@@ -1,0 +1,65 @@
+{
+  "type": "edumia:tree_from_nbt",
+  "config": {
+    "base_location": "edumia:features/trees/mirwoodnut/mirwoodnut_trunk_6",
+    "can_grow_on_filter": {
+      "type": "minecraft:matching_block_tag",
+      "tag": "edumia:mahogany_sapling"
+    },
+    "can_leaves_place_filter": {
+      "type": "minecraft:replaceable"
+    },
+    "canopy_location": "edumia:features/trees/mirwoodnut/mirwoodnut_canopy_6",
+    "decorators": [
+      {
+        "type": "minecraft:leave_vine",
+        "probability": 0.5
+      },
+      {
+        "type": "minecraft:trunk_vine"
+      },
+      {
+        "type": "minecraft:cocoa",
+        "probability": 0.5
+      }
+    ],
+    "height": 22,
+    "leaves_provider": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "edumia:mirwoodnut_leaves",
+        "Properties": {
+          "distance": "7",
+          "persistent": "true",
+          "waterlogged": "false"
+        }
+      }
+    },
+    "leaves_target": [
+      "minecraft:green_wool"
+    ],
+    "log_provider": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "edumia:mirwoodnut_wood",
+        "Properties": {
+          "axis": "y"
+        }
+      }
+    },
+    "log_target": [
+      "edumia:mirwoodnut_wood",
+      "edumia:mirwoodnut_wood_fence",
+      "edumia:mirwoodnut_wood_slab",
+      "edumia:mirwoodnut_wood_stairs"
+    ],
+    "place_from_nbt": [
+      "edumia:mirwoodnut_wood_fence",
+      "edumia:mirwoodnut_wood_slab",
+      "minecraft:mangrove_roots",
+      "edumia:mirwoodnut_wood_stairs",
+      "edumia:banana_leaves",
+      "edumia:mirwoodnut_leaves"
+    ]
+  }
+}

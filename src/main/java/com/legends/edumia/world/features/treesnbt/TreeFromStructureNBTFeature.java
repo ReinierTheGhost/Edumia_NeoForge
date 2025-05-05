@@ -1,3 +1,4 @@
+
 package com.legends.edumia.world.features.treesnbt;
 
 import com.mojang.serialization.Codec;
@@ -247,22 +248,22 @@ public class TreeFromStructureNBTFeature extends Feature<TreeFromStructureNBTCon
 
 
 
-         for (StructureTemplate.StructureBlockInfo logBuilder : logBuilders) {
-                     BlockPos pos = getModifiedPos(placeSettings, logBuilder, centerOffset, origin);
-                     BlockPos.MutableBlockPos mutableBlockPos = new BlockPos.MutableBlockPos().set(pos);
-                     for (int i = 0; i < maxTrunkBuildingDepth; i++) {
-                         if (!level.getBlockState(mutableBlockPos).canOcclude()) {
-                              if (level instanceof Level) { // Drop the replaced block.
-                                  level.removeBlock(mutableBlockPos, true);
-                              }
-                             level.setBlock(mutableBlockPos, logProvider.getState(randomSource, mutableBlockPos), 2);
-                              mutableBlockPos.move(Direction.DOWN);
-                          } else {
-                              level.getChunk(mutableBlockPos);
-                              break;
-                          }
-                      }
-                  }
+        for (StructureTemplate.StructureBlockInfo logBuilder : logBuilders) {
+            BlockPos pos = getModifiedPos(placeSettings, logBuilder, centerOffset, origin);
+            BlockPos.MutableBlockPos mutableBlockPos = new BlockPos.MutableBlockPos().set(pos);
+            for (int i = 0; i < maxTrunkBuildingDepth; i++) {
+                if (!level.getBlockState(mutableBlockPos).canOcclude()) {
+                    if (level instanceof Level) { // Drop the replaced block.
+                        level.removeBlock(mutableBlockPos, true);
+                    }
+                    level.setBlock(mutableBlockPos, logProvider.getState(randomSource, mutableBlockPos), 2);
+                    mutableBlockPos.move(Direction.DOWN);
+                } else {
+                    level.getChunk(mutableBlockPos);
+                    break;
+                }
+            }
+        }
 
     }
 

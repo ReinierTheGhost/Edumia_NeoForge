@@ -78,6 +78,7 @@ public class EdumiaChunkGenerator extends ChunkGenerator {
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.EDUMIA_VALES),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.EDUMIA_SAVANNAH),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.GENSAI_BEACH),
+                        biomeRegistry.getOrThrow(EdumiaBiomeKeys.GENSAI_ROCKY_COAST),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.DEAD_MARSHES),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.DEAD_MARSHES_WATER),
 
@@ -125,6 +126,7 @@ public class EdumiaChunkGenerator extends ChunkGenerator {
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.WASTE_POND),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.MYRWOOD_JUNGLE),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.MYRWOOD_MANGROVE),
+                        biomeRegistry.getOrThrow(EdumiaBiomeKeys.MYRWOOD_FLOODED_MANGROVE),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.MYRWOOD_COAST),
 
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.BASIC_CAVE),

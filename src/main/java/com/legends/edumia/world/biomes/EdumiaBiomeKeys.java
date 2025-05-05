@@ -19,6 +19,7 @@ public class EdumiaBiomeKeys extends Biomes {
     public static final ResourceKey<Biome> EDUMIA_SAVANNAH = EdumiaBiomeKeys.register("edumia_savannah");
 
     public static final ResourceKey<Biome> GENSAI_BEACH = EdumiaBiomeKeys.register("gensai_beach");
+    public static final ResourceKey<Biome> GENSAI_ROCKY_COAST = EdumiaBiomeKeys.register("gensai_rocky_coast");
 
     public static final ResourceKey<Biome> DEAD_MARSHES = EdumiaBiomeKeys.register("dead_marshes");
     public static final ResourceKey<Biome> DEAD_MARSHES_WATER = EdumiaBiomeKeys.register("dead_marshes_water");
@@ -47,6 +48,7 @@ public class EdumiaBiomeKeys extends Biomes {
 
     public static final ResourceKey<Biome> MYRWOOD_JUNGLE = EdumiaBiomeKeys.register("myrwood_forest");
     public static final ResourceKey<Biome> MYRWOOD_MANGROVE = EdumiaBiomeKeys.register("myrwood_mangrove");
+    public static final ResourceKey<Biome> MYRWOOD_FLOODED_MANGROVE = EdumiaBiomeKeys.register("myrwood_flooded_mangrove");
     public static final ResourceKey<Biome> MYRWOOD_COAST = EdumiaBiomeKeys.register("myrwood_coast");
 
     public static final ResourceKey<Biome> EDUMIA_FOOTHILLS = EdumiaBiomeKeys.register("edumia_foothills");
