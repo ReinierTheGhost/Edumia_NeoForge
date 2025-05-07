@@ -364,17 +364,17 @@ public class FactionSelectionScreen extends EdumiaMenuScreen {
                 textStartY += font.lineHeight + MINIMAL_MARGIN;
                 context.drawString(minecraft.font, Component.translatable((races.size() <= 1) ? "screen.edumia.information.races" :
                                 "screen.edumia.information.races.many").withStyle(ChatFormatting.UNDERLINE, ChatFormatting.WHITE),
-                        startX + MINIMAL_MARGIN,
+                        startX + MINIMAL_MARGIN + 2,
                         textStartY, 0, false);
 
                 if(raceListTextBlockWidget == null){
                     raceListTextBlockWidget = new TextBlockWidget(
-                            startX + MINIMAL_MARGIN, textStartY + font.lineHeight + MINIMAL_MARGIN, mainPanelWidth - 50 -
+                            startX + MINIMAL_MARGIN + 2, textStartY + font.lineHeight + MINIMAL_MARGIN, mainPanelWidth - 50 -
                             MINIMAL_MARGIN - (MINIMAL_MARGIN / 2), (font.lineHeight * 2) + MINIMAL_MARGIN
                     ).setAlignment(TextAlignment.LEFT);
                     raceListTextBlockWidget.setText(controller.getRaceListText());
                 }
-                raceListTextBlockWidget.setStartX(startX + MINIMAL_MARGIN).setStartY(textStartY + font.lineHeight + MINIMAL_MARGIN);
+                raceListTextBlockWidget.setStartX(startX + MINIMAL_MARGIN + 2).setStartY(textStartY + font.lineHeight + MINIMAL_MARGIN);
                 raceListTextBlockWidget.draw(context, false, false);
                 textStartY += (font.lineHeight * 2) + MINIMAL_MARGIN;
             }
@@ -382,7 +382,7 @@ public class FactionSelectionScreen extends EdumiaMenuScreen {
 
         if(factionDescriptionTextBlockWidget == null){
             factionDescriptionTextBlockWidget = new TextBlockWidget(
-                    startX + MINIMAL_MARGIN, startY + 95, mainPanelWidth - (MINIMAL_MARGIN * 2) - 1, (font.lineHeight * 10) + 30
+                    startX + MINIMAL_MARGIN + 2, startY + 95, mainPanelWidth - (MINIMAL_MARGIN * 2) - 1, (font.lineHeight * 10) + 30
             ).setAlignment(TextAlignment.LEFT);
             factionDescriptionTextBlockWidget.setText(controller.getCurrentFactionDescriptions());
         }
@@ -391,12 +391,12 @@ public class FactionSelectionScreen extends EdumiaMenuScreen {
 
         context.drawString(minecraft.font, Component.translatable("screen.edumia.information.description")
                         .withStyle(ChatFormatting.UNDERLINE, ChatFormatting.WHITE),
-                startX + MINIMAL_MARGIN,
+                startX + MINIMAL_MARGIN + 2,
                 loreTextStart - font.lineHeight - MINIMAL_MARGIN, 0, false);
 
 
         List<Component> texts = controller.getCurrentFactionDescriptions();
-        factionDescriptionTextBlockWidget.setStartX(startX + MINIMAL_MARGIN).setStartY(startY + 95);
+        factionDescriptionTextBlockWidget.setStartX(startX + MINIMAL_MARGIN + 2).setStartY(startY + 95);
         factionDescriptionTextBlockWidget.draw(context, false, false);
 
         drawFactionBanner(context, startX + mainPanelWidth - 50, startY + 6);

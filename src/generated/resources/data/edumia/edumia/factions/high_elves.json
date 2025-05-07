@@ -21,13 +21,19 @@
         "pool": [
           "edumia:highelven.civilian"
         ],
-        "rank": "SOLDIER"
+        "rank": "KNIGHT"
       },
       {
         "pool": [
           "edumia:highelven.civilian"
         ],
         "rank": "LEADER"
+      },
+      {
+        "pool": [
+          "edumia:highelven.civilian"
+        ],
+        "rank": "MILITIA"
       },
       {
         "pool": [
@@ -45,13 +51,7 @@
         "pool": [
           "edumia:highelven.civilian"
         ],
-        "rank": "KNIGHT"
-      },
-      {
-        "pool": [
-          "edumia:highelven.civilian"
-        ],
-        "rank": "MILITIA"
+        "rank": "SOLDIER"
       }
     ]
   },

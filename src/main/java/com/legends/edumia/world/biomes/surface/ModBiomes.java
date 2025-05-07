@@ -66,7 +66,7 @@ public class ModBiomes {
 
         createOgreForestBiome(context, EdumiaBiomeKeys.OGRE_FOREST);
         createGensaiSakuraGroveBiome(context, EdumiaBiomeKeys.GENSAI_SAKURA_GROVE);
-        createDarkElvenSwampBiome(context, EdumiaBiomeKeys.FAIRY_SWAMP);
+        createMyrwoodSwampBiome(context, EdumiaBiomeKeys.FAIRY_SWAMP);
         createRiverBiome(context, EdumiaBiomeKeys.GREAT_RIVER);
 
 
@@ -80,7 +80,10 @@ public class ModBiomes {
         createMountTitleistBiome(context, EdumiaBiomeKeys.MOUNT_TITLEIST_PEAK);
         createMountTitleistBiome(context, EdumiaBiomeKeys.MOUNT_TITLEIST_CRATER);
 
-        createMirwoodForestBiome(context, EdumiaBiomeKeys.MYRWOOD_JUNGLE);
+        createMirwoodForestBiome(context, EdumiaBiomeKeys.MYRWOOD_JUNGLE, 0);
+        createMirwoodForestBiome(context, EdumiaBiomeKeys.MYRWOOD_JUNGLE_CLEARING, 1);
+        createMirwoodForestBiome(context, EdumiaBiomeKeys.MYRWOOD_JUNGLE_PLATEAU, 0);
+
         createMirwoodMangroveBiome(context, EdumiaBiomeKeys.MYRWOOD_MANGROVE);
         createMirwoodMangroveBiome(context, EdumiaBiomeKeys.MYRWOOD_FLOODED_MANGROVE);
         createMirwoodMangroveBiome(context, EdumiaBiomeKeys.MYRWOOD_COAST);
@@ -100,15 +103,19 @@ public class ModBiomes {
 
 
     }
-    public static void createMirwoodForestBiome(BootstrapContext<Biome> context, ResourceKey<Biome> biomeResourceKey) {
+    public static void createMirwoodForestBiome(BootstrapContext<Biome> context, ResourceKey<Biome> biomeResourceKey, int step) {
         MobSpawnSettings.Builder spawnSettings = new MobSpawnSettings.Builder();
         ModSpawnSettingsBuilder.addFairies(spawnSettings);
         ModSpawnSettingsBuilder.addTropicalAnimals(spawnSettings);
         BiomeGenerationSettings.Builder generationSettings = new BiomeGenerationSettings.Builder(
                 context.lookup(Registries.PLACED_FEATURE),
                 context.lookup(Registries.CONFIGURED_CARVER));
+    if (step == 0) {
+        ModBiomeFeatures.addMyrwoodTrees(vegetation);
+    }else if(step == 1){
+        ModBiomeFeatures.addJungleGrass(vegetation);
+    }
 
-       ModBiomeFeatures.addMyrwoodTrees(vegetation);
 
         registerBiome(context, biomeResourceKey, spawnSettings, generationSettings);
     }
@@ -386,7 +393,7 @@ public class ModBiomes {
 
         registerBiome(context, biomeResourceKey, spawnSettings, generationSettings);
     }
-    public static void createDarkElvenSwampBiome(BootstrapContext<Biome> context, ResourceKey<Biome> biomeResourceKey) {
+    public static void createMyrwoodSwampBiome(BootstrapContext<Biome> context, ResourceKey<Biome> biomeResourceKey) {
         MobSpawnSettings.Builder spawnSettings = new MobSpawnSettings.Builder();
         BiomeGenerationSettings.Builder generationSettings = new BiomeGenerationSettings.Builder(
                 context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));

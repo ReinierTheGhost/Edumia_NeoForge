@@ -18,7 +18,6 @@ import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
-import net.minecraft.world.level.block.entity.BannerPatterns;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.registries.DataPackRegistryEvent;
@@ -110,6 +109,7 @@ public class EdumiaFactions {
         );
         // endregion
 
+        // region [HUMAN]
         HUMAN = new Faction("human", true, Disposition.NEUTRAL, FactionType.FACTION, null, null,
                 new HashMap<>(){{
                     put(NpcRank.CIVILIAN, List.of(
@@ -139,7 +139,9 @@ public class EdumiaFactions {
                                 new Vector2d(1662, 1940))
                 )), List.of(), List.of()
         );
+        // endregion
 
+        // region [HIGH_ELVES]
         HIGH_ELVES = new Faction("high_elves", true, Disposition.NEUTRAL, FactionType.FACTION, null, null,
                 new HashMap<>(){{
                     put(NpcRank.CIVILIAN, List.of(
@@ -170,7 +172,11 @@ public class EdumiaFactions {
                 )), List.of(), List.of()
         );
 
-        DARK_ELVES = new Faction("dark_elves", true, Disposition.NEUTRAL, FactionType.FACTION, null, null,
+        // endregion
+
+        // region [DARK_ELVES]
+        DARK_ELVES = new Faction("dark_elves", true, Disposition.NEUTRAL, FactionType.FACTION,
+                null, null,
                 new HashMap<>(){{
                     put(NpcRank.CIVILIAN, List.of(
                             EdumiaNpcs.DARKELVEN_CIVILIAN
@@ -199,5 +205,6 @@ public class EdumiaFactions {
                                 new Vector2d(1980, 525))
                 )), List.of(), List.of()
         );
+        // endregion
     }
 }

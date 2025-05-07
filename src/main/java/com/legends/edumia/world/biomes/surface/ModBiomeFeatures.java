@@ -346,6 +346,11 @@ public class ModBiomeFeatures {
         vegetation.add(VegetationPlacements.GRASS_BONEMEAL);
         vegetation.add(VegetationPlacements.PATCH_GRASS_PLAIN);
     }
+
+    public static void addJungleGrass(List<ResourceKey<PlacedFeature>> vegetation){
+        vegetation.add(VegetationPlacements.GRASS_BONEMEAL);
+        vegetation.add(VegetationPlacements.PATCH_GRASS_JUNGLE);
+    }
     public static void addWheatGrass(List<ResourceKey<PlacedFeature>> vegetation) {
     }
     public static void addWildGrass(List<ResourceKey<PlacedFeature>> vegetation) {

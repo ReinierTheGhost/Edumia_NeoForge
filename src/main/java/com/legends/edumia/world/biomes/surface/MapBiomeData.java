@@ -136,6 +136,11 @@ public class MapBiomeData {
 
         addBiome(new BiomeData(EdumiaBiomeKeys.MYRWOOD_JUNGLE, EdumiaBiomeDataConfigs.grassPlains, EdumiaBiomeDataConfigs.stoneLayers,
                 new BiomeColorsDTO(10599654, 10664914, 7856375, 329011, 7514630, 7451654)));
+        addBiome(new BiomeData(EdumiaBiomeKeys.MYRWOOD_JUNGLE_CLEARING, EdumiaBiomeDataConfigs.grassPlains, EdumiaBiomeDataConfigs.stoneLayers,
+                new BiomeColorsDTO(10599654, 10664914, 7856375, 329011, 7514630, 7451654)));
+        addBiome(new BiomeData(EdumiaBiomeKeys.MYRWOOD_JUNGLE_PLATEAU, EdumiaBiomeDataConfigs.grassPlains, EdumiaBiomeDataConfigs.stoneLayers,
+                new BiomeColorsDTO(10599654, 10664914, 7856375, 329011, 7514630, 7451654)));
+
         addBiome(new BiomeData(EdumiaBiomeKeys.MYRWOOD_MANGROVE, EdumiaBiomeDataConfigs.pond, EdumiaBiomeDataConfigs.stoneLayers,
                 new BiomeColorsDTO(10599654, 10664914, 7856375, 329011, 7514630, 7451654)));
         addBiome(new BiomeData(EdumiaBiomeKeys.MYRWOOD_FLOODED_MANGROVE, EdumiaBiomeDataConfigs.pond, EdumiaBiomeDataConfigs.stoneLayers,
@@ -159,7 +164,7 @@ public class MapBiomeData {
                 new BiomeColorsDTO(desertSky, desertSkyFog, 5407446, 1120828, 7253092, 6592350)));
         addBiome(new BiomeData(EdumiaBiomeKeys.WASTE_POND, EdumiaBiomeDataConfigs.ashenDirt, EdumiaBiomeDataConfigs.stoneLayers,
                 new BiomeColorsDTO(8163746, 10926783, 5860963, 863008, 4020033, 2695710)));
-        addBiome(new BiomeData(EdumiaBiomeKeys.FAIRY_SWAMP, EdumiaBiomeDataConfigs.beach, EdumiaBiomeDataConfigs.limestoneLayers,
+        addBiome(new BiomeData(EdumiaBiomeKeys.FAIRY_SWAMP, EdumiaBiomeDataConfigs.pond, EdumiaBiomeDataConfigs.stoneLayers,
                 new BiomeColorsDTO(6981536, 8821922, 7111535, 1458241, 4546876, 4284215)));
         addBiome(new BiomeData(EdumiaBiomeKeys.FROZEN_POND, EdumiaBiomeDataConfigs.beach, EdumiaBiomeDataConfigs.limestoneLayers,
                 new BiomeColorsDTO(8628223, 10599910, 3750089, 263470, 3494723, 4478280)));
@@ -168,8 +173,8 @@ public class MapBiomeData {
     private static void loadGenericRivers(){
         addBiome(new BiomeData(EdumiaBiomeKeys.RIVER, EdumiaBiomeDataConfigs.river, EdumiaBiomeDataConfigs.stoneLayers,
                 new BiomeColorsDTO(waterSky, defaultFog, 4290790, defaultWaterFog, 7583083, 6592339)));
-        addBiome(new BiomeData(EdumiaBiomeKeys.GREAT_RIVER, EdumiaBiomeDataConfigs.river, EdumiaBiomeDataConfigs.stoneLayers, new BiomeColorsDTO(
-                waterSky, 12638463, 6853316, 6853316, 10995507, 7181907)));
+        addBiome(new BiomeData(EdumiaBiomeKeys.GREAT_RIVER, EdumiaBiomeDataConfigs.river, EdumiaBiomeDataConfigs.stoneLayers,
+                new BiomeColorsDTO(waterSky, 12638463, 6853316, 6853316, 10995507, 7181907)));
         addBiome(new BiomeData(EdumiaBiomeKeys.MOUNTAIN_STREAM, EdumiaBiomeDataConfigs.river, EdumiaBiomeDataConfigs.stoneLayers,
                 new BiomeColorsDTO(waterSky, defaultFog, 4290786, defaultWaterFog, 7583083, 6592339)));
     }
