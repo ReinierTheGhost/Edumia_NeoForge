@@ -14,6 +14,13 @@ public class ModSpawnSettingsBuilder {
         builder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.COW, 8, 4, 4));
     }
 
+    public static void addButterfly(MobSpawnSettings.Builder builder){
+        builder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EdumiaEntities.BUTTERFLY.get(), 10, 6, 20));
+    }
+
+    public static void addDragonfly(MobSpawnSettings.Builder builder){
+        builder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EdumiaEntities.DRAGONFLY.get(), 10, 4, 8));
+    }
     public static void addPlainAnimals(MobSpawnSettings.Builder builder){
         addFarmAnimals(builder);
         builder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.DONKEY, 1, 1, 3));

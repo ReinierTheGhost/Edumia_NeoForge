@@ -240,6 +240,8 @@ public class CreativeTabLoader {
                                 entries.accept(ItemLoader.HUMAN_SPAWN_EGG.get());
                                 entries.accept(ItemLoader.HIGH_ELVEN_SPAWN_EGG.get());
                                 entries.accept(ItemLoader.DARK_ELVEN_SPAWN_EGG.get());
+                                entries.accept(ItemLoader.BUTTERFLY_SPAWN_EGG.get());
+                                entries.accept(ItemLoader.DRAGONFLY_SPAWN_EGG.get());
                                 entries.accept(ItemLoader.HIGH_ELVEN_BANNER_PATTERN.get());
                                 entries.accept(ItemLoader.DARK_ELVEN_BANNER_PATTERN.get());
                                 entries.accept(ItemLoader.DEMON_BANNER_PATTERN.get());

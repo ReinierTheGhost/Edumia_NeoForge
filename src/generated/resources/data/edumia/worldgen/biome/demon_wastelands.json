@@ -31,6 +31,7 @@
     [],
     [],
     [
+      "edumia:ores/vanilla/gravel_ore",
       "edumia:tree/dead/burned_tree",
       "minecraft:glow_lichen"
     ],

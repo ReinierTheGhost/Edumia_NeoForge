@@ -193,6 +193,14 @@ public class ItemLoader {
             () -> new DeferredSpawnEggItem(EdumiaEntities.DARK_ELVEN_CIVILIAN, 0x321232, 0x070514,
                     new Item.Properties()));
 
+    public static final DeferredItem<Item> BUTTERFLY_SPAWN_EGG = ITEMS.register("butterfly_spawn_egg",
+            () -> new DeferredSpawnEggItem(EdumiaEntities.BUTTERFLY, 0x161d27, 0xb42d10,
+                    new Item.Properties()));
+
+    public static final DeferredItem<Item> DRAGONFLY_SPAWN_EGG = ITEMS.register("dragonfly_spawn_egg",
+            () -> new DeferredSpawnEggItem(EdumiaEntities.DRAGONFLY, 0x40a605, 0x522601,
+                    new Item.Properties()));
+
     public static final DeferredItem<Item> HIGH_ELVEN_BANNER_PATTERN = ITEMS.register("high_elven_banner_pattern",
             () -> new BannerPatternItem(TagLoader.BannerPatterns.HIGH_ELVEN_PATTERN, new Item.Properties()
                     .stacksTo(1).rarity(Rarity.RARE)));

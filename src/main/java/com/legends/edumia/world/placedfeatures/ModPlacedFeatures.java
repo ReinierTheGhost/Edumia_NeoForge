@@ -1,7 +1,9 @@
 package com.legends.edumia.world.placedfeatures;
 
 import com.legends.edumia.Edumia;
+import com.legends.edumia.core.blocksets.SandBlockSets;
 import com.legends.edumia.world.congiguredfeatures.ModConfiguredFeatures;
+import com.legends.edumia.world.congiguredfeatures.beach.BeachConfiguredFeatures;
 import com.legends.edumia.world.placedfeatures.biomes.BiomePlacedFeatures;
 import com.legends.edumia.world.placedfeatures.biomes.FairyBiomePlacedFeatures;
 import com.legends.edumia.world.placedfeatures.biomes.OgreBiomePlacedFeatures;
@@ -9,8 +11,12 @@ import com.legends.edumia.world.placedfeatures.biomes.OrcDesertPlacedFeatures;
 import com.legends.edumia.world.placedfeatures.boulders.BoulderPlacedFeatures;
 import com.legends.edumia.world.placedfeatures.crystrals.CrystalPlacedFeatures;
 import com.legends.edumia.world.placedfeatures.ocean.ReefPlacedFeatures;
+import com.legends.edumia.world.placedfeatures.ores.VanillaBlockOrePlacedFeatures;
+import com.legends.edumia.world.placedfeatures.plants.FlowerPlacedFeatures;
+import com.legends.edumia.world.placedfeatures.plants.MushroomPlacedFeatures;
 import com.legends.edumia.world.placedfeatures.plants.ReedsPlacedFeatures;
 import com.legends.edumia.world.placedfeatures.trees.*;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
@@ -18,11 +24,11 @@ import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import net.minecraft.world.level.levelgen.placement.BiomeFilter;
-import net.minecraft.world.level.levelgen.placement.InSquarePlacement;
-import net.minecraft.world.level.levelgen.placement.PlacedFeature;
-import net.minecraft.world.level.levelgen.placement.PlacementModifier;
+import net.minecraft.world.level.levelgen.placement.*;
 
 import java.util.List;
 
@@ -30,6 +36,10 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> NOTING = registerKey("noting");
     public static final ResourceKey<PlacedFeature> WATER_DELTA = registerKey("water_delta");
     public static final ResourceKey<PlacedFeature> ABUNDANT_WATER_DELTA = registerKey("abundant_water_delta");
+
+    public static final ResourceKey<PlacedFeature> SNOW_LAYER_FIRST = registerKey("snow/layers/normal/first");
+    public static final ResourceKey<PlacedFeature> SNOW_LAYER_SECOND = registerKey("snow/layers/normal/second");
+    public static final ResourceKey<PlacedFeature> SNOW_LAYER_THIRD = registerKey("snow/layers/normal/third");
 
     public  static PlacementModifier overflowing = PlacementUtils.countExtra(5, 0.5f, 1);
     public static PlacementModifier abundant = PlacementUtils.countExtra(4, 0.5f, 1);
@@ -67,6 +77,124 @@ public class ModPlacedFeatures {
         register(context, ABUNDANT_WATER_DELTA, waterDelta, List.of(abundant, InSquarePlacement.spread(),
                 PlacementUtils.HEIGHTMAP_WORLD_SURFACE,  BiomeFilter.biome()));
 
+        register(context, SNOW_LAYER_FIRST, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.SNOW_LAYER_FIRST),
+                List.of( CountPlacement.of(80),
+                        CountPlacement.of(10),  // Note: having two counts is unusual; remove if not intended
+                        InSquarePlacement.spread(),
+                        HeightmapPlacement.onHeightmap(Heightmap.Types.WORLD_SURFACE_WG),
+                        BlockPredicateFilter.forPredicate(
+                                BlockPredicate.allOf(
+                                        // Checks if the block below is grass, snow, or blackstone
+                                        BlockPredicate.matchesBlocks(new BlockPos(0, -1, 0),
+                                                Blocks.GRASS_BLOCK, Blocks.SNOW_BLOCK, Blocks.BLACKSTONE),
+
+                                        // Checks if the current position is air or snow
+                                        BlockPredicate.matchesBlocks(new BlockPos(0, 0, 0),
+                                                Blocks.AIR, Blocks.SNOW),
+
+                                        // Checks if any of the surrounding blocks (1 block away in each cardinal direction) are grass, snow, or blackstone
+                                        BlockPredicate.anyOf(
+                                                BlockPredicate.matchesBlocks(new BlockPos(1, 0, 0),
+                                                        Blocks.GRASS_BLOCK, Blocks.SNOW_BLOCK, Blocks.BLACKSTONE),
+                                                BlockPredicate.matchesBlocks(new BlockPos(0, 0, 1),
+                                                        Blocks.GRASS_BLOCK, Blocks.SNOW_BLOCK, Blocks.BLACKSTONE),
+                                                BlockPredicate.matchesBlocks(new BlockPos(-1, 0, 0),
+                                                        Blocks.GRASS_BLOCK, Blocks.SNOW_BLOCK, Blocks.BLACKSTONE),
+                                                BlockPredicate.matchesBlocks(new BlockPos(0, 0, -1),
+                                                        Blocks.GRASS_BLOCK, Blocks.SNOW_BLOCK, Blocks.BLACKSTONE)
+                                        )
+                                )
+                        ),
+                        BiomeFilter.biome()));
+
+        register(context, SNOW_LAYER_SECOND, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.SNOW_LAYER_SECOND),
+                List.of(CountPlacement.of(80),
+                        CountPlacement.of(10),  // If two counts are not intentional, remove one
+                        InSquarePlacement.spread(),
+                        HeightmapPlacement.onHeightmap(Heightmap.Types.WORLD_SURFACE_WG),
+                        BlockPredicateFilter.forPredicate(
+                                BlockPredicate.allOf(
+                                        // First Predicate: `not` block with `any_of` surrounding conditions
+                                        BlockPredicate.not(
+                                                BlockPredicate.anyOf(
+                                                        BlockPredicate.matchesBlocks(new BlockPos(1, 0, 0), Blocks.GRASS_BLOCK, Blocks.SNOW_BLOCK, Blocks.BLACKSTONE),
+                                                        BlockPredicate.matchesBlocks(new BlockPos(0, 0, 1), Blocks.GRASS_BLOCK, Blocks.SNOW_BLOCK, Blocks.BLACKSTONE),
+                                                        BlockPredicate.matchesBlocks(new BlockPos(-1, 0, 0), Blocks.GRASS_BLOCK, Blocks.SNOW_BLOCK, Blocks.BLACKSTONE),
+                                                        BlockPredicate.matchesBlocks(new BlockPos(0, 0, -1), Blocks.GRASS_BLOCK, Blocks.SNOW_BLOCK, Blocks.BLACKSTONE),
+                                                        BlockPredicate.matchesBlocks(new BlockPos(1, -1, 0), Blocks.AIR),
+                                                        BlockPredicate.matchesBlocks(new BlockPos(0, -1, 1), Blocks.AIR),
+                                                        BlockPredicate.matchesBlocks(new BlockPos(-1, -1, 0), Blocks.AIR),
+                                                        BlockPredicate.matchesBlocks(new BlockPos(0, -1, -1), Blocks.AIR)
+                                                )
+                                        ),
+                                        // Second Predicate: Block below must be grass_block, snow_block, or blackstone
+                                        BlockPredicate.matchesBlocks(new BlockPos(0, -1, 0), Blocks.GRASS_BLOCK, Blocks.SNOW_BLOCK, Blocks.BLACKSTONE),
+
+                                        // Third Predicate: Block at the target position must be air or snow
+                                        BlockPredicate.matchesBlocks(new BlockPos(0, 0, 0), Blocks.AIR, Blocks.SNOW),
+
+                                        // Fourth Predicate: `any_of` additional surrounding conditions
+                                        BlockPredicate.anyOf(
+                                                BlockPredicate.matchesBlocks(new BlockPos(2, 0, 0), Blocks.GRASS_BLOCK, Blocks.SNOW_BLOCK, Blocks.BLACKSTONE),
+                                                BlockPredicate.matchesBlocks(new BlockPos(0, 0, 2), Blocks.GRASS_BLOCK, Blocks.SNOW_BLOCK, Blocks.BLACKSTONE),
+                                                BlockPredicate.matchesBlocks(new BlockPos(-2, 0, 0), Blocks.GRASS_BLOCK, Blocks.SNOW_BLOCK, Blocks.BLACKSTONE),
+                                                BlockPredicate.matchesBlocks(new BlockPos(0, 0, -2), Blocks.GRASS_BLOCK, Blocks.SNOW_BLOCK, Blocks.BLACKSTONE),
+                                                BlockPredicate.matchesBlocks(new BlockPos(1, 0, 1), Blocks.GRASS_BLOCK, Blocks.SNOW_BLOCK, Blocks.BLACKSTONE),
+                                                BlockPredicate.matchesBlocks(new BlockPos(-1, 0, 1), Blocks.GRASS_BLOCK, Blocks.SNOW_BLOCK, Blocks.BLACKSTONE),
+                                                BlockPredicate.matchesBlocks(new BlockPos(1, 0, -1), Blocks.GRASS_BLOCK, Blocks.SNOW_BLOCK, Blocks.BLACKSTONE),
+                                                BlockPredicate.matchesBlocks(new BlockPos(-1, 0, -1), Blocks.GRASS_BLOCK, Blocks.SNOW_BLOCK, Blocks.BLACKSTONE)
+                                        )
+                                )
+                        ),
+                        BiomeFilter.biome()));
+
+        register(context, SNOW_LAYER_THIRD, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.SNOW_LAYER_THIRD),
+                List.of(
+                        CountPlacement.of(80),
+                        CountPlacement.of(10), // If two counts are not intentional, remove one
+                        InSquarePlacement.spread(),
+                        HeightmapPlacement.onHeightmap(Heightmap.Types.WORLD_SURFACE_WG),
+                        BlockPredicateFilter.forPredicate(
+                                BlockPredicate.allOf(
+                                        // First Predicate: Block at target position must be air or snow
+                                        BlockPredicate.matchesBlocks(new BlockPos(0, 0, 0), Blocks.AIR, Blocks.SNOW),
+
+                                        // Second Predicate: `not` condition with `any_of` for surrounding blocks
+                                        BlockPredicate.not(
+                                                BlockPredicate.anyOf(
+                                                        BlockPredicate.matchesBlocks(new BlockPos(1, 0, 0), Blocks.GRASS_BLOCK, Blocks.SNOW_BLOCK, Blocks.BLACKSTONE),
+                                                        BlockPredicate.matchesBlocks(new BlockPos(0, 0, 1), Blocks.GRASS_BLOCK, Blocks.SNOW_BLOCK, Blocks.BLACKSTONE),
+                                                        BlockPredicate.matchesBlocks(new BlockPos(-1, 0, 0), Blocks.GRASS_BLOCK, Blocks.SNOW_BLOCK, Blocks.BLACKSTONE),
+                                                        BlockPredicate.matchesBlocks(new BlockPos(0, 0, -1), Blocks.GRASS_BLOCK, Blocks.SNOW_BLOCK, Blocks.BLACKSTONE),
+                                                        BlockPredicate.matchesBlocks(new BlockPos(2, 0, 0), Blocks.GRASS_BLOCK, Blocks.SNOW_BLOCK, Blocks.BLACKSTONE),
+                                                        BlockPredicate.matchesBlocks(new BlockPos(0, 0, 2), Blocks.GRASS_BLOCK, Blocks.SNOW_BLOCK, Blocks.BLACKSTONE),
+                                                        BlockPredicate.matchesBlocks(new BlockPos(-2, 0, 0), Blocks.GRASS_BLOCK, Blocks.SNOW_BLOCK, Blocks.BLACKSTONE),
+                                                        BlockPredicate.matchesBlocks(new BlockPos(0, 0, -2), Blocks.GRASS_BLOCK, Blocks.SNOW_BLOCK, Blocks.BLACKSTONE),
+                                                        BlockPredicate.matchesBlocks(new BlockPos(1, 0, 1), Blocks.GRASS_BLOCK, Blocks.SNOW_BLOCK, Blocks.BLACKSTONE),
+                                                        BlockPredicate.matchesBlocks(new BlockPos(-1, 0, 1), Blocks.GRASS_BLOCK, Blocks.SNOW_BLOCK, Blocks.BLACKSTONE),
+                                                        BlockPredicate.matchesBlocks(new BlockPos(1, 0, -1), Blocks.GRASS_BLOCK, Blocks.SNOW_BLOCK, Blocks.BLACKSTONE),
+                                                        BlockPredicate.matchesBlocks(new BlockPos(-1, 0, -1), Blocks.GRASS_BLOCK, Blocks.SNOW_BLOCK, Blocks.BLACKSTONE),
+                                                        BlockPredicate.matchesBlocks(new BlockPos(1, -1, 0), Blocks.AIR),
+                                                        BlockPredicate.matchesBlocks(new BlockPos(0, -1, 1), Blocks.AIR),
+                                                        BlockPredicate.matchesBlocks(new BlockPos(-1, -1, 0), Blocks.AIR),
+                                                        BlockPredicate.matchesBlocks(new BlockPos(0, -1, -1), Blocks.AIR)
+                                                )
+                                        ),
+
+                                        // Third Predicate: Block below target position must be a specific block
+                                        BlockPredicate.matchesBlocks(new BlockPos(0, -1, 0), Blocks.GRASS_BLOCK, Blocks.SNOW_BLOCK, Blocks.BLACKSTONE),
+
+                                        // Fourth Predicate: `any_of` conditions with additional neighboring checks
+                                        BlockPredicate.anyOf(
+                                                BlockPredicate.matchesBlocks(new BlockPos(3, 0, 0), Blocks.GRASS_BLOCK, Blocks.SNOW_BLOCK, Blocks.BLACKSTONE),
+                                                BlockPredicate.matchesBlocks(new BlockPos(0, 0, 3), Blocks.GRASS_BLOCK, Blocks.SNOW_BLOCK, Blocks.BLACKSTONE),
+                                                BlockPredicate.matchesBlocks(new BlockPos(-3, 0, 0), Blocks.GRASS_BLOCK, Blocks.SNOW_BLOCK, Blocks.BLACKSTONE),
+                                                BlockPredicate.matchesBlocks(new BlockPos(0, 0, -3), Blocks.GRASS_BLOCK, Blocks.SNOW_BLOCK, Blocks.BLACKSTONE)
+                                        )
+                                )
+                        ),
+                        BiomeFilter.biome()));
+
         TreePlacedFeatures.boostrap(context);
         BeachPlacedFeatures.boostrap(context);
         ReefPlacedFeatures.boostrap(context);
@@ -89,6 +217,8 @@ public class ModPlacedFeatures {
         PalmTreePlacedFeatures.boostrap(context);
         MahoganyTreePlacedFeatures.boostrap(context);
         LeopardTreePlacedFeatures.boostrap(context);
+        MushroomPlacedFeatures.boostrap(context);
+        VanillaBlockOrePlacedFeatures.boostrap(context);
     }
 
     public static ResourceKey<PlacedFeature> registerKey(String name) {

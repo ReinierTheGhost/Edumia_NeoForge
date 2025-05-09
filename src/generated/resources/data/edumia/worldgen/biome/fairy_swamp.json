@@ -36,6 +36,7 @@
     [
       "edumia:boulders/big_mossy_boulder",
       "edumia:boulders/mossy_boulder",
+      "edumia:ores/vanilla/mud_ore",
       "edumia:reeds",
       "edumia:tree/oaks/oak/oak_bush_tree",
       "edumia:tree/temperate/willow/willow_tree",
@@ -58,7 +59,14 @@
   "spawners": {
     "ambient": [],
     "axolotls": [],
-    "creature": [],
+    "creature": [
+      {
+        "type": "edumia:dragonfly",
+        "maxCount": 8,
+        "minCount": 4,
+        "weight": 10
+      }
+    ],
     "misc": [],
     "monster": [],
     "underground_water_creature": [],

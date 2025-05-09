@@ -1,4 +1,4 @@
-package com.legends.edumia.world.congiguredfeatures;
+package com.legends.edumia.world.congiguredfeatures.plants;
 
 import com.legends.edumia.Edumia;
 import com.legends.edumia.core.blocksets.FlowerBlockSets;

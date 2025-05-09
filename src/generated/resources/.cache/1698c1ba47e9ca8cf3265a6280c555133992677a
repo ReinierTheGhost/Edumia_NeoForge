@@ -1,4 +1,4 @@
-// 1.21.1	2025-05-04T22:25:42.5093013	Tags for minecraft:block mod id edumia
+// 1.21.1	2025-05-08T19:27:51.3512585	Tags for minecraft:block mod id edumia
 3e434f0a86fbcd633cfff91dc0e92ccd3f31bd67 data/edumia/tags/block/almond_logs.json
 ae6219d1827772f22e3df50c609f5244e203de8d data/edumia/tags/block/apple_logs.json
 9cd2fda8149e35f2183333d9280ff853f4a0a4e8 data/edumia/tags/block/aspen_logs.json
@@ -6,6 +6,7 @@ ae6219d1827772f22e3df50c609f5244e203de8d data/edumia/tags/block/apple_logs.json
 0430c4e1c41c8baea7985b9a20f76dad6281878c data/edumia/tags/block/beech_logs.json
 db80a0a81916b5f0383c035c61e9ba58a5bb1092 data/edumia/tags/block/blackthorn_logs.json
 223c4538827841ed1c5ba6f8972e99840c3487d7 data/edumia/tags/block/black_oak_logs.json
+9764c27f9e0b8eb695c4579940198d5820629290 data/edumia/tags/block/butterfly_growables.json
 5413d2f1dab4183c8fd39c4d84929f9d7897c6e0 data/edumia/tags/block/cedar_logs.json
 e6eb2daa44d3fcf722cb03cf643e8d87bc18465f data/edumia/tags/block/charred_logs.json
 c8f589974b15cab84d247d7332c9922aba1b25cc data/edumia/tags/block/cherry_logs.json
@@ -36,6 +37,7 @@ e3d0e9968fad6e57ae5428b89d946fbc40acbf7e data/edumia/tags/block/willow_logs.json
 119873a1eda8a4c2b0443147ea9208f5dd7aa04e data/minecraft/tags/block/buttons.json
 97429cbf78b255cb1aa3eabfe050853a3bf2e955 data/minecraft/tags/block/fences.json
 1ffdc7f00cf7f318378e1f7d3ae2a4ca3b2c89dc data/minecraft/tags/block/fence_gates.json
+8eb1e885be0a84e2c6454f8bb4157885d3801197 data/minecraft/tags/block/flowers.json
 ec3b22142ae2cb908334548dd2adf6995896ecf5 data/minecraft/tags/block/jungle_logs.json
 bd0d3945bc9c23b701bf94926a9950fac77aad54 data/minecraft/tags/block/leaves.json
 cab8da6c5f4b5e31962c7f8ce82ade15d8f76fb6 data/minecraft/tags/block/logs.json

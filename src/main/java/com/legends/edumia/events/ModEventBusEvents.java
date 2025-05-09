@@ -1,10 +1,14 @@
 package com.legends.edumia.events;
 
 import com.legends.edumia.Edumia;
+import com.legends.edumia.client.models.animals.ButterflyModel;
+import com.legends.edumia.client.models.animals.DragonflyModel;
 import com.legends.edumia.client.models.npcs.ElvenModel;
 import com.legends.edumia.client.models.npcs.HumanModel;
 import com.legends.edumia.client.models.npcs.FairyModel;
 import com.legends.edumia.entity.EdumiaEntities;
+import com.legends.edumia.entity.animals.butterfly.ButterflyEntity;
+import com.legends.edumia.entity.animals.dragonfly.DragonflyEntity;
 import com.legends.edumia.entity.model.EdumiaEntityModelLayers;
 import com.legends.edumia.entity.races.darkelves.DarkElfEntity;
 import com.legends.edumia.entity.races.fairy.FairyEntity;
@@ -31,6 +35,8 @@ public class ModEventBusEvents {
         event.registerLayerDefinition(EdumiaEntityModelLayers.HUMAN, () -> HumanModel.createBodyLayer(CubeDeformation.NONE));
         event.registerLayerDefinition(EdumiaEntityModelLayers.HIGHELVEN, () -> ElvenModel.createBodyLayer(CubeDeformation.NONE));
         event.registerLayerDefinition(EdumiaEntityModelLayers.DARKELVEN, () -> ElvenModel.createBodyLayer(CubeDeformation.NONE));
+        event.registerLayerDefinition(EdumiaEntityModelLayers.BUTTERFLY, ButterflyModel::createBodyLayer);
+        event.registerLayerDefinition(EdumiaEntityModelLayers.DRAGONFLY, DragonflyModel::createBodyLayer);
     }
 
 
@@ -41,6 +47,9 @@ public class ModEventBusEvents {
         event.put(EdumiaEntities.HUMAN_CIVILIAN.get(), HumanEntity.setSoldierAttribute().build());
         event.put(EdumiaEntities.HIGH_ELVEN_CIVILIAN.get(), HighElfEntity.setSoldierAttribute().build());
         event.put(EdumiaEntities.DARK_ELVEN_CIVILIAN.get(), DarkElfEntity.setSoldierAttribute().build());
+
+        event.put(EdumiaEntities.BUTTERFLY.get(), ButterflyEntity.createAttributes().build());
+        event.put(EdumiaEntities.DRAGONFLY.get(), DragonflyEntity.createAttributes().build());
     }
 
     @SubscribeEvent
@@ -52,6 +61,11 @@ public class ModEventBusEvents {
         event.register(EdumiaEntities.HIGH_ELVEN_CIVILIAN.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                 Mob::checkMobSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
         event.register(EdumiaEntities.DARK_ELVEN_CIVILIAN.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                Mob::checkMobSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
+
+        event.register(EdumiaEntities.BUTTERFLY.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                Mob::checkMobSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
+        event.register(EdumiaEntities.DRAGONFLY.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                 Mob::checkMobSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
     }
 }

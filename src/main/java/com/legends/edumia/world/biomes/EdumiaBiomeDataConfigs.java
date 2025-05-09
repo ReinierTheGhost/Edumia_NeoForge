@@ -68,6 +68,11 @@ public class EdumiaBiomeDataConfigs {
             .addSlopeData(36, Blocks.COARSE_DIRT)
             .addSlopeData(MAX_ANGLE, Blocks.STONE);
 
+    public static SlopeMap tundra = new SlopeMap()
+            .addSlopeData(30, Blocks.SNOW_BLOCK)
+            .addSlopeData(MAX_ANGLE, Blocks.STONE);
+
+
     public static SlopeMap avelionRockShore = new SlopeMap()
             .addSlopeData(20, Blocks.GRASS_BLOCK)
             .addSlopeData(30, Blocks.COARSE_DIRT)
@@ -233,5 +238,7 @@ public class EdumiaBiomeDataConfigs {
             .noiseModifier(1.2f).heightModifier(0.67f);
     public static BiomeGenerationData mountTitleistModifier = new BiomeGenerationData().expansionWeight(MOUNTAIN_WEIGHT)
             .noiseModifier(1.47f).heightModifier(MOUNTAIN_HEIGHT_MODIFIER);
+    public static BiomeGenerationData myrwoodModifier = new BiomeGenerationData().expansionWeight(LAND_WEIGHT).noiseModifier(0.51f).heightModifier(0.4f);
+
 
 }

@@ -347,12 +347,14 @@ public class EdumiaHelpingGenerator {
 
         for (FlowerBlockSets.FlowerSet block : FlowerBlockSets.flowerSets){
             if (block.tallFlower() == null){
+                Flowers.flowers.add(block.flower().get());
                 SimpleFlowerModel.blocks.add(block.flower().get());
                 SimplePottedFlowerModel.blocks.add(new SimplePottedFlowerModel.Potted(block.pottedFlower().get(), block.flower().get()));
 
                 BlockDrops.blocks.add(block.flower().get());
                 PottedFlowerDrops.blocks.add(block.pottedFlower().get());
             }else {
+                Flowers.flowers.add(block.tallFlower().get());
                 SimpleTallFlowerModel.blocks.add(block.tallFlower().get());
                 BlockDrops.blocks.add(block.tallFlower().get());
             }

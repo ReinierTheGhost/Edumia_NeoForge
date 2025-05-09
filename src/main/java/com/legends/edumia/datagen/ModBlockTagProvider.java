@@ -60,6 +60,15 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(WoodBlockSets.MIRWOODNUT.log().get())
                 .add(WoodBlockSets.MIRWOODNUT.wood().get());
 
+        tag(TagLoader.Blocks.BUTTERFLY_GROWABLES)
+                .addTag(BlockTags.CROPS)
+                .add(Blocks.SWEET_BERRY_BUSH);
+
+        for (Block blocks : Flowers.flowers){
+            tag(BlockTags.FLOWERS)
+                    .add(blocks);
+        }
+
         for (WoodBlockSets.SimpleBlockSet set : WoodBlockSets.sets){
             tag(set.logBlockTag())
                     .add(set.log().get())

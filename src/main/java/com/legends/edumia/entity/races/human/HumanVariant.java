@@ -1,7 +1,5 @@
 package com.legends.edumia.entity.races.human;
 
-import com.legends.edumia.entity.races.fairy.FairyVariant;
-
 import java.util.Arrays;
 import java.util.Comparator;
 

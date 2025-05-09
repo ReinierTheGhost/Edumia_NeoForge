@@ -36,6 +36,7 @@
     [
       "edumia:boulders/big_stone_boulder",
       "edumia:boulders/stone_boulder",
+      "edumia:ores/vanilla/gravel_ore",
       "edumia:tree/acacia/acacia_tree",
       "edumia:tree/oaks/oak/oak_bush_tree",
       "minecraft:brown_mushroom_normal",

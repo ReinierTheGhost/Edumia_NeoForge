@@ -36,6 +36,7 @@
     [
       "edumia:boulders/andesite_boulder",
       "edumia:boulders/big_andesite_boulder",
+      "edumia:ores/vanilla/gravel_ore",
       "edumia:tree/boreal/larch/larch_tree",
       "edumia:tree/boreal/pine/common_pine_tree",
       "edumia:tree/boreal/spruce/spruce_bush_tree",
@@ -52,7 +53,10 @@
       "minecraft:red_mushroom_normal"
     ],
     [
-      "minecraft:freeze_top_layer"
+      "minecraft:freeze_top_layer",
+      "edumia:snow/layers/normal/first",
+      "edumia:snow/layers/normal/second",
+      "edumia:snow/layers/normal/third"
     ]
   ],
   "has_precipitation": true,
@@ -67,5 +71,5 @@
     "water_ambient": [],
     "water_creature": []
   },
-  "temperature": 0.5
+  "temperature": -0.8
 }

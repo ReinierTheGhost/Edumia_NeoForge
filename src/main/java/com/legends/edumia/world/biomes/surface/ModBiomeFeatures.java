@@ -1,7 +1,8 @@
 package com.legends.edumia.world.biomes.surface;
 
 import com.legends.edumia.world.placedfeatures.BeachPlacedFeatures;
-import com.legends.edumia.world.placedfeatures.FlowerPlacedFeatures;
+import com.legends.edumia.world.placedfeatures.ores.VanillaBlockOrePlacedFeatures;
+import com.legends.edumia.world.placedfeatures.plants.FlowerPlacedFeatures;
 import com.legends.edumia.world.placedfeatures.ModPlacedFeatures;
 import com.legends.edumia.world.placedfeatures.TreePlacedFeatures;
 import com.legends.edumia.world.placedfeatures.biomes.BiomePlacedFeatures;
@@ -9,6 +10,7 @@ import com.legends.edumia.world.placedfeatures.biomes.FairyBiomePlacedFeatures;
 import com.legends.edumia.world.placedfeatures.biomes.OrcDesertPlacedFeatures;
 import com.legends.edumia.world.placedfeatures.boulders.BoulderPlacedFeatures;
 import com.legends.edumia.world.placedfeatures.crystrals.CrystalPlacedFeatures;
+import com.legends.edumia.world.placedfeatures.plants.MushroomPlacedFeatures;
 import com.legends.edumia.world.placedfeatures.plants.ReedsPlacedFeatures;
 import com.legends.edumia.world.placedfeatures.trees.*;
 import net.minecraft.data.worldgen.placement.MiscOverworldPlacements;
@@ -242,16 +244,27 @@ public class ModBiomeFeatures {
     }
     // endregion TREES
 
+    // region PLANTS
     public static void addReeds(List<ResourceKey<PlacedFeature>> vegetation) {
         vegetation.add(ReedsPlacedFeatures.REEDS);
     }
     public static void addPapyrus(List<ResourceKey<PlacedFeature>> vegetation) {
         vegetation.add(ReedsPlacedFeatures.PAPYRUS);
     }
+
+    // endregion
+
     public static void addElvenCrystal(List<ResourceKey<PlacedFeature>> vegetation) {
         vegetation.add(CrystalPlacedFeatures.ELVEN_CRYSTAL);
     }
 
+    public static void addWaterDelta(List<ResourceKey<PlacedFeature>> vegetation) {
+        vegetation.add(ModPlacedFeatures.WATER_DELTA);
+    }
+
+    public static void addAbundantWaterDelta(List<ResourceKey<PlacedFeature>> vegetation) {
+        vegetation.add(ModPlacedFeatures.ABUNDANT_WATER_DELTA);
+    }
     // region BOULDERS
     public static void addAndesiteBoulder(List<ResourceKey<PlacedFeature>> vegetation) {
         vegetation.add(BoulderPlacedFeatures.ANDESITE_BOULDER);
@@ -290,53 +303,16 @@ public class ModBiomeFeatures {
     // endregion
 
     // region FOLIAGE
-    public static void addWaterDelta(List<ResourceKey<PlacedFeature>> vegetation) {
-        vegetation.add(ModPlacedFeatures.WATER_DELTA);
-    }
-
-    public static void addAbundantWaterDelta(List<ResourceKey<PlacedFeature>> vegetation) {
-        vegetation.add(ModPlacedFeatures.ABUNDANT_WATER_DELTA);
-    }
-
-    public static void addCornflower(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addFlowerGreenJewel(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-
-    public static void addBasaltPile(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addBlackStonePile(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addDesertFoliage(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addCoastalFoliage(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addCorruptedMoss(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addDryGrass(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addDyingGrass(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addForestMoss(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addForestBlockMoss(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-
-    public static void addRareForestMoss(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
     public static void addHeather(List<ResourceKey<PlacedFeature>> vegetation) {
         vegetation.add(FlowerPlacedFeatures.HEATHER_BUSH_FLOWER_KEY);
     }
 
-    public static void addGensaiOrchid(List<ResourceKey<PlacedFeature>> vegetation) {
-        vegetation.add(FlowerPlacedFeatures.GENSAI_ORCHID_FLOWER_KEY);
+    public static void addHibiscus(List<ResourceKey<PlacedFeature>> vegetation) {
+        vegetation.add(FlowerPlacedFeatures.HIBISCUS_FLOWER_KEY);
     }
 
-    public static void addMallos(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addToughBerriesRare(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addTuftGrass(List<ResourceKey<PlacedFeature>> vegetation) {
+    public static void addGensaiOrchid(List<ResourceKey<PlacedFeature>> vegetation) {
+        vegetation.add(FlowerPlacedFeatures.GENSAI_ORCHID_FLOWER_KEY);
     }
     public static void addReedsFoliage(List<ResourceKey<PlacedFeature>> vegetation) {
         vegetation.add(ReedsPlacedFeatures.REEDS);
@@ -351,108 +327,83 @@ public class ModBiomeFeatures {
         vegetation.add(VegetationPlacements.GRASS_BONEMEAL);
         vegetation.add(VegetationPlacements.PATCH_GRASS_JUNGLE);
     }
-    public static void addWheatGrass(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addWildGrass(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addWilderGrass(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-
     // endregion
 
     // region MUSHROOMS
-    public static void addBrownBolete(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addMorsel(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addWhiteMushroom(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addRareMorsel(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addRareWhiteMushroom(List<ResourceKey<PlacedFeature>> vegetation) {
+    public static void addParasolMushroom(List<ResourceKey<PlacedFeature>> vegetation) {
+        vegetation.add(MushroomPlacedFeatures.PARASOL_MUSHROOM_1_KEY);
+        vegetation.add(MushroomPlacedFeatures.PARASOL_MUSHROOM_2_KEY);
+        vegetation.add(MushroomPlacedFeatures.PARASOL_MUSHROOM_TALL_KEY);
     }
     // endregion
 
     // region WILD CROPS
-    public static void addWildFlax(List<ResourceKey<PlacedFeature>> vegetation) {
-        //vegetation.add(FlowerPlacedFeatures.PATCH_FLAX_FLOWER_KEY);
-    }
+
     // endregion
 
     // region ORES
+
     public static void addAndesiteOre(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addAshBlockOre(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addAshenDirtOre(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addAshenDirtStoneOre(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addBasaltOre(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addSmoothBasaltOre(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addBlackSand(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addBlueTuff(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addCalciteOre(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addRareCalciteOre(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addCoarseDirtOre(List<ResourceKey<PlacedFeature>> vegetation) {
+        vegetation.add(VanillaBlockOrePlacedFeatures.ANDESITE_ORE);
     }
     public static void addDioriteOre(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addDolomiteOre(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addDripstoneOre(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addDryDirtOre(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addFrozenStone(List<ResourceKey<PlacedFeature>> vegetation) {
+        vegetation.add(VanillaBlockOrePlacedFeatures.DIORITE_ORE);
     }
     public static void addGraniteOre(List<ResourceKey<PlacedFeature>> vegetation) {
+        vegetation.add(VanillaBlockOrePlacedFeatures.GRANITE_ORE);
     }
+
+    public static void addBasaltOre(List<ResourceKey<PlacedFeature>> vegetation) {
+        vegetation.add(VanillaBlockOrePlacedFeatures.BASALT_ORE);
+    }
+
+    public static void addSmoothBasaltOre(List<ResourceKey<PlacedFeature>> vegetation) {
+        vegetation.add(VanillaBlockOrePlacedFeatures.SMOOTH_BASALT_ORE);
+    }
+
+    public static void addCalciteOre(List<ResourceKey<PlacedFeature>> vegetation) {
+        vegetation.add(VanillaBlockOrePlacedFeatures.CALCITE_ORE);
+    }
+
+    public static void addRareCalciteOre(List<ResourceKey<PlacedFeature>> vegetation) {
+        vegetation.add(VanillaBlockOrePlacedFeatures.RARE_CALCITE_ORE);
+    }
+
+    public static void addCoarseDirtOre(List<ResourceKey<PlacedFeature>> vegetation) {
+        vegetation.add(VanillaBlockOrePlacedFeatures.COARSE_DIRT_ORE);
+    }
+    public static void addDirtToGrassOre(List<ResourceKey<PlacedFeature>> vegetation) {
+        vegetation.add(VanillaBlockOrePlacedFeatures.DIRT_TO_GRASS_ORE);
+    }
+    public static void addDripstoneOre(List<ResourceKey<PlacedFeature>> vegetation) {
+        vegetation.add(VanillaBlockOrePlacedFeatures.DRIPSTONE_ORE);
+    }
+    public static void addAbandonedMud(List<ResourceKey<PlacedFeature>> vegetation) {
+        vegetation.add(VanillaBlockOrePlacedFeatures.ABUNDANT_MUD_ORE);
+    }
+
+    public static void addPackedMudOre(List<ResourceKey<PlacedFeature>> vegetation) {
+        vegetation.add(VanillaBlockOrePlacedFeatures.PACKED_MUD_ORE);
+    }
+
+
     public static void addGravelOre(List<ResourceKey<PlacedFeature>> vegetation) {
+        vegetation.add(VanillaBlockOrePlacedFeatures.GRAVEL_ORE);
     }
     public static void addStoneGrassOre(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addStoneGrassAbundantOre(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addLimestoneOre(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addAbundantMudOre(List<ResourceKey<PlacedFeature>> vegetation) {
+        vegetation.add(VanillaBlockOrePlacedFeatures.GRASS_TO_STONE_ORE);
     }
     public static void addMudOre(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addPackedMudOre(List<ResourceKey<PlacedFeature>> vegetation) {
+        vegetation.add(VanillaBlockOrePlacedFeatures.MUD_ORE);
     }
     public static void addPodzolOre(List<ResourceKey<PlacedFeature>> vegetation) {
+        vegetation.add(VanillaBlockOrePlacedFeatures.PODZOL_ORE);
     }
     public static void addPowderSnowOre(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addOldPodzolOre(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addSnowOre(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addWhiteSandLayers(List<ResourceKey<PlacedFeature>> vegetation) {
-        vegetation.add(BeachPlacedFeatures.WHITE_SAND_LAYER_FIRST);
-        vegetation.add(BeachPlacedFeatures.WHITE_SAND_LAYER_SECOND);
-        vegetation.add(BeachPlacedFeatures.WHITE_SAND_LAYER_THIRD);
-    }
-    public static void addCalciteStoneOre(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addGrassStoneOre(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addTerracottaOre(List<ResourceKey<PlacedFeature>> vegetation) {
+        vegetation.add(VanillaBlockOrePlacedFeatures.POWDER_SNOW_ORE);
     }
     public static void addTuffOre(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addAbundantTuffOre(List<ResourceKey<PlacedFeature>> vegetation) {
-    }
-    public static void addWhiteSand(List<ResourceKey<PlacedFeature>> vegetation) {
-
+        vegetation.add(VanillaBlockOrePlacedFeatures.TUFF_ORE);
     }
 
     public static void addSandPath(List<ResourceKey<PlacedFeature>> vegetation) {
@@ -460,8 +411,21 @@ public class ModBiomeFeatures {
     }
     // endregion
 
+
     // region MISC
     public static void addLavaMagmaLake(BiomeGenerationSettings.Builder generationSettings) {
+    }
+
+    public static void addWhiteSandLayers(List<ResourceKey<PlacedFeature>> vegetation) {
+        vegetation.add(BeachPlacedFeatures.WHITE_SAND_LAYER_FIRST);
+        vegetation.add(BeachPlacedFeatures.WHITE_SAND_LAYER_SECOND);
+        vegetation.add(BeachPlacedFeatures.WHITE_SAND_LAYER_THIRD);
+    }
+
+    public static void addSnowLayers(List<ResourceKey<PlacedFeature>> vegetation) {
+        vegetation.add(ModPlacedFeatures.SNOW_LAYER_FIRST);
+        vegetation.add(ModPlacedFeatures.SNOW_LAYER_SECOND);
+        vegetation.add(ModPlacedFeatures.SNOW_LAYER_THIRD);
     }
     // endregion
 

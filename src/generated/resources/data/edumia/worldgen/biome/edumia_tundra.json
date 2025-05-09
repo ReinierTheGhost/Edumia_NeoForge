@@ -37,7 +37,10 @@
       "minecraft:glow_lichen"
     ],
     [
-      "minecraft:freeze_top_layer"
+      "minecraft:freeze_top_layer",
+      "edumia:snow/layers/normal/first",
+      "edumia:snow/layers/normal/second",
+      "edumia:snow/layers/normal/third"
     ]
   ],
   "has_precipitation": true,

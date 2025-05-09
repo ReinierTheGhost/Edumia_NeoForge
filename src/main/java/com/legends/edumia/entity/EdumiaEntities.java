@@ -1,6 +1,8 @@
 package com.legends.edumia.entity;
 
 import com.legends.edumia.Edumia;
+import com.legends.edumia.entity.animals.butterfly.ButterflyEntity;
+import com.legends.edumia.entity.animals.dragonfly.DragonflyEntity;
 import com.legends.edumia.entity.races.darkelves.DarkElfEntity;
 import com.legends.edumia.entity.races.fairy.FairyEntity;
 import com.legends.edumia.entity.races.highelves.HighElfEntity;
@@ -30,6 +32,19 @@ public class EdumiaEntities {
     public static final Supplier<EntityType<DarkElfEntity>> DARK_ELVEN_CIVILIAN =
             ENTITY_TYPES.register("dark_elven", () -> EntityType.Builder.of(DarkElfEntity::new, MobCategory.CREATURE)
                     .sized(0.6F, 2F).build("dark_elven"));
+
+
+
+    //region[ANIMALS]
+    public static final Supplier<EntityType<ButterflyEntity>> BUTTERFLY =
+            ENTITY_TYPES.register("butterfly", () -> EntityType.Builder.of(ButterflyEntity::new, MobCategory.CREATURE)
+                    .sized(1F, 0.3F).build("butterfly"));
+
+    public static final Supplier<EntityType<DragonflyEntity>> DRAGONFLY =
+            ENTITY_TYPES.register("dragonfly", () -> EntityType.Builder.of(DragonflyEntity::new, MobCategory.CREATURE)
+                    .sized(1F, 0.3F).build("dragonfly"));
+
+    //endregion
 
 
     public static void register(IEventBus eventBus) {

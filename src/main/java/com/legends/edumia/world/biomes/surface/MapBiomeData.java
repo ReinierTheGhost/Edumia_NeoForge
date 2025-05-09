@@ -66,7 +66,7 @@ public class MapBiomeData {
         addBiome(new BiomeData(EdumiaBiomeKeys.DARK_ELF_FOREST, EdumiaBiomeDataConfigs.grassPlains, EdumiaBiomeDataConfigs.stoneLayers,
                 new BiomeColorsDTO(7972607, defaultFog, 4293787, 338483, 3559947, 1789719)));
 
-        addBiome(new BiomeData(EdumiaBiomeKeys.EDUMIA_TUNDRA, EdumiaBiomeDataConfigs.grassPlains, EdumiaBiomeDataConfigs.limestoneLayers,
+        addBiome(new BiomeData(EdumiaBiomeKeys.EDUMIA_TUNDRA, EdumiaBiomeDataConfigs.tundra, EdumiaBiomeDataConfigs.frozenLayers,
                 new BiomeColorsDTO(8364543, 10335206, 3823818, 66852, 3494723, 4478280)));
 
 

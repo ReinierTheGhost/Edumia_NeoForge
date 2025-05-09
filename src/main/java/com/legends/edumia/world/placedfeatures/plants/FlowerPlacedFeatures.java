@@ -1,11 +1,11 @@
-package com.legends.edumia.world.placedfeatures;
+package com.legends.edumia.world.placedfeatures.plants;
 
 import com.legends.edumia.Edumia;
-import com.legends.edumia.world.congiguredfeatures.FlowerConfiguredFeatures;
+import com.legends.edumia.world.congiguredfeatures.plants.FlowerConfiguredFeatures;
+import com.legends.edumia.world.placedfeatures.ModPlacedFeatures;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
-import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.Heightmap;

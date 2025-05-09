@@ -36,6 +36,7 @@
     [
       "edumia:boulders/big_stone_boulder",
       "edumia:boulders/stone_boulder",
+      "edumia:ores/vanilla/gravel_ore",
       "edumia:tree/boreal/larch/sparse_larch_tree",
       "edumia:tree/oaks/oak/oak_bush_tree",
       "edumia:tree/temperate/birch/super_rare_birch_tree",

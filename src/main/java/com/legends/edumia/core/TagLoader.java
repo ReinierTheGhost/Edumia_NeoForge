@@ -55,6 +55,8 @@ public class TagLoader {
         public static final TagKey<Block> SILVER_SPRUCE_LOGS = createTag("silver_spruce_logs");
         public static final TagKey<Block> WHITE_ASH_LOGS = createTag("white_ash_logs");
         public static final TagKey<Block> WILLOW_LOGS = createTag("willow_logs");
+        public static final TagKey<Block> BUTTERFLY_GROWABLES = createTag("butterfly_growables");
+
         private static TagKey<Block> createTag(String name) {
             return BlockTags.create(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, name));
         }
