@@ -2517,13 +2517,15 @@
 
   "race.edumia.fairy" : "Fairy",
   "race.edumia.human" : "Human",
-  "race.edumia.highelves" : "High elves",
-  "race.edumia.darkelves" : "Dark elves",
+  "race.edumia.highelves" : "High elf",
+  "race.edumia.darkelves" : "Dark elf",
+  "race.edumia.orc" : "Orc",
 
   "faction.edumia.fairies" : "Fairies",
   "faction.edumia.human" : "Humans",
   "faction.edumia.high_elves" : "High elves",
   "faction.edumia.dark_elves" : "Dark elves",
+  "faction.edumia.orcs" : "Orcs",
 
   "disposition.edumia.good" : "Good",
   "disposition.edumia.neutral" : "Neutral",
@@ -2533,6 +2535,7 @@
   "spawn.edumia.human.stormgard" : "Stormgard",
   "spawn.edumia.highelves.elensar" : "Elensar",
   "spawn.edumia.darkelven.nyxarith" : "Nyxarith",
+  "spawn.edumia.orc.gorakthul" : "Gorak'thul",
   "edumia.ui.selection.none": "None",
 
   "widget.edumia.spawn_tooltip_title": "Spawns",
@@ -2560,5 +2563,8 @@
 
   "description.edumia.high_elves.description_0" : "The High Elves are a people of great knowledge, ever seeking the truths of this world and the secrets of the sun that grants us power. We are the keepers of the flame, the wielders of fire, and the bearers of light. Our path is one of enlightenment, discovery, and protection of our hidden sanctuaries.",
 
-  "description.edumia.dark_elves.description_0" : "We, the Dark Elves, are not bound by the light of the day, but rather we thrive under the cover of night. The moons guide us, the waters protect us, and the darkness conceals us. We seek what lies beyond, the secrets of the cosmos and the knowledge that others fear to uncover. Our strength flows with the currents of water, and our magic weaves the shadows into forms that deceive and protect."
+  "description.edumia.dark_elves.description_0" : "We, the Dark Elves, are not bound by the light of the day, but rather we thrive under the cover of night. The moons guide us, the waters protect us, and the darkness conceals us. We seek what lies beyond, the secrets of the cosmos and the knowledge that others fear to uncover. Our strength flows with the currents of water, and our magic weaves the shadows into forms that deceive and protect.",
+
+  "description.edumia.orcs.description_0" : "Our magic is the power of the earth itself, the strength to endure and the will to conquer. We are a nomadic people, moving with the seasons, always seeking the next challenge. To join us is to embrace the unforgiving land, to draw strength from it, and to live as one with the earth."
+
 }

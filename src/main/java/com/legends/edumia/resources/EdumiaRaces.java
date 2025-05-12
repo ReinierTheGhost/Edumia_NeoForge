@@ -113,7 +113,7 @@ public class EdumiaRaces {
 
         ORC = new Race(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "orc"), RaceType.ORC,
                 new AttributeData(new HashMap<>(){{
-                    put(Attributes.SCALE, 0.9);
+                    put(Attributes.SCALE, 1.4);
                     put(Attributes.MAX_HEALTH, 22.0);
                     put(Attributes.ATTACK_DAMAGE, 1.0);
                     put(Attributes.ENTITY_INTERACTION_RANGE, 2.75);
