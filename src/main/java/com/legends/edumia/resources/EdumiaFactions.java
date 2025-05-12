@@ -104,7 +104,7 @@ public class EdumiaFactions {
                 )),
                 new SpawnDataHandler(List.of(
                         new SpawnData(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "fairy.glyndoril"),
-                                new Vector2d(440, 540))
+                                new Vector2d(442, 541))
                 )), List.of(), List.of()
         );
         // endregion

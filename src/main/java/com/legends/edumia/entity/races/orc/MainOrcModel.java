@@ -36,6 +36,14 @@ public class MainOrcModel<T extends Mob>
     public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 
         super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
+        // Set explicit Y positions like Enderman does
+        this.body.y = -8.0F;
+        this.head.y = -8.0F;
+        this.hat.y = -8.0F;
+        this.rightArm.setPos(-6.0F, -5.0F, 0.0F);
+        this.leftArm.setPos(6.0F, -5.0F, 0.0F);
+        this.rightLeg.y = 8.0F;
+        this.leftLeg.y = 8.0F;
 
     }
 }

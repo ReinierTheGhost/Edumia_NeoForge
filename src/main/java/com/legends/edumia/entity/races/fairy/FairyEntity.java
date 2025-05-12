@@ -21,7 +21,7 @@ import org.slf4j.LoggerFactory;
 public class FairyEntity extends NpcEntity {
 
     private static final Logger log = LoggerFactory.getLogger(FairyEntity.class);
-    public final AnimationState idleAnimationState = new AnimationState();
+    public static final AnimationState idleAnimationState = new AnimationState();
 
     public FairyEntity(EntityType<? extends PathfinderMob> entityType, Level level) {
         super(entityType, level);
@@ -73,7 +73,13 @@ public class FairyEntity extends NpcEntity {
     @Override
     public void tick() {
         super.tick();
-        this.idleAnimationState.start(this.tickCount);
+        if(this.level().isClientSide()) {
+            setupAnimationStates();
+        }
+    }
+
+    private void setupAnimationStates() {
+        idleAnimationState.start(this.tickCount);
     }
 
     public static AttributeSupplier.Builder setSoldierAttribute() {

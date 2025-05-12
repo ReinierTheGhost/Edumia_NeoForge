@@ -212,6 +212,9 @@ public class EdumiaBiomeDataConfigs {
             .noiseModifier(PLAINS_NOISE_MODIFIER).heightModifier(LAND_HEIGHT_MODIFIER);
     public static BiomeGenerationData riverModifier = new BiomeGenerationData().expansionWeight(RIVER_WEIGHT)
             .noiseModifier(WATER_NOISE_MODIFIER).heightModifier(WATER_HEIGHT_MODIFIER);
+    public static BiomeGenerationData mangroveModifier = new BiomeGenerationData().expansionWeight(RIVER_WEIGHT)
+            .noiseModifier(WATER_NOISE_MODIFIER).heightModifier(0);
+
     public static BiomeGenerationData smallRiverModifier = new BiomeGenerationData().expansionWeight(RIVER_WEIGHT)
             .noiseModifier(0.05f).heightModifier(0.05f);
     public static BiomeGenerationData oceanModifier = new BiomeGenerationData().expansionWeight(OCEAN_WEIGHT)

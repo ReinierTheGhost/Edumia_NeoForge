@@ -9,7 +9,7 @@ import net.minecraft.client.model.geom.builders.*;
 public class OrcModel {
 
 	public static LayerDefinition createBodyLayer(CubeDeformation deformation) {
-		MeshDefinition meshdefinition = HumanoidModel.createMesh(deformation, 0.0f);
+		MeshDefinition meshdefinition = HumanoidModel.createMesh(deformation, -4.0f);
 		PartDefinition partdefinition = meshdefinition.getRoot();
 
 		PartDefinition head = partdefinition.addOrReplaceChild(PartNames.HEAD, CubeListBuilder.create().texOffs(0, 0)

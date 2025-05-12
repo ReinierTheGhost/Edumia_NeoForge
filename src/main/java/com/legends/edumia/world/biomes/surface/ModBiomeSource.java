@@ -114,20 +114,20 @@ public class ModBiomeSource extends BiomeSource {
 
             if(j <= CavesPlacedFeatures.MAX_MISTIC_ORE_HEIGHT && biome.getCaveType() == CaveType.MISTIES) {
                 processedBiome = EdumiaBiomeKeys.MISTIC_CAVE;
-            }else if(biome == MapBasedBiomePool.deadMarshes.getBiome() || biome == MapBasedBiomePool.deadMarshesWater.getBiome()) {
+            }else if(biome == MapBasedBiomePool.mangrove.getBiome() || biome == MapBasedBiomePool.floodedMangrove.getBiome()) {
                 height = EdumiaChunkGenerator.DIRT_HEIGHT + EdumiaChunkGenerator.getMarshesHeight(i, k, height);
-                if(j < (height - 16))
+                if(j < (height - 20))
                     processedBiome = getCaveBiome(i, k, biome);
                 else if(height < EdumiaChunkGenerator.WATER_HEIGHT)
-                    processedBiome = MapBasedBiomePool.deadMarshesWater.getBiomeKey();
+                    processedBiome = MapBasedBiomePool.floodedMangrove.getBiomeKey();
                 else
-                    processedBiome = MapBasedBiomePool.deadMarshes.getBiomeKey();
+                    processedBiome = MapBasedBiomePool.mangrove.getBiomeKey();
             } else if(height <= biomeHeightData.getWaterHeight() + 1.25f) { // TODO : This is really rough, need to be re dynamic
                 if (MapBasedBiomePool.coastalBiomes.contains(biome.getBiomeResourceKey())) {
                     processedBiome = MapBasedBiomePool.oceanCoast.getBiomeKey();
                 } else if (MapBasedBiomePool.wastePondBiomes.contains(biome.getBiomeResourceKey())) {
                     processedBiome = MapBasedBiomePool.wastePond.getBiomeKey();
-                } else if (MapBasedBiomePool.mirkwoodSwampBiomes.contains(biome.getBiomeResourceKey())) {
+                } else if (MapBasedBiomePool.myrwoodSwampBiomes.contains(biome.getBiomeResourceKey())) {
                     processedBiome = MapBasedBiomePool.myrwoodSwamp.getBiomeKey();
                 } else if (MapBasedBiomePool.oasisBiomes.contains(biome.getBiomeResourceKey())) {
                     processedBiome = MapBasedBiomePool.oasis.getBiomeKey();
@@ -135,8 +135,6 @@ public class ModBiomeSource extends BiomeSource {
                     processedBiome = MapBasedBiomePool.frozenPond.getBiomeKey();
                 } else if (MapBasedBiomePool.anduinWaterBiomes.contains(biome.getBiomeResourceKey())) {
                     processedBiome = MapBasedBiomePool.greatRiver.getBiomeKey();
-                }else if (MapBasedBiomePool.floodedMangroveBiomes.contains(biome.getBiomeResourceKey())) {
-                    processedBiome = MapBasedBiomePool.floodedMangrove.getBiomeKey();
                 } else {
                     processedBiome = MapBasedBiomePool.pond.getBiomeKey();
                 }

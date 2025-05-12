@@ -4,6 +4,7 @@ import net.minecraft.client.animation.AnimationChannel;
 import net.minecraft.client.animation.AnimationDefinition;
 import net.minecraft.client.animation.Keyframe;
 import net.minecraft.client.animation.KeyframeAnimations;
+import net.minecraft.client.model.geom.PartNames;
 
 /**
  * Made with Blockbench 4.12.4
@@ -12,7 +13,7 @@ import net.minecraft.client.animation.KeyframeAnimations;
  */
 public class FairyAnimation {
 	public static final AnimationDefinition WINGS = AnimationDefinition.Builder.withLength(1.6667F).looping()
-		.addAnimation("leftWing", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
+		.addAnimation(PartNames.LEFT_WING, new AnimationChannel(AnimationChannel.Targets.ROTATION,
 			new Keyframe(0.0F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(0.001F, KeyframeAnimations.degreeVec(0.0F, 1.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(0.0417F, KeyframeAnimations.degreeVec(0.0F, 1.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
@@ -94,7 +95,7 @@ public class FairyAnimation {
 			new Keyframe(1.625F, KeyframeAnimations.degreeVec(0.0F, -1.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(1.626F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR)
 		))
-		.addAnimation("rightWing", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
+		.addAnimation(PartNames.RIGHT_WING, new AnimationChannel(AnimationChannel.Targets.ROTATION,
 			new Keyframe(0.0F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(0.001F, KeyframeAnimations.degreeVec(0.0F, -1.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(0.0417F, KeyframeAnimations.degreeVec(0.0F, -1.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
