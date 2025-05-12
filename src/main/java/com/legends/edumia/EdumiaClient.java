@@ -10,6 +10,7 @@ import com.legends.edumia.entity.races.darkelves.DarkElvenRenderer;
 import com.legends.edumia.entity.races.fairy.FairyRenderer;
 import com.legends.edumia.entity.races.highelves.HighElvenRenderer;
 import com.legends.edumia.entity.races.human.HumanRenderer;
+import com.legends.edumia.entity.races.orc.OrcRenderer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -32,6 +33,7 @@ public class EdumiaClient {
         EntityRenderers.register(EdumiaEntities.HUMAN_CIVILIAN.get(), HumanRenderer::new);
         EntityRenderers.register(EdumiaEntities.HIGH_ELVEN_CIVILIAN.get(), HighElvenRenderer::new);
         EntityRenderers.register(EdumiaEntities.DARK_ELVEN_CIVILIAN.get(), DarkElvenRenderer::new);
+        EntityRenderers.register(EdumiaEntities.ORC_CIVILIAN.get(), OrcRenderer::new);
 
         EntityRenderers.register(EdumiaEntities.BUTTERFLY.get(), ButterflyRenderer::new);
         EntityRenderers.register(EdumiaEntities.DRAGONFLY.get(), DragonflyRenderer::new);

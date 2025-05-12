@@ -1,55 +1,55 @@
 {
   "banner": {
-    "base_color": "blue",
+    "base_color": "brown",
     "patterns": [
       {
-        "dye_color": "purple",
-        "id": "edumia:dark_elven"
+        "dye_color": "white",
+        "id": "edumia:orcs"
       }
     ]
   },
   "command_join": [],
   "command_leave": [],
   "disposition": "NEUTRAL",
-  "faction_selection_order_index": 3,
+  "faction_selection_order_index": 4,
   "faction_type": "FACTION",
-  "id": "edumia:dark_elves",
+  "id": "edumia:orcs",
   "joinable": true,
   "npcs": {
     "ranks": [
       {
         "pool": [
-          "edumia:darkelven.civilian"
+          "edumia:orc.civilian"
         ],
         "rank": "CIVILIAN"
       },
       {
         "pool": [
-          "edumia:darkelven.civilian"
+          "edumia:orc.civilian"
         ],
         "rank": "SOLDIER"
       },
       {
         "pool": [
-          "edumia:darkelven.civilian"
+          "edumia:orc.civilian"
         ],
         "rank": "LEADER"
       },
       {
         "pool": [
-          "edumia:darkelven.civilian"
+          "edumia:orc.civilian"
         ],
         "rank": "MILITIA"
       },
       {
         "pool": [
-          "edumia:darkelven.civilian"
+          "edumia:orc.civilian"
         ],
         "rank": "KNIGHT"
       },
       {
         "pool": [
-          "edumia:darkelven.civilian"
+          "edumia:orc.civilian"
         ],
         "rank": "VETERAN"
       }
@@ -59,12 +59,12 @@
     "data": [
       {
         "coordinates": {
-          "x": 1980.0,
+          "x": 400.0,
           "y": 0.0,
-          "z": 525.0
+          "z": 1340.0
         },
         "dynamic": 1,
-        "id": "edumia:darkelven.nyxarith"
+        "id": "edumia:orc.gorakthul"
       }
     ]
   }

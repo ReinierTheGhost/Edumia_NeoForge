@@ -27,6 +27,7 @@ public class EdumiaNpcs {
     public static final NpcData HUMAN_CIVILIAN;
     public static final NpcData HIGHELVEN_CIVILIAN;
     public static final NpcData DARKELVEN_CIVILIAN;
+    public static final NpcData ORC_CIVILIAN;
 
     @SubscribeEvent
     public static void onNewRegistry(DataPackRegistryEvent.NewRegistry event){
@@ -36,13 +37,13 @@ public class EdumiaNpcs {
 
     public static void bootstrap(BootstrapContext<NpcData> context) {
         HolderGetter<NpcData> npcRegistryEntryLookup = context.lookup(NPC_KEY);
-        // [RACE / GENERIC]
+        //region [RACE / GENERIC]
         register(context, npcRegistryEntryLookup, HIGHELVEN_CIVILIAN);
         register(context, npcRegistryEntryLookup, FAIRY_CIVILIAN);
         register(context, npcRegistryEntryLookup, HUMAN_CIVILIAN);
         register(context, npcRegistryEntryLookup, DARKELVEN_CIVILIAN);
-        // [GONDOR]
-//        registerAll(context, npcRegistryEntryLookup, GondorianNpcDataPool.fetchAll());
+        register(context, npcRegistryEntryLookup, ORC_CIVILIAN);
+        //endregion
     }
 
     private static void registerAll(BootstrapContext<NpcData> context, HolderGetter<NpcData> npcRegistryEntryLookup, List<NpcData> npcDatas) {
@@ -87,7 +88,10 @@ public class EdumiaNpcs {
                 EdumiaRaces.HUMAN, List.of(
                 NpcGearData.create()
         ));
-
+        ORC_CIVILIAN = new NpcData(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "orc.civilian"),
+                EdumiaRaces.ORC, List.of(
+                NpcGearData.create()
+        ));
 
     }
 }

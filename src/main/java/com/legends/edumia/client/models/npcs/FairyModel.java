@@ -1,12 +1,16 @@
 package com.legends.edumia.client.models.npcs;
 
 import com.legends.edumia.client.models.EdumiaPartNames;
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.vertex.VertexConsumer;
+import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.PartNames;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
+import net.minecraft.world.entity.Entity;
 
-public class FairyModel {
+public class FairyModel <T extends Entity> extends EntityModel<T> {
 
 	public static LayerDefinition createBodyLayer(CubeDeformation deformation) {
 		MeshDefinition meshdefinition = HumanoidModel.createMesh(deformation, 0.0f);
@@ -62,5 +66,15 @@ public class FairyModel {
 				PartPose.offsetAndRotation(-1.0F, 8.0F, 2.0F, 0.0F, -0.8727F, 0.0F));
 
 		return LayerDefinition.create(meshdefinition, 128, 128);
+	}
+
+	@Override
+	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+
+	}
+
+	@Override
+	public void renderToBuffer(PoseStack poseStack, VertexConsumer buffer, int packedLight, int packedOverlay, int color) {
+
 	}
 }

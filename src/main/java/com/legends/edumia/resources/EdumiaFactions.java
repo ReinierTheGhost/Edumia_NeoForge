@@ -1,7 +1,6 @@
 package com.legends.edumia.resources;
 
 import com.legends.edumia.Edumia;
-import com.legends.edumia.core.TagLoader;
 import com.legends.edumia.resources.datas.Disposition;
 import com.legends.edumia.resources.datas.FactionType;
 import com.legends.edumia.resources.datas.factions.Faction;
@@ -37,7 +36,7 @@ public class EdumiaFactions {
     public static final Faction FAIRIES;
 //    public static final Faction GENSAI;
     public static final Faction DARK_ELVES;
-//    public static final Faction ORCS;
+    public static final Faction ORCS;
 //    public static final Faction DEMONS;
 //    public static final Faction OGRES;
 
@@ -55,6 +54,7 @@ public class EdumiaFactions {
         register(context, factionHolderGetter, FAIRIES);
         register(context, factionHolderGetter, HUMAN);
         register(context, factionHolderGetter, DARK_ELVES);
+        register(context, factionHolderGetter, ORCS);
     }
 
     private static Faction register(BootstrapContext<Faction> context, HolderGetter<Faction> factionHolderGetter, Faction faction) {
@@ -203,6 +203,38 @@ public class EdumiaFactions {
                 new SpawnDataHandler(List.of(
                         new SpawnData(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "darkelven.nyxarith"),
                                 new Vector2d(1980, 525))
+                )), List.of(), List.of()
+        );
+        // endregion
+
+        // region [ORCS]
+        ORCS = new Faction("orcs", true, Disposition.NEUTRAL, FactionType.FACTION, null, null,
+                new HashMap<>(){{
+                    put(NpcRank.CIVILIAN, List.of(
+                            EdumiaNpcs.ORC_CIVILIAN
+                    ));
+                    put(NpcRank.MILITIA, List.of(
+                            EdumiaNpcs.ORC_CIVILIAN
+                    ));
+                    put(NpcRank.SOLDIER, List.of(
+                            EdumiaNpcs.ORC_CIVILIAN
+                    ));
+                    put(NpcRank.KNIGHT, List.of(
+                            EdumiaNpcs.ORC_CIVILIAN
+                    ));
+                    put(NpcRank.VETERAN, List.of(
+                            EdumiaNpcs.ORC_CIVILIAN
+                    ));
+                    put(NpcRank.LEADER, List.of(
+                            EdumiaNpcs.ORC_CIVILIAN
+                    ));
+                }},
+                new BannerData(DyeColor.BROWN, List.of(
+                        new BannerData.BannerPatternWithColor(EdumiaBannerPatterns.ORCS, DyeColor.WHITE)
+                )),
+                new SpawnDataHandler(List.of(
+                        new SpawnData(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "orc.gorakthul"),
+                                new Vector2d(400, 1340))
                 )), List.of(), List.of()
         );
         // endregion

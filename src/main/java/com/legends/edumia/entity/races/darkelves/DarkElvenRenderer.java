@@ -14,7 +14,7 @@ import net.minecraft.resources.ResourceLocation;
 
 import java.util.Map;
 
-public class DarkElvenRenderer   extends HumanoidMobRenderer<DarkElfEntity, DarkElvenModel<DarkElfEntity>> {
+public class DarkElvenRenderer extends HumanoidMobRenderer<DarkElfEntity, DarkElvenModel<DarkElfEntity>> {
 
     private static final String PATH = "textures/entities/darkelven/";
     public DarkElvenRenderer(EntityRendererProvider.Context context) {

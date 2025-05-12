@@ -10,6 +10,9 @@ public final class EdumiaEntityModelLayers {
     public static final ModelLayerLocation HUMAN = create("human");
     public static final ModelLayerLocation HIGHELVEN = create("highelven");
     public static final ModelLayerLocation DARKELVEN = create("darkelven");
+    public static final ModelLayerLocation ORC = create("orc");
+
+
     public static final ModelLayerLocation BUTTERFLY = create("butterfly");
     public static final ModelLayerLocation DRAGONFLY = create("dragonfly");
 

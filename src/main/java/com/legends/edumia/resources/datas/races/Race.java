@@ -128,9 +128,9 @@ public class Race {
 //            case RaceType.DEMON:
 //                entity = new DemonEntity(EntityType.VILLAGER, world);
 //                break;
-//            case RaceType.ORC:
-//                entity = new OrcEntity(EntityType.VILLAGER, world);
-//                break;
+            case RaceType.ORC:
+                entity = new OrcEntity(EdumiaEntities.ORC_CIVILIAN.get(), world);
+                break;
 //            case RaceType.OGRE:
 //                entity = new OgreEntity(EntityType.VILLAGER, world);
 //                break;

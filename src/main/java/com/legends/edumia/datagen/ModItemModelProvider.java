@@ -69,6 +69,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent(ItemLoader.HUMAN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(ItemLoader.HIGH_ELVEN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(ItemLoader.DARK_ELVEN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ItemLoader.ORC_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 
         withExistingParent(ItemLoader.BUTTERFLY_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(ItemLoader.DRAGONFLY_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));

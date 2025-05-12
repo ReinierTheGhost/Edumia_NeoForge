@@ -27,12 +27,12 @@ public class DarkElfEntity extends NpcEntity {
 
     @Override
     protected ResourceLocation getFactionId() {
-        return EdumiaFactions.HIGH_ELVES.getId();
+        return EdumiaFactions.DARK_ELVES.getId();
     }
 
     @Override
     protected ResourceLocation getRaceId() {
-        return EdumiaRaces.HIGHELVES.getId();
+        return EdumiaRaces.DARKELVES.getId();
     }
 
 
