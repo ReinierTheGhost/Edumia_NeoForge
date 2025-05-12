@@ -54,28 +54,29 @@ public class OrcModel {
 
 		PartDefinition rightArm = partdefinition.addOrReplaceChild(PartNames.RIGHT_ARM, CubeListBuilder.create()
 				.texOffs(20, 50).mirror()
-				.addBox(-12.0F, -25.0F, -3.0F, 6.0F, 8.0F, 6.0F, deformation)
-				.mirror(false)
-		.texOffs(0, 49).mirror()
-				.addBox(-11.5F, -17.0F, -2.5F, 5.0F, 10.0F, 5.0F, deformation
-				).mirror(false), PartPose.offset(0.0F, 18.0F, 0.0F));
+				.addBox(-6.0F, -2.0F, -3.0F, 6.0F, 8.0F, 6.0F,
+						deformation).mirror(false)
+				.texOffs(0, 49).mirror()
+				.addBox(-5.5F, 6.0F, -2.5F, 5.0F, 10.0F, 5.0F,
+						deformation).mirror(false), PartPose.offset(-6.0F, -5.0F, 0.0F));
 
 		PartDefinition leftArm = partdefinition.addOrReplaceChild(PartNames.LEFT_ARM, CubeListBuilder.create()
 				.texOffs(20, 50)
-				.addBox(-5.0F, -8.0F, -1.0F, 6.0F, 8.0F, 6.0F, deformation)
+				.addBox(0.0F, -2.0F, -3.0F, 6.0F, 8.0F, 6.0F, deformation)
 				.texOffs(0, 49)
-				.addBox(-4.5F, 0.0F, -0.5F, 5.0F, 10.0F, 5.0F, deformation),
-				PartPose.offset(11.0F, 1.0F, -2.0F));
+				.addBox(0.5F, 6.0F, -2.5F, 5.0F, 10.0F, 5.0F, deformation),
+				PartPose.offset(6.0F, -5.0F, 0.0F));
+
 
 		PartDefinition rightLeg = partdefinition.addOrReplaceChild(PartNames.RIGHT_LEG, CubeListBuilder.create()
 				.texOffs(40, 28)
-				.addBox(-6.0F, -16.0F, -3.0F, 6.0F, 16.0F, 6.0F, deformation),
-				PartPose.offset(0.0F, 24.0F, 0.0F));
+				.addBox(-3.0F, 0.0F, -3.0F, 6.0F, 16.0F, 6.0F, deformation),
+				PartPose.offset(-3.0F, 8.0F, 0.0F));
 
 		PartDefinition leftLeg = partdefinition.addOrReplaceChild(PartNames.LEFT_LEG, CubeListBuilder.create()
 				.texOffs(40, 28).mirror()
-				.addBox(-6.0F, -16.0F, -3.0F, 6.0F, 16.0F, 6.0F, deformation)
-				.mirror(false), PartPose.offset(6.0F, 24.0F, 0.0F));
+				.addBox(-3.0F, 0.0F, -3.0F, 6.0F, 16.0F, 6.0F, deformation).mirror(false),
+				PartPose.offset(3.0F, 8.0F, 0.0F));
 
 		return LayerDefinition.create(meshdefinition, 64, 96);
 	}
