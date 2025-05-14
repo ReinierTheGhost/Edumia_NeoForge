@@ -22,13 +22,12 @@ public class MapBasedBiomePool {
     private static HashMap<Color, MapBasedCustomBiome> biomeHashMap;
     public static List<ResourceKey<Biome>> coastalBiomes = new ArrayList<>();
     public static List<ResourceKey<Biome>> waterBiomes = new ArrayList<>();
-    public static List<ResourceKey<Biome>> riverbiomes = new ArrayList<>();
+    public static List<ResourceKey<Biome>> riverBiomes = new ArrayList<>();
     public static List<ResourceKey<Biome>> frozenBiomes = new ArrayList<>();
     public static List<ResourceKey<Biome>> wastePondBiomes = new ArrayList<>();
     public static List<ResourceKey<Biome>> myrwoodSwampBiomes = new ArrayList<>();
     public static List<ResourceKey<Biome>> oasisBiomes = new ArrayList<>();
     public static List<ResourceKey<Biome>> anduinWaterBiomes = new ArrayList<>();
-    public static List<ResourceKey<Biome>> deadMarshesBiomes = new ArrayList<>();
     public static List<ResourceKey<Biome>> floodedMangroveBiomes = new ArrayList<>();
 
     public static Color DEFAULT_COLOR = new Color(0x375ac3);
@@ -146,7 +145,7 @@ public class MapBasedBiomePool {
                 EdumiaBiomeDataConfigs.landModifier));
 
         add(new Color(34, 69, 25), new MapBasedCustomBiome(EdumiaBiomeKeys.MYRWOOD_COAST, -1,
-                EdumiaBiomeDataConfigs.riverModifier.heightModifier(1.1F)));
+                EdumiaBiomeDataConfigs.riverModifier.heightModifier(1.1F).noiseModifier(0.6f)));
 
         add(new Color(56, 36, 36), new MapBasedCustomBiome(EdumiaBiomeKeys.GENSAI_VOLCANO_PLAINS, 6,
                 EdumiaBiomeDataConfigs.landModifier));
@@ -189,8 +188,8 @@ public class MapBasedBiomePool {
                 EdumiaBiomeDataConfigs.mountainModifier.heightModifier(0.39f)));
 
 
-        riverbiomes.add(EdumiaBiomeKeys.RIVER);
-        riverbiomes.add(EdumiaBiomeKeys.FROZEN_RIVER);
+        riverBiomes.add(EdumiaBiomeKeys.RIVER);
+        riverBiomes.add(EdumiaBiomeKeys.FROZEN_RIVER);
 
         waterBiomes.add(EdumiaBiomeKeys.DEAD_MARSHES_WATER);
         waterBiomes.add(EdumiaBiomeKeys.FROZEN_POND);
