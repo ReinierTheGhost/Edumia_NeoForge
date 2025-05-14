@@ -22,7 +22,10 @@ public class TagLoader {
         public static final TagKey<Block> VOLCANIC_PLANT_SURFACE = createTag("volcanic_plant_surface");
         public static final TagKey<Block> GROUND_MAHOGANY_SAPLING = createTag("mahogany_sapling");
         public static final TagKey<Block> REEDS_PLACEABLE_ON = createTag("reeds_placeable_on");
+        public static final TagKey<Block> SOIL_GRAVEL = createTag("soul_gravel");
         public static final TagKey<Block> PILLARS = createTag("pillars");
+
+
         public static final TagKey<Block> ALMOND_LOGS = createTag("almond_logs");
         public static final TagKey<Block> APPLE_LOGS = createTag("apple_logs");
         public static final TagKey<Block> ASPEN_LOGS = createTag("aspen_logs");
@@ -55,7 +58,9 @@ public class TagLoader {
         public static final TagKey<Block> SILVER_SPRUCE_LOGS = createTag("silver_spruce_logs");
         public static final TagKey<Block> WHITE_ASH_LOGS = createTag("white_ash_logs");
         public static final TagKey<Block> WILLOW_LOGS = createTag("willow_logs");
+
         public static final TagKey<Block> BUTTERFLY_GROWABLES = createTag("butterfly_growables");
+
 
         private static TagKey<Block> createTag(String name) {
             return BlockTags.create(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, name));

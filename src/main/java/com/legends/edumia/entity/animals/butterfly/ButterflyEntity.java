@@ -180,7 +180,7 @@ public class ButterflyEntity extends Animal implements FlyingAnimal {
 
     @Override
     public boolean isInvulnerableTo(DamageSource source) {
-        return super.isInvulnerableTo(source) || source == level().damageSources().sweetBerryBush();
+        return super.isInvulnerableTo(source) || source == level().damageSources().sweetBerryBush() || source == level().damageSources().inWall();
     }
 
     @Override

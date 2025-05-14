@@ -118,8 +118,6 @@ public class MapBasedBiomePool {
 
         add(new Color(54, 75, 12), new MapBasedCustomBiome(EdumiaBiomeKeys.DARK_ELF_FOREST, 6,
                 EdumiaBiomeDataConfigs.landModifier));
-        add(new Color(236, 236, 236), new MapBasedCustomBiome(EdumiaBiomeKeys.EDUMIA_TUNDRA, 14,
-                EdumiaBiomeDataConfigs.landModifier));
         add(new Color(237, 229, 145), new MapBasedCustomBiome(EdumiaBiomeKeys.ORC_DESERT, 9,
                 EdumiaBiomeDataConfigs.landModifier));
         add(new Color(255, 0, 0), new MapBasedCustomBiome(EdumiaBiomeKeys.RED_ORC_DESERT, 10,
@@ -163,6 +161,12 @@ public class MapBasedBiomePool {
 
         add(new Color(121, 186, 111), new MapBasedCustomBiome(EdumiaBiomeKeys.TAIGA_FOREST, 4,
                 EdumiaBiomeDataConfigs.landModifier));
+        add(new Color(236, 236, 236), new MapBasedCustomBiome(EdumiaBiomeKeys.EDUMIA_TUNDRA, 14,
+                EdumiaBiomeDataConfigs.landModifier));
+        add(new Color(239, 239, 239), new MapBasedCustomBiome(EdumiaBiomeKeys.TUNDRA_BUSH, 14,
+                EdumiaBiomeDataConfigs.landModifier));
+
+
         add(new Color(48, 109, 42), new MapBasedCustomBiome(EdumiaBiomeKeys.GENSAI_JUNGLE, 7,
                 EdumiaBiomeDataConfigs.landModifier));
 
@@ -218,6 +222,7 @@ public class MapBasedBiomePool {
 
         frozenBiomes.add(EdumiaBiomeKeys.EDUMIA_TUNDRA);
         frozenBiomes.add(EdumiaBiomeKeys.TAIGA_FOREST);
+        frozenBiomes.add(EdumiaBiomeKeys.TUNDRA_BUSH);
 
 
 

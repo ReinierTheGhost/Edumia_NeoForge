@@ -68,6 +68,8 @@ public class MapBiomeData {
 
         addBiome(new BiomeData(EdumiaBiomeKeys.EDUMIA_TUNDRA, EdumiaBiomeDataConfigs.tundra, EdumiaBiomeDataConfigs.frozenLayers,
                 new BiomeColorsDTO(8364543, 10335206, 3823818, 66852, 3494723, 4478280)));
+        addBiome(new BiomeData(EdumiaBiomeKeys.TUNDRA_BUSH, EdumiaBiomeDataConfigs.tundra, EdumiaBiomeDataConfigs.frozenLayers,
+                new BiomeColorsDTO(8364543, 10335206, 3823818, 66852, 3494723, 4478280)));
 
 
 

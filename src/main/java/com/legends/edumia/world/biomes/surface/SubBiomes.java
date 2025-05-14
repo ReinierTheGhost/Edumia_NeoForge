@@ -21,6 +21,9 @@ public class SubBiomes {
         subBiomesMap.put(EdumiaBiomeKeys.MYRWOOD_JUNGLE, new SubBiome()
                 .addSubBiomeData(-1.0f, -0.36f, EdumiaBiomeKeys.MYRWOOD_JUNGLE_PLATEAU)
                 .addSubBiomeData(0.37f, 1.0f, EdumiaBiomeKeys.MYRWOOD_JUNGLE_CLEARING));
+
+        subBiomesMap.put(EdumiaBiomeKeys.EDUMIA_TUNDRA, new SubBiome(56, 1.25f)
+                .addSubBiomeData(-1.0f, -0.20f, EdumiaBiomeKeys.TUNDRA_BUSH));
     }
 
     public static boolean isSubBiome(ResourceKey<Biome> biomeResourceKey) {

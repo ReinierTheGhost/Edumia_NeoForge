@@ -1,6 +1,7 @@
 package com.legends.edumia.world.congiguredfeatures.ores;
 
 import com.legends.edumia.Edumia;
+import com.legends.edumia.core.TagLoader;
 import com.legends.edumia.core.blocksets.StoneSets;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -41,11 +42,18 @@ public class VanillaBlockOreConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> GRASS_TO_STONE_ORE = registerKey("grass_to_stone_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> GRASS_TO_GRANITE_ORE = registerKey("grass_to_granite_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> TUFF_ORE = registerKey("stone_tuff_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> CLAY_ORE = registerKey("clay_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SAND_BEACH_ORE = registerKey("sand_beach_ore");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SANDSTONE_ORE = registerKey("sandstone_ore");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context){
         RuleTest dirtTest = new TagMatchTest(BlockTags.DIRT);
         RuleTest volcanicStoneTest = new BlockMatchTest(StoneSets.VOLCANIC_ROCK.block().get());
         RuleTest stoneTest = new TagMatchTest(BlockTags.BASE_STONE_OVERWORLD);
+        RuleTest sandTest = new TagMatchTest(BlockTags.SAND);
+        RuleTest soulGravelTest = new TagMatchTest(TagLoader.Blocks.SOIL_GRAVEL);
+        RuleTest stoneBlockTest = new BlockMatchTest(Blocks.STONE);
 
         List<OreConfiguration.TargetBlockState> calciteList = List.of(
                 OreConfiguration.target(stoneTest, Blocks.CALCITE.defaultBlockState()),
@@ -53,6 +61,8 @@ public class VanillaBlockOreConfiguredFeatures {
         List<OreConfiguration.TargetBlockState> powderSnowList = List.of(
                 OreConfiguration.target(dirtTest, Blocks.POWDER_SNOW.defaultBlockState()),
                 OreConfiguration.target(new TagMatchTest(BlockTags.SNOW), Blocks.POWDER_SNOW.defaultBlockState()));
+
+
 
         register(context, ANDESITE_ORE, Feature.ORE,
                 new OreConfiguration(stoneTest, Blocks.ANDESITE.defaultBlockState(), 64, 0.4f));
@@ -118,6 +128,15 @@ public class VanillaBlockOreConfiguredFeatures {
 
         register(context, TUFF_ORE, Feature.ORE,
                 new OreConfiguration(stoneTest, Blocks.TUFF.defaultBlockState(), 48, 0.25f));
+
+        register(context, CLAY_ORE, Feature.ORE,
+                new OreConfiguration(sandTest, Blocks.CLAY.defaultBlockState(), 50, 0f));
+
+        register(context, SAND_BEACH_ORE, Feature.ORE,
+                new OreConfiguration(soulGravelTest, Blocks.SAND.defaultBlockState(), 50, 0f));
+
+        register(context, SANDSTONE_ORE, Feature.ORE,
+                new OreConfiguration(stoneBlockTest, Blocks.SANDSTONE.defaultBlockState(), 64, 0f));
 
     }
 

@@ -46,9 +46,14 @@ public class ModBiomes {
         createTestBiome(context, EdumiaBiomeKeys.DEAD_MARSHES);
         createTestBiome(context, EdumiaBiomeKeys.DEAD_MARSHES_WATER);
         createDarkElvenWoodBiome(context, EdumiaBiomeKeys.DARK_ELF_FOREST);
+
+
+
         createTundraBiome(context, EdumiaBiomeKeys.EDUMIA_TUNDRA);
         createFrozenOceanBiome(context, EdumiaBiomeKeys.FROZEN_OCEAN);
         createFrozenPond(context, EdumiaBiomeKeys.FROZEN_POND);
+        createTaigaBiome(context, EdumiaBiomeKeys.TAIGA_FOREST, true);
+        createTaigaBiome(context, EdumiaBiomeKeys.TUNDRA_BUSH, true);
 
         createOrcDesertBiome(context, EdumiaBiomeKeys.ORC_DESERT);
         createRedOrcDesertBiome(context, EdumiaBiomeKeys.RED_ORC_DESERT);
@@ -97,7 +102,6 @@ public class ModBiomes {
         createRiverBiome(context, EdumiaBiomeKeys.RIVER);
         createRiverBiome(context, EdumiaBiomeKeys.MOUNTAIN_STREAM);
         createGensaiReefBiome(context, EdumiaBiomeKeys.GENSAI_REEF);
-        createTaigaBiome(context, EdumiaBiomeKeys.TAIGA_FOREST, true);
         createGensaiJungleBiome(context, EdumiaBiomeKeys.GENSAI_JUNGLE);
         createWastePondBiome(context, EdumiaBiomeKeys.WASTE_POND);
 

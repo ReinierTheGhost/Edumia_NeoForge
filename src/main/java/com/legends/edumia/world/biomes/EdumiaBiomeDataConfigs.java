@@ -153,6 +153,7 @@ public class EdumiaBiomeDataConfigs {
             .addLayerData(1.0f, () -> StoneSets.VOLCANIC_ROCK.block().get());
 
     public static BlocksLayeringData frozenLayers = new BlocksLayeringData()
+            .addLayerData(0.01f, Blocks.DIRT)
             .addLayerData(0.5f, Blocks.STONE)
             .addLayerData(0.5f, Blocks.FROSTED_ICE);
 
