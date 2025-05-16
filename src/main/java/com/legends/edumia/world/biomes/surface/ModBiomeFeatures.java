@@ -197,6 +197,7 @@ public class ModBiomeFeatures {
     }
 
     public static void addPalmTrees(List<ResourceKey<PlacedFeature>> vegetation) {
+
     }
 
     public static void addAbundantPineTrees(List<ResourceKey<PlacedFeature>> vegetation) {
@@ -241,6 +242,10 @@ public class ModBiomeFeatures {
     }
     public static void addWillowTrees(List<ResourceKey<PlacedFeature>> vegetation) {
         vegetation.add(TemperateTreePlacedFeatures.WILLOW_PLACED_TREE_KEY);
+    }
+
+    public static void addRareCypressTrees(List<ResourceKey<PlacedFeature>> vegetation){
+        vegetation.add(TemperateTreePlacedFeatures.RARE_CYPRESS_KEY);
     }
     // endregion TREES
 
@@ -288,13 +293,29 @@ public class ModBiomeFeatures {
     }
     public static void addMirkwoodRoots(List<ResourceKey<PlacedFeature>> vegetation) {
     }
-    public static void addSandStoneBoulder(List<ResourceKey<PlacedFeature>> vegetation) {
-        vegetation.add(BoulderPlacedFeatures.SANDSTONE_BOULDER);
+    public static void addSandStoneBoulders(List<ResourceKey<PlacedFeature>> vegetation) {
+        addSmallSandStoneBoulders(vegetation);
+        addBigSandStoneBoulder(vegetation);
+    }
+
+    public static void addBigSandStoneBoulder(List<ResourceKey<PlacedFeature>> vegetation) {
         vegetation.add(BoulderPlacedFeatures.BIG_SANDSTONE_BOULDER);
     }
+
+    public static void addSmallSandStoneBoulders(List<ResourceKey<PlacedFeature>> vegetation) {
+        vegetation.add(BoulderPlacedFeatures.SANDSTONE_BOULDER);
+    }
     public static void addStoneBoulder(List<ResourceKey<PlacedFeature>> vegetation) {
-        vegetation.add(BoulderPlacedFeatures.STONE_BOULDER);
+        addBigStoneBoulder(vegetation);
+        addSmallStoneBoulder(vegetation);
+    }
+
+    public static void addBigStoneBoulder(List<ResourceKey<PlacedFeature>> vegetation) {
         vegetation.add(BoulderPlacedFeatures.BIG_STONE_BOULDER);
+    }
+
+    public static void addSmallStoneBoulder(List<ResourceKey<PlacedFeature>> vegetation) {
+        vegetation.add(BoulderPlacedFeatures.STONE_BOULDER);
     }
     public static void addMossyBoulder(List<ResourceKey<PlacedFeature>> vegetation) {
         vegetation.add(BoulderPlacedFeatures.MOSSY_BOULDER);
@@ -306,6 +327,10 @@ public class ModBiomeFeatures {
     public static void addHeather(List<ResourceKey<PlacedFeature>> vegetation) {
         vegetation.add(FlowerPlacedFeatures.HEATHER_BUSH_FLOWER_KEY);
     }
+    public static void addLavender(List<ResourceKey<PlacedFeature>> vegetation) {
+        vegetation.add(FlowerPlacedFeatures.LAVENDER_FLOWER_KEY);
+    }
+
 
     public static void addHibiscus(List<ResourceKey<PlacedFeature>> vegetation) {
         vegetation.add(FlowerPlacedFeatures.HIBISCUS_FLOWER_KEY);

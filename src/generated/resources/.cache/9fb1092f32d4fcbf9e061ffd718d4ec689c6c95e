@@ -1,4 +1,4 @@
-// 1.21.1	2025-05-04T20:46:07.6260024	Recipes
+// 1.21.1	2025-05-16T17:08:04.927047	Recipes
 4adac873ca73422507dc63ca7aab1c4a04644d3c data/edumia/advancement/recipes/building_blocks/acacia_wood_slab.json
 30fcb72b116d970175ce3877f708c978b26d3c7a data/edumia/advancement/recipes/building_blocks/acacia_wood_stairs.json
 91cee5758d22b0e6da8f2ad95f47b7d96d8f82f6 data/edumia/advancement/recipes/building_blocks/acacia_wood_wall.json
@@ -823,6 +823,7 @@ a0cabafa5949841a1a2409e6bc723d5970b99679 data/edumia/advancement/recipes/misc/bl
 1715fda289897ebfed6fcdb8b9abd2cd343b3ec3 data/edumia/advancement/recipes/misc/blue_bricks_small_arch.json
 d7419332fe4754f7bd1d7da47c0790ec1698d573 data/edumia/advancement/recipes/misc/blue_bricks_two_meter_arch.json
 7adfae49f9a89919bfcaff3ed9ceeef6d6587a88 data/edumia/advancement/recipes/misc/blue_dye_from_bluebell.json
+e09d93e3d89d8da5b63463a771687d8689e2d189 data/edumia/advancement/recipes/misc/blue_dye_from_blue_iris.json
 2e00ba8e43681834fb659ae3845b6206682388d4 data/edumia/advancement/recipes/misc/blue_dye_from_chrys_blue.json
 f546b8c3473e0d3551a3c6927d41fb44de1974a1 data/edumia/advancement/recipes/misc/blue_dye_from_delphinium.json
 0d1051c64d93e2784d75068c9ed502fd00a0794d data/edumia/advancement/recipes/misc/blue_dye_from_flax_flowers.json
@@ -1438,6 +1439,7 @@ dc27afca5451cf2ebcd2958b5e7c4bc081d5755d data/edumia/recipe/blue_clay_tiling_sla
 3723936d6b79f1cfa5562103946f74fe3f010167 data/edumia/recipe/blue_clay_tiling_stairs.json
 ab16ba432e1391286cb9966d6f7bf46bbfc7a24e data/edumia/recipe/blue_clay_tiling_vertical_corner.json
 5bcfd9140c1f4e8e5e7f01d038e168b535aa741b data/edumia/recipe/blue_dye_from_bluebell.json
+02b5dddd241bb668ca634eedff5d2e6e8825d361 data/edumia/recipe/blue_dye_from_blue_iris.json
 92fb0ec70312fe92808a31fe2159ab01d7254111 data/edumia/recipe/blue_dye_from_chrys_blue.json
 a80ac91760c411cf5319ae7678cf540d70ab313d data/edumia/recipe/blue_dye_from_delphinium.json
 654ff1e829613300827b154a5f597ef3ffef514e data/edumia/recipe/blue_dye_from_flax_flowers.json

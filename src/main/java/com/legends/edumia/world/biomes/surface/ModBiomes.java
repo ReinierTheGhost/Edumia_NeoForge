@@ -41,8 +41,6 @@ public class ModBiomes {
         ModCaveBiomes.bootstrap(context);
         createEdumiaValesBiome(context, EdumiaBiomeKeys.EDUMIA_VALES);
         createEdumiaSavannahBiome(context, EdumiaBiomeKeys.EDUMIA_SAVANNAH);
-        createGensaiBeachBiome(context, EdumiaBiomeKeys.GENSAI_BEACH);
-        createGensaiBeachBiome(context, EdumiaBiomeKeys.GENSAI_ROCKY_COAST);
         createTestBiome(context, EdumiaBiomeKeys.DEAD_MARSHES);
         createTestBiome(context, EdumiaBiomeKeys.DEAD_MARSHES_WATER);
         createDarkElvenWoodBiome(context, EdumiaBiomeKeys.DARK_ELF_FOREST);
@@ -70,7 +68,6 @@ public class ModBiomes {
         createEdumiaMountainBiome(context, EdumiaBiomeKeys.AVELION_MOUNTAIN_PEAKS, true);
 
         createOgreForestBiome(context, EdumiaBiomeKeys.OGRE_FOREST);
-        createGensaiSakuraGroveBiome(context, EdumiaBiomeKeys.GENSAI_SAKURA_GROVE);
         createMyrwoodSwampBiome(context, EdumiaBiomeKeys.FAIRY_SWAMP);
         createRiverBiome(context, EdumiaBiomeKeys.GREAT_RIVER);
 
@@ -79,11 +76,20 @@ public class ModBiomes {
         createEdumiaMountainBiome(context, EdumiaBiomeKeys.EDUMIA_MOUNTAINS_BASE, false);
         createEdumiaMountainBiome(context, EdumiaBiomeKeys.EDUMIA_MOUNTAINS, false);
         createEdumiaMountainBiome(context, EdumiaBiomeKeys.EDUMIA_MOUNTAINS_PEAKS, true);
+
+
         createGensaiVolcanoBiome(context, EdumiaBiomeKeys.GENSAI_VOLCANO_PLAINS);
         createMountTitleistBiome(context, EdumiaBiomeKeys.MOUNT_TITLEIST_FOOT);
         createMountTitleistBiome(context, EdumiaBiomeKeys.MOUNT_TITLEIST);
         createMountTitleistBiome(context, EdumiaBiomeKeys.MOUNT_TITLEIST_PEAK);
         createMountTitleistBiome(context, EdumiaBiomeKeys.MOUNT_TITLEIST_CRATER);
+
+        createGensaiBeachBiome(context, EdumiaBiomeKeys.GENSAI_BEACH);
+        createGensaiBeachBiome(context, EdumiaBiomeKeys.GENSAI_ROCKY_COAST);
+        createGensaiNorthernPlainsBiome(context, EdumiaBiomeKeys.GENSAI_NORTHERN_PLAINS, 0);
+        createGensaiReefBiome(context, EdumiaBiomeKeys.GENSAI_REEF);
+        createGensaiJungleBiome(context, EdumiaBiomeKeys.GENSAI_JUNGLE);
+        createGensaiSakuraGroveBiome(context, EdumiaBiomeKeys.GENSAI_SAKURA_GROVE);
 
         createMirwoodForestBiome(context, EdumiaBiomeKeys.MYRWOOD_JUNGLE, 0);
         createMirwoodForestBiome(context, EdumiaBiomeKeys.MYRWOOD_JUNGLE_CLEARING, 1);
@@ -101,8 +107,6 @@ public class ModBiomes {
         createPondBiome(context, EdumiaBiomeKeys.POND);
         createRiverBiome(context, EdumiaBiomeKeys.RIVER);
         createRiverBiome(context, EdumiaBiomeKeys.MOUNTAIN_STREAM);
-        createGensaiReefBiome(context, EdumiaBiomeKeys.GENSAI_REEF);
-        createGensaiJungleBiome(context, EdumiaBiomeKeys.GENSAI_JUNGLE);
         createWastePondBiome(context, EdumiaBiomeKeys.WASTE_POND);
 
 
@@ -175,7 +179,6 @@ public class ModBiomes {
 
     public static void createEdumiaSavannahBiome(BootstrapContext<Biome> context, ResourceKey<Biome> biomeResourceKey) {
         MobSpawnSettings.Builder spawnSettings = new MobSpawnSettings.Builder();
-        //ModSpawnSettingsBuilder.addFarmAnimals(spawnSettings);
         BiomeGenerationSettings.Builder generationSettings = new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE),
                 context.lookup(Registries.CONFIGURED_CARVER));
 
@@ -186,16 +189,34 @@ public class ModBiomes {
 
         registerBiome(context, biomeResourceKey, spawnSettings, generationSettings);
     }
+
+    public static void createGensaiNorthernPlainsBiome(BootstrapContext<Biome> context, ResourceKey<Biome> biomeResourceKey, int key) {
+        MobSpawnSettings.Builder spawnSettings = new MobSpawnSettings.Builder();
+        BiomeGenerationSettings.Builder generationSettings = new BiomeGenerationSettings.Builder(context.lookup(
+                Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
+        if (key == 0) { //plains
+            ModBiomeFeatures.addGravelOre(vegetation);
+            ModBiomeFeatures.addOakBushes(vegetation);
+            ModBiomeFeatures.addRareCypressTrees(vegetation);
+            ModBiomeFeatures.addGrass(vegetation);
+            vegetation.add(VegetationPlacements.FOREST_FLOWERS);
+        }
+
+        ModBiomeFeatures.addPackedMudOre(vegetation);
+        ModBiomeFeatures.addBigStoneBoulder(vegetation);
+        ModBiomeFeatures.addBigSandStoneBoulder(vegetation);
+        registerBiome(context, biomeResourceKey, spawnSettings, generationSettings);
+    }
+
     public static void createGensaiBeachBiome(BootstrapContext<Biome> context, ResourceKey<Biome> biomeResourceKey) {
         MobSpawnSettings.Builder spawnSettings = new MobSpawnSettings.Builder();
-        //ModSpawnSettingsBuilder.addHaradMobs(spawnSettings);
-        //ModSpawnSettingsBuilder.addLlama(spawnSettings);
+
         BiomeGenerationSettings.Builder generationSettings = new BiomeGenerationSettings.Builder(context.lookup(
                 Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
         vegetation.add(VegetationPlacements.PATCH_CACTUS_DESERT);
         ModBiomeFeatures.addGraniteBoulder(vegetation);
-        ModBiomeFeatures.addSandStoneBoulder(vegetation);
+        ModBiomeFeatures.addSandStoneBoulders(vegetation);
         ModBiomeFeatures.addStoneBoulder(vegetation);
         ModBiomeFeatures.addWhiteSandLayers(topLayer);
         ModBiomeFeatures.addGravelOre(vegetation);
@@ -594,7 +615,7 @@ public class ModBiomes {
         ModBiomeFeatures.addDisks(undergroundOres);
         vegetation.add(VegetationPlacements.PATCH_SUGAR_CANE);
         vegetation.add(VegetationPlacements.PATCH_GRASS_SAVANNA);
-        ModBiomeFeatures.addSandStoneBoulder(vegetation);
+        ModBiomeFeatures.addSandStoneBoulders(vegetation);
     }
     public static void addSakuraGroveVegetation(BiomeGenerationSettings.Builder generationSettings) {
         ModBiomeFeatures.addDisks(undergroundOres);

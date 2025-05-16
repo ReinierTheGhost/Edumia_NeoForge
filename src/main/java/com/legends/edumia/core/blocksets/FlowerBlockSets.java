@@ -51,6 +51,7 @@ public class FlowerBlockSets {
     public static FlowerSet TUBEROSE = registerFlowerSets("tuberose", MobEffects.SATURATION,false, Items.MAGENTA_DYE);
 
     public static FlowerSet YELLOW_IRIS = registerFlowerSets("yellow_iris", MobEffects.SATURATION,true, Items.YELLOW_DYE);
+    public static FlowerSet BLUE_IRIS = registerFlowerSets("blue_iris", MobEffects.SATURATION,true, Items.BLUE_DYE);
     public static FlowerSet FLAME_OF_THE_SOUTH = registerFlowerSets("flame_of_the_south", MobEffects.SATURATION,true, Items.ORANGE_DYE);
     public static FlowerSet HIBISCUS = registerFlowerSets("hibiscus", MobEffects.SATURATION,true, Items.PINK_DYE);
 
@@ -87,6 +88,7 @@ public class FlowerBlockSets {
             SIMBLELMYNE,
             TUBEROSE,
             YELLOW_IRIS,
+            BLUE_IRIS,
             FLAME_OF_THE_SOUTH,
             HIBISCUS,
             PARASOL_MUSHROOM_1,

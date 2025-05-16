@@ -53,10 +53,7 @@ public class MapBiomeData {
         addBiome(new BiomeData(EdumiaBiomeKeys.EDUMIA_SAVANNAH, EdumiaBiomeDataConfigs.grassPlains, EdumiaBiomeDataConfigs.stoneLayers,
                 new BiomeColorsDTO(desertSky, desertSkyFog, 5406139, 1120828, 12305028, 10860366)));
 
-        addBiome(new BiomeData(EdumiaBiomeKeys.GENSAI_BEACH, EdumiaBiomeDataConfigs.gensaiShores, EdumiaBiomeDataConfigs.redSandLayers,
-                new BiomeColorsDTO(desertSky, defaultFog, 5212644, 333363, 12107900, 10860366)));
-        addBiome(new BiomeData(EdumiaBiomeKeys.GENSAI_ROCKY_COAST, EdumiaBiomeDataConfigs.gensaiShores, EdumiaBiomeDataConfigs.redSandLayers,
-                new BiomeColorsDTO(desertSky, defaultFog, 5212644, 333363, 12107900, 10860366)));
+
 
         addBiome(new BiomeData(EdumiaBiomeKeys.DEAD_MARSHES, EdumiaBiomeDataConfigs.pond, EdumiaBiomeDataConfigs.stoneLayers,
                 new BiomeColorsDTO(11908531, 7108218, 3289373, 198924, 6115374, 5794902)));
@@ -100,8 +97,7 @@ public class MapBiomeData {
         addBiome(new BiomeData(EdumiaBiomeKeys.OGRE_FOREST, EdumiaBiomeDataConfigs.grassPlains, EdumiaBiomeDataConfigs.limestoneLayers,
                 new BiomeColorsDTO(defaultSky, defaultFog, defaultWater, defaultWaterFog, 8240485, 7909996)));
 
-        addBiome(new BiomeData(EdumiaBiomeKeys.GENSAI_SAKURA_GROVE, EdumiaBiomeDataConfigs.grassPlains, EdumiaBiomeDataConfigs.limestoneLayers,
-                new BiomeColorsDTO(defaultSky, 13748853, defaultWater, defaultWaterFog, 12961832, 6989412)));
+
 
         addBiome(new BiomeData(EdumiaBiomeKeys.AVELION_FOOTHILLS, EdumiaBiomeDataConfigs.avelionRockShore, EdumiaBiomeDataConfigs.avelionLayers,
                 new BiomeColorsDTO(hillySky, defaultFog, defaultWater, defaultWaterFog, 7777673, 7316862)));
@@ -136,6 +132,18 @@ public class MapBiomeData {
         addBiome(new BiomeData(EdumiaBiomeKeys.MOUNT_TITLEIST_CRATER, EdumiaBiomeDataConfigs.gensaiVolcano, EdumiaBiomeDataConfigs.volcanicRockLayers,
                 new BiomeColorsDTO(5460048, 4999240, 5860962, 731161, 6252369, 4735297)));
 
+        addBiome(new BiomeData(EdumiaBiomeKeys.GENSAI_SAKURA_GROVE, EdumiaBiomeDataConfigs.grassPlains, EdumiaBiomeDataConfigs.limestoneLayers,
+                new BiomeColorsDTO(defaultSky, 13748853, defaultWater, defaultWaterFog, 12961832, 6989412)));
+        addBiome(new BiomeData(EdumiaBiomeKeys.GENSAI_JUNGLE, EdumiaBiomeDataConfigs.grassPlains, EdumiaBiomeDataConfigs.stoneLayers,
+                new BiomeColorsDTO(6785744, 10004675, 4421513, 402733, 2311707, 2050588)));
+
+        addBiome(new BiomeData(EdumiaBiomeKeys.GENSAI_NORTHERN_PLAINS, EdumiaBiomeDataConfigs.grassPlains, EdumiaBiomeDataConfigs.redSandLayers,
+                new BiomeColorsDTO(desertSky, defaultFog, 4159204, 329011, 14538041, 14538041)));
+        addBiome(new BiomeData(EdumiaBiomeKeys.GENSAI_BEACH, EdumiaBiomeDataConfigs.gensaiShores, EdumiaBiomeDataConfigs.redSandLayers,
+                new BiomeColorsDTO(desertSky, defaultFog, 5212644, 333363, 12107900, 10860366)));
+        addBiome(new BiomeData(EdumiaBiomeKeys.GENSAI_ROCKY_COAST, EdumiaBiomeDataConfigs.gensaiShores, EdumiaBiomeDataConfigs.redSandLayers,
+                new BiomeColorsDTO(desertSky, defaultFog, 5212644, 333363, 12107900, 10860366)));
+
         addBiome(new BiomeData(EdumiaBiomeKeys.MYRWOOD_JUNGLE, EdumiaBiomeDataConfigs.grassPlains, EdumiaBiomeDataConfigs.stoneLayers,
                 new BiomeColorsDTO(10599654, 10664914, 7856375, 329011, 7514630, 7451654)));
         addBiome(new BiomeData(EdumiaBiomeKeys.MYRWOOD_JUNGLE_CLEARING, EdumiaBiomeDataConfigs.grassPlains, EdumiaBiomeDataConfigs.stoneLayers,
@@ -153,8 +161,7 @@ public class MapBiomeData {
         addBiome(new BiomeData(EdumiaBiomeKeys.TAIGA_FOREST, EdumiaBiomeDataConfigs.grassPlains, EdumiaBiomeDataConfigs.stoneLayers,
                 new BiomeColorsDTO(7508201, 10863086, defaultWater, defaultWaterFog, 8302697, 7252827)));
 
-        addBiome(new BiomeData(EdumiaBiomeKeys.GENSAI_JUNGLE, EdumiaBiomeDataConfigs.grassPlains, EdumiaBiomeDataConfigs.stoneLayers,
-                new BiomeColorsDTO(6785744, 10004675, 4421513, 402733, 2311707, 2050588)));
+
 
 
     }

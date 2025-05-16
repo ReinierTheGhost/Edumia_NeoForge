@@ -33,6 +33,8 @@ public class TemperateTreePlacedFeatures {
 
     public static final ResourceKey<PlacedFeature> CYPRESS_KEY = registerKey("cypress/cypress_tree");
 
+    public static final ResourceKey<PlacedFeature> RARE_CYPRESS_KEY = registerKey("cypress/rare_cypress_tree");
+
     public static final ResourceKey<PlacedFeature> ASPEN_KEY = registerKey("aspen/aspen_tree");
     public static final ResourceKey<PlacedFeature> ASPEN_2_KEY = registerKey("aspen/aspen_2_tree");
 
@@ -126,6 +128,10 @@ public class TemperateTreePlacedFeatures {
         register(context, WILLOW_PLACED_TREE_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(TemperateTreeConfiguredFeatures.WILLOW_TREE_KEY),
                 VegetationPlacements.treePlacement(uncommonTree,
                         WoodBlockSets.WILLOW.sapling().get()));
+
+        register(context, RARE_CYPRESS_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(TemperateTreeConfiguredFeatures.CYPRESS_KEY),
+                VegetationPlacements.treePlacement(rareTree,
+                        WoodBlockSets.CYPRESS.sapling().get()));
 
 
 

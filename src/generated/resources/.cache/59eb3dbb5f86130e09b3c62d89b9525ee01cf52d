@@ -1,4 +1,4 @@
-// 1.21.1	2025-05-04T20:52:29.2348	Loot Tables
+// 1.21.1	2025-05-16T17:08:04.914589	Loot Tables
 e2e084dc074419dc92cea6e8c8e4b55544abe8a9 data/edumia/loot_table/blocks/acacia_beam.json
 48dea1c4c657ef265adaa4964922687a58720e07 data/edumia/loot_table/blocks/acacia_wood_fence.json
 2a4bb888c13048fc2acad9f55a5245f6ad35fc92 data/edumia/loot_table/blocks/acacia_wood_slab.json
@@ -202,6 +202,7 @@ c2c857c47273678132a9cefb6ae12f6d9106cf7b data/edumia/loot_table/blocks/blue_clay
 8a458d0aadb8eab90d68e4554a5610e650c33851 data/edumia/loot_table/blocks/blue_delphinium.json
 c80b8b71d49287c33ac32cc59ea1d9fb0162d122 data/edumia/loot_table/blocks/blue_fine_glass.json
 3718b523744b5c4f7eef9b27fb02cf0a136ad34d data/edumia/loot_table/blocks/blue_fine_glass_pane.json
+86340c7cc466310c28a23df680723c8fc4ef689d data/edumia/loot_table/blocks/blue_iris.json
 fa78886d57c60bd97122d1a7601f41330f6a69a4 data/edumia/loot_table/blocks/blue_paperwall.json
 aeab15e35333338650e869c1e401dcb6616e622b data/edumia/loot_table/blocks/blue_stone.json
 e5d44e9be4f16978cc92ffc0f542b0081bb72c4c data/edumia/loot_table/blocks/blue_stone_slab.json
@@ -652,7 +653,7 @@ ab45bf7805f9c223d79c7a7fe2028d4272798a16 data/edumia/loot_table/blocks/fir_wood_
 8ef21fa3136b0ba1ed4e00fcf03e39e2f9743bd7 data/edumia/loot_table/blocks/fir_wood_slab.json
 a08f02185777f9c20c303dfe4c24abce7f5cd823 data/edumia/loot_table/blocks/fir_wood_stairs.json
 ac726c6057e67ff07f9d89a635f3b4950cb87203 data/edumia/loot_table/blocks/fir_wood_wall.json
-4a99c770fe4a19a993a0445b440c082076b2bf23 data/edumia/loot_table/blocks/flame_of_the_south.json
+37dc69da816a30ff137abc77c426c0ab50d9fb0d data/edumia/loot_table/blocks/flame_of_the_south.json
 41ad5106597e086b1792cd17693f051f4b8db138 data/edumia/loot_table/blocks/flax_flowers.json
 53c78068384bd71b105b62b3a2ea9289968b0984 data/edumia/loot_table/blocks/flax_grass.json
 fdd5407aa1dcdeb08560c974ace834042cb8e913 data/edumia/loot_table/blocks/foxglove_orange.json
@@ -776,7 +777,7 @@ f6b9bd875ccde669ddfc87f3b9d77771e389a611 data/edumia/loot_table/blocks/green_oak
 46f3d620b9dc2f938fe1bd808fd34b955972e040 data/edumia/loot_table/blocks/green_oak_wood_wall.json
 638d06a44a87b4ea4c13a5710d2f47187160c500 data/edumia/loot_table/blocks/green_paperwall.json
 145222ae59411e9ece69283813d0c772f21ff05e data/edumia/loot_table/blocks/heather_bush.json
-1110864df2f8718571190bdddd7cb2f0bcc4deb1 data/edumia/loot_table/blocks/hibiscus.json
+e282625d9c4739b73a59fa06f143021cb6b305a3 data/edumia/loot_table/blocks/hibiscus.json
 320ecd01b1cfab6b64f60242b135dd763b7a764f data/edumia/loot_table/blocks/high_elven_bricks.json
 24640b2f58fee82db157ada6e25114ee9175b7fd data/edumia/loot_table/blocks/high_elven_bricks_arrowslit.json
 3f49f4573171621e62216b934b69af04bb1e92ec data/edumia/loot_table/blocks/high_elven_bricks_balustrade.json
@@ -1253,7 +1254,7 @@ b4551ba871ac4e488f2fa3046612ce42c644e3f6 data/edumia/loot_table/blocks/palm_wood
 065df6c5aee1a34689fdebf185b86c52d7b3d2a1 data/edumia/loot_table/blocks/papyrus.json
 56961eab06244b645d03919d1e7f5e3c60846d39 data/edumia/loot_table/blocks/parasol_mushroom_01.json
 a6b7bfa9bc3a9ccff515b729c55dd2293b471136 data/edumia/loot_table/blocks/parasol_mushroom_02.json
-1cb19276881b5cc328d2275c7602896df70a28bc data/edumia/loot_table/blocks/parasol_mushroom_tall.json
+62abf60cd127dba92619bf4ae2c273e7510c6f29 data/edumia/loot_table/blocks/parasol_mushroom_tall.json
 5ba150574971b09454a514d00f8e65ea3c35c759 data/edumia/loot_table/blocks/pear_beam.json
 158406a119edb87e5de87835202204135cf6410f data/edumia/loot_table/blocks/pear_button.json
 8c8fc2748d94895b46aac5efea0b87ba7a7a8679 data/edumia/loot_table/blocks/pear_door.json
@@ -1761,7 +1762,7 @@ cfddb14f5e13080056c5f694659b8e1cf6e1e0ad data/edumia/loot_table/blocks/yellow_cl
 d9e81cef8e6bb008a27d58c6f0820bcd71d40e58 data/edumia/loot_table/blocks/yellow_cobble_wall.json
 d69a9b206c41f3e8a0c4b45858ee9d6dd4c8c982 data/edumia/loot_table/blocks/yellow_fine_glass.json
 3f07d52eeb82a396c0b5ff938b1a90d24b9faadb data/edumia/loot_table/blocks/yellow_fine_glass_pane.json
-e4b1d1c9f7e7aa6adea65f40b3871953d39477bc data/edumia/loot_table/blocks/yellow_iris.json
+ed26f697311378755e29e7e1f416d4eca49eb008 data/edumia/loot_table/blocks/yellow_iris.json
 8da20d09543b75ba0c0112e803b2182e2f19cc03 data/edumia/loot_table/blocks/yellow_paperwall.json
 c8325103eb9394a8b0d860394fe4eddaf248b9ee data/edumia/loot_table/blocks/yellow_stone.json
 26ba01c0d81743f8a675bb26cf3e2958681a93f0 data/edumia/loot_table/blocks/yellow_stone_2.json

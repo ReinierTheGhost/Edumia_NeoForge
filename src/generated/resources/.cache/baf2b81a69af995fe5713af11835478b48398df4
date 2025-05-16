@@ -1,4 +1,4 @@
-// 1.21.1	2025-05-11T20:29:23.1799998	Item Models: edumia
+// 1.21.1	2025-05-16T17:08:04.8581295	Item Models: edumia
 047baa6b7a95aadfec14d478dfdf8c290cbd8220 assets/edumia/models/item/acacia_wood_fence.json
 4879a2f3030853ef57cc6d67266684061b3752ec assets/edumia/models/item/acacia_wood_wall.json
 386253d46a85a3515508b2f2812157712b0633d8 assets/edumia/models/item/almond_button.json
@@ -60,6 +60,7 @@ c13495aab8d06b0a20efe369692b1588f7ddaa02 assets/edumia/models/item/bluebell.json
 f01159240653d95923dd9308679c347921e07810 assets/edumia/models/item/blue_bricks_wall.json
 3bdd025e8a4499600ea97c712fbc958e1730db48 assets/edumia/models/item/blue_delphinium.json
 3528c8f58c9da69b2233ce55098d05a84de7ca5b assets/edumia/models/item/blue_fine_glass_pane.json
+098dcb21767eaac8b345b3d238598c67772a90f8 assets/edumia/models/item/blue_iris.json
 d711656dddfbb3c5046f3cf085d41c0bada7c329 assets/edumia/models/item/blue_paperwall.json
 bfe9f0feff72f350e3ba0d10e46610917864a666 assets/edumia/models/item/blue_stone_wall.json
 67e4e2e620fbb2b0b0fe12350a45853c31ae71da assets/edumia/models/item/broccoli.json

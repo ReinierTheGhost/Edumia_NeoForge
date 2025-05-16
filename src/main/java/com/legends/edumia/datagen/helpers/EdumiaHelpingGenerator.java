@@ -5,6 +5,7 @@ import com.legends.edumia.datagen.helpers.loot_tables.*;
 import com.legends.edumia.datagen.helpers.models.*;
 import com.legends.edumia.datagen.helpers.tags.*;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.TallFlowerBlock;
 
 public class EdumiaHelpingGenerator {
     public static void generateFiles() {
@@ -356,7 +357,7 @@ public class EdumiaHelpingGenerator {
             }else {
                 Flowers.flowers.add(block.tallFlower().get());
                 SimpleTallFlowerModel.blocks.add(block.tallFlower().get());
-                BlockDrops.blocks.add(block.tallFlower().get());
+                DoubleFlowerDrops.blocks.add(block.tallFlower().get());
             }
 
         }

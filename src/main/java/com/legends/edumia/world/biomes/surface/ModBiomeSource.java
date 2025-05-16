@@ -104,42 +104,70 @@ public class ModBiomeSource extends BiomeSource {
             processedBiome = getCaveBiome(i, k, biome);
         }
         else if (!MapBasedBiomePool.waterBiomes.contains(biome.getBiomeResourceKey())){
-            SubBiome subBiome = SubBiomes.getSubBiome(biomeHeightData.getBiomeKey());
-            if (subBiome != null){
-                double perlin = ModBiomeSource.getSubBiomeNoise(i, k, subBiome.getFrequency());
-                double additionalHeight = subBiome.getAdditionalHeight((float) perlin);
-                additionalHeight *= EdumiaMapRuntime.getInstance().getEdge(i, k);
-                height += (float) additionalHeight;
-            }
+            // Move mangrove check before subbiome processing
+            if(biome == MapBasedBiomePool.mangrove.getBiome() || biome == MapBasedBiomePool.floodedMangrove.getBiome()) {
+                // Get the base terrain height without any modifications
+                float baseHeight = EdumiaHeightMap.getHeight(i, k);
 
-            if(j <= CavesPlacedFeatures.MAX_MISTIC_ORE_HEIGHT && biome.getCaveType() == CaveType.MISTIES) {
-                processedBiome = EdumiaBiomeKeys.MISTIC_CAVE;
-            }else if(biome == MapBasedBiomePool.mangrove.getBiome() || biome == MapBasedBiomePool.floodedMangrove.getBiome()) {
-                height = EdumiaChunkGenerator.DIRT_HEIGHT + EdumiaChunkGenerator.getMarshesHeight(i, k, height);
+                // Initialize mangrove height at water level
+                height = EdumiaChunkGenerator.WATER_HEIGHT;
+
+                // Get surrounding heights to determine slope
+                float northHeight = EdumiaHeightMap.getHeight(i, k - 16);  // Sample some blocks away
+                float southHeight = EdumiaHeightMap.getHeight(i, k + 16);
+                float eastHeight = EdumiaHeightMap.getHeight(i + 16, k);
+                float westHeight = EdumiaHeightMap.getHeight(i - 16, k);
+
+                // Find the highest neighboring height to determine slope direction
+                float maxNeighborHeight = Math.max(Math.max(northHeight, southHeight),
+                        Math.max(eastHeight, westHeight));
+
+                // Calculate slope factor (0 at water level, 1 at highest point)
+                float slopeFactor = (baseHeight - EdumiaChunkGenerator.WATER_HEIGHT) /
+                        (maxNeighborHeight - EdumiaChunkGenerator.WATER_HEIGHT);
+                slopeFactor = Math.max(0, Math.min(1, slopeFactor)); // Clamp between 0 and 1
+
+                // Apply slope to height
+                height = EdumiaChunkGenerator.WATER_HEIGHT +
+                        (slopeFactor * (maxNeighborHeight - EdumiaChunkGenerator.WATER_HEIGHT));
+
                 if(j < (height - 20))
                     processedBiome = getCaveBiome(i, k, biome);
                 else if(height < EdumiaChunkGenerator.WATER_HEIGHT)
                     processedBiome = MapBasedBiomePool.floodedMangrove.getBiomeKey();
                 else
                     processedBiome = MapBasedBiomePool.mangrove.getBiomeKey();
-            } else if(height <= biomeHeightData.getWaterHeight() + 1.25f) { // TODO : This is really rough, need to be re dynamic
-                if (MapBasedBiomePool.coastalBiomes.contains(biome.getBiomeResourceKey())) {
-                    processedBiome = MapBasedBiomePool.oceanCoast.getBiomeKey();
-                } else if (MapBasedBiomePool.wastePondBiomes.contains(biome.getBiomeResourceKey())) {
-                    processedBiome = MapBasedBiomePool.wastePond.getBiomeKey();
-                } else if (MapBasedBiomePool.myrwoodSwampBiomes.contains(biome.getBiomeResourceKey())) {
-                    processedBiome = MapBasedBiomePool.myrwoodSwamp.getBiomeKey();
-                } else if (MapBasedBiomePool.oasisBiomes.contains(biome.getBiomeResourceKey())) {
-                    processedBiome = MapBasedBiomePool.oasis.getBiomeKey();
-                } else if (MapBasedBiomePool.frozenBiomes.contains(biome.getBiomeResourceKey())) {
-                    processedBiome = MapBasedBiomePool.frozenPond.getBiomeKey();
-                } else if (MapBasedBiomePool.anduinWaterBiomes.contains(biome.getBiomeResourceKey())) {
-                    processedBiome = MapBasedBiomePool.greatRiver.getBiomeKey();
-                } else {
-                    processedBiome = MapBasedBiomePool.pond.getBiomeKey();
-                }
             } else {
-                processedBiome = getSubBiome(i, k, biome);
+                // Process other biomes as normal
+                SubBiome subBiome = SubBiomes.getSubBiome(biomeHeightData.getBiomeKey());
+                if (subBiome != null){
+                    double perlin = ModBiomeSource.getSubBiomeNoise(i, k, subBiome.getFrequency());
+                    double additionalHeight = subBiome.getAdditionalHeight((float) perlin);
+                    additionalHeight *= EdumiaMapRuntime.getInstance().getEdge(i, k);
+                    height += (float) additionalHeight;
+                }
+
+                if(j <= CavesPlacedFeatures.MAX_MISTIC_ORE_HEIGHT && biome.getCaveType() == CaveType.MISTIES) {
+                    processedBiome = EdumiaBiomeKeys.MISTIC_CAVE;
+                } else if(height <= biomeHeightData.getWaterHeight() + 1.25f) { // TODO : This is really rough, need to be re dynamic
+                    if (MapBasedBiomePool.coastalBiomes.contains(biome.getBiomeResourceKey())) {
+                        processedBiome = MapBasedBiomePool.oceanCoast.getBiomeKey();
+                    } else if (MapBasedBiomePool.wastePondBiomes.contains(biome.getBiomeResourceKey())) {
+                        processedBiome = MapBasedBiomePool.wastePond.getBiomeKey();
+                    } else if (MapBasedBiomePool.myrwoodSwampBiomes.contains(biome.getBiomeResourceKey())) {
+                        processedBiome = MapBasedBiomePool.myrwoodSwamp.getBiomeKey();
+                    } else if (MapBasedBiomePool.oasisBiomes.contains(biome.getBiomeResourceKey())) {
+                        processedBiome = MapBasedBiomePool.oasis.getBiomeKey();
+                    } else if (MapBasedBiomePool.frozenBiomes.contains(biome.getBiomeResourceKey())) {
+                        processedBiome = MapBasedBiomePool.frozenPond.getBiomeKey();
+                    } else if (MapBasedBiomePool.anduinWaterBiomes.contains(biome.getBiomeResourceKey())) {
+                        processedBiome = MapBasedBiomePool.greatRiver.getBiomeKey();
+                    } else {
+                        processedBiome = MapBasedBiomePool.pond.getBiomeKey();
+                    }
+                } else {
+                    processedBiome = getSubBiome(i, k, biome);
+                }
             }
         } else processedBiome = biome.getBiomeResourceKey();
 
@@ -147,4 +175,5 @@ public class ModBiomeSource extends BiomeSource {
                         b -> b.unwrapKey().get().toString().equalsIgnoreCase(processedBiome.toString()))
                 .findFirst().get();
     }
+
 }

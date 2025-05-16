@@ -18,8 +18,7 @@ public class EdumiaBiomeKeys extends Biomes {
     public static final ResourceKey<Biome> EDUMIA_VALES = EdumiaBiomeKeys.register("edumia_vales");
     public static final ResourceKey<Biome> EDUMIA_SAVANNAH = EdumiaBiomeKeys.register("edumia_savannah");
 
-    public static final ResourceKey<Biome> GENSAI_BEACH = EdumiaBiomeKeys.register("gensai_beach");
-    public static final ResourceKey<Biome> GENSAI_ROCKY_COAST = EdumiaBiomeKeys.register("gensai_rocky_coast");
+
 
     public static final ResourceKey<Biome> DEAD_MARSHES = EdumiaBiomeKeys.register("dead_marshes");
     public static final ResourceKey<Biome> DEAD_MARSHES_WATER = EdumiaBiomeKeys.register("dead_marshes_water");
@@ -64,9 +63,12 @@ public class EdumiaBiomeKeys extends Biomes {
     public static final ResourceKey<Biome> MOUNT_TITLEIST = EdumiaBiomeKeys.register("mount_titleist");
     public static final ResourceKey<Biome> MOUNT_TITLEIST_PEAK = EdumiaBiomeKeys.register("mount_titleist_peak");
 
+    public static final ResourceKey<Biome> GENSAI_BEACH = EdumiaBiomeKeys.register("gensai_beach");
+    public static final ResourceKey<Biome> GENSAI_ROCKY_COAST = EdumiaBiomeKeys.register("gensai_rocky_coast");
     public static final ResourceKey<Biome> GENSAI_REEF = EdumiaBiomeKeys.register("gensai_reef");
     public static final ResourceKey<Biome> GENSAI_JUNGLE = EdumiaBiomeKeys.register("gensai_jungle");
     public static final ResourceKey<Biome> GENSAI_SAKURA_GROVE = EdumiaBiomeKeys.register("gensai_sakura_grove");
+    public static final ResourceKey<Biome> GENSAI_NORTHERN_PLAINS = EdumiaBiomeKeys.register("gensai_northern_plains");
 
     public static final ResourceKey<Biome> TAIGA_FOREST = EdumiaBiomeKeys.register("taiga_forest");
     public static final ResourceKey<Biome> TUNDRA_BUSH = EdumiaBiomeKeys.register("tundra_bush");

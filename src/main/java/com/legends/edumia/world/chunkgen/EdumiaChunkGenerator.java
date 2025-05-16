@@ -103,6 +103,7 @@ public class EdumiaChunkGenerator extends ChunkGenerator {
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.AVELION_MOUNTAIN_PEAKS),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.OGRE_FOREST),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.GENSAI_SAKURA_GROVE),
+                        biomeRegistry.getOrThrow(EdumiaBiomeKeys.GENSAI_NORTHERN_PLAINS),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.OASIS),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.POND),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.FAIRY_SWAMP),
@@ -367,8 +368,10 @@ public class EdumiaChunkGenerator extends ChunkGenerator {
      */
     public static float getMarshesHeight(int x, int z, float height) {
         height = -2 + (2.0f * (float) BlendedNoise.noise((double) x / 19,  (double) z / 19));
-        height += (float) BlendedNoise.noise((double) x / 11,  (double) z / 11);
+        height += (float) BlendedNoise.noise((double) x / 12,  (double) z / 12);
         return height;
+
+
     }
 
     /**

@@ -3,6 +3,7 @@ package com.legends.edumia.datagen;
 import com.legends.edumia.core.blocksets.*;
 import com.legends.edumia.core.BlockLoader;
 import com.legends.edumia.datagen.helpers.loot_tables.*;
+import com.legends.edumia.datagen.helpers.models.SimplePillarModels;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
@@ -12,6 +13,9 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DoorBlock;
+import net.minecraft.world.level.block.TallFlowerBlock;
+import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
@@ -39,6 +43,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         for (Block block : BlockDrops.blocks){
             dropSelf(block);
+        }
+
+        for (Block block : DoubleFlowerDrops.blocks){
+            add(block, b -> createDoubleFlowerTable(block));
         }
 
         for (Block block : SilkTouchDrops.blocks){
@@ -169,6 +177,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     private LootItemCondition.Builder doesNotHaveShearsOrSilkTouch() {
         return this.hasShearsOrSilkTouch().invert();
+    }
+
+    protected LootTable.Builder createDoubleFlowerTable(Block doorBlock) {
+        return this.createSinglePropConditionTable(doorBlock, TallFlowerBlock.HALF, DoubleBlockHalf.LOWER);
     }
 
 }

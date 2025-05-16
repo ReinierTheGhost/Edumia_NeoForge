@@ -163,8 +163,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         }
 
         for (FlowerBlockSets.FlowerSet set : FlowerBlockSets.flowerSets){
-            if (set != FlowerBlockSets.YELLOW_IRIS && set != FlowerBlockSets.HIBISCUS &&
-                    set != FlowerBlockSets.FLAME_OF_THE_SOUTH && set != FlowerBlockSets.PARASOL_MUSHROOM_TALL){
+            if (set.tallFlower() == null){
                 dyeFromFlower(recipeOutput, set.dye(), set.flower().get(), 1);
             }else {
                 dyeFromFlower(recipeOutput, set.dye(), set.tallFlower().get(), 2);
