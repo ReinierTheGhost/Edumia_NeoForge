@@ -1,0 +1,23 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "edumia:block/banana_stage0",
+		"particle": "edumia:block/banana_stage0"
+	},
+	"elements": [
+		{
+			"from": [7, 11, 14],
+			"to": [9, 15, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 3, 14]},
+			"faces": {
+				"north": {"uv": [0, 0, 2, 4], "texture": "#0"},
+				"east": {"uv": [2, 0, 4, 4], "texture": "#0"},
+				"south": {"uv": [0, 4, 2, 8], "texture": "#0"},
+				"west": {"uv": [4, 0, 6, 4], "texture": "#0"},
+				"up": {"uv": [4, 6, 2, 4], "texture": "#0"},
+				"down": {"uv": [6, 4, 4, 6], "texture": "#0"}
+			}
+		}
+	],
+	"display": {}
+}
