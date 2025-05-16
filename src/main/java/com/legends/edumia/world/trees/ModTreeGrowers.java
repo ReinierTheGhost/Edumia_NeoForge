@@ -27,6 +27,9 @@ public class ModTreeGrowers {
     public static final TreeGrower CYPRESS = new TreeGrower(Edumia.MOD_ID + ":cypress",
             Optional.empty(), Optional.of(TemperateTreeConfiguredFeatures.CYPRESS_KEY), Optional.empty());
 
+    public static final TreeGrower DATE_PALM = new TreeGrower(Edumia.MOD_ID + ":date_palm",
+            Optional.empty(), Optional.empty(), Optional.empty());
+
     public static final TreeGrower DRAGON_BLOOD = new TreeGrower(Edumia.MOD_ID + ":dragon_blood",
             Optional.empty(), Optional.of(TreeConfiguredFeatures.DRAGON_BLOOD_SMALL_KEY), Optional.empty());
 
@@ -44,7 +47,7 @@ public class ModTreeGrowers {
             Optional.of(TemperateTreeConfiguredFeatures.HOLLY_BEES_TREE_KEY));
 
     public static final TreeGrower JACARANDA = new TreeGrower(Edumia.MOD_ID + ":jacaranda",
-            Optional.empty(), Optional.of(TemperateTreeConfiguredFeatures.HOLLY_TREE_KEY),
+            Optional.empty(), Optional.empty(),
             Optional.empty());
 
     public static final TreeGrower KAPOK = new TreeGrower(Edumia.MOD_ID + ":kapok",

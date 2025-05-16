@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_purple_iris": {
+      "conditions": {
+        "items": [
+          {
+            "items": "edumia:purple_iris"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "edumia:purple_dye_from_purple_iris"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_purple_iris"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "edumia:purple_dye_from_purple_iris"
+    ]
+  }
+}

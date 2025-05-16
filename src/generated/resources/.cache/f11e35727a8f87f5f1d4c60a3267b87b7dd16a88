@@ -1,4 +1,4 @@
-// 1.21.1	2025-05-04T20:46:07.5629737	Tags for minecraft:item mod id edumia
+// 1.21.1	2025-05-16T17:37:38.9513491	Tags for minecraft:item mod id edumia
 3e434f0a86fbcd633cfff91dc0e92ccd3f31bd67 data/edumia/tags/item/almond_logs.json
 ae6219d1827772f22e3df50c609f5244e203de8d data/edumia/tags/item/apple_logs.json
 9cd2fda8149e35f2183333d9280ff853f4a0a4e8 data/edumia/tags/item/aspen_logs.json
@@ -10,6 +10,7 @@ db80a0a81916b5f0383c035c61e9ba58a5bb1092 data/edumia/tags/item/blackthorn_logs.j
 e6eb2daa44d3fcf722cb03cf643e8d87bc18465f data/edumia/tags/item/charred_logs.json
 c8f589974b15cab84d247d7332c9922aba1b25cc data/edumia/tags/item/cherry_logs.json
 a85d08c7014dd2692cb2a7ebc7d8d0e2851fa2b4 data/edumia/tags/item/cypress_logs.json
+e47eca1b8ccb569d3fe82c8f638d5ab6929585f4 data/edumia/tags/item/date_palm_logs.json
 d0484616118b3d9918d57e682b54cb7136ff4cbd data/edumia/tags/item/dragon_blood_logs.json
 34629053ff6f1be319425df41168d8d5c77d8912 data/edumia/tags/item/fir_logs.json
 c2abe4f19d06a7a0924563ed5df68f12863364be data/edumia/tags/item/ghost_gum_logs.json

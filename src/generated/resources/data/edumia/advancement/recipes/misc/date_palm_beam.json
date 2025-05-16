@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_date_palm_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "edumia:date_palm_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "edumia:date_palm_beam"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_date_palm_log"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "edumia:date_palm_beam"
+    ]
+  }
+}

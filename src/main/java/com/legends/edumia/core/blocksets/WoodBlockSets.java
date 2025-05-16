@@ -57,6 +57,8 @@ public class WoodBlockSets {
             false, ModTreeGrowers.APPLE, List.of(), TagLoader.Items.CHERRY_LOGS, TagLoader.Blocks.CHERRY_LOGS);
     public static SimpleBlockSet CYPRESS = registerWoodSet("cypress", WOOD_STRENGTH, true, true,
             false, ModTreeGrowers.CYPRESS, List.of(), TagLoader.Items.CYPRESS_LOGS, TagLoader.Blocks.CYPRESS_LOGS);
+    public static SimpleBlockSet DATE_PALM = registerWoodSet("date_palm", WOOD_STRENGTH, true, true,
+            false, ModTreeGrowers.DATE_PALM, List.of(), TagLoader.Items.DATE_PALM_LOGS, TagLoader.Blocks.DATE_PALM_LOGS);
     public static SimpleBlockSet DRAGON_BLOOD = registerWoodSet("dragon_blood", WOOD_STRENGTH, true, true,
             false, ModTreeGrowers.DRAGON_BLOOD, List.of(), TagLoader.Items.DRAGON_BLOOD_LOGS, TagLoader.Blocks.DRAGON_BLOOD_LOGS);
 
@@ -123,6 +125,7 @@ public class WoodBlockSets {
             CHERRY,
             CYPRESS,
             CHARRED,
+            DATE_PALM,
             DRAGON_BLOOD,
             FIR,
             GHOST_GUM,

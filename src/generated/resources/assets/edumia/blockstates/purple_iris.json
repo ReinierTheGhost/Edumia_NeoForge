@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "edumia:block/purple_iris_bottom"
+    },
+    "half=upper": {
+      "model": "edumia:block/purple_iris_top"
+    }
+  }
+}
