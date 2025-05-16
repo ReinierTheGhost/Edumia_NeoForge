@@ -162,14 +162,17 @@ public class ItemLoader {
             () -> new Item(new Item.Properties().food(EdumiaFoodComponent.CHEESE)));
     public static final DeferredItem<Item> LETTUCE = ITEMS.register("lettuce",
             () -> new Item(new Item.Properties().food(EdumiaFoodComponent.LETTUCE)));
+
     public static final DeferredItem<Item> BANANA = ITEMS.register("banana",
-            () -> new Item(new Item.Properties().food(EdumiaFoodComponent.BANANA)));
+            () -> new BlockItem(BlockLoader.BANANA.get(),
+                    new Item.Properties().food(EdumiaFoodComponent.BANANA)));
+
     public static final DeferredItem<Item> BANANA_BREAD = ITEMS.register("banana_bread",
             () -> new Item(new Item.Properties().food(EdumiaFoodComponent.BANANA_BREAD)));
     public static final DeferredItem<Item> MANGO = ITEMS.register("mango",
             () -> new Item(new Item.Properties().food(EdumiaFoodComponent.MANGO)));
     public static final DeferredItem<Item> DATE = ITEMS.register("date",
-            () -> new Item(new Item.Properties().food(EdumiaFoodComponent.DATE)));
+            () -> new BlockItem(BlockLoader.DATE.get(), new Item.Properties().food(EdumiaFoodComponent.DATE)));
     public static final DeferredItem<Item> CHERRY = ITEMS.register("cherry",
             () -> new Item(new Item.Properties().food(EdumiaFoodComponent.CHERRY)));
     public static final DeferredItem<Item> PEAR = ITEMS.register("pear",

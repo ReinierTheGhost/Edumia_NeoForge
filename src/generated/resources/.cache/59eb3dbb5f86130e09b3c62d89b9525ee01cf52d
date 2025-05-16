@@ -1,4 +1,4 @@
-// 1.21.1	2025-05-16T17:37:39.013916	Loot Tables
+// 1.21.1	2025-05-16T22:14:18.4994772	Loot Tables
 e2e084dc074419dc92cea6e8c8e4b55544abe8a9 data/edumia/loot_table/blocks/acacia_beam.json
 48dea1c4c657ef265adaa4964922687a58720e07 data/edumia/loot_table/blocks/acacia_wood_fence.json
 2a4bb888c13048fc2acad9f55a5245f6ad35fc92 data/edumia/loot_table/blocks/acacia_wood_slab.json
@@ -73,6 +73,7 @@ e86e249416d27ffb48c112b4df65a8f1ea926644 data/edumia/loot_table/blocks/aspen_woo
 ad54932469290e76f385151375edfe69a20a8905 data/edumia/loot_table/blocks/aspen_wood_stairs.json
 4451baf0f5872ebc98f92e3599c530bef3c5ba4a data/edumia/loot_table/blocks/aspen_wood_wall.json
 5ff58b6cb305e0563bf4062c31feac96832f88bf data/edumia/loot_table/blocks/asphodel.json
+be2539cb7f78a0c6ee46e9f1d4573ced8c68c7e9 data/edumia/loot_table/blocks/banana.json
 6670a761aedc0f3f0e19c9183ae1edebe2ae87db data/edumia/loot_table/blocks/banana_beam.json
 d37623642c6573400c40ede0f1295233548d8077 data/edumia/loot_table/blocks/banana_button.json
 33e7df11d6361e3b537ed234b4c81a041d429479 data/edumia/loot_table/blocks/banana_door.json
@@ -554,6 +555,7 @@ b69cb15d71e08fde14421672e25cbf368ab0d45a data/edumia/loot_table/blocks/dark_oak_
 5662a7ad77ffd7f90ef122cb0427de1bb49adad4 data/edumia/loot_table/blocks/dark_oak_wood_slab.json
 f53f82e3c58d363bae249c3dbad5b10b3ca9a645 data/edumia/loot_table/blocks/dark_oak_wood_stairs.json
 b05b6d0461ea3c0d222f2ab732cdd969ea36ed6e data/edumia/loot_table/blocks/dark_oak_wood_wall.json
+54f7105bb30f07c4bc622cc7564b319c6029ee9e data/edumia/loot_table/blocks/date.json
 9a1933dfb5b31ef7f00aea150e2d90792af7dc18 data/edumia/loot_table/blocks/date_palm_beam.json
 ce6090229d0b77a7a839cd29de4a7e904f89aa82 data/edumia/loot_table/blocks/date_palm_button.json
 25aa67ad5ffec33f4530343bd192287fec175157 data/edumia/loot_table/blocks/date_palm_door.json

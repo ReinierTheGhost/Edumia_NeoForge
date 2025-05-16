@@ -5,14 +5,16 @@ import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.BonemealableBlock;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -25,39 +27,39 @@ import net.neoforged.neoforge.common.util.TriState;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class BananaFruitBlock  extends HorizontalDirectionalBlock implements BonemealableBlock {
-    public static final MapCodec<BananaFruitBlock> CODEC = simpleCodec(BananaFruitBlock::new);
+public class DateFruitBlock   extends HorizontalDirectionalBlock implements BonemealableBlock {
+    public static final MapCodec<DateFruitBlock> CODEC = simpleCodec(DateFruitBlock::new);
     public static final IntegerProperty AGE = BlockStateProperties.AGE_2;
 
 
-
     protected static final VoxelShape[] EAST_AABB = new VoxelShape[]{
-            Block.box(14.0, 11.0, 7.0, 16.0, 15.0, 9.0),     // Age 0
-            Block.box(13.0, 7.0, 6.5, 16.0, 15.0, 9.5),      // Age 1
-            Block.box(12.0, 3.0, 6.0, 16.0, 15.0, 10.0)      // Age 2
+            Block.box(14.0, 8.0, 7.0, 16.0, 11.0, 9.0),     // Age 0
+            Block.box(13.0, 7.0, 6.5, 16.0, 11.0, 9.5),      // Age 1
+            Block.box(12.0, 5.0, 6.0, 16.0, 11.0, 10.0)      // Age 2
     };
 
     protected static final VoxelShape[] WEST_AABB = new VoxelShape[]{
-            Block.box(0.0, 11.0, 7.0, 2.0, 15.0, 9.0),       // Age 0 (2x4x2)
-            Block.box(0.0, 7.0, 6.5, 3.0, 15.0, 9.5),        // Age 1 (3x8x3)
-            Block.box(0.0, 3.0, 6.0, 4.0, 15.0, 10.0)       // Age 2 (4x12x4)
+            Block.box(0.0, 8.0, 7.0, 2.0, 11.0, 9.0),       // Age 0
+            Block.box(0.0, 7.0, 6.5, 3.0, 11.0, 9.5),        // Age 1
+            Block.box(0.0, 5.0, 6.0, 4.0, 11.0, 10.0)       // Age 2
     };
 
 
     protected static final VoxelShape[] NORTH_AABB = new VoxelShape[]{
-            Block.box(7.0, 11.0, 0.0, 9.0, 15.0, 2.0),       // Age 0
-            Block.box(6.5, 7.0, 0.0, 9.5, 15.0, 3.0),        // Age 1
-            Block.box(6.0, 3.0, 0.0, 10.0, 15.0, 4.0)        // Age 2
+            Block.box(7.0, 8.0, 0.0, 9.0, 11.0, 2.0),       // Age 0
+            Block.box(6.5, 7.0, 0.0, 9.5, 11.0, 3.0),        // Age 1
+            Block.box(6.0, 5.0, 0.0, 10.0, 11.0, 4.0)        // Age 2
     };
 
     protected static final VoxelShape[] SOUTH_AABB = new VoxelShape[]{
-            Block.box(7.0, 11.0, 14.0, 9.0, 15.0, 16.0),     // Age 0
-            Block.box(6.5, 7.0, 13.0, 9.5, 15.0, 16.0),      // Age 1
-            Block.box(6.0, 3.0, 12.0, 10.0, 15.0, 16.0)      // Age 2
+            Block.box(7.0, 8.0, 14.0, 9.0, 11.0, 16.0),     // Age 0
+            Block.box(6.5, 7.0, 13.0, 9.5, 11.0, 16.0),      // Age 1
+            Block.box(6.0, 5.0, 12.0, 10.0, 11.0, 16.0)      // Age 2
+
     };
 
 
-    public BananaFruitBlock(Properties properties) {
+    public DateFruitBlock(Properties properties) {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(AGE, Integer.valueOf(0)));
     }
@@ -89,7 +91,7 @@ public class BananaFruitBlock  extends HorizontalDirectionalBlock implements Bon
         BlockState blockstate = level.getBlockState(pos.relative(state.getValue(FACING)));
         TriState soilDecision = blockstate.canSustainPlant(level, pos.relative(state.getValue(FACING)), state.getValue(FACING).getOpposite(), state);
         if (!soilDecision.isDefault()) return soilDecision.isTrue();
-        return blockstate.is(TagLoader.Blocks.BANANA_LOGS);
+        return blockstate.is(TagLoader.Blocks.DATE_PALM_LOGS);
     }
 
     @Override

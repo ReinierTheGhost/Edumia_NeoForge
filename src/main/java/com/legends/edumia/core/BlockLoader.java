@@ -3,12 +3,16 @@ package com.legends.edumia.core;
 import com.legends.edumia.Edumia;
 import com.legends.edumia.blocks.CrystalBlock;
 import com.legends.edumia.blocks.EdumiaPillarBlock;
+import com.legends.edumia.blocks.trees.BananaFruitBlock;
+import com.legends.edumia.blocks.trees.DateFruitBlock;
 import com.legends.edumia.world.trees.ModTreeGrowers;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -63,6 +67,27 @@ public class BlockLoader {
 
     public static final DeferredBlock<Block> TEST_SAPLING = registerBlock("test_sapling", () ->
             new SaplingBlock(ModTreeGrowers.TEST, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+
+    public static final DeferredBlock<Block> BANANA = BLOCKS.register("banana", () ->
+            new BananaFruitBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.PLANT)
+                    .randomTicks()
+                    .strength(0.2F, 3.0F)
+                    .sound(SoundType.WOOD)
+                    .noOcclusion()
+                    .pushReaction(PushReaction.DESTROY))
+    );
+
+    public static final DeferredBlock<Block> DATE = BLOCKS.register("date", () ->
+            new DateFruitBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.PLANT)
+                    .randomTicks()
+                    .strength(0.2F, 3.0F)
+                    .sound(SoundType.WOOD)
+                    .noOcclusion()
+                    .pushReaction(PushReaction.DESTROY))
+    );
+
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
