@@ -196,7 +196,7 @@ public class EdumiaChunkGenerator extends ChunkGenerator {
                     percentage = (float) Math.pow(percentage, 2.47f);
                     height = height * percentage;
                     height -= (1 - percentage) * getNoisyHeight(posX, posZ) * 8;
-                } else if(biomeResourceKey == EdumiaBiomeKeys.DEAD_MARSHES || biomeResourceKey == EdumiaBiomeKeys.DEAD_MARSHES_WATER) {
+                } else if(biomeResourceKey == EdumiaBiomeKeys.MYRWOOD_MANGROVE || biomeResourceKey == EdumiaBiomeKeys.MYRWOOD_FLOODED_MANGROVE) {
                     float oldHeight = height;
                     height = getMarshesHeight(posX, posZ, height);
                     float percentage = Math.min(EdumiaHeightMap.getImageNoiseModifier(posX, posZ), 0.3f) / 0.3f;
