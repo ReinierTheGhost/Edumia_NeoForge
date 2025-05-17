@@ -1,0 +1,71 @@
+{
+  "banner": {
+    "base_color": "brown",
+    "patterns": [
+      {
+        "dye_color": "yellow",
+        "id": "edumia:ogres"
+      }
+    ]
+  },
+  "command_join": [],
+  "command_leave": [],
+  "disposition": "NEUTRAL",
+  "faction_selection_order_index": 5,
+  "faction_type": "FACTION",
+  "id": "edumia:ogres",
+  "joinable": true,
+  "npcs": {
+    "ranks": [
+      {
+        "pool": [
+          "edumia:ogre.civilian"
+        ],
+        "rank": "LEADER"
+      },
+      {
+        "pool": [
+          "edumia:ogre.civilian"
+        ],
+        "rank": "MILITIA"
+      },
+      {
+        "pool": [
+          "edumia:ogre.civilian"
+        ],
+        "rank": "CIVILIAN"
+      },
+      {
+        "pool": [
+          "edumia:ogre.civilian"
+        ],
+        "rank": "VETERAN"
+      },
+      {
+        "pool": [
+          "edumia:ogre.civilian"
+        ],
+        "rank": "SOLDIER"
+      },
+      {
+        "pool": [
+          "edumia:ogre.civilian"
+        ],
+        "rank": "KNIGHT"
+      }
+    ]
+  },
+  "spawns": {
+    "data": [
+      {
+        "coordinates": {
+          "x": 2285.0,
+          "y": 0.0,
+          "z": 1260.0
+        },
+        "dynamic": 1,
+        "id": "edumia:ogre.kazanshi"
+      }
+    ]
+  }
+}

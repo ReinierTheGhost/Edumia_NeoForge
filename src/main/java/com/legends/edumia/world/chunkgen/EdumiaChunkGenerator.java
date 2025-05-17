@@ -9,6 +9,7 @@ import com.legends.edumia.world.chunkgen.map.EdumiaHeightMap;
 import com.legends.edumia.world.map.EdumiaMapConfigs;
 import com.legends.edumia.world.map.EdumiaMapRuntime;
 import com.legends.edumia.world.map.EdumiaMapUtils;
+import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
@@ -34,11 +35,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.Executor;
 
-/**
- * Custom chunk generator for the Edumia world.
- * Handles terrain generation, biome mapping, and cave/surface structure creation.
- */
 public class EdumiaChunkGenerator extends ChunkGenerator {
     public static final int MEDGON_LEVEL = -32;
     public static final int NURGON_LEVEL = 0;
@@ -64,12 +62,6 @@ public class EdumiaChunkGenerator extends ChunkGenerator {
             instance.group(RegistryOps.retrieveGetter(Registries.BIOME))
                     .apply(instance, instance.stable(EdumiaChunkGenerator::new)));
 
-    /**
-     * Main constructor for the custom chunk generator.
-     * Initializes the biome source and internal map runtime utilities.
-     *
-     * @param biomeRegistry HolderGetter to access biomes from the registry.
-     */
     public EdumiaChunkGenerator(HolderGetter<Biome> biomeRegistry) {
         super(new ModBiomeSource(
                 new ArrayList<>(Arrays.asList(
@@ -153,20 +145,11 @@ public class EdumiaChunkGenerator extends ChunkGenerator {
 
     }
 
-    /**
-     * Returns the codec used to serialize this chunk generator.
-     *
-     * @return MapCodec for this generator.
-     */
     @Override
     protected MapCodec<? extends ChunkGenerator> codec() {
-        return (MapCodec<? extends ChunkGenerator>) CODEC;
+        return CODEC;
     }
 
-    /**
-     * Empty implementation of the carver application step.
-     * You may add custom carver logic (like caves, tunnels) here later if needed.
-     */
     @Override
     public void applyCarvers(WorldGenRegion chunkRegion, long seed, RandomState noiseConfig,
                              BiomeManager biomeAccess, StructureManager structureAccessor,
@@ -174,15 +157,8 @@ public class EdumiaChunkGenerator extends ChunkGenerator {
 
     }
 
-    /**
-     * Core terrain generation logic for Edumia.
-     * Sets base terrain blocks, handles biome-based height/slope logic, and places surface features.
-     *
-     * @param region         The region of the world being generated.
-     * @param structures     Structure manager (unused in this logic).
-     * @param noiseConfig    The world noise configuration.
-     * @param chunk          The chunk to populate.
-     */
+
+
     @Override
     public void buildSurface(WorldGenRegion region, StructureManager structures, RandomState noiseConfig, ChunkAccess chunk) {
         int bottomY = chunk.getMinBuildHeight();
@@ -190,7 +166,6 @@ public class EdumiaChunkGenerator extends ChunkGenerator {
             for(int z = 0; z < 16; z++) {
                 int posX = (chunk.getPos().x * 16) + x;
                 int posZ = (chunk.getPos().z * 16) + z;
-                // Fetch biome-specific height and surface data
                 MapBasedCustomBiome customHeightBiomeHeightData = null;
                 if(edumiaMapUtils.isWorldCoordinateInBorder(posX, posZ)) {
                     Holder<Biome> biome = region.getBiome(new BlockPos(posX, chunk.getMaxBuildHeight(), posZ));
@@ -200,14 +175,10 @@ public class EdumiaChunkGenerator extends ChunkGenerator {
                     customHeightBiomeHeightData = MapBasedBiomePool.defaultBiome;
                 }
 
-                // Get the terrain height from the heightmap
                 float height = EdumiaHeightMap.getHeight(posX, posZ);
 
-                // Apply cave noise blending for vertical cave structure generation
                 float caveBlendNoise = (float) ((2 * CAVE_NOISE * BlendedNoise.noise((double) posX / 24,  (double) posZ / 24)) - CAVE_NOISE);
-                // Compute terrain slope to decide surface block types (grass, stone, etc.)
                 float slopeAngle = getTerrainSlope(height, posX, posZ);
-
                 int waterHeight = customHeightBiomeHeightData.getWaterHeight();
 
                 ResourceKey<Biome> biomeResourceKey = customHeightBiomeHeightData.getBiomeKey();
@@ -225,7 +196,7 @@ public class EdumiaChunkGenerator extends ChunkGenerator {
                     percentage = (float) Math.pow(percentage, 2.47f);
                     height = height * percentage;
                     height -= (1 - percentage) * getNoisyHeight(posX, posZ) * 8;
-                } else if(biomeResourceKey == EdumiaBiomeKeys.MYRWOOD_MANGROVE || biomeResourceKey == EdumiaBiomeKeys.MYRWOOD_FLOODED_MANGROVE) {
+                } else if(biomeResourceKey == EdumiaBiomeKeys.DEAD_MARSHES || biomeResourceKey == EdumiaBiomeKeys.DEAD_MARSHES_WATER) {
                     float oldHeight = height;
                     height = getMarshesHeight(posX, posZ, height);
                     float percentage = Math.min(EdumiaHeightMap.getImageNoiseModifier(posX, posZ), 0.3f) / 0.3f;
@@ -234,7 +205,6 @@ public class EdumiaChunkGenerator extends ChunkGenerator {
 
                 chunk.setBlockState(chunk.getPos().getBlockAt(x, bottomY, z), Blocks.BEDROCK.defaultBlockState(), false);
                 for(int y = bottomY + 1; y <= LAVA_HEIGHT; y++) {
-
                     chunk.setBlockState(chunk.getPos().getBlockAt(x, y, z), Blocks.LAVA.defaultBlockState(), false);
                 }
 
@@ -260,8 +230,8 @@ public class EdumiaChunkGenerator extends ChunkGenerator {
                         trySetBlock(chunk, chunk.getPos().getBlockAt(x, currentHeight++, z), layerData.block.defaultBlockState());
                     }
                 }
-                chunk.setBlockState(chunk.getPos().getBlockAt(x, (int) (HEIGHT + height - 2), z), customHeightBiomeHeightData.getBiome().getBlocksLayering().layers.getFirst().block.defaultBlockState(), false);
-                BlockState surfaceBlock = customHeightBiomeHeightData.getBiome().getSlopeMap().slopeDatas.getFirst().block.defaultBlockState();
+                chunk.setBlockState(chunk.getPos().getBlockAt(x, (int) (HEIGHT + height - 2), z), customHeightBiomeHeightData.getBiome().getBlocksLayering().layers.get(0).block.defaultBlockState(), false);
+                BlockState surfaceBlock = customHeightBiomeHeightData.getBiome().getSlopeMap().slopeDatas.get(0).block.defaultBlockState();
                 BlockState underSurfaceBlock;
 
 
@@ -299,15 +269,6 @@ public class EdumiaChunkGenerator extends ChunkGenerator {
         }
     }
 
-    /**
-     * Calculates the terrain slope at a given location.
-     * Used to determine which surface block to apply (e.g., grass vs. stone on steep slopes).
-     *
-     * @param height Current terrain height.
-     * @param x      X-coordinate.
-     * @param z      Z-coordinate.
-     * @return Slope angle in degrees.
-     */
     private float getTerrainSlope(float height, int x, int z) {
         int offset = 3;
         float eastHeight = EdumiaHeightMap.getHeight(x + offset, z);
@@ -320,14 +281,6 @@ public class EdumiaChunkGenerator extends ChunkGenerator {
         return (float) Math.toDegrees(Math.atan(highestSlope));
     }
 
-    /**
-     * Attempts to place a block only if the cave noise conditions allow it.
-     * Prevents block placement in areas that represent underground caves.
-     *
-     * @param chunk      The chunk to modify.
-     * @param blockPos   The position of the block.
-     * @param blockState The block to attempt to place.
-     */
     private void trySetBlock(ChunkAccess chunk, BlockPos blockPos, BlockState blockState) {
         float noise = 0;
         if(blockPos.getY() < WATER_HEIGHT) {
@@ -357,37 +310,18 @@ public class EdumiaChunkGenerator extends ChunkGenerator {
         }
     }
 
-    /**
-     * Specialized height function for Dead Marshes biome.
-     * Introduces marsh-like undulations using blended noise.
-     *
-     * @param x      X-coordinate.
-     * @param z      Z-coordinate.
-     * @param height Base height.
-     * @return Modified height for marsh generation.
-     */
     public static float getMarshesHeight(int x, int z, float height) {
         height = -2 + (2.0f * (float) BlendedNoise.noise((double) x / 19,  (double) z / 19));
-        height += (float) BlendedNoise.noise((double) x / 12,  (double) z / 12);
+        height += (float) BlendedNoise.noise((double) x / 11,  (double) z / 11);
         return height;
-
-
     }
 
-    /**
-     * Adds vertical noise to Mount Titleist crater terrain.
-     * Used to simulate volcanic crater depth variations.
-     *
-     * @param x X-coordinate.
-     * @param z Z-coordinate.
-     * @return Noisy terrain height for crater deformation.
-     */
     public static float getNoisyHeight(int x, int z){
         float height = -2 + (4.0f * (float) BlendedNoise.noise((double) x / 8, (double) z / 8));
         height += 2 + (float) BlendedNoise.noise((double) x / 4, (double) z / 4);
         return height;
     }
-    
+
     @Override
     public void applyBiomeDecoration(WorldGenLevel world, ChunkAccess chunk, StructureManager structureAccessor) {
         super.applyBiomeDecoration(world, chunk, structureAccessor);
@@ -408,7 +342,7 @@ public class EdumiaChunkGenerator extends ChunkGenerator {
     }
 
     @Override
-    public CompletableFuture<ChunkAccess> fillFromNoise(Blender blender, RandomState randomState, StructureManager structureManager, ChunkAccess chunk)  {
+    public CompletableFuture<ChunkAccess> fillFromNoise(Blender blender, RandomState noiseConfig, StructureManager structureAccessor, ChunkAccess chunk)  {
         return CompletableFuture.completedFuture(chunk);
     }
 

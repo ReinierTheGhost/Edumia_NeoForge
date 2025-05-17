@@ -30,6 +30,8 @@ public class MapBasedBiomePool {
     public static List<ResourceKey<Biome>> anduinWaterBiomes = new ArrayList<>();
     public static List<ResourceKey<Biome>> floodedMangroveBiomes = new ArrayList<>();
 
+    public static List<ResourceKey<Biome>> deadMarshesBiomes = new ArrayList<>();
+
     public static Color DEFAULT_COLOR = new Color(0x375ac3);
 
     public static MapBasedCustomBiome defaultBiome;
@@ -39,6 +41,8 @@ public class MapBasedBiomePool {
     public static MapBasedCustomBiome pond;
     public static MapBasedCustomBiome greatRiver;
     public static MapBasedCustomBiome wastePond;
+    public static MapBasedCustomBiome deadMarshes;
+    public static MapBasedCustomBiome deadMarshesWater;
     public static MapBasedCustomBiome myrwoodSwamp;
     public static MapBasedCustomBiome mangrove;
     public static MapBasedCustomBiome floodedMangrove;
@@ -79,9 +83,12 @@ public class MapBasedBiomePool {
         add(new Color(75, 108, 143), wastePond);
         mangrove = new MapBasedCustomBiome(EdumiaBiomeKeys.MYRWOOD_MANGROVE, 0, EdumiaBiomeDataConfigs.riverModifier.noiseModifier(0f));
         add(new Color(40, 85, 22), mangrove);
-        floodedMangrove = new MapBasedCustomBiome(EdumiaBiomeKeys.MYRWOOD_FLOODED_MANGROVE, -2, EdumiaBiomeDataConfigs.riverModifier);
+        floodedMangrove = new MapBasedCustomBiome(EdumiaBiomeKeys.MYRWOOD_FLOODED_MANGROVE, -10, EdumiaBiomeDataConfigs.riverModifier);
         add(new Color(41, 86, 23), floodedMangrove);
-
+        deadMarshes = new MapBasedCustomBiome(EdumiaBiomeKeys.DEAD_MARSHES, 0, EdumiaBiomeDataConfigs.riverModifier.noiseModifier(0f));
+        add(new Color(0x305e42), deadMarshes);
+        deadMarshesWater = new MapBasedCustomBiome(EdumiaBiomeKeys.DEAD_MARSHES_WATER, -10, EdumiaBiomeDataConfigs.riverModifier);
+        add(new Color(0x5a7ca1), deadMarshesWater);
 
         // Water Biomes :e
 
@@ -215,15 +222,16 @@ public class MapBasedBiomePool {
         waterBiomes.add(EdumiaBiomeKeys.FAIRY_SWAMP);
         waterBiomes.add(EdumiaBiomeKeys.POND);
         waterBiomes.add(EdumiaBiomeKeys.MYRWOOD_FLOODED_MANGROVE);
+        waterBiomes.add(EdumiaBiomeKeys.MYRWOOD_MANGROVE);
         waterBiomes.add(EdumiaBiomeKeys.MYRWOOD_COAST);
 
-        coastalBiomes.add(EdumiaBiomeKeys.MYRWOOD_COAST);
-        coastalBiomes.add(EdumiaBiomeKeys.OCEAN_COAST);
+//        coastalBiomes.add(EdumiaBiomeKeys.MYRWOOD_COAST);
+//        coastalBiomes.add(EdumiaBiomeKeys.OCEAN_COAST);
 
         anduinWaterBiomes.add(EdumiaBiomeKeys.GREAT_RIVER);
 
 
-        floodedMangroveBiomes.add(EdumiaBiomeKeys.MYRWOOD_MANGROVE);
+        deadMarshesBiomes.add(EdumiaBiomeKeys.DEAD_MARSHES);
 
         myrwoodSwampBiomes.add(EdumiaBiomeKeys.MYRWOOD_JUNGLE);
         myrwoodSwampBiomes.add(EdumiaBiomeKeys.MYRWOOD_JUNGLE_PLATEAU);

@@ -1,8 +1,5 @@
 package com.legends.edumia.world.map;
 
-
-
-
 import com.legends.edumia.Edumia;
 import com.legends.edumia.utils.EdumiaLog;
 import com.legends.edumia.utils.resources.FileType;
@@ -99,14 +96,14 @@ public class EdumiaMapGeneration {
                 }
 
                 if(pasteSuccess) {
-                EdumiaLog.logInfoMsg("Instant Booting - Completed");
-                return;
+                    EdumiaLog.logInfoMsg("Instant Booting - Completed");
+                    return;
                 } else {
                     EdumiaLog.logError("Instant Booting - Failure");
                 }
             } else {
-            EdumiaLog.logInfoMsg("Instant Booting - Skipped, Files already present");
-            EdumiaLog.logInfoMsg("Validating data content...");
+                EdumiaLog.logInfoMsg("Instant Booting - Skipped, Files already present");
+                EdumiaLog.logInfoMsg("Validating data content...");
             }
 
         }

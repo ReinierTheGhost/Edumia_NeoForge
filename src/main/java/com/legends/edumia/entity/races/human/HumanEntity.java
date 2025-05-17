@@ -71,7 +71,6 @@ public class HumanEntity extends NpcEntity {
                 .add(Attributes.ATTACK_SPEED, 1.0)
                 .add(Attributes.ENTITY_INTERACTION_RANGE, 2.75)
                 .add(Attributes.MOVEMENT_SPEED, 0.3)
-                .add(Attributes.FOLLOW_RANGE, 48.0)
-                .add(Attributes.SCALE, 0.9);
+                .add(Attributes.FOLLOW_RANGE, 48.0);
     }
 }

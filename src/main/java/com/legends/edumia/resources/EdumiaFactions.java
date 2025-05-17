@@ -38,7 +38,7 @@ public class EdumiaFactions {
     public static final Faction DARK_ELVES;
     public static final Faction ORCS;
 //    public static final Faction DEMONS;
-//    public static final Faction OGRES;
+    public static final Faction OGRES;
 
 
     @SubscribeEvent
@@ -55,6 +55,7 @@ public class EdumiaFactions {
         register(context, factionHolderGetter, HUMAN);
         register(context, factionHolderGetter, DARK_ELVES);
         register(context, factionHolderGetter, ORCS);
+        register(context, factionHolderGetter, OGRES);
     }
 
     private static Faction register(BootstrapContext<Faction> context, HolderGetter<Faction> factionHolderGetter, Faction faction) {
@@ -235,6 +236,38 @@ public class EdumiaFactions {
                 new SpawnDataHandler(List.of(
                         new SpawnData(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "orc.gorakthul"),
                                 new Vector2d(400, 1340))
+                )), List.of(), List.of()
+        );
+        // endregion
+
+        // region [OGRES]
+        OGRES = new Faction("ogres", true, Disposition.NEUTRAL, FactionType.FACTION, null, null,
+                new HashMap<>(){{
+                    put(NpcRank.CIVILIAN, List.of(
+                            EdumiaNpcs.OGRE_CIVILIAN
+                    ));
+                    put(NpcRank.MILITIA, List.of(
+                            EdumiaNpcs.OGRE_CIVILIAN
+                    ));
+                    put(NpcRank.SOLDIER, List.of(
+                            EdumiaNpcs.OGRE_CIVILIAN
+                    ));
+                    put(NpcRank.KNIGHT, List.of(
+                            EdumiaNpcs.OGRE_CIVILIAN
+                    ));
+                    put(NpcRank.VETERAN, List.of(
+                            EdumiaNpcs.OGRE_CIVILIAN
+                    ));
+                    put(NpcRank.LEADER, List.of(
+                            EdumiaNpcs.OGRE_CIVILIAN
+                    ));
+                }},
+                new BannerData(DyeColor.BROWN, List.of(
+                        new BannerData.BannerPatternWithColor(EdumiaBannerPatterns.OGRES, DyeColor.YELLOW)
+                )),
+                new SpawnDataHandler(List.of(
+                        new SpawnData(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "ogre.kazanshi"),
+                                new Vector2d(2285, 1260))
                 )), List.of(), List.of()
         );
         // endregion

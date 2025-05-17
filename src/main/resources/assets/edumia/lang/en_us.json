@@ -2520,12 +2520,14 @@
   "race.edumia.highelves" : "High elf",
   "race.edumia.darkelves" : "Dark elf",
   "race.edumia.orc" : "Orc",
+  "race.edumia.ogre" : "Ogre",
 
   "faction.edumia.fairies" : "Fairies",
   "faction.edumia.human" : "Humans",
   "faction.edumia.high_elves" : "High elves",
   "faction.edumia.dark_elves" : "Dark elves",
   "faction.edumia.orcs" : "Orcs",
+  "faction.edumia.ogres" : "Ogres",
 
   "disposition.edumia.good" : "Good",
   "disposition.edumia.neutral" : "Neutral",
@@ -2536,6 +2538,7 @@
   "spawn.edumia.highelves.elensar" : "Elensar",
   "spawn.edumia.darkelven.nyxarith" : "Nyxarith",
   "spawn.edumia.orc.gorakthul" : "Gorak'thul",
+  "spawn.edumia.ogre.kazanshi" : "Kazanshi",
   "edumia.ui.selection.none": "None",
 
   "widget.edumia.spawn_tooltip_title": "Spawns",
@@ -2565,6 +2568,8 @@
 
   "description.edumia.dark_elves.description_0" : "We, the Dark Elves, are not bound by the light of the day, but rather we thrive under the cover of night. The moons guide us, the waters protect us, and the darkness conceals us. We seek what lies beyond, the secrets of the cosmos and the knowledge that others fear to uncover. Our strength flows with the currents of water, and our magic weaves the shadows into forms that deceive and protect.",
 
-  "description.edumia.orcs.description_0" : "Our magic is the power of the earth itself, the strength to endure and the will to conquer. We are a nomadic people, moving with the seasons, always seeking the next challenge. To join us is to embrace the unforgiving land, to draw strength from it, and to live as one with the earth."
+  "description.edumia.orcs.description_0" : "Our magic is the power of the earth itself, the strength to endure and the will to conquer. We are a nomadic people, moving with the seasons, always seeking the next challenge. To join us is to embrace the unforgiving land, to draw strength from it, and to live as one with the earth.",
+
+  "description.edumia.ogres.description_0" : "Our magic is a blend of fire and shadow, a balance of power and restraint. We live by the ancient codes, our lives dedicated to the pursuit of mastery and the protection of our lands. To join us is to walk the path of the warrior, the sage, and the guardian of the flame."
 
 }

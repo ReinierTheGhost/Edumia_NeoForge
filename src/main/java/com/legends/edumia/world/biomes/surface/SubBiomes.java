@@ -24,6 +24,9 @@ public class SubBiomes {
 
         subBiomesMap.put(EdumiaBiomeKeys.EDUMIA_TUNDRA, new SubBiome(56, 1.25f)
                 .addSubBiomeData(-1.0f, -0.20f, EdumiaBiomeKeys.TUNDRA_BUSH));
+
+//        subBiomesMap.put(EdumiaBiomeKeys.MYRWOOD_MANGROVE, new SubBiome(-1f, 2f)
+//                .addSubBiomeData(0.37f, 1.0f, EdumiaBiomeKeys.MYRWOOD_FLOODED_MANGROVE));
     }
 
     public static boolean isSubBiome(ResourceKey<Biome> biomeResourceKey) {

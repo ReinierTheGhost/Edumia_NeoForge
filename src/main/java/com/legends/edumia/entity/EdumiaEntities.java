@@ -7,6 +7,7 @@ import com.legends.edumia.entity.races.darkelves.DarkElfEntity;
 import com.legends.edumia.entity.races.fairy.FairyEntity;
 import com.legends.edumia.entity.races.highelves.HighElfEntity;
 import com.legends.edumia.entity.races.human.HumanEntity;
+import com.legends.edumia.entity.races.ogre.OgreEntity;
 import com.legends.edumia.entity.races.orc.OrcEntity;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.entity.EntityType;
@@ -36,6 +37,9 @@ public class EdumiaEntities {
     public static final Supplier<EntityType<OrcEntity>> ORC_CIVILIAN =
             ENTITY_TYPES.register("orc", () -> EntityType.Builder.of(OrcEntity::new, MobCategory.CREATURE)
                     .sized(0.6F, 2F).build("orc"));
+    public static final Supplier<EntityType<OgreEntity>> OGRE_CIVILIAN =
+            ENTITY_TYPES.register("ogre", () -> EntityType.Builder.of(OgreEntity::new, MobCategory.CREATURE)
+                    .sized(0.6F, 2F).build("ogre"));
 
 
 

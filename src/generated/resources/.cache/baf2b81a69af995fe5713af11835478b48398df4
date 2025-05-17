@@ -1,4 +1,4 @@
-// 1.21.1	2025-05-16T17:37:38.9355755	Item Models: edumia
+// 1.21.1	2025-05-17T13:13:20.5703746	Item Models: edumia
 047baa6b7a95aadfec14d478dfdf8c290cbd8220 assets/edumia/models/item/acacia_wood_fence.json
 4879a2f3030853ef57cc6d67266684061b3752ec assets/edumia/models/item/acacia_wood_wall.json
 386253d46a85a3515508b2f2812157712b0633d8 assets/edumia/models/item/almond_button.json
@@ -339,6 +339,7 @@ d615ff9d8b80c358e0b1357197b758f66bcdb789 assets/edumia/models/item/oak_wood_fenc
 458620ab6b727cdf4bf785b3e864d5ffc6d31fec assets/edumia/models/item/oak_wood_wall.json
 6a630d4f6ae170f9b781226a3f72ab327cd99b82 assets/edumia/models/item/obsidian_bricks_wall.json
 635d2a086fa955a1635a40031984e4d4a1e1afad assets/edumia/models/item/ogre_banner_pattern.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/edumia/models/item/ogre_spawn_egg.json
 b1c5fe21b32fb7863233f014685f5b83e490870a assets/edumia/models/item/orange_fine_glass_pane.json
 238a64a3f31355acf44e8c458ccfc4f7a7ca2416 assets/edumia/models/item/orange_paperwall.json
 f84796b457342f0cc89cc34467dd3d4dd9478b5d assets/edumia/models/item/orange_rock_wall.json

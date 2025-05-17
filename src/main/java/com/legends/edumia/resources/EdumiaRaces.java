@@ -36,6 +36,7 @@ public class EdumiaRaces {
     public final static Race HIGHELVES;
     public final static Race DARKELVES;
     public final static Race ORC;
+    public final static Race OGRE;
 
 
     @SubscribeEvent
@@ -53,6 +54,7 @@ public class EdumiaRaces {
         register(context, raceRegistryEntryLookup, FAIRY);
         register(context, raceRegistryEntryLookup, HUMAN);
         register(context, raceRegistryEntryLookup, ORC);
+        register(context, raceRegistryEntryLookup, OGRE);
     }
 
     private static Race register(BootstrapContext<Race> context, HolderGetter<Race> raceRegistryEntryLookup, Race race) {
@@ -104,7 +106,7 @@ public class EdumiaRaces {
 
         HUMAN = new Race(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "human"), RaceType.HUMAN,
                 new AttributeData(new HashMap<>(){{
-                    put(Attributes.SCALE, 1.10);
+                    put(Attributes.SCALE, 1.0);
                     put(Attributes.MAX_HEALTH, 22.0);
                     put(Attributes.ATTACK_DAMAGE, 1.0);
                     put(Attributes.ENTITY_INTERACTION_RANGE, 2.75);
@@ -114,6 +116,15 @@ public class EdumiaRaces {
         ORC = new Race(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "orc"), RaceType.ORC,
                 new AttributeData(new HashMap<>(){{
                     put(Attributes.SCALE, 1.4);
+                    put(Attributes.MAX_HEALTH, 22.0);
+                    put(Attributes.ATTACK_DAMAGE, 1.0);
+                    put(Attributes.ENTITY_INTERACTION_RANGE, 2.75);
+                    put(Attributes.MOVEMENT_SPEED, 0.1);
+                }}), List.of(), List.of(), List.of());
+
+        OGRE = new Race(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "ogre"), RaceType.OGRE,
+                new AttributeData(new HashMap<>(){{
+                    put(Attributes.SCALE, 1.25);
                     put(Attributes.MAX_HEALTH, 22.0);
                     put(Attributes.ATTACK_DAMAGE, 1.0);
                     put(Attributes.ENTITY_INTERACTION_RANGE, 2.75);

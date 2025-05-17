@@ -3,10 +3,7 @@ package com.legends.edumia.events;
 import com.legends.edumia.Edumia;
 import com.legends.edumia.client.models.animals.ButterflyModel;
 import com.legends.edumia.client.models.animals.DragonflyModel;
-import com.legends.edumia.client.models.npcs.ElvenModel;
-import com.legends.edumia.client.models.npcs.HumanModel;
-import com.legends.edumia.client.models.npcs.FairyModel;
-import com.legends.edumia.client.models.npcs.OrcModel;
+import com.legends.edumia.client.models.npcs.*;
 import com.legends.edumia.entity.EdumiaEntities;
 import com.legends.edumia.entity.animals.butterfly.ButterflyEntity;
 import com.legends.edumia.entity.animals.dragonfly.DragonflyEntity;
@@ -15,6 +12,7 @@ import com.legends.edumia.entity.races.darkelves.DarkElfEntity;
 import com.legends.edumia.entity.races.fairy.FairyEntity;
 import com.legends.edumia.entity.races.highelves.HighElfEntity;
 import com.legends.edumia.entity.races.human.HumanEntity;
+import com.legends.edumia.entity.races.ogre.OgreEntity;
 import com.legends.edumia.entity.races.orc.OrcEntity;
 import net.minecraft.client.model.geom.builders.CubeDeformation;
 import net.minecraft.world.entity.Mob;
@@ -38,6 +36,7 @@ public class ModEventBusEvents {
         event.registerLayerDefinition(EdumiaEntityModelLayers.HIGHELVEN, () -> ElvenModel.createBodyLayer(CubeDeformation.NONE));
         event.registerLayerDefinition(EdumiaEntityModelLayers.DARKELVEN, () -> ElvenModel.createBodyLayer(CubeDeformation.NONE));
         event.registerLayerDefinition(EdumiaEntityModelLayers.ORC, () -> OrcModel.createBodyLayer(CubeDeformation.NONE));
+        event.registerLayerDefinition(EdumiaEntityModelLayers.OGRE, () -> OgreModel.createBodyLayer(CubeDeformation.NONE));
 
         event.registerLayerDefinition(EdumiaEntityModelLayers.BUTTERFLY, ButterflyModel::createBodyLayer);
         event.registerLayerDefinition(EdumiaEntityModelLayers.DRAGONFLY, DragonflyModel::createBodyLayer);
@@ -52,6 +51,7 @@ public class ModEventBusEvents {
         event.put(EdumiaEntities.HIGH_ELVEN_CIVILIAN.get(), HighElfEntity.setSoldierAttribute().build());
         event.put(EdumiaEntities.DARK_ELVEN_CIVILIAN.get(), DarkElfEntity.setSoldierAttribute().build());
         event.put(EdumiaEntities.ORC_CIVILIAN.get(), OrcEntity.setSoldierAttribute().build());
+        event.put(EdumiaEntities.OGRE_CIVILIAN.get(), OgreEntity.setSoldierAttribute().build());
 
         event.put(EdumiaEntities.BUTTERFLY.get(), ButterflyEntity.createAttributes().build());
         event.put(EdumiaEntities.DRAGONFLY.get(), DragonflyEntity.createAttributes().build());
@@ -68,6 +68,8 @@ public class ModEventBusEvents {
         event.register(EdumiaEntities.DARK_ELVEN_CIVILIAN.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                 Mob::checkMobSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
         event.register(EdumiaEntities.ORC_CIVILIAN.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                Mob::checkMobSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
+        event.register(EdumiaEntities.OGRE_CIVILIAN.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                 Mob::checkMobSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 
         event.register(EdumiaEntities.BUTTERFLY.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
