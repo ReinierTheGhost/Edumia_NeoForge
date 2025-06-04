@@ -22,6 +22,7 @@ public class SandBlockSets {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Edumia.MOD_ID);
 
     public static SandSet WHITE_SAND = registerSandSets("white_sand", true, true, 15395562, null, SoundType.SAND);
+    public static SandSet GENSAI_SAND = registerSandSets("gensai_sand", true, false, 15395562, null, SoundType.SAND);
     public static SandSet VOLCANIC_GRAVEL = registerSandSets("volcanic_gravel", true, false,-8356741, null, SoundType.GRAVEL);
     public static SandSet SAND = registerSandSets("sand", false, false,14406560, Blocks.SAND, SoundType.SAND);
     public static SandSet RED_SAND = registerSandSets("red_sand", false,false, 11098145, Blocks.RED_SAND,  SoundType.SAND);
@@ -32,6 +33,7 @@ public class SandBlockSets {
             RED_SAND,
             GAVEL,
             WHITE_SAND,
+            GENSAI_SAND,
             VOLCANIC_GRAVEL,
     };
 

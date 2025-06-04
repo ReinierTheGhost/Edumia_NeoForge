@@ -204,6 +204,10 @@ public class ItemLoader {
             () -> new DeferredSpawnEggItem(EdumiaEntities.OGRE_CIVILIAN, 0x7d2f38, 0x923535,
                     new Item.Properties()));
 
+    public static final DeferredItem<Item> DEMON_SPAWN_EGG = ITEMS.register("demon_spawn_egg",
+            () -> new DeferredSpawnEggItem(EdumiaEntities.DEMON_CIVILIAN, 0x702125, 0x530E10,
+                    new Item.Properties()));
+
     public static final DeferredItem<Item> BUTTERFLY_SPAWN_EGG = ITEMS.register("butterfly_spawn_egg",
             () -> new DeferredSpawnEggItem(EdumiaEntities.BUTTERFLY, 0x161d27, 0xb42d10,
                     new Item.Properties()));

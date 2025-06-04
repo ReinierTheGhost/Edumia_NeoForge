@@ -29,6 +29,7 @@ public class EdumiaNpcs {
     public static final NpcData DARKELVEN_CIVILIAN;
     public static final NpcData ORC_CIVILIAN;
     public static final NpcData OGRE_CIVILIAN;
+    public static final NpcData DEMON_CIVILIAN;
 
     @SubscribeEvent
     public static void onNewRegistry(DataPackRegistryEvent.NewRegistry event){
@@ -45,6 +46,7 @@ public class EdumiaNpcs {
         register(context, npcRegistryEntryLookup, DARKELVEN_CIVILIAN);
         register(context, npcRegistryEntryLookup, ORC_CIVILIAN);
         register(context, npcRegistryEntryLookup, OGRE_CIVILIAN);
+        register(context, npcRegistryEntryLookup, DEMON_CIVILIAN);
         //endregion
     }
 
@@ -97,6 +99,11 @@ public class EdumiaNpcs {
 
         OGRE_CIVILIAN = new NpcData(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "ogre.civilian"),
                 EdumiaRaces.OGRE, List.of(
+                NpcGearData.create()
+        ));
+
+        DEMON_CIVILIAN = new NpcData(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "demon.civilian"),
+                EdumiaRaces.DEMON, List.of(
                 NpcGearData.create()
         ));
 

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "edumia:block/gensai_sand_slab"
+    },
+    "type=double": {
+      "model": "edumia:block/gensai_sand"
+    },
+    "type=top": {
+      "model": "edumia:block/gensai_sand_slab_top"
+    }
+  }
+}

@@ -21,25 +21,13 @@
         "pool": [
           "edumia:darkelven.civilian"
         ],
-        "rank": "LEADER"
-      },
-      {
-        "pool": [
-          "edumia:darkelven.civilian"
-        ],
         "rank": "MILITIA"
       },
       {
         "pool": [
           "edumia:darkelven.civilian"
         ],
-        "rank": "CIVILIAN"
-      },
-      {
-        "pool": [
-          "edumia:darkelven.civilian"
-        ],
-        "rank": "VETERAN"
+        "rank": "KNIGHT"
       },
       {
         "pool": [
@@ -51,7 +39,19 @@
         "pool": [
           "edumia:darkelven.civilian"
         ],
-        "rank": "KNIGHT"
+        "rank": "VETERAN"
+      },
+      {
+        "pool": [
+          "edumia:darkelven.civilian"
+        ],
+        "rank": "CIVILIAN"
+      },
+      {
+        "pool": [
+          "edumia:darkelven.civilian"
+        ],
+        "rank": "LEADER"
       }
     ]
   },

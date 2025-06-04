@@ -7,6 +7,7 @@ import com.legends.edumia.entity.EdumiaEntities;
 import com.legends.edumia.entity.animals.butterfly.ButterflyRenderer;
 import com.legends.edumia.entity.animals.dragonfly.DragonflyRenderer;
 import com.legends.edumia.entity.races.darkelves.DarkElvenRenderer;
+import com.legends.edumia.entity.races.demon.DemonRenderer;
 import com.legends.edumia.entity.races.fairy.FairyRenderer;
 import com.legends.edumia.entity.races.highelves.HighElvenRenderer;
 import com.legends.edumia.entity.races.human.HumanRenderer;
@@ -36,6 +37,7 @@ public class EdumiaClient {
         EntityRenderers.register(EdumiaEntities.DARK_ELVEN_CIVILIAN.get(), DarkElvenRenderer::new);
         EntityRenderers.register(EdumiaEntities.ORC_CIVILIAN.get(), OrcRenderer::new);
         EntityRenderers.register(EdumiaEntities.OGRE_CIVILIAN.get(), OgreRenderer::new);
+        EntityRenderers.register(EdumiaEntities.DEMON_CIVILIAN.get(), DemonRenderer::new);
 
         EntityRenderers.register(EdumiaEntities.BUTTERFLY.get(), ButterflyRenderer::new);
         EntityRenderers.register(EdumiaEntities.DRAGONFLY.get(), DragonflyRenderer::new);

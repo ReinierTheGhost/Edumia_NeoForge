@@ -1,4 +1,4 @@
-// 1.21.1	2025-05-16T22:14:18.4994772	Loot Tables
+// 1.21.1	2025-06-04T14:40:13.8874138	Loot Tables
 e2e084dc074419dc92cea6e8c8e4b55544abe8a9 data/edumia/loot_table/blocks/acacia_beam.json
 48dea1c4c657ef265adaa4964922687a58720e07 data/edumia/loot_table/blocks/acacia_wood_fence.json
 2a4bb888c13048fc2acad9f55a5245f6ad35fc92 data/edumia/loot_table/blocks/acacia_wood_slab.json
@@ -695,6 +695,9 @@ fc2219c964ae7aebd151f55db95e9351b66833d4 data/edumia/loot_table/blocks/gensai_br
 40a38d43eda26021c267d6ad0ad851c5a082283d data/edumia/loot_table/blocks/gensai_orchid.json
 8e6723b210d0ad6f30beaf6fa6605282a02a2751 data/edumia/loot_table/blocks/gensai_pillar.json
 1ad9afe9c57df69f30d3f130c7b09776e392b464 data/edumia/loot_table/blocks/gensai_pillar_slab.json
+a90723cb73bfd55b00eb7865cf70fe38edd4a80a data/edumia/loot_table/blocks/gensai_sand.json
+e0c8d7f3d06dbcc0eb33a0d7c09ebbbd6dd05a11 data/edumia/loot_table/blocks/gensai_sand_layer.json
+4b941ee84d84da32d3c72785ed1eeae67d50dd1b data/edumia/loot_table/blocks/gensai_sand_slab.json
 0162e44a545c152f3bf0e9db89b80133f8f52972 data/edumia/loot_table/blocks/gerbera_red.json
 c2e9deaa4eacc672df8f22238f8408455191219a data/edumia/loot_table/blocks/gerbera_yellow.json
 6fab45a87d04ff9987cec9e5ab1a4c22e924e03b data/edumia/loot_table/blocks/ghost_gum_beam.json

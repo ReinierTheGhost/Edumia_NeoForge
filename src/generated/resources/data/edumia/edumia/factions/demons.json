@@ -1,0 +1,71 @@
+{
+  "banner": {
+    "base_color": "brown",
+    "patterns": [
+      {
+        "dye_color": "yellow",
+        "id": "edumia:demons"
+      }
+    ]
+  },
+  "command_join": [],
+  "command_leave": [],
+  "disposition": "NEUTRAL",
+  "faction_selection_order_index": 6,
+  "faction_type": "FACTION",
+  "id": "edumia:demons",
+  "joinable": true,
+  "npcs": {
+    "ranks": [
+      {
+        "pool": [
+          "edumia:demon.civilian"
+        ],
+        "rank": "MILITIA"
+      },
+      {
+        "pool": [
+          "edumia:demon.civilian"
+        ],
+        "rank": "KNIGHT"
+      },
+      {
+        "pool": [
+          "edumia:demon.civilian"
+        ],
+        "rank": "SOLDIER"
+      },
+      {
+        "pool": [
+          "edumia:demon.civilian"
+        ],
+        "rank": "VETERAN"
+      },
+      {
+        "pool": [
+          "edumia:demon.civilian"
+        ],
+        "rank": "CIVILIAN"
+      },
+      {
+        "pool": [
+          "edumia:demon.civilian"
+        ],
+        "rank": "LEADER"
+      }
+    ]
+  },
+  "spawns": {
+    "data": [
+      {
+        "coordinates": {
+          "x": 2285.0,
+          "y": 0.0,
+          "z": 1260.0
+        },
+        "dynamic": 1,
+        "id": "edumia:demon.ashkaroth"
+      }
+    ]
+  }
+}

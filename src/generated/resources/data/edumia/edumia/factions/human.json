@@ -21,25 +21,13 @@
         "pool": [
           "edumia:human.civilian"
         ],
-        "rank": "LEADER"
-      },
-      {
-        "pool": [
-          "edumia:human.civilian"
-        ],
         "rank": "MILITIA"
       },
       {
         "pool": [
           "edumia:human.civilian"
         ],
-        "rank": "CIVILIAN"
-      },
-      {
-        "pool": [
-          "edumia:human.civilian"
-        ],
-        "rank": "VETERAN"
+        "rank": "KNIGHT"
       },
       {
         "pool": [
@@ -51,7 +39,19 @@
         "pool": [
           "edumia:human.civilian"
         ],
-        "rank": "KNIGHT"
+        "rank": "VETERAN"
+      },
+      {
+        "pool": [
+          "edumia:human.civilian"
+        ],
+        "rank": "CIVILIAN"
+      },
+      {
+        "pool": [
+          "edumia:human.civilian"
+        ],
+        "rank": "LEADER"
       }
     ]
   },

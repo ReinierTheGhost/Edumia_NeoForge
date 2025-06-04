@@ -4,6 +4,7 @@ import com.legends.edumia.Edumia;
 import com.legends.edumia.entity.animals.butterfly.ButterflyEntity;
 import com.legends.edumia.entity.animals.dragonfly.DragonflyEntity;
 import com.legends.edumia.entity.races.darkelves.DarkElfEntity;
+import com.legends.edumia.entity.races.demon.DemonEntity;
 import com.legends.edumia.entity.races.fairy.FairyEntity;
 import com.legends.edumia.entity.races.highelves.HighElfEntity;
 import com.legends.edumia.entity.races.human.HumanEntity;
@@ -40,7 +41,9 @@ public class EdumiaEntities {
     public static final Supplier<EntityType<OgreEntity>> OGRE_CIVILIAN =
             ENTITY_TYPES.register("ogre", () -> EntityType.Builder.of(OgreEntity::new, MobCategory.CREATURE)
                     .sized(0.6F, 2F).build("ogre"));
-
+    public static final Supplier<EntityType<DemonEntity>> DEMON_CIVILIAN =
+            ENTITY_TYPES.register("demon", () -> EntityType.Builder.of(DemonEntity::new, MobCategory.CREATURE)
+                    .sized(0.6F, 2F).build("demon"));
 
 
     //region[ANIMALS]

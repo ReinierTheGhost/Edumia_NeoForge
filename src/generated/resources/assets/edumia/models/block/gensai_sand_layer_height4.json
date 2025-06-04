@@ -1,0 +1,7 @@
+{
+  "parent": "edumia:block/template/layer_height4",
+  "textures": {
+    "particle": "edumia:block/gensai_sand",
+    "texture": "edumia:block/gensai_sand"
+  }
+}

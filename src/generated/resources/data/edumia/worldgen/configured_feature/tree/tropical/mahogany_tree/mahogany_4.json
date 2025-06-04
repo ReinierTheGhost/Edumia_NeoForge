@@ -70,16 +70,16 @@
       }
     },
     "log_target": [
-      "edumia:mahogany_wood",
       "edumia:mahogany_wood_stairs",
+      "edumia:mahogany_wood_fence",
       "edumia:mahogany_wood_slab",
-      "edumia:mahogany_wood_fence"
+      "edumia:mahogany_wood"
     ],
     "place_from_nbt": [
-      "edumia:mahogany_leaves",
       "edumia:mahogany_wood_stairs",
+      "edumia:mahogany_wood_fence",
       "edumia:mahogany_wood_slab",
-      "edumia:mahogany_wood_fence"
+      "edumia:mahogany_leaves"
     ]
   }
 }

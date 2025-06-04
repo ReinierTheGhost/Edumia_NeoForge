@@ -37,6 +37,7 @@ public class EdumiaRaces {
     public final static Race DARKELVES;
     public final static Race ORC;
     public final static Race OGRE;
+    public final static Race DEMON;
 
 
     @SubscribeEvent
@@ -55,6 +56,7 @@ public class EdumiaRaces {
         register(context, raceRegistryEntryLookup, HUMAN);
         register(context, raceRegistryEntryLookup, ORC);
         register(context, raceRegistryEntryLookup, OGRE);
+        register(context, raceRegistryEntryLookup, DEMON);
     }
 
     private static Race register(BootstrapContext<Race> context, HolderGetter<Race> raceRegistryEntryLookup, Race race) {
@@ -125,6 +127,15 @@ public class EdumiaRaces {
         OGRE = new Race(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "ogre"), RaceType.OGRE,
                 new AttributeData(new HashMap<>(){{
                     put(Attributes.SCALE, 1.25);
+                    put(Attributes.MAX_HEALTH, 22.0);
+                    put(Attributes.ATTACK_DAMAGE, 1.0);
+                    put(Attributes.ENTITY_INTERACTION_RANGE, 2.75);
+                    put(Attributes.MOVEMENT_SPEED, 0.1);
+                }}), List.of(), List.of(), List.of());
+
+        DEMON = new Race(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "demon"), RaceType.DEMON,
+                new AttributeData(new HashMap<>(){{
+                    put(Attributes.SCALE, 1.20);
                     put(Attributes.MAX_HEALTH, 22.0);
                     put(Attributes.ATTACK_DAMAGE, 1.0);
                     put(Attributes.ENTITY_INTERACTION_RANGE, 2.75);

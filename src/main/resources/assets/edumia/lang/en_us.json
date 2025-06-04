@@ -2521,6 +2521,7 @@
   "race.edumia.darkelves" : "Dark elf",
   "race.edumia.orc" : "Orc",
   "race.edumia.ogre" : "Ogre",
+  "race.edumia.demon" : "Demon",
 
   "faction.edumia.fairies" : "Fairies",
   "faction.edumia.human" : "Humans",
@@ -2528,6 +2529,7 @@
   "faction.edumia.dark_elves" : "Dark elves",
   "faction.edumia.orcs" : "Orcs",
   "faction.edumia.ogres" : "Ogres",
+  "faction.edumia.demons" : "Demons",
 
   "disposition.edumia.good" : "Good",
   "disposition.edumia.neutral" : "Neutral",
@@ -2539,6 +2541,7 @@
   "spawn.edumia.darkelven.nyxarith" : "Nyxarith",
   "spawn.edumia.orc.gorakthul" : "Gorak'thul",
   "spawn.edumia.ogre.kazanshi" : "Kazanshi",
+  "spawn.edumia.demon.ashkaroth" : "Ashkaroth",
   "edumia.ui.selection.none": "None",
 
   "widget.edumia.spawn_tooltip_title": "Spawns",
@@ -2570,6 +2573,8 @@
 
   "description.edumia.orcs.description_0" : "Our magic is the power of the earth itself, the strength to endure and the will to conquer. We are a nomadic people, moving with the seasons, always seeking the next challenge. To join us is to embrace the unforgiving land, to draw strength from it, and to live as one with the earth.",
 
-  "description.edumia.ogres.description_0" : "Our magic is a blend of fire and shadow, a balance of power and restraint. We live by the ancient codes, our lives dedicated to the pursuit of mastery and the protection of our lands. To join us is to walk the path of the warrior, the sage, and the guardian of the flame."
+  "description.edumia.ogres.description_0" : "Our magic is a blend of fire and shadow, a balance of power and restraint. We live by the ancient codes, our lives dedicated to the pursuit of mastery and the protection of our lands. To join us is to walk the path of the warrior, the sage, and the guardian of the flame.",
+
+  "description.edumia.demons.description_0" : "Our magic is born from the depths of the earth, the power to summon and command beasts, to bend the darkness to our will. We are a race of strength and dominance, ruling over the land with an iron fist. To join us is to embrace the fire within, to wield the power of destruction, and to command the creatures of the night."
 
 }
