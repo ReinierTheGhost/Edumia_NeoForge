@@ -1,9 +1,9 @@
 {
   "banner": {
-    "base_color": "brown",
+    "base_color": "black",
     "patterns": [
       {
-        "dye_color": "yellow",
+        "dye_color": "orange",
         "id": "edumia:demons"
       }
     ]
@@ -21,25 +21,19 @@
         "pool": [
           "edumia:demon.civilian"
         ],
-        "rank": "MILITIA"
-      },
-      {
-        "pool": [
-          "edumia:demon.civilian"
-        ],
-        "rank": "KNIGHT"
-      },
-      {
-        "pool": [
-          "edumia:demon.civilian"
-        ],
-        "rank": "SOLDIER"
-      },
-      {
-        "pool": [
-          "edumia:demon.civilian"
-        ],
         "rank": "VETERAN"
+      },
+      {
+        "pool": [
+          "edumia:demon.civilian"
+        ],
+        "rank": "LEADER"
+      },
+      {
+        "pool": [
+          "edumia:demon.civilian"
+        ],
+        "rank": "MILITIA"
       },
       {
         "pool": [
@@ -51,7 +45,13 @@
         "pool": [
           "edumia:demon.civilian"
         ],
-        "rank": "LEADER"
+        "rank": "SOLDIER"
+      },
+      {
+        "pool": [
+          "edumia:demon.civilian"
+        ],
+        "rank": "KNIGHT"
       }
     ]
   },
@@ -59,9 +59,9 @@
     "data": [
       {
         "coordinates": {
-          "x": 2285.0,
+          "x": 1380.0,
           "y": 0.0,
-          "z": 1260.0
+          "z": 985.0
         },
         "dynamic": 1,
         "id": "edumia:demon.ashkaroth"

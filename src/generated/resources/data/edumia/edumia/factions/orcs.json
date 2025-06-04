@@ -21,25 +21,19 @@
         "pool": [
           "edumia:orc.civilian"
         ],
-        "rank": "MILITIA"
-      },
-      {
-        "pool": [
-          "edumia:orc.civilian"
-        ],
-        "rank": "KNIGHT"
-      },
-      {
-        "pool": [
-          "edumia:orc.civilian"
-        ],
-        "rank": "SOLDIER"
-      },
-      {
-        "pool": [
-          "edumia:orc.civilian"
-        ],
         "rank": "VETERAN"
+      },
+      {
+        "pool": [
+          "edumia:orc.civilian"
+        ],
+        "rank": "LEADER"
+      },
+      {
+        "pool": [
+          "edumia:orc.civilian"
+        ],
+        "rank": "MILITIA"
       },
       {
         "pool": [
@@ -51,7 +45,13 @@
         "pool": [
           "edumia:orc.civilian"
         ],
-        "rank": "LEADER"
+        "rank": "SOLDIER"
+      },
+      {
+        "pool": [
+          "edumia:orc.civilian"
+        ],
+        "rank": "KNIGHT"
       }
     ]
   },
