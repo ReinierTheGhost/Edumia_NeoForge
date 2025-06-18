@@ -50,16 +50,16 @@
     "log_target": [
       "edumia:mirwoodnut_wood_slab",
       "edumia:mirwoodnut_wood",
-      "edumia:mirwoodnut_wood_fence",
-      "edumia:mirwoodnut_wood_stairs"
+      "edumia:mirwoodnut_wood_stairs",
+      "edumia:mirwoodnut_wood_fence"
     ],
     "place_from_nbt": [
-      "edumia:banana_leaves",
       "edumia:mirwoodnut_wood_slab",
-      "edumia:mirwoodnut_wood_stairs",
       "minecraft:mangrove_roots",
+      "edumia:mirwoodnut_wood_fence",
       "edumia:mirwoodnut_leaves",
-      "edumia:mirwoodnut_wood_fence"
+      "edumia:banana_leaves",
+      "edumia:mirwoodnut_wood_stairs"
     ]
   }
 }

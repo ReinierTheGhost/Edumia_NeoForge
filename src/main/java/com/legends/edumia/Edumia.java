@@ -71,6 +71,7 @@ public class Edumia
         SandBlockSets.register(modEventBus);
         FlowerBlockSets.register(modEventBus);
         GrassBlockSets.register(modEventBus);
+        OreRockSets.register(modEventBus);
 
         EdumiaEntities.register(modEventBus);
 

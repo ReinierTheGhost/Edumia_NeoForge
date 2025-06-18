@@ -867,6 +867,10 @@
     "edumia:cracked_green_basalt_wall",
     "edumia:white_sandstone",
     "edumia:white_sandstone_stairs",
-    "edumia:white_sandstone_slab"
+    "edumia:white_sandstone_slab",
+    "edumia:tin_ore",
+    "edumia:silver_ore",
+    "edumia:deepslate_tin_ore",
+    "edumia:deepslate_silver_ore"
   ]
 }

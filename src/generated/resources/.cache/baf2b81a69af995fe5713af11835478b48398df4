@@ -1,4 +1,4 @@
-// 1.21.1	2025-06-04T13:57:41.8526997	Item Models: edumia
+// 1.21.1	2025-06-18T13:53:39.8824292	Item Models: edumia
 047baa6b7a95aadfec14d478dfdf8c290cbd8220 assets/edumia/models/item/acacia_wood_fence.json
 4879a2f3030853ef57cc6d67266684061b3752ec assets/edumia/models/item/acacia_wood_wall.json
 386253d46a85a3515508b2f2812157712b0633d8 assets/edumia/models/item/almond_button.json
@@ -381,6 +381,8 @@ f4467f848445b0813c44f215f2ed625051055b34 assets/edumia/models/item/ramen_beef.js
 267762f58f6601798c7b7d5d0fb74cd0dacb117a assets/edumia/models/item/ramen_pork.json
 243055ff75b2cab115c60e711e468b330df64fbf assets/edumia/models/item/ramen_shrimps.json
 6901ba0189b238dc43832ce80a2c645800812e1a assets/edumia/models/item/ramen_vegi.json
+9e152b02adf419a6296ed68d20e558c3ebb4bd2e assets/edumia/models/item/raw_silver.json
+eea8854eff3311d76c751b87a815979be6093881 assets/edumia/models/item/raw_tin.json
 e43ea4f285ee5f2bcfc19e3a1f1e92e2a694a75f assets/edumia/models/item/redish_gensai_bricks_wall.json
 ed35482f38d587416199d16fb7e1da935ff8c177 assets/edumia/models/item/redwood_button.json
 d53ec548b1cc4a3a34e8efcb2a069723915bb2f5 assets/edumia/models/item/redwood_door.json

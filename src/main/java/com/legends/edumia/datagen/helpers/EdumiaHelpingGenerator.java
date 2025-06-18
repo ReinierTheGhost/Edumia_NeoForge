@@ -377,5 +377,32 @@ public class EdumiaHelpingGenerator {
             }
         }
 
+        for (OreRockSets.OreRockSet set : OreRockSets.sets){
+            if(set.coal_ore() != null){
+                SimpleBlockModel.blocks.add(set.coal_ore().get());
+                MineablePickaxe.blocks.add(set.coal_ore().get());
+            }
+            if(set.copper_ore() != null){
+                SimpleBlockModel.blocks.add(set.copper_ore().get());
+                MineablePickaxe.blocks.add(set.copper_ore().get());
+            }
+            if(set.tin_ore() != null){
+                SimpleBlockModel.blocks.add(set.tin_ore().get());
+                MineablePickaxe.blocks.add(set.tin_ore().get());
+            }
+            if(set.silver_ore() != null){
+                SimpleBlockModel.blocks.add(set.silver_ore().get());
+                MineablePickaxe.blocks.add(set.silver_ore().get());
+            }
+            if(set.gold_ore() != null){
+                SimpleBlockModel.blocks.add(set.gold_ore().get());
+                MineablePickaxe.blocks.add(set.gold_ore().get());
+            }
+            if(set.iron_ore() != null){
+                SimpleBlockModel.blocks.add(set.iron_ore().get());
+                MineablePickaxe.blocks.add(set.iron_ore().get());
+            }
+        }
+
     }
 }

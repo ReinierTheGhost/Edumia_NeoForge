@@ -111,7 +111,11 @@ public class ItemLoader {
     public static final DeferredItem<Item> GEM_ROUGH_TOPAZ = ITEMS.register("gem_rough_topaz",
             () -> new Item(new Item.Properties()));
 
+    public static final DeferredItem<Item> RAW_TIN = ITEMS.register("raw_tin",
+            () -> new Item(new Item.Properties()));
 
+    public static final DeferredItem<Item> RAW_SILVER = ITEMS.register("raw_silver",
+            () -> new Item(new Item.Properties()));
     /**
      * food Items
      */
@@ -240,6 +244,7 @@ public class ItemLoader {
     public static final DeferredItem<Item> OGRE_BANNER_PATTERN = ITEMS.register("ogre_banner_pattern",
             () -> new BannerPatternItem(TagLoader.BannerPatterns.OGRES_PATTERN, new Item.Properties()
                     .stacksTo(1).rarity(Rarity.RARE)));
+
 
 
     public static void register(IEventBus eventBus) {

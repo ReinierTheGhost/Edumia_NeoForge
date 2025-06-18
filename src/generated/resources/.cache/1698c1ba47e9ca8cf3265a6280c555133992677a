@@ -1,4 +1,4 @@
-// 1.21.1	2025-06-04T14:40:13.787291	Tags for minecraft:block mod id edumia
+// 1.21.1	2025-06-18T14:59:20.9189264	Tags for minecraft:block mod id edumia
 3e434f0a86fbcd633cfff91dc0e92ccd3f31bd67 data/edumia/tags/block/almond_logs.json
 ae6219d1827772f22e3df50c609f5244e203de8d data/edumia/tags/block/apple_logs.json
 9cd2fda8149e35f2183333d9280ff853f4a0a4e8 data/edumia/tags/block/aspen_logs.json
@@ -42,7 +42,7 @@ c6f49b1b40b0662ee6f42d9b1c254fb63f3802f0 data/minecraft/tags/block/flowers.json
 ec3b22142ae2cb908334548dd2adf6995896ecf5 data/minecraft/tags/block/jungle_logs.json
 a101ad97fb59837160bd504ed810388500156447 data/minecraft/tags/block/leaves.json
 63876df710baa3e2e47c2ee67058ff4470f651d4 data/minecraft/tags/block/logs.json
-1cd7e9e5a08633520ae91c27bfeeeb3ad3ec46e7 data/minecraft/tags/block/mineable/pickaxe.json
+80ba30eced37646638c47308a48adf51c0abbf27 data/minecraft/tags/block/mineable/pickaxe.json
 6842bd09f89aeb282bf9ab7ddc3e2ade90f606f6 data/minecraft/tags/block/needs_iron_tool.json
 c11b43ff2c663b051d35e9a2ed13ffed1a36da02 data/minecraft/tags/block/needs_stone_tool.json
 6c653858e911edaaccfed6147b3163680ae30597 data/minecraft/tags/block/walls.json

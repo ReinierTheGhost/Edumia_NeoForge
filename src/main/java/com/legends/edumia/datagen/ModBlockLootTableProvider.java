@@ -46,6 +46,27 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
 
+        for (OreRockSets.OreRockSet set : OreRockSets.sets) {
+            if (set.coal_ore() != null) {
+                add(set.coal_ore().get(), b -> createOreDrop(set.coal_ore().get(), Items.COAL));
+            }
+            if (set.copper_ore() != null) {
+                add(set.copper_ore().get(), b -> createCopperOreDrops(set.copper_ore().get()));
+            }
+            if (set.tin_ore() != null) {
+                add(set.tin_ore().get(), b -> createOreDrop(set.tin_ore().get(), ItemLoader.RAW_TIN.get()));
+            }
+            if (set.silver_ore() != null) {
+                add(set.silver_ore().get(), b -> createOreDrop(set.silver_ore().get(), ItemLoader.RAW_SILVER.get()));
+            }
+            if (set.gold_ore() != null) {
+                add(set.gold_ore().get(), b -> createOreDrop(set.gold_ore().get(), Items.RAW_GOLD));
+            }
+            if (set.iron_ore() != null) {
+                add(set.iron_ore().get(), b -> createOreDrop(set.iron_ore().get(), Items.RAW_IRON));
+            }
+        }
+
         for (Block block : BlockDrops.blocks){
             dropSelf(block);
         }
@@ -97,6 +118,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
 
     }
+
+
 
     protected LootTable.Builder createExtraLeaveDrops(Block block, Block sapling, Item extraDrop, float... chances){
         HolderLookup.RegistryLookup<Enchantment> registrylookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
@@ -184,6 +207,11 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 .forEach(allBlocks::add);
 
         GrassBlockSets.BLOCKS.getEntries()
+                .stream()
+                .map(Holder::value)
+                .forEach(allBlocks::add);
+
+        OreRockSets.BLOCKS.getEntries()
                 .stream()
                 .map(Holder::value)
                 .forEach(allBlocks::add);

@@ -1,4 +1,4 @@
-// 1.21.1	2025-06-04T14:40:13.8874138	Loot Tables
+// 1.21.1	2025-06-18T14:59:20.9886097	Loot Tables
 e2e084dc074419dc92cea6e8c8e4b55544abe8a9 data/edumia/loot_table/blocks/acacia_beam.json
 48dea1c4c657ef265adaa4964922687a58720e07 data/edumia/loot_table/blocks/acacia_wood_fence.json
 2a4bb888c13048fc2acad9f55a5245f6ad35fc92 data/edumia/loot_table/blocks/acacia_wood_slab.json
@@ -574,6 +574,8 @@ e805d1c8f7ee99026ba09f1d80b825f88fbbe262 data/edumia/loot_table/blocks/date_palm
 e94e8a61762876c0330c7de01d6c180874243287 data/edumia/loot_table/blocks/date_palm_wood_slab.json
 cc8f0e3500baf116aff6e2a2e2c236748109de6d data/edumia/loot_table/blocks/date_palm_wood_stairs.json
 e92853eb05571f2f9b3bbf1ac0ef7b78011d93b7 data/edumia/loot_table/blocks/date_palm_wood_wall.json
+1e1bf3d51513d5cfc560b42369080f42416fbe86 data/edumia/loot_table/blocks/deepslate_silver_ore.json
+ff0ca890e8ab237661679f5448de287620a12da7 data/edumia/loot_table/blocks/deepslate_tin_ore.json
 7cb00745847489a87079aa8306f00e820dad64dc data/edumia/loot_table/blocks/delphinium.json
 79377ffc87fcda512acb18fec851be2a2b45b06c data/edumia/loot_table/blocks/demon_basalt_bricks.json
 5f20e458aa49f0379a6ecd6c32ead4c8a3d31c3d data/edumia/loot_table/blocks/demon_basalt_bricks_arrowslit.json
@@ -1444,6 +1446,7 @@ d8a975bab5f30e94316e575acd54b58cb6bb0f90 data/edumia/loot_table/blocks/red_sand_
 85067a896aacd8662d98787b556d898b287015d7 data/edumia/loot_table/blocks/sandstone_pillar.json
 5458c4e7038ffc953cd302f0d7395a79839ffe48 data/edumia/loot_table/blocks/sand_layer.json
 c767aa8d541e6036086258e0ea7e914b61ab0bf3 data/edumia/loot_table/blocks/sand_slab.json
+ad78a05eb4b9d32028755ed8de4f65d086d88929 data/edumia/loot_table/blocks/silver_ore.json
 1c3d37943a7bbc4d719a1488f067006ed97ea93f data/edumia/loot_table/blocks/silver_spruce_beam.json
 5d541a2dbe5d75f180f1b88221297b3133959f26 data/edumia/loot_table/blocks/silver_spruce_button.json
 0e1753c767a0fdfa9aba4724caec274e4c425c1a data/edumia/loot_table/blocks/silver_spruce_door.json
@@ -1699,6 +1702,7 @@ df783b86b45365e04b8e151fee82341baf1309a3 data/edumia/loot_table/blocks/tall_beac
 01ac8bcdd4e6aa8cc54e58a31416ab049e3f8cb1 data/edumia/loot_table/blocks/tall_dry_bush.json
 4ccb3d8e36e4cbd8c2802ccf9616bbb19d93f14f data/edumia/loot_table/blocks/tall_frosted_grass.json
 2e0a422c22ca9f409dbc161c57a678cd042de73f data/edumia/loot_table/blocks/test_sapling.json
+c0e1a364f756de6a7f71a7af30852ebc6a94b333 data/edumia/loot_table/blocks/tin_ore.json
 5d044c5a4c2246286a4adbf94434a7888c0f4ace data/edumia/loot_table/blocks/trimmed_gensai_bricks.json
 2e5c69dbef3d567d581c9021017db2a364ec369a data/edumia/loot_table/blocks/trimmed_gensai_bricks_arrowslit.json
 9b2124472932b417d8c69dc2b2ab75065bf3ab91 data/edumia/loot_table/blocks/trimmed_gensai_bricks_balustrade.json

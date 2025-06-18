@@ -102,11 +102,33 @@ public class CreativeTabLoader {
                                     entries.accept(item.slab());
                                 }
 
+                                for (OreRockSets.OreRockSet item : OreRockSets.sets){
+                                    if (item.coal_ore() != null){
+                                        entries.accept(item.coal_ore().get());
+                                    }
+                                    if (item.tin_ore() != null){
+                                        entries.accept(item.tin_ore().get());
+                                    }
+                                    if (item.copper_ore() != null){
+                                        entries.accept(item.copper_ore().get());
+                                    }
+                                    if (item.iron_ore() != null){
+                                        entries.accept(item.iron_ore().get());
+                                    }
+                                    if (item.silver_ore() != null){
+                                        entries.accept(item.silver_ore().get());
+                                    }
+                                    if (item.gold_ore() != null){
+                                        entries.accept(item.gold_ore().get());
+                                    }
+                                }
+
                                 entries.accept(BlockLoader.BROWN_SANDSTONE_SLATES.get());
 
                                 entries.accept(BlockLoader.VOLCANIC_DIRT.get());
                                 entries.accept(BlockLoader.VOLCANIC_DIRT_PATH.get());
                                 entries.accept(BlockLoader.HIGH_ELVEN_CRYSTAL.get());
+
                             }).build());
 
     public static final Supplier<CreativeModeTab>  EDUMIA_WOOD_BLOCKS =
@@ -236,15 +258,7 @@ public class CreativeTabLoader {
                             .displayItems((displayParameters, entries) -> {
                                 entries.accept(ItemLoader.LEGENDS_COIN.get());
                                 entries.accept(BlockLoader.TEST_SAPLING.get());
-                                entries.accept(ItemLoader.FAIRY_SPAWN_EGG.get());
-                                entries.accept(ItemLoader.HUMAN_SPAWN_EGG.get());
-                                entries.accept(ItemLoader.HIGH_ELVEN_SPAWN_EGG.get());
-                                entries.accept(ItemLoader.DARK_ELVEN_SPAWN_EGG.get());
-                                entries.accept(ItemLoader.ORC_SPAWN_EGG.get());
-                                entries.accept(ItemLoader.OGRE_SPAWN_EGG.get());
-                                entries.accept(ItemLoader.DEMON_SPAWN_EGG.get());
-                                entries.accept(ItemLoader.BUTTERFLY_SPAWN_EGG.get());
-                                entries.accept(ItemLoader.DRAGONFLY_SPAWN_EGG.get());
+
                                 entries.accept(ItemLoader.HIGH_ELVEN_BANNER_PATTERN.get());
                                 entries.accept(ItemLoader.DARK_ELVEN_BANNER_PATTERN.get());
                                 entries.accept(ItemLoader.DEMON_BANNER_PATTERN.get());
@@ -255,9 +269,25 @@ public class CreativeTabLoader {
                                 entries.accept(ItemLoader.HUMAN_BANNER_PATTERN.get());
                             }).build());
 
-    public static final Supplier<CreativeModeTab>  EDUMIA_GEMS = CREATIVE_MODE_TAB.register("edumia_gems",() ->
+    public static final Supplier<CreativeModeTab>  EDUMIA_SPAWNS =
+            CREATIVE_MODE_TAB.register("edumia_spawns",() ->
+                    CreativeModeTab.builder().icon(() -> new ItemStack(ItemLoader.FAIRY_SPAWN_EGG.get()))
+                            .title(Component.translatable("creativetab.edumia_spawns"))
+                            .displayItems((displayParameters, entries) -> {
+                                entries.accept(ItemLoader.FAIRY_SPAWN_EGG.get());
+                                entries.accept(ItemLoader.HUMAN_SPAWN_EGG.get());
+                                entries.accept(ItemLoader.HIGH_ELVEN_SPAWN_EGG.get());
+                                entries.accept(ItemLoader.DARK_ELVEN_SPAWN_EGG.get());
+                                entries.accept(ItemLoader.ORC_SPAWN_EGG.get());
+                                entries.accept(ItemLoader.OGRE_SPAWN_EGG.get());
+                                entries.accept(ItemLoader.DEMON_SPAWN_EGG.get());
+                                entries.accept(ItemLoader.BUTTERFLY_SPAWN_EGG.get());
+                                entries.accept(ItemLoader.DRAGONFLY_SPAWN_EGG.get());
+                            }).build());
+
+    public static final Supplier<CreativeModeTab>  EDUMIA_GEMS = CREATIVE_MODE_TAB.register("edumia_resources",() ->
             CreativeModeTab.builder().icon(() -> new ItemStack(ItemLoader.GEM_PERFECT_AMBER.get()))
-                    .title(Component.translatable("creativetab.edumia_gems"))
+                    .title(Component.translatable("creativetab.edumia_resources"))
                     .displayItems((displayParameters, entries) -> {
                         entries.accept(ItemLoader.GEM_FINE_AMBER.get());
                         entries.accept(ItemLoader.GEM_FLAWED_AMBER.get());
@@ -294,7 +324,12 @@ public class CreativeTabLoader {
                         entries.accept(ItemLoader.GEM_FLAWLESS_TOPAZ.get());
                         entries.accept(ItemLoader.GEM_PERFECT_TOPAZ.get());
                         entries.accept(ItemLoader.GEM_ROUGH_TOPAZ.get());
+
+                        entries.accept(ItemLoader.RAW_SILVER.get());
+                        entries.accept(ItemLoader.RAW_TIN.get());
                     }).build());
+
+
 
     public static final Supplier<CreativeModeTab>  FOOD_GROUP = CREATIVE_MODE_TAB.register("edumia_food",() ->
             CreativeModeTab.builder().icon(() -> new ItemStack(ItemLoader.TEA_HIBISCUS_PETALS.get()))

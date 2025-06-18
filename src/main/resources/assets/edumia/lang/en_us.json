@@ -15,10 +15,9 @@
   "creativetab.edumia_tools": "Edumia Tools",
   "creativetab.edumia_wood_blocks": "Edumia Wood Blocks",
   "creativetab.edumia_natural_stone_blocks": "Edumia Natural Stone Blocks",
-  "creativetab.edumia_ores_gems_blocks": "Edumia Ores and Gem Blocks",
   "creativetab.edumia_items": "Edumia Items",
   "creativetab.edumia_spawns": "Edumia Spawns",
-  "creativetab.edumia_gems": "Edumia Gems",
+  "creativetab.edumia_resources": "Edumia Resources",
   "creativetab.edumia_plants": "Edumia Plants",
   "creativetab.edumia_food": "Edumia Food",
 
@@ -111,13 +110,29 @@
   "item.edumia.gem_fine_topaz": "Fine topaz",
   "item.edumia.gem_perfect_topaz": "Perfect topaz",
 
+  "item.edumia.raw_silver": "Raw silver",
+  "item.edumia.raw_tin": "Raw tin",
+
+
   "item.edumia.gensai_steel": "Gensai steal",
 
+  "item.edumia.fairy_banner_pattern": "Fairy banner pattern",
+  "item.edumia.human_banner_pattern": "Human banner pattern",
+  "item.edumia.high_elven_banner_pattern": "High elven banner pattern",
+  "item.edumia.dark_elven_banner_pattern": "Dark elven banner pattern",
+  "item.edumia.orc_banner_pattern": "Orc banner pattern",
+  "item.edumia.ogre_banner_pattern": "Ogre banner pattern",
+  "item.edumia.demon_banner_pattern": "Demon banner pattern",
+  "item.edumia.gensai_banner_pattern": "Gensai banner pattern",
 
-"#Comment:": "Item - Spawn Eggs",
-
-"#Comment:": "Item - Entities",
-
+  "item.edumia.fairy_banner_pattern.disc": "Fairy",
+  "item.edumia.human_banner_pattern.disc": "Human",
+  "item.edumia.high_elven_banner_pattern.disc": "High elven",
+  "item.edumia.dark_elven_banner_pattern.disc": "Dark elven",
+  "item.edumia.orc_banner_pattern.disc": "Orc",
+  "item.edumia.ogre_banner_pattern.disc": "Ogre",
+  "item.edumia.demon_banner_pattern.disc": "Demon",
+  "item.edumia.gensai_banner_pattern.disc": "Gensai",
 
 
 "#Comment:": "Block - Vanilla +",
@@ -1487,6 +1502,9 @@
   "block.edumia.tin_ore": "Tin ore",
   "block.edumia.deepslate_tin_ore": "Deepslate tin ore",
 
+  "block.edumia.silver_ore": "Silver ore",
+  "block.edumia.deepslate_silver_ore": "Deepslate silver ore",
+
 "#Comment:" : "Custom Blocks",
 
   "block.edumia.green_basalt_balustrade": "Green basalt balustrade",
@@ -2410,7 +2428,17 @@
   "block.edumia.willow_door": "Willow door",
   "block.edumia.willow_trapdoor": "Willow trapdoor",
 
+  "#Comment:": "spawn",
+  "item.edumia.fairy_spawn_egg": "Fairy spawn egg",
+  "item.edumia.human_spawn_egg": "Human spawn egg",
+  "item.edumia.high_elven_spawn_egg": "High elven spawn egg",
+  "item.edumia.dark_elven_spawn_egg": "Dark elven spawn egg",
+  "item.edumia.orc_spawn_egg": "Orc spawn egg",
+  "item.edumia.ogre_spawn_egg": "Ogre spawn egg",
+  "item.edumia.demon_spawn_egg": "Demon spawn egg",
 
+  "item.edumia.butterfly_spawn_egg": "Butterfly spawn egg",
+  "item.edumia.dragonfly_spawn_egg": "Dragonfly spawn egg",
 
   "#Comment:": "biomes",
   "biome.edumia.ocean_coast": "Ocean coast",
@@ -2498,22 +2526,22 @@
   "gui.edumia.banners": "Banners",
   "gui.edumia.options": "Options",
   "gui.edumia.menu": "Menu",
-"ui.edumia.return_confirmation.title": "Onboarding Screen",
-"ui.edumia.onboarding_selection.title": "Onboarding Screen",
-"ui.edumia.return_confirmation.continue_character.title": "Return to Overworld",
-"ui.edumia.return_confirmation.continue_character.content": "Go to Overworld",
-"ui.edumia.continue_character": "Continue",
-"ui.edumia.reset_character": "Reset Affiliation",
-"screen.edumia.button.faction_randomizer": "Randomize Faction",
-"screen.edumia.button.focus_current": "Focus Toggle",
-"screen.edumia.button.zoom_out": "Zoom Out",
-"screen.edumia.button.zoom_in": "Zoom In",
-"screen.edumia.button.spawn_randomizer": "Randomize Spawn",
-"screen.edumia.button.confirm": "Confirm",
-"screen.edumia.information.subfaction": "Subfaction : ",
+  "ui.edumia.return_confirmation.title": "Onboarding Screen",
+  "ui.edumia.onboarding_selection.title": "Onboarding Screen",
+  "ui.edumia.return_confirmation.continue_character.title": "Return to Overworld",
+  "ui.edumia.return_confirmation.continue_character.content": "Go to Overworld",
+  "ui.edumia.continue_character": "Continue",
+  "ui.edumia.reset_character": "Reset Affiliation",
+  "screen.edumia.button.faction_randomizer": "Randomize Faction",
+  "screen.edumia.button.focus_current": "Focus Toggle",
+  "screen.edumia.button.zoom_out": "Zoom Out",
+  "screen.edumia.button.zoom_in": "Zoom In",
+  "screen.edumia.button.spawn_randomizer": "Randomize Spawn",
+  "screen.edumia.button.confirm": "Confirm",
+  "screen.edumia.information.subfaction": "Subfaction : ",
   "screen.edumia.information.races" : "Race",
   "screen.edumia.information.races.many" : "Races",
-"screen.edumia.information.description": "Description",
+  "screen.edumia.information.description": "Description",
 
   "race.edumia.fairy" : "Fairy",
   "race.edumia.human" : "Human",

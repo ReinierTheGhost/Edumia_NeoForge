@@ -1,9 +1,15 @@
 package com.legends.edumia.entity.races.darkelves;
 
 import com.legends.edumia.entity.NpcEntity;
+import com.legends.edumia.entity.animals.butterfly.ButterflyEntity;
+import com.legends.edumia.entity.animals.butterfly.ButterflyVariant;
 import com.legends.edumia.resources.EdumiaFactions;
 import com.legends.edumia.resources.EdumiaRaces;
 import com.legends.edumia.resources.datas.npcs.data.NpcRank;
+import net.minecraft.Util;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.DifficultyInstance;
@@ -25,6 +31,9 @@ public class DarkElfEntity extends NpcEntity {
         }
     }
 
+    private static final EntityDataAccessor<Integer> VARIANT =
+            SynchedEntityData.defineId(DarkElfEntity.class, EntityDataSerializers.INT);
+
     @Override
     protected ResourceLocation getFactionId() {
         return EdumiaFactions.DARK_ELVES.getId();
@@ -39,6 +48,10 @@ public class DarkElfEntity extends NpcEntity {
     @Override
     public @Nullable SpawnGroupData finalizeSpawn(ServerLevelAccessor level, DifficultyInstance difficulty, MobSpawnType spawnType,
                                                   @Nullable SpawnGroupData spawnGroupData) {
+
+        DarkElvenVariant variant = Util.getRandom(DarkElvenVariant.values(), this.random);
+        this.setVariant(variant);
+
         spawnGroupData = super.finalizeSpawn(level, difficulty, spawnType, spawnGroupData);
         RandomSource random = level.getRandom();
         this.populateDefaultEquipmentSlots(random, difficulty);
@@ -60,11 +73,23 @@ public class DarkElfEntity extends NpcEntity {
         super.actuallyHurt(damageSource, damageAmount);
     }
 
-    public DarkElvenVariant getVariant(){
-        return DarkElvenVariant.byId(this.getId());
+    private int getTypeVariant() {
+        return this.entityData.get(VARIANT);
     }
 
+    public DarkElvenVariant getVariant(){
+        return DarkElvenVariant.byId(this.getTypeVariant() & 255);
+    }
 
+    private void setVariant(DarkElvenVariant variant) {
+        this.entityData.set(VARIANT, variant.getId() & 255);
+    }
+
+    @Override
+    protected void defineSynchedData(SynchedEntityData.Builder builder) {
+        super.defineSynchedData(builder);
+        builder.define(VARIANT, 0);
+    }
 
     public static AttributeSupplier.Builder setSoldierAttribute() {
         return Mob.createMobAttributes()

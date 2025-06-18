@@ -53,6 +53,10 @@ public class SimpleBasicItemModel {
             add(ItemLoader.GEM_PERFECT_TOPAZ.get());
             add(ItemLoader.GEM_ROUGH_TOPAZ.get());
 
+            add(ItemLoader.RAW_TIN.get());
+            add(ItemLoader.RAW_SILVER.get());
+
+
             add(ItemLoader.TEA_SAKURA_PETALS.get());
             add(ItemLoader.TEA_MINT_LEAVES.get());
             add(ItemLoader.TEA_LEAF.get());
