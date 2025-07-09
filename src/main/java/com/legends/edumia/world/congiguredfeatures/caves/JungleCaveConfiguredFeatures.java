@@ -3,7 +3,9 @@ package com.legends.edumia.world.congiguredfeatures.caves;
 import com.legends.edumia.Edumia;
 import com.legends.edumia.core.TagLoader;
 import com.legends.edumia.world.trees.foliageplacer.RandomPalmLeavesFoliagePlacer;
+import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
+import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
@@ -13,9 +15,10 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.util.random.SimpleWeightedRandomList;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.UniformInt;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.LeavesBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.DripstoneThickness;
+import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature;
@@ -53,6 +56,8 @@ public class JungleCaveConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> LOW_FOLIAGE = registerKey("low_foliage");
     public static final ResourceKey<ConfiguredFeature<?, ?>> HIGH_FOLIAGE = registerKey("high_foliage");
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>> LICHEN = registerKey("lichen");
+
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context){
         var holdergetter = context.lookup(Registries.CONFIGURED_FEATURE);
         var registryEntryLookup = context.lookup(Registries.PLACED_FEATURE);
@@ -63,6 +68,9 @@ public class JungleCaveConfiguredFeatures {
 
         OreConfiguration.TargetBlockState target = OreConfiguration.target(targetRule, muddyRoots);
 
+        MultifaceBlock multifaceblock = (MultifaceBlock)Blocks.GLOW_LICHEN;
+
+        // region [TREES]
         register(context, LOLLIPOP_TREE, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(Blocks.MANGROVE_LOG),
                 new StraightTrunkPlacer(6, 1, 0),
@@ -95,24 +103,61 @@ public class JungleCaveConfiguredFeatures {
                 new TwoLayersFeatureSize(0, 1, 1, OptionalInt.of(0))
         ).dirt(BlockStateProvider.simple(Blocks.MOSS_BLOCK)).build());
 
+        // endregion
+
+        // region [RANDOM_SELECTORS]
+        register(context, POINTED_DRIPSTONE, Feature.RANDOM_SELECTOR, new RandomFeatureConfiguration(List.of(
+                new WeightedPlacedFeature(PlacementUtils.inlinePlaced(
+                        Feature.BLOCK_COLUMN, new BlockColumnConfiguration(List.of(BlockColumnConfiguration.layer(
+                                        ConstantInt.of(1),
+                                        BlockStateProvider.simple(Blocks.POINTED_DRIPSTONE.defaultBlockState().
+                                                setValue(PointedDripstoneBlock.THICKNESS, DripstoneThickness.FRUSTUM))),
+                                BlockColumnConfiguration.layer(
+                                        ConstantInt.of(1),
+                                        BlockStateProvider.simple(Blocks.POINTED_DRIPSTONE))), Direction.UP,
+                                BlockPredicate.matchesBlocks(Blocks.AIR), true)), 0.3f),
+                new WeightedPlacedFeature(PlacementUtils.inlinePlaced(
+                        Feature.BLOCK_COLUMN, new BlockColumnConfiguration(List.of(BlockColumnConfiguration.layer(
+                                        ConstantInt.of(1),
+                                        BlockStateProvider.simple(Blocks.POINTED_DRIPSTONE.defaultBlockState().
+                                                setValue(PointedDripstoneBlock.THICKNESS, DripstoneThickness.MIDDLE))),
+                                BlockColumnConfiguration.layer(
+                                        ConstantInt.of(1),
+                                        BlockStateProvider.simple(Blocks.POINTED_DRIPSTONE.defaultBlockState().
+                                                setValue(PointedDripstoneBlock.THICKNESS, DripstoneThickness.FRUSTUM))),
+                                BlockColumnConfiguration.layer(
+                                        ConstantInt.of(1),
+                                        BlockStateProvider.simple(Blocks.POINTED_DRIPSTONE))), Direction.UP,
+                                BlockPredicate.matchesBlocks(Blocks.AIR), true)), 0.08f)),
+                PlacementUtils.inlinePlaced(
+                Feature.BLOCK_COLUMN, new BlockColumnConfiguration(List.of(BlockColumnConfiguration.layer(
+                                ConstantInt.of(1),
+                                BlockStateProvider.simple(Blocks.POINTED_DRIPSTONE))), Direction.UP,
+                                BlockPredicate.matchesBlocks(Blocks.AIR), true))));
 
         register(context, TREES, Feature.RANDOM_SELECTOR, new RandomFeatureConfiguration(List.of(
                 new WeightedPlacedFeature(PlacementUtils.inlinePlaced(holdergetter.getOrThrow(CHERRY_TREE)), 0.2f)
         ), PlacementUtils.inlinePlaced(holdergetter.getOrThrow(LOLLIPOP_TREE))));
 
+        register(context, FLOOR, Feature.RANDOM_SELECTOR, new RandomFeatureConfiguration(List.of(
+                new WeightedPlacedFeature(PlacementUtils.inlinePlaced(holdergetter.getOrThrow(MUDDY_ROOTS_ORE)), 0.35f)
+        ), PlacementUtils.inlinePlaced(holdergetter.getOrThrow(MOSS_PATCH))));
+        // endregion
+
+        // region[VEGETATION_PATCH]
         register(context, MOSS_PATCH, Feature.VEGETATION_PATCH, new VegetationPatchConfiguration(
                 TagLoader.Blocks.UNDERGROUND_JUNGLE_REPLACEABLE,
                 BlockStateProvider.simple(Blocks.MOSS_BLOCK),
                 PlacementUtils.inlinePlaced(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(Blocks.MOSS_CARPET))),
                 CaveSurface.FLOOR, ConstantInt.of(1), 0f, 2, 0.5f, UniformInt.of(1, 3),
                 0.4f));
+        // endregion
 
+        // region[ORE]
         register(context, MUDDY_ROOTS_ORE, Feature.ORE, new OreConfiguration(List.of(target), 16, 0));
+        // endregion
 
-        register(context, FLOOR, Feature.RANDOM_SELECTOR, new RandomFeatureConfiguration(List.of(
-                new WeightedPlacedFeature(PlacementUtils.inlinePlaced(holdergetter.getOrThrow(MUDDY_ROOTS_ORE)), 0.35f)
-        ), PlacementUtils.inlinePlaced(holdergetter.getOrThrow(MOSS_PATCH))));
-
+        // region[SIMPLE_BLOCK]
         register(context, LOW_FOLIAGE, Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(
                 new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
                         .add(Blocks.FERN.defaultBlockState(), 8)
@@ -128,8 +173,21 @@ public class JungleCaveConfiguredFeatures {
                         .add(Blocks.ROSE_BUSH.defaultBlockState(), 1)
                         .add(Blocks.PITCHER_PLANT.defaultBlockState(), 1)
                         .add(Blocks.TORCHFLOWER.defaultBlockState(), 2).build())));
+        // endregion
 
-
+        // region[MULTIFACE_GROWTH]
+        register(context, LICHEN, Feature.MULTIFACE_GROWTH,
+                new MultifaceGrowthConfiguration(multifaceblock, 1, true,false, false,
+                        0f,
+                        HolderSet.direct(
+                        Block::builtInRegistryHolder,
+                        Blocks.MUD,
+                        Blocks.MOSS_BLOCK,
+                        Blocks.MUDDY_MANGROVE_ROOTS,
+                        Blocks.DEEPSLATE,
+                        Blocks.STONE
+                )));
+        // endregion
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name){
