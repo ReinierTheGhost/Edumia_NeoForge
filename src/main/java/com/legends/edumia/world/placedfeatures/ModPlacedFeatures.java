@@ -9,6 +9,7 @@ import com.legends.edumia.world.placedfeatures.biomes.FairyBiomePlacedFeatures;
 import com.legends.edumia.world.placedfeatures.biomes.OgreBiomePlacedFeatures;
 import com.legends.edumia.world.placedfeatures.biomes.OrcDesertPlacedFeatures;
 import com.legends.edumia.world.placedfeatures.boulders.BoulderPlacedFeatures;
+import com.legends.edumia.world.placedfeatures.caves.CavePlacedFeatures;
 import com.legends.edumia.world.placedfeatures.crystrals.CrystalPlacedFeatures;
 import com.legends.edumia.world.placedfeatures.ocean.ReefPlacedFeatures;
 import com.legends.edumia.world.placedfeatures.ores.VanillaBlockOrePlacedFeatures;
@@ -219,6 +220,7 @@ public class ModPlacedFeatures {
         LeopardTreePlacedFeatures.boostrap(context);
         MushroomPlacedFeatures.boostrap(context);
         VanillaBlockOrePlacedFeatures.boostrap(context);
+        CavePlacedFeatures.boostrap(context);
     }
 
     public static ResourceKey<PlacedFeature> registerKey(String name) {

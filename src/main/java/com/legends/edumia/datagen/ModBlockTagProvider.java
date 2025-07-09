@@ -76,5 +76,36 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                     .add(set.strippedLog().get())
                     .add(set.strippedWood().get());
         }
+
+        tag(TagLoader.Blocks.BASE_STONE_EDUMIA)
+                .addTag(BlockTags.BASE_STONE_OVERWORLD)
+                .add(Blocks.BLACKSTONE);
+
+        tag(TagLoader.Blocks.ALT_STONE)
+                .add(Blocks.SMOOTH_SANDSTONE)
+                .add(Blocks.SANDSTONE)
+                .add(Blocks.DIORITE)
+                .add(Blocks.GRANITE)
+                .add(Blocks.ANDESITE);
+
+        tag(TagLoader.Blocks.STONE_ORES)
+                .add(Blocks.COAL_ORE)
+                .add(Blocks.COPPER_ORE)
+                .add(Blocks.DIAMOND_ORE)
+                .add(Blocks.REDSTONE_ORE)
+                .add(Blocks.IRON_ORE)
+                .add(Blocks.LAPIS_ORE)
+                .add(Blocks.EMERALD_ORE)
+                .add(Blocks.GOLD_ORE);
+
+        tag(TagLoader.Blocks.DEEPSLATE_ORES)
+                .add(Blocks.DEEPSLATE_COAL_ORE)
+                .add(Blocks.DEEPSLATE_COPPER_ORE)
+                .add(Blocks.DEEPSLATE_DIAMOND_ORE)
+                .add(Blocks.DEEPSLATE_REDSTONE_ORE)
+                .add(Blocks.DEEPSLATE_IRON_ORE)
+                .add(Blocks.DEEPSLATE_LAPIS_ORE)
+                .add(Blocks.DEEPSLATE_EMERALD_ORE)
+                .add(Blocks.DEEPSLATE_GOLD_ORE);
     }
 }

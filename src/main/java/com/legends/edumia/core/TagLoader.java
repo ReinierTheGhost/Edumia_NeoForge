@@ -15,9 +15,18 @@ import net.minecraft.world.level.block.entity.BannerPattern;
 public class TagLoader {
     public static class Blocks {
 
+
+        public static final TagKey<Block> BASE_STONE_EDUMIA = createTag("base_stone_edumia");
+        public static final TagKey<Block> ALT_STONE = createTag("alt_stone");
+
+        public static final TagKey<Block> STONE_ORES = createTag("stone_ores");
+        public static final TagKey<Block> DEEPSLATE_ORES = createTag("deepslate_ores");
+
         public static final TagKey<Block> GRAVEL = createTag("gravel");
         public static final TagKey<Block> DIRT = createTag("dirt");
 
+
+        public static final TagKey<Block> UNDERGROUND_JUNGLE_REPLACEABLE = createTag("underground_jungle_replaceable");
         public static final TagKey<Block> TREE_BRANCH_REPLACEABLE = createTag("tree_branch_replaceable");
         public static final TagKey<Block> VOLCANIC_PLANT_SURFACE = createTag("volcanic_plant_surface");
         public static final TagKey<Block> GROUND_MAHOGANY_SAPLING = createTag("mahogany_sapling");

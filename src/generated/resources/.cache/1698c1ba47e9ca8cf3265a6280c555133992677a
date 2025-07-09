@@ -1,8 +1,10 @@
-// 1.21.1	2025-06-18T14:59:20.9189264	Tags for minecraft:block mod id edumia
+// 1.21.1	2025-07-02T16:16:43.8668935	Tags for minecraft:block mod id edumia
 3e434f0a86fbcd633cfff91dc0e92ccd3f31bd67 data/edumia/tags/block/almond_logs.json
+10931734a167c5c827331d49f3aef44c98c7ada1 data/edumia/tags/block/alt_stone.json
 ae6219d1827772f22e3df50c609f5244e203de8d data/edumia/tags/block/apple_logs.json
 9cd2fda8149e35f2183333d9280ff853f4a0a4e8 data/edumia/tags/block/aspen_logs.json
 1553f96c4cca5855053a4901b160c7e3ca0bc1c8 data/edumia/tags/block/banana_logs.json
+1de9c188971430f81ea6d3dcc4ab37eab23e08f5 data/edumia/tags/block/base_stone_edumia.json
 0430c4e1c41c8baea7985b9a20f76dad6281878c data/edumia/tags/block/beech_logs.json
 db80a0a81916b5f0383c035c61e9ba58a5bb1092 data/edumia/tags/block/blackthorn_logs.json
 223c4538827841ed1c5ba6f8972e99840c3487d7 data/edumia/tags/block/black_oak_logs.json
@@ -12,6 +14,7 @@ e6eb2daa44d3fcf722cb03cf643e8d87bc18465f data/edumia/tags/block/charred_logs.jso
 c8f589974b15cab84d247d7332c9922aba1b25cc data/edumia/tags/block/cherry_logs.json
 a85d08c7014dd2692cb2a7ebc7d8d0e2851fa2b4 data/edumia/tags/block/cypress_logs.json
 e47eca1b8ccb569d3fe82c8f638d5ab6929585f4 data/edumia/tags/block/date_palm_logs.json
+eda7e92f5dc98dd136335f515443bc3f350c33e5 data/edumia/tags/block/deepslate_ores.json
 d0484616118b3d9918d57e682b54cb7136ff4cbd data/edumia/tags/block/dragon_blood_logs.json
 34629053ff6f1be319425df41168d8d5c77d8912 data/edumia/tags/block/fir_logs.json
 c2abe4f19d06a7a0924563ed5df68f12863364be data/edumia/tags/block/ghost_gum_logs.json
@@ -33,6 +36,7 @@ f6c05272bd169e943d098dc94b2648bf891a6528 data/edumia/tags/block/pine_logs.json
 109368ea895936f891cfcf3d641b83834d23d763 data/edumia/tags/block/red_oak_logs.json
 9eb5f93b06553889f4df01a9c5253b974049c55a data/edumia/tags/block/reeds_placeable_on.json
 d1fe052c9a6234390171cdac2521e33e29f8eb22 data/edumia/tags/block/silver_spruce_logs.json
+1d2d96864ec3643c7aa65c07aa8617bb7d1c3ab9 data/edumia/tags/block/stone_ores.json
 8c21abb6cd6cee398e499e2f5b9d3baf4b0b2edb data/edumia/tags/block/white_ash_logs.json
 e3d0e9968fad6e57ae5428b89d946fbc40acbf7e data/edumia/tags/block/willow_logs.json
 3e314fb5a07ccb2a050e2782574d4e605aa020f9 data/minecraft/tags/block/buttons.json

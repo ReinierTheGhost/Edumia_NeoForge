@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "default": {
+      "feature": "edumia:caves/jungle/lollipop_tree",
+      "placement": []
+    },
+    "features": [
+      {
+        "chance": 0.2,
+        "feature": {
+          "feature": "edumia:caves/jungle/cherry_tree",
+          "placement": []
+        }
+      }
+    ]
+  }
+}

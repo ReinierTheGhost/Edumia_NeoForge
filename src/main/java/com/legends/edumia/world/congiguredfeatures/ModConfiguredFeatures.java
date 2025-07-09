@@ -5,6 +5,8 @@ import com.legends.edumia.blocks.Layer;
 import com.legends.edumia.world.congiguredfeatures.beach.BeachConfiguredFeatures;
 import com.legends.edumia.world.congiguredfeatures.biomes.FairyBiomesConfiguredFeatures;
 import com.legends.edumia.world.congiguredfeatures.boulders.BoulderConfiguredFeatures;
+import com.legends.edumia.world.congiguredfeatures.caves.CaveConfiguredFeatures;
+import com.legends.edumia.world.congiguredfeatures.caves.JungleCaveConfiguredFeatures;
 import com.legends.edumia.world.congiguredfeatures.crystals.CrystalConfiguresFeatures;
 import com.legends.edumia.world.congiguredfeatures.ores.VanillaBlockOreConfiguredFeatures;
 import com.legends.edumia.world.congiguredfeatures.plants.FlowerConfiguredFeatures;
@@ -101,6 +103,8 @@ public class ModConfiguredFeatures {
         MirwoodNutTreeConfiguredFeatures.bootstrap(context);
         MushroomConfiguredFeatures.bootstrap(context);
         VanillaBlockOreConfiguredFeatures.bootstrap(context);
+        CaveConfiguredFeatures.bootstrap(context);
+        JungleCaveConfiguredFeatures.bootstrap(context);
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name){

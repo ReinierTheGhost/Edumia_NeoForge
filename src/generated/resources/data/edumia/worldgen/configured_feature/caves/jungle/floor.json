@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "default": {
+      "feature": "edumia:caves/jungle/moss_patch",
+      "placement": []
+    },
+    "features": [
+      {
+        "chance": 0.35,
+        "feature": {
+          "feature": "edumia:caves/jungle/muddy_roots_ore",
+          "placement": []
+        }
+      }
+    ]
+  }
+}
