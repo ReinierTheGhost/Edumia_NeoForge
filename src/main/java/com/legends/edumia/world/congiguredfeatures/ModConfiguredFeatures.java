@@ -6,6 +6,7 @@ import com.legends.edumia.world.congiguredfeatures.beach.BeachConfiguredFeatures
 import com.legends.edumia.world.congiguredfeatures.biomes.FairyBiomesConfiguredFeatures;
 import com.legends.edumia.world.congiguredfeatures.boulders.BoulderConfiguredFeatures;
 import com.legends.edumia.world.congiguredfeatures.caves.CaveConfiguredFeatures;
+import com.legends.edumia.world.congiguredfeatures.caves.FungalCaveConfiguredFeatures;
 import com.legends.edumia.world.congiguredfeatures.caves.JungleCaveConfiguredFeatures;
 import com.legends.edumia.world.congiguredfeatures.crystals.CrystalConfiguresFeatures;
 import com.legends.edumia.world.congiguredfeatures.ores.VanillaBlockOreConfiguredFeatures;
@@ -105,6 +106,7 @@ public class ModConfiguredFeatures {
         VanillaBlockOreConfiguredFeatures.bootstrap(context);
         CaveConfiguredFeatures.bootstrap(context);
         JungleCaveConfiguredFeatures.bootstrap(context);
+        FungalCaveConfiguredFeatures.bootstrap(context);
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name){

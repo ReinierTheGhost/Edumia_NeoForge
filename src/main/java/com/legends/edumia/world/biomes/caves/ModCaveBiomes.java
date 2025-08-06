@@ -4,6 +4,8 @@ package com.legends.edumia.world.biomes.caves;
 import com.legends.edumia.world.biomes.BiomeColorsDTO;
 import com.legends.edumia.world.biomes.EdumiaBiomeKeys;
 import com.legends.edumia.world.biomes.surface.BiomeData;
+import com.legends.edumia.world.placedfeatures.caves.CavePlacedFeatures;
+import com.legends.edumia.world.placedfeatures.caves.JungleCavePlacedFeatures;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BiomeDefaultFeatures;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -29,13 +31,16 @@ public class ModCaveBiomes {
     public static final int defaultWater = 4159204;
     public static final int defaultWaterFog = 329011;
 
-    private static List<ResourceKey<PlacedFeature>> undergroundOres = new ArrayList<>();;
+    private static List<ResourceKey<PlacedFeature>> vegetation = new ArrayList<>();
+    private static List<ResourceKey<PlacedFeature>> undergroundOres = new ArrayList<>();
+    private static List<ResourceKey<PlacedFeature>> undergroundDecoration = new ArrayList<>();
 
     public static CaveBiomesMap defaultCaves = new CaveBiomesMap();
     public static CaveBiomesMap ashCaves = new CaveBiomesMap();
     public static CaveBiomesMap forodCaves = new CaveBiomesMap();
     public static CaveBiomesMap haradCaves = new CaveBiomesMap();
     public static CaveBiomesMap avelionCaves = new CaveBiomesMap();
+    public static CaveBiomesMap jungleCaves = new CaveBiomesMap();
 
     public static void init() {
         defaultCaves.addCave(new CaveBiomeDTO(EdumiaBiomeKeys.LUSH_CAVE, new Vec2(-1.0f,0f)));
@@ -56,6 +61,8 @@ public class ModCaveBiomes {
         forodCaves.addCave(new CaveBiomeDTO(EdumiaBiomeKeys.DRIPSTONE_CAVE, new Vec2(1.0f,0f)));
 
         avelionCaves.addCave(new CaveBiomeDTO(EdumiaBiomeKeys.BASIC_CAVE, new Vec2(0.0f, 1.0f)));
+
+        jungleCaves.addCave(new CaveBiomeDTO(EdumiaBiomeKeys.JUNGLE_CAVE, new Vec2(1.0f, 0f)));
     }
 
     public static ResourceKey<Biome> getBiome(Vec2 coordinates, BiomeData surfaceBiome) {
@@ -65,6 +72,7 @@ public class ModCaveBiomes {
                 case HARAD -> haradCaves.getClosestBiome(coordinates);
                 case FOROD -> forodCaves.getClosestBiome(coordinates);
                 case AVELION -> avelionCaves.getClosestBiome(coordinates);
+                case JUNGLE -> jungleCaves.getClosestBiome(coordinates);
                 default -> defaultCaves.getClosestBiome(coordinates);
             };
             return defaultCaves.getClosestBiome(coordinates);
@@ -94,6 +102,9 @@ public class ModCaveBiomes {
                 defaultSky, defaultFog, defaultWater, defaultWaterFog, 10928742, 11259497)));
         context.register(EdumiaBiomeKeys.ICE_CAVE, createBasicCave(context, new BiomeColorsDTO(
                 defaultSky, defaultFog, defaultWater, defaultWaterFog, 11121530, 10990723)));
+
+        context.register(EdumiaBiomeKeys.JUNGLE_CAVE, createJungleCave(context, new BiomeColorsDTO(
+                8103167, 12638463, 4570768, 329011, 11121530, 8896601)));
     }
 
     public static Biome createBasicCave(BootstrapContext<Biome> context, BiomeColorsDTO biomeColors) {
@@ -101,6 +112,21 @@ public class ModCaveBiomes {
         BiomeGenerationSettings.Builder generationSettings = new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE),
                 context.lookup(Registries.CONFIGURED_CARVER));
 
+        addBasicFeatures(generationSettings, true);
+
+        return createBiome(biomeColors, spawnSettings, generationSettings, 0.5f, true);
+    }
+
+    public static Biome createJungleCave(BootstrapContext<Biome> context, BiomeColorsDTO biomeColors) {
+        MobSpawnSettings.Builder spawnSettings = new MobSpawnSettings.Builder();
+        BiomeGenerationSettings.Builder generationSettings = new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE),
+                context.lookup(Registries.CONFIGURED_CARVER));
+
+        vegetation.add(CavePlacedFeatures.NOISE_REDUCER);
+        vegetation.add(CavePlacedFeatures.NOISE_REDUCER_SMALL);
+        vegetation.add(JungleCavePlacedFeatures.VEGETATION);
+        vegetation.add(JungleCavePlacedFeatures.FLOOR);
+        vegetation.add(JungleCavePlacedFeatures.CEILING_MOSS);
         addBasicFeatures(generationSettings, true);
 
         return createBiome(biomeColors, spawnSettings, generationSettings, 0.5f, true);
@@ -133,8 +159,23 @@ public class ModCaveBiomes {
     public static Biome createBiome(BiomeColorsDTO biomeColors, MobSpawnSettings.Builder spawnSettings, BiomeGenerationSettings.Builder generationSettings, float temperature, boolean precipitation) {
 
         undergroundOres = undergroundOres.stream().sorted(Comparator.comparing(a -> a.location().toString())).toList();
+
+        undergroundDecoration = undergroundDecoration.stream().sorted(Comparator.comparing(a -> a.location().toString())).toList();
+
+        vegetation = vegetation.stream().sorted(Comparator.comparing(a -> a.location().toString())).toList();
+        for (int i = 0; i < vegetation.size() - 1; i++){
+            if (vegetation.get(i).location().toString().equals(vegetation.get(i + 1).location().toString())){
+                throw new IllegalStateException("Duplicate value in list for: " + vegetation.get(i).location().toString());
+            }
+        }
         for (ResourceKey<PlacedFeature> feature: undergroundOres) {
             generationSettings.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, feature);
+        }
+        for (ResourceKey<PlacedFeature> feature : undergroundDecoration){
+            generationSettings.addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, feature);
+        }
+        for (ResourceKey<PlacedFeature> feature: vegetation) {
+            generationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, feature);
         }
 
         Biome biome = (new Biome.BiomeBuilder())
@@ -153,6 +194,8 @@ public class ModCaveBiomes {
                 .generationSettings(generationSettings.build())
                 .build();
         undergroundOres = new ArrayList<>();
+        undergroundDecoration = new ArrayList<>();
+        vegetation = new ArrayList<>();
         return biome;
     }
 }

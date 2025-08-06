@@ -1,0 +1,58 @@
+{
+  "carvers": {},
+  "downfall": 0.5,
+  "effects": {
+    "fog_color": 12638463,
+    "foliage_color": 8896601,
+    "grass_color": 11121530,
+    "sky_color": 8103167,
+    "water_color": 4570768,
+    "water_fog_color": 329011
+  },
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "minecraft:ore_andesite_lower",
+      "minecraft:ore_andesite_upper",
+      "minecraft:ore_diorite_lower",
+      "minecraft:ore_diorite_upper",
+      "minecraft:ore_dirt",
+      "minecraft:ore_granite_lower",
+      "minecraft:ore_granite_upper",
+      "minecraft:ore_gravel",
+      "minecraft:ore_tuff",
+      "minecraft:spring_water"
+    ],
+    [],
+    [],
+    [
+      "minecraft:glow_lichen",
+      "edumia:caves/jungle/ceiling_moss",
+      "edumia:caves/jungle/floor",
+      "edumia:caves/jungle/vegetation",
+      "edumia:caves/noise_reducer",
+      "edumia:caves/noise_reducer_small"
+    ],
+    [
+      "minecraft:freeze_top_layer"
+    ]
+  ],
+  "has_precipitation": true,
+  "spawn_costs": {},
+  "spawners": {
+    "ambient": [],
+    "axolotls": [],
+    "creature": [],
+    "misc": [],
+    "monster": [],
+    "underground_water_creature": [],
+    "water_ambient": [],
+    "water_creature": []
+  },
+  "temperature": 0.5
+}

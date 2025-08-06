@@ -9,6 +9,7 @@ public enum MetalTypes implements StringRepresentable {
     EMPTY(-1, "empty", null, null, false, 0),
 
     COPPER(0, "copper", Items.COPPER_INGOT, null, true, 11823181),
+    BRONZE(1, "bronze", null, null, false, 1921992),
 
     IRON(2, "iron", Items.IRON_INGOT, Items.IRON_NUGGET, true, 15527148),
     GOLD(3, "gold", Items.GOLD_INGOT, Items.GOLD_NUGGET, true, 14594349),

@@ -1,0 +1,130 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "default": {
+      "feature": "edumia:caves/jungle/cherry_petals",
+      "placement": [
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:matching_blocks",
+            "blocks": [
+              "minecraft:mud",
+              "minecraft:moss_block",
+              "minecraft:muddy_mangrove_roots"
+            ],
+            "offset": [
+              0,
+              -1,
+              0
+            ]
+          }
+        }
+      ]
+    },
+    "features": [
+      {
+        "chance": 0.2,
+        "feature": {
+          "feature": "edumia:caves/jungle/azalea_bush",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                  "minecraft:mud",
+                  "minecraft:moss_block",
+                  "minecraft:muddy_mangrove_roots"
+                ],
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chance": 0.2,
+        "feature": {
+          "feature": "edumia:caves/jungle/pointed_dripstone",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                  "minecraft:mud",
+                  "minecraft:moss_block",
+                  "minecraft:deepslate",
+                  "minecraft:muddy_mangrove_roots"
+                ],
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chance": 0.2,
+        "feature": {
+          "feature": "edumia:caves/jungle/lichen",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                  "minecraft:mud",
+                  "minecraft:moss_block",
+                  "minecraft:muddy_mangrove_roots"
+                ],
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chance": 0.2,
+        "feature": {
+          "feature": {
+            "type": "minecraft:bamboo",
+            "config": {
+              "probability": 0.2
+            }
+          },
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                  "minecraft:mud",
+                  "minecraft:moss_block",
+                  "minecraft:muddy_mangrove_roots"
+                ],
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

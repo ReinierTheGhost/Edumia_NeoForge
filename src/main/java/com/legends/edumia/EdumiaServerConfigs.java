@@ -5,8 +5,6 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.config.ModConfigEvent;
 import net.neoforged.neoforge.common.ModConfigSpec;
 
-import java.io.File;
-
 @EventBusSubscriber(modid = Edumia.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
 public class EdumiaServerConfigs {
 
@@ -49,14 +47,9 @@ public class EdumiaServerConfigs {
         SPEC = BUILDER.build();
     }
 
-//    public static boolean enableReturnToOverworld;
-//    public static boolean enableFactionReset;
-//    public static int delayOnTeleportConfirmation;
     @SubscribeEvent
     static void onLoad(final ModConfigEvent event)
     {
-//        enableReturnToOverworld = ENABLE_RETURN_TO_OVERWORLD.get();
-//        enableFactionReset = ENABLE_FACTION_RESET.get();
-//        delayOnTeleportConfirmation = DELAY_ON_TELEPORT_CONFIRMATION.get();
+
     }
 }

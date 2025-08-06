@@ -99,6 +99,7 @@ public class EdumiaBiomeKeys extends Biomes {
     public static final ResourceKey<Biome> MISTIC_CAVE = EdumiaBiomeKeys.register("mithril_cave");
     public static final ResourceKey<Biome> DRY_CAVE = EdumiaBiomeKeys.register("dry_cave");
     public static final ResourceKey<Biome> ICE_CAVE = EdumiaBiomeKeys.register("ice_cave");
+    public static final ResourceKey<Biome> JUNGLE_CAVE = EdumiaBiomeKeys.register("jungle_cave");
 
     // endregion
 

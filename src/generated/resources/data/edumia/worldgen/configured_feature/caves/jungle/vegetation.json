@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "default": {
+      "feature": "edumia:caves/jungle/high_foliage",
+      "placement": []
+    },
+    "features": [
+      {
+        "chance": 0.75,
+        "feature": {
+          "feature": "edumia:caves/jungle/low_foliage",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "blocks": "minecraft:air"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chance": 0.35,
+        "feature": {
+          "feature": "edumia:caves/jungle/trees",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "blocks": "minecraft:air"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -12,6 +12,20 @@
           "feature": "edumia:caves/jungle/cherry_tree",
           "placement": []
         }
+      },
+      {
+        "chance": 0.08,
+        "feature": {
+          "feature": "edumia:caves/fungal/brown_medium",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.08,
+        "feature": {
+          "feature": "edumia:caves/fungal/red_medium",
+          "placement": []
+        }
       }
     ]
   }

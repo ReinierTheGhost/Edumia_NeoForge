@@ -133,6 +133,7 @@ dependencies {
 //    runtimeOnly "curse.maven:athena-841890:5629395"
 //    runtimeOnly "curse.maven:chipped-456956:5813117"
     implementation "curse.maven:glitchcore-955399:5660740"
+    implementation "curse.maven:terralith-513688:6090387"
 //    implementation "curse.maven:dynamictrees-252818:6360173"
 //    implementation "curse.maven:create-328085:6323264"
 

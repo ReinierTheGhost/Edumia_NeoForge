@@ -6,5 +6,6 @@ public enum CaveType {
     FOROD,
     ASHEN,
     HARAD,
-    AVELION
+    AVELION,
+    JUNGLE
 }

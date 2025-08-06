@@ -134,7 +134,8 @@ public class EdumiaChunkGenerator extends ChunkGenerator {
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.BASALT_CAVE),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.MAGMA_CAVE),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.DRY_CAVE),
-                        biomeRegistry.getOrThrow(EdumiaBiomeKeys.ICE_CAVE)
+                        biomeRegistry.getOrThrow(EdumiaBiomeKeys.ICE_CAVE),
+                        biomeRegistry.getOrThrow(EdumiaBiomeKeys.JUNGLE_CAVE)
                 )))
         );
 
