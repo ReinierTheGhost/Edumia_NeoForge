@@ -144,7 +144,7 @@ public class MapBiomeData {
         addBiome(new BiomeData(EdumiaBiomeKeys.GENSAI_ROCKY_COAST, EdumiaBiomeDataConfigs.gensaiShores, EdumiaBiomeDataConfigs.redSandLayers,
                 new BiomeColorsDTO(desertSky, defaultFog, 5212644, 333363, 12107900, 10860366)));
 
-        addBiome(new BiomeData(EdumiaBiomeKeys.MYRWOOD_JUNGLE, EdumiaBiomeDataConfigs.grassPlains, EdumiaBiomeDataConfigs.stoneLayers,
+        addBiome(new BiomeData(EdumiaBiomeKeys.MYRWOOD_JUNGLE, EdumiaBiomeDataConfigs.grassPlains, EdumiaBiomeDataConfigs.mudLayers,
                 new BiomeColorsDTO(10599654, 10664914, 7856375, 329011, 7514630, 7451654),
                 CaveType.JUNGLE));
         addBiome(new BiomeData(EdumiaBiomeKeys.MYRWOOD_JUNGLE_CLEARING, EdumiaBiomeDataConfigs.grassPlains, EdumiaBiomeDataConfigs.stoneLayers,

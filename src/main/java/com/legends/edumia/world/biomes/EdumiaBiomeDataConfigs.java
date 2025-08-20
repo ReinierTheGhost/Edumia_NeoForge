@@ -149,6 +149,9 @@ public class EdumiaBiomeDataConfigs {
     public static BlocksLayeringData stoneLayers = new BlocksLayeringData()
             .addLayerData(1.0f, Blocks.STONE);
 
+    public static BlocksLayeringData mudLayers = new BlocksLayeringData()
+            .addLayerData(1.0f, Blocks.MUD);
+
     public static BlocksLayeringData volcanicRockLayers = new BlocksLayeringData()
             .addLayerData(1.0f, () -> StoneSets.VOLCANIC_ROCK.block().get());
 
