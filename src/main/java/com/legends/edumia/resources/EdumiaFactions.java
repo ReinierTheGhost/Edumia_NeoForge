@@ -34,7 +34,7 @@ public class EdumiaFactions {
     public static final Faction HIGH_ELVES;
     public static final Faction HUMAN;
     public static final Faction FAIRIES;
-//    public static final Faction GENSAI;
+    public static final Faction GENSAI;
     public static final Faction DARK_ELVES;
     public static final Faction ORCS;
     public static final Faction DEMONS;
@@ -54,6 +54,7 @@ public class EdumiaFactions {
         register(context, factionHolderGetter, FAIRIES);
         register(context, factionHolderGetter, HUMAN);
         register(context, factionHolderGetter, DARK_ELVES);
+        register(context, factionHolderGetter, GENSAI);
         register(context, factionHolderGetter, ORCS);
         register(context, factionHolderGetter, OGRES);
         register(context, factionHolderGetter, DEMONS);
@@ -301,6 +302,38 @@ public class EdumiaFactions {
                 new SpawnDataHandler(List.of(
                         new SpawnData(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "demon.ashkaroth"),
                                 new Vector2d(1380, 985))
+                )), List.of(), List.of()
+        );
+        // endregion
+
+        // region [FAIRIES]
+        GENSAI = new Faction("gensai", true, Disposition.NEUTRAL, FactionType.FACTION, null, null,
+                new HashMap<>(){{
+                    put(NpcRank.CIVILIAN, List.of(
+                            EdumiaNpcs.GENSAI_CIVILIAN
+                    ));
+                    put(NpcRank.MILITIA, List.of(
+                            EdumiaNpcs.GENSAI_CIVILIAN
+                    ));
+                    put(NpcRank.SOLDIER, List.of(
+                            EdumiaNpcs.GENSAI_CIVILIAN
+                    ));
+                    put(NpcRank.KNIGHT, List.of(
+                            EdumiaNpcs.GENSAI_CIVILIAN
+                    ));
+                    put(NpcRank.VETERAN, List.of(
+                            EdumiaNpcs.GENSAI_CIVILIAN
+                    ));
+                    put(NpcRank.LEADER, List.of(
+                            EdumiaNpcs.GENSAI_CIVILIAN
+                    ));
+                }},
+                new BannerData(DyeColor.CYAN, List.of(
+                        new BannerData.BannerPatternWithColor(EdumiaBannerPatterns.GENSAI, DyeColor.WHITE)
+                )),
+                new SpawnDataHandler(List.of(
+                        new SpawnData(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "gensai.glyndoril"),
+                                new Vector2d(2749, 1104))
                 )), List.of(), List.of()
         );
         // endregion

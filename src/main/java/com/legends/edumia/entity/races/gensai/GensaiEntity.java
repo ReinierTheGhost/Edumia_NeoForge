@@ -1,13 +1,95 @@
 package com.legends.edumia.entity.races.gensai;
 
 import com.legends.edumia.entity.NpcEntity;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.PathfinderMob;
-import net.minecraft.world.entity.npc.Villager;
+import com.legends.edumia.resources.EdumiaFactions;
+import com.legends.edumia.resources.EdumiaRaces;
+import com.legends.edumia.resources.datas.npcs.data.NpcRank;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.DifficultyInstance;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.*;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.ServerLevelAccessor;
+import org.jetbrains.annotations.Nullable;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class GensaiEntity extends NpcEntity {
+
+    private static final Logger log = LoggerFactory.getLogger(GensaiEntity.class);
+    public static final AnimationState idleAnimationState = new AnimationState();
+
     public GensaiEntity(EntityType<? extends PathfinderMob> entityType, Level level) {
         super(entityType, level);
+        String name = this.getTypeName().getString();
+        if (name.contains("civilian")){
+            this.setRank(NpcRank.CIVILIAN);
+        }
+    }
+
+    @Override
+    protected ResourceLocation getFactionId() {
+        return EdumiaFactions.GENSAI.getId();
+    }
+
+    @Override
+    protected ResourceLocation getRaceId() {
+        return EdumiaRaces.GENSAI.getId();
+    }
+
+
+    @Override
+    public @Nullable SpawnGroupData finalizeSpawn(ServerLevelAccessor level, DifficultyInstance difficulty, MobSpawnType spawnType,
+                                                  @Nullable SpawnGroupData spawnGroupData) {
+        spawnGroupData = super.finalizeSpawn(level, difficulty, spawnType, spawnGroupData);
+        RandomSource random = level.getRandom();
+        this.populateDefaultEquipmentSlots(random, difficulty);
+        return spawnGroupData;
+    }
+
+    @Override
+    protected void registerGoals() {
+        super.registerGoals();
+        int i = 2;
+        initNeutralTargetSelector(i);
+    }
+
+    @Override
+    protected void actuallyHurt(DamageSource damageSource, float damageAmount) {
+        if (damageSource.getEntity() instanceof GensaiEntity){
+            return;
+        }
+        super.actuallyHurt(damageSource, damageAmount);
+    }
+
+    public GensaiVariant getVariant(){
+        return GensaiVariant.byId(this.getId());
+    }
+
+    @Override
+    public void tick() {
+        super.tick();
+        if(this.level().isClientSide()) {
+            setupAnimationStates();
+        }
+    }
+
+    private void setupAnimationStates() {
+        idleAnimationState.start(this.tickCount);
+    }
+
+    public static AttributeSupplier.Builder setSoldierAttribute() {
+        return Mob.createMobAttributes()
+                .add(Attributes.MAX_HEALTH, 22.0)
+                .add(Attributes.ATTACK_DAMAGE, 1.0)
+                .add(Attributes.ATTACK_SPEED, 1.0)
+                .add(Attributes.ENTITY_INTERACTION_RANGE, 2.75)
+                .add(Attributes.MOVEMENT_SPEED, 0.3)
+                .add(Attributes.FOLLOW_RANGE, 48.0)
+                .add(Attributes.SCALE, 1.0)
+                .add(Attributes.FALL_DAMAGE_MULTIPLIER, 1.0);
     }
 }

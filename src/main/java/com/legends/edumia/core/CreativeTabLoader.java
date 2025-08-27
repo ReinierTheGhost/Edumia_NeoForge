@@ -281,6 +281,7 @@ public class CreativeTabLoader {
                                 entries.accept(ItemLoader.ORC_SPAWN_EGG.get());
                                 entries.accept(ItemLoader.OGRE_SPAWN_EGG.get());
                                 entries.accept(ItemLoader.DEMON_SPAWN_EGG.get());
+                                entries.accept(ItemLoader.GENSAI_SPAWN_EGG.get());
                                 entries.accept(ItemLoader.BUTTERFLY_SPAWN_EGG.get());
                                 entries.accept(ItemLoader.DRAGONFLY_SPAWN_EGG.get());
                             }).build());

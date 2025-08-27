@@ -21,7 +21,7 @@
         "pool": [
           "edumia:demon.civilian"
         ],
-        "rank": "MILITIA"
+        "rank": "KNIGHT"
       },
       {
         "pool": [
@@ -45,13 +45,13 @@
         "pool": [
           "edumia:demon.civilian"
         ],
-        "rank": "KNIGHT"
+        "rank": "LEADER"
       },
       {
         "pool": [
           "edumia:demon.civilian"
         ],
-        "rank": "LEADER"
+        "rank": "MILITIA"
       }
     ]
   },

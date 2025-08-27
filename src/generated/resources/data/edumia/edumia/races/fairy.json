@@ -15,12 +15,12 @@
         "value": 22.0
       },
       {
-        "id": "minecraft:generic.scale",
-        "value": 0.81
-      },
-      {
         "id": "minecraft:player.entity_interaction_range",
         "value": 2.75
+      },
+      {
+        "id": "minecraft:generic.scale",
+        "value": 0.81
       },
       {
         "id": "minecraft:generic.movement_speed",

@@ -137,9 +137,9 @@ public class Race {
             case RaceType.FAIRY:
                 entity = new FairyEntity(EdumiaEntities.FAIRY_CIVILIAN.get(), world);
                 break;
-//            case RaceType.GENSAI:
-//                entity = new GensaiEntity(EntityType.VILLAGER, world);
-//                break;
+            case RaceType.GENSAI:
+                entity = new GensaiEntity(EdumiaEntities.GENSAI_CIVILIAN.get(), world);
+                break;
             default:
                 entity = new BanditHumanEntity(EntityType.VILLAGER, world);
                 break;

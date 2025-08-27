@@ -6,6 +6,7 @@ import com.legends.edumia.entity.animals.dragonfly.DragonflyEntity;
 import com.legends.edumia.entity.races.darkelves.DarkElfEntity;
 import com.legends.edumia.entity.races.demon.DemonEntity;
 import com.legends.edumia.entity.races.fairy.FairyEntity;
+import com.legends.edumia.entity.races.gensai.GensaiEntity;
 import com.legends.edumia.entity.races.highelves.HighElfEntity;
 import com.legends.edumia.entity.races.human.HumanEntity;
 import com.legends.edumia.entity.races.ogre.OgreEntity;
@@ -25,7 +26,6 @@ public class EdumiaEntities {
     public static final Supplier<EntityType<FairyEntity>> FAIRY_CIVILIAN =
             ENTITY_TYPES.register("fairy", () -> EntityType.Builder.of(FairyEntity::new, MobCategory.CREATURE)
                     .sized(0.6F, 2F).build("fairy"));
-
     public static final Supplier<EntityType<HumanEntity>> HUMAN_CIVILIAN =
             ENTITY_TYPES.register("human", () -> EntityType.Builder.of(HumanEntity::new, MobCategory.CREATURE)
                     .sized(0.6F, 2F).build("human"));
@@ -44,6 +44,9 @@ public class EdumiaEntities {
     public static final Supplier<EntityType<DemonEntity>> DEMON_CIVILIAN =
             ENTITY_TYPES.register("demon", () -> EntityType.Builder.of(DemonEntity::new, MobCategory.CREATURE)
                     .sized(0.6F, 2F).build("demon"));
+    public static final Supplier<EntityType<GensaiEntity>> GENSAI_CIVILIAN =
+            ENTITY_TYPES.register("gensai", () -> EntityType.Builder.of(GensaiEntity::new, MobCategory.CREATURE)
+                    .sized(0.6F, 2F).build("gensai"));
 
 
     //region[ANIMALS]

@@ -38,6 +38,7 @@ public class EdumiaRaces {
     public final static Race ORC;
     public final static Race OGRE;
     public final static Race DEMON;
+    public final static Race GENSAI;
 
 
     @SubscribeEvent
@@ -57,6 +58,7 @@ public class EdumiaRaces {
         register(context, raceRegistryEntryLookup, ORC);
         register(context, raceRegistryEntryLookup, OGRE);
         register(context, raceRegistryEntryLookup, DEMON);
+        register(context, raceRegistryEntryLookup, GENSAI);
     }
 
     private static Race register(BootstrapContext<Race> context, HolderGetter<Race> raceRegistryEntryLookup, Race race) {
@@ -140,6 +142,16 @@ public class EdumiaRaces {
                     put(Attributes.ATTACK_DAMAGE, 1.0);
                     put(Attributes.ENTITY_INTERACTION_RANGE, 2.75);
                     put(Attributes.MOVEMENT_SPEED, 0.1);
+                }}), List.of(), List.of(), List.of());
+
+        GENSAI = new Race(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "gensai"), RaceType.GENSAI,
+                new AttributeData(new HashMap<>(){{
+                    put(Attributes.SCALE, 1.0);
+                    put(Attributes.MAX_HEALTH, 22.0);
+                    put(Attributes.ATTACK_DAMAGE, 1.0);
+                    put(Attributes.ENTITY_INTERACTION_RANGE, 2.75);
+                    put(Attributes.MOVEMENT_SPEED, 0.1);
+                    put(Attributes.FALL_DAMAGE_MULTIPLIER, 1.0);
                 }}), List.of(), List.of(), List.of());
     }
 }

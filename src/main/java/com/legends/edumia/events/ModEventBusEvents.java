@@ -11,6 +11,7 @@ import com.legends.edumia.entity.model.EdumiaEntityModelLayers;
 import com.legends.edumia.entity.races.darkelves.DarkElfEntity;
 import com.legends.edumia.entity.races.demon.DemonEntity;
 import com.legends.edumia.entity.races.fairy.FairyEntity;
+import com.legends.edumia.entity.races.gensai.GensaiEntity;
 import com.legends.edumia.entity.races.highelves.HighElfEntity;
 import com.legends.edumia.entity.races.human.HumanEntity;
 import com.legends.edumia.entity.races.ogre.OgreEntity;
@@ -39,6 +40,7 @@ public class ModEventBusEvents {
         event.registerLayerDefinition(EdumiaEntityModelLayers.ORC, () -> OrcModel.createBodyLayer(CubeDeformation.NONE));
         event.registerLayerDefinition(EdumiaEntityModelLayers.OGRE, () -> OgreModel.createBodyLayer(CubeDeformation.NONE));
         event.registerLayerDefinition(EdumiaEntityModelLayers.DEMON, () -> DemonModel.createBodyLayer(CubeDeformation.NONE));
+        event.registerLayerDefinition(EdumiaEntityModelLayers.GENSAI, () -> GensaiModel.createBodyLayer(CubeDeformation.NONE));
 
         event.registerLayerDefinition(EdumiaEntityModelLayers.BUTTERFLY, ButterflyModel::createBodyLayer);
         event.registerLayerDefinition(EdumiaEntityModelLayers.DRAGONFLY, DragonflyModel::createBodyLayer);
@@ -55,6 +57,7 @@ public class ModEventBusEvents {
         event.put(EdumiaEntities.ORC_CIVILIAN.get(), OrcEntity.setSoldierAttribute().build());
         event.put(EdumiaEntities.OGRE_CIVILIAN.get(), OgreEntity.setSoldierAttribute().build());
         event.put(EdumiaEntities.DEMON_CIVILIAN.get(), DemonEntity.setSoldierAttribute().build());
+        event.put(EdumiaEntities.GENSAI_CIVILIAN.get(), GensaiEntity.setSoldierAttribute().build());
 
         event.put(EdumiaEntities.BUTTERFLY.get(), ButterflyEntity.createAttributes().build());
         event.put(EdumiaEntities.DRAGONFLY.get(), DragonflyEntity.createAttributes().build());
@@ -75,6 +78,8 @@ public class ModEventBusEvents {
         event.register(EdumiaEntities.OGRE_CIVILIAN.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                 Mob::checkMobSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
         event.register(EdumiaEntities.DEMON_CIVILIAN.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                Mob::checkMobSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
+        event.register(EdumiaEntities.GENSAI_CIVILIAN.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                 Mob::checkMobSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 
         event.register(EdumiaEntities.BUTTERFLY.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
