@@ -21,7 +21,19 @@
         "pool": [
           "edumia:human.civilian"
         ],
+        "rank": "SOLDIER"
+      },
+      {
+        "pool": [
+          "edumia:human.civilian"
+        ],
         "rank": "KNIGHT"
+      },
+      {
+        "pool": [
+          "edumia:human.civilian"
+        ],
+        "rank": "LEADER"
       },
       {
         "pool": [
@@ -34,18 +46,6 @@
           "edumia:human.civilian"
         ],
         "rank": "CIVILIAN"
-      },
-      {
-        "pool": [
-          "edumia:human.civilian"
-        ],
-        "rank": "SOLDIER"
-      },
-      {
-        "pool": [
-          "edumia:human.civilian"
-        ],
-        "rank": "LEADER"
       },
       {
         "pool": [

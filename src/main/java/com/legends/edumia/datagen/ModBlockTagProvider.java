@@ -1,6 +1,9 @@
 package com.legends.edumia.datagen;
 
 import com.legends.edumia.Edumia;
+import com.legends.edumia.core.BlockLoader;
+import com.legends.edumia.core.blocksets.SandBlockSets;
+import com.legends.edumia.core.blocksets.StoneSets;
 import com.legends.edumia.core.blocksets.WoodBlockSets;
 import com.legends.edumia.core.TagLoader;
 import com.legends.edumia.datagen.helpers.tags.*;
@@ -20,6 +23,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         super(output, lookupProvider, Edumia.MOD_ID, existingFileHelper);
     }
 
+    @SuppressWarnings("unchecked")
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         tag(TagLoader.Blocks.REEDS_PLACEABLE_ON)
@@ -107,5 +111,15 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(Blocks.DEEPSLATE_LAPIS_ORE)
                 .add(Blocks.DEEPSLATE_EMERALD_ORE)
                 .add(Blocks.DEEPSLATE_GOLD_ORE);
+
+        tag(TagLoader.Blocks.VOLCANIC_PLANT_SURFACE)
+                .add(StoneSets.VOLCANIC_ROCK.block().get())
+                .add(SandBlockSets.VOLCANIC_GRAVEL.block().get())
+                .add(BlockLoader.VOLCANIC_DIRT.get());
+
+
+        tag(TagLoader.Blocks.UNDERGROUND_JUNGLE_REPLACEABLE)
+                .addTags(BlockTags.BASE_STONE_OVERWORLD)
+                .add(Blocks.MUD);
     }
 }

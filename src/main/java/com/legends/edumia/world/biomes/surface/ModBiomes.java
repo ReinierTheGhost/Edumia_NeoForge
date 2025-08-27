@@ -100,6 +100,7 @@ public class ModBiomes {
         createMirwoodMangroveBiome(context, EdumiaBiomeKeys.MYRWOOD_COAST);
 
         createDemonWastelandsBiome(context, EdumiaBiomeKeys.DEMON_WASTELANDS);
+        createAcidBasinBiome(context, EdumiaBiomeKeys.ACIDVEIL_BASIN);
 
         createOasisBiome(context, EdumiaBiomeKeys.OASIS);
         createOceanBiome(context, EdumiaBiomeKeys.OCEAN);
@@ -158,6 +159,16 @@ public class ModBiomes {
         ModBiomeFeatures.addBurnedTrees(vegetation);
 
         ModBiomeFeatures.addGravelOre(vegetation);
+
+        registerBiome(context, biomeResourceKey, spawnSettings, generationSettings);
+    }
+
+    public static void createAcidBasinBiome(BootstrapContext<Biome> context, ResourceKey<Biome> biomeResourceKey) {
+        MobSpawnSettings.Builder spawnSettings = new MobSpawnSettings.Builder();
+        BiomeGenerationSettings.Builder generationSettings = new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE),
+                context.lookup(Registries.CONFIGURED_CARVER));
+
+        ModBiomeFeatures.addLake(rawGeneration);
 
         registerBiome(context, biomeResourceKey, spawnSettings, generationSettings);
     }

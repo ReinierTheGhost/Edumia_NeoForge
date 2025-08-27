@@ -120,6 +120,8 @@ public class MapBiomeData {
 
         addBiome(new BiomeData(EdumiaBiomeKeys.DEMON_WASTELANDS, EdumiaBiomeDataConfigs.ashenDirt, EdumiaBiomeDataConfigs.volcanicRockLayers,
                 new BiomeColorsDTO(5460048, 4999240, 5860962, 731161, 6252369, 4735297)));
+        addBiome(new BiomeData(EdumiaBiomeKeys.ACIDVEIL_BASIN, EdumiaBiomeDataConfigs.ashenDirt, EdumiaBiomeDataConfigs.volcanicRockLayers,
+                new BiomeColorsDTO(5460048, 4999240, 5860962, 731161, 6252369, 4735297)));
 
         addBiome(new BiomeData(EdumiaBiomeKeys.GENSAI_VOLCANO_PLAINS, EdumiaBiomeDataConfigs.gensaiVolcano, EdumiaBiomeDataConfigs.volcanicRockLayers,
                 new BiomeColorsDTO(5460048, 4999240, 5860962, 731161, 6252369, 4735297)));

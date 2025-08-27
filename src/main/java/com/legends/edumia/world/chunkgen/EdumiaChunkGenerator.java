@@ -75,6 +75,7 @@ public class EdumiaChunkGenerator extends ChunkGenerator {
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.DEAD_MARSHES_WATER),
 
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.DEMON_WASTELANDS),
+                        biomeRegistry.getOrThrow(EdumiaBiomeKeys.ACIDVEIL_BASIN),
 
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.DARK_ELF_FOREST),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.GREAT_RIVER),

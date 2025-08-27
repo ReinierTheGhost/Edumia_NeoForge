@@ -84,8 +84,8 @@ public class WoodBlockSets {
             false, ModTreeGrowers.APPLE, List.of(), TagLoader.Items.MAPLE_LOGS, TagLoader.Blocks.MAPLE_LOGS);
     public static SimpleBlockSet MIRWOODNUT = registerWoodSet("mirwoodnut", WOOD_STRENGTH, true, true,
             false, ModTreeGrowers.MIRWOODNUT, List.of(), TagLoader.Items.MIRWOODNUT_LOGS, TagLoader.Blocks.MIRWOODNUT_LOGS);
-    // public static SimpleBlockSet OLIVE = registerWoodSet("olive", WOOD_STRENGTH, true, true,
-//         false, ModTreeGrowers.APPLE, List.of(), TagLoader.Items.OLIVE_LOGS, TagLoader.Blocks.OLIVE_LOGS);
+     public static SimpleBlockSet OLIVE = registerWoodSet("olive", WOOD_STRENGTH, true, true,
+         false, ModTreeGrowers.APPLE, List.of(), TagLoader.Items.OLIVE_LOGS, TagLoader.Blocks.OLIVE_LOGS);
     public static SimpleBlockSet PALM = registerWoodSet("palm", WOOD_STRENGTH, true, true,
             false, ModTreeGrowers.PALM, List.of(), TagLoader.Items.PALM_LOGS, TagLoader.Blocks.PALM_LOGS);
     public static SimpleBlockSet PEAR = registerWoodSet("pear", WOOD_STRENGTH, true, true,
@@ -138,7 +138,7 @@ public class WoodBlockSets {
             MANGO,
             MAPLE,
             MIRWOODNUT,
-//            OLIVE,
+            OLIVE,
             PALM,
             PEAR,
             PINE,

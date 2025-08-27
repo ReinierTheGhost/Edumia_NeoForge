@@ -263,6 +263,7 @@ public class ModBiomeFeatures {
         vegetation.add(CrystalPlacedFeatures.ELVEN_CRYSTAL);
     }
 
+    // region water
     public static void addWaterDelta(List<ResourceKey<PlacedFeature>> vegetation) {
         vegetation.add(ModPlacedFeatures.WATER_DELTA);
     }
@@ -270,6 +271,13 @@ public class ModBiomeFeatures {
     public static void addAbundantWaterDelta(List<ResourceKey<PlacedFeature>> vegetation) {
         vegetation.add(ModPlacedFeatures.ABUNDANT_WATER_DELTA);
     }
+
+    public static void addLake(List<ResourceKey<PlacedFeature>> vegetation){
+        vegetation.add(ModPlacedFeatures.LAKE);
+    }
+    // endregion
+
+
     // region BOULDERS
     public static void addAndesiteBoulder(List<ResourceKey<PlacedFeature>> vegetation) {
         vegetation.add(BoulderPlacedFeatures.ANDESITE_BOULDER);

@@ -21,7 +21,19 @@
         "pool": [
           "edumia:gensai.civilian"
         ],
+        "rank": "SOLDIER"
+      },
+      {
+        "pool": [
+          "edumia:gensai.civilian"
+        ],
         "rank": "KNIGHT"
+      },
+      {
+        "pool": [
+          "edumia:gensai.civilian"
+        ],
+        "rank": "LEADER"
       },
       {
         "pool": [
@@ -34,18 +46,6 @@
           "edumia:gensai.civilian"
         ],
         "rank": "CIVILIAN"
-      },
-      {
-        "pool": [
-          "edumia:gensai.civilian"
-        ],
-        "rank": "SOLDIER"
-      },
-      {
-        "pool": [
-          "edumia:gensai.civilian"
-        ],
-        "rank": "LEADER"
       },
       {
         "pool": [
@@ -64,7 +64,7 @@
           "z": 1104.0
         },
         "dynamic": 1,
-        "id": "edumia:gensai.glyndoril"
+        "id": "edumia:gensai.avenra"
       }
     ]
   }

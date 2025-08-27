@@ -44,17 +44,17 @@
       }
     },
     "log_target": [
-      "edumia:kapok_wood_fence",
-      "edumia:kapok_wood",
       "edumia:kapok_wood_slab",
-      "edumia:kapok_wood_stairs"
+      "edumia:kapok_wood_stairs",
+      "edumia:kapok_wood_fence",
+      "edumia:kapok_wood"
     ],
     "place_from_nbt": [
-      "edumia:kapok_leaves",
+      "edumia:kapok_wood_stairs",
       "edumia:banana_leaves",
       "edumia:kapok_wood_slab",
       "edumia:kapok_wood_fence",
-      "edumia:kapok_wood_stairs",
+      "edumia:kapok_leaves",
       "minecraft:mangrove_roots"
     ]
   }

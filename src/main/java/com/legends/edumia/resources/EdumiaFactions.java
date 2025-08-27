@@ -332,7 +332,7 @@ public class EdumiaFactions {
                         new BannerData.BannerPatternWithColor(EdumiaBannerPatterns.GENSAI, DyeColor.WHITE)
                 )),
                 new SpawnDataHandler(List.of(
-                        new SpawnData(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "gensai.glyndoril"),
+                        new SpawnData(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "gensai.avenra"),
                                 new Vector2d(2749, 1104))
                 )), List.of(), List.of()
         );

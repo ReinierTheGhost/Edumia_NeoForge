@@ -21,15 +21,19 @@
       "noise_to_count_ratio": 1
     },
     {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING_NO_LEAVES"
+    },
+    {
       "type": "minecraft:block_predicate_filter",
       "predicate": {
-        "type": "minecraft:matching_blocks",
-        "blocks": "edumia:volcanic_dirt",
+        "type": "minecraft:matching_block_tag",
         "offset": [
           0,
           -1,
           0
-        ]
+        ],
+        "tag": "edumia:volcanic_plant_surface"
       }
     },
     {

@@ -1,9 +1,7 @@
 package com.legends.edumia.world.congiguredfeatures.trees;
 
-import com.google.common.collect.ImmutableList;
 import com.legends.edumia.Edumia;
 import com.legends.edumia.core.blocksets.WoodBlockSets;
-import com.legends.edumia.core.BlockLoader;
 import com.legends.edumia.world.trees.foliageplacer.EmptyFoliagePlacer;
 import com.legends.edumia.world.trees.trunkplacers.LargeTrunkPlacer;
 import net.minecraft.core.registries.Registries;
@@ -17,7 +15,6 @@ import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfigur
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
-import net.minecraft.world.level.levelgen.feature.treedecorators.AlterGroundDecorator;
 
 public class DeadTreeConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> BURNED_TREE = registerKey("burned_tree");
@@ -29,15 +26,7 @@ public class DeadTreeConfiguredFeatures {
                 BlockStateProvider.simple(Blocks.AIR),
                 new EmptyFoliagePlacer(),
                 new TwoLayersFeatureSize(1, 0, 2))
-                .decorators(
-                        ImmutableList.of(
-                                new AlterGroundDecorator(
-                                        BlockStateProvider.simple(
-                                                BlockLoader.VOLCANIC_DIRT.get()
-                                        )
-                                )
-                        )
-                ).build());
+                .build());
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name){
