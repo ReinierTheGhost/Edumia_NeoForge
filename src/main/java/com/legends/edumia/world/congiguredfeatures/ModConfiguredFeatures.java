@@ -9,6 +9,7 @@ import com.legends.edumia.world.congiguredfeatures.caves.CaveConfiguredFeatures;
 import com.legends.edumia.world.congiguredfeatures.caves.FungalCaveConfiguredFeatures;
 import com.legends.edumia.world.congiguredfeatures.caves.JungleCaveConfiguredFeatures;
 import com.legends.edumia.world.congiguredfeatures.crystals.CrystalConfiguresFeatures;
+import com.legends.edumia.world.congiguredfeatures.disks.VanillaBlockDiskConfiguredFeatures;
 import com.legends.edumia.world.congiguredfeatures.ores.VanillaBlockOreConfiguredFeatures;
 import com.legends.edumia.world.congiguredfeatures.plants.FlowerConfiguredFeatures;
 import com.legends.edumia.world.congiguredfeatures.plants.MushroomConfiguredFeatures;
@@ -38,10 +39,6 @@ import org.checkerframework.checker.units.qual.C;
 
 public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> NOTING = registerKey("noting");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> STONE = registerKey("stone");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> RED_SAND = registerKey("red_sand");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SAND = registerKey("sand");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> LAKE = registerKey("lake");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> SNOW_LAYER_FIRST = registerKey("snow/layers/normal/first");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SNOW_LAYER_SECOND = registerKey("snow/layers/normal/second");
@@ -51,14 +48,7 @@ public class ModConfiguredFeatures {
 
     public static void boostrap(BootstrapContext<ConfiguredFeature<?, ?>> context){
         register(context, NOTING, Feature.NO_OP, new NoneFeatureConfiguration());
-        register(context, STONE, Feature.SIMPLE_BLOCK,
-                new SimpleBlockConfiguration(BlockStateProvider.simple(Blocks.STONE)));
-        register(context, RED_SAND, Feature.SIMPLE_BLOCK,
-                new SimpleBlockConfiguration(BlockStateProvider.simple(Blocks.RED_SAND)));
-        register(context, SAND, Feature.SIMPLE_BLOCK,
-                new SimpleBlockConfiguration(BlockStateProvider.simple(Blocks.SAND)));
-        register(context, LAKE, Feature.SIMPLE_BLOCK,
-                new SimpleBlockConfiguration(BlockStateProvider.simple(Blocks.WATER)));
+
 
         register(context, SNOW_LAYER_FIRST, Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration( new WeightedStateProvider(
                 SimpleWeightedRandomList.<BlockState>builder()
@@ -111,6 +101,8 @@ public class ModConfiguredFeatures {
         CaveConfiguredFeatures.bootstrap(context);
         JungleCaveConfiguredFeatures.bootstrap(context);
         FungalCaveConfiguredFeatures.bootstrap(context);
+        SimpleBlockConfiguredFeatures.boostrap(context);
+        VanillaBlockDiskConfiguredFeatures.bootstrap(context);
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name){

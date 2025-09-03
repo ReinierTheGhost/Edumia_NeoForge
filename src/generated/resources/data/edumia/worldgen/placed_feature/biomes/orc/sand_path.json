@@ -1,5 +1,5 @@
 {
-  "feature": "edumia:stone",
+  "feature": "edumia:simple_blocks/stone",
   "placement": [
     {
       "type": "minecraft:count",

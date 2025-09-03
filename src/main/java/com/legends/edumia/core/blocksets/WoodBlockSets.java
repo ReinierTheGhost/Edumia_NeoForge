@@ -55,6 +55,8 @@ public class WoodBlockSets {
             false, null, List.of(), TagLoader.Items.CHARRED_LOGS, TagLoader.Blocks.CHARRED_LOGS);
     public static SimpleBlockSet CHERRY = registerWoodSet("cherry", WOOD_STRENGTH, true, true,
             false, ModTreeGrowers.APPLE, List.of(), TagLoader.Items.CHERRY_LOGS, TagLoader.Blocks.CHERRY_LOGS);
+    public static SimpleBlockSet CHESTNUT = registerWoodSet("chestnut", WOOD_STRENGTH, true, true,
+            false, ModTreeGrowers.APPLE, List.of(), TagLoader.Items.CHESTNUT_LOGS, TagLoader.Blocks.CHESTNUT_LOGS);
     public static SimpleBlockSet CYPRESS = registerWoodSet("cypress", WOOD_STRENGTH, true, true,
             false, ModTreeGrowers.CYPRESS, List.of(), TagLoader.Items.CYPRESS_LOGS, TagLoader.Blocks.CYPRESS_LOGS);
     public static SimpleBlockSet DATE_PALM = registerWoodSet("date_palm", WOOD_STRENGTH, true, true,
@@ -123,6 +125,7 @@ public class WoodBlockSets {
             BLACKTHORN,
             CEDAR,
             CHERRY,
+            CHESTNUT,
             CYPRESS,
             CHARRED,
             DATE_PALM,

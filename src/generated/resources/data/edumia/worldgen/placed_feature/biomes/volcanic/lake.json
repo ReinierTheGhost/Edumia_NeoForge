@@ -1,5 +1,5 @@
 {
-  "feature": "edumia:lake",
+  "feature": "edumia:simple_blocks/water",
   "placement": [
     {
       "type": "minecraft:count",

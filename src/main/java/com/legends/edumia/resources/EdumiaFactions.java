@@ -306,7 +306,7 @@ public class EdumiaFactions {
         );
         // endregion
 
-        // region [FAIRIES]
+        // region [GENSAI]
         GENSAI = new Faction("gensai", true, Disposition.NEUTRAL, FactionType.FACTION, null, null,
                 new HashMap<>(){{
                     put(NpcRank.CIVILIAN, List.of(

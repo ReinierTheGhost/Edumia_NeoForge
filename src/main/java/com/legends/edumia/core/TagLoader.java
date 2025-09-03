@@ -45,6 +45,7 @@ public class TagLoader {
         public static final TagKey<Block> CEDAR_LOGS = createTag("cedar_logs");
         public static final TagKey<Block> CHARRED_LOGS = createTag("charred_logs");
         public static final TagKey<Block> CHERRY_LOGS = createTag("cherry_logs");
+        public static final TagKey<Block> CHESTNUT_LOGS = createTag("chestnut_logs");
         public static final TagKey<Block> CYPRESS_LOGS = createTag("cypress_logs");
         public static final TagKey<Block> DATE_PALM_LOGS = createTag("date_palm_logs");
         public static final TagKey<Block> DRAGON_BLOOD_LOGS = createTag("dragon_blood_logs");
@@ -89,6 +90,7 @@ public class TagLoader {
         public static final TagKey<Item> CEDAR_LOGS = createTag("cedar_logs");
         public static final TagKey<Item> CHARRED_LOGS = createTag("charred_logs");
         public static final TagKey<Item> CHERRY_LOGS = createTag("cherry_logs");
+        public static final TagKey<Item> CHESTNUT_LOGS = createTag("chestnut_logs");
         public static final TagKey<Item> CYPRESS_LOGS = createTag("cypress_logs");
         public static final TagKey<Item> DATE_PALM_LOGS = createTag("date_palm_logs");
         public static final TagKey<Item> DRAGON_BLOOD_LOGS = createTag("dragon_blood_logs");

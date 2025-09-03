@@ -2,6 +2,7 @@ package com.legends.edumia.world.placedfeatures.biomes;
 
 import com.legends.edumia.Edumia;
 import com.legends.edumia.world.congiguredfeatures.ModConfiguredFeatures;
+import com.legends.edumia.world.congiguredfeatures.SimpleBlockConfiguredFeatures;
 import com.legends.edumia.world.placedfeatures.ModPlacedFeatures;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Vec3i;
@@ -29,7 +30,7 @@ public class OrcDesertPlacedFeatures {
 
         Holder.Reference<PlacedFeature> noting = registryEntryLookup.getOrThrow(ModPlacedFeatures.NOTING);
 
-        register(context, SAND_PATH, holdergetter.getOrThrow(ModConfiguredFeatures.STONE),
+        register(context, SAND_PATH, holdergetter.getOrThrow(SimpleBlockConfiguredFeatures.STONE),
                 List.of(CountPlacement.of(256), InSquarePlacement.spread(),
                         HeightmapPlacement.onHeightmap(Heightmap.Types.WORLD_SURFACE_WG),
                         BiomeFilter.biome(),

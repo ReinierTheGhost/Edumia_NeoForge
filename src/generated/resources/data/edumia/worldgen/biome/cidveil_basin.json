@@ -11,7 +11,10 @@
   },
   "features": [
     [
-      "edumia:lake"
+      "edumia:biomes/volcanic/lake",
+      "edumia:biomes/volcanic/terra_sand",
+      "edumia:biomes/volcanic/yellow_acid",
+      "edumia:biomes/volcanic/orange_acid"
     ],
     [],
     [],

@@ -1,6 +1,7 @@
 package com.legends.edumia.world.biomes.surface;
 
 import com.legends.edumia.world.placedfeatures.BeachPlacedFeatures;
+import com.legends.edumia.world.placedfeatures.biomes.VolcanicBiomePlacedFeatures;
 import com.legends.edumia.world.placedfeatures.ores.VanillaBlockOrePlacedFeatures;
 import com.legends.edumia.world.placedfeatures.plants.FlowerPlacedFeatures;
 import com.legends.edumia.world.placedfeatures.ModPlacedFeatures;
@@ -19,22 +20,29 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.biome.BiomeGenerationSettings;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ModBiomeFeatures {
-    public static void addDisks(ArrayList<ResourceKey<PlacedFeature>> ores) {
+
+    // region SOIL
+    public static void addDisks(List<ResourceKey<PlacedFeature>> ores) {
         ores.add(MiscOverworldPlacements.DISK_SAND);
         ores.add(MiscOverworldPlacements.DISK_CLAY);
         ores.add(MiscOverworldPlacements.DISK_GRAVEL);
     }
 
-    public static void addRiverSand(ArrayList<ResourceKey<PlacedFeature>> ores) {
+    public static void addRiverSand(List<ResourceKey<PlacedFeature>> ores) {
     }
-    public static void addRiverDisks(ArrayList<ResourceKey<PlacedFeature>> ores) {
+
+    public static void addRiverDisks(List<ResourceKey<PlacedFeature>> ores) {
         ores.add(MiscOverworldPlacements.DISK_CLAY);
         ores.add(MiscOverworldPlacements.DISK_GRAVEL);
     }
+
+    public static void addTerraSand(List<ResourceKey<PlacedFeature>> ores){
+        ores.add(VolcanicBiomePlacedFeatures.TERRA_SAND);
+    }
+    // endregion
 
     // region TREES
 
@@ -263,7 +271,7 @@ public class ModBiomeFeatures {
         vegetation.add(CrystalPlacedFeatures.ELVEN_CRYSTAL);
     }
 
-    // region water
+    // region WATER
     public static void addWaterDelta(List<ResourceKey<PlacedFeature>> vegetation) {
         vegetation.add(ModPlacedFeatures.WATER_DELTA);
     }
@@ -273,7 +281,7 @@ public class ModBiomeFeatures {
     }
 
     public static void addLake(List<ResourceKey<PlacedFeature>> vegetation){
-        vegetation.add(ModPlacedFeatures.LAKE);
+        vegetation.add(VolcanicBiomePlacedFeatures.LAKE);
     }
     // endregion
 
@@ -444,7 +452,6 @@ public class ModBiomeFeatures {
     }
     // endregion
 
-
     // region MISC
     public static void addLavaMagmaLake(BiomeGenerationSettings.Builder generationSettings) {
     }
@@ -459,6 +466,11 @@ public class ModBiomeFeatures {
         vegetation.add(ModPlacedFeatures.SNOW_LAYER_FIRST);
         vegetation.add(ModPlacedFeatures.SNOW_LAYER_SECOND);
         vegetation.add(ModPlacedFeatures.SNOW_LAYER_THIRD);
+    }
+
+    public static void addAcidDisks(List<ResourceKey<PlacedFeature>> vegetation){
+        vegetation.add(VolcanicBiomePlacedFeatures.YELLOW_ACID);
+        vegetation.add(VolcanicBiomePlacedFeatures.ORANGE_ACID);
     }
     // endregion
 

@@ -169,6 +169,8 @@ public class ModBiomes {
                 context.lookup(Registries.CONFIGURED_CARVER));
 
         ModBiomeFeatures.addLake(rawGeneration);
+        ModBiomeFeatures.addTerraSand(rawGeneration);
+        ModBiomeFeatures.addAcidDisks(rawGeneration);
 
         registerBiome(context, biomeResourceKey, spawnSettings, generationSettings);
     }

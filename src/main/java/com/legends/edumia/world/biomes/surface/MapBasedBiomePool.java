@@ -117,7 +117,7 @@ public class MapBasedBiomePool {
 
         add(new Color(35, 36, 36), new MapBasedCustomBiome(EdumiaBiomeKeys.DEMON_WASTELANDS, 10,
                 EdumiaBiomeDataConfigs.landModifier));
-        add(new Color(255, 156, 24), new MapBasedCustomBiome(EdumiaBiomeKeys.ACIDVEIL_BASIN, 4,
+        add(new Color(255, 156, 24), new MapBasedCustomBiome(EdumiaBiomeKeys.ACIDVEIL_BASIN, 1,
                 EdumiaBiomeDataConfigs.landModifier));
 
         add(new Color(54, 75, 12), new MapBasedCustomBiome(EdumiaBiomeKeys.DARK_ELF_FOREST, 6,
@@ -226,6 +226,7 @@ public class MapBasedBiomePool {
         waterBiomes.add(EdumiaBiomeKeys.MYRWOOD_FLOODED_MANGROVE);
         waterBiomes.add(EdumiaBiomeKeys.MYRWOOD_MANGROVE);
         waterBiomes.add(EdumiaBiomeKeys.MYRWOOD_COAST);
+        waterBiomes.add(EdumiaBiomeKeys.ACIDVEIL_BASIN);
 
 //        coastalBiomes.add(EdumiaBiomeKeys.MYRWOOD_COAST);
 //        coastalBiomes.add(EdumiaBiomeKeys.OCEAN_COAST);
