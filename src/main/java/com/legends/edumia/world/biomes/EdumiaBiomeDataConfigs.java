@@ -28,6 +28,7 @@ public class EdumiaBiomeDataConfigs {
             .addSlopeData(32, Blocks.STONE)
             .addSlopeData(48, Blocks.TUFF)
             .addSlopeData(MAX_ANGLE, Blocks.BASALT);
+
     public static SlopeMap edumiaMountainsBase = new SlopeMap()
             .addSlopeData(13, Blocks.GRASS_BLOCK)
             .addSlopeData(30, Blocks.GRASS_BLOCK)
@@ -63,11 +64,14 @@ public class EdumiaBiomeDataConfigs {
             .addSlopeData(34, () -> StoneSets.CHALK.block().get())
             .addSlopeData(37, () -> StoneSets.CACHOLONG.block().get())
             .addSlopeData(MAX_ANGLE, Blocks.CALCITE);
+
     public static SlopeMap grassPlains = new SlopeMap()
             .addSlopeData(25, Blocks.GRASS_BLOCK)
             .addSlopeData(36, Blocks.COARSE_DIRT)
             .addSlopeData(MAX_ANGLE, Blocks.STONE);
 
+    public static SlopeMap calciteWaist = new SlopeMap()
+            .addSlopeData(MAX_ANGLE, Blocks.CALCITE);
     public static SlopeMap tundra = new SlopeMap()
             .addSlopeData(30, Blocks.SNOW_BLOCK)
             .addSlopeData(MAX_ANGLE, Blocks.STONE);
@@ -102,17 +106,20 @@ public class EdumiaBiomeDataConfigs {
             .addSlopeData(25, Blocks.MUD)
             .addSlopeData(32, Blocks.DIRT)
             .addSlopeData(MAX_ANGLE, Blocks.STONE);
+
     public static SlopeMap halfDesert = new SlopeMap()
             .addSlopeData(32, Blocks.GRASS_BLOCK)
             .addSlopeData(36, Blocks.SMOOTH_SANDSTONE)
             .addSlopeData(44, Blocks.SANDSTONE)
             .addSlopeData(56, Blocks.STONE)
             .addSlopeData(MAX_ANGLE, Blocks.TERRACOTTA);
+
     public static SlopeMap desert = new SlopeMap()
             .addSlopeData(32, Blocks.SAND)
             .addSlopeData(45, Blocks.SANDSTONE)
             .addSlopeData(60, Blocks.STONE)
             .addSlopeData(MAX_ANGLE, Blocks.TERRACOTTA);
+
     public static SlopeMap redDesert = new SlopeMap()
             .addSlopeData(32, Blocks.RED_SAND)
             .addSlopeData(45, Blocks.RED_SANDSTONE)

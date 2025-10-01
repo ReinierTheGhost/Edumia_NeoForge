@@ -21,7 +21,25 @@
         "pool": [
           "edumia:demon.civilian"
         ],
+        "rank": "LEADER"
+      },
+      {
+        "pool": [
+          "edumia:demon.civilian"
+        ],
         "rank": "MILITIA"
+      },
+      {
+        "pool": [
+          "edumia:demon.civilian"
+        ],
+        "rank": "VETERAN"
+      },
+      {
+        "pool": [
+          "edumia:demon.civilian"
+        ],
+        "rank": "CIVILIAN"
       },
       {
         "pool": [
@@ -34,24 +52,6 @@
           "edumia:demon.civilian"
         ],
         "rank": "SOLDIER"
-      },
-      {
-        "pool": [
-          "edumia:demon.civilian"
-        ],
-        "rank": "CIVILIAN"
-      },
-      {
-        "pool": [
-          "edumia:demon.civilian"
-        ],
-        "rank": "VETERAN"
-      },
-      {
-        "pool": [
-          "edumia:demon.civilian"
-        ],
-        "rank": "LEADER"
       }
     ]
   },

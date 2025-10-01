@@ -50,9 +50,9 @@ public class ModTreeGrowers {
             Optional.empty(), Optional.empty(),
             Optional.empty());
 
-    public static final TreeGrower KAPOK = new TreeGrower(Edumia.MOD_ID + ":kapok",
-            Optional.empty(), Optional.of(KapokTreeConfiguredFeatures.KAPOK_1),
-            Optional.empty());
+    public static final TreeGrower KAPOK = new TreeGrower(Edumia.MOD_ID + ":kapok",50f,
+            Optional.of(KapokTreeConfiguredFeatures.KAPOK_2), Optional.of(KapokTreeConfiguredFeatures.KAPOK_1), Optional.of(KapokTreeConfiguredFeatures.KAPOK_3), Optional.of(KapokTreeConfiguredFeatures.KAPOK_4),
+            Optional.of(KapokTreeConfiguredFeatures.KAPOK_5), Optional.of(KapokTreeConfiguredFeatures.KAPOK_6));
 
     public static final TreeGrower MAHOGANY = new TreeGrower(Edumia.MOD_ID + ":mahogany",
             Optional.empty(), Optional.of(MahoganyConfiguredFeatures.MAHOGANY), Optional.empty());
@@ -87,6 +87,9 @@ public class ModTreeGrowers {
 
     public static final TreeGrower ALMOND = new TreeGrower(Edumia.MOD_ID + ":almond",
             Optional.empty(), Optional.of(FruitTreeConfiguredFeatures.ALMOND_KEY), Optional.empty());
+    public static final TreeGrower CEDER = new TreeGrower(Edumia.MOD_ID + ":ceder",
+            Optional.of(TemperateTreeConfiguredFeatures.LARGE_CEDER_KEY), Optional.of(TemperateTreeConfiguredFeatures.CEDER_KEY),
+            Optional.empty());
 
     public static final TreeGrower TEST = new TreeGrower(Edumia.MOD_ID + ":test",
             Optional.empty(), Optional.of(TreeConfiguredFeatures.TEST_KEY), Optional.empty());

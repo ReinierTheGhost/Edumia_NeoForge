@@ -79,6 +79,7 @@ public class EdumiaTrunkPlacerTypes {
 
     public static final Supplier<TrunkPlacerType<YellowMerantiTrunkPlacer>> YELLOW_MERANTI_TRUNK_PLACER =
             TRUNK_PLACERS.register("yellow_meranti_trunk_placer", () -> new TrunkPlacerType<>(YellowMerantiTrunkPlacer.CODEC));
+
     public static final Supplier<TrunkPlacerType<BaobabTrunkPlacer>> BAOBAB_TRUNK_PLACER =
             TRUNK_PLACERS.register("baobab_trunk_placer", () -> new TrunkPlacerType<>(BaobabTrunkPlacer.CODEC));
 
@@ -88,6 +89,14 @@ public class EdumiaTrunkPlacerTypes {
     public static final Supplier<TrunkPlacerType<ClusteredPalmTrunkPlacer>> CLUSTERED_PALM_TRUNK_PLACER =
             TRUNK_PLACERS.register("clustered_palm_trunk_placer",
                     () -> new TrunkPlacerType<>(ClusteredPalmTrunkPlacer.CODEC));
+
+    public static final Supplier<TrunkPlacerType<GiantButtressTrunkPlacer>> GIANT_BUTTRESS =
+            TRUNK_PLACERS.register("giant_buttress",
+            () -> new TrunkPlacerType<>(GiantButtressTrunkPlacer.CODEC));
+
+    public static final Supplier<TrunkPlacerType<KapokTrunkPlacer>> KAPOK =
+            TRUNK_PLACERS.register("kapok",
+                    () -> new TrunkPlacerType<>(KapokTrunkPlacer.CODEC));
 
 
     public static void register(IEventBus eventBus) {

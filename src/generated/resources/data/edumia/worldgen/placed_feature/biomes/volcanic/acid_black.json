@@ -1,13 +1,9 @@
 {
-  "feature": "edumia:disks/vanilla/orange_acid",
+  "feature": "edumia:disks/vanilla/acid_black",
   "placement": [
     {
       "type": "minecraft:count",
-      "count": 4
-    },
-    {
-      "type": "minecraft:count",
-      "count": 82
+      "count": 228
     },
     {
       "type": "minecraft:in_square"
@@ -17,10 +13,10 @@
       "height": {
         "type": "minecraft:uniform",
         "max_inclusive": {
-          "absolute": 63
+          "absolute": 64
         },
         "min_inclusive": {
-          "absolute": 61
+          "absolute": 62
         }
       }
     },

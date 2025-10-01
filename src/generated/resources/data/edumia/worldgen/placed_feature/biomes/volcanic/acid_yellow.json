@@ -1,5 +1,5 @@
 {
-  "feature": "edumia:disks/vanilla/yellow_acid",
+  "feature": "edumia:disks/vanilla/acid_yellow",
   "placement": [
     {
       "type": "minecraft:count",
@@ -17,10 +17,10 @@
       "height": {
         "type": "minecraft:uniform",
         "max_inclusive": {
-          "absolute": 62
+          "absolute": 63
         },
         "min_inclusive": {
-          "absolute": 62
+          "absolute": 63
         }
       }
     },

@@ -73,11 +73,27 @@ public class TreeConfiguredFeatures {
 //                        WoodBlockSets.CEDAR.leaves().get())
 //        ));
 
+        KapokTrunkPlacer.BranchSpec branches = new KapokTrunkPlacer.BranchSpec(
+                0.8f,   // startFrac: branches start at 80% of trunk height
+                4,      // baseCount: always at least 4
+                2,      // per10: add 2 per 10 blocks of height
+                UniformInt.of(6, 9) // branch length
+        );
+
+        KapokTrunkPlacer.ButtressSpec buttress = new KapokTrunkPlacer.ButtressSpec(
+                0.9f,   // r_per10
+                0.8f    // h_per10
+        );
+
         register(context, TEST_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(Blocks.DARK_OAK_LOG),
-                new ClusteredPalmTrunkPlacer(16, 8, 8),
-                BlockStateProvider.simple(Blocks.DARK_OAK_LEAVES.defaultBlockState().setValue(LeavesBlock.PERSISTENT, true)),
-                new ClusterPalmFoliagePlacer(UniformInt.of(7, 14), ConstantInt.of(1)),
+                new KapokTrunkPlacer(26, 6, 8,              // baseHeight, randA, randB
+                        UniformInt.of(2, 3),   // core_size
+                        branches,
+                        buttress                      // buttress radius & height per 10 blocks
+                ),
+                BlockStateProvider.simple(Blocks.DARK_OAK_LEAVES),
+                new TieredUmbelFoliagePlacer(ConstantInt.of(3), ConstantInt.of(0), ConstantInt.of(2)),
                 new ThreeLayersFeatureSize(2, 3, 0, 1, 2, OptionalInt.empty())
         ).build());
 

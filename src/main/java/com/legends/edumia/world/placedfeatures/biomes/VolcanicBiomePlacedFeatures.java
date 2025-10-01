@@ -25,9 +25,14 @@ import java.util.List;
 public class VolcanicBiomePlacedFeatures {
     public static final ResourceKey<PlacedFeature> LAKE = registerKey("lake");
     public static final ResourceKey<PlacedFeature> TERRA_SAND = registerKey("terra_sand");
-    public static final ResourceKey<PlacedFeature> YELLOW_ACID = registerKey("yellow_acid");
-    public static final ResourceKey<PlacedFeature> ORANGE_ACID = registerKey("orange_acid");
+    public static final ResourceKey<PlacedFeature> ACID_YELLOW = registerKey("acid_yellow");
+    public static final ResourceKey<PlacedFeature> ACID_ORANGE = registerKey("acid_orange");
+    public static final ResourceKey<PlacedFeature> ACID_GRAVEL = registerKey("acid_gravel");
+    public static final ResourceKey<PlacedFeature> ACID_BLACK = registerKey("acid_black");
+    public static final ResourceKey<PlacedFeature> ACID_BASALT = registerKey("acid_basalt");
 
+    public static final ResourceKey<PlacedFeature> COARSE_DIRT_DISK = registerKey("coarse_dirt_disk");
+    public static final ResourceKey<PlacedFeature> PODZOL_DISK = registerKey("podzol");
 
     public static void boostrap(BootstrapContext<PlacedFeature> context) {
         // region [HELPERS]
@@ -103,16 +108,49 @@ public class VolcanicBiomePlacedFeatures {
                 EnvironmentScanPlacement.scanningFor(Direction.DOWN, terraSand, 8), BiomeFilter.biome()
         ));
 
-        register(context, YELLOW_ACID, holdergetter.getOrThrow(VanillaBlockDiskConfiguredFeatures.YELLOW_ACID), List.of(
+        register(context, ACID_YELLOW, holdergetter.getOrThrow(VanillaBlockDiskConfiguredFeatures.ACID_YELLOW), List.of(
                 CountPlacement.of(188), CountPlacement.of(6), InSquarePlacement.spread(),
-                HeightRangePlacement.uniform(VerticalAnchor.absolute(62), VerticalAnchor.absolute(62)),
+                HeightRangePlacement.uniform(VerticalAnchor.absolute(63), VerticalAnchor.absolute(63)),
                 BlockPredicateFilter.forPredicate(BlockPredicate.matchesFluids(Fluids.WATER)), BiomeFilter.biome()
         ));
 
-        register(context, ORANGE_ACID, holdergetter.getOrThrow(VanillaBlockDiskConfiguredFeatures.ORANGE_ACID), List.of(
+        register(context, ACID_ORANGE, holdergetter.getOrThrow(VanillaBlockDiskConfiguredFeatures.ACID_ORANGE), List.of(
                 CountPlacement.of(4), CountPlacement.of(82), InSquarePlacement.spread(),
-                HeightRangePlacement.uniform(VerticalAnchor.absolute(61), VerticalAnchor.absolute(63)),
+                HeightRangePlacement.uniform(VerticalAnchor.absolute(62), VerticalAnchor.absolute(64)),
                 BlockPredicateFilter.forPredicate(BlockPredicate.matchesFluids(Fluids.WATER)), BiomeFilter.biome()
+        ));
+
+        register(context, ACID_GRAVEL, holdergetter.getOrThrow(VanillaBlockDiskConfiguredFeatures.ACID_GRAVEL), List.of(
+                CountPlacement.of(256), InSquarePlacement.spread(),
+                HeightRangePlacement.uniform(VerticalAnchor.absolute(62), VerticalAnchor.absolute(64)),
+                BlockPredicateFilter.forPredicate(BlockPredicate.matchesFluids(Fluids.WATER)), BiomeFilter.biome()
+        ));
+
+        register(context, ACID_BLACK, holdergetter.getOrThrow(VanillaBlockDiskConfiguredFeatures.ACID_BLACK), List.of(
+                CountPlacement.of(228), InSquarePlacement.spread(),
+                HeightRangePlacement.uniform(VerticalAnchor.absolute(62), VerticalAnchor.absolute(64)),
+                BlockPredicateFilter.forPredicate(BlockPredicate.matchesFluids(Fluids.WATER)), BiomeFilter.biome()
+        ));
+
+        register(context, ACID_BASALT, holdergetter.getOrThrow(VanillaBlockDiskConfiguredFeatures.ACID_BASALT), List.of(
+                CountPlacement.of(228), InSquarePlacement.spread(),
+                HeightRangePlacement.uniform(VerticalAnchor.absolute(62), VerticalAnchor.absolute(64)),
+                BlockPredicateFilter.forPredicate(BlockPredicate.matchesFluids(Fluids.WATER)), BiomeFilter.biome()
+        ));
+
+
+        register(context, COARSE_DIRT_DISK, holdergetter.getOrThrow(VanillaBlockDiskConfiguredFeatures.COARSE_DIRT_DISK), List.of(
+                CountPlacement.of(128), InSquarePlacement.spread(),
+                NoiseBasedCountPlacement.of(1, 175, 1),
+                HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(66), VerticalAnchor.belowTop(100)),
+                BlockPredicateFilter.forPredicate(BlockPredicate.matchesBlocks(Blocks.CALCITE)), BiomeFilter.biome()
+        ));
+
+        register(context, PODZOL_DISK, holdergetter.getOrThrow(VanillaBlockDiskConfiguredFeatures.PODZOL_DISK), List.of(
+                CountPlacement.of(128), InSquarePlacement.spread(),
+                NoiseBasedCountPlacement.of(1, 175, 1),
+                HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(70), VerticalAnchor.belowTop(100)),
+                BlockPredicateFilter.forPredicate(BlockPredicate.matchesBlocks(Blocks.CALCITE, Blocks.COARSE_DIRT)), BiomeFilter.biome()
         ));
     }
 

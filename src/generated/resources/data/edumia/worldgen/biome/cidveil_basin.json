@@ -2,19 +2,24 @@
   "carvers": {},
   "downfall": 0.5,
   "effects": {
-    "fog_color": 4999240,
-    "foliage_color": 4735297,
-    "grass_color": 6252369,
-    "sky_color": 5460048,
-    "water_color": 5860962,
-    "water_fog_color": 731161
+    "fog_color": 14739967,
+    "foliage_color": 13029527,
+    "grass_color": 13029527,
+    "sky_color": 7842047,
+    "water_color": 7856375,
+    "water_fog_color": 329011
   },
   "features": [
     [
       "edumia:biomes/volcanic/lake",
       "edumia:biomes/volcanic/terra_sand",
-      "edumia:biomes/volcanic/yellow_acid",
-      "edumia:biomes/volcanic/orange_acid"
+      "edumia:biomes/volcanic/acid_yellow",
+      "edumia:biomes/volcanic/acid_orange",
+      "edumia:biomes/volcanic/acid_gravel",
+      "edumia:biomes/volcanic/acid_black",
+      "edumia:biomes/volcanic/acid_basalt",
+      "edumia:biomes/volcanic/coarse_dirt_disk",
+      "edumia:biomes/volcanic/podzol"
     ],
     [],
     [],

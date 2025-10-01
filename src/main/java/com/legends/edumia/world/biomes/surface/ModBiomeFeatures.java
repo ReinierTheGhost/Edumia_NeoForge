@@ -469,8 +469,13 @@ public class ModBiomeFeatures {
     }
 
     public static void addAcidDisks(List<ResourceKey<PlacedFeature>> vegetation){
-        vegetation.add(VolcanicBiomePlacedFeatures.YELLOW_ACID);
-        vegetation.add(VolcanicBiomePlacedFeatures.ORANGE_ACID);
+        vegetation.add(VolcanicBiomePlacedFeatures.ACID_YELLOW);
+        vegetation.add(VolcanicBiomePlacedFeatures.ACID_ORANGE);
+        vegetation.add(VolcanicBiomePlacedFeatures.ACID_GRAVEL);
+        vegetation.add(VolcanicBiomePlacedFeatures.ACID_BLACK);
+        vegetation.add(VolcanicBiomePlacedFeatures.ACID_BASALT);
+        vegetation.add(VolcanicBiomePlacedFeatures.COARSE_DIRT_DISK);
+        vegetation.add(VolcanicBiomePlacedFeatures.PODZOL_DISK);
     }
     // endregion
 

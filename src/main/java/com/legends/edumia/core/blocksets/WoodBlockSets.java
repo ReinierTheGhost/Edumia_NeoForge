@@ -19,7 +19,6 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import org.checkerframework.checker.units.qual.K;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,7 +49,7 @@ public class WoodBlockSets {
             false, ModTreeGrowers.BLACK_OAK, List.of(), TagLoader.Items.BLACK_OAK_LOGS, TagLoader.Blocks.BLACK_OAK_LOGS);
 
     public static SimpleBlockSet CEDAR = registerWoodSet("cedar", WOOD_STRENGTH, true, true,
-            false, ModTreeGrowers.APPLE, List.of(), TagLoader.Items.CEDAR_LOGS, TagLoader.Blocks.CEDAR_LOGS);
+            false, ModTreeGrowers.CEDER, List.of(), TagLoader.Items.CEDAR_LOGS, TagLoader.Blocks.CEDAR_LOGS);
     public static SimpleBlockSet CHARRED = registerWoodSet("charred", WOOD_STRENGTH, false, false,
             false, null, List.of(), TagLoader.Items.CHARRED_LOGS, TagLoader.Blocks.CHARRED_LOGS);
     public static SimpleBlockSet CHERRY = registerWoodSet("cherry", WOOD_STRENGTH, true, true,

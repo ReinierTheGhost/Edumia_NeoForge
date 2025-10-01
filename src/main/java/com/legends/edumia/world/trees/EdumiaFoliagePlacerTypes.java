@@ -91,32 +91,45 @@ public class EdumiaFoliagePlacerTypes {
     public static final Supplier<FoliagePlacerType<OvalFoliagePlacer>> OVAL_FOLIAGE_PLACER = FOLIAGE_PLACERS.register("oval_foliage_placer",
             () -> new FoliagePlacerType<>(OvalFoliagePlacer.CODEC));
 
-    public static final Supplier<FoliagePlacerType<ParasolPalmFoliagePlacer>> PARASOL_PALM_FOLIAGE_PLACER = FOLIAGE_PLACERS.register("parasol_palm_foliage_placer",
-            () -> new FoliagePlacerType<>(ParasolPalmFoliagePlacer.CODEC));
-    public static final Supplier<FoliagePlacerType<LargeParasolPalmFoliagePlacer>> LARGE_PARASOL_PALM_FOLIAGE_PLACER = FOLIAGE_PLACERS.register("large_parasol_palm_foliage_placer",
-            () -> new FoliagePlacerType<>(LargeParasolPalmFoliagePlacer.CODEC));
+    public static final Supplier<FoliagePlacerType<ParasolPalmFoliagePlacer>> PARASOL_PALM_FOLIAGE_PLACER =
+            FOLIAGE_PLACERS.register("parasol_palm_foliage_placer",
+                    () -> new FoliagePlacerType<>(ParasolPalmFoliagePlacer.CODEC));
+    public static final Supplier<FoliagePlacerType<LargeParasolPalmFoliagePlacer>> LARGE_PARASOL_PALM_FOLIAGE_PLACER =
+            FOLIAGE_PLACERS.register("large_parasol_palm_foliage_placer",
+                    () -> new FoliagePlacerType<>(LargeParasolPalmFoliagePlacer.CODEC));
 
-    public static final Supplier<FoliagePlacerType<ColossalPalmFoliagePlacer>> COLOSSAL_PALM_FOLIAGE_PLACER = FOLIAGE_PLACERS.register("colossal_palm_foliage_placer",
-            () -> new FoliagePlacerType<>(ColossalPalmFoliagePlacer.CODEC));
+    public static final Supplier<FoliagePlacerType<ColossalPalmFoliagePlacer>> COLOSSAL_PALM_FOLIAGE_PLACER =
+            FOLIAGE_PLACERS.register("colossal_palm_foliage_placer",
+                    () -> new FoliagePlacerType<>(ColossalPalmFoliagePlacer.CODEC));
 
-    public static final Supplier<FoliagePlacerType<TropicalFruitFoliagePlacer>> TROPICAL_FRUIT_FOLIAGE_PLACER = FOLIAGE_PLACERS.register("tropical_fruit_foliage_placer",
-            () -> new FoliagePlacerType<>(TropicalFruitFoliagePlacer.CODEC));
+    public static final Supplier<FoliagePlacerType<TropicalFruitFoliagePlacer>> TROPICAL_FRUIT_FOLIAGE_PLACER =
+            FOLIAGE_PLACERS.register("tropical_fruit_foliage_placer",
+                    () -> new FoliagePlacerType<>(TropicalFruitFoliagePlacer.CODEC));
 
-    public static final Supplier<FoliagePlacerType<NewPalmFoliagePlacer>> NEW_PALM_FOLIAGE_PLACER = FOLIAGE_PLACERS.register("new_palm_foliage_placer",
-            () -> new FoliagePlacerType<>(NewPalmFoliagePlacer.CODEC));
+    public static final Supplier<FoliagePlacerType<NewPalmFoliagePlacer>> NEW_PALM_FOLIAGE_PLACER =
+            FOLIAGE_PLACERS.register("new_palm_foliage_placer",
+                    () -> new FoliagePlacerType<>(NewPalmFoliagePlacer.CODEC));
 
-    public static final Supplier<FoliagePlacerType<AlmondFoliagePlacer>> ALMOND_FOLIAGE_PLACER = FOLIAGE_PLACERS.register("almond_foliage_placer",
-            () -> new FoliagePlacerType<>(AlmondFoliagePlacer.CODEC));
+    public static final Supplier<FoliagePlacerType<AlmondFoliagePlacer>> ALMOND_FOLIAGE_PLACER =
+            FOLIAGE_PLACERS.register("almond_foliage_placer",
+                    () -> new FoliagePlacerType<>(AlmondFoliagePlacer.CODEC));
 
-    public static final Supplier<FoliagePlacerType<OliveFoliagePlacer>> OLIVE_FOLIAGE_PLACER = FOLIAGE_PLACERS.register("olive_foliage_placer",
-            () -> new FoliagePlacerType<>(OliveFoliagePlacer.CODEC));
-    public static final Supplier<FoliagePlacerType<AshiraFoliagePlacer>> ASHIRA_FOLIAGE_PLACER = FOLIAGE_PLACERS.register("ashira_foliage_placer",
-            () -> new FoliagePlacerType<>(AshiraFoliagePlacer.CODEC));
+    public static final Supplier<FoliagePlacerType<OliveFoliagePlacer>> OLIVE_FOLIAGE_PLACER =
+            FOLIAGE_PLACERS.register("olive_foliage_placer",
+                    () -> new FoliagePlacerType<>(OliveFoliagePlacer.CODEC));
+    public static final Supplier<FoliagePlacerType<AshiraFoliagePlacer>> ASHIRA_FOLIAGE_PLACER =
+            FOLIAGE_PLACERS.register("ashira_foliage_placer",
+                    () -> new FoliagePlacerType<>(AshiraFoliagePlacer.CODEC));
 
-    public static final Supplier<FoliagePlacerType<HeveaFoliagePlacer>> HEVEA_FOLIAGE_PLACER = FOLIAGE_PLACERS.register("hevea_foliage_placer",
-            () -> new FoliagePlacerType<>(HeveaFoliagePlacer.CODEC));
-    public static final Supplier<FoliagePlacerType<ClusterPalmFoliagePlacer>> CLUSTER_PALM_FOLIAGE_PLACER = FOLIAGE_PLACERS.register("cluster_palm_foliage_placer",
-            () -> new FoliagePlacerType<>(ClusterPalmFoliagePlacer.CODEC));
+    public static final Supplier<FoliagePlacerType<HeveaFoliagePlacer>> HEVEA_FOLIAGE_PLACER =
+            FOLIAGE_PLACERS.register("hevea_foliage_placer",
+                    () -> new FoliagePlacerType<>(HeveaFoliagePlacer.CODEC));
+    public static final Supplier<FoliagePlacerType<ClusterPalmFoliagePlacer>> CLUSTER_PALM_FOLIAGE_PLACER =
+            FOLIAGE_PLACERS.register("cluster_palm_foliage_placer",
+                    () -> new FoliagePlacerType<>(ClusterPalmFoliagePlacer.CODEC));
+    public static final Supplier<FoliagePlacerType<TieredUmbelFoliagePlacer>> TIERED_UMBEL =
+            FOLIAGE_PLACERS.register("tiered_umbel",
+                    () -> new FoliagePlacerType<>(TieredUmbelFoliagePlacer.CODEC));
 
     public static void register(IEventBus eventBus) {
         FOLIAGE_PLACERS.register(eventBus);

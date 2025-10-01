@@ -48,18 +48,18 @@
       }
     },
     "log_target": [
-      "edumia:mirwoodnut_wood_fence",
-      "edumia:mirwoodnut_wood_stairs",
-      "edumia:mirwoodnut_wood",
-      "edumia:mirwoodnut_wood_slab"
-    ],
-    "place_from_nbt": [
-      "edumia:mirwoodnut_wood_stairs",
       "edumia:mirwoodnut_wood_slab",
       "edumia:mirwoodnut_wood_fence",
+      "edumia:mirwoodnut_wood_stairs",
+      "edumia:mirwoodnut_wood"
+    ],
+    "place_from_nbt": [
       "edumia:banana_leaves",
-      "edumia:mirwoodnut_leaves",
-      "minecraft:mangrove_roots"
+      "edumia:mirwoodnut_wood_fence",
+      "edumia:mirwoodnut_wood_stairs",
+      "minecraft:mangrove_roots",
+      "edumia:mirwoodnut_wood_slab",
+      "edumia:mirwoodnut_leaves"
     ]
   }
 }

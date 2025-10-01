@@ -21,7 +21,25 @@
         "pool": [
           "edumia:gensai.civilian"
         ],
+        "rank": "LEADER"
+      },
+      {
+        "pool": [
+          "edumia:gensai.civilian"
+        ],
         "rank": "MILITIA"
+      },
+      {
+        "pool": [
+          "edumia:gensai.civilian"
+        ],
+        "rank": "VETERAN"
+      },
+      {
+        "pool": [
+          "edumia:gensai.civilian"
+        ],
+        "rank": "CIVILIAN"
       },
       {
         "pool": [
@@ -34,24 +52,6 @@
           "edumia:gensai.civilian"
         ],
         "rank": "SOLDIER"
-      },
-      {
-        "pool": [
-          "edumia:gensai.civilian"
-        ],
-        "rank": "CIVILIAN"
-      },
-      {
-        "pool": [
-          "edumia:gensai.civilian"
-        ],
-        "rank": "VETERAN"
-      },
-      {
-        "pool": [
-          "edumia:gensai.civilian"
-        ],
-        "rank": "LEADER"
       }
     ]
   },
