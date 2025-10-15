@@ -27,7 +27,7 @@
         "pool": [
           "edumia:human.civilian"
         ],
-        "rank": "MILITIA"
+        "rank": "SOLDIER"
       },
       {
         "pool": [
@@ -45,13 +45,13 @@
         "pool": [
           "edumia:human.civilian"
         ],
-        "rank": "KNIGHT"
+        "rank": "MILITIA"
       },
       {
         "pool": [
           "edumia:human.civilian"
         ],
-        "rank": "SOLDIER"
+        "rank": "KNIGHT"
       }
     ]
   },

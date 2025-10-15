@@ -18,59 +18,59 @@ public class StoneSets {
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(Edumia.MOD_ID);
     public static final float STONE_STRENGTH = 2.0f;
-    public static StoneSet LIGHT_GRAY_STONE = registerStoneSet("light_gray_stone", STONE_STRENGTH);
-    public static StoneSet BROWN_STONE = registerStoneSet("brown_stone", STONE_STRENGTH);
+    public static StoneSet PALEGRIT = registerStoneSet("palegrit", STONE_STRENGTH);
+    public static StoneSet UMBRAROCK = registerStoneSet("umbrarock", STONE_STRENGTH);
     public static StoneSet LIMESTONE = registerStoneSet("limestone", STONE_STRENGTH);
-    public static StoneSet BLUE_STONE = registerStoneSet("blue_stone", STONE_STRENGTH);
-    public static StoneSet YELLOW_STONE = registerStoneSet("yellow_stone", STONE_STRENGTH);
-    public static StoneSet YELLOW_STONE_2 = registerStoneSet("yellow_stone_2", STONE_STRENGTH);
+    public static StoneSet SKYSHALE = registerStoneSet("skyshale", STONE_STRENGTH);
+    public static StoneSet SUNSTONE = registerStoneSet("sunstone", STONE_STRENGTH);
+    public static StoneSet GLEAMSTONE = registerStoneSet("gleamstone", STONE_STRENGTH);
     public static StoneSet GREEN_BASALT = registerStoneSet("green_basalt", STONE_STRENGTH);
     public static StoneSet GREEN_BASALT_COBBLESTONE = registerStoneSet("green_basalt_cobblestone", STONE_STRENGTH);
     public static StoneSet GNEISS = registerStoneSet("gneiss", STONE_STRENGTH);
-    public static StoneSet CYAN_STONE = registerStoneSet("cyan_stone", STONE_STRENGTH);
-    public static StoneSet ORANGE_ROCK = registerStoneSet("orange_rock", STONE_STRENGTH);
-    public static StoneSet RED_ROCK = registerStoneSet("red_rock", STONE_STRENGTH);
-    public static StoneSet YELLOW_COBBLE = registerStoneSet("yellow_cobble", STONE_STRENGTH);
+    public static StoneSet EATHERITE = registerStoneSet("eatherite", STONE_STRENGTH);
+    public static StoneSet CINDERRITE = registerStoneSet("cinderrite", STONE_STRENGTH);
+    public static StoneSet BLOODSTONE = registerStoneSet("bloodstone", STONE_STRENGTH);
+    public static StoneSet SUNSTONE_COBBLE = registerStoneSet("sunstone_cobble", STONE_STRENGTH);
     public static StoneSet CHALK = registerStoneSet("chalk", STONE_STRENGTH);
-    public static StoneSet HIGH_ELVEN_ROCK = registerStoneSet("high_elven_rock", STONE_STRENGTH);
-    public static StoneSet DARK_HIGH_ELVEN_ROCK = registerStoneSet("dark_high_elven_rock", STONE_STRENGTH);
-    public static StoneSet LIGHT_HIGH_ELVEN_ROCK = registerStoneSet("light_high_elven_rock", STONE_STRENGTH);
+    public static StoneSet AELORIAN_ROCK = registerStoneSet("high_elven_rock", STONE_STRENGTH);
+    public static StoneSet DUSKEN_AELORIAN_ROCK = registerStoneSet("dark_high_elven_rock", STONE_STRENGTH);
+    public static StoneSet PALE_AELORIAN_ROCK = registerStoneSet("light_high_elven_rock", STONE_STRENGTH);
     public static StoneSet VOLCANIC_ROCK = registerStoneSet("volcanic_rock", STONE_STRENGTH);
-    public static StoneSet HIGH_ELVEN_COBBLESTONE = registerStoneSet("high_elven_cobblestone", STONE_STRENGTH);
-    public static StoneSet DARK_HIGH_ELVEN_COBBLESTONE = registerStoneSet("dark_high_elven_cobblestone", STONE_STRENGTH);
-    public static StoneSet LIGHT_HIGH_ELVEN_COBBLESTONE = registerStoneSet("light_high_elven_cobblestone", STONE_STRENGTH);
-    public static StoneSet MOSSY_HIGH_ELVEN_COBBLESTONE = registerStoneSet("mossy_high_elven_cobblestone", STONE_STRENGTH);
-    public static StoneSet MOSSY_LIGHT_HIGH_ELVEN_COBBLESTONE = registerStoneSet("mossy_light_high_elven_cobblestone", STONE_STRENGTH);
-    public static StoneSet MOSSY_DARK_HIGH_ELVEN_COBBLESTONE = registerStoneSet("mossy_dark_high_elven_cobblestone", STONE_STRENGTH);
+    public static StoneSet AELORIAN_COBBLESTONE = registerStoneSet("high_elven_cobblestone", STONE_STRENGTH);
+    public static StoneSet DUSKEN_AELORIAN_COBBLESTONE = registerStoneSet("dark_high_elven_cobblestone", STONE_STRENGTH);
+    public static StoneSet PALE_AELORIAN_COBBLESTONE = registerStoneSet("light_high_elven_cobblestone", STONE_STRENGTH);
+    public static StoneSet MOSSY_AELORIAN_COBBLESTONE = registerStoneSet("mossy_high_elven_cobblestone", STONE_STRENGTH);
+    public static StoneSet MOSSY_PALE_AELORIAN_COBBLESTONE = registerStoneSet("mossy_light_high_elven_cobblestone", STONE_STRENGTH);
+    public static StoneSet MOSSY_DUSKEN_AELORIAN_COBBLESTONE = registerStoneSet("mossy_dark_high_elven_cobblestone", STONE_STRENGTH);
     public static StoneSet CACHOLONG = registerStoneSet("cacholong", STONE_STRENGTH);
-    public static StoneSet RED_GENSAI_STONE = registerStoneSet("red_gensai_stone", STONE_STRENGTH);
+    public static StoneSet CRIMSON_GENSITE = registerStoneSet("red_gensai_stone", STONE_STRENGTH);
 
     public static StoneSet[] naturalSets = new StoneSet[]{
-            RED_GENSAI_STONE,
-            BLUE_STONE,
+            CRIMSON_GENSITE,
+            SKYSHALE,
             LIMESTONE,
-            BROWN_STONE,
-            LIGHT_GRAY_STONE,
-            YELLOW_STONE,
-            YELLOW_STONE_2,
+            UMBRAROCK,
+            PALEGRIT,
+            SUNSTONE,
+            GLEAMSTONE,
             GREEN_BASALT,
             GREEN_BASALT_COBBLESTONE,
             GNEISS,
-            CYAN_STONE,
-            ORANGE_ROCK,
-            RED_ROCK,
-            YELLOW_COBBLE,
+            EATHERITE,
+            CINDERRITE,
+            BLOODSTONE,
+            SUNSTONE_COBBLE,
             CHALK,
-            HIGH_ELVEN_ROCK,
-            DARK_HIGH_ELVEN_ROCK,
-            LIGHT_HIGH_ELVEN_ROCK,
+            AELORIAN_ROCK,
+            DUSKEN_AELORIAN_ROCK,
+            PALE_AELORIAN_ROCK,
             VOLCANIC_ROCK,
-            HIGH_ELVEN_COBBLESTONE,
-            DARK_HIGH_ELVEN_COBBLESTONE,
-            LIGHT_HIGH_ELVEN_COBBLESTONE,
-            MOSSY_HIGH_ELVEN_COBBLESTONE,
-            MOSSY_LIGHT_HIGH_ELVEN_COBBLESTONE,
-            MOSSY_DARK_HIGH_ELVEN_COBBLESTONE,
+            AELORIAN_COBBLESTONE,
+            DUSKEN_AELORIAN_COBBLESTONE,
+            PALE_AELORIAN_COBBLESTONE,
+            MOSSY_AELORIAN_COBBLESTONE,
+            MOSSY_PALE_AELORIAN_COBBLESTONE,
+            MOSSY_DUSKEN_AELORIAN_COBBLESTONE,
             CACHOLONG,
     };
 

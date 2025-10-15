@@ -35,10 +35,10 @@ public class EdumiaBiomeDataConfigs {
             .addSlopeData(33, Blocks.COARSE_DIRT)
             .addSlopeData(34, Blocks.GRAVEL)
             .addSlopeData(37, Blocks.ANDESITE)
-            .addSlopeData(40, () -> StoneSets.BROWN_STONE.block().get())
+            .addSlopeData(40, () -> StoneSets.UMBRAROCK.block().get())
             .addSlopeData(45, Blocks.TUFF)
-            .addSlopeData(47, () -> StoneSets.CYAN_STONE.block().get())
-            .addSlopeData(51, () -> StoneSets.BLUE_STONE.block().get())
+            .addSlopeData(47, () -> StoneSets.EATHERITE.block().get())
+            .addSlopeData(51, () -> StoneSets.SKYSHALE.block().get())
             .addSlopeData(MAX_ANGLE, Blocks.COBBLED_DEEPSLATE);
 
     public static SlopeMap edumiaMountains = new SlopeMap()
@@ -47,10 +47,10 @@ public class EdumiaBiomeDataConfigs {
             .addSlopeData(33, Blocks.COARSE_DIRT)
             .addSlopeData(34, Blocks.GRAVEL)
             .addSlopeData(37, Blocks.ANDESITE)
-            .addSlopeData(40, () -> StoneSets.BROWN_STONE.block().get())
+            .addSlopeData(40, () -> StoneSets.UMBRAROCK.block().get())
             .addSlopeData(45, Blocks.TUFF)
-            .addSlopeData(55, () -> StoneSets.CYAN_STONE.block().get())
-            .addSlopeData(67, () -> StoneSets.BLUE_STONE.block().get())
+            .addSlopeData(55, () -> StoneSets.EATHERITE.block().get())
+            .addSlopeData(67, () -> StoneSets.SKYSHALE.block().get())
             .addSlopeData(MAX_ANGLE, Blocks.COBBLED_DEEPSLATE);
 
     public static SlopeMap edumiaMountainsPeaks = new SlopeMap()
@@ -80,9 +80,9 @@ public class EdumiaBiomeDataConfigs {
     public static SlopeMap avelionRockShore = new SlopeMap()
             .addSlopeData(20, Blocks.GRASS_BLOCK)
             .addSlopeData(30, Blocks.COARSE_DIRT)
-            .addSlopeData(35, () -> StoneSets.LIGHT_HIGH_ELVEN_ROCK.block().get())
-            .addSlopeData(45, () -> StoneSets.HIGH_ELVEN_ROCK.block().get())
-            .addSlopeData(55, () -> StoneSets.DARK_HIGH_ELVEN_ROCK.block().get())
+            .addSlopeData(35, () -> StoneSets.PALE_AELORIAN_ROCK.block().get())
+            .addSlopeData(45, () -> StoneSets.AELORIAN_ROCK.block().get())
+            .addSlopeData(55, () -> StoneSets.DUSKEN_AELORIAN_ROCK.block().get())
             .addSlopeData(MAX_ANGLE, () -> StoneSets.CACHOLONG.block().get());
 
     public static SlopeMap sandShores = new SlopeMap()
@@ -176,9 +176,9 @@ public class EdumiaBiomeDataConfigs {
             .addLayerData(0.9f, Blocks.STONE)
             .addLayerData(0.1f, Blocks.SANDSTONE);
     public static BlocksLayeringData avelionLayers = new BlocksLayeringData()
-            .addLayerData(0.3f, () -> StoneSets.LIGHT_HIGH_ELVEN_ROCK.block().get())
-            .addLayerData(0.3f, () -> StoneSets.DARK_HIGH_ELVEN_ROCK.block().get())
-            .addLayerData(0.3f, () -> StoneSets.HIGH_ELVEN_ROCK.block().get())
+            .addLayerData(0.3f, () -> StoneSets.PALE_AELORIAN_ROCK.block().get())
+            .addLayerData(0.3f, () -> StoneSets.DUSKEN_AELORIAN_ROCK.block().get())
+            .addLayerData(0.3f, () -> StoneSets.AELORIAN_ROCK.block().get())
             .addLayerData(0.1f, () -> StoneSets.CACHOLONG.block().get());
 
     public static BlocksLayeringData limestoneLayers = new BlocksLayeringData()
@@ -223,6 +223,8 @@ public class EdumiaBiomeDataConfigs {
             .noiseModifier(PLAINS_NOISE_MODIFIER).heightModifier(LAND_HEIGHT_MODIFIER);
     public static BiomeGenerationData riverModifier = new BiomeGenerationData().expansionWeight(RIVER_WEIGHT)
             .noiseModifier(WATER_NOISE_MODIFIER).heightModifier(WATER_HEIGHT_MODIFIER);
+    public static BiomeGenerationData acidBasinModifier = new BiomeGenerationData().expansionWeight(RIVER_WEIGHT)
+            .noiseModifier(WATER_NOISE_MODIFIER).heightModifier(-1.9);
     public static BiomeGenerationData mangroveModifier = new BiomeGenerationData().expansionWeight(RIVER_WEIGHT)
             .noiseModifier(WATER_NOISE_MODIFIER).heightModifier(0);
 

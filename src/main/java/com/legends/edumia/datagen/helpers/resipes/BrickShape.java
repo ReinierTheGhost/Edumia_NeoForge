@@ -13,12 +13,12 @@ public class BrickShape {
     public record BrickRecipe(Block input, Block output) {}
     public static List<BrickRecipe> blocks = new ArrayList<>() {
         {
-            add(new BrickRecipe(StoneSets.HIGH_ELVEN_ROCK.block().get(), BuildingSets.HIGH_ELVEN.block().get()));
-            add(new BrickRecipe(StoneSets.DARK_HIGH_ELVEN_ROCK.block().get(), BuildingSets.DARK_HIGH_ELVEN.block().get()));
-            add(new BrickRecipe(StoneSets.LIGHT_HIGH_ELVEN_ROCK.block().get(), BuildingSets.LIGHT_HIGH_ELVEN.block().get()));
-            add(new BrickRecipe(StoneSets.RED_GENSAI_STONE.block().get(), BuildingSets.RED_GENSAI_BRICK.block().get()));
-            add(new BrickRecipe(StoneSets.YELLOW_STONE_2.block().get(), BuildingSets.YELLOW_STONE_BRICKS.block().get()));
-            add(new BrickRecipe(StoneSets.YELLOW_STONE.block().get(), BuildingSets.YELLOW_STONE_SMALL_BRICKS.block().get()));
+            add(new BrickRecipe(StoneSets.AELORIAN_ROCK.block().get(), BuildingSets.HIGH_ELVEN.block().get()));
+            add(new BrickRecipe(StoneSets.DUSKEN_AELORIAN_ROCK.block().get(), BuildingSets.DARK_HIGH_ELVEN.block().get()));
+            add(new BrickRecipe(StoneSets.PALE_AELORIAN_ROCK.block().get(), BuildingSets.LIGHT_HIGH_ELVEN.block().get()));
+            add(new BrickRecipe(StoneSets.CRIMSON_GENSITE.block().get(), BuildingSets.RED_GENSAI_BRICK.block().get()));
+            add(new BrickRecipe(StoneSets.GLEAMSTONE.block().get(), BuildingSets.YELLOW_STONE_BRICKS.block().get()));
+            add(new BrickRecipe(StoneSets.SUNSTONE.block().get(), BuildingSets.YELLOW_STONE_SMALL_BRICKS.block().get()));
             add(new BrickRecipe(StoneSets.LIMESTONE.block().get(), BuildingSets.LIMESTONE_BRICKS.block().get()));
             add(new BrickRecipe(StoneSets.CHALK.block().get(), BuildingSets.CHALK.block().get()));
             add(new BrickRecipe(StoneSets.CACHOLONG.block().get(), BuildingSets.CACHOLONG_BRICKS.block().get()));

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "edumia:block/cyan_stone",
-    "side": "edumia:block/cyan_stone",
-    "top": "edumia:block/cyan_stone"
-  }
-}

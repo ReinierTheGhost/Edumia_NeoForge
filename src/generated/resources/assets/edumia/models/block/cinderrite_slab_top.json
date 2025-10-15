@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "edumia:block/cinderrite",
+    "side": "edumia:block/cinderrite",
+    "top": "edumia:block/cinderrite"
+  }
+}

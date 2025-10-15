@@ -29,10 +29,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.configurations.DeltaFeatureConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.*;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider;
 import org.checkerframework.checker.units.qual.C;
@@ -45,6 +42,8 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> SNOW_LAYER_THIRD = registerKey("snow/layers/normal/third");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> WATER_DELTA = registerKey("water_delta");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> MAGMA = registerKey("magma");
 
     public static void boostrap(BootstrapContext<ConfiguredFeature<?, ?>> context){
         register(context, NOTING, Feature.NO_OP, new NoneFeatureConfiguration());
@@ -67,6 +66,8 @@ public class ModConfiguredFeatures {
 
         register(context, WATER_DELTA, EdumiaFeatures.DELTA_FEATURES.get(), new DeltaFeatureConfiguration(
                 Blocks.WATER.defaultBlockState(), Blocks.GRASS_BLOCK.defaultBlockState(), UniformInt.of(3, 7), UniformInt.of(0,2)));
+
+        register(context, MAGMA, Feature.UNDERWATER_MAGMA, new UnderwaterMagmaConfiguration(2, 3, 0.3f));
 
         BeechTreeConfiguredFeatures.bootstrap(context);
         TreeConfiguredFeatures.bootstrap(context);

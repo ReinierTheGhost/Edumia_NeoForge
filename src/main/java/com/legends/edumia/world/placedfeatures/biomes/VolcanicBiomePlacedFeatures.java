@@ -1,6 +1,7 @@
 package com.legends.edumia.world.placedfeatures.biomes;
 
 import com.legends.edumia.Edumia;
+import com.legends.edumia.world.congiguredfeatures.ModConfiguredFeatures;
 import com.legends.edumia.world.congiguredfeatures.SimpleBlockConfiguredFeatures;
 import com.legends.edumia.world.congiguredfeatures.disks.VanillaBlockDiskConfiguredFeatures;
 import net.minecraft.core.Direction;
@@ -33,6 +34,7 @@ public class VolcanicBiomePlacedFeatures {
 
     public static final ResourceKey<PlacedFeature> COARSE_DIRT_DISK = registerKey("coarse_dirt_disk");
     public static final ResourceKey<PlacedFeature> PODZOL_DISK = registerKey("podzol");
+    public static final ResourceKey<PlacedFeature> MAGMA = registerKey("magma");
 
     public static void boostrap(BootstrapContext<PlacedFeature> context) {
         // region [HELPERS]
@@ -151,6 +153,12 @@ public class VolcanicBiomePlacedFeatures {
                 NoiseBasedCountPlacement.of(1, 175, 1),
                 HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(70), VerticalAnchor.belowTop(100)),
                 BlockPredicateFilter.forPredicate(BlockPredicate.matchesBlocks(Blocks.CALCITE, Blocks.COARSE_DIRT)), BiomeFilter.biome()
+        ));
+
+        register(context, MAGMA, holdergetter.getOrThrow(ModConfiguredFeatures.MAGMA), List.of(
+                CountPlacement.of(UniformInt.of(2, 3)), InSquarePlacement.spread(),
+                HeightmapPlacement.onHeightmap(Heightmap.Types.OCEAN_FLOOR),
+                BiomeFilter.biome()
         ));
     }
 

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "edumia:block/yellow_stone",
-    "side": "edumia:block/yellow_stone",
-    "top": "edumia:block/yellow_stone"
-  }
-}

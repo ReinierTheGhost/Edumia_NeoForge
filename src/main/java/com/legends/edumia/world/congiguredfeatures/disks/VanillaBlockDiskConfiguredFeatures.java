@@ -13,6 +13,7 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.DiskConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.UnderwaterMagmaConfiguration;
 import net.minecraft.world.level.levelgen.feature.stateproviders.RuleBasedBlockStateProvider;
 import org.checkerframework.checker.units.qual.C;
 
@@ -28,6 +29,8 @@ public class VanillaBlockDiskConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> COARSE_DIRT_DISK = registerKey("coarse_dirt_disk");
     public static final ResourceKey<ConfiguredFeature<?, ?>> PODZOL_DISK = registerKey("podzol");
+
+
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context){
         register(context, ACID_YELLOW, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(Blocks.YELLOW_TERRACOTTA),
@@ -73,6 +76,8 @@ public class VanillaBlockDiskConfiguredFeatures {
                 BlockPredicate.matchesBlocks(
                         List.of(Blocks.CALCITE, Blocks.COARSE_DIRT)),
                 UniformInt.of(4, 6), 3));
+
+
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name){

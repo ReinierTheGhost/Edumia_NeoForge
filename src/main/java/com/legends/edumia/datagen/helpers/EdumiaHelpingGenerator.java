@@ -5,7 +5,6 @@ import com.legends.edumia.datagen.helpers.loot_tables.*;
 import com.legends.edumia.datagen.helpers.models.*;
 import com.legends.edumia.datagen.helpers.tags.*;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.TallFlowerBlock;
 
 public class EdumiaHelpingGenerator {
     public static void generateFiles() {
@@ -126,7 +125,7 @@ public class EdumiaHelpingGenerator {
             SimpleStairModel.blocks.add(new SimpleStairModel.Stair(set.block().get(), set.stair().get()));
             SimpleWallModel.blocks.add(new SimpleWallModel.Wall(set.block().get(), set.wall().get()));
 
-            if (set != StoneSets.DARK_HIGH_ELVEN_ROCK && set != StoneSets.HIGH_ELVEN_ROCK && set != StoneSets.LIGHT_HIGH_ELVEN_ROCK){
+            if (set != StoneSets.DUSKEN_AELORIAN_ROCK && set != StoneSets.AELORIAN_ROCK && set != StoneSets.PALE_AELORIAN_ROCK){
                 BlockDrops.blocks.add(set.block().get());
             }
 

@@ -1,0 +1,46 @@
+{
+  "variants": {
+    "axis=x,type=bottom": {
+      "model": "edumia:block/skyshale_slab",
+      "uvlock": true,
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,type=double": {
+      "model": "edumia:block/skyshale",
+      "uvlock": true,
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,type=top": {
+      "model": "edumia:block/skyshale_slab_top",
+      "uvlock": true,
+      "x": 90,
+      "y": 90
+    },
+    "axis=y,type=bottom": {
+      "model": "edumia:block/skyshale_slab"
+    },
+    "axis=y,type=double": {
+      "model": "edumia:block/skyshale"
+    },
+    "axis=y,type=top": {
+      "model": "edumia:block/skyshale_slab_top"
+    },
+    "axis=z,type=bottom": {
+      "model": "edumia:block/skyshale_slab",
+      "uvlock": true,
+      "x": 270
+    },
+    "axis=z,type=double": {
+      "model": "edumia:block/skyshale",
+      "uvlock": true,
+      "x": 270
+    },
+    "axis=z,type=top": {
+      "model": "edumia:block/skyshale_slab_top",
+      "uvlock": true,
+      "x": 270
+    }
+  }
+}

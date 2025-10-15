@@ -171,6 +171,7 @@ public class ModBiomes {
         ModBiomeFeatures.addLake(rawGeneration);
         ModBiomeFeatures.addTerraSand(rawGeneration);
         ModBiomeFeatures.addAcidDisks(rawGeneration);
+        ModBiomeFeatures.addMagma(rawGeneration);
 
         registerBiome(context, biomeResourceKey, spawnSettings, generationSettings);
     }

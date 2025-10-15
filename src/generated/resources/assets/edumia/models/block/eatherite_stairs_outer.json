@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "edumia:block/eatherite",
+    "side": "edumia:block/eatherite",
+    "top": "edumia:block/eatherite"
+  }
+}

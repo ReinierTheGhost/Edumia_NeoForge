@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "edumia:block/umbrarock",
+    "side": "edumia:block/umbrarock",
+    "top": "edumia:block/umbrarock"
+  }
+}

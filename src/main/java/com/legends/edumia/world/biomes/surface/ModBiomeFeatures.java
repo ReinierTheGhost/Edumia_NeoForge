@@ -477,6 +477,10 @@ public class ModBiomeFeatures {
         vegetation.add(VolcanicBiomePlacedFeatures.COARSE_DIRT_DISK);
         vegetation.add(VolcanicBiomePlacedFeatures.PODZOL_DISK);
     }
+
+    public static void addMagma(List<ResourceKey<PlacedFeature>> vegetation) {
+        vegetation.add(VolcanicBiomePlacedFeatures.MAGMA);
+    }
     // endregion
 
 

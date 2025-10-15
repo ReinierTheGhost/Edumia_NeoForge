@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "edumia:block/sunstone_cobble",
+    "side": "edumia:block/sunstone_cobble",
+    "top": "edumia:block/sunstone_cobble"
+  }
+}

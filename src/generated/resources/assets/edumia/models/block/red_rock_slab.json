@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "edumia:block/red_rock",
-    "side": "edumia:block/red_rock",
-    "top": "edumia:block/red_rock"
-  }
-}
