@@ -197,16 +197,14 @@ public class MapBasedBiomePool {
                 EdumiaBiomeDataConfigs.landModifier.heightModifier(0.97f).heightModifier(0.1f).noiseModifier(0.05)));
         add(new Color(74, 213, 138), new MapBasedCustomBiome(EdumiaBiomeKeys.AVELION_ROCKY_SHORES,30,
                 EdumiaBiomeDataConfigs.landModifier.heightModifier(0.76f)));
-        add(new Color(180, 126, 119), new MapBasedCustomBiome(EdumiaBiomeKeys.AVELION_FOOTHILLS,35,
-                EdumiaBiomeDataConfigs.mountainModifier.heightModifier(0.23f)));
-        add(new Color(180, 136, 119), new MapBasedCustomBiome(EdumiaBiomeKeys.AVELION_MOUNTAIN_BASE,56,
-                EdumiaBiomeDataConfigs.mountainModifier.heightModifier(0.24f).noiseModifier(1.21f)));
-        add(new Color(206, 156, 138), new MapBasedCustomBiome(EdumiaBiomeKeys.AVELION_MOUNTAIN,79,
-                EdumiaBiomeDataConfigs.mountainModifier.heightModifier(0.34f)));
-        add(new Color(237, 179, 158), new MapBasedCustomBiome(EdumiaBiomeKeys.AVELION_MOUNTAIN_PEAKS,106,
+        add(new Color(180, 126, 119), new MapBasedCustomBiome(EdumiaBiomeKeys.AVELION_FOOTHILLS,53,
+                EdumiaBiomeDataConfigs.amModifier));
+        add(new Color(180, 136, 119), new MapBasedCustomBiome(EdumiaBiomeKeys.AVELION_MOUNTAIN_BASE,77,
+                EdumiaBiomeDataConfigs.amModifier));
+        add(new Color(206, 156, 138), new MapBasedCustomBiome(EdumiaBiomeKeys.AVELION_MOUNTAIN,93,
+                EdumiaBiomeDataConfigs.amModifier.heightModifier(0.63f)));
+        add(new Color(237, 179, 158), new MapBasedCustomBiome(EdumiaBiomeKeys.AVELION_MOUNTAIN_PEAKS,99,
                 EdumiaBiomeDataConfigs.amPeaksModifier.heightModifier(0.83).noiseModifier(0.05)));
-        add(new Color(0xA2C7B9), new MapBasedCustomBiome(EdumiaBiomeKeys.AVELION_MOUNTAIN_PEAKS,106,
-                EdumiaBiomeDataConfigs.mountainModifier.heightModifier(0.39f)));
 
 
         riverBiomes.add(EdumiaBiomeKeys.RIVER);

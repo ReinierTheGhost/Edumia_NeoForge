@@ -240,6 +240,9 @@ public class EdumiaBiomeDataConfigs {
             .noiseModifier(FOOTHILL_NOISE_MODIFIER).heightModifier(FOOTHILL_HEIGHT_MODIFIER);
     public static BiomeGenerationData mountainModifier = new BiomeGenerationData().expansionWeight(MOUNTAIN_WEIGHT)
             .noiseModifier(MOUNTAIN_NOISE_MODIFIER).heightModifier(MOUNTAIN_HEIGHT_MODIFIER);
+
+    public static BiomeGenerationData amModifier = new BiomeGenerationData().expansionWeight(MOUNTAIN_WEIGHT)
+            .noiseModifier(0.7f).heightModifier(0.46f);
     public static BiomeGenerationData amPeaksModifier = new BiomeGenerationData().expansionWeight(MOUNTAIN_WEIGHT)
             .noiseModifier(1.47f).heightModifier(0.6f);
 
