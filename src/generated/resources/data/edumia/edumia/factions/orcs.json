@@ -21,7 +21,7 @@
         "pool": [
           "edumia:orc.civilian"
         ],
-        "rank": "LEADER"
+        "rank": "CIVILIAN"
       },
       {
         "pool": [
@@ -39,7 +39,7 @@
         "pool": [
           "edumia:orc.civilian"
         ],
-        "rank": "CIVILIAN"
+        "rank": "KNIGHT"
       },
       {
         "pool": [
@@ -51,7 +51,7 @@
         "pool": [
           "edumia:orc.civilian"
         ],
-        "rank": "KNIGHT"
+        "rank": "LEADER"
       }
     ]
   },

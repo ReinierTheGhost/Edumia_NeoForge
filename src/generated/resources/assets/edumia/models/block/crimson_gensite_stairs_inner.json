@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "edumia:block/crimson_gensite",
+    "side": "edumia:block/crimson_gensite",
+    "top": "edumia:block/crimson_gensite"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "edumia:block/aelorian_cobblestone",
+    "side": "edumia:block/aelorian_cobblestone",
+    "top": "edumia:block/aelorian_cobblestone"
+  }
+}

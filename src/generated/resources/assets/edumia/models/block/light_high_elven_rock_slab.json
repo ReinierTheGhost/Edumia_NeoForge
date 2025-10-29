@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "edumia:block/light_high_elven_rock",
-    "side": "edumia:block/light_high_elven_rock",
-    "top": "edumia:block/light_high_elven_rock"
-  }
-}

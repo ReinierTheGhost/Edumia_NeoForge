@@ -204,6 +204,8 @@ public class MapBasedBiomePool {
         add(new Color(206, 156, 138), new MapBasedCustomBiome(EdumiaBiomeKeys.AVELION_MOUNTAIN,79,
                 EdumiaBiomeDataConfigs.mountainModifier.heightModifier(0.34f)));
         add(new Color(237, 179, 158), new MapBasedCustomBiome(EdumiaBiomeKeys.AVELION_MOUNTAIN_PEAKS,106,
+                EdumiaBiomeDataConfigs.amPeaksModifier.heightModifier(0.83).noiseModifier(0.05)));
+        add(new Color(0xA2C7B9), new MapBasedCustomBiome(EdumiaBiomeKeys.AVELION_MOUNTAIN_PEAKS,106,
                 EdumiaBiomeDataConfigs.mountainModifier.heightModifier(0.39f)));
 
 

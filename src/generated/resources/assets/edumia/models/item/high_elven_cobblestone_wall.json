@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/wall_inventory",
-  "textures": {
-    "wall": "edumia:block/high_elven_cobblestone"
-  }
-}

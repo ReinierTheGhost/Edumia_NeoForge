@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "edumia:block/dark_high_elven_rock"
-  }
-}

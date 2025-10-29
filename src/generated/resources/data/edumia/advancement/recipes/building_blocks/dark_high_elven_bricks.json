@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_dark_high_elven_rock": {
+    "has_dusken_aelorian_rock": {
       "conditions": {
         "items": [
           {
-            "items": "edumia:dark_high_elven_rock"
+            "items": "edumia:dusken_aelorian_rock"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_dark_high_elven_rock"
+      "has_dusken_aelorian_rock"
     ]
   ],
   "rewards": {

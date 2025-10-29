@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_light_high_elven_rock": {
+    "has_pale_aelorian_rock": {
       "conditions": {
         "items": [
           {
-            "items": "edumia:light_high_elven_rock"
+            "items": "edumia:pale_aelorian_rock"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_light_high_elven_rock"
+      "has_pale_aelorian_rock"
     ]
   ],
   "rewards": {

@@ -19,9 +19,9 @@ public class StoneSets {
             DeferredRegister.createBlocks(Edumia.MOD_ID);
     public static final float STONE_STRENGTH = 2.0f;
     public static StoneSet PALEGRIT = registerStoneSet("palegrit", STONE_STRENGTH);
-    public static StoneSet UMBRAROCK = registerStoneSet("umbrarock", STONE_STRENGTH);
+    public static StoneSet UMBRA_ROCK = registerStoneSet("umbra_rock", STONE_STRENGTH);
     public static StoneSet LIMESTONE = registerStoneSet("limestone", STONE_STRENGTH);
-    public static StoneSet SKYSHALE = registerStoneSet("skyshale", STONE_STRENGTH);
+    public static StoneSet SKY_SHALE = registerStoneSet("sky_shale", STONE_STRENGTH);
     public static StoneSet SUNSTONE = registerStoneSet("sunstone", STONE_STRENGTH);
     public static StoneSet GLEAMSTONE = registerStoneSet("gleamstone", STONE_STRENGTH);
     public static StoneSet GREEN_BASALT = registerStoneSet("green_basalt", STONE_STRENGTH);
@@ -32,24 +32,24 @@ public class StoneSets {
     public static StoneSet BLOODSTONE = registerStoneSet("bloodstone", STONE_STRENGTH);
     public static StoneSet SUNSTONE_COBBLE = registerStoneSet("sunstone_cobble", STONE_STRENGTH);
     public static StoneSet CHALK = registerStoneSet("chalk", STONE_STRENGTH);
-    public static StoneSet AELORIAN_ROCK = registerStoneSet("high_elven_rock", STONE_STRENGTH);
-    public static StoneSet DUSKEN_AELORIAN_ROCK = registerStoneSet("dark_high_elven_rock", STONE_STRENGTH);
-    public static StoneSet PALE_AELORIAN_ROCK = registerStoneSet("light_high_elven_rock", STONE_STRENGTH);
+    public static StoneSet AELORIAN_ROCK = registerStoneSet("aelorian_rock", STONE_STRENGTH);
+    public static StoneSet DUSKEN_AELORIAN_ROCK = registerStoneSet("dusken_aelorian_rock", STONE_STRENGTH);
+    public static StoneSet PALE_AELORIAN_ROCK = registerStoneSet("pale_aelorian_rock", STONE_STRENGTH);
     public static StoneSet VOLCANIC_ROCK = registerStoneSet("volcanic_rock", STONE_STRENGTH);
-    public static StoneSet AELORIAN_COBBLESTONE = registerStoneSet("high_elven_cobblestone", STONE_STRENGTH);
-    public static StoneSet DUSKEN_AELORIAN_COBBLESTONE = registerStoneSet("dark_high_elven_cobblestone", STONE_STRENGTH);
-    public static StoneSet PALE_AELORIAN_COBBLESTONE = registerStoneSet("light_high_elven_cobblestone", STONE_STRENGTH);
-    public static StoneSet MOSSY_AELORIAN_COBBLESTONE = registerStoneSet("mossy_high_elven_cobblestone", STONE_STRENGTH);
-    public static StoneSet MOSSY_PALE_AELORIAN_COBBLESTONE = registerStoneSet("mossy_light_high_elven_cobblestone", STONE_STRENGTH);
-    public static StoneSet MOSSY_DUSKEN_AELORIAN_COBBLESTONE = registerStoneSet("mossy_dark_high_elven_cobblestone", STONE_STRENGTH);
+    public static StoneSet AELORIAN_COBBLESTONE = registerStoneSet("aelorian_cobblestone", STONE_STRENGTH);
+    public static StoneSet DUSKEN_AELORIAN_COBBLESTONE = registerStoneSet("dusken_aelorian_cobblestone", STONE_STRENGTH);
+    public static StoneSet PALE_AELORIAN_COBBLESTONE = registerStoneSet("pale_aelorian_cobblestone", STONE_STRENGTH);
+    public static StoneSet MOSSY_AELORIAN_COBBLESTONE = registerStoneSet("mossy_aelorian_cobblestone", STONE_STRENGTH);
+    public static StoneSet MOSSY_PALE_AELORIAN_COBBLESTONE = registerStoneSet("mossy_pale_aelorian_cobblestone", STONE_STRENGTH);
+    public static StoneSet MOSSY_DUSKEN_AELORIAN_COBBLESTONE = registerStoneSet("mossy_dusken_aelorian_cobblestone", STONE_STRENGTH);
     public static StoneSet CACHOLONG = registerStoneSet("cacholong", STONE_STRENGTH);
-    public static StoneSet CRIMSON_GENSITE = registerStoneSet("red_gensai_stone", STONE_STRENGTH);
+    public static StoneSet CRIMSON_GENSITE = registerStoneSet("crimson_gensite", STONE_STRENGTH);
 
     public static StoneSet[] naturalSets = new StoneSet[]{
             CRIMSON_GENSITE,
-            SKYSHALE,
+            SKY_SHALE,
             LIMESTONE,
-            UMBRAROCK,
+            UMBRA_ROCK,
             PALEGRIT,
             SUNSTONE,
             GLEAMSTONE,

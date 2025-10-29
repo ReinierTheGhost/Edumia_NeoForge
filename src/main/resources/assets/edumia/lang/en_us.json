@@ -1158,15 +1158,15 @@
 
 
 
-  "block.edumia.brown_stone": "Brown stone",
-  "block.edumia.brown_stone_wall": "Brown stone wall",
-  "block.edumia.brown_stone_stairs": "Brown stone stairs",
-  "block.edumia.brown_stone_slab": "Brown stone slab",
+  "block.edumia.umbra_rock": "Umbra rock",
+  "block.edumia.umbra_rock_wall": "Umbra rock wall",
+  "block.edumia.umbra_rock_stairs": "Umbra rock stairs",
+  "block.edumia.umbra_rock_slab": "Umbra rock slab",
 
-  "block.edumia.blue_stone": "Blue stone",
-  "block.edumia.blue_stone_wall": "Blue stone wall",
-  "block.edumia.blue_stone_stairs": "Blue stone stairs",
-  "block.edumia.blue_stone_slab": "Blue stone slab",
+  "block.edumia.sky_shale": "Sky shale",
+  "block.edumia.sky_shale_wall": "Sky shale wall",
+  "block.edumia.sky_shale_stairs": "Sky shale stairs",
+  "block.edumia.sky_shale_slab": "Sky shale slab",
 
   "block.edumia.blue_brick": "Blue brick",
   "block.edumia.blue_brick_wall": "Blue brick wall",
@@ -1193,25 +1193,25 @@
 
   "block.edumia.carved_red_gensai_bricks": "Carved red gensai bricks",
 
-  "block.edumia.cyan_stone": "Cyan stone",
-  "block.edumia.cyan_stone_wall": "Cyan stone wall",
-  "block.edumia.cyan_stone_stairs": "Cyan stone stairs",
-  "block.edumia.cyan_stone_slab": "Cyan stone slab",
+  "block.edumia.eatherite": "Eatherite",
+  "block.edumia.eatherite_wall": "Eatherite wall",
+  "block.edumia.eatherite_stairs": "Eatherite stairs",
+  "block.edumia.eatherite_slab": "Eatherite slab",
 
-  "block.edumia.yellow_cobble": "Yellow cobble",
-  "block.edumia.yellow_cobble_wall": "Yellow cobble wall",
-  "block.edumia.yellow_cobble_stairs": "Yellow cobble stairs",
-  "block.edumia.yellow_cobble_slab": "Yellow cobble slab",
+  "block.edumia.sunstone_cobble": "Sunstone cobble",
+  "block.edumia.sunstone_cobble_wall": "Sunstone cobble wall",
+  "block.edumia.sunstone_cobble_stairs": "Sunstone cobble stairs",
+  "block.edumia.sunstone_cobble_slab": "Sunstone cobble slab",
 
-  "block.edumia.yellow_stone": "Yellow stone",
-  "block.edumia.yellow_stone_wall": "Yellow stone wall",
-  "block.edumia.yellow_stone_stairs": "Yellow stone stairs",
-  "block.edumia.yellow_stone_slab": "Yellow stone slab",
+  "block.edumia.sunstone": "Sunstone",
+  "block.edumia.sunstone_wall": "Sunstone wall",
+  "block.edumia.sunstone_stairs": "Sunstone stairs",
+  "block.edumia.sunstone_slab": "Sunstone slab",
 
-  "block.edumia.yellow_stone_2": "Yellow stone 2",
-  "block.edumia.yellow_stone_2_wall": "Yellow stone 2 wall",
-  "block.edumia.yellow_stone_2_stairs": "Yellow stone 2 stairs",
-  "block.edumia.yellow_stone_2_slab": "Yellow stone 2 slab",
+  "block.edumia.gleamstone": "Gleamstone",
+  "block.edumia.gleamstone_wall": "Gleamstone wall",
+  "block.edumia.gleamstone_stairs": "Gleamstone stairs",
+  "block.edumia.gleamstone_slab": "Gleamstone slab",
 
 
 
@@ -1220,10 +1220,10 @@
   "block.edumia.yellow_stone_bricks_2_stairs": "Yellow stone bricks 2 stairs",
   "block.edumia.yellow_stone_bricks_2_slab": "Yellow stone bricks 2 slab",
 
-  "block.edumia.light_gray_stone": "Light gray stone",
-  "block.edumia.light_gray_stone_wall": "Light gray stone wall",
-  "block.edumia.light_gray_stone_stairs": "Light gray stone stairs",
-  "block.edumia.light_gray_stone_slab": "Light gray stone slab",
+  "block.edumia.palegrit": "Palegrit",
+  "block.edumia.palegrit_wall": "Palegrit wall",
+  "block.edumia.palegrit_stairs": "Palegrit stairs",
+  "block.edumia.palegrit_slab": "Palegrit slab",
 
 
 
@@ -1257,64 +1257,50 @@
   "block.edumia.limestone_slab": "Limestone slab",
 
 
-  "block.edumia.orange_rock": "Orange rock",
-  "block.edumia.orange_rock_wall": "Orange rock wall",
-  "block.edumia.orange_rock_stairs": "Orange rock stairs",
-  "block.edumia.orange_rock_slab": "Orange rock slab",
+  "block.edumia.cinderrite": "Cinderrite",
+  "block.edumia.cinderrite_wall": "Cinderrite wall",
+  "block.edumia.cinderrite_stairs": "Cinderrite stairs",
+  "block.edumia.cinderrite_slab": "Cinderrite slab",
 
-  "block.edumia.red_rock": "Red rock",
-  "block.edumia.red_rock_wall": "Red rock wall",
-  "block.edumia.red_rock_stairs": "Red rock stairs",
-  "block.edumia.red_rock_slab": "Red rock slab",
-
-
-
-
-
+  "block.edumia.bloodstone": "Bloodstone",
+  "block.edumia.bloodstone_wall": "Bloodstone wall",
+  "block.edumia.bloodstone_stairs": "Bloodstone stairs",
+  "block.edumia.bloodstone_slab": "Bloodstone slab",
 
 
   "block.edumia.chiseled_high_elven_bricks": "Chiseled high elven bricks",
 
-
-
-
-
   "block.edumia.chiseled_light_high_elven_bricks": "Chiseled light high elven bricks",
 
+  "block.edumia.aelorian_cobblestone": "Aelorian cobblestone",
+  "block.edumia.aelorian_cobblestone_slab": "Aelorian cobblestone slab",
+  "block.edumia.aelorian_cobblestone_stairs": "Aelorian cobblestone stairs",
+  "block.edumia.aelorian_cobblestone_wall": "Aelorian cobblestone wall",
 
+  "block.edumia.mossy_aelorian_cobblestone": "Mossy Aelorian cobblestone",
+  "block.edumia.mossy_aelorian_cobblestone_slab": "Mossy Aelorian cobblestone slab",
+  "block.edumia.mossy_aelorian_cobblestone_stairs": "Mossy Aelorian cobblestone stairs",
+  "block.edumia.mossy_aelorian_cobblestone_wall": "Mossy Aelorian cobblestone wall",
 
+  "block.edumia.pale_aelorian_cobblestone": "Light Aelorian cobblestone",
+  "block.edumia.pale_aelorian_cobblestone_slab": "Light Aelorian cobblestone slab",
+  "block.edumia.pale_aelorian_cobblestone_stairs": "Light Aelorian cobblestone stairs",
+  "block.edumia.pale_aelorian_cobblestone_wall": "Light Aelorian cobblestone wall",
 
+  "block.edumia.mossy_pale_aelorian_cobblestone": "Mossy light Aelorian cobblestone",
+  "block.edumia.mossy_pale_aelorian_cobblestone_slab": "Mossy light Aelorian cobblestone slab",
+  "block.edumia.mossy_pale_aelorian_cobblestone_stairs": "Mossy light Aelorian cobblestone stairs",
+  "block.edumia.mossy_pale_aelorian_cobblestone_wall": "Mossy light Aelorian cobblestone wall",
 
+  "block.edumia.dusken_aelorian_cobblestone": "Dark Aelorian cobblestone",
+  "block.edumia.dusken_aelorian_cobblestone_slab": "Dark Aelorian cobblestone slab",
+  "block.edumia.dusken_aelorian_cobblestone_stairs": "Dark Aelorian cobblestone stairs",
+  "block.edumia.dusken_aelorian_cobblestone_wall": "Dark Aelorian cobblestone wall",
 
-  "block.edumia.high_elven_cobblestone": "High elven cobblestone",
-  "block.edumia.high_elven_cobblestone_slab": "High elven cobblestone slab",
-  "block.edumia.high_elven_cobblestone_stairs": "High elven cobblestone stairs",
-  "block.edumia.high_elven_cobblestone_wall": "High elven cobblestone wall",
-
-  "block.edumia.mossy_high_elven_cobblestone": "Mossy high elven cobblestone",
-  "block.edumia.mossy_high_elven_cobblestone_slab": "Mossy high elven cobblestone slab",
-  "block.edumia.mossy_high_elven_cobblestone_stairs": "Mossy high elven cobblestone stairs",
-  "block.edumia.mossy_high_elven_cobblestone_wall": "Mossy high elven cobblestone wall",
-
-  "block.edumia.light_high_elven_cobblestone": "Light high elven cobblestone",
-  "block.edumia.light_high_elven_cobblestone_slab": "Light high elven cobblestone slab",
-  "block.edumia.light_high_elven_cobblestone_stairs": "Light high elven cobblestone stairs",
-  "block.edumia.light_high_elven_cobblestone_wall": "Light high elven cobblestone wall",
-
-  "block.edumia.mossy_light_high_elven_cobblestone": "Mossy light high elven cobblestone",
-  "block.edumia.mossy_light_high_elven_cobblestone_slab": "Mossy light high elven cobblestone slab",
-  "block.edumia.mossy_light_high_elven_cobblestone_stairs": "Mossy light high elven cobblestone stairs",
-  "block.edumia.mossy_light_high_elven_cobblestone_wall": "Mossy light high elven cobblestone wall",
-
-  "block.edumia.dark_high_elven_cobblestone": "Dark high elven cobblestone",
-  "block.edumia.dark_high_elven_cobblestone_slab": "Dark high elven cobblestone slab",
-  "block.edumia.dark_high_elven_cobblestone_stairs": "Dark high elven cobblestone stairs",
-  "block.edumia.dark_high_elven_cobblestone_wall": "Dark high elven cobblestone wall",
-
-  "block.edumia.mossy_dark_high_elven_cobblestone": "Mossy dark high elven cobblestone",
-  "block.edumia.mossy_dark_high_elven_cobblestone_slab": "Mossy dark high elven cobblestone slab",
-  "block.edumia.mossy_dark_high_elven_cobblestone_stairs": "Mossy dark high elven cobblestone stairs",
-  "block.edumia.mossy_dark_high_elven_cobblestone_wall": "Mossy dark high elven cobblestone wall",
+  "block.edumia.mossy_dusken_aelorian_cobblestone": "Mossy dark Aelorian cobblestone",
+  "block.edumia.mossy_dusken_aelorian_cobblestone_slab": "Mossy dark Aelorian cobblestone slab",
+  "block.edumia.mossy_dusken_aelorian_cobblestone_stairs": "Mossy dark Aelorian cobblestone stairs",
+  "block.edumia.mossy_dusken_aelorian_cobblestone_wall": "Mossy dark Aelorian cobblestone wall",
 
   "block.edumia.chiseled_dark_high_elven_bricks": "Chiseled dark high elven bricks",
 
@@ -1328,10 +1314,10 @@
   "block.edumia.chalk_stairs": "Chalk stairs",
   "block.edumia.chalk_wall": "Chalk wall",
 
-  "block.edumia.red_gensai_stone": "Red Gensai stone",
-  "block.edumia.red_gensai_stone_slab": "Red Gensai stone slab",
-  "block.edumia.red_gensai_stone_stairs": "Red Gensai stone stairs",
-  "block.edumia.red_gensai_stone_wall": "Red Gensai stone wall",
+  "block.edumia.crimson_gensite": "Crimson Gensite",
+  "block.edumia.crimson_gensite_slab": "Crimson Gensite slab",
+  "block.edumia.crimson_gensite_stairs": "Crimson Gensite stairs",
+  "block.edumia.crimson_gensite_wall": "Crimson Gensite wall",
 
   "block.edumia.cacholong": "Cacholong",
   "block.edumia.cacholong_slab": "Cacholong slab",
@@ -1357,20 +1343,20 @@
   "block.edumia.brown_sandstone_slates": "Brown sandstone slates",
 
  
-  "block.edumia.high_elven_rock": "High elven rock",
-  "block.edumia.high_elven_rock_wall": "High elven rock wall",
-  "block.edumia.high_elven_rock_stairs": "High elven rock stairs",
-  "block.edumia.high_elven_rock_slab": "High elven rock slab",
+  "block.edumia.aelorian_rock": "Aelorian rock",
+  "block.edumia.aelorian_rock_wall": "Aelorian rock wall",
+  "block.edumia.aelorian_rock_stairs": "Aelorian rock stairs",
+  "block.edumia.aelorian_rock_slab": "Aelorian rock slab",
 
-  "block.edumia.dark_high_elven_rock": "Dark high elven rock",
-  "block.edumia.dark_high_elven_rock_wall": "Dark high elven rock wall",
-  "block.edumia.dark_high_elven_rock_stairs": "Dark high elven rock stairs",
-  "block.edumia.dark_high_elven_rock_slab": "Dark high elven rock slab",
+  "block.edumia.dusken_aelorian_rock": "Dusken Aelorian rock",
+  "block.edumia.dusken_aelorian_rock_wall": "Dusken Aelorian rock wall",
+  "block.edumia.dusken_aelorian_rock_stairs": "Dusken Aelorian rock stairs",
+  "block.edumia.dusken_aelorian_rock_slab": "Dusken Aelorian rock slab",
 
-  "block.edumia.light_high_elven_rock": "Light high elven rock",
-  "block.edumia.light_high_elven_rock_wall": "Light high elven rock wall",
-  "block.edumia.light_high_elven_rock_stairs": "Light high elven rock stairs",
-  "block.edumia.light_high_elven_rock_slab": "Light high elven rock slab",
+  "block.edumia.pale_aelorian_rock": "Pale Aelorian rock",
+  "block.edumia.pale_aelorian_rock_wall": "Pale Aelorian rock wall",
+  "block.edumia.pale_aelorian_rock_stairs": "Pale Aelorian rock stairs",
+  "block.edumia.pale_aelorian_rock_slab": "Pale Aelorian rock slab",
 
   "block.edumia.high_elven_brick_tiling": "High elven brick tiling",
 
@@ -1402,6 +1388,13 @@
   "block.edumia.white_sandstone" : "White sandstone",
   "block.edumia.white_sandstone_slab" : "White sandstone slab",
   "block.edumia.white_sandstone_stairs" : "White sandstone stairs",
+
+  "block.edumia.gensai_sand_layer" : "Gensai sand layer",
+  "block.edumia.gensai_sand_slab" : "Gensai sand slab",
+  "block.edumia.gensai_sand" : "Gensai sand",
+  "block.edumia.gensai_sandstone" : "Gensai sandstone",
+  "block.edumia.gensai_sandstone_slab" : "Gensai sandstone slab",
+  "block.edumia.gensai_sandstone_stairs" : "Gensai sandstone stairs",
 
   "block.edumia.volcanic_dirt" : "Volcanic dirt",
   "block.edumia.volcanic_dirt_path" : "Volcanic dirt path",

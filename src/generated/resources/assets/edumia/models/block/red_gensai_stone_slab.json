@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "edumia:block/red_gensai_stone",
-    "side": "edumia:block/red_gensai_stone",
-    "top": "edumia:block/red_gensai_stone"
-  }
-}

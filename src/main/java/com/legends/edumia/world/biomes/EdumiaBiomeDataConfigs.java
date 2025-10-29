@@ -35,10 +35,10 @@ public class EdumiaBiomeDataConfigs {
             .addSlopeData(33, Blocks.COARSE_DIRT)
             .addSlopeData(34, Blocks.GRAVEL)
             .addSlopeData(37, Blocks.ANDESITE)
-            .addSlopeData(40, () -> StoneSets.UMBRAROCK.block().get())
+            .addSlopeData(40, () -> StoneSets.UMBRA_ROCK.block().get())
             .addSlopeData(45, Blocks.TUFF)
             .addSlopeData(47, () -> StoneSets.EATHERITE.block().get())
-            .addSlopeData(51, () -> StoneSets.SKYSHALE.block().get())
+            .addSlopeData(51, () -> StoneSets.SKY_SHALE.block().get())
             .addSlopeData(MAX_ANGLE, Blocks.COBBLED_DEEPSLATE);
 
     public static SlopeMap edumiaMountains = new SlopeMap()
@@ -47,10 +47,10 @@ public class EdumiaBiomeDataConfigs {
             .addSlopeData(33, Blocks.COARSE_DIRT)
             .addSlopeData(34, Blocks.GRAVEL)
             .addSlopeData(37, Blocks.ANDESITE)
-            .addSlopeData(40, () -> StoneSets.UMBRAROCK.block().get())
+            .addSlopeData(40, () -> StoneSets.UMBRA_ROCK.block().get())
             .addSlopeData(45, Blocks.TUFF)
             .addSlopeData(55, () -> StoneSets.EATHERITE.block().get())
-            .addSlopeData(67, () -> StoneSets.SKYSHALE.block().get())
+            .addSlopeData(67, () -> StoneSets.SKY_SHALE.block().get())
             .addSlopeData(MAX_ANGLE, Blocks.COBBLED_DEEPSLATE);
 
     public static SlopeMap edumiaMountainsPeaks = new SlopeMap()
@@ -240,6 +240,9 @@ public class EdumiaBiomeDataConfigs {
             .noiseModifier(FOOTHILL_NOISE_MODIFIER).heightModifier(FOOTHILL_HEIGHT_MODIFIER);
     public static BiomeGenerationData mountainModifier = new BiomeGenerationData().expansionWeight(MOUNTAIN_WEIGHT)
             .noiseModifier(MOUNTAIN_NOISE_MODIFIER).heightModifier(MOUNTAIN_HEIGHT_MODIFIER);
+    public static BiomeGenerationData amPeaksModifier = new BiomeGenerationData().expansionWeight(MOUNTAIN_WEIGHT)
+            .noiseModifier(1.47f).heightModifier(0.6f);
+
     public static BiomeGenerationData woodlandModifier = new BiomeGenerationData().expansionWeight(LAND_WEIGHT)
             .noiseModifier(0.7f).heightModifier(0.4f);
     public static BiomeGenerationData demonicMountainModifier = new BiomeGenerationData().expansionWeight(MOUNTAIN_WEIGHT)

@@ -92,8 +92,10 @@ public class CreativeTabLoader {
                                 }
 
                                 for (SandBlockSets.SandSet item : SandBlockSets.sandSets){
-                                    if(item.block() != null && item.sandStone() != null && item.sandstoneSlab() != null && item.sandstoneStairs() != null) {
+                                    if(item.block() != null) {
                                         entries.accept(item.block().get());
+                                    }
+                                    if(item.sandStone() != null && item.sandstoneSlab() != null && item.sandstoneStairs() != null) {
                                         entries.accept(item.sandStone().get());
                                         entries.accept(item.sandstoneSlab().get());
                                         entries.accept(item.sandstoneStairs().get());

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "edumia:block/mossy_dusken_aelorian_cobblestone",
+    "side": "edumia:block/mossy_dusken_aelorian_cobblestone",
+    "top": "edumia:block/mossy_dusken_aelorian_cobblestone"
+  }
+}

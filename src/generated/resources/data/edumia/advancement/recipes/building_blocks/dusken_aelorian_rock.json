@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_dusken_aelorian_cobblestone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "edumia:dusken_aelorian_cobblestone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "edumia:dusken_aelorian_rock"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_dusken_aelorian_cobblestone"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "edumia:dusken_aelorian_rock"
+    ]
+  }
+}

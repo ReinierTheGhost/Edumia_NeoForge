@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "cookingtime": 200,
+  "experience": 0.0,
+  "ingredient": {
+    "item": "edumia:dusken_aelorian_cobblestone"
+  },
+  "result": {
+    "count": 1,
+    "id": "edumia:dusken_aelorian_rock"
+  }
+}

@@ -35,17 +35,17 @@
       }
     },
     "log_target": [
-      "edumia:ghost_gum_wood_stairs",
-      "edumia:ghost_gum_wood_fence",
+      "edumia:ghost_gum_wood",
       "edumia:ghost_gum_wood_slab",
-      "edumia:ghost_gum_wood"
+      "edumia:ghost_gum_wood_stairs",
+      "edumia:ghost_gum_wood_fence"
     ],
     "place_from_nbt": [
-      "edumia:ghost_gum_wood_stairs",
-      "edumia:ghost_gum_log",
       "edumia:ghost_gum_wood_fence",
+      "edumia:ghost_gum_log",
       "edumia:ghost_gum_wood_slab",
-      "edumia:ghost_gum_leaves"
+      "edumia:ghost_gum_leaves",
+      "edumia:ghost_gum_wood_stairs"
     ]
   }
 }

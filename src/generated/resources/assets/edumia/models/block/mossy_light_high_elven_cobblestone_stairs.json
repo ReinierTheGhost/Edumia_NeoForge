@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "edumia:block/mossy_light_high_elven_cobblestone",
-    "side": "edumia:block/mossy_light_high_elven_cobblestone",
-    "top": "edumia:block/mossy_light_high_elven_cobblestone"
-  }
-}

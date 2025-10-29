@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_red_gensai_stone": {
+    "has_crimson_gensite": {
       "conditions": {
         "items": [
           {
-            "items": "edumia:red_gensai_stone"
+            "items": "edumia:crimson_gensite"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_red_gensai_stone"
+      "has_crimson_gensite"
     ]
   ],
   "rewards": {
