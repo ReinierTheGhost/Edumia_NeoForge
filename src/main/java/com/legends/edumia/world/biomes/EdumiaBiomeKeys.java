@@ -42,6 +42,7 @@ public class EdumiaBiomeKeys extends Biomes {
     public static final ResourceKey<Biome> AVELION_FOOTHILLS = EdumiaBiomeKeys.register("avelion_foothills");
     public static final ResourceKey<Biome> AVELION_MOUNTAIN_BASE = EdumiaBiomeKeys.register("avelion_mountain_base");
     public static final ResourceKey<Biome> AVELION_MOUNTAIN = EdumiaBiomeKeys.register("avelion_mountain");
+    public static final ResourceKey<Biome> AVELION_MOUNTAIN_HIGH_LANDS = EdumiaBiomeKeys.register("avelion_mountain_high_lands");
     public static final ResourceKey<Biome> AVELION_MOUNTAIN_PEAKS = EdumiaBiomeKeys.register("avelion_mountain_peaks");
 
 

@@ -98,12 +98,13 @@ public class MapBiomeData {
                 new BiomeColorsDTO(defaultSky, defaultFog, defaultWater, defaultWaterFog, 8240485, 7909996)));
 
 
-
         addBiome(new BiomeData(EdumiaBiomeKeys.AVELION_FOOTHILLS, EdumiaBiomeDataConfigs.avelionRockShore, EdumiaBiomeDataConfigs.avelionLayers,
                 new BiomeColorsDTO(hillySky, defaultFog, defaultWater, defaultWaterFog, 7777673, 7316862)));
         addBiome(new BiomeData(EdumiaBiomeKeys.AVELION_MOUNTAIN_BASE, EdumiaBiomeDataConfigs.avelionRockShore, EdumiaBiomeDataConfigs.avelionLayers,
                 new BiomeColorsDTO(hillySky, defaultFog, defaultWater, defaultWaterFog, 7777673, 7316862)));
         addBiome(new BiomeData(EdumiaBiomeKeys.AVELION_MOUNTAIN, EdumiaBiomeDataConfigs.avelionRockShore, EdumiaBiomeDataConfigs.avelionLayers,
+                new BiomeColorsDTO(hillySky, defaultFog, defaultWater, defaultWaterFog, 7777673, 7316862)));
+        addBiome(new BiomeData(EdumiaBiomeKeys.AVELION_MOUNTAIN_HIGH_LANDS, EdumiaBiomeDataConfigs.avelionRockShore, EdumiaBiomeDataConfigs.avelionLayers,
                 new BiomeColorsDTO(hillySky, defaultFog, defaultWater, defaultWaterFog, 7777673, 7316862)));
         addBiome(new BiomeData(EdumiaBiomeKeys.AVELION_MOUNTAIN_PEAKS, EdumiaBiomeDataConfigs.edumiaMountainsPeaks, EdumiaBiomeDataConfigs.avelionLayers,
                 new BiomeColorsDTO(hillySky, defaultFog, defaultWater, defaultWaterFog, 7777673, 7316862)));

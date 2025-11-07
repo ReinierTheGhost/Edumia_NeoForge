@@ -9,7 +9,6 @@ import com.legends.edumia.world.chunkgen.map.EdumiaHeightMap;
 import com.legends.edumia.world.map.EdumiaMapConfigs;
 import com.legends.edumia.world.map.EdumiaMapRuntime;
 import com.legends.edumia.world.map.EdumiaMapUtils;
-import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
@@ -35,7 +34,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.Executor;
 
 public class EdumiaChunkGenerator extends ChunkGenerator {
     public static final int MEDGON_LEVEL = -32;
@@ -93,6 +91,7 @@ public class EdumiaChunkGenerator extends ChunkGenerator {
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.AVELION_FOOTHILLS),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.AVELION_MOUNTAIN_BASE),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.AVELION_MOUNTAIN),
+                        biomeRegistry.getOrThrow(EdumiaBiomeKeys.AVELION_MOUNTAIN_HIGH_LANDS),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.AVELION_MOUNTAIN_PEAKS),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.OGRE_FOREST),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.GENSAI_SAKURA_GROVE),

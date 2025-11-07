@@ -65,6 +65,7 @@ public class ModBiomes {
         createEdumiaMountainBiome(context, EdumiaBiomeKeys.AVELION_FOOTHILLS, false);
         createEdumiaMountainBiome(context, EdumiaBiomeKeys.AVELION_MOUNTAIN_BASE, false);
         createEdumiaMountainBiome(context, EdumiaBiomeKeys.AVELION_MOUNTAIN, false);
+        createEdumiaMountainBiome(context, EdumiaBiomeKeys.AVELION_MOUNTAIN_HIGH_LANDS, false);
         createEdumiaMountainBiome(context, EdumiaBiomeKeys.AVELION_MOUNTAIN_PEAKS, true);
 
         createOgreForestBiome(context, EdumiaBiomeKeys.OGRE_FOREST);
