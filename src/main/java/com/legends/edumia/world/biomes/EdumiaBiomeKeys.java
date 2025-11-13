@@ -60,11 +60,20 @@ public class EdumiaBiomeKeys extends Biomes {
     public static final ResourceKey<Biome> EDUMIA_MOUNTAINS = EdumiaBiomeKeys.register("edumia_mountains");
     public static final ResourceKey<Biome> EDUMIA_MOUNTAINS_PEAKS = EdumiaBiomeKeys.register("edumia_mountains_peaks");
 
+    public static final ResourceKey<Biome> FROSTMANTLE_RANGE_VALLEY = EdumiaBiomeKeys.register("frostmantle_range_vally");
+    public static final ResourceKey<Biome> FROSTMANTLE_RANGE_BASE = EdumiaBiomeKeys.register("frostmantle_range_base");
+    public static final ResourceKey<Biome> FROSTMANTLE_RANGE = EdumiaBiomeKeys.register("frostmantle_range");
+    public static final ResourceKey<Biome> FROSTMANTLE_RANGE_PEAKS = EdumiaBiomeKeys.register("frostmantle_range_peaks");
+
     public static final ResourceKey<Biome> GENSAI_VOLCANO_PLAINS = EdumiaBiomeKeys.register("gensai_volcano_plains");
     public static final ResourceKey<Biome> MOUNT_TITLEIST_CRATER = EdumiaBiomeKeys.register("mount_titleist_crater");
     public static final ResourceKey<Biome> MOUNT_TITLEIST_FOOT = EdumiaBiomeKeys.register("mount_titleist_foot");
     public static final ResourceKey<Biome> MOUNT_TITLEIST = EdumiaBiomeKeys.register("mount_titleist");
     public static final ResourceKey<Biome> MOUNT_TITLEIST_PEAK = EdumiaBiomeKeys.register("mount_titleist_peak");
+
+    public static final ResourceKey<Biome> HELLSPINE_CRATER = EdumiaBiomeKeys.register("hellspine_crater");
+
+    public static final ResourceKey<Biome> CRIMSON_CALDERA = EdumiaBiomeKeys.register("crimson_caldera");
 
     public static final ResourceKey<Biome> GENSAI_BEACH = EdumiaBiomeKeys.register("gensai_beach");
     public static final ResourceKey<Biome> GENSAI_ROCKY_COAST = EdumiaBiomeKeys.register("gensai_rocky_coast");

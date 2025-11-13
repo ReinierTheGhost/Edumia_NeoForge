@@ -119,6 +119,15 @@ public class MapBiomeData {
         addBiome(new BiomeData(EdumiaBiomeKeys.EDUMIA_MOUNTAINS_PEAKS, EdumiaBiomeDataConfigs.edumiaMountainsPeaks, EdumiaBiomeDataConfigs.mistyMountainsLayers,
                 new BiomeColorsDTO(hillySky, defaultFog, defaultWater, defaultWaterFog, 7777673, 7316862)));
 
+        addBiome(new BiomeData(EdumiaBiomeKeys.FROSTMANTLE_RANGE_VALLEY, EdumiaBiomeDataConfigs.frostmantleFoothills, EdumiaBiomeDataConfigs.mistyMountainsLayers,
+                new BiomeColorsDTO(hillySky, defaultFog, defaultWater, defaultWaterFog, 7777673, 7316862)));
+        addBiome(new BiomeData(EdumiaBiomeKeys.FROSTMANTLE_RANGE_BASE, EdumiaBiomeDataConfigs.frostmantleFoothills, EdumiaBiomeDataConfigs.mistyMountainsLayers,
+                new BiomeColorsDTO(hillySky, defaultFog, defaultWater, defaultWaterFog, 7777673, 7316862)));
+        addBiome(new BiomeData(EdumiaBiomeKeys.FROSTMANTLE_RANGE, EdumiaBiomeDataConfigs.frostmantle, EdumiaBiomeDataConfigs.mistyMountainsLayers,
+                new BiomeColorsDTO(hillySky, defaultFog, defaultWater, defaultWaterFog, 7777673, 7316862)));
+        addBiome(new BiomeData(EdumiaBiomeKeys.FROSTMANTLE_RANGE_PEAKS, EdumiaBiomeDataConfigs.frostmantlePeaks, EdumiaBiomeDataConfigs.mistyMountainsLayers,
+                new BiomeColorsDTO(hillySky, defaultFog, defaultWater, defaultWaterFog, 7777673, 7316862)));
+
         addBiome(new BiomeData(EdumiaBiomeKeys.DEMON_WASTELANDS, EdumiaBiomeDataConfigs.ashenDirt, EdumiaBiomeDataConfigs.volcanicRockLayers,
                 new BiomeColorsDTO(5460048, 4999240, 5860962, 731161, 6252369, 4735297)));
         addBiome(new BiomeData(EdumiaBiomeKeys.ACIDVEIL_BASIN, EdumiaBiomeDataConfigs.calciteWaist, EdumiaBiomeDataConfigs.stoneLayers,
@@ -133,6 +142,12 @@ public class MapBiomeData {
         addBiome(new BiomeData(EdumiaBiomeKeys.MOUNT_TITLEIST_PEAK, EdumiaBiomeDataConfigs.gensaiVolcano, EdumiaBiomeDataConfigs.volcanicRockLayers,
                 new BiomeColorsDTO(5460048, 4999240, 5860962, 731161, 6252369, 4735297)));
         addBiome(new BiomeData(EdumiaBiomeKeys.MOUNT_TITLEIST_CRATER, EdumiaBiomeDataConfigs.gensaiVolcano, EdumiaBiomeDataConfigs.volcanicRockLayers,
+                new BiomeColorsDTO(5460048, 4999240, 5860962, 731161, 6252369, 4735297)));
+
+        addBiome(new BiomeData(EdumiaBiomeKeys.HELLSPINE_CRATER, EdumiaBiomeDataConfigs.gensaiVolcano, EdumiaBiomeDataConfigs.volcanicRockLayers,
+                new BiomeColorsDTO(5460048, 4999240, 5860962, 731161, 6252369, 4735297)));
+
+        addBiome(new BiomeData(EdumiaBiomeKeys.CRIMSON_CALDERA, EdumiaBiomeDataConfigs.gensaiVolcano, EdumiaBiomeDataConfigs.volcanicRockLayers,
                 new BiomeColorsDTO(5460048, 4999240, 5860962, 731161, 6252369, 4735297)));
 
         addBiome(new BiomeData(EdumiaBiomeKeys.GENSAI_SAKURA_GROVE, EdumiaBiomeDataConfigs.grassPlains, EdumiaBiomeDataConfigs.limestoneLayers,

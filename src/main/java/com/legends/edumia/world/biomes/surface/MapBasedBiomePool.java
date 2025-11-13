@@ -138,6 +138,15 @@ public class MapBasedBiomePool {
         add(new Color(185, 183, 183), new MapBasedCustomBiome(EdumiaBiomeKeys.EDUMIA_MOUNTAINS_PEAKS, 100,
                 EdumiaBiomeDataConfigs.emPeaksModifier));
 
+        add(new Color(174, 244, 170), new MapBasedCustomBiome(EdumiaBiomeKeys.FROSTMANTLE_RANGE_VALLEY, 27,
+                EdumiaBiomeDataConfigs.landModifier));
+        add(new Color(198, 237, 192), new MapBasedCustomBiome(EdumiaBiomeKeys.FROSTMANTLE_RANGE_BASE, 49,
+                EdumiaBiomeDataConfigs.mountainModifier.noiseModifier(0.95f).heightModifier(0.27f)));
+        add(new Color(219, 245, 215), new MapBasedCustomBiome(EdumiaBiomeKeys.FROSTMANTLE_RANGE, 68,
+                EdumiaBiomeDataConfigs.mountainModifier.noiseModifier(1.07f).heightModifier(0.4f)));
+        add(new Color(242, 255, 240), new MapBasedCustomBiome(EdumiaBiomeKeys.FROSTMANTLE_RANGE_PEAKS, 93,
+                EdumiaBiomeDataConfigs.mountainModifier.heightModifier(0.56f)));
+
         add(new Color(54, 114, 12), new MapBasedCustomBiome(EdumiaBiomeKeys.MYRWOOD_JUNGLE, 8,
                 EdumiaBiomeDataConfigs.myrwoodModifier));
         add(new Color(57, 117, 15), new MapBasedCustomBiome(EdumiaBiomeKeys.MYRWOOD_JUNGLE_CLEARING, 8,
@@ -184,6 +193,11 @@ public class MapBasedBiomePool {
         add(new Color(96, 39, 13), new MapBasedCustomBiome(EdumiaBiomeKeys.MOUNT_TITLEIST_CRATER, 90,
                 EdumiaBiomeDataConfigs.mountTitleistModifier.heightModifier(0.36f).noiseModifier(1.0f).expansionWeight(new byte[]{2, 3})));
 
+        add(new Color(96, 39, 32), new MapBasedCustomBiome(EdumiaBiomeKeys.HELLSPINE_CRATER, 90,
+                EdumiaBiomeDataConfigs.mountTitleistModifier.heightModifier(0.36f).noiseModifier(1.0f).expansionWeight(new byte[]{2, 3})));
+
+        add(new Color(98, 39, 30), new MapBasedCustomBiome(EdumiaBiomeKeys.CRIMSON_CALDERA, 90,
+                EdumiaBiomeDataConfigs.mountTitleistModifier.heightModifier(0.36f).noiseModifier(1.0f).expansionWeight(new byte[]{2, 3})));
 
         add(new Color(67, 193, 125), new MapBasedCustomBiome(EdumiaBiomeKeys.AVELION_PLAINS, 4,
                 EdumiaBiomeDataConfigs.landModifier));

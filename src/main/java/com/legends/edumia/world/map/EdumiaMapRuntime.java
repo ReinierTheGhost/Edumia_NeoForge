@@ -16,10 +16,11 @@ import java.util.UUID;
 
 public class EdumiaMapRuntime {
     private static EdumiaMapRuntime single_instance = null;
+
     HashMap<Vector2i, EdumiaMapRegion> regions;
     HashMap<UUID, Vector2i> regionByUuids;
+
     private BufferedImage edgeImage;
-    private EdumiaLog loggerUtil;
     private EdumiaMapUtils edumiaMapUtils;
 
     private int latestValidationTick = 0;
@@ -136,13 +137,11 @@ public class EdumiaMapRuntime {
                     toPurge.add(key);
             });
 
-            // Purging
-            //loggerUtil.logDebugMsg("Purging [%s] regions (tick : %s)".formatted(toPurge.size(), serverTick));
             for (Vector2i region : toPurge){
                 regions.remove(region);
             }
         } catch(Exception exception){
-            loggerUtil.logError("%s : %s".formatted(toString(), exception.getMessage()));
+            EdumiaLog.logError("%s : %s".formatted(toString(), exception.getMessage()));
         }
     }
 }

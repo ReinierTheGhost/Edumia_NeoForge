@@ -78,12 +78,21 @@ public class ModBiomes {
         createEdumiaMountainBiome(context, EdumiaBiomeKeys.EDUMIA_MOUNTAINS, false);
         createEdumiaMountainBiome(context, EdumiaBiomeKeys.EDUMIA_MOUNTAINS_PEAKS, true);
 
+        createEdumiaMountainBiome(context, EdumiaBiomeKeys.FROSTMANTLE_RANGE_VALLEY, false);
+        createEdumiaMountainBiome(context, EdumiaBiomeKeys.FROSTMANTLE_RANGE_BASE, false);
+        createEdumiaMountainBiome(context, EdumiaBiomeKeys.FROSTMANTLE_RANGE, false);
+        createEdumiaMountainBiome(context, EdumiaBiomeKeys.FROSTMANTLE_RANGE_PEAKS, true);
+
 
         createGensaiVolcanoBiome(context, EdumiaBiomeKeys.GENSAI_VOLCANO_PLAINS);
         createMountTitleistBiome(context, EdumiaBiomeKeys.MOUNT_TITLEIST_FOOT);
         createMountTitleistBiome(context, EdumiaBiomeKeys.MOUNT_TITLEIST);
         createMountTitleistBiome(context, EdumiaBiomeKeys.MOUNT_TITLEIST_PEAK);
         createMountTitleistBiome(context, EdumiaBiomeKeys.MOUNT_TITLEIST_CRATER);
+
+        createMountTitleistBiome(context, EdumiaBiomeKeys.HELLSPINE_CRATER);
+
+        createMountTitleistBiome(context, EdumiaBiomeKeys.CRIMSON_CALDERA);
 
         createGensaiBeachBiome(context, EdumiaBiomeKeys.GENSAI_BEACH);
         createGensaiBeachBiome(context, EdumiaBiomeKeys.GENSAI_ROCKY_COAST);

@@ -44,7 +44,7 @@ public class Edumia
     private static final Logger LOGGER = LogUtils.getLogger();
     public static final boolean IS_DEBUG = true;
 
-    public static final String MOD_VERSION = "1.1.0-1.21.1-beta";
+    public static final String MOD_VERSION = "1.1.0-1.21.1-beta-1";
 
     public static final boolean ENABLE_INSTANT_BOOTING = false;
 

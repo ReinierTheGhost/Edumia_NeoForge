@@ -148,6 +148,36 @@ public class EdumiaBiomeDataConfigs {
     public static SlopeMap whiteShores = new SlopeMap()
             .addSlopeData(26, () -> SandBlockSets.WHITE_SAND.block().get())
             .addSlopeData(MAX_ANGLE, () -> SandBlockSets.WHITE_SAND.block().get());
+
+    public static SlopeMap frostmantleFoothills = new SlopeMap()
+            .addSlopeData(18, Blocks.GRASS_BLOCK)
+            .addSlopeData(26, Blocks.PODZOL)
+            .addSlopeData(34, Blocks.DIORITE)
+            .addSlopeData(44, Blocks.CALCITE)
+            .addSlopeData(54, StoneSets.LIMESTONE.block().get())
+            .addSlopeData(66, Blocks.ANDESITE)
+            .addSlopeData(78, Blocks.TUFF)
+            .addSlopeData(MAX_ANGLE, Blocks.DEEPSLATE);
+
+    public static SlopeMap frostmantle = new SlopeMap()
+            .addSlopeData(20, Blocks.GRASS_BLOCK)
+            .addSlopeData(28, Blocks.COARSE_DIRT)
+            .addSlopeData(36, Blocks.DIORITE)
+            .addSlopeData(46, Blocks.CALCITE)
+            .addSlopeData(56, StoneSets.LIMESTONE.block().get())
+            .addSlopeData(66, Blocks.ANDESITE)
+            .addSlopeData(78, Blocks.TUFF)
+            .addSlopeData(MAX_ANGLE, Blocks.DEEPSLATE);
+
+    public static SlopeMap frostmantlePeaks = new SlopeMap()
+            .addSlopeData(20, Blocks.SNOW_BLOCK)
+            .addSlopeData(28, Blocks.POWDER_SNOW)
+            .addSlopeData(36, Blocks.DIORITE)
+            .addSlopeData(46, Blocks.CALCITE)
+            .addSlopeData(56, StoneSets.LIMESTONE.block().get())
+            .addSlopeData(66, Blocks.ANDESITE)
+            .addSlopeData(78, Blocks.TUFF)
+            .addSlopeData(MAX_ANGLE, Blocks.DEEPSLATE);
     // endregion
 
     // region Blocks Layering

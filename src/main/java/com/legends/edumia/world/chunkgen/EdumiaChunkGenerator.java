@@ -50,7 +50,9 @@ public class EdumiaChunkGenerator extends ChunkGenerator {
     EdumiaMapRuntime edumiaMapRuntime;
 
     public static final int mapMultiplier = (int) Math.pow(2, EdumiaMapConfigs.MAP_ITERATION + EdumiaMapConfigs.PIXEL_WEIGHT - 2);
-    public static final Vec2 mountTitleist = new Vec2 (2752.5f, 505.2f).scale(mapMultiplier);
+    public static final Vec2 mountTitleist = new Vec2 (2329.5f, 838.2f).scale(mapMultiplier);
+    public static final Vec2 crimsonCaldera = new Vec2 (1469.5f, 1038.2f).scale(mapMultiplier);
+    public static final Vec2 hellspineCrater = new Vec2 (1457.5f, 1049.2f).scale(mapMultiplier);
     private static final int CAVE_STRETCH_H = 60;
     private static final int SPAGHETTI_CAVE_STRETCH_H = 90;
     private static final int CAVE_STRETCH_V = 50;
@@ -104,12 +106,21 @@ public class EdumiaChunkGenerator extends ChunkGenerator {
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.EDUMIA_MOUNTAINS_PEAKS),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.EDUMIA_MOUNTAINS),
 
+                        biomeRegistry.getOrThrow(EdumiaBiomeKeys.FROSTMANTLE_RANGE_VALLEY),
+                        biomeRegistry.getOrThrow(EdumiaBiomeKeys.FROSTMANTLE_RANGE_BASE),
+                        biomeRegistry.getOrThrow(EdumiaBiomeKeys.FROSTMANTLE_RANGE),
+                        biomeRegistry.getOrThrow(EdumiaBiomeKeys.FROSTMANTLE_RANGE_PEAKS),
+
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.GENSAI_VOLCANO_PLAINS),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.MOUNT_TITLEIST_CRATER),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.MOUNT_TITLEIST),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.MOUNT_TITLEIST_PEAK),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.MOUNT_TITLEIST_FOOT),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.OCEAN_COAST),
+
+                        biomeRegistry.getOrThrow(EdumiaBiomeKeys.HELLSPINE_CRATER),
+
+                        biomeRegistry.getOrThrow(EdumiaBiomeKeys.CRIMSON_CALDERA),
 
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.RIVER),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.GENSAI_REEF),
@@ -191,8 +202,20 @@ public class EdumiaChunkGenerator extends ChunkGenerator {
                         additionalHeight *= EdumiaMapRuntime.getInstance().getEdge(posX, posZ);
                         height += (float) additionalHeight;
                     }
+                } else if(biomeResourceKey == EdumiaBiomeKeys.HELLSPINE_CRATER) {
+                    float percentage = (float) Math.sqrt(hellspineCrater.distanceToSqr(new Vec2(posX, posZ))) / 42;
+                    percentage = Math.min(1, Math.max(0.0f, percentage));
+                    percentage = (float) Math.pow(percentage, 2.47f);
+                    height = height * percentage;
+                    height -= (1 - percentage) * getNoisyHeight(posX, posZ) * 8;
                 } else if(biomeResourceKey == EdumiaBiomeKeys.MOUNT_TITLEIST_CRATER) {
                     float percentage = (float) Math.sqrt(mountTitleist.distanceToSqr(new Vec2(posX, posZ))) / 42;
+                    percentage = Math.min(1, Math.max(0.0f, percentage));
+                    percentage = (float) Math.pow(percentage, 2.47f);
+                    height = height * percentage;
+                    height -= (1 - percentage) * getNoisyHeight(posX, posZ) * 8;
+                }  else if(biomeResourceKey == EdumiaBiomeKeys.CRIMSON_CALDERA) {
+                    float percentage = (float) Math.sqrt(crimsonCaldera.distanceToSqr(new Vec2(posX, posZ))) / 42;
                     percentage = Math.min(1, Math.max(0.0f, percentage));
                     percentage = (float) Math.pow(percentage, 2.47f);
                     height = height * percentage;
@@ -251,7 +274,9 @@ public class EdumiaChunkGenerator extends ChunkGenerator {
                 }
                 chunk.setBlockState(chunk.getPos().getBlockAt(x, (int) (DIRT_HEIGHT + height), z), surfaceBlock, false);
 
-                if(biomeResourceKey == EdumiaBiomeKeys.MOUNT_TITLEIST_CRATER) {
+                if(biomeResourceKey == EdumiaBiomeKeys.MOUNT_TITLEIST_CRATER ||
+                        biomeResourceKey == EdumiaBiomeKeys.HELLSPINE_CRATER ||
+                        biomeResourceKey == EdumiaBiomeKeys.CRIMSON_CALDERA) {
                     for(int y = (int) (DIRT_HEIGHT + height + 1); y <= 100; y++) {
                         chunk.setBlockState(chunk.getPos().getBlockAt(x, y, z), Blocks.LAVA.defaultBlockState(), false);
                     }

@@ -26,10 +26,10 @@ public class EdumiaMapGeneration {
     private FileUtils fileUtils;
     private static final int WATER_BUFFER = 16;
     private static final float WATER_HEIGHT_MULTIPLIER = 1.0f;
+
     private static BufferedImage baseHeightImage;
     private static BufferedImage edgeHeightImage;
     private static BufferedImage initialMap;
-
 
     public EdumiaMapGeneration() throws Exception {
         fileUtils = FileUtils.getInstance();
@@ -55,6 +55,7 @@ public class EdumiaMapGeneration {
         else {
             EdumiaLog.logInfoMsg("Instant Booting - Enabled");
             boolean pasteSuccess = true;
+
             // check if copy&paste is necessary
             File rootFolder = new File(EdumiaMapConfigs.MOD_DATA_ROOT);
             File modRootFolder = new File(EdumiaMapConfigs.MOD_DATA_MOD_ROOT);
@@ -67,12 +68,15 @@ public class EdumiaMapGeneration {
                 try {
                     String resourceFolderPath = "/%s".formatted(EdumiaMapConfigs.INITIAL_MAP_FOLDER);
                     String runtimeFolderPath = "%s".formatted(EdumiaMapConfigs.MOD_DATA_MOD_ROOT);
+
                     InputStream inputStream = getClass().getResourceAsStream(resourceFolderPath + ".zip");
                     ZipInputStream zipInputStream = new ZipInputStream(inputStream);
                     ZipEntry entry;
+
                     File runtimeDataVersionDirectory = new File(runtimeFolderPath);
                     runtimeDataVersionDirectory.mkdirs();
                     byte[] buffer = new byte[1024];
+
                     while ((entry = zipInputStream.getNextEntry()) != null) {
                         File entryDestination = new File(runtimeFolderPath, entry.getName());
                         if (entry.isDirectory()) {
@@ -111,7 +115,6 @@ public class EdumiaMapGeneration {
         EdumiaLog.logInfoMsg("Validating initial map BIOME colors;");
         if(!validateBaseColors(initialMap)) return;
 
-
         EdumiaLog.logInfoMsg("Validating BIOME generation availability;");
         int iterationToGenerate = (EdumiaMapConfigs.FORCE_GENERATION)
                 ? EdumiaMapConfigs.MAP_ITERATION + 1
@@ -141,6 +144,9 @@ public class EdumiaMapGeneration {
     }
 
     private boolean validateBaseColors(BufferedImage initialMap) {
+        if (initialMap == null){
+            return false;
+        }
         for(int x = 0; x < initialMap.getWidth(); x++){
             for(int y = 0; y < initialMap.getWidth(); y++){
                 try{
@@ -162,7 +168,8 @@ public class EdumiaMapGeneration {
             return null;
         }
         EdumiaLog.logInfoMsg("Validating ORIGINAL image size;");
-        if(initialImage.getWidth() % EdumiaMapConfigs.REGION_SIZE != 0 || initialImage.getHeight() % EdumiaMapConfigs.REGION_SIZE != 0){
+        if(initialImage.getWidth() % EdumiaMapConfigs.REGION_SIZE != 0 ||
+                initialImage.getHeight() % EdumiaMapConfigs.REGION_SIZE != 0){
             EdumiaLog.logError("Initial map image has the wrong size!");
             return null;
         }
@@ -171,6 +178,9 @@ public class EdumiaMapGeneration {
     }
 
     private int findAmountOfIterationToGenerate(BufferedImage initialMap) {
+        if (initialMap == null){
+            return 0;
+        }
         int currentRegionAmountX = initialMap.getWidth() / EdumiaMapConfigs.REGION_SIZE;
         int currentRegionAmountY = initialMap.getHeight() / EdumiaMapConfigs.REGION_SIZE;
         int absoluteMapIteration = EdumiaMapConfigs.MAP_ITERATION + 1;
@@ -214,7 +224,8 @@ public class EdumiaMapGeneration {
                     int finalX = x;
                     int finalY = y;
                     executorService.submit(() -> {
-                        String path = EdumiaMapConfigs.BIOME_PATH.formatted(finalI - 1) + EdumiaMapConfigs.IMAGE_NAME.formatted(finalX, finalY);
+                        String path = EdumiaMapConfigs.BIOME_PATH.formatted(finalI - 1) +
+                                EdumiaMapConfigs.IMAGE_NAME.formatted(finalX, finalY);
                         BufferedImage[][] subidivedRegions = ImageUtils.subdivide(fileUtils.getRunImage(path));
 
                         for(int j = 0; j < 2; j ++){
