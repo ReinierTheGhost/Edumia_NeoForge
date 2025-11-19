@@ -138,7 +138,7 @@ public class MapBasedBiomePool {
         add(new Color(185, 183, 183), new MapBasedCustomBiome(EdumiaBiomeKeys.EDUMIA_MOUNTAINS_PEAKS, 100,
                 EdumiaBiomeDataConfigs.emPeaksModifier));
 
-        add(new Color(174, 244, 170), new MapBasedCustomBiome(EdumiaBiomeKeys.FROSTMANTLE_RANGE_VALLEY, 27,
+        add(new Color(174, 244, 170), new MapBasedCustomBiome(EdumiaBiomeKeys.FROSTMANTLE_RANGE_VALLEY, 17,
                 EdumiaBiomeDataConfigs.landModifier));
         add(new Color(198, 237, 192), new MapBasedCustomBiome(EdumiaBiomeKeys.FROSTMANTLE_RANGE_BASE, 49,
                 EdumiaBiomeDataConfigs.mountainModifier.noiseModifier(0.95f).heightModifier(0.27f)));
@@ -146,6 +146,15 @@ public class MapBasedBiomePool {
                 EdumiaBiomeDataConfigs.mountainModifier.noiseModifier(1.07f).heightModifier(0.4f)));
         add(new Color(242, 255, 240), new MapBasedCustomBiome(EdumiaBiomeKeys.FROSTMANTLE_RANGE_PEAKS, 93,
                 EdumiaBiomeDataConfigs.mountainModifier.heightModifier(0.56f)));
+
+        add(new Color(125, 129, 113), new MapBasedCustomBiome(EdumiaBiomeKeys.MOONGLADE_PEAKS_VALLEY, 7,
+                EdumiaBiomeDataConfigs.landModifier));
+        add(new Color(125, 113, 113), new MapBasedCustomBiome(EdumiaBiomeKeys.MOONGLADE_PEAKS_BASE, 35,
+                EdumiaBiomeDataConfigs.mountainModifier.heightModifier(0.24f)));
+        add(new Color(110, 98, 98), new MapBasedCustomBiome(EdumiaBiomeKeys.MOONGLADE_PEAKS, 75,
+                EdumiaBiomeDataConfigs.mountainModifier.noiseModifier(0.355f)));
+        add(new Color(99, 90, 90), new MapBasedCustomBiome(EdumiaBiomeKeys.MOONGLADE_PEAKS_TOPS, 100,
+                EdumiaBiomeDataConfigs.mountainModifier.heightModifier(0.59f).noiseModifier(1.3f)));
 
         add(new Color(54, 114, 12), new MapBasedCustomBiome(EdumiaBiomeKeys.MYRWOOD_JUNGLE, 8,
                 EdumiaBiomeDataConfigs.myrwoodModifier));

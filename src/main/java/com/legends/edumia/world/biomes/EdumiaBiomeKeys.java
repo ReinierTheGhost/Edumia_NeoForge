@@ -65,6 +65,11 @@ public class EdumiaBiomeKeys extends Biomes {
     public static final ResourceKey<Biome> FROSTMANTLE_RANGE = EdumiaBiomeKeys.register("frostmantle_range");
     public static final ResourceKey<Biome> FROSTMANTLE_RANGE_PEAKS = EdumiaBiomeKeys.register("frostmantle_range_peaks");
 
+    public static final ResourceKey<Biome> MOONGLADE_PEAKS_VALLEY = EdumiaBiomeKeys.register("moonglade_peaks_vally");
+    public static final ResourceKey<Biome> MOONGLADE_PEAKS_BASE = EdumiaBiomeKeys.register("moonglade_peaks_base");
+    public static final ResourceKey<Biome> MOONGLADE_PEAKS = EdumiaBiomeKeys.register("moonglade_peaks");
+    public static final ResourceKey<Biome> MOONGLADE_PEAKS_TOPS = EdumiaBiomeKeys.register("moonglade_peaks_tops");
+
     public static final ResourceKey<Biome> GENSAI_VOLCANO_PLAINS = EdumiaBiomeKeys.register("gensai_volcano_plains");
     public static final ResourceKey<Biome> MOUNT_TITLEIST_CRATER = EdumiaBiomeKeys.register("mount_titleist_crater");
     public static final ResourceKey<Biome> MOUNT_TITLEIST_FOOT = EdumiaBiomeKeys.register("mount_titleist_foot");

@@ -111,6 +111,11 @@ public class EdumiaChunkGenerator extends ChunkGenerator {
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.FROSTMANTLE_RANGE),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.FROSTMANTLE_RANGE_PEAKS),
 
+                        biomeRegistry.getOrThrow(EdumiaBiomeKeys.MOONGLADE_PEAKS_VALLEY),
+                        biomeRegistry.getOrThrow(EdumiaBiomeKeys.MOONGLADE_PEAKS_BASE),
+                        biomeRegistry.getOrThrow(EdumiaBiomeKeys.MOONGLADE_PEAKS),
+                        biomeRegistry.getOrThrow(EdumiaBiomeKeys.MOONGLADE_PEAKS_TOPS),
+
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.GENSAI_VOLCANO_PLAINS),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.MOUNT_TITLEIST_CRATER),
                         biomeRegistry.getOrThrow(EdumiaBiomeKeys.MOUNT_TITLEIST),

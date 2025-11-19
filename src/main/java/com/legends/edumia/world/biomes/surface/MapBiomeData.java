@@ -128,6 +128,15 @@ public class MapBiomeData {
         addBiome(new BiomeData(EdumiaBiomeKeys.FROSTMANTLE_RANGE_PEAKS, EdumiaBiomeDataConfigs.frostmantlePeaks, EdumiaBiomeDataConfigs.mistyMountainsLayers,
                 new BiomeColorsDTO(hillySky, defaultFog, defaultWater, defaultWaterFog, 7777673, 7316862)));
 
+        addBiome(new BiomeData(EdumiaBiomeKeys.MOONGLADE_PEAKS_VALLEY, EdumiaBiomeDataConfigs.moongladePeaks, EdumiaBiomeDataConfigs.mistyMountainsLayers,
+                new BiomeColorsDTO(hillySky, defaultFog, defaultWater, defaultWaterFog, 7777673, 7316862)));
+        addBiome(new BiomeData(EdumiaBiomeKeys.MOONGLADE_PEAKS_BASE, EdumiaBiomeDataConfigs.moongladePeaks, EdumiaBiomeDataConfigs.mistyMountainsLayers,
+                new BiomeColorsDTO(hillySky, defaultFog, defaultWater, defaultWaterFog, 7777673, 7316862)));
+        addBiome(new BiomeData(EdumiaBiomeKeys.MOONGLADE_PEAKS, EdumiaBiomeDataConfigs.moongladePeaks, EdumiaBiomeDataConfigs.mistyMountainsLayers,
+                new BiomeColorsDTO(hillySky, defaultFog, defaultWater, defaultWaterFog, 7777673, 7316862)));
+        addBiome(new BiomeData(EdumiaBiomeKeys.MOONGLADE_PEAKS_TOPS, EdumiaBiomeDataConfigs.moongladePeaksTop, EdumiaBiomeDataConfigs.mistyMountainsLayers,
+                new BiomeColorsDTO(hillySky, defaultFog, defaultWater, defaultWaterFog, 7777673, 7316862)));
+
         addBiome(new BiomeData(EdumiaBiomeKeys.DEMON_WASTELANDS, EdumiaBiomeDataConfigs.ashenDirt, EdumiaBiomeDataConfigs.volcanicRockLayers,
                 new BiomeColorsDTO(5460048, 4999240, 5860962, 731161, 6252369, 4735297)));
         addBiome(new BiomeData(EdumiaBiomeKeys.ACIDVEIL_BASIN, EdumiaBiomeDataConfigs.calciteWaist, EdumiaBiomeDataConfigs.stoneLayers,

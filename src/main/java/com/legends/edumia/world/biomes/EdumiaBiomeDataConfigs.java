@@ -154,7 +154,7 @@ public class EdumiaBiomeDataConfigs {
             .addSlopeData(26, Blocks.PODZOL)
             .addSlopeData(34, Blocks.DIORITE)
             .addSlopeData(44, Blocks.CALCITE)
-            .addSlopeData(54, StoneSets.LIMESTONE.block().get())
+            .addSlopeData(54, () -> StoneSets.LIMESTONE.block().get())
             .addSlopeData(66, Blocks.ANDESITE)
             .addSlopeData(78, Blocks.TUFF)
             .addSlopeData(MAX_ANGLE, Blocks.DEEPSLATE);
@@ -164,7 +164,7 @@ public class EdumiaBiomeDataConfigs {
             .addSlopeData(28, Blocks.COARSE_DIRT)
             .addSlopeData(36, Blocks.DIORITE)
             .addSlopeData(46, Blocks.CALCITE)
-            .addSlopeData(56, StoneSets.LIMESTONE.block().get())
+            .addSlopeData(56, () -> StoneSets.LIMESTONE.block().get())
             .addSlopeData(66, Blocks.ANDESITE)
             .addSlopeData(78, Blocks.TUFF)
             .addSlopeData(MAX_ANGLE, Blocks.DEEPSLATE);
@@ -174,10 +174,29 @@ public class EdumiaBiomeDataConfigs {
             .addSlopeData(28, Blocks.POWDER_SNOW)
             .addSlopeData(36, Blocks.DIORITE)
             .addSlopeData(46, Blocks.CALCITE)
-            .addSlopeData(56, StoneSets.LIMESTONE.block().get())
+            .addSlopeData(56, () -> StoneSets.LIMESTONE.block().get())
             .addSlopeData(66, Blocks.ANDESITE)
             .addSlopeData(78, Blocks.TUFF)
             .addSlopeData(MAX_ANGLE, Blocks.DEEPSLATE);
+
+
+    public static SlopeMap moongladePeaks = new SlopeMap()
+            .addSlopeData(18, Blocks.GRASS_BLOCK)                       // forest benches & meadows
+            .addSlopeData(26, Blocks.PODZOL)                            // oak-forest floor on gentle slopes
+            .addSlopeData(33, Blocks.COARSE_DIRT)                       // eroded bands between soil & rock
+            .addSlopeData(42, () -> StoneSets.CACHOLONG.block().get())  // pale lower cliffs / karst feel
+            .addSlopeData(52, Blocks.ANDESITE)                          // neutral gray mid-slopes
+            .addSlopeData(62, () -> StoneSets.UMBRA_ROCK.block().get()) // dark, moonlit rock faces
+            .addSlopeData(72, Blocks.TUFF)                              // rough, weathered steep shelves
+            .addSlopeData(MAX_ANGLE, Blocks.DEEPSLATE);                       // deepest shadowed verticals
+
+    public static SlopeMap moongladePeaksTop = new SlopeMap()
+            .addSlopeData(33, Blocks.SNOW_BLOCK)                       // eroded bands between soil & rock
+            .addSlopeData(42, () -> StoneSets.CACHOLONG.block().get())  // pale lower cliffs / karst feel
+            .addSlopeData(52, Blocks.ANDESITE)                          // neutral gray mid-slopes
+            .addSlopeData(62, () -> StoneSets.UMBRA_ROCK.block().get()) // dark, moonlit rock faces
+            .addSlopeData(72, Blocks.TUFF)                              // rough, weathered steep shelves
+            .addSlopeData(MAX_ANGLE, Blocks.DEEPSLATE);                       // deepest shadowed verticals
     // endregion
 
     // region Blocks Layering

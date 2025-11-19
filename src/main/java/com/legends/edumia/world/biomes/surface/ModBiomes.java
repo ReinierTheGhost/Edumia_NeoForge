@@ -72,7 +72,6 @@ public class ModBiomes {
         createMyrwoodSwampBiome(context, EdumiaBiomeKeys.FAIRY_SWAMP);
         createRiverBiome(context, EdumiaBiomeKeys.GREAT_RIVER);
 
-
         createEdumiaMountainBiome(context, EdumiaBiomeKeys.EDUMIA_FOOTHILLS, false);
         createEdumiaMountainBiome(context, EdumiaBiomeKeys.EDUMIA_MOUNTAINS_BASE, false);
         createEdumiaMountainBiome(context, EdumiaBiomeKeys.EDUMIA_MOUNTAINS, false);
@@ -83,6 +82,10 @@ public class ModBiomes {
         createEdumiaMountainBiome(context, EdumiaBiomeKeys.FROSTMANTLE_RANGE, false);
         createEdumiaMountainBiome(context, EdumiaBiomeKeys.FROSTMANTLE_RANGE_PEAKS, true);
 
+        createEdumiaMountainBiome(context, EdumiaBiomeKeys.MOONGLADE_PEAKS_VALLEY, false);
+        createEdumiaMountainBiome(context, EdumiaBiomeKeys.MOONGLADE_PEAKS_BASE, false);
+        createEdumiaMountainBiome(context, EdumiaBiomeKeys.MOONGLADE_PEAKS, false);
+        createEdumiaMountainBiome(context, EdumiaBiomeKeys.MOONGLADE_PEAKS_TOPS, true);
 
         createGensaiVolcanoBiome(context, EdumiaBiomeKeys.GENSAI_VOLCANO_PLAINS);
         createMountTitleistBiome(context, EdumiaBiomeKeys.MOUNT_TITLEIST_FOOT);
