@@ -85,18 +85,6 @@ public class EdumiaBiomeDataConfigs {
             .addSlopeData(55, () -> StoneSets.DUSKEN_AELORIAN_ROCK.block().get())
             .addSlopeData(MAX_ANGLE, () -> StoneSets.CACHOLONG.block().get());
 
-    public static SlopeMap sandShores = new SlopeMap()
-            .addSlopeData(27, Blocks.SAND)
-            .addSlopeData(30, Blocks.SANDSTONE)
-            .addSlopeData(36, Blocks.COARSE_DIRT)
-            .addSlopeData(MAX_ANGLE, Blocks.STONE);
-
-    public static SlopeMap whiteSandShores = new SlopeMap()
-            .addSlopeData(27, () -> SandBlockSets.WHITE_SAND.block().get())
-            .addSlopeData(30, SandBlockSets.WHITE_SAND.sandStone().get())
-            .addSlopeData(36, Blocks.COARSE_DIRT)
-            .addSlopeData(MAX_ANGLE, Blocks.STONE);
-
     public static SlopeMap river = new SlopeMap()
             .addSlopeData(30, Blocks.SAND)
             .addSlopeData(36, Blocks.DIRT)
@@ -142,12 +130,16 @@ public class EdumiaBiomeDataConfigs {
             .addSlopeData(MAX_ANGLE, Blocks.SAND);
 
     public static SlopeMap gensaiShores = new SlopeMap()
-            .addSlopeData(26, Blocks.RED_SAND)
-            .addSlopeData(MAX_ANGLE, Blocks.RED_SANDSTONE);
+            .addSlopeData(26, () -> SandBlockSets.GENSAI_SAND.block().get())
+            .addSlopeData(MAX_ANGLE, Blocks.SANDSTONE);
 
     public static SlopeMap whiteShores = new SlopeMap()
             .addSlopeData(26, () -> SandBlockSets.WHITE_SAND.block().get())
             .addSlopeData(MAX_ANGLE, () -> SandBlockSets.WHITE_SAND.block().get());
+
+    public static SlopeMap sandShores = new SlopeMap()
+            .addSlopeData(26, Blocks.SAND)
+            .addSlopeData(MAX_ANGLE, Blocks.SANDSTONE);
 
     public static SlopeMap frostmantleFoothills = new SlopeMap()
             .addSlopeData(18, Blocks.GRASS_BLOCK)

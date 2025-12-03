@@ -263,38 +263,6 @@ public class TreeFromStructureNBTFeature extends Feature<TreeFromStructureNBTCon
     }
 
     public static void fillLogsUnder(RandomSource randomSource, BlockStateProvider logProvider, WorldGenLevel level, BlockPos origin, StructurePlaceSettings placeSettings, BlockPos centerOffset, List<StructureTemplate.StructureBlockInfo> logBuilders, int maxTrunkBuildingDepth, BlockPredicate groundFilter) {
-//        for (StructureTemplate.StructureBlockInfo logBuilder : logBuilders) {
-//            BlockPos pos = getModifiedPos(placeSettings, logBuilder, centerOffset, origin);
-//            BlockPos.MutableBlockPos mutableBlockPos = new BlockPos.MutableBlockPos().set(pos);
-//
-//            for (int i = 0; i < maxTrunkBuildingDepth; i++) {
-//                if (!groundFilter.test(level, mutableBlockPos) && !level.getBlockState(mutableBlockPos).is(Blocks.BEDROCK)) {
-//                    if (level instanceof Level) { // Drop the replaced block.
-//                        level.removeBlock(mutableBlockPos, true);
-//                    }
-//
-//
-//                    BlockState state = logProvider.getState(randomSource, mutableBlockPos);
-//
-//                    state = Block.updateFromNeighbourShapes(state, level, mutableBlockPos);
-//                    level.setBlock(mutableBlockPos, state, 2);
-//                    mutableBlockPos.move(Direction.DOWN);
-//                } else {
-//                    // Check if the chunk can be cast to RandomTickScheduler
-//                    LevelChunk chunk = (LevelChunk) level.getChunk(mutableBlockPos);
-//                    if (chunk instanceof RandomTickScheduler) {
-//                        RandomTickScheduler scheduler = (RandomTickScheduler) chunk;
-//                        scheduler.scheduleRandomTick(mutableBlockPos.immutable());
-//                    } else {
-//                        System.out.println("Warning: Expected RandomTickScheduler but found " + chunk.getClass().getName());
-//                    }
-//                    break;
-//                }
-//            }
-//        }
-
-
-
         for (StructureTemplate.StructureBlockInfo logBuilder : logBuilders) {
             BlockPos pos = getModifiedPos(placeSettings, logBuilder, centerOffset, origin);
             BlockPos.MutableBlockPos mutableBlockPos = new BlockPos.MutableBlockPos().set(pos);

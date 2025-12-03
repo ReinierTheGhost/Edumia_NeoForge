@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "edumia:block/tan_sandstone_slates_top",
+    "side": "edumia:block/tan_sandstone_slates"
+  }
+}

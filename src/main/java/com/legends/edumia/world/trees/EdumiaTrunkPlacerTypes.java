@@ -98,6 +98,14 @@ public class EdumiaTrunkPlacerTypes {
             TRUNK_PLACERS.register("kapok",
                     () -> new TrunkPlacerType<>(KapokTrunkPlacer.CODEC));
 
+    public static final Supplier<TrunkPlacerType<ExtraGiantTrunkPlacer>> EXTRA_GIANT_TRUNK_PLACER =
+            TRUNK_PLACERS.register("extra_giant_trunk_placer",
+                    () -> new TrunkPlacerType<>(ExtraGiantTrunkPlacer.CODEC));
+
+    public static final Supplier<TrunkPlacerType<ExtraGiantTrunkPlacer>> MEGA_KAPOK_TRUNK_PLACER =
+            TRUNK_PLACERS.register("mega_kapok_trunk_placer",
+                    () -> new TrunkPlacerType<>(ExtraGiantTrunkPlacer.CODEC));
+
 
     public static void register(IEventBus eventBus) {
         TRUNK_PLACERS.register(eventBus);

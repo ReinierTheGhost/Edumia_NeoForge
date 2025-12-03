@@ -1,5 +1,6 @@
 package com.legends.edumia.datagen.helpers.models;
 
+import com.legends.edumia.core.BlockLoader;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 
 import java.util.ArrayList;
@@ -10,7 +11,6 @@ public class SimplePillarModel {
 
     public static List<Pillar> blocks = new ArrayList<>() {
         {
-
         }
     };
 }

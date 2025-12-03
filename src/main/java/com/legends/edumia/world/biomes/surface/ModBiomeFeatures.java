@@ -173,10 +173,10 @@ public class ModBiomeFeatures {
 
     public static void addMyrwoodTrees(List<ResourceKey<PlacedFeature>> vegetation) {
         vegetation.add(FairyBiomePlacedFeatures.FAIRY_FOREST_TREES_LAYER_1);
-        vegetation.add(FairyBiomePlacedFeatures.FAIRY_FOREST_TREES_LAYER_2);
-        vegetation.add(FairyBiomePlacedFeatures.FAIRY_FOREST_TREES_LAYER_3);
-        vegetation.add(FairyBiomePlacedFeatures.FAIRY_FOREST_TREES_LAYER_4);
-        vegetation.add(FairyBiomePlacedFeatures.FAIRY_FOREST_TREES_LAYER_5);
+//        vegetation.add(FairyBiomePlacedFeatures.FAIRY_FOREST_TREES_LAYER_2);
+//        vegetation.add(FairyBiomePlacedFeatures.FAIRY_FOREST_TREES_LAYER_3);
+//        vegetation.add(FairyBiomePlacedFeatures.FAIRY_FOREST_TREES_LAYER_4);
+//        vegetation.add(FairyBiomePlacedFeatures.FAIRY_FOREST_TREES_LAYER_5);
     }
 
     public static void addCommonOakTrees(List<ResourceKey<PlacedFeature>> vegetation) {

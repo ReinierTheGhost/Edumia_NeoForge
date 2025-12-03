@@ -126,6 +126,8 @@ public class CreativeTabLoader {
                                 }
 
                                 entries.accept(BlockLoader.BROWN_SANDSTONE_SLATES.get());
+                                entries.accept(BlockLoader.TAN_SANDSTONE_SLATES.get());
+                                entries.accept(BlockLoader.GREEN_BASALT.get());
 
                                 entries.accept(BlockLoader.VOLCANIC_DIRT.get());
                                 entries.accept(BlockLoader.VOLCANIC_DIRT_PATH.get());

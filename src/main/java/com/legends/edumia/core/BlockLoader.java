@@ -30,6 +30,9 @@ public class BlockLoader {
     public static final DeferredBlock<Block> VOLCANIC_DIRT_PATH = registerBlock("volcanic_dirt_path", () ->
             new DirtPathBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT_PATH)));
 
+    public static final DeferredBlock<Block> GREEN_BASALT = registerBlock("green_basalt", () ->
+            new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BASALT)));
+
 
     public static final DeferredBlock<Block> BRICK_PILLAR = registerBlock("brick_pillar", () ->
             new EdumiaPillarBlock(BlockBehaviour.Properties.of()));
@@ -42,6 +45,10 @@ public class BlockLoader {
 
 
     public static final DeferredBlock<Block> BROWN_SANDSTONE_SLATES = registerBlock("brown_sandstone_slates", () ->
+            new RotatedPillarBlock(BlockBehaviour.Properties.of().requiresCorrectToolForDrops()
+                    .strength(1.5f, 6f)));
+
+    public static final DeferredBlock<Block> TAN_SANDSTONE_SLATES = registerBlock("tan_sandstone_slates", () ->
             new RotatedPillarBlock(BlockBehaviour.Properties.of().requiresCorrectToolForDrops()
                     .strength(1.5f, 6f)));
 

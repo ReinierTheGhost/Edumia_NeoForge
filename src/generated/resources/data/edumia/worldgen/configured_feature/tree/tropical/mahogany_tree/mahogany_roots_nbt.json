@@ -48,8 +48,8 @@
       "edumia:mahogany_log"
     ],
     "place_from_nbt": [
-      "edumia:mahogany_wood_stairs",
-      "edumia:mahogany_wood_slab"
+      "edumia:mahogany_wood_slab",
+      "edumia:mahogany_wood_stairs"
     ]
   }
 }

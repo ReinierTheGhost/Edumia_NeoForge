@@ -24,8 +24,6 @@ public class StoneSets {
     public static StoneSet SKY_SHALE = registerStoneSet("sky_shale", STONE_STRENGTH);
     public static StoneSet SUNSTONE = registerStoneSet("sunstone", STONE_STRENGTH);
     public static StoneSet GLEAMSTONE = registerStoneSet("gleamstone", STONE_STRENGTH);
-    public static StoneSet GREEN_BASALT = registerStoneSet("green_basalt", STONE_STRENGTH);
-    public static StoneSet GREEN_BASALT_COBBLESTONE = registerStoneSet("green_basalt_cobblestone", STONE_STRENGTH);
     public static StoneSet GNEISS = registerStoneSet("gneiss", STONE_STRENGTH);
     public static StoneSet EATHERITE = registerStoneSet("eatherite", STONE_STRENGTH);
     public static StoneSet CINDERRITE = registerStoneSet("cinderrite", STONE_STRENGTH);
@@ -53,8 +51,6 @@ public class StoneSets {
             PALEGRIT,
             SUNSTONE,
             GLEAMSTONE,
-            GREEN_BASALT,
-            GREEN_BASALT_COBBLESTONE,
             GNEISS,
             EATHERITE,
             CINDERRITE,

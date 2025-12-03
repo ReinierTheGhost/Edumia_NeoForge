@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "edumia:green_basalt_cobblestone"
+          "name": "edumia:tan_sandstone_slates"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "edumia:blocks/green_basalt_cobblestone"
+  "random_sequence": "edumia:blocks/tan_sandstone_slates"
 }

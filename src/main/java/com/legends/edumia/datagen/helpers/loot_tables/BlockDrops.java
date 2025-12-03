@@ -16,6 +16,7 @@ public class BlockDrops {
             add(ModNatureBlocks.PAPYRUS.get());
             add(ModNatureBlocks.DRIED_REEDS.get());
             add(BlockLoader.BROWN_SANDSTONE_SLATES.get());
+            add(BlockLoader.TAN_SANDSTONE_SLATES.get());
             add(BlockLoader.CHISELED_ANDESITE.get());
             add(BlockLoader.CHISELED_DIORITE.get());
             add(BlockLoader.CHISELED_DRIPSTONE.get());
@@ -27,6 +28,7 @@ public class BlockDrops {
             add(BlockLoader.STONE_PILLAR.get());
             add(BlockLoader.VOLCANIC_DIRT.get());
             add(BlockLoader.TEST_SAPLING.get());
+            add(BlockLoader.GREEN_BASALT.get());
 
         }
     };

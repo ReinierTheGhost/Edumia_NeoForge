@@ -9,14 +9,8 @@
       "type": "minecraft:in_square"
     },
     {
-      "type": "minecraft:noise_based_count",
-      "noise_factor": 130.0,
-      "noise_offset": 0.55,
-      "noise_to_count_ratio": -1
-    },
-    {
       "type": "minecraft:heightmap",
-      "heightmap": "WORLD_SURFACE"
+      "heightmap": "WORLD_SURFACE_WG"
     },
     {
       "type": "minecraft:surface_water_depth_filter",

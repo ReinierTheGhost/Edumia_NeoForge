@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "all": "edumia:block/green_basalt"
+    "end": "edumia:block/green_basalt_top",
+    "side": "edumia:block/green_basalt_side"
   }
 }

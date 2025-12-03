@@ -190,6 +190,8 @@ public class ModBlockStateProvider extends ModModelProvider {
         }
         slateBlock(BlockLoader.BROWN_SANDSTONE_SLATES.get());
         blockItem(BlockLoader.BROWN_SANDSTONE_SLATES.get());
+        slateBlock(BlockLoader.TAN_SANDSTONE_SLATES.get());
+        blockItem(BlockLoader.TAN_SANDSTONE_SLATES.get());
         blockColum(BlockLoader.CHISELED_ANDESITE.get());
         blockItem(BlockLoader.CHISELED_ANDESITE.get());
         blockColum(BlockLoader.CHISELED_GRANITE.get());
@@ -200,6 +202,8 @@ public class ModBlockStateProvider extends ModModelProvider {
         blockItem(BlockLoader.CHISELED_DIORITE.get());
         blockColum(BlockLoader.DIRTY_CHALK.get());
         blockItem(BlockLoader.DIRTY_CHALK.get());
+        blockColum(BlockLoader.GREEN_BASALT.get());
+        blockItem(BlockLoader.GREEN_BASALT.get());
 
     }
 
