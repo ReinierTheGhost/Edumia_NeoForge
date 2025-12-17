@@ -72,6 +72,8 @@ public class TagLoader {
 
         public static final TagKey<Block> BUTTERFLY_GROWABLES = createTag("butterfly_growables");
 
+        public static final TagKey<Block> CALCITE = createTag("calcite");
+
 
         private static TagKey<Block> createTag(String name) {
             return BlockTags.create(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, name));

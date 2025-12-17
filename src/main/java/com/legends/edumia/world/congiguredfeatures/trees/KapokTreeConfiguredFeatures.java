@@ -5,7 +5,10 @@ import com.legends.edumia.Edumia;
 import com.legends.edumia.core.blocksets.WoodBlockSets;
 import com.legends.edumia.core.TagLoader;
 import com.legends.edumia.world.features.EdumiaFeatures;
-import com.legends.edumia.world.features.treesnbt.TreeFromStructureNBTConfig;
+import com.legends.edumia.world.features.treesnbt.EdumiaTreeFromStructureNBTConfig;
+import dev.corgitaco.ohthetreesyoullgrow.Constants;
+import dev.corgitaco.ohthetreesyoullgrow.world.level.levelgen.feature.TYGFeatures;
+import dev.corgitaco.ohthetreesyoullgrow.world.level.levelgen.feature.configurations.TreeFromStructureNBTConfig;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -41,7 +44,7 @@ public class KapokTreeConfiguredFeatures {
         HolderGetter<ConfiguredFeature<?, ?>> holdergetter = context.lookup(Registries.CONFIGURED_FEATURE);
         HolderGetter<PlacedFeature> registryEntryLookup = context.lookup(Registries.PLACED_FEATURE);
         
-        register(context, KAPOK_1,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+        register(context, KAPOK_1,  EdumiaFeatures.TREE_FROM_NBT.get(), new EdumiaTreeFromStructureNBTConfig(
                 Edumia.location("features/trees/kapok/kapok_trunk_1"),
                 Edumia.location("features/trees/kapok/kapok_canopy_1"),
                 ConstantInt.of(28),
@@ -50,13 +53,16 @@ public class KapokTreeConfiguredFeatures {
                 Set.of(WoodBlockSets.KAPOK.wood().get(), WoodBlockSets.KAPOK.woodFence().get(), WoodBlockSets.KAPOK.woodStairs().get(),
                         WoodBlockSets.KAPOK.woodSlab().get()),
                 Blocks.GREEN_WOOL,
-                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(new LeaveVineDecorator(0.5f),
-                TrunkVineDecorator.INSTANCE),
-                Set.of(WoodBlockSets.KAPOK.woodFence().get(), WoodBlockSets.KAPOK.woodStairs().get(),
-                        WoodBlockSets.KAPOK.woodSlab().get(), WoodBlockSets.BANANA.leaves().get(), Blocks.MANGROVE_ROOTS, WoodBlockSets.KAPOK.leaves().get())
+                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(
+                        new LeaveVineDecorator(0.5f), TrunkVineDecorator.INSTANCE
+        ),
+                Set.of(
+                        WoodBlockSets.KAPOK.woodFence().get(), WoodBlockSets.KAPOK.woodStairs().get(),
+                        WoodBlockSets.KAPOK.woodSlab().get(), WoodBlockSets.BANANA.leaves().get(), Blocks.MANGROVE_ROOTS, WoodBlockSets.KAPOK.leaves().get()
+                )
         ));
 
-        register(context, KAPOK_2,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+        register(context, KAPOK_2,  EdumiaFeatures.TREE_FROM_NBT.get(), new EdumiaTreeFromStructureNBTConfig(
                 Edumia.location("features/trees/kapok/kapok_trunk_2"),
                 Edumia.location("features/trees/kapok/kapok_canopy_2"),
                 ConstantInt.of(13),
@@ -71,7 +77,7 @@ public class KapokTreeConfiguredFeatures {
                         WoodBlockSets.KAPOK.woodSlab().get(), WoodBlockSets.BANANA.leaves().get(), Blocks.MANGROVE_ROOTS, WoodBlockSets.KAPOK.leaves().get())
         ));
 
-        register(context, KAPOK_3,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+        register(context, KAPOK_3,  EdumiaFeatures.TREE_FROM_NBT.get(), new EdumiaTreeFromStructureNBTConfig(
                 Edumia.location("features/trees/kapok/kapok_trunk_3"),
                 Edumia.location("features/trees/kapok/kapok_canopy_3"),
                 ConstantInt.of(12),
@@ -80,13 +86,14 @@ public class KapokTreeConfiguredFeatures {
                 Set.of(WoodBlockSets.KAPOK.wood().get(), WoodBlockSets.KAPOK.woodFence().get(), WoodBlockSets.KAPOK.woodStairs().get(),
                         WoodBlockSets.KAPOK.woodSlab().get()),
                 Blocks.GREEN_WOOL,
-                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(new LeaveVineDecorator(0.5f),
-                TrunkVineDecorator.INSTANCE),
+                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(
+                        new LeaveVineDecorator(0.5f), TrunkVineDecorator.INSTANCE
+        ),
                 Set.of(WoodBlockSets.KAPOK.woodFence().get(), WoodBlockSets.KAPOK.woodStairs().get(),
                         WoodBlockSets.KAPOK.woodSlab().get(), WoodBlockSets.BANANA.leaves().get(), Blocks.MANGROVE_ROOTS, WoodBlockSets.KAPOK.leaves().get())
         ));
 
-        register(context, KAPOK_4,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+        register(context, KAPOK_4,  EdumiaFeatures.TREE_FROM_NBT.get(), new EdumiaTreeFromStructureNBTConfig(
                 Edumia.location("features/trees/kapok/kapok_trunk_4"),
                 Edumia.location("features/trees/kapok/kapok_canopy_4"),
                 ConstantInt.of(27),
@@ -95,13 +102,14 @@ public class KapokTreeConfiguredFeatures {
                 Set.of(WoodBlockSets.KAPOK.wood().get(), WoodBlockSets.KAPOK.woodFence().get(), WoodBlockSets.KAPOK.woodStairs().get(),
                         WoodBlockSets.KAPOK.woodSlab().get()),
                 Blocks.GREEN_WOOL,
-                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(new LeaveVineDecorator(0.5f),
-                TrunkVineDecorator.INSTANCE),
+                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(
+                        new LeaveVineDecorator(0.5f), TrunkVineDecorator.INSTANCE
+        ),
                 Set.of(WoodBlockSets.KAPOK.woodFence().get(), WoodBlockSets.KAPOK.woodStairs().get(),
                         WoodBlockSets.KAPOK.woodSlab().get(), WoodBlockSets.BANANA.leaves().get(), Blocks.MANGROVE_ROOTS, WoodBlockSets.KAPOK.leaves().get())
         ));
 
-        register(context, KAPOK_5,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+        register(context, KAPOK_5,  EdumiaFeatures.TREE_FROM_NBT.get(), new EdumiaTreeFromStructureNBTConfig(
                 Edumia.location("features/trees/kapok/kapok_trunk_5"),
                 Edumia.location("features/trees/kapok/kapok_canopy_5"),
                 ConstantInt.of(11),
@@ -110,13 +118,14 @@ public class KapokTreeConfiguredFeatures {
                 Set.of(WoodBlockSets.KAPOK.wood().get(), WoodBlockSets.KAPOK.woodFence().get(), WoodBlockSets.KAPOK.woodStairs().get(),
                         WoodBlockSets.KAPOK.woodSlab().get()),
                 Blocks.GREEN_WOOL,
-                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(new LeaveVineDecorator(0.5f),
-                TrunkVineDecorator.INSTANCE),
+                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(
+                        new LeaveVineDecorator(0.5f), TrunkVineDecorator.INSTANCE
+        ),
                 Set.of(WoodBlockSets.KAPOK.woodFence().get(), WoodBlockSets.KAPOK.woodStairs().get(),
                         WoodBlockSets.KAPOK.woodSlab().get(), WoodBlockSets.BANANA.leaves().get(), Blocks.MANGROVE_ROOTS, WoodBlockSets.KAPOK.leaves().get())
         ));
 
-        register(context, KAPOK_6,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+        register(context, KAPOK_6,  EdumiaFeatures.TREE_FROM_NBT.get(), new EdumiaTreeFromStructureNBTConfig(
                 Edumia.location("features/trees/kapok/kapok_trunk_6"),
                 Edumia.location("features/trees/kapok/kapok_canopy_6"),
                 ConstantInt.of(21),
@@ -125,13 +134,14 @@ public class KapokTreeConfiguredFeatures {
                 Set.of(WoodBlockSets.KAPOK.wood().get(), WoodBlockSets.KAPOK.woodFence().get(), WoodBlockSets.KAPOK.woodStairs().get(),
                         WoodBlockSets.KAPOK.woodSlab().get()),
                 Blocks.GREEN_WOOL,
-                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(new LeaveVineDecorator(0.5f),
-                TrunkVineDecorator.INSTANCE),
+                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(
+                        new LeaveVineDecorator(0.5f), TrunkVineDecorator.INSTANCE
+        ),
                 Set.of(WoodBlockSets.KAPOK.woodFence().get(), WoodBlockSets.KAPOK.woodStairs().get(),
                         WoodBlockSets.KAPOK.woodSlab().get(), WoodBlockSets.BANANA.leaves().get(), Blocks.MANGROVE_ROOTS, WoodBlockSets.KAPOK.leaves().get())
         ));
 
-        register(context, KAPOK_7,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+        register(context, KAPOK_7,  EdumiaFeatures.TREE_FROM_NBT.get(), new EdumiaTreeFromStructureNBTConfig(
                 Edumia.location("features/trees/kapok/kapok_trunk_7"),
                 Edumia.location("features/trees/kapok/kapok_canopy_7"),
                 ConstantInt.of(21),
@@ -140,13 +150,14 @@ public class KapokTreeConfiguredFeatures {
                 Set.of(WoodBlockSets.KAPOK.wood().get(), WoodBlockSets.KAPOK.woodFence().get(), WoodBlockSets.KAPOK.woodStairs().get(),
                         WoodBlockSets.KAPOK.woodSlab().get()),
                 Blocks.GREEN_WOOL,
-                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(new LeaveVineDecorator(0.5f),
-                TrunkVineDecorator.INSTANCE),
+                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(
+                        new LeaveVineDecorator(0.5f), TrunkVineDecorator.INSTANCE
+        ),
                 Set.of(WoodBlockSets.KAPOK.woodFence().get(), WoodBlockSets.KAPOK.woodStairs().get(),
                         WoodBlockSets.KAPOK.woodSlab().get(), WoodBlockSets.BANANA.leaves().get(), Blocks.MANGROVE_ROOTS, WoodBlockSets.KAPOK.leaves().get())
         ));
 
-        register(context, KAPOK_8,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+        register(context, KAPOK_8,  EdumiaFeatures.TREE_FROM_NBT.get(), new EdumiaTreeFromStructureNBTConfig(
                 Edumia.location("features/trees/kapok/kapok_trunk_8"),
                 Edumia.location("features/trees/kapok/kapok_canopy_8"),
                 ConstantInt.of(17),
@@ -155,13 +166,14 @@ public class KapokTreeConfiguredFeatures {
                 Set.of(WoodBlockSets.KAPOK.wood().get(), WoodBlockSets.KAPOK.woodFence().get(), WoodBlockSets.KAPOK.woodStairs().get(),
                         WoodBlockSets.KAPOK.woodSlab().get()),
                 Blocks.GREEN_WOOL,
-                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(new LeaveVineDecorator(0.5f),
-                TrunkVineDecorator.INSTANCE),
+                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(
+                        new LeaveVineDecorator(0.5f), TrunkVineDecorator.INSTANCE
+        ),
                 Set.of(WoodBlockSets.KAPOK.woodFence().get(), WoodBlockSets.KAPOK.woodStairs().get(),
                         WoodBlockSets.KAPOK.woodSlab().get(), WoodBlockSets.BANANA.leaves().get(), Blocks.MANGROVE_ROOTS, WoodBlockSets.KAPOK.leaves().get())
         ));
 
-        register(context, KAPOK_9,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+        register(context, KAPOK_9,  EdumiaFeatures.TREE_FROM_NBT.get(), new EdumiaTreeFromStructureNBTConfig(
                 Edumia.location("features/trees/kapok/kapok_trunk_9"),
                 Edumia.location("features/trees/kapok/kapok_canopy_9"),
                 ConstantInt.of(29),
@@ -170,13 +182,14 @@ public class KapokTreeConfiguredFeatures {
                 Set.of(WoodBlockSets.KAPOK.wood().get(), WoodBlockSets.KAPOK.woodFence().get(), WoodBlockSets.KAPOK.woodStairs().get(),
                         WoodBlockSets.KAPOK.woodSlab().get()),
                 Blocks.GREEN_WOOL,
-                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(new LeaveVineDecorator(0.5f),
-                TrunkVineDecorator.INSTANCE),
+                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5,ImmutableList.of(
+                        new LeaveVineDecorator(0.5f), TrunkVineDecorator.INSTANCE
+        ),
                 Set.of(WoodBlockSets.KAPOK.woodFence().get(), WoodBlockSets.KAPOK.woodStairs().get(),
                         WoodBlockSets.KAPOK.woodSlab().get(), WoodBlockSets.BANANA.leaves().get(), Blocks.MANGROVE_ROOTS, WoodBlockSets.KAPOK.leaves().get())
         ));
 
-        register(context, KAPOK_10,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+        register(context, KAPOK_10,  EdumiaFeatures.TREE_FROM_NBT.get(), new EdumiaTreeFromStructureNBTConfig(
                 Edumia.location("features/trees/kapok/kapok_trunk_10"),
                 Edumia.location("features/trees/kapok/kapok_canopy_10"),
                 ConstantInt.of(28),
@@ -185,8 +198,9 @@ public class KapokTreeConfiguredFeatures {
                 Set.of(WoodBlockSets.KAPOK.wood().get(), WoodBlockSets.KAPOK.woodFence().get(), WoodBlockSets.KAPOK.woodStairs().get(),
                         WoodBlockSets.KAPOK.woodSlab().get()),
                 Blocks.GREEN_WOOL,
-                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(new LeaveVineDecorator(0.5f),
-                TrunkVineDecorator.INSTANCE),
+                TagLoader.Blocks.GROUND_MAHOGANY_SAPLING, 5, ImmutableList.of(
+                        new LeaveVineDecorator(0.5f), TrunkVineDecorator.INSTANCE
+        ),
                 Set.of(WoodBlockSets.KAPOK.woodFence().get(), WoodBlockSets.KAPOK.woodStairs().get(),
                         WoodBlockSets.KAPOK.woodSlab().get(), WoodBlockSets.BANANA.leaves().get(), Blocks.MANGROVE_ROOTS, WoodBlockSets.KAPOK.leaves().get())
         ));

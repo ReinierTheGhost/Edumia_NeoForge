@@ -5,7 +5,7 @@ import com.legends.edumia.Edumia;
 import com.legends.edumia.core.blocksets.WoodBlockSets;
 import com.legends.edumia.core.TagLoader;
 import com.legends.edumia.world.features.EdumiaFeatures;
-import com.legends.edumia.world.features.treesnbt.TreeFromStructureNBTConfig;
+import com.legends.edumia.world.features.treesnbt.EdumiaTreeFromStructureNBTConfig;
 import com.legends.edumia.world.trees.foliageplacer.MahoganyFoliagePlacer;
 import com.legends.edumia.world.trees.treedecorators.HangingBranchDecorator;
 import com.legends.edumia.world.trees.trunkplacers.CanopyTrunkPlacer;
@@ -113,7 +113,7 @@ public class MahoganyConfiguredFeatures {
                                         .setValue(BlockStateProperties.PERSISTENT, true))
                         ))).ignoreVines().build());
 
-        register(context, MAHOGANY_NBT,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+        register(context, MAHOGANY_NBT,  EdumiaFeatures.TREE_FROM_NBT.get(), new EdumiaTreeFromStructureNBTConfig(
                 Edumia.location("features/trees/mahogany/mahogany_tree_trunk1"),
                 Edumia.location("features/trees/mahogany/mahogany_tree_canopy1"),
                 BiasedToBottomInt.of(5, 15),
@@ -126,7 +126,7 @@ public class MahoganyConfiguredFeatures {
                 ImmutableList.of(new LeaveVineDecorator(0.5f))
         ));
 
-        register(context, MAHOGANY_ROOTS_NBT,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+        register(context, MAHOGANY_ROOTS_NBT,  EdumiaFeatures.TREE_FROM_NBT.get(), new EdumiaTreeFromStructureNBTConfig(
                 Edumia.location("features/trees/mahogany/mahogany_tree_trunk1_roots"),
                 Edumia.location("features/trees/mahogany/mahogany_tree_canopy1"),
                 BiasedToBottomInt.of(5, 15),
@@ -138,7 +138,7 @@ public class MahoganyConfiguredFeatures {
                 Set.of(WoodBlockSets.MAHOGANY.woodSlab().get(), WoodBlockSets.MAHOGANY.woodStairs().get())
         ));
 
-        register(context, MAHOGANY_1,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+        register(context, MAHOGANY_1,  EdumiaFeatures.TREE_FROM_NBT.get(), new EdumiaTreeFromStructureNBTConfig(
                 Edumia.location("features/trees/mahogany/mahogany_trunk_1"),
                 Edumia.location("features/trees/mahogany/mahogany_canopy_1"),
                 ConstantInt.of(5),
@@ -153,7 +153,7 @@ public class MahoganyConfiguredFeatures {
                         WoodBlockSets.MAHOGANY.woodSlab().get(), WoodBlockSets.MAHOGANY.leaves().get())
         ));
 
-        register(context, MAHOGANY_2,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+        register(context, MAHOGANY_2,  EdumiaFeatures.TREE_FROM_NBT.get(), new EdumiaTreeFromStructureNBTConfig(
                 Edumia.location("features/trees/mahogany/mahogany_trunk_2"),
                 Edumia.location("features/trees/mahogany/mahogany_canopy_2"),
                 ConstantInt.of(8),
@@ -168,7 +168,7 @@ public class MahoganyConfiguredFeatures {
                         WoodBlockSets.MAHOGANY.woodSlab().get(), WoodBlockSets.MAHOGANY.leaves().get())
         ));
 
-        register(context, MAHOGANY_3,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+        register(context, MAHOGANY_3,  EdumiaFeatures.TREE_FROM_NBT.get(), new EdumiaTreeFromStructureNBTConfig(
                 Edumia.location("features/trees/mahogany/mahogany_trunk_3"),
                 Edumia.location("features/trees/mahogany/mahogany_canopy_3"),
                 ConstantInt.of(4),
@@ -183,7 +183,7 @@ public class MahoganyConfiguredFeatures {
                         WoodBlockSets.MAHOGANY.woodSlab().get(), WoodBlockSets.MAHOGANY.leaves().get())
         ));
 
-        register(context, MAHOGANY_4,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+        register(context, MAHOGANY_4,  EdumiaFeatures.TREE_FROM_NBT.get(), new EdumiaTreeFromStructureNBTConfig(
                 Edumia.location("features/trees/mahogany/mahogany_trunk_4"),
                 Edumia.location("features/trees/mahogany/mahogany_canopy_4"),
                 ConstantInt.of(5),

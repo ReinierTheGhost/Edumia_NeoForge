@@ -7,7 +7,7 @@ import com.legends.edumia.core.blocksets.ModNatureBlocks;
 import com.legends.edumia.core.blocksets.WoodBlockSets;
 import com.legends.edumia.core.TagLoader;
 import com.legends.edumia.world.features.EdumiaFeatures;
-import com.legends.edumia.world.features.treesnbt.TreeFromStructureNBTConfig;
+import com.legends.edumia.world.features.treesnbt.EdumiaTreeFromStructureNBTConfig;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -33,7 +33,7 @@ public class LeopardTreeConfiguredFeatures {
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context){
         HolderGetter<ConfiguredFeature<?, ?>> holdergetter = context.lookup(Registries.CONFIGURED_FEATURE);
         HolderGetter<PlacedFeature> registryEntryLookup = context.lookup(Registries.PLACED_FEATURE);
-        register(context, LEOPARD_1,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+        register(context, LEOPARD_1,  EdumiaFeatures.TREE_FROM_NBT.get(), new EdumiaTreeFromStructureNBTConfig(
                 Edumia.location("features/trees/leopard/leopard_trunk_1"),
                 Edumia.location("features/trees/leopard/leopard_canopy_1"),
                 ConstantInt.of(8),
@@ -47,7 +47,7 @@ public class LeopardTreeConfiguredFeatures {
                         WoodBlockSets.GHOST_GUM.woodSlab().get(), ModNatureBlocks.GHOST_GUM_LEAVES.get())
         ));
 
-        register(context, LEOPARD_2,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+        register(context, LEOPARD_2,  EdumiaFeatures.TREE_FROM_NBT.get(), new EdumiaTreeFromStructureNBTConfig(
                 Edumia.location("features/trees/leopard/leopard_trunk_2"),
                 Edumia.location("features/trees/leopard/leopard_canopy_2"),
                 ConstantInt.of(4),
@@ -61,7 +61,7 @@ public class LeopardTreeConfiguredFeatures {
                         WoodBlockSets.GHOST_GUM.woodSlab().get(), ModNatureBlocks.GHOST_GUM_LEAVES.get())
         ));
 
-        register(context, LEOPARD_3,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+        register(context, LEOPARD_3,  EdumiaFeatures.TREE_FROM_NBT.get(), new EdumiaTreeFromStructureNBTConfig(
                 Edumia.location("features/trees/leopard/leopard_trunk_3"),
                 Edumia.location("features/trees/leopard/leopard_canopy_3"),
                 ConstantInt.of(5),
@@ -75,7 +75,7 @@ public class LeopardTreeConfiguredFeatures {
                         WoodBlockSets.GHOST_GUM.woodSlab().get(), ModNatureBlocks.GHOST_GUM_LEAVES.get())
         ));
 
-        register(context, LEOPARD_4,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+        register(context, LEOPARD_4,  EdumiaFeatures.TREE_FROM_NBT.get(), new EdumiaTreeFromStructureNBTConfig(
                 Edumia.location("features/trees/leopard/leopard_trunk_4"),
                 Edumia.location("features/trees/leopard/leopard_canopy_4"),
                 ConstantInt.of(4),

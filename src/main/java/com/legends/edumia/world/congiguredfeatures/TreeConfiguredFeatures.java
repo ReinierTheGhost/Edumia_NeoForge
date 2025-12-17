@@ -78,7 +78,9 @@ public class TreeConfiguredFeatures {
 
         register(context, TEST_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(Blocks.DARK_OAK_LOG),
-                new KapokTrunkPlacer(32, 12, 12),
+                new KapokTrunkPlacer(44, WoodBlockSets.KAPOK.wood().get().defaultBlockState(),
+                        WoodBlockSets.KAPOK.wood().get().defaultBlockState(), WoodBlockSets.KAPOK.woodSlab().get().defaultBlockState(),
+                        WoodBlockSets.KAPOK.woodStairs().get().defaultBlockState()),
                 BlockStateProvider.simple(Blocks.DARK_OAK_LEAVES),
                 new EmptyFoliagePlacer(),
                 new ThreeLayersFeatureSize(2, 3, 0, 1, 2, OptionalInt.empty())

@@ -51,8 +51,8 @@ public class ModTreeGrowers {
             Optional.empty());
 
     public static final TreeGrower KAPOK = new TreeGrower(Edumia.MOD_ID + ":kapok",50f,
-            Optional.of(KapokTreeConfiguredFeatures.KAPOK_2), Optional.of(KapokTreeConfiguredFeatures.KAPOK_1), Optional.of(KapokTreeConfiguredFeatures.KAPOK_3), Optional.of(KapokTreeConfiguredFeatures.KAPOK_4),
-            Optional.of(KapokTreeConfiguredFeatures.KAPOK_5), Optional.of(KapokTreeConfiguredFeatures.KAPOK_6));
+            Optional.of(KapokTreeConfiguredFeatures.KAPOK_2), Optional.of(KapokTreeConfiguredFeatures.KAPOK_2), Optional.of(KapokTreeConfiguredFeatures.KAPOK_2), Optional.of(KapokTreeConfiguredFeatures.KAPOK_2),
+            Optional.of(KapokTreeConfiguredFeatures.KAPOK_2), Optional.of(KapokTreeConfiguredFeatures.KAPOK_2));
 
     public static final TreeGrower MAHOGANY = new TreeGrower(Edumia.MOD_ID + ":mahogany",
             Optional.empty(), Optional.of(MahoganyConfiguredFeatures.MAHOGANY), Optional.empty());

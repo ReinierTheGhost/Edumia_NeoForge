@@ -24,6 +24,8 @@ public class EdumiaClientConfig {
                 BUILDER.comment("Should you see the map overlay button in the Edumia map gui?")
                         .comment("Accept values: boolean | Default: true")
                         .define("enableMapOverlay", true);
+        BUILDER.pop();
+
         SPEC = BUILDER.build();
     }
 

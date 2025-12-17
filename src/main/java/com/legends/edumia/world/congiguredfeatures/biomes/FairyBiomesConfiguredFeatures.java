@@ -37,18 +37,18 @@ public class FairyBiomesConfiguredFeatures {
                 new RandomFeatureConfiguration(List.of(
 //                        new WeightedPlacedFeature(
 //                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(JungleTreeConfiguredFeatures.JUNGLE_TREE_4)), 0.15f),
-                        new WeightedPlacedFeature(
-                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(LeopardTreeConfiguredFeatures.LEOPARD_1)), 0.10f),
+//                        new WeightedPlacedFeature(
+//                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(LeopardTreeConfiguredFeatures.LEOPARD_1)), 0.10f),
                         new WeightedPlacedFeature(
                                 PlacementUtils.inlinePlaced(holdergetter.getOrThrow(KapokTreeConfiguredFeatures.KAPOK_1)), 0.02f),
-                        new WeightedPlacedFeature(
-                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(MirwoodNutTreeConfiguredFeatures.MIRWOODNUT_1)), 0.05f),
-                        new WeightedPlacedFeature(
-                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(MahoganyConfiguredFeatures.MAHOGANY_1)), 0.10f),
-                        new WeightedPlacedFeature(
-                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(PalmConfiguredFeatures.GROUND_PALM_1)), 0.20f),
-                        new WeightedPlacedFeature(
-                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(PalmConfiguredFeatures.GROUP_PALM_1)), 0.15f),
+//                        new WeightedPlacedFeature(
+//                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(MirwoodNutTreeConfiguredFeatures.MIRWOODNUT_1)), 0.05f),
+//                        new WeightedPlacedFeature(
+//                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(MahoganyConfiguredFeatures.MAHOGANY_1)), 0.10f),
+//                        new WeightedPlacedFeature(
+//                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(PalmConfiguredFeatures.GROUND_PALM_1)), 0.20f),
+//                        new WeightedPlacedFeature(
+//                                PlacementUtils.inlinePlaced(holdergetter.getOrThrow(PalmConfiguredFeatures.GROUP_PALM_1)), 0.15f),
 
 
 

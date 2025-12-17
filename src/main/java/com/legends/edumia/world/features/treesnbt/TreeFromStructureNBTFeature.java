@@ -25,17 +25,17 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
 
-public class TreeFromStructureNBTFeature extends Feature<TreeFromStructureNBTConfig> {
-    public static final TreeFromStructureNBTFeature FEATURE = new TreeFromStructureNBTFeature(TreeFromStructureNBTConfig.CODEC);
+public class TreeFromStructureNBTFeature extends Feature<EdumiaTreeFromStructureNBTConfig> {
+    public static final TreeFromStructureNBTFeature FEATURE = new TreeFromStructureNBTFeature(EdumiaTreeFromStructureNBTConfig.CODEC);
     private static final boolean DEBUG = false;
 
-    public TreeFromStructureNBTFeature(Codec<TreeFromStructureNBTConfig> configCodec) {
+    public TreeFromStructureNBTFeature(Codec<EdumiaTreeFromStructureNBTConfig> configCodec) {
         super(configCodec);
     }
 
     @Override
-    public boolean place(FeaturePlaceContext<TreeFromStructureNBTConfig> featurePlaceContext) {
-        TreeFromStructureNBTConfig config = featurePlaceContext.config();
+    public boolean place(FeaturePlaceContext<EdumiaTreeFromStructureNBTConfig> featurePlaceContext) {
+        EdumiaTreeFromStructureNBTConfig config = featurePlaceContext.config();
 
         BlockStateProvider logProvider = config.logProvider();
         BlockStateProvider leavesProvider = config.leavesProvider();
@@ -124,7 +124,7 @@ public class TreeFromStructureNBTFeature extends Feature<TreeFromStructureNBTCon
         return true;
     }
 
-    public static void placeAdditional(TreeFromStructureNBTConfig config, WorldGenLevel level, BlockPos origin,
+    public static void placeAdditional(EdumiaTreeFromStructureNBTConfig config, WorldGenLevel level, BlockPos origin,
                                        StructurePlaceSettings placeSettings, StructureTemplate.Palette palette,
                                        BlockPos centerOffset) {
         List<StructureTemplate.StructureBlockInfo> additionalBlocks = getStructureInfosInStructurePalletteFromBlockList(config
@@ -141,7 +141,7 @@ public class TreeFromStructureNBTFeature extends Feature<TreeFromStructureNBTCon
         }
     }
 
-    public static void placeTrunk(TreeFromStructureNBTConfig config,
+    public static void placeTrunk(EdumiaTreeFromStructureNBTConfig config,
                                   BlockStateProvider logProvider,
                                   BlockStateProvider leavesProvider,
                                   WorldGenLevel level,
@@ -164,7 +164,7 @@ public class TreeFromStructureNBTFeature extends Feature<TreeFromStructureNBTCon
         placeAdditional(config, level, origin, placeSettings, trunkBasePalette, centerOffset);
     }
 
-    public static void placeCanopy(TreeFromStructureNBTConfig config,
+    public static void placeCanopy(EdumiaTreeFromStructureNBTConfig config,
                                    BlockStateProvider logProvider,
                                    BlockStateProvider leavesProvider,
                                    WorldGenLevel level,

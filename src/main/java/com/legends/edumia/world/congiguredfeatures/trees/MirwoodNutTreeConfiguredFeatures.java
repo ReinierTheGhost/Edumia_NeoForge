@@ -5,7 +5,7 @@ import com.legends.edumia.Edumia;
 import com.legends.edumia.core.TagLoader;
 import com.legends.edumia.core.blocksets.WoodBlockSets;
 import com.legends.edumia.world.features.EdumiaFeatures;
-import com.legends.edumia.world.features.treesnbt.TreeFromStructureNBTConfig;
+import com.legends.edumia.world.features.treesnbt.EdumiaTreeFromStructureNBTConfig;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
@@ -17,12 +17,10 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
-import net.minecraft.world.level.levelgen.feature.stateproviders.SimpleStateProvider;
 import net.minecraft.world.level.levelgen.feature.treedecorators.CocoaDecorator;
 import net.minecraft.world.level.levelgen.feature.treedecorators.LeaveVineDecorator;
 import net.minecraft.world.level.levelgen.feature.treedecorators.TrunkVineDecorator;
 
-import java.util.Collection;
 import java.util.Set;
 
 public class MirwoodNutTreeConfiguredFeatures {
@@ -40,7 +38,7 @@ public class MirwoodNutTreeConfiguredFeatures {
 
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context){
-        register(context, MIRWOODNUT_1,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+        register(context, MIRWOODNUT_1,  EdumiaFeatures.TREE_FROM_NBT.get(), new EdumiaTreeFromStructureNBTConfig(
                 Edumia.location("features/trees/mirwoodnut/mirwoodnut_trunk_1"),
                 Edumia.location("features/trees/mirwoodnut/mirwoodnut_canopy_1"),
                 ConstantInt.of(13),
@@ -57,7 +55,7 @@ public class MirwoodNutTreeConfiguredFeatures {
                         WoodBlockSets.MIRWOODNUT.woodSlab().get(), WoodBlockSets.BANANA.leaves().get(),
                         Blocks.MANGROVE_ROOTS, WoodBlockSets.MIRWOODNUT.leaves().get())
         ));
-        register(context, MIRWOODNUT_2,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+        register(context, MIRWOODNUT_2,  EdumiaFeatures.TREE_FROM_NBT.get(), new EdumiaTreeFromStructureNBTConfig(
                 Edumia.location("features/trees/mirwoodnut/mirwoodnut_trunk_2"),
                 Edumia.location("features/trees/mirwoodnut/mirwoodnut_canopy_2"),
                 ConstantInt.of(25),
@@ -71,7 +69,7 @@ public class MirwoodNutTreeConfiguredFeatures {
                 Set.of(WoodBlockSets.MIRWOODNUT.woodFence().get(), WoodBlockSets.MIRWOODNUT.woodStairs().get(),
                         WoodBlockSets.MIRWOODNUT.woodSlab().get(), WoodBlockSets.BANANA.leaves().get(), Blocks.MANGROVE_ROOTS, WoodBlockSets.MIRWOODNUT.leaves().get())
         ));
-        register(context, MIRWOODNUT_3,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+        register(context, MIRWOODNUT_3,  EdumiaFeatures.TREE_FROM_NBT.get(), new EdumiaTreeFromStructureNBTConfig(
                 Edumia.location("features/trees/mirwoodnut/mirwoodnut_trunk_3"),
                 Edumia.location("features/trees/mirwoodnut/mirwoodnut_canopy_3"),
                 ConstantInt.of(5),
@@ -85,7 +83,7 @@ public class MirwoodNutTreeConfiguredFeatures {
                 Set.of(WoodBlockSets.MIRWOODNUT.woodFence().get(), WoodBlockSets.MIRWOODNUT.woodStairs().get(),
                         WoodBlockSets.MIRWOODNUT.woodSlab().get(), WoodBlockSets.BANANA.leaves().get(), Blocks.MANGROVE_ROOTS, WoodBlockSets.MIRWOODNUT.leaves().get())
         ));
-        register(context, MIRWOODNUT_4,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+        register(context, MIRWOODNUT_4,  EdumiaFeatures.TREE_FROM_NBT.get(), new EdumiaTreeFromStructureNBTConfig(
                 Edumia.location("features/trees/mirwoodnut/mirwoodnut_trunk_4"),
                 Edumia.location("features/trees/mirwoodnut/mirwoodnut_canopy_4"),
                 ConstantInt.of(18),
@@ -99,7 +97,7 @@ public class MirwoodNutTreeConfiguredFeatures {
                 Set.of(WoodBlockSets.MIRWOODNUT.woodFence().get(), WoodBlockSets.MIRWOODNUT.woodStairs().get(),
                         WoodBlockSets.MIRWOODNUT.woodSlab().get(), WoodBlockSets.BANANA.leaves().get(), Blocks.MANGROVE_ROOTS, WoodBlockSets.MIRWOODNUT.leaves().get())
         ));
-        register(context, MIRWOODNUT_5,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+        register(context, MIRWOODNUT_5,  EdumiaFeatures.TREE_FROM_NBT.get(), new EdumiaTreeFromStructureNBTConfig(
                 Edumia.location("features/trees/mirwoodnut/mirwoodnut_trunk_5"),
                 Edumia.location("features/trees/mirwoodnut/mirwoodnut_canopy_5"),
                 ConstantInt.of(11),
@@ -113,7 +111,7 @@ public class MirwoodNutTreeConfiguredFeatures {
                 Set.of(WoodBlockSets.MIRWOODNUT.woodFence().get(), WoodBlockSets.MIRWOODNUT.woodStairs().get(),
                         WoodBlockSets.MIRWOODNUT.woodSlab().get(), WoodBlockSets.BANANA.leaves().get(), Blocks.MANGROVE_ROOTS, WoodBlockSets.MIRWOODNUT.leaves().get())
         ));
-        register(context, MIRWOODNUT_6,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+        register(context, MIRWOODNUT_6,  EdumiaFeatures.TREE_FROM_NBT.get(), new EdumiaTreeFromStructureNBTConfig(
                 Edumia.location("features/trees/mirwoodnut/mirwoodnut_trunk_6"),
                 Edumia.location("features/trees/mirwoodnut/mirwoodnut_canopy_6"),
                 ConstantInt.of(22),
@@ -127,7 +125,7 @@ public class MirwoodNutTreeConfiguredFeatures {
                 Set.of(WoodBlockSets.MIRWOODNUT.woodFence().get(), WoodBlockSets.MIRWOODNUT.woodStairs().get(),
                         WoodBlockSets.MIRWOODNUT.woodSlab().get(), WoodBlockSets.BANANA.leaves().get(), Blocks.MANGROVE_ROOTS, WoodBlockSets.MIRWOODNUT.leaves().get())
         ));
-        register(context, MIRWOODNUT_7,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+        register(context, MIRWOODNUT_7,  EdumiaFeatures.TREE_FROM_NBT.get(), new EdumiaTreeFromStructureNBTConfig(
                 Edumia.location("features/trees/mirwoodnut/mirwoodnut_trunk_7"),
                 Edumia.location("features/trees/mirwoodnut/mirwoodnut_canopy_7"),
                 ConstantInt.of(10),
@@ -141,7 +139,7 @@ public class MirwoodNutTreeConfiguredFeatures {
                 Set.of(WoodBlockSets.MIRWOODNUT.woodFence().get(), WoodBlockSets.MIRWOODNUT.woodStairs().get(),
                         WoodBlockSets.MIRWOODNUT.woodSlab().get(), WoodBlockSets.BANANA.leaves().get(), Blocks.MANGROVE_ROOTS, WoodBlockSets.MIRWOODNUT.leaves().get())
         ));
-        register(context, MIRWOODNUT_8,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+        register(context, MIRWOODNUT_8,  EdumiaFeatures.TREE_FROM_NBT.get(), new EdumiaTreeFromStructureNBTConfig(
                 Edumia.location("features/trees/mirwoodnut/mirwoodnut_trunk_8"),
                 Edumia.location("features/trees/mirwoodnut/mirwoodnut_canopy_8"),
                 ConstantInt.of(24),
@@ -155,7 +153,7 @@ public class MirwoodNutTreeConfiguredFeatures {
                 Set.of(WoodBlockSets.MIRWOODNUT.woodFence().get(), WoodBlockSets.MIRWOODNUT.woodStairs().get(),
                         WoodBlockSets.MIRWOODNUT.woodSlab().get(), WoodBlockSets.BANANA.leaves().get(), Blocks.MANGROVE_ROOTS, WoodBlockSets.MIRWOODNUT.leaves().get())
         ));
-        register(context, MIRWOODNUT_9,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+        register(context, MIRWOODNUT_9,  EdumiaFeatures.TREE_FROM_NBT.get(), new EdumiaTreeFromStructureNBTConfig(
                 Edumia.location("features/trees/mirwoodnut/mirwoodnut_trunk_9"),
                 Edumia.location("features/trees/mirwoodnut/mirwoodnut_canopy_9"),
                 ConstantInt.of(16),
@@ -169,7 +167,7 @@ public class MirwoodNutTreeConfiguredFeatures {
                 Set.of(WoodBlockSets.MIRWOODNUT.woodFence().get(), WoodBlockSets.MIRWOODNUT.woodStairs().get(),
                         WoodBlockSets.MIRWOODNUT.woodSlab().get(), WoodBlockSets.BANANA.leaves().get(), Blocks.MANGROVE_ROOTS, WoodBlockSets.MIRWOODNUT.leaves().get())
         ));
-        register(context, MIRWOODNUT_10,  EdumiaFeatures.TREE_FROM_NBT.get(), new TreeFromStructureNBTConfig(
+        register(context, MIRWOODNUT_10,  EdumiaFeatures.TREE_FROM_NBT.get(), new EdumiaTreeFromStructureNBTConfig(
                 Edumia.location("features/trees/mirwoodnut/mirwoodnut_trunk_10"),
                 Edumia.location("features/trees/mirwoodnut/mirwoodnut_canopy_10"),
                 ConstantInt.of(21),

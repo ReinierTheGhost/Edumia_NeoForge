@@ -9,7 +9,7 @@ import com.legends.edumia.world.features.crystal.CrystalFeatureConfig;
 import com.legends.edumia.world.features.delta.ModDeltaFeatures;
 import com.legends.edumia.world.features.reeds.ReedsFeature;
 import com.legends.edumia.world.features.reeds.ReedsFeatureConfig;
-import com.legends.edumia.world.features.treesnbt.TreeFromStructureNBTConfig;
+import com.legends.edumia.world.features.treesnbt.EdumiaTreeFromStructureNBTConfig;
 import com.legends.edumia.world.features.treesnbt.TreeFromStructureNBTFeature;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -26,9 +26,6 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-
-import java.util.function.Supplier;
-
 public class EdumiaFeatures {
 
     public static final DeferredRegister<Feature<?>> FEATURES = DeferredRegister.create(BuiltInRegistries.FEATURE, Edumia.MOD_ID);
@@ -36,7 +33,7 @@ public class EdumiaFeatures {
     public static final DeferredHolder<Feature<?>, CrystalFeature> CRYSTAL = FEATURES.register("crystal", () -> new CrystalFeature(CrystalFeatureConfig.CODEC));
     public static final DeferredHolder<Feature<?>, ReedsFeature> REEDS = FEATURES.register("reeds", () -> new ReedsFeature(ReedsFeatureConfig.CODEC));
     public static final DeferredHolder<Feature<?>, TreeFromStructureNBTFeature> TREE_FROM_NBT = FEATURES.register("tree_from_nbt",
-            () -> new TreeFromStructureNBTFeature(TreeFromStructureNBTConfig.CODEC));
+            () -> new TreeFromStructureNBTFeature(EdumiaTreeFromStructureNBTConfig.CODEC));
     public static final DeferredHolder<Feature<?>, ModDeltaFeatures> DELTA_FEATURES = FEATURES.register("delta_feature",
             () -> new ModDeltaFeatures(DeltaFeatureConfiguration.CODEC));
 
