@@ -21,7 +21,7 @@
         "pool": [
           "edumia:ogre.civilian"
         ],
-        "rank": "KNIGHT"
+        "rank": "CIVILIAN"
       },
       {
         "pool": [
@@ -33,13 +33,13 @@
         "pool": [
           "edumia:ogre.civilian"
         ],
-        "rank": "CIVILIAN"
+        "rank": "KNIGHT"
       },
       {
         "pool": [
           "edumia:ogre.civilian"
         ],
-        "rank": "LEADER"
+        "rank": "VETERAN"
       },
       {
         "pool": [
@@ -51,7 +51,7 @@
         "pool": [
           "edumia:ogre.civilian"
         ],
-        "rank": "VETERAN"
+        "rank": "LEADER"
       }
     ]
   },

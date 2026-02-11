@@ -23,7 +23,12 @@
     "leaves_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "minecraft:air"
+        "Name": "edumia:kapok_leaves",
+        "Properties": {
+          "distance": "7",
+          "persistent": "true",
+          "waterlogged": "false"
+        }
       }
     },
     "leaves_target": [
@@ -39,11 +44,18 @@
       }
     },
     "log_target": [
-      "edumia:kapok_wood_slab",
-      "edumia:kapok_wood_fence",
       "edumia:kapok_wood",
-      "edumia:kapok_wood_stairs"
+      "edumia:kapok_wood_slab",
+      "edumia:kapok_wood_stairs",
+      "edumia:kapok_wood_fence"
     ],
-    "place_from_nbt": []
+    "place_from_nbt": [
+      "edumia:kapok_leaves",
+      "edumia:kapok_wood_slab",
+      "minecraft:mangrove_roots",
+      "edumia:banana_leaves",
+      "edumia:kapok_wood_stairs",
+      "edumia:kapok_wood_fence"
+    ]
   }
 }

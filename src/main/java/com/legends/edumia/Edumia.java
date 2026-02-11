@@ -1,5 +1,6 @@
 package com.legends.edumia;
 
+import com.legends.edumia.core.SoundLoader;
 import com.legends.edumia.core.blocksets.*;
 import com.legends.edumia.core.BlockLoader;
 import com.legends.edumia.core.CreativeTabLoader;
@@ -57,9 +58,10 @@ public class Edumia
         modEventBus.addListener(this::addCreative);
 
         CreativeTabLoader.register(modEventBus);
-
-        BlockLoader.register(modEventBus);
         ItemLoader.register(modEventBus);
+        SoundLoader.register(modEventBus);
+        BlockLoader.register(modEventBus);
+
         BuildingSets.register(modEventBus);
         ClayTilingSets.register(modEventBus);
         GlassSets.register(modEventBus);

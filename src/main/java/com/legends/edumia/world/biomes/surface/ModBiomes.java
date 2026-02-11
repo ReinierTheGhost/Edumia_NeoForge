@@ -1,6 +1,7 @@
 package com.legends.edumia.world.biomes.surface;
 
 
+import com.legends.edumia.core.SoundLoader;
 import com.legends.edumia.world.biomes.BiomeColorsDTO;
 import com.legends.edumia.world.biomes.EdumiaBiomeKeys;
 import com.legends.edumia.world.biomes.caves.ModCaveBiomes;
@@ -9,6 +10,7 @@ import com.legends.edumia.world.placedfeatures.ocean.ReefPlacedFeatures;
 import com.legends.edumia.world.placedfeatures.trees.TemperateTreePlacedFeatures;
 import com.legends.edumia.world.placedfeatures.trees.TropicalTreePlacedFeatures;
 import com.legends.edumia.world.spawners.ModSpawnSettingsBuilder;
+import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BiomeDefaultFeatures;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -17,6 +19,7 @@ import net.minecraft.data.worldgen.placement.CavePlacements;
 import net.minecraft.data.worldgen.placement.OrePlacements;
 import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.BiomeGenerationSettings;
 import net.minecraft.world.level.biome.BiomeSpecialEffects;
@@ -28,6 +31,7 @@ import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.Supplier;
 
 public class ModBiomes {
     private static List<ResourceKey<PlacedFeature>> rawGeneration = new ArrayList<>();
@@ -143,7 +147,7 @@ public class ModBiomes {
     }
 
 
-        registerBiome(context, biomeResourceKey, spawnSettings, generationSettings);
+        registerBiome(context, biomeResourceKey, spawnSettings, generationSettings, SoundLoader.MIRWOOD_JUNGLE);
     }
     public static void createMirwoodMangroveBiome(BootstrapContext<Biome> context, ResourceKey<Biome> biomeResourceKey) {
         MobSpawnSettings.Builder spawnSettings = new MobSpawnSettings.Builder();
@@ -700,6 +704,12 @@ public class ModBiomes {
                                     BiomeGenerationSettings.Builder generationSettings) {
         registerBiome(context, biomeResourceKey, spawnSettings, generationSettings, 0.5f, 0.5f, true);
     }
+
+    public static void registerBiome(BootstrapContext<Biome> context, ResourceKey<Biome>  biomeResourceKey,  MobSpawnSettings.Builder spawnSettings,
+                                     BiomeGenerationSettings.Builder generationSettings, Holder<SoundEvent> ambiance) {
+        registerBiome(context, biomeResourceKey, spawnSettings, generationSettings, 0.5f, 0.5f, true, ambiance);
+    }
+
     public static void registerBiome(BootstrapContext<Biome> context, ResourceKey<Biome>  biomeResourceKey, MobSpawnSettings.Builder spawnSettings,
                                     BiomeGenerationSettings.Builder generationSettings, float temperature, float downfall,
                                     boolean precipitation, boolean... removeDefaultOres) {
@@ -750,6 +760,77 @@ public class ModBiomes {
                 .temperature(temperature)
                 .downfall(downfall)
                 .specialEffects((new BiomeSpecialEffects.Builder())
+                        .skyColor(biomeColorsDTO.skyColor)
+                        .fogColor(biomeColorsDTO.fogColor)
+                        .waterColor(biomeColorsDTO.waterColor)
+                        .waterFogColor(biomeColorsDTO.waterFogColor)
+                        .grassColorOverride(biomeColorsDTO.grassColor)
+                        .foliageColorOverride(biomeColorsDTO.foliageColor)
+                        .build())
+                .mobSpawnSettings(spawnSettings.build())
+                .generationSettings(generationSettings.build())
+                .build();
+
+        context.register(biomeResourceKey, biome);
+
+        rawGeneration = new ArrayList<>();
+        surfaceStructures = new ArrayList<>();
+        vegetation = new ArrayList<>();
+        undergroundOres = new ArrayList<>();
+        topLayer = new ArrayList<>();
+    }
+
+    public static void registerBiome(BootstrapContext<Biome> context, ResourceKey<Biome>  biomeResourceKey, MobSpawnSettings.Builder spawnSettings,
+                                     BiomeGenerationSettings.Builder generationSettings, float temperature, float downfall,
+                                     boolean precipitation, Holder<SoundEvent> ambiance, boolean... removeDefaultOres) {
+        if (removeDefaultOres.length == 0){
+            undergroundOres.add(OrePlacements.ORE_DIRT);
+            undergroundOres.add(OrePlacements.ORE_GRAVEL);
+            undergroundOres.add(OrePlacements.ORE_GRANITE_UPPER);
+            undergroundOres.add(OrePlacements.ORE_GRANITE_LOWER);
+            undergroundOres.add(OrePlacements.ORE_DIORITE_UPPER);
+            undergroundOres.add(OrePlacements.ORE_DIORITE_LOWER);
+            undergroundOres.add(OrePlacements.ORE_ANDESITE_UPPER);
+            undergroundOres.add(OrePlacements.ORE_ANDESITE_LOWER);
+            undergroundOres.add(OrePlacements.ORE_TUFF);
+        }
+
+        undergroundOres.add(OrePlacements.ORE_COAL_UPPER);
+        vegetation.add(CavePlacements.GLOW_LICHEN);
+
+        BiomeDefaultFeatures.addSurfaceFreezing(generationSettings);
+
+        surfaceStructures = surfaceStructures.stream().sorted(Comparator.comparing(a -> a.location().toString())).toList();
+        vegetation = vegetation.stream().sorted(Comparator.comparing(a -> a.location().toString())).toList();
+        for (int i = 0; i < vegetation.size() - 1; i++){
+            if (vegetation.get(i).location().toString().equals(vegetation.get(i + 1).location().toString())){
+                throw new IllegalStateException("Duplicate value in list for: " + vegetation.get(i).location().toString());
+            }
+        }
+        for (ResourceKey<PlacedFeature> feature : rawGeneration){
+            generationSettings.addFeature(GenerationStep.Decoration.RAW_GENERATION, feature);
+        }
+        for (ResourceKey<PlacedFeature> feature : surfaceStructures){
+            generationSettings.addFeature(GenerationStep.Decoration.SURFACE_STRUCTURES, feature);
+        }
+        for (ResourceKey<PlacedFeature> feature: vegetation) {
+            generationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, feature);
+        }
+        for (ResourceKey<PlacedFeature> feature: undergroundOres.stream().sorted(Comparator.comparing(a -> a.location().toString())).toList()) {
+            generationSettings.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, feature);
+        }
+        for (ResourceKey<PlacedFeature> feature: topLayer.stream().sorted(Comparator.comparing(a -> a.location().toString())).toList()){
+            generationSettings.addFeature(GenerationStep.Decoration.TOP_LAYER_MODIFICATION, feature);
+        }
+
+        BiomeColorsDTO biomeColorsDTO = MapBiomeData.getBiome(biomeResourceKey).getBiomeColors();
+
+        Biome biome = (new Biome.BiomeBuilder())
+                .hasPrecipitation(precipitation)
+                .temperature(temperature)
+                .downfall(downfall)
+                .specialEffects((new BiomeSpecialEffects.Builder())
+                        .ambientLoopSound(ambiance)
                         .skyColor(biomeColorsDTO.skyColor)
                         .fogColor(biomeColorsDTO.fogColor)
                         .waterColor(biomeColorsDTO.waterColor)

@@ -1,0 +1,7 @@
+{
+  "biome.mirwood.ambient": {
+    "sounds": [
+      { "name": "edumia:ambient/mirwood_jungle", "stream": true }
+    ]
+  }
+}
