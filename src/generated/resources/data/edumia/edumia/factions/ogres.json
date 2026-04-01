@@ -21,6 +21,24 @@
         "pool": [
           "edumia:ogre.civilian"
         ],
+        "rank": "VETERAN"
+      },
+      {
+        "pool": [
+          "edumia:ogre.civilian"
+        ],
+        "rank": "LEADER"
+      },
+      {
+        "pool": [
+          "edumia:ogre.civilian"
+        ],
+        "rank": "MILITIA"
+      },
+      {
+        "pool": [
+          "edumia:ogre.civilian"
+        ],
         "rank": "CIVILIAN"
       },
       {
@@ -34,24 +52,6 @@
           "edumia:ogre.civilian"
         ],
         "rank": "KNIGHT"
-      },
-      {
-        "pool": [
-          "edumia:ogre.civilian"
-        ],
-        "rank": "VETERAN"
-      },
-      {
-        "pool": [
-          "edumia:ogre.civilian"
-        ],
-        "rank": "MILITIA"
-      },
-      {
-        "pool": [
-          "edumia:ogre.civilian"
-        ],
-        "rank": "LEADER"
       }
     ]
   },
@@ -59,9 +59,9 @@
     "data": [
       {
         "coordinates": {
-          "x": 2285.0,
+          "x": 2050.0,
           "y": 0.0,
-          "z": 1260.0
+          "z": 1350.0
         },
         "dynamic": 1,
         "id": "edumia:ogre.kazanshi"

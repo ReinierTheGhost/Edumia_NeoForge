@@ -21,6 +21,24 @@
         "pool": [
           "edumia:darkelven.civilian"
         ],
+        "rank": "VETERAN"
+      },
+      {
+        "pool": [
+          "edumia:darkelven.civilian"
+        ],
+        "rank": "LEADER"
+      },
+      {
+        "pool": [
+          "edumia:darkelven.civilian"
+        ],
+        "rank": "MILITIA"
+      },
+      {
+        "pool": [
+          "edumia:darkelven.civilian"
+        ],
         "rank": "CIVILIAN"
       },
       {
@@ -34,24 +52,6 @@
           "edumia:darkelven.civilian"
         ],
         "rank": "KNIGHT"
-      },
-      {
-        "pool": [
-          "edumia:darkelven.civilian"
-        ],
-        "rank": "VETERAN"
-      },
-      {
-        "pool": [
-          "edumia:darkelven.civilian"
-        ],
-        "rank": "MILITIA"
-      },
-      {
-        "pool": [
-          "edumia:darkelven.civilian"
-        ],
-        "rank": "LEADER"
       }
     ]
   },
@@ -59,9 +59,9 @@
     "data": [
       {
         "coordinates": {
-          "x": 1980.0,
+          "x": 1820.0,
           "y": 0.0,
-          "z": 525.0
+          "z": 870.0
         },
         "dynamic": 1,
         "id": "edumia:darkelven.nyxarith"

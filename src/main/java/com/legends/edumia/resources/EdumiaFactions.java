@@ -139,7 +139,7 @@ public class EdumiaFactions {
                 )),
                 new SpawnDataHandler(List.of(
                         new SpawnData(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "human.stormgard"),
-                                new Vector2d(1662, 1940))
+                                new Vector2d(1630, 1820))
                 )), List.of(), List.of()
         );
         // endregion
@@ -171,7 +171,7 @@ public class EdumiaFactions {
                 )),
                 new SpawnDataHandler(List.of(
                         new SpawnData(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "highelves.elensar"),
-                                new Vector2d(570, 1840))
+                                new Vector2d(785, 1760))
                 )), List.of(), List.of()
         );
 
@@ -205,7 +205,7 @@ public class EdumiaFactions {
                 )),
                 new SpawnDataHandler(List.of(
                         new SpawnData(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "darkelven.nyxarith"),
-                                new Vector2d(1980, 525))
+                                new Vector2d(1820, 870))
                 )), List.of(), List.of()
         );
         // endregion
@@ -237,7 +237,7 @@ public class EdumiaFactions {
                 )),
                 new SpawnDataHandler(List.of(
                         new SpawnData(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "orc.gorakthul"),
-                                new Vector2d(400, 1340))
+                                new Vector2d(775, 1370))
                 )), List.of(), List.of()
         );
         // endregion
@@ -269,7 +269,7 @@ public class EdumiaFactions {
                 )),
                 new SpawnDataHandler(List.of(
                         new SpawnData(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "ogre.kazanshi"),
-                                new Vector2d(2285, 1260))
+                                new Vector2d(2050, 1350))
                 )), List.of(), List.of()
         );
         // endregion
@@ -301,7 +301,7 @@ public class EdumiaFactions {
                 )),
                 new SpawnDataHandler(List.of(
                         new SpawnData(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "demon.ashkaroth"),
-                                new Vector2d(1380, 985))
+                                new Vector2d(1355, 1100))
                 )), List.of(), List.of()
         );
         // endregion
@@ -333,7 +333,7 @@ public class EdumiaFactions {
                 )),
                 new SpawnDataHandler(List.of(
                         new SpawnData(ResourceLocation.fromNamespaceAndPath(Edumia.MOD_ID, "gensai.avenra"),
-                                new Vector2d(2749, 1104))
+                                new Vector2d(2328, 1243))
                 )), List.of(), List.of()
         );
         // endregion

@@ -21,6 +21,24 @@
         "pool": [
           "edumia:gensai.civilian"
         ],
+        "rank": "VETERAN"
+      },
+      {
+        "pool": [
+          "edumia:gensai.civilian"
+        ],
+        "rank": "LEADER"
+      },
+      {
+        "pool": [
+          "edumia:gensai.civilian"
+        ],
+        "rank": "MILITIA"
+      },
+      {
+        "pool": [
+          "edumia:gensai.civilian"
+        ],
         "rank": "CIVILIAN"
       },
       {
@@ -34,24 +52,6 @@
           "edumia:gensai.civilian"
         ],
         "rank": "KNIGHT"
-      },
-      {
-        "pool": [
-          "edumia:gensai.civilian"
-        ],
-        "rank": "VETERAN"
-      },
-      {
-        "pool": [
-          "edumia:gensai.civilian"
-        ],
-        "rank": "MILITIA"
-      },
-      {
-        "pool": [
-          "edumia:gensai.civilian"
-        ],
-        "rank": "LEADER"
       }
     ]
   },
@@ -59,9 +59,9 @@
     "data": [
       {
         "coordinates": {
-          "x": 2749.0,
+          "x": 2328.0,
           "y": 0.0,
-          "z": 1104.0
+          "z": 1243.0
         },
         "dynamic": 1,
         "id": "edumia:gensai.avenra"

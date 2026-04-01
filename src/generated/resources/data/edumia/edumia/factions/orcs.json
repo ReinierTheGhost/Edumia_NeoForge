@@ -21,6 +21,24 @@
         "pool": [
           "edumia:orc.civilian"
         ],
+        "rank": "VETERAN"
+      },
+      {
+        "pool": [
+          "edumia:orc.civilian"
+        ],
+        "rank": "LEADER"
+      },
+      {
+        "pool": [
+          "edumia:orc.civilian"
+        ],
+        "rank": "MILITIA"
+      },
+      {
+        "pool": [
+          "edumia:orc.civilian"
+        ],
         "rank": "CIVILIAN"
       },
       {
@@ -34,24 +52,6 @@
           "edumia:orc.civilian"
         ],
         "rank": "KNIGHT"
-      },
-      {
-        "pool": [
-          "edumia:orc.civilian"
-        ],
-        "rank": "VETERAN"
-      },
-      {
-        "pool": [
-          "edumia:orc.civilian"
-        ],
-        "rank": "MILITIA"
-      },
-      {
-        "pool": [
-          "edumia:orc.civilian"
-        ],
-        "rank": "LEADER"
       }
     ]
   },
@@ -59,9 +59,9 @@
     "data": [
       {
         "coordinates": {
-          "x": 400.0,
+          "x": 775.0,
           "y": 0.0,
-          "z": 1340.0
+          "z": 1370.0
         },
         "dynamic": 1,
         "id": "edumia:orc.gorakthul"

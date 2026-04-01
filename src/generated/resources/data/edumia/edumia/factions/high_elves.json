@@ -21,6 +21,24 @@
         "pool": [
           "edumia:highelven.civilian"
         ],
+        "rank": "VETERAN"
+      },
+      {
+        "pool": [
+          "edumia:highelven.civilian"
+        ],
+        "rank": "LEADER"
+      },
+      {
+        "pool": [
+          "edumia:highelven.civilian"
+        ],
+        "rank": "MILITIA"
+      },
+      {
+        "pool": [
+          "edumia:highelven.civilian"
+        ],
         "rank": "CIVILIAN"
       },
       {
@@ -34,24 +52,6 @@
           "edumia:highelven.civilian"
         ],
         "rank": "KNIGHT"
-      },
-      {
-        "pool": [
-          "edumia:highelven.civilian"
-        ],
-        "rank": "VETERAN"
-      },
-      {
-        "pool": [
-          "edumia:highelven.civilian"
-        ],
-        "rank": "MILITIA"
-      },
-      {
-        "pool": [
-          "edumia:highelven.civilian"
-        ],
-        "rank": "LEADER"
       }
     ]
   },
@@ -59,9 +59,9 @@
     "data": [
       {
         "coordinates": {
-          "x": 570.0,
+          "x": 785.0,
           "y": 0.0,
-          "z": 1840.0
+          "z": 1760.0
         },
         "dynamic": 1,
         "id": "edumia:highelves.elensar"
